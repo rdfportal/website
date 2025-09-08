@@ -1,0 +1,54 @@
+[
+  {
+    "id": "bioportal",
+    "title": "BioPortal"
+  },
+  {
+    "id": "covid",
+    "title": "COVID-19"
+  },
+  {
+    "id": "ddbj",
+    "title": "DDBJ"
+  },
+  {
+    "id": "ebi",
+    "title": "EBI"
+  },
+  {
+    "id": "kero",
+    "title": "KERO"
+  },
+  {
+    "id": "med2rdf",
+    "title": "Med2RDF"
+  },
+  {
+    "id": "ncbi",
+    "title": "NCBI"
+  },
+  {
+    "id": "pdb",
+    "title": "PDB"
+  },
+  {
+    "id": "primary",
+    "title": "Primary"
+  },
+  {
+    "id": "proteinatlas",
+    "title": "Protein Atlas"
+  },
+  {
+    "id": "pubchem",
+    "title": "PubChem"
+  },
+  {
+    "id": "sib",
+    "title": "SIB"
+  },
+  {
+    "id": "wikidata",
+    "title": "Wikidata"
+  }
+]

@@ -1,0 +1,124 @@
+.global-navigation
+  background-color: var(--color-page-bg)
+
+  position: fixed
+  top: var(--margin-global-navigation)
+  left: var(--margin-global-navigation)
+  width: var(--width-global-navigation)
+  height: calc(100% - var(--margin-global-navigation) * 2)
+  z-index: var(--z-index-global-navigation)
+
+  &::after
+    content: ''
+    position: absolute
+    display: block
+    height: 100vh
+    top: calc(var(--margin-global-navigation) * -1)
+    left: var(--width-global-navigation)
+    border-left: 1px solid #0005
+    box-shadow: calc(100vw - var(--margin-global-navigation) * 2) 0 0 #0005
+  > .inner
+    padding: 12px
+    display: flex
+    flex-direction: column
+    height: 100%
+    min-height: fit-content
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+    > h1
+      padding: 18px 0 12px
+      font-size: 48px
+      font-weight: 500
+      line-height: 0.8
+      letter-spacing: -0.04em
+      > a
+        color: #000
+        text-decoration: none
+    > .stats
+      margin-bottom: 16px
+      > li
+        position: relative
+        > span
+          line-height: 0.8
+          &:nth-child(1)
+            font-size: 36px
+            font-weight: 500
+            letter-spacing: -0.04em
+          &:nth-child(2)
+            margin-left: 0.2em
+            font-size: 16px
+    > nav
+      > ul
+        > li
+          transition: opacity 0.3s ease
+          &:hover
+            opacity: 1 !important
+          > a
+            display: block
+            font-size: 16px
+            font-weight: 500
+            position: relative
+            &:hover
+              text-decoration: none
+            &::before, &::after
+              content: ''
+              position: absolute
+              display: block
+              border-top: 1px solid #000
+            &::before
+              width: 100%
+              bottom: 7px
+              left: 0
+            &::after
+              width: 7px
+              rotate: 45deg
+              right: 0
+              bottom: 10px
+          > ul
+            padding-left: 10px
+            > li
+              margin-bottom: 0
+              opacity: 0.4
+              &:hover
+                opacity: 1
+              > a
+                font-size: 14px
+                font-weight: 500
+                position: relative
+    > .space
+      flex-grow: 1
+    > .bottom
+      display: flex
+      align-items: center
+      font-size: 12px
+      > p
+        margin: 0
+        padding: 0
+        + p
+          &::before
+            content: '/'
+            padding: 0 0.4em
+      > .spacer
+        flex-grow: 1
+
+// ページID別ナビゲーションフェードアウト
+// 現在のページと一致しないナビゲーション項目を薄くする
+
+// ページIDのリスト
+$page-ids: "top", "access_methods", "datasets", "statistics", "documents", "about"
+$sub-page-ids: "sparql_endpoints", "graphql", "mcp", "llm_chat_interface"
+
+// 各ページIDに対してルールを生成
+@each $page-id in $page-ids
+  body[data-page-id="#{$page-id}"] .global-navigation > .inner > nav > ul > li
+    @if $page-id != "top"
+      // その他のページの場合は一致しない項目をフェードアウト
+      &:not([data-page-id="#{$page-id}"])
+        opacity: 0.4
+
+@each $sub-page-id in $sub-page-ids
+  body[data-page-id="#{$sub-page-id}"] .global-navigation > .inner > nav > ul > li > ul > li
+    &[data-page-id="#{$sub-page-id}"]
+      opacity: 1

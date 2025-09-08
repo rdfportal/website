@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description"
+    content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+
+<body{% if page.pageId %} data-page-id="{{ page.pageId }}" {% endif %}>
+  <header class="global-navigation">
+    <div class="inner">
+      <h1><a href="{{ '/' | relative_url }}">RDF<br>Portal</a></h1>
+      <ul class="stats">
+        <li><span>73</span><span>RDF dataset</span></li>
+        <li><span>858</span><span>million inter-datasets links</span></li>
+        <li><span>160</span><span>billion triples</span></li>
+      </ul>
+      <nav>
+        <ul>
+          <li data-page-id="access_methods">
+            <a href="{{ '/access_methods/' | relative_url }}">Access methods</a>
+            <ul>
+              <li data-page-id="sparql_endpoints">
+                <a href="{{ '/sparql_endpoints/' | relative_url }}">SPARQL Endpoints</a>
+              </li>
+              <li data-page-id="graphql">
+                <a href="{{ '/graphql/' | relative_url }}">GraphQL API</a>
+              </li>
+              <li data-page-id="mcp">
+                <a href="{{ '/mcp/' | relative_url }}">MCP interface</a>
+              </li>
+              <li data-page-id="llm_chat_interface">
+                <a href="{{ '/llm_chat_interface/' | relative_url }}">LLM chat interface</a>
+              </li>
+            </ul>
+          </li>
+          <li data-page-id="datasets">
+            <a href="{{ '/datasets/' | relative_url }}">Datasets</a>
+            {% if page.pageId == "datasets" %}
+            <div id="DatasetsSortFilterView">
+              <div class="sort">
+                <label for="sortSegment">Sort:</label>
+                <div id="sortSegment" class="segmented-button" role="tablist" aria-label="Sort datasets">
+                  <button type="button" data-sort="date" aria-pressed="true">Date</button>
+                  <button type="button" data-sort="name" aria-pressed="false">Name</button>
+                  <button type="button" data-sort="triples" aria-pressed="false">Triples</button>
+                </div>
+              </div>
+              <div class="order">
+                <label for="sortOrderSegment">Order:</label>
+                <div id="sortOrderSegment" class="segmented-button" role="tablist" aria-label="Sort order">
+                  <button type="button" data-order="desc" aria-pressed="true">Desc</button>
+                  <button type="button" data-order="asc" aria-pressed="false">Asc</button>
+                </div>
+              </div>
+              <div class="filter">
+                <label for="tagSelect">Filter:</label>
+                <select id="tagSelect" aria-label="Filter tags">
+                  <option value="">All tags</option>
+                </select>
+              </div>
+            </div>
+            {% endif %}
+          </li>
+          <li data-page-id="statistics"><a href="{{ '/statistics/' | relative_url }}">Statistics</a></li>
+          <li data-page-id="documents"><a href="{{ '/documents/' | relative_url }}">Documents</a></li>
+          <li data-page-id="about"><a href="{{ '/about/' | relative_url }}">About</a></li>
+        </ul>
+      </nav>
+      <div class="space"></div>
+      <div class="bottom">
+        <p>© {{ site.time | date: "%Y" }} RDF Portal</p>
+        <p><a href="{{ '/site-policy/' | relative_url }}">Site Policy</a></p>
+        <span class="spacer"></span>
+        <div class="language-switcher">
+          <button id="language-toggle">
+            <span class="current">EN</span>
+            <span class="options">
+              <span data-lang="en">EN</span>
+              <span data-lang="ja">JA</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <!-- モバイルメニュー関連のJSは削除済み -->
+
+  <!-- ベースURLをJavaScriptで利用可能にする（全ページ共通） -->
+  <script>
+    window.SITE_BASE_URL = '{{ site.baseurl }}';
+
+    // LanguageSwitcher（言語切り替えUI）はLanguageSwitcher.jsで自動初期化されます
+  </script>
+  <script src="{{ '/assets/js/LanguageSwitcher.js' | relative_url }}"></script>
+  </script>
+
+  <!-- DatasetsManagerシングルトンクラス（全ページ共通） -->
+  <script src="{{ '/assets/js/DatasetsManager.js' | relative_url }}"></script>
+
+  <!-- DatasetCardコンポーネント（全ページ共通） -->
+  <script src="{{ '/assets/js/DatasetCard.js' | relative_url }}"></script>
+
+  <!-- トップページ専用のJavaScript -->
+  {% if page.title == 'Top' %}
+  <script src="{{ '/assets/js/top-page-tiles.js' | relative_url }}"></script>
+  {% endif %}
+  </body>
+
+</html>

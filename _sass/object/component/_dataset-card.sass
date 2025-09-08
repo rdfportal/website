@@ -1,0 +1,78 @@
+// ============================================================================
+// Dataset Card Component (RSCSS版)
+// Structure:
+//   .dataset-card
+//     > .head
+//         > .iconwrapper
+//             > svg.icon.-svg
+//         > .title (or a.title.link)
+//     > .body
+//         > .description
+//         > .tags > .tag*
+// Notes:
+//  - 旧BEMクラスは削除済み。残っていた参照はコメントからも除去。
+//  - svg アイコンは iconwrapper を挟むため既存の "> .icon" セレクタは未適用。
+//    必要なら `.dataset-card .icon` 等へ後で調整 (TODO)。
+// ============================================================================
+
+.dataset-card
+  background: var(--color-off-white)
+  border: 1px solid #0002
+  transform-origin: center
+
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1)
+
+  // head: タイトルとアイコンを左右並び
+  > .head
+    display: flex
+    align-items: center
+    gap: 4px
+    > .iconwrapper
+      margin-left: -4px
+      > .icon
+        display: block
+        &.-svg
+          > g, path
+            isolation: isolate
+    > .title
+      font-weight: 600
+      font-size: 18px
+      line-height: 1
+    > .meta
+      flex-grow: 1
+      text-align: right
+      font-size: 12px
+      > span + span
+        margin-left: 1em
+
+  // body 内部要素
+  > .body > .description
+    margin: 0
+    font-size: 14px
+    line-height: 1.1
+
+  > .body > .tags
+    margin-top: 6px
+    display: flex
+    flex-wrap: wrap
+    gap: 2px 8px
+    line-height: 1
+
+    .tag
+      position: relative
+      font-size: 12px
+      vertical-align: middle
+      &::before
+        content: ""
+        display: inline-block
+        height: 5px
+        width: 16px
+        margin-right: 2px
+        position: relative
+        top: -1px
+
+  // フォールバック説明用 (説明欠如時)
+  .isFallback
+    opacity: 0.7
+
+      // カスタム色が設定されている場合は、インラインスタイルが優先される

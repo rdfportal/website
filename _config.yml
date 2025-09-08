@@ -1,0 +1,23 @@
+title: RDF Portal
+description: RDFポータルサイトのリニューアル
+baseurl: "/website" # GitHub Pagesのサブディレクトリ
+url: "https://rdfportal.github.io" # GitHub Pagesのベース URL
+# theme: minima
+safe: false
+plugins:
+  - jekyll-feed
+
+# SCSS Configuration
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Navigation menu
+header_pages:
+  - index.md
+  - endpoints.md
+  - datasets.md
+  - statistics.md
+  - documents.md
+  - search.md
+  - about.md

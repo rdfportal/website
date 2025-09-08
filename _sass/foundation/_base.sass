@@ -1,0 +1,77 @@
+// ==========================================================================
+// Foundation - Reset & Base
+// ==========================================================================
+
+// Reset
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+*::before,
+*::after
+  box-sizing: border-box
+
+// Google Fonts import
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap')
+
+// Base
+html
+  font-size: 100%
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+
+body
+  font-family: var(--font-family-base)
+  font-size: 10px
+  line-height: 1.6
+  background-color: var(--color-bg-body)
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  --gap: 12px
+  position: relative
+  &::before, &::after
+    content: ''
+    position: fixed
+    display: block
+    z-index: calc(var(--z-index-global-navigation) + 1)
+  &::before
+    width: 100vw
+    top: var(--gap)
+    left: 0
+    border-top: 1px solid #0005
+    box-shadow: 0 calc(100vh - var(--gap) * 2) 0 #0005
+  &::after
+    height: 100vh
+    top: 0
+    left: var(--gap)
+    border-left: 1px solid #0005
+    box-shadow: calc(100vw - var(--gap) * 2) 0 0 #0005
+
+// Links
+a
+  color: black
+  text-decoration: none
+  transition: all 0.2s ease
+
+  &:hover
+    color: #000D
+    text-decoration: underline
+
+// Images
+img
+  max-width: 100%
+  height: auto
+
+// Code
+code
+  font-family: 'Monaco', 'Consolas', 'Courier New', monospace
+  padding: 2px 4px
+  font-size: 0.9em
+
+pre
+  overflow-x: auto
+
+  code
+    background: none
+    padding: 0
