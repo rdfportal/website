@@ -98,11 +98,23 @@
   <!-- ベースURLをJavaScriptで利用可能にする（全ページ共通） -->
   <script>
     window.SITE_BASE_URL = '{{ site.baseurl }}';
-
     // LanguageSwitcher（言語切り替えUI）はLanguageSwitcher.jsで自動初期化されます
+    // URLパラメータ font=roman などがあれば body に data-font="roman" を付与する
+    (function(){
+      try {
+        var params = new URLSearchParams(window.location.search || '');
+        var f = params.get('font');
+        if (f) {
+          // 簡易サニタイズ（英数字と _- のみ許可、小文字化）
+          var safe = String(f).toLowerCase().replace(/[^a-z0-9_-]/g, '');
+          if (safe && document && document.body) document.body.setAttribute('data-font', safe);
+        }
+      } catch (e) {
+        /* noop */
+      }
+    })();
   </script>
   <script src="{{ '/assets/js/LanguageSwitcher.js' | relative_url }}"></script>
-  </script>
 
   <!-- DatasetsManagerシングルトンクラス（全ページ共通） -->
   <script src="{{ '/assets/js/DatasetsManager.js' | relative_url }}"></script>
