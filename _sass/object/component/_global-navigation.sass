@@ -47,46 +47,46 @@
             font-weight: 500
             letter-spacing: -0.04em
           &:nth-child(2)
-            margin-left: 0.2em
-            font-size: 16px
+            margin-left: 2px
+            font-size: 1.6rem
     > nav
       > ul
         > li
           transition: opacity 0.3s ease
           &:hover
             opacity: 1 !important
-            > a
+          > a
+            display: block
+            font-size: 1.6rem
+            font-weight: 500
+            position: relative
+            &:hover
+              text-decoration: none
+            &::before, &::after
+              content: ''
+              position: absolute
               display: block
-              font-size: 1.6rem
-              font-weight: 500
-              position: relative
+              border-top: 1px solid #000
+            &::before
+              width: 100%
+              bottom: 7px
+              left: 0
+            &::after
+              width: 7px
+              rotate: 45deg
+              right: 0
+              bottom: 10px
+          > ul
+            padding-left: 10px
+            > li
+              margin-bottom: 0
+              opacity: 0.4
               &:hover
-                text-decoration: none
-              &::before, &::after
-                content: ''
-                position: absolute
-                display: block
-                border-top: 1px solid #000
-              &::before
-                width: 100%
-                bottom: 7px
-                left: 0
-              &::after
-                width: 7px
-                rotate: 45deg
-                right: 0
-                bottom: 10px
-            > ul
-              padding-left: 10px
-              > li
-                margin-bottom: 0
-                opacity: 0.4
-                &:hover
-                  opacity: 1
-                  > a
-                    font-size: 1.4rem
-                    font-weight: 500
-                    position: relative
+                opacity: 1
+              > a
+                font-size: 1.4rem
+                font-weight: 500
+                position: relative
     > .space
       flex-grow: 1
     > .bottom
@@ -99,7 +99,7 @@
         + p
           &::before
             content: '/'
-            padding: 0 0.4em
+            padding: 0 4px
       > .spacer
         flex-grow: 1
 
