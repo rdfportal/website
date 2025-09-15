@@ -12,6 +12,8 @@ module Jekyll
 
       data['layout']   = 'dataset'
       data['title']    = 'Dataset Details'
+      data['pageId']   = 'dataset'
+      data['isSmallHeading'] = true
       data['dataset']  = dataset
       data['permalink'] = "/dataset/#{dataset['id']}/"
       # Note: Jekyll automatically prepends baseurl to permalinks
