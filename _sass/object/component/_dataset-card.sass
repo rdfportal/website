@@ -8,7 +8,7 @@
 //         > .title (or a.title.link)
 //     > .body
 //         > .description
-//         > .tags > .tag*
+//         > .tags-container
 // Notes:
 //  - 旧BEMクラスは削除済み。残っていた参照はコメントからも除去。
 //  - svg アイコンは iconwrapper を挟むため既存の "> .icon" セレクタは未適用。
@@ -46,33 +46,18 @@
         margin-left: 10px
 
   // body 内部要素
-  > .body > .description
-    margin: 0
-    font-size: 1.4rem
-    line-height: 1.1
+  > .body
 
-  > .body > .tags
-    margin-top: 6px
-    display: flex
-    flex-wrap: wrap
-    gap: 2px 8px
-    line-height: 1
+    > .description
+      margin: 0
+      font-size: 1.4rem
+      line-height: 1.1
 
-    .tag
-      position: relative
+    > .tags-container
+      margin-top: 6px
+      display: flex
       font-size: 1.2rem
-      vertical-align: middle
-      &::before
-        content: ""
-        display: inline-block
-        height: 5px
-        width: 16px
-        margin-right: 2px
-        position: relative
-        top: -1px
 
   // フォールバック説明用 (説明欠如時)
   .isFallback
     opacity: 0.7
-
-      // カスタム色が設定されている場合は、インラインスタイルが優先される
