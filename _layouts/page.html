@@ -3,6 +3,12 @@ layout: default
 ---
 
 <div id="CommonPageView">
-  <h2 class="title">{{ page.title }}</h2>
+  <header>
+    {% if page.backToListURL %}
+    <h2 class="title"><a href="{{ page.backToListURL | relative_url }}">{{ page.title }}</a></h2>
+    {% else %}
+    <h2 class="title">{{ page.title }}</h2>
+    {% endif %}
+  </header>
   <div class="content">{{ content }}</div>
 </div>

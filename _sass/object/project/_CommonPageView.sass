@@ -5,19 +5,43 @@
   background-color: var(--color-page-bg)
   a
     text-decoration: underline
-  > .title
+  > header
     margin: 10px 0 18px
-    font-size: 3.2rem
-    font-weight: 500
-    line-height: 0.8
-    letter-spacing: -0.04em
     &::after
       content: ''
       display: block
       width: 100%
       border-top: 1px solid #000
       margin-top: -3px
-    [data-is-small-heading="true"] &
-      font-size: 1.6rem
-      text-align: right
+    > .title
+      margin: -1.6rem 0 0
+      font-size: 3.2rem
+      font-weight: 500
+      line-height: 0.8
+      letter-spacing: -0.04em
+      &:has(> a)
+        font-size: 1.6rem
+        text-align: right
+      > a
+        text-decoration: none
+        position: relative
+        padding-right: 1.6rem
+        &::before, &::after
+          content: ''
+          display: block
+          position: absolute
+        &::before
+          width: 1.2rem
+          height: 1.2rem
+          background-color: #000
+          top: .3rem
+          right: 0
+        &::after
+          width: .6rem
+          height: .6rem
+          border-top: solid .2rem #FFFE
+          border-left: solid .2rem #FFFE
+          top: .6rem
+          right: .2rem
+          rotate: -45deg
   > .content
