@@ -16,15 +16,28 @@ backToListURL: /datasets/
             </ul>
         </header>
 
+        <div class="spec">
+            <table>
+                <tbody>
+                    <tr class="tags">
+                        <th>Tags</th>
+                        <td>
+                            {% assign _tags = page.dataset.tags | default: page.tags | default: [] %}
+                            <div class="tags">
+                                {% for tag in _tags %}
+                                <span class="tag">{{ tag }}</span>{% if forloop.last == false %} {% endif %}
+                                {% endfor %}
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
     </article>
 </div>
 
 <div id="dataset-details" class="dataset-details">
-    <a href="{{ site.baseurl }}/datasets/" class="back-link">データセット一覧に戻るhogehoge</a>
-    <div class="dataset-header">
-        <h1>{{ page.dataset.title }}</h1>
-        <div class="dataset-id">ID: {{ page.dataset.id }}</div>
-    </div>
     <div class="metadata-section">
         <h3>説明</h3>
         <p>{{page.description}}</p>
