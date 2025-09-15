@@ -287,132 +287,18 @@ class DatasetCard {
   }
 
   #buildPetalSvg() {
-    const P = DatasetCard.SVG;
     const size = this.#options.iconSize || 48;
     const tags = this.#extractTagStrings(this.#getTags());
-    const rawCount = tags.length;
-    // 共通形状計算 (n=0/1 でも最大幅でふんわりさせる)
-    const effectiveN = Math.min(Math.max(rawCount, 1), P.MAX_PETALS);
-    const tRaw = (effectiveN - 2) / (P.MAX_PETALS - 2);
-    const t = Math.max(0, Math.min(1, tRaw));
-    const tVisual = Math.pow(t, P.VISUAL_EXP);
-    const t2 = Math.pow(t, P.WIDTH_EXP); // 幾何用 (幅/長さ計算)
-    const scaleVisual =
-      P.VISUAL_MAX_SCALE - (P.VISUAL_MAX_SCALE - P.VISUAL_MIN_SCALE) * tVisual;
-    const ctrlX = P.WIDTH_MAX - (P.WIDTH_MAX - P.WIDTH_MIN) * t2;
-    const lenFactor = 1 - P.LENGTH_COMPRESS * t2;
-    const APEX_Y = P.APEX_Y * lenFactor;
-    const CTRL_LOW_Y = P.PETAL_CTRL_LOW_Y * lenFactor;
-    // 視覚スケール (t2=0 少枚数→最大 / t2=1 多枚数→最小)
-    const path = `M0 ${APEX_Y} C ${ctrlX} ${CTRL_LOW_Y}, ${ctrlX} ${P.PETAL_CTRL_TOP_Y}, 0 ${P.PETAL_TOP_Y} C -${ctrlX} ${P.PETAL_CTRL_TOP_Y}, -${ctrlX} ${CTRL_LOW_Y}, 0 ${APEX_Y}Z`;
-    // --- 垂直位置補正 (V_ALIGN) ----------------------------------------------
-    const V = DatasetCard.V_ALIGN;
-    let translateY = 0;
-    if (V.MODE === "geometric") {
-      const baselineMid = (P.PETAL_TOP_Y + P.APEX_Y) * 0.5;
-      const currentMid = (P.PETAL_TOP_Y + APEX_Y) * 0.5;
-      const midDiff = baselineMid - currentMid;
-      translateY = V.CENTER_BASE + midDiff * V.CENTER_FACTOR;
-    } else if (V.MODE === "interpolate") {
-      const effectiveN2 = Math.min(Math.max(rawCount, 1), P.MAX_PETALS);
-      const tRaw2 = (effectiveN2 - 1) / (P.MAX_PETALS - 1);
-      const tAlign = Math.pow(Math.max(0, Math.min(1, tRaw2)), V.SHIFT_EXP);
-      translateY = V.SHIFT_MIN + (V.SHIFT_MAX - V.SHIFT_MIN) * tAlign;
-      if (rawCount <= 2) translateY += V.SINGLE_EXTRA;
+    try {
+      if (window.DatasetIcon && typeof window.DatasetIcon.createSvg === 'function') {
+        return window.DatasetIcon.createSvg(tags, size, {});
+      }
+    } catch (e) {
+      // fall through to placeholder
     }
-    // 0 タグ: フラット灰色一枚
-    if (rawCount === 0) {
-      return `<svg class="icon -svg" width="${size}" height="${size}" viewBox="-50 0 100 100" role="img" aria-label="No tags"><g transform="scale(${(
-        P.SCALE * scaleVisual
-      ).toFixed(4)}) translate(0,${translateY.toFixed(
-        4,
-      )})"><path d="${path}" fill="${P.ZERO_TAG_COLOR}"/></g></svg>`;
-    }
-    // 1 タグ: 単一グラデ花弁
-    if (rawCount === 1) {
-      const baseHex =
-        window.DatasetsManager && window.DatasetsManager.getColor
-          ? window.DatasetsManager.getColor(tags[0])
-          : "#999999";
-      const hsl =
-        window.DatasetsManager && window.DatasetsManager.hexToHsl
-          ? window.DatasetsManager.hexToHsl(baseHex)
-          : { h: 0, s: 0, l: 55 };
-      const topHex = this.#hslToHex(hsl.h, hsl.s, Math.min(100, hsl.l + 14));
-      const idBase = `g_${Math.abs(this.#hashString(tags[0]))}_single`;
-      const id = P.USE_RANDOM_ID
-        ? `${idBase}_${Math.floor(Math.random() * 1e5)}`
-        : idBase;
-      const grad = `<linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="${topHex}" stop-opacity="${P.GRAD_OPACITY_START}"/><stop offset="100%" stop-color="${baseHex}" stop-opacity="${P.GRAD_OPACITY_END}"/></linearGradient>`;
-      return `<svg class="icon -svg" width="${size}" height="${size}" viewBox="-50 0 100 100" role="img" aria-label="Tag: ${this.#escapeHtml(
-        tags[0],
-      )}"><defs>${grad}</defs><g transform="scale(${(
-        P.SCALE *
-        scaleVisual *
-        P.SINGLE_PETAL_EMPHASIS
-      ).toFixed(4)}) translate(0,${translateY.toFixed(
-        4,
-      )})"><path d="${path}" fill="url(#${id})" style="mix-blend-mode:multiply"/></g></svg>`;
-    }
-    // 2+ タグ: 多花弁
-    const arr = tags.slice(0, P.MAX_PETALS);
-    const n = arr.length;
-    const fullCircle = n >= P.FULL_CIRCLE_THRESHOLD;
-    let dynamicSpan;
-    if (fullCircle) {
-      dynamicSpan = 360;
-    } else if (n <= 1) {
-      dynamicSpan = 0; // 0/1 枚は回転不要
-    } else if (n === 2) {
-      dynamicSpan = P.TWO_PETAL_SPAN; // 2枚専用角度
-    } else {
-      // 3 <= n < FULL_CIRCLE_THRESHOLD の扇状
-      const spanRange = P.FAN_SPAN_MAX - P.FAN_SPAN_MIN;
-      const denom = P.FULL_CIRCLE_THRESHOLD - 1 - 3; // 例: 8閾値 → 7-3 = 4
-      const ratio = denom > 0 ? (n - 3) / denom : 0; // n=3→0, n=7→1
-      const clamped = Math.max(0, Math.min(1, ratio));
-      dynamicSpan = P.FAN_SPAN_MIN + spanRange * clamped;
-    }
-    const step = n === 1 ? 0 : fullCircle ? 360 / n : dynamicSpan / (n - 1);
-    const start = fullCircle ? 0 : -dynamicSpan / 2;
-    const lightenBase = 8,
-      lightenExtra = 8;
-    const lightenL = Math.min(lightenBase + (1 - t2) * lightenExtra, 20);
-    const gradients = [];
-    const petals = [];
-    arr.forEach((tag, i) => {
-      const angle = start + step * i;
-      const baseHex =
-        window.DatasetsManager && window.DatasetsManager.getColor
-          ? window.DatasetsManager.getColor(tag)
-          : "#888888";
-      const hsl =
-        window.DatasetsManager && window.DatasetsManager.hexToHsl
-          ? window.DatasetsManager.hexToHsl(baseHex)
-          : { h: 0, s: 0, l: 55 };
-      const topHex = this.#hslToHex(
-        hsl.h,
-        hsl.s,
-        Math.min(100, hsl.l + lightenL),
-      );
-      const idBase = `g_${Math.abs(this.#hashString(tag))}_${i}`;
-      const id = P.USE_RANDOM_ID
-        ? `${idBase}_${Math.floor(Math.random() * 1e5)}`
-        : idBase;
-      gradients.push(
-        `<linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="${topHex}" stop-opacity="${P.GRAD_OPACITY_START}"/><stop offset="100%" stop-color="${baseHex}" stop-opacity="${P.GRAD_OPACITY_END}"/></linearGradient>`,
-      );
-      petals.push(
-        `<path d="${path}" fill="url(#${id})" transform="rotate(${angle} 0 ${APEX_Y})" style="mix-blend-mode:multiply"/>`,
-      );
-    });
-    return `<svg class="icon -svg" width="${size}" height="${size}" viewBox="-50 0 100 100" role="img" aria-label="Tags: ${this.#escapeHtml(
-      arr.join(", "),
-    )}"><defs>${gradients.join("")}</defs><g transform="scale(${(
-      P.SCALE * scaleVisual
-    ).toFixed(4)}) translate(0,${translateY.toFixed(4)})">${petals.join(
-      "",
-    )}</g></svg>`;
+
+    // fallback simple placeholder
+    return `<svg class="icon -svg" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" role="img" aria-label="Icon"><rect width="${size}" height="${size}" fill="#ddd"/></svg>`;
   }
   #hslToHex(h, s, l) {
     s /= 100;
