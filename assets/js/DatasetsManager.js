@@ -24,11 +24,6 @@ class DatasetsManager {
     this._styleEl = null;
   }
 
-  // 外部からデータを注入する（テストやサーバー側埋め込みに対応）
-  setDatasets(datasets) {
-    if (Array.isArray(datasets)) this._datasets = datasets;
-  }
-
   // ページに埋め込まれた <script id="datasets-json"> を読んでキャッシュ
   loadEmbeddedDatasets() {
     if (this._datasets) return this._datasets;
@@ -46,25 +41,24 @@ class DatasetsManager {
     }
   }
 
-  // データセットにタグ色を付加して返す
-  getDatasetsWithTagColors() {
-    const ds = this.loadEmbeddedDatasets() || [];
-    return ds.map(d => ({
-      ...d,
-      tagsWithColors: Array.isArray(d.tags) ? d.tags.map(t => ({ id: t, color: this.getTagColor(t) })) : []
-    }));
-  }
-
   // 互換性のための非同期メソッド
   // 旧実装を呼んでいたコードが `await datasetLoader.getDatasets()` を期待しているため
   async getDatasets() {
-    const datasets = this.getDatasetsWithTagColors();
-
-    // collect all unique tag ids for style generation
+    // Load raw datasets once and compute tag colors + collect tags in one pass
+    const raw = this.loadEmbeddedDatasets() || [];
     const tagSet = new Set();
-    datasets.forEach((d) => {
-      if (Array.isArray(d.tags)) d.tags.forEach((t) => t && tagSet.add(t));
-      if (Array.isArray(d.tagsWithColors)) d.tagsWithColors.forEach((t) => t && t.id && tagSet.add(t.id));
+    const datasets = raw.map((d) => {
+      // derive tag id array: prefer d.tags, fallback to d.tagsWithColors
+      let tagIds = [];
+      if (Array.isArray(d.tags)) tagIds = d.tags.slice();
+      else if (Array.isArray(d.tagsWithColors)) tagIds = d.tagsWithColors.map((t) => t && t.id).filter(Boolean);
+
+      tagIds.forEach((t) => t && tagSet.add(t));
+
+      return {
+        ...d,
+        tagsWithColors: tagIds.map((t) => ({ id: t, color: this.getTagColor(t) })),
+      };
     });
 
     const tags = Array.from(tagSet);
@@ -81,11 +75,6 @@ class DatasetsManager {
       d.tags.forEach(t => { if (!t) return; counts.set(t, (counts.get(t) || 0) + 1); });
     });
     return Array.from(counts.entries()).map(([id, count]) => ({ id, count, color: this.getTagColor(id) }));
-  }
-
-  findDatasetById(id) {
-    const ds = this.loadEmbeddedDatasets() || [];
-    return ds.find(d => d.id === id) || null;
   }
 
   // タグ色の取得
