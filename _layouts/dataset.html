@@ -77,7 +77,7 @@ backToListURL: /datasets/
             <div class="metadata-value">
                 <div class="tags">
                     {% for tag in page.dataset.tags %}
-                    <span class="tag">{{ tag }}</span>
+                    <span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
                     {% endfor %}
                 </div>
             </div>
@@ -141,4 +141,36 @@ backToListURL: /datasets/
             }
         });
     }
+</script>
+<script>
+    // Layout-level: ensure DatasetsManager injects tag styles for the tags on this page
+    (function () {
+        function applyTagStyles() {
+            try {
+                const el = document.getElementById('dataset-tags-json');
+                if (!el) return;
+                const txt = el.textContent || el.innerText || '';
+                if (!txt) return;
+                const tags = JSON.parse(txt || '[]');
+                if (window.DatasetsManager && typeof window.DatasetsManager.getInstance === 'function') {
+                    const mgr = window.DatasetsManager.getInstance();
+                    if (mgr && typeof mgr.updateTagStyles === 'function') {
+                        mgr.updateTagStyles(tags || []);
+                        return true;
+                    }
+                }
+            } catch (e) {
+                // ignore parse errors
+            }
+            return false;
+        }
+
+        if (!applyTagStyles()) {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', applyTagStyles);
+            } else {
+                applyTagStyles();
+            }
+        }
+    })();
 </script>
