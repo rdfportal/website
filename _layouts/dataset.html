@@ -59,54 +59,5 @@ backToListURL: /datasets/
 </div>
 
 
-<!-- Dataset page init: read tags, apply tag styles and render icon once -->
-<script type="application/json" id="dataset-tags-json">{{ page.dataset.tags | jsonify }}</script>
-<script>
-    (function () {
-        function readTags() {
-            try {
-                const el = document.getElementById('dataset-tags-json');
-                if (!el) return [];
-                const txt = el.textContent || el.innerText || '';
-                if (!txt) return [];
-                return JSON.parse(txt || '[]');
-            } catch (e) {
-                return [];
-            }
-        }
-
-        function initOnce() {
-            const tags = readTags();
-
-            // Apply tag styles via DatasetsManager if available
-            try {
-                if (window.DatasetsManager && typeof window.DatasetsManager.getInstance === 'function') {
-                    const mgr = window.DatasetsManager.getInstance();
-                    if (mgr && typeof mgr.updateTagStyles === 'function') mgr.updateTagStyles(tags || []);
-                }
-            } catch (e) {
-                /* ignore */
-            }
-
-            // Render icon using DatasetIcon helpers if present
-            try {
-                const container = document.getElementById('dataset-icon-container');
-                if (container) {
-                    if (window.DatasetIcon && typeof window.DatasetIcon.renderInContainer === 'function') {
-                        window.DatasetIcon.renderInContainer(container, tags || [], 48, {});
-                    } else if (window.DatasetIcon && typeof window.DatasetIcon.renderFromJsonElement === 'function') {
-                        window.DatasetIcon.renderFromJsonElement('dataset-tags-json', 'dataset-icon-container', { size: 48 });
-                    }
-                }
-            } catch (e) {
-                /* ignore */
-            }
-        }
-
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initOnce, { once: true });
-        } else {
-            initOnce();
-        }
-    })();
-</script>
+{% include dataset-tags-json.html tags=page.dataset.tags %}
+{% include dataset-init-script.html container_id='dataset-icon-container' json_id='dataset-tags-json' size=48 %}

@@ -1,0 +1,5 @@
+{%- comment -%}
+Embed dataset tags as JSON for client-side scripts.
+Usage: {% include dataset-tags-json.html tags=page.dataset.tags %}
+{%- endcomment -%}
+<script type="application/json" id="dataset-tags-json">{{ include.tags | jsonify }}</script>

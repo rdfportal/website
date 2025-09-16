@@ -1,0 +1,29 @@
+{% comment %} Liquid-only simple icon: derive hue from first tag by summing char codes. {% endcomment %}
+{% assign _tags = include.tags | default: [] %}
+{% assign size = include.size | default: 48 %}
+{% if _tags.size > 0 %}
+{% assign primary = _tags[0] %}
+{% assign chars = primary | split: '' %}
+{% assign sum = 0 %}
+{% for c in chars %}
+{% assign sum = sum | plus: c | times: 1 %}
+{% endfor %}
+{% assign hue = sum | modulo: 360 %}
+<svg class="icon -svg" width="{{ size }}" height="{{ size }}" viewBox="-50 0 100 100" role="img"
+  aria-label="Tags: {{ _tags | join: ', ' }}">
+  <defs>
+    <linearGradient id="g_0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="hsl({{ hue }},70%,60%)" stop-opacity="1" />
+      <stop offset="100%" stop-color="hsl({{ hue }},65%,40%)" stop-opacity="0.3" />
+    </linearGradient>
+  </defs>
+  <g transform="scale(0.9) translate(0,10)">
+    <path d="M0 78 C 32 60, 32 20, 0 10 C -32 20, -32 60, 0 78Z" fill="url(#g_0)" />
+  </g>
+</svg>
+{% else %}
+<svg class="icon -svg" width="{{ size }}" height="{{ size }}" viewBox="0 0 {{ size }} {{ size }}" role="img"
+  aria-label="No tags">
+  <rect width="{{ size }}" height="{{ size }}" fill="#e2e8f0" />
+</svg>
+{% endif %}

@@ -1,0 +1,39 @@
+{%- comment -%}
+Reusable dataset init script include.
+Calls DatasetsManager.updateTagStyles(tags) and DatasetIcon.renderInContainer when available.
+Usage: {% include dataset-init-script.html container_id='dataset-icon-container' json_id='dataset-tags-json' size=48 %}
+{%- endcomment -%}
+<script>
+  (function () {
+    function readTags(jsonId) {
+      try {
+        const el = document.getElementById(jsonId);
+        if (!el) return [];
+        const txt = el.textContent || el.innerText || '';
+        if (!txt) return [];
+        return JSON.parse(txt || '[]');
+      } catch (e) { return [] }
+    }
+    function init() {
+      const tags = readTags('{{ include.json_id | default: 'dataset - tags - json' }}');
+      try {
+        if (window.DatasetsManager && typeof window.DatasetsManager.getInstance === 'function') {
+          const mgr = window.DatasetsManager.getInstance();
+          if (mgr && typeof mgr.updateTagStyles === 'function') mgr.updateTagStyles(tags || []);
+        }
+      } catch (e) { }
+      try {
+        const container = document.getElementById('{{ include.container_id | default: 'dataset - icon - container' }}');
+        if (container) {
+          if (window.DatasetIcon && typeof window.DatasetIcon.renderInContainer === 'function') {
+            window.DatasetIcon.renderInContainer(container, tags || [], {{ include.size | default: 48 }}, { });
+        } else if (window.DatasetIcon && typeof window.DatasetIcon.renderFromJsonElement === 'function') {
+          window.DatasetIcon.renderFromJsonElement('{{ include.json_id | default: 'dataset - tags - json' }}', '{{ include.container_id | default: 'dataset - icon - container' }}', { size: {{ include.size | default: 48 }}
+      });
+    }
+  }
+    }catch (e) { }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true }); else init();
+}) ();
+</script>
