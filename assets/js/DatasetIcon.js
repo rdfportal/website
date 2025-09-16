@@ -82,17 +82,17 @@ class DatasetIcon {
     const hexToHsl = (hex) => {
       if (window.DatasetsManager && typeof window.DatasetsManager.hexToHsl === 'function') return window.DatasetsManager.hexToHsl(hex);
       // fallback simple parser
-      if (!hex || !/^#([0-9a-f]{6})$/i.test(hex)) return { h:0,s:0,l:55 };
-      const r = parseInt(hex.slice(1,3),16)/255;
-      const g = parseInt(hex.slice(3,5),16)/255;
-      const b = parseInt(hex.slice(5,7),16)/255;
-      const max = Math.max(r,g,b), min = Math.min(r,g,b);
-      let h,s; const l = (max+min)/2;
-      if (max===min){ h=s=0; } else { const d = max-min; s = l>0.5 ? d/(2-max-min) : d/(max+min); switch(max){ case r: h=(g-b)/d + (g<b?6:0); break; case g: h=(b-r)/d + 2; break; default: h=(r-g)/d + 4; } h/=6; }
-      return { h: Math.round(h*360), s: Math.round(s*100), l: Math.round(l*100) };
+      if (!hex || !/^#([0-9a-f]{6})$/i.test(hex)) return { h: 0, s: 0, l: 55 };
+      const r = parseInt(hex.slice(1, 3), 16) / 255;
+      const g = parseInt(hex.slice(3, 5), 16) / 255;
+      const b = parseInt(hex.slice(5, 7), 16) / 255;
+      const max = Math.max(r, g, b), min = Math.min(r, g, b);
+      let h, s; const l = (max + min) / 2;
+      if (max === min) { h = s = 0; } else { const d = max - min; s = l > 0.5 ? d / (2 - max - min) : d / (max + min); switch (max) { case r: h = (g - b) / d + (g < b ? 6 : 0); break; case g: h = (b - r) / d + 2; break; default: h = (r - g) / d + 4; } h /= 6; }
+      return { h: Math.round(h * 360), s: Math.round(s * 100), l: Math.round(l * 100) };
     };
-    const hslToHex = (h,s,l) => {
-      s /= 100; l /= 100; const k = n => (n + h/30) % 12; const a = s * Math.min(l, 1-l); const f = n => l - a * Math.max(-1, Math.min(k(n)-3, Math.min(9-k(n),1))); const r = Math.round(f(0)*255).toString(16).padStart(2,'0'); const g = Math.round(f(8)*255).toString(16).padStart(2,'0'); const b = Math.round(f(4)*255).toString(16).padStart(2,'0'); return `#${r}${g}${b}`;
+    const hslToHex = (h, s, l) => {
+      s /= 100; l /= 100; const k = n => (n + h / 30) % 12; const a = s * Math.min(l, 1 - l); const f = n => l - a * Math.max(-1, Math.min(k(n) - 3, Math.min(9 - k(n), 1))); const r = Math.round(f(0) * 255).toString(16).padStart(2, '0'); const g = Math.round(f(8) * 255).toString(16).padStart(2, '0'); const b = Math.round(f(4) * 255).toString(16).padStart(2, '0'); return `#${r}${g}${b}`;
     };
 
     if (rawCount === 1) {
@@ -101,7 +101,7 @@ class DatasetIcon {
       const hsl = hexToHsl(baseHex);
       const topHex = hslToHex(hsl.h, hsl.s, Math.min(100, hsl.l + 14));
       const idBase = `g_${Math.abs(DatasetIcon._hashString(String(tag0)))}_single`;
-      const id = P.USE_RANDOM_ID ? `${idBase}_${Math.floor(Math.random()*1e5)}` : idBase;
+      const id = P.USE_RANDOM_ID ? `${idBase}_${Math.floor(Math.random() * 1e5)}` : idBase;
       const grad = `<linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="${topHex}" stop-opacity="${P.GRAD_OPACITY_START}"/><stop offset="100%" stop-color="${baseHex}" stop-opacity="${P.GRAD_OPACITY_END}"/></linearGradient>`;
       return `<svg class="icon -svg" width="${size}" height="${size}" viewBox="-50 0 100 100" role="img" aria-label="Tag: ${DatasetIcon._escapeHtml(String(tag0))}"><defs>${grad}</defs><g transform="scale(${(P.SCALE * scaleVisual * P.SINGLE_PETAL_EMPHASIS).toFixed(4)}) translate(0,${translateY.toFixed(4)})"><path d="${path}" fill="url(#${id})" style="mix-blend-mode:multiply"/></g></svg>`;
     }
@@ -133,7 +133,7 @@ class DatasetIcon {
       const hsl = hexToHsl(baseHex);
       const topHex = hslToHex(hsl.h, hsl.s, Math.min(100, hsl.l + lightenL));
       const idBase = `g_${Math.abs(DatasetIcon._hashString(String(tag)))}_${i}`;
-      const id = P.USE_RANDOM_ID ? `${idBase}_${Math.floor(Math.random()*1e5)}` : idBase;
+      const id = P.USE_RANDOM_ID ? `${idBase}_${Math.floor(Math.random() * 1e5)}` : idBase;
       gradients.push(`<linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="${topHex}" stop-opacity="${P.GRAD_OPACITY_START}"/><stop offset="100%" stop-color="${baseHex}" stop-opacity="${P.GRAD_OPACITY_END}"/></linearGradient>`);
       petals.push(`<path d="${path}" fill="url(#${id})" transform="rotate(${angle} 0 ${APEX_Y})" style="mix-blend-mode:multiply"/>`);
     });
@@ -152,7 +152,57 @@ class DatasetIcon {
   }
 
   static _escapeHtml(str) {
-    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  // Render helper: render svg into a DOM container. Returns true on success.
+  static renderInContainer(container, tags = [], size = 48, options = {}) {
+    if (!container) return false;
+    try {
+      const svg = DatasetIcon.createSvg(tags, size, options);
+      container.innerHTML = svg;
+      container.setAttribute('aria-hidden', 'false');
+      return true;
+    } catch (e) {
+      console.error('DatasetIcon.renderInContainer failed', e);
+      return false;
+    }
+  }
+
+  // Convenience: read tags from a <script type="application/json" id="..."> element and render into container
+  // Handles DOMContentLoaded, retries while DatasetIcon may not yet be available, and a fallback SVG.
+  static renderFromJsonElement(jsonElId, containerId, opts = {}) {
+    const maxRetries = typeof opts.maxRetries === 'number' ? opts.maxRetries : 10;
+    const retryMs = typeof opts.retryMs === 'number' ? opts.retryMs : 120;
+    const size = typeof opts.size === 'number' ? opts.size : 48;
+    let attempts = 0;
+
+    const readTags = () => {
+      try {
+        const el = document.getElementById(jsonElId);
+        if (!el) return [];
+        const txt = el.textContent || el.innerText || '';
+        if (!txt) return [];
+        return JSON.parse(txt || '[]');
+      } catch (e) {
+        console.warn('DatasetIcon: failed to parse tags json', e);
+        return [];
+      }
+    };
+
+    const attempt = () => {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+      const tags = readTags();
+      if (DatasetIcon.renderInContainer(container, tags, size, opts)) return;
+      attempts++;
+      if (attempts <= maxRetries) setTimeout(attempt, retryMs); else {
+        // final fallback: empty icon
+        try { container.innerHTML = DatasetIcon.createSvg([], size, opts); container.setAttribute('aria-hidden', 'false'); } catch (e) { container.innerHTML = '<svg class="icon -svg" width="' + size + '" height="' + size + '" viewBox="0 0 ' + size + ' ' + size + '" role="img" aria-label="Dataset icon"><rect width="' + size + '" height="' + size + '" fill="#e5e7eb"></rect></svg>'; }
+      }
+    };
+
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', attempt); else attempt();
   }
 }
 

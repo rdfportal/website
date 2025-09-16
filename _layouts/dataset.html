@@ -9,12 +9,12 @@ backToListURL: /datasets/
 <div id="DatasetDetailView">
     <article class="inner">
         <header>
+            <div id="dataset-icon-container" class="icon" aria-hidden="true"></div>
             <h2>{{ page.dataset.title }}</h2>
-            <ul class="links">
-                <li><a href="{{ page.dataset.website }}" class="external-link">Website</a></li>
-
-            </ul>
         </header>
+        <ul class="links">
+            <li><a href="{{ page.dataset.website }}" class="external-link">Website</a></li>
+        </ul>
 
         <div class="spec">
             <table>
@@ -23,9 +23,10 @@ backToListURL: /datasets/
                         <th>Tags</th>
                         <td>
                             {% assign _tags = page.dataset.tags | default: page.tags | default: [] %}
-                            <div class="tags">
+                            <div class="tags-container">
                                 {% for tag in _tags %}
-                                <span class="tag">{{ tag }}</span>{% if forloop.last == false %} {% endif %}
+                                <span class="tag" data-tag="{{ tag }}">{{ tag }}</span>{% if forloop.last == false %} {%
+                                endif %}
                                 {% endfor %}
                             </div>
                         </td>
@@ -124,5 +125,20 @@ backToListURL: /datasets/
             rawMetadata.style.display = "none";
             button.textContent = "生のメタデータを表示";
         }
+    }
+</script>
+
+<!-- Dataset icon: use DatasetIcon helper to render from embedded JSON -->
+<script type="application/json" id="dataset-tags-json">{{ page.dataset.tags | jsonify }}</script>
+<script>
+    if (window.DatasetIcon && typeof window.DatasetIcon.renderFromJsonElement === 'function') {
+        window.DatasetIcon.renderFromJsonElement('dataset-tags-json', 'dataset-icon-container', { size: 48 });
+    } else {
+        // if DatasetIcon not yet loaded, call after DOMContentLoaded so the helper handles retries
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.DatasetIcon && typeof window.DatasetIcon.renderFromJsonElement === 'function') {
+                window.DatasetIcon.renderFromJsonElement('dataset-tags-json', 'dataset-icon-container', { size: 48 });
+            }
+        });
     }
 </script>
