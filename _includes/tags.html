@@ -1,0 +1,6 @@
+{% assign _tags = include.tags | default: [] %}
+<div class="tags-container">
+  {% for tag in _tags %}
+  <span class="tag" data-tag="{{ tag }}">{{ tag }}</span>{% if forloop.last == false %} {% endif %}
+  {% endfor %}
+</div>

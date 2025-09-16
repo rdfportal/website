@@ -16,20 +16,40 @@ backToListURL: /datasets/
             <li><a href="{{ page.dataset.website }}" class="external-link">Website</a></li>
         </ul>
 
+        <p class="description">{{ page.dataset.description.en }}</p>
+
         <div class="spec">
             <table>
                 <tbody>
-                    <tr class="tags">
+                    <tr data-row-kind="tags" data-type="tags">
                         <th>Tags</th>
                         <td>
-                            {% assign _tags = page.dataset.tags | default: page.tags | default: [] %}
+                            {% if page.dataset and page.dataset.tags %}
+                            {% assign _tags = page.dataset.tags %}
+                            {% elsif page.tags %}
+                            {% assign _tags = page.tags %}
+                            {% else %}
+                            {% assign _tags = [] %}
+                            {% endif %}
                             <div class="tags-container">
-                                {% for tag in _tags %}
-                                <span class="tag" data-tag="{{ tag }}">{{ tag }}</span>{% if forloop.last == false %} {%
-                                endif %}
-                                {% endfor %}
+                                {% include tags.html tags=_tags %}
                             </div>
                         </td>
+                    </tr>
+                    <tr data-row-kind="providers" data-type="number">
+                        <th>Data provider</th>
+                        <td>
+                            {% assign _providers = page.dataset.providers | default: [] %}
+                            <ul>
+                                {% for provider in _providers %}
+                                <li>{{ provider.en }}</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr data-row-kind="issued" data-type="date">
+                        <th>Issued</th>
+                        <td>{{ page.dataset.issued }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -38,139 +58,55 @@ backToListURL: /datasets/
     </article>
 </div>
 
-<div id="dataset-details" class="dataset-details">
-    <div class="metadata-section">
-        <h3>説明</h3>
-        <p>{{page.description}}</p>
-    </div>
-    <div class="metadata-section">
-        <h3>基本情報</h3>
-        <div class="metadata-grid">
-            {% if page.dataset.website %}
-            <div class="metadata-item">
-                <div class="metadata-label">ウェブサイト</div>
-                <div class="metadata-value">
-                    <a href="{{page.dataset.website}}">{{page.dataset.website}}</a>
-                </div>
-            </div>
-            {% endif %} {% if page.dataset.issued %}
-            <div class="metadata-item">
-                <div class="metadata-label">発行日</div>
-                <div class="metadata-value">{{page.dataset.issued}}</div>
-            </div>
-            {% endif %} {% if page.dataset.updated %}
-            <div class="metadata-item">
-                <div class="metadata-label">更新日</div>
-                <div class="metadata-value">{{page.dataset.updated}}</div>
-            </div>
-            {% endif %} {% if page.dataset.version %}
-            <div class="metadata-item">
-                <div class="metadata-label">バージョン</div>
-                <div class="metadata-value">{{page.dataset.version}}</div>
-            </div>
-            {% endif %}
-        </div>
-    </div>
-    <div class="metadata-section">
-        <h3>タグ</h3>
-        <div class="metadata-item">
-            <div class="metadata-value">
-                <div class="tags">
-                    {% for tag in page.dataset.tags %}
-                    <span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="metadata-section">
-        <h3>リンク</h3>
-        <div class="metadata-grid">
-            <div class="metadata-value">
-                <div class="metadata-item">
-                    <div class="metadata-label">設定ファイル</div>
-                    <div class="metadata-value">
-                        <a
-                            href="https://github.com/dbcls/rdf-config/tree/master/config/{{page.dataset.id}}">https://github.com/dbcls/rdf-config/tree/master/config/{{page.dataset.id}}</a>
-                    </div>
-                </div>
-                <div class="metadata-item">
-                    <div class="metadata-label">メタデータファイル</div>
-                    <div class="metadata-value">
-                        <a
-                            href="https://github.com/dbcls/rdf-config/tree/master/config/{{page.dataset.id}}/metadata.yaml">https://github.com/dbcls/rdf-config/tree/master/config/{{page.dataset.id}}/metadata.yaml</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="expandable-section">
-        <button class="expand-toggle" onclick="toggleRawMetadata()">
-            生のメタデータを表示
-        </button>
-        <div id="raw-metadata" style="display: none" class="raw-metadata">
-            {{page.dataset | jsonify}}
-        </div>
-    </div>
-</div>
-<script>
-    function toggleRawMetadata() {
-        const rawMetadata = document.getElementById("raw-metadata");
-        const button = document.querySelector(".expand-toggle");
 
-        if (rawMetadata.style.display === "none") {
-            rawMetadata.style.display = "block";
-            button.textContent = "生のメタデータを隠す";
-        } else {
-            rawMetadata.style.display = "none";
-            button.textContent = "生のメタデータを表示";
-        }
-    }
-</script>
-
-<!-- Dataset icon: use DatasetIcon helper to render from embedded JSON -->
+<!-- Dataset page init: read tags, apply tag styles and render icon once -->
 <script type="application/json" id="dataset-tags-json">{{ page.dataset.tags | jsonify }}</script>
 <script>
-    if (window.DatasetIcon && typeof window.DatasetIcon.renderFromJsonElement === 'function') {
-        window.DatasetIcon.renderFromJsonElement('dataset-tags-json', 'dataset-icon-container', { size: 48 });
-    } else {
-        // if DatasetIcon not yet loaded, call after DOMContentLoaded so the helper handles retries
-        document.addEventListener('DOMContentLoaded', function () {
-            if (window.DatasetIcon && typeof window.DatasetIcon.renderFromJsonElement === 'function') {
-                window.DatasetIcon.renderFromJsonElement('dataset-tags-json', 'dataset-icon-container', { size: 48 });
-            }
-        });
-    }
-</script>
-<script>
-    // Layout-level: ensure DatasetsManager injects tag styles for the tags on this page
     (function () {
-        function applyTagStyles() {
+        function readTags() {
             try {
                 const el = document.getElementById('dataset-tags-json');
-                if (!el) return;
+                if (!el) return [];
                 const txt = el.textContent || el.innerText || '';
-                if (!txt) return;
-                const tags = JSON.parse(txt || '[]');
+                if (!txt) return [];
+                return JSON.parse(txt || '[]');
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function initOnce() {
+            const tags = readTags();
+
+            // Apply tag styles via DatasetsManager if available
+            try {
                 if (window.DatasetsManager && typeof window.DatasetsManager.getInstance === 'function') {
                     const mgr = window.DatasetsManager.getInstance();
-                    if (mgr && typeof mgr.updateTagStyles === 'function') {
-                        mgr.updateTagStyles(tags || []);
-                        return true;
+                    if (mgr && typeof mgr.updateTagStyles === 'function') mgr.updateTagStyles(tags || []);
+                }
+            } catch (e) {
+                /* ignore */
+            }
+
+            // Render icon using DatasetIcon helpers if present
+            try {
+                const container = document.getElementById('dataset-icon-container');
+                if (container) {
+                    if (window.DatasetIcon && typeof window.DatasetIcon.renderInContainer === 'function') {
+                        window.DatasetIcon.renderInContainer(container, tags || [], 48, {});
+                    } else if (window.DatasetIcon && typeof window.DatasetIcon.renderFromJsonElement === 'function') {
+                        window.DatasetIcon.renderFromJsonElement('dataset-tags-json', 'dataset-icon-container', { size: 48 });
                     }
                 }
             } catch (e) {
-                // ignore parse errors
+                /* ignore */
             }
-            return false;
         }
 
-        if (!applyTagStyles()) {
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', applyTagStyles);
-            } else {
-                applyTagStyles();
-            }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initOnce, { once: true });
+        } else {
+            initOnce();
         }
     })();
 </script>
