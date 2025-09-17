@@ -3,15 +3,16 @@
  * RDF Config リポジトリからメタデータを取得して、JSONファイルを生成するスクリプト
  */
 
-const fs = require("fs");
-const path = require("path");
+const fs = require("node:fs");
+const path = require("node:path");
 const git = require("isomorphic-git");
 const http = require("node:http");
+const statJson = require("../_data/datasets_stats.json");
+
 const RDF_CONFIG_REPO = "https://github.com/dbcls/rdf-config.git";
 
 // GitHub API の設定
-const GITHUB_API_BASE = "https://api.github.com";
-const REPO_OWNER = "dbcls";
+
 const REPO_NAME = "rdf-config";
 const CONFIG_PATH = "config";
 
@@ -27,6 +28,7 @@ async function cloneRepo() {
 
 /**
  * 簡単なYAMLパーサー（必要なフィールドのみ）
+ * 正しくないYAMLファイルあったりするので、このような手動のYAMLのパースが必要
  */
 function parseYaml(yamlContent) {
   const lines = yamlContent.split("\n");
@@ -34,6 +36,7 @@ function parseYaml(yamlContent) {
     title: "",
     description: "",
     tags: [],
+    provider: "",
   };
 
   let currentKey = null;
@@ -51,6 +54,13 @@ function parseYaml(yamlContent) {
     } else if (trimmed.startsWith("description:")) {
       result.description = trimmed
         .replace("description:", "")
+        .trim()
+        .replace(/^["']|["']$/g, "");
+      inTags = false;
+    } else if (trimmed.startsWith("provider:")) {
+      // Added provider extraction
+      result.provider = trimmed
+        .replace("provider:", "")
         .trim()
         .replace(/^["']|["']$/g, "");
       inTags = false;
@@ -100,6 +110,7 @@ function extractRequiredFields(metadata) {
     return {
       title: "",
       description: "",
+      provider: "",
       tags: [],
     };
   }
@@ -107,25 +118,31 @@ function extractRequiredFields(metadata) {
   return {
     title: metadata.title || "",
     description: metadata.description || "",
+    provider: metadata.provider || "",
     tags: metadata.tags || [],
   };
 }
 
-function getMetadataFromClonedRepo(id) {
+function getMetadataFromClonedRepo(id, lang) {
   const metadataPath = path.join(
     __dirname,
     REPO_NAME,
     CONFIG_PATH,
     id,
-    "metadata.yaml",
+    lang ? `metadata_${lang}.yaml` : "metadata.yaml",
   );
 
   try {
     const metadata = fs.readFileSync(metadataPath, "utf8");
-
-    return extractRequiredFields(parseYaml(metadata));
+    return {
+      exists: true,
+      metadata: extractRequiredFields(parseYaml(metadata)),
+    };
   } catch (error) {
-    return extractRequiredFields(null);
+    return {
+      exists: false,
+      metadata: extractRequiredFields(null),
+    };
   }
 }
 
@@ -138,6 +155,68 @@ async function getDatasetIdsFromClonedRepo() {
   } catch (error) {
     return [];
   }
+}
+
+function mergeMultilanguageExtractedMetadata(...metadatas) {
+  const mergedMetadata = {
+    title: "",
+    description: {},
+    providers: [],
+    tags: [],
+  };
+
+  const providersByLang = {};
+
+  for (const metadata of metadatas) {
+    const lang = metadata.lang || "en";
+
+    if (!metadata) continue;
+
+    // Set title only once (preferably from English)
+    if (!mergedMetadata.title && metadata.title) {
+      mergedMetadata.title = metadata.title;
+    }
+
+    // Add description for this language
+    if (metadata.description) {
+      mergedMetadata.description[lang] = metadata.description;
+    }
+
+    if (metadata.provider) {
+      providersByLang[lang] = metadata.provider;
+    }
+
+    // Merge tags
+    if (metadata.tags && metadata.tags.length > 0) {
+      mergedMetadata.tags = [
+        ...new Set([...mergedMetadata.tags, ...metadata.tags]),
+      ];
+    }
+  }
+
+  // Create the providers array with multilingual entries
+  if (Object.keys(providersByLang).length > 0) {
+    mergedMetadata.providers = [providersByLang];
+  }
+
+  return mergedMetadata;
+}
+
+function getStatsForDatasetId(id) {
+  const stat = statJson.find((s) => s.id === id);
+  return (
+    stat?.statistics || {
+      number_of_triples: 0,
+      number_of_instances: 0,
+      number_of_subjects: 0,
+      number_of_properties: 0,
+      number_of_objects: 0,
+      number_of_literals: 0,
+      number_of_classes: 0,
+      number_of_datatypes: 0,
+      number_of_links: 0,
+    }
+  );
 }
 
 /**
@@ -158,11 +237,29 @@ async function main() {
 
     for (const id of ids) {
       console.log(`Processing ${id}...`);
-      const extracted = getMetadataFromClonedRepo(id);
+      const extractedResult = getMetadataFromClonedRepo(id);
+      const hasMetadata = extractedResult.exists;
+      const extracted = extractedResult.metadata;
+      extracted.lang = "en";
+
+      const extractedJaResult = getMetadataFromClonedRepo(id, "ja");
+      const extractedJa = extractedJaResult.metadata;
+      extractedJa.lang = "ja";
+
+      if (!hasMetadata) {
+        console.log(`⭕ ${id}: No metadata.yaml found - skipping`);
+        continue;
+      }
+
+      const mergedMetadata = mergeMultilanguageExtractedMetadata(
+        extracted,
+        extractedJa,
+      );
 
       const datasetInfo = {
         id,
-        ...extracted,
+        ...mergedMetadata,
+        statistics: getStatsForDatasetId(id),
       };
 
       datasets.push(datasetInfo);
@@ -170,12 +267,12 @@ async function main() {
       if (extracted.title) {
         console.log(`✅ ${id}: ${extracted.title}`);
       } else {
-        console.log(`⭕ ${id}: No metadata found`);
+        console.log(`⭕ ${id}: Metadata file exists but no title found`);
       }
     }
 
     // JSONファイルとして保存
-    const outputFile = path.join(__dirname, "../_data/datasets_list.json");
+    const outputFile = path.join(__dirname, "../_data/datasets.json");
     const outputDir = path.dirname(outputFile);
 
     if (!fs.existsSync(outputDir)) {
