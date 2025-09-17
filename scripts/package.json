@@ -1,0 +1,11 @@
+{
+  "name": "scripts",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "isomorphic-git": "^1.33.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

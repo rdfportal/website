@@ -1,0 +1,695 @@
+[
+  {
+    "id": "oma",
+    "title": "Orthologous MAtrix (OMA) RDF",
+    "description": "The OMA (Orthologous MAtrix) project is a method and database for the inference of orthologs among complete genomes. The OMA RDF is a view of the OMA database in RDF.",
+    "tags": [
+      "Genome",
+      "Gene",
+      "Phylogeny/Classification"
+    ]
+  },
+  {
+    "id": "mesh",
+    "title": "Medical Subject Headings (MeSH) RDF Dataset Description",
+    "description": "A linked data representation of the MeSH biomedical vocabulary produced by the National Library of Medicine.",
+    "tags": [
+      "Ontology/ Terminology/Nomenclature"
+    ]
+  },
+  {
+    "id": "nextprot",
+    "title": "",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": "hint",
+    "title": "",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": "dbvar",
+    "title": "dbVar",
+    "description": "dbVar is NCBI's database of human genomic Structural Variation — large variants >50 bp including insertions, deletions, duplications, inversions, mobile elements, translocations, and complex variants",
+    "tags": [
+      "structural variant"
+    ]
+  },
+  {
+    "id": "gtdb",
+    "title": "GTDB",
+    "description": "The Genome Taxonomy Database",
+    "tags": [
+      "taxonomy",
+      "bacteria",
+      "archaea"
+    ]
+  },
+  {
+    "id": "famsbase",
+    "title": "FAMSBASE GPCR",
+    "description": "RDFized reference gene expresson dataset derived from CAGE and GeneChip experiments in the RefEx database.",
+    "tags": [
+      "Protein",
+      "Structure"
+    ]
+  },
+  {
+    "id": "clinvar",
+    "title": "ClinVar RDF",
+    "description": "ClinVar is a freely available archive describing relationships between medically important variants and phenotypes.",
+    "tags": [
+      "Polymorphism",
+      "Health/Disease",
+      "Sequence"
+    ]
+  },
+  {
+    "id": "homologene",
+    "title": "HomoloGene RDF",
+    "description": "HomoloGene RDF is a translation of HomoloGene data into RDF.",
+    "tags": [
+      "Genome",
+      "Gene",
+      "Phylogeny/Classification"
+    ]
+  },
+  {
+    "id": "vg",
+    "title": "",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": "pubtator",
+    "title": "PubTator Central",
+    "description": "Automatic annotations of biomedical concepts such as genes and mutations in PubMed abstracts and PMC full-text",
+    "tags": [
+      "Others",
+      "Journal article/Report/Bibliography"
+    ]
+  },
+  {
+    "id": "civic",
+    "title": "RDF title",
+    "description": "RDF description.",
+    "tags": []
+  },
+  {
+    "id": "go",
+    "title": "Gene Ontology",
+    "description": "The Gene Ontology resource provides a computational representation of our current scientific knowledge about the functions of genes (or, more properly, the protein and non-coding RNA molecules produced by genes) from many different organisms, from humans to bacteria.",
+    "tags": []
+  },
+  {
+    "id": "dbscsnv",
+    "title": "dbscSNV",
+    "description": "a comprehensive database of all potential human SNVs within splicing consensus regions and their functional annotations",
+    "tags": [
+      "SNV",
+      "splicing consensus region"
+    ]
+  },
+  {
+    "id": "instruct",
+    "title": "",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": "nikkaji",
+    "title": "Nikkaji RDF",
+    "description": "NBDC NikkajiRDF is RDF data of Japan Chemical Substance Dictionary (Nikkaji), which is one of the largest chemical substance databases in Japan.",
+    "tags": [
+      "Drug/Chemical",
+      "Others",
+      "Structure",
+      "Image/Movie"
+    ]
+  },
+  {
+    "id": "dbcatalog",
+    "title": "Integbio Database Catalog/RDF",
+    "description": "Integbio Database Catalog/RDF is a translation of Integbio Database Catalog data into RDF",
+    "tags": [
+      "Others",
+      "Others"
+    ]
+  },
+  {
+    "id": "hco",
+    "title": "",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": "bgee",
+    "title": "Bgee",
+    "description": "A database for retrieval and comparison of gene expression patterns across multiple animal species",
+    "tags": [
+      "Gene",
+      "Gene expression"
+    ]
+  },
+  {
+    "id": "medgen",
+    "title": "MedGen",
+    "description": "MedGen organizes Information related to human medical genetics, such as attributes of conditions with a genetic contribution.",
+    "tags": [
+      "Health/Disease",
+      "Ontology/Terminology/Nomenclature"
+    ]
+  },
+  {
+    "id": "hop",
+    "title": "RDF title",
+    "description": "RDF description.",
+    "tags": []
+  },
+  {
+    "id": "test",
+    "title": "",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": "kero",
+    "title": "DBKERO RDF",
+    "description": "DBKERO is a collection of multi-omics data sets including SNV, RNA-seq, ChIP-seq, BS-seq and TSS-seq. The ChIP-seq part is big, so its lite version chip_seq_lite is included. The original big ChIP-seq data can also be downloaded at https://integbio.jp/rdf/download/kero/2017-01-27/all/chip_seq_all.tar.gz .",
+    "tags": [
+      "Genome",
+      "Polymorphism",
+      "Other DNA",
+      "Gene expression",
+      "Others"
+    ]
+  },
+  {
+    "id": "sra_experiment",
+    "title": "SRA Experiment RDF",
+    "description": "SRA Experiment RDF developed by DBCLS and distributed by DDBJ",
+    "tags": []
+  },
+  {
+    "id": "jcm",
+    "title": "Metadata of JCM resources",
+    "description": "A RDF-based meta-database of microbial strains used in various researches such as biology, environment and human health as bioresources. Microbial strains are available from Japan Collection of Microorganisms (JCM) in RIKEN BioResource Center. Please visit data browser at http://metadb.riken.jp/metadb/db/rikenbrc_jcm_microbe",
+    "tags": [
+      "Organism",
+      "Bioresource"
+    ]
+  },
+  {
+    "id": "nlm-catalog",
+    "title": "NLM Catalog",
+    "description": "NLM bibliographic data on journals, books, audiovisual materials, computer software, electronic resources, and other materials",
+    "tags": [
+      "Ontology/Terminology/Nomenclature",
+      "Journal article/Report/Bibliography"
+    ]
+  },
+  {
+    "id": "ncgm",
+    "title": "",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": "knapsack",
+    "title": "KNApSAcK RDF",
+    "description": "RDFized dataset in the KNApSAcK family database.",
+    "tags": [
+      "Compound",
+      "Taxonomy",
+      "Publication",
+      "Activity"
+    ]
+  },
+  {
+    "id": "ssbd",
+    "title": ">",
+    "description": "Meta-information of quantitative data and datasets of microscopy images provided from SSBD database",
+    "tags": [
+      "Cell",
+      "Organism",
+      "Other biomolecule",
+      "Image/Movie",
+      "Gene expression",
+      "Others"
+    ]
+  },
+  {
+    "id": "brenda",
+    "title": "BRENDA RDF",
+    "description": "BRENDA is the comprehensive enzyme information system with data on enzyme function, structure, and kinetics.",
+    "tags": [
+      "Enzyme",
+      "Biocatalysis",
+      "Bioresource"
+    ]
+  },
+  {
+    "id": "polyinfo",
+    "title": "PolyInfo BDG_S, ID definition",
+    "description": "NIMS polymer database PoLyInfo-Bio Linkage Project, Definition of biodegradation IDs and linking schemas for synthetic polymers.",
+    "tags": [
+      "Drug/Chemical"
+    ]
+  },
+  {
+    "id": "dgidb",
+    "title": "",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": "uberon",
+    "title": "",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": "disgenet",
+    "title": "DisGeNET RDF",
+    "description": "DisGeNET is a collection of genes and variants associated to human diseases, which integrates data from expert curated repositories, GWAS catalogues, animal models and the scientific literature.",
+    "tags": [
+      "Gene",
+      "Health/Disease"
+    ]
+  },
+  {
+    "id": "mbgd",
+    "title": "RDF title",
+    "description": "RDF description.",
+    "tags": []
+  },
+  {
+    "id": "togomedium",
+    "title": "",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": "naro_genebank",
+    "title": "Dataset of NARO Genebank Microorganism Bioresource",
+    "description": "A dataset for microbes which are maintained, managed and provided from Genebank Project, NARO.",
+    "tags": [
+      "Organism",
+      "Bioresource"
+    ]
+  },
+  {
+    "id": "linked_icgc",
+    "title": "RDF title",
+    "description": "RDF description.",
+    "tags": []
+  },
+  {
+    "id": "paconto",
+    "title": "PAConto",
+    "description": ">",
+    "tags": [
+      "Other biomolecule",
+      "Health/Disease",
+      "Interaction/Pathway",
+      "Structure"
+    ]
+  },
+  {
+    "id": "hgnc",
+    "title": "HGNC\\: The resource for approved human gene nomenclature",
+    "description": "The HGNC is a resource for approved human gene nomenclature containing ~42000 gene",
+    "tags": [
+      "Gene",
+      "Ontology/ Terminology/Nomenclature"
+    ]
+  },
+  {
+    "id": "interview-form",
+    "title": "",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": "chebi",
+    "title": "ChEBI RDF",
+    "description": "ChEBI (Chemical Entities of Biological Interest) is a freely accessible, ontology-driven database of ‘small molecular entities’, including their chemical structures, names, definitions, roles, and biological relationships. It provides manually curated, non-proprietary data supported by links to external resources and is widely used in chemical biology and bioinformatics",
+    "tags": [
+      "Drug/Chemical"
+    ]
+  },
+  {
+    "id": "bmrb",
+    "title": "BMRB/RDF",
+    "description": "BMRB/RDF is a translation of NMR-STAR data into RDF",
+    "tags": [
+      "Protein",
+      "Other biomolecule",
+      "Others",
+      "Sequence",
+      "Structure"
+    ]
+  },
+  {
+    "id": "nando",
+    "title": "NANDO",
+    "description": "NANDO is a vocabulary that systematically and comprehensively organizes designated intractable diseases and pediatric chronic specific diseases, including their subtypes. Each disease in NANDO is linked to Mondo (Monarch Disease Ontology), a disease vocabulary adopted by many international databases and systems, enabling integration with major international disease databases such as OMIM and Orphanet.",
+    "tags": [
+      "Health/Disease",
+      "Tag sequence (nucleic acid)",
+      "Ontology/ Terminology/Nomenclature"
+    ]
+  },
+  {
+    "id": "ensembl",
+    "title": "Ensembl RDF",
+    "description": "Ensembl is a collection of automatically annotated genome databases for vertebrates and a number of eukaryotes, integrated with all other relevant biological data available.",
+    "tags": [
+      "Gene",
+      "Protein"
+    ]
+  },
+  {
+    "id": "pgdbj",
+    "title": "",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": "togoid",
+    "title": "TogoID RDF",
+    "description": "TogoID is a service to search and convert links between database identifiers.",
+    "tags": [
+      "Others"
+    ]
+  },
+  {
+    "id": "bacdive",
+    "title": "BacDive RDF",
+    "description": "BacDive is the worldwide largest knowledgebase for standardized bacterial information.",
+    "tags": [
+      "Organism",
+      "Cell",
+      "Bioresource"
+    ]
+  },
+  {
+    "id": "jpostdb",
+    "title": "jPOST databse RDF",
+    "description": "jPOST database RDF is described the re-analyzed proteome dataset in the jPOST project.",
+    "tags": []
+  },
+  {
+    "id": "ncit",
+    "title": "",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": "mp",
+    "title": "",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": "wurcs",
+    "title": "RDF title",
+    "description": "RDF description.",
+    "tags": []
+  },
+  {
+    "id": "refex",
+    "title": "RefEx RDF",
+    "description": "RDFized reference gene expresson dataset derived from CAGE and GeneChip experiments in the RefEx database.",
+    "tags": [
+      "Gene",
+      "Tag sequence (nucleic acid)",
+      "Gene expression"
+    ]
+  },
+  {
+    "id": "glycosmos",
+    "title": "GlyCosmos",
+    "description": "RDF description.",
+    "tags": [
+      "Glycan"
+    ]
+  },
+  {
+    "id": "ligandbox",
+    "title": "",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": "expressionatlas",
+    "title": "",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": "mediadive",
+    "title": "MediaDive RDF",
+    "description": "MediaDive is the largest collection of cultivation media and growth conditions.",
+    "tags": [
+      "Organism",
+      "Cell",
+      "Bioresource"
+    ]
+  },
+  {
+    "id": "chembl",
+    "title": "ChEMBL RDF",
+    "description": "ChEMBL is a manually curated database of bioactive molecules with drug-like properties.",
+    "tags": [
+      "Drug/Chemical"
+    ]
+  },
+  {
+    "id": "uniprot",
+    "title": "UniProt RDF",
+    "description": "The Universal Protein Resource (UniProt) is a comprehensive resource for protein sequence and annotation data.",
+    "tags": [
+      "Protein"
+    ]
+  },
+  {
+    "id": "exac",
+    "title": "",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": "pubmed",
+    "title": "PubMed",
+    "description": "PubMed comprises more than 30 million citations for biomedical literature from MEDLINE, life science journals,",
+    "tags": [
+      "Others",
+      "Journal article/Report/Bibliography",
+      ""
+    ]
+  },
+  {
+    "id": "togovar",
+    "title": "",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": "dbnsfp",
+    "title": "dbNSFP",
+    "description": "dbNSFP is a database developed for functional prediction and annotation of all potential non-synonymous single-nucleotide variants (nsSNVs) in the human genome.",
+    "tags": [
+      "nsSNVs",
+      "functional prediction"
+    ]
+  },
+  {
+    "id": "imethyl",
+    "title": "",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": "glytoucan",
+    "title": "GlyTouCan",
+    "description": "GlyTouCan is the international glycan structure repository.",
+    "tags": [
+      "Other biomolecule",
+      "Structure"
+    ]
+  },
+  {
+    "id": "mondo",
+    "title": "Mondo Disease Ontology",
+    "description": "The Mondo Disease Ontology (MONDO) is a harmonized, logic-based disease classification that unifies and standardizes terminology across diverse medical sources by integrating mappings (with precise semantics) from databases such as OMIM, Orphanet, SNOMED CT, and ICD",
+    "tags": [
+      "Health/Disease",
+      "Ontology/ Terminology/Nomenclature"
+    ]
+  },
+  {
+    "id": "ddbj",
+    "title": "DDBJ",
+    "description": "Semantic Representation of DDBJ Annotated Sequence Records.",
+    "tags": [
+      "Genome",
+      "Gene",
+      "cDNA",
+      "Tag sequence (nucleic acid)",
+      "Polymorphism",
+      "Other DNA",
+      "RNA",
+      "Sequence",
+      "Ontology/Terminology/Nomenclature",
+      "Others"
+    ]
+  },
+  {
+    "id": "nbrc",
+    "title": "Dataset of NBRC bioresource",
+    "description": "Dataset of NBRC bioresource is a dataset for microbes which are maintained, managed and provided from NBRC (NITE Biological Resource Center).",
+    "tags": [
+      "Organism",
+      "Cell",
+      "Bioresource"
+    ]
+  },
+  {
+    "id": "nadd",
+    "title": "Nucleic Acid Drug Database",
+    "description": "DB is focused on nucleic acid drugs known as biopharmaceuticals and displayed approval drugs and information on three phases of clinical trial stage.",
+    "tags": [
+      "Drug/Chemical",
+      "RNA",
+      "Sequence",
+      "Structure",
+      "Journal article/Report/Bibliography"
+    ]
+  },
+  {
+    "id": "dbsnp",
+    "title": "",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": "rhea",
+    "title": "Rhea",
+    "description": "An expert curated resource of biochemical reactions designed for the annotation of enzymes and genome-scale metabolic networks and models.",
+    "tags": [
+      "Protein Enzyme"
+    ]
+  },
+  {
+    "id": "hpo",
+    "title": "RDF title",
+    "description": "RDF description.",
+    "tags": []
+  },
+  {
+    "id": "pubchem",
+    "title": "PubChem RDF",
+    "description": "PubChem is an open chemistry database at the National Institutes of Health (NIH). For the detailed information, please see the following URL\\: https\\://pubchemdocs.ncbi.nlm.nih.gov/about. \\Note\\: The endpoint does not include files provided at ftp\\://ftp.ncbi.nlm.nih.gov/pubchem/RDF/compound/nbr2d/ and ftp\\://ftp.ncbi.nlm.nih.gov/pubchem/RDF/compound/nbr3d/\\",
+    "tags": [
+      "Drug/Chemical",
+      "Other biomolecule"
+    ]
+  },
+  {
+    "id": "opentggates",
+    "title": "Open TG-GATEs",
+    "description": "Open TG-GATEs is a public toxicogenomics database",
+    "tags": [
+      "Gene",
+      "Drug/Chemical",
+      "Health/Disease",
+      "Gene expression"
+    ]
+  },
+  {
+    "id": "gwascatalog",
+    "title": "GWAS catalog",
+    "description": "",
+    "tags": []
+  },
+  {
+    "id": "pdb",
+    "title": "RefEx RDF",
+    "description": "RDFized reference gene expresson dataset derived from CAGE and GeneChip experiments in the RefEx database.",
+    "tags": [
+      "Gene",
+      "Tag sequence (nucleic acid)",
+      "Gene expression"
+    ]
+  },
+  {
+    "id": "quanto",
+    "title": "Quanto RDF",
+    "description": "Raw sequence data quality statistics calculated from the Sequence Read Archive data",
+    "tags": []
+  },
+  {
+    "id": "ncbigene",
+    "title": "NCBI Gene RDF",
+    "description": "NCBI Gene RDF is a translation of NCBI Gene data into RDF.",
+    "tags": [
+      "Gene"
+    ]
+  },
+  {
+    "id": "pubcasefinder",
+    "title": "PubCaseFinder RDF",
+    "description": "PubCaseFinder (PCF) is a Human Phenotype Ontology (HPO)-based clinical decision support system for rare and genetic diseases, always up-to-date.",
+    "tags": [
+      "Rare Disease",
+      "Genetic Disease",
+      "Human Phenotype Ontology",
+      "Phenotype",
+      "Disease Search"
+    ]
+  },
+  {
+    "id": "biosample",
+    "title": "BioSample RDF",
+    "description": "BioSample RDF developed by DBCLS and distributed by DDBJ",
+    "tags": []
+  },
+  {
+    "id": "chip-atlas",
+    "title": "ChIP-Atlas RDF",
+    "description": "ChIP-Atlas RDF developed by DBCLS",
+    "tags": []
+  },
+  {
+    "id": "reactome",
+    "title": "Reactome RDF",
+    "description": "REACTOME is an open-source, open access, manually curated and peer-reviewed pathway database.",
+    "tags": [
+      "Interaction/Pathway"
+    ]
+  },
+  {
+    "id": "ggdonto",
+    "title": "GGDonto",
+    "description": "GGDonto is the Ontology of the Genetic Diseases related to the Glycan Metabolism. GGDonto describes the knowledge about Congenital Disorders of Glycosylation (CDG) and Lysosomal Storage Diseases (LSD). GGDonto provides the information on 120 genetic diseases of the glycan synthesis and the degradation and their causative genes.",
+    "tags": [
+      "Other biomolecule",
+      "Health/Disease",
+      "Gene",
+      "Ontology/Terminology/Nomenclature",
+      "Interaction/Pathway"
+    ]
+  },
+  {
+    "id": "glycoepitope",
+    "title": "GlycoEpitope",
+    "description": "GlycoEpitope is a database of useful information on carbohydrate antigens and antibodies.",
+    "tags": [
+      "Other biomolecule",
+      "Structure"
+    ]
+  }
+]
