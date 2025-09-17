@@ -16,23 +16,31 @@ description: RDFポータルサイトへようこそ。データセットやエ�
 
 <!-- JekyllでJSONデータを埋め込む -->
 {% include datasets-json.html %}
-{% comment %} Collect unique tags from datasets for server-side CSS generation {% endcomment %}
-{% assign __all_tags = '' %}
-{% for ds in site.data.datasets %}
-  {% if ds.tags %}
-    {% for t in ds.tags %}
-      {% unless __all_tags contains t %}
-        {% if __all_tags == '' %}
-          {% assign __all_tags = t %}
-        {% else %}
-          {% assign __all_tags = __all_tags | append: '|' | append: t %}
-        {% endif %}
-      {% endunless %}
-    {% endfor %}
-  {% endif %}
-{% endfor %}
-{% assign __tag_list = __all_tags | split: '|' %}
-{% include tag-styles.html tags=__tag_list %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  try {
+    var dm = window.DatasetsManager && typeof window.DatasetsManager.getInstance === 'function'
+      ? window.DatasetsManager.getInstance()
+      : null;
+    if (!dm) {
+      // 簡易リトライ
+      setTimeout(function() {
+        try {
+          dm = window.DatasetsManager && typeof window.DatasetsManager.getInstance === 'function'
+            ? window.DatasetsManager.getInstance()
+            : null;
+          if (!dm) return;
+          var tags = dm.getAvailableTags();
+          if (Array.isArray(tags) && tags.length) dm.updateTagStyles(tags.map(function(t){ return t.id; }));
+        } catch (e) { console.error('datasets tag init retry error', e); }
+      }, 50);
+      return;
+    }
+    var tags = dm.getAvailableTags();
+    if (Array.isArray(tags) && tags.length) dm.updateTagStyles(tags.map(function(t){ return t.id; }));
+  } catch (e) { console.error('datasets tag init error', e); }
+});
+</script>
 
 <div id="TopPageTilingDatasetsView">
   <div class="container"></div>
