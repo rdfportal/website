@@ -1,5 +1,38 @@
 #DatasetDetailView
+  margin-top: -10px
   > .inner
     > header
       display: flex
       align-items: center
+    > .links
+      list-style: none
+      margin-bottom: 8px
+    > .description
+      font-size: 1.4rem
+      line-height: 1.2
+      margin-bottom: 18px
+    > section
+      margin-bottom: 18px
+      > h3
+        font-size: 1.6rem
+        line-height: 0.5
+        border-bottom: 1px solid #000
+        margin-bottom: 2px
+      > table
+        border-collapse: collapse
+        width: 100%
+        > tbody
+          > tr
+            border-bottom: solid 1px #0003
+            > th, > td
+              text-align: left
+              line-height: 1.2
+              padding: 6px 0
+            > td
+              > ul
+                list-style: none
+      > div:has(> img)
+        padding-top: 8px
+        overflow-x: auto
+        > img
+          min-width: fit-content

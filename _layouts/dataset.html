@@ -62,7 +62,6 @@ backToListURL: /datasets/
             {% assign s = page.dataset.statistics | default: nil %}
             {% if s %}
             <table class="stats-table" aria-describedby="stats-desc">
-                <caption id="stats-desc">Key statistics for this dataset</caption>
                 <tbody>
                     {% if s.number_of_triples %}
                     <tr>
