@@ -9,7 +9,7 @@ permalink: /datasets/
 
 
 <!-- JekyllでJSONデータを埋め込む -->
-<script type="application/json" id="datasets-json">{{ site.data.datasets | jsonify }}</script>
+{% include datasets-json.html %}
 
 
 <!-- #DatasetsSortFilterView（default.html側）を活用するため独自UIは廃止 -->

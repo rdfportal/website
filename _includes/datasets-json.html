@@ -1,0 +1,8 @@
+{% comment %}
+Usage:
+{% include datasets-json.html %}
+
+Optional parameters:
+- data: (optional) an object/array to embed instead of `site.data.datasets`.
+{% endcomment %}
+<script type="application/json" id="datasets-json">{{ include.data | default: site.data.datasets | jsonify }}</script>

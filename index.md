@@ -15,7 +15,24 @@ description: RDFポータルサイトへようこそ。データセットやエ�
 
 
 <!-- JekyllでJSONデータを埋め込む -->
-<script type="application/json" id="datasets-json">{{ site.data.datasets | jsonify }}</script>
+{% include datasets-json.html %}
+{% comment %} Collect unique tags from datasets for server-side CSS generation {% endcomment %}
+{% assign __all_tags = '' %}
+{% for ds in site.data.datasets %}
+  {% if ds.tags %}
+    {% for t in ds.tags %}
+      {% unless __all_tags contains t %}
+        {% if __all_tags == '' %}
+          {% assign __all_tags = t %}
+        {% else %}
+          {% assign __all_tags = __all_tags | append: '|' | append: t %}
+        {% endif %}
+      {% endunless %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% assign __tag_list = __all_tags | split: '|' %}
+{% include tag-styles.html tags=__tag_list %}
 
 <div id="TopPageTilingDatasetsView">
   <div class="container"></div>
