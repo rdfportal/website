@@ -1,0 +1,14 @@
+### Get the references for a disease which has the name or aliases like 'CDG-IIa' ###
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix ggdsch: <http://jcggdb.jp/rdf/diseases/ggdonto-schema#>
+
+select distinct ?reference
+from <http://jcggdb.jp/rdf/diseases/ggdonto>
+where {
+ ?disease_uri a ggdsch:DiseaseDescriptionGGDonto.
+ {?disease_uri skos:prefLabel  "CDG-IIa"@en.}
+ UNION
+ {?disease_uri skos:altLabel "CDG-IIa"@en.}
+ ?disease_uri ggdsch:referencesInfo ?reference.
+}
+

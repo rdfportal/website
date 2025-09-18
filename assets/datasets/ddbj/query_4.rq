@@ -1,0 +1,25 @@
+#  Search for a Taxonomy ID "1148" and the anntated sequence enties.
+#  Note the SPARQL endpoint for DDBJ is https://rdfportal.org/ddbj/sparql .
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo:<http://purl.obolibrary.org/obo/>
+PREFIX insdc:<http://ddbj.nig.ac.jp/ontologies/nucleotide/>
+PREFIX tax: <http://ddbj.nig.ac.jp/ontologies/taxonomy/>
+
+SELECT
+  ?organism ?sequence_version ?definition  ?sequence_date
+WHERE
+{
+  values ?tax_id {tax:1148} 
+  ?entry insdc:sequence ?sequence.
+  ?sequence obo:RO_0002162 ?taxon.
+  ?taxon owl:sameAs ?tax_id.
+  ?entry insdc:definition ?definition .
+  ?entry insdc:division ?division .
+  ?entry insdc:organism ?organism .
+  ?entry insdc:sequence_date ?sequence_date .
+  ?entry insdc:sequence_version ?sequence_version .
+}
+ORDER BY ?sequence_date

@@ -1,0 +1,20 @@
+#  Search for a BioProject entry "PRJNA244038.1" and the anntated sequence enties. 
+#  Note the SPARQL endpoint for DDBJ is https://rdfportal.org/ddbj/sparql .
+
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX insdc:<http://ddbj.nig.ac.jp/ontologies/nucleotide/>
+
+SELECT
+  ?sequence_version ?definition replace(str(?topology), "http://ddbj.nig.ac.jp/ontologies/nucleotide/","") as ?topology
+WHERE
+{
+  VALUES ?project { <http://identifiers.org/bioproject/PRJNA244038> }
+  ?entry insdc:dblink ?project.
+  ?entry rdf:type insdc:Entry. 
+  ?project rdf:type insdc:BioProject.
+  ?entry insdc:sequence_version ?sequence_version.
+  ?entry insdc:definition ?definition.
+  ?entry insdc:sequence ?sequence.
+  ?sequence insdc:topology ?topology.
+}

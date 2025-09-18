@@ -1,0 +1,16 @@
+# List databases with "ガン" or "癌" in its description
+
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX db: <http://purl.jp/bio/03/dbcatalog/>
+
+SELECT ?db ?title_ja ?title_en ?description 
+FROM <http://rdfportal.org/dataset/dbcatalog/main>
+WHERE
+{
+  {
+    ?db dcterms:description ?description .
+    FILTER ( CONTAINS(?description, "ガン" ) || CONTAINS(?description , "癌" ) ) 
+  }
+  { ?db dcterms:title ?title_ja . FILTER (lang(?title_ja) = "ja" ) } 
+  OPTIONAL { ?db dcterms:title ?title_en . FILTER (lang(?title_en) = "en" ) }
+}

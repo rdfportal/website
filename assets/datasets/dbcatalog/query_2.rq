@@ -1,0 +1,18 @@
+# List databases with taxonomy ID 9606 (human) and tag T0012 (drug) .
+
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX db: <http://purl.jp/bio/03/dbcatalog/>
+PREFIX tag: <http://integbio.jp/dbcatalog/dbcatalogtag.owl#>
+PREFIX taxddbj: <http://ddbj.nig.ac.jp/ontologies/taxonomy/>
+
+SELECT ?db ?nbdcid ?title_ja ?title_en
+FROM <http://rdfportal.org/dataset/dbcatalog/main>
+WHERE
+{
+  ?db dcat:theme taxddbj:9606 ;
+      dcat:theme tag:T0012 ;
+      dcterms:identifier ?nbdcid .
+  { ?db dcterms:title ?title_ja . FILTER (lang(?title_ja) = "ja" ) } 
+  OPTIONAL { ?db dcterms:title ?title_en . FILTER (lang(?title_en) = "en" ) }
+}

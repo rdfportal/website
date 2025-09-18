@@ -1,0 +1,19 @@
+#  Search for a PubMed ID "21441521" and the related DDBJ enties. 
+#  Note the SPARQL endpoint for DDBJ is https://rdfportal.org/ddbj/sparql .
+
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX insdc:<http://ddbj.nig.ac.jp/ontologies/nucleotide/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+SELECT
+  ?sequence_version
+WHERE
+{
+  VALUES ?pubmed { <http://identifiers.org/pubmed/21441521> }
+  ?entry dcterms:references ?pubmed.
+  ?entry rdf:type insdc:Entry.  
+  ?pubmed rdf:type insdc:PubMed.
+  ?entry insdc:sequence_version ?sequence_version.
+}
+

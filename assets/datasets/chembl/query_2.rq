@@ -1,0 +1,28 @@
+# Endpoint: https://rdfportal.org/ebi/sparql
+# Description: List compounds targeting Tyrosine-protein kinase ABL (CHEMBL1862) and approved as a drug
+# Parameter: drug_mechanism_has_target: (example: chembl_target:CHEMBL1862)
+#            molecule_highest_development_phase: (example: 4)
+
+PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX chembl_target: <http://rdf.ebi.ac.uk/resource/chembl/target/>
+
+SELECT ?molecule_chemblid ?molecule_label ?molecule_highest_development_phase ?molecule_has_mechanism ?drug_mechanism_has_target
+FROM <http://rdf.ebi.ac.uk/dataset/chembl>
+WHERE {
+    VALUES ?drug_mechanism_has_target { chembl_target:CHEMBL1862 }
+    VALUES ?molecule_highest_development_phase { 4 }
+    VALUES ?drug_mechanism_has_target__class { cco:ADMET cco:ProteinComplexGroup cco:ProteinComplex cco:ProteinSelectivityGroup cco:Phenotype cco:SingleProtein cco:NucleicAcid cco:Organism cco:Metal cco:Macromolecule cco:SmallMoleculeTarget cco:SubCellular cco:OligosaccharideTarget cco:UnknownTarget cco:UnclassifiedTarget cco:CellLineTarget cco:Tissue cco:NonMolecular cco:ChimericProtein cco:ProteinNucleicAcidComplex cco:ProteinFamily cco:ProteinProteinInteraction }
+    VALUES ?Molecule__class { cco:SmallMolecule cco:ProteinMolecule cco:UnknownSubstance cco:Oligosaccharide cco:UnclassifiedSubstance cco:CellTherapy cco:Enzyme cco:Antibody cco:Oligonucleotide cco:UnclassifiedMolecule }
+    ?Molecule a ?Molecule__class ;
+        cco:chemblId ?molecule_chemblid ;
+        rdfs:label ?molecule_label ;
+        cco:highestDevelopmentPhase ?molecule_highest_development_phase .
+    ?molecule_has_mechanism a cco:Mechanism ;
+        cco:hasTarget ?drug_mechanism_has_target .
+    ?drug_mechanism_has_target a ?drug_mechanism_has_target__class .
+    OPTIONAL {
+        ?Molecule cco:hasMechanism ?molecule_has_mechanism .
+    }
+}
+LIMIT 100
