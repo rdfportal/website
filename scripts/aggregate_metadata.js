@@ -41,6 +41,7 @@ function parseYaml(yamlContent) {
     licenses: [],
     creators: [],
     website: null,
+    issued: null,
   };
 
   let currentKey = null;
@@ -88,6 +89,15 @@ function parseYaml(yamlContent) {
       // Extract website URL
       result.website = trimmed
         .replace("website:", "")
+        .trim()
+        .replace(/^["']|["']$/g, "");
+      inTags = false;
+      inLicense = false;
+      inLicenses = false;
+    } else if (trimmed.startsWith("issued:")) {
+      // Extract issued date
+      result.issued = trimmed
+        .replace("issued:", "")
         .trim()
         .replace(/^["']|["']$/g, "");
       inTags = false;
@@ -334,6 +344,7 @@ function extractRequiredFields(metadata) {
       licenses: [],
       creators: [],
       website: null,
+      issued: null,
     };
   }
 
@@ -345,6 +356,7 @@ function extractRequiredFields(metadata) {
     licenses: metadata.licenses || [],
     creators: metadata.creators || [],
     website: metadata.website || null,
+    issued: metadata.issued || null,
   };
 }
 
@@ -390,6 +402,7 @@ function mergeMultilanguageExtractedMetadata(...metadatas) {
     tags: [],
     licenses: [],
     creators: [],
+    issued: null,
     website: null,
   };
 
@@ -441,6 +454,11 @@ function mergeMultilanguageExtractedMetadata(...metadatas) {
     if (metadata.website && !mergedMetadata.website) {
       mergedMetadata.website = metadata.website;
     }
+
+    // Add issued date from metadata (preferably from English)
+    if (metadata.issued && !mergedMetadata.issued) {
+      mergedMetadata.issued = metadata.issued;
+    }
   }
 
   // Create the providers array with multilingual entries
@@ -452,7 +470,7 @@ function mergeMultilanguageExtractedMetadata(...metadatas) {
 }
 
 function getStatsForDatasetId(id) {
-  const stat = statJson.find((s) => s.id === id);
+  const stat = statJson.find((s) => s.dataset === id);
   return {
     statistics: stat?.statistics || {
       number_of_triples: 0,
@@ -466,7 +484,7 @@ function getStatsForDatasetId(id) {
       number_of_links: 0,
     },
     endpoint: stat?.endpoint || "",
-    issued: stat?.issued || null,
+    updated_at: stat?.updated_at || null,
   };
 }
 
@@ -487,7 +505,7 @@ async function main() {
     }
 
     // Get the list of dataset IDs from the stats file
-    const statsDatasetIds = statJson.map((item) => item.id);
+    const statsDatasetIds = statJson.map((item) => item.dataset);
     console.log(`Found ${statsDatasetIds.length} datasets in stats file`);
 
     // Filter dataset IDs to only include those present in the stats file
@@ -523,7 +541,7 @@ async function main() {
         ...mergedMetadata,
         statistics: statsData.statistics,
         endpoint: statsData.endpoint,
-        issued: statsData.issued,
+        updated_at: statsData.updated_at,
       };
 
       datasets.push(datasetInfo);
