@@ -204,8 +204,8 @@ function mergeMultilanguageExtractedMetadata(...metadatas) {
 
 function getStatsForDatasetId(id) {
   const stat = statJson.find((s) => s.id === id);
-  return (
-    stat?.statistics || {
+  return {
+    statistics: stat?.statistics || {
       number_of_triples: 0,
       number_of_instances: 0,
       number_of_subjects: 0,
@@ -215,8 +215,9 @@ function getStatsForDatasetId(id) {
       number_of_classes: 0,
       number_of_datatypes: 0,
       number_of_links: 0,
-    }
-  );
+    },
+    endpoint: stat?.endpoint || "",
+  };
 }
 
 /**
@@ -256,10 +257,12 @@ async function main() {
         extractedJa,
       );
 
+      const statsData = getStatsForDatasetId(id);
       const datasetInfo = {
         id,
         ...mergedMetadata,
-        statistics: getStatsForDatasetId(id),
+        statistics: statsData.statistics,
+        endpoint: statsData.endpoint,
       };
 
       datasets.push(datasetInfo);
