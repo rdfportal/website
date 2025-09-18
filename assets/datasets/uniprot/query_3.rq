@@ -1,0 +1,40 @@
+# Endpoint: https://rdfportal.org/sib/sparql
+# Description: corresponding HGNC ID of human
+# Parameter: database: (example: database:HGNC)
+#            taxonomy: (example: taxonomy:9606)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX database: <http://purl.uniprot.org/database/>
+PREFIX taxonomy: <http://purl.uniprot.org/taxonomy/>
+
+SELECT ?UniProt ?db_resource ?database ?taxonomy
+FROM <http://sparql.uniprot.org/uniprot>
+FROM <http://sparql.uniprot.org/obsolete>
+FROM <http://sparql.uniprot.org/citationmapping>
+FROM <http://sparql.uniprot.org/taxonomy>
+FROM <http://sparql.uniprot.org/citations>
+FROM <http://sparql.uniprot.org/proteomes>
+FROM <http://sparql.uniprot.org/go>
+FROM <http://sparql.uniprot.org/enzyme>
+FROM <http://sparql.uniprot.org/diseases>
+FROM <http://sparql.uniprot.org/journal>
+FROM <http://sparql.uniprot.org/pathways>
+FROM <http://sparql.uniprot.org/keywords>
+FROM <http://sparql.uniprot.org/locations>
+FROM <http://sparql.uniprot.org/tissues>
+FROM <http://sparql.uniprot.org/core>
+FROM <http://sparql.uniprot.org/databases>
+WHERE {
+    VALUES ?database { database:HGNC }
+    VALUES ?taxonomy { taxonomy:9606 }
+    VALUES ?db_resource__class { core:Resource core:Nucleotide_Resource core:Transcript_Resource core:Structure_Resource }
+    ?db_resource a ?db_resource__class ;
+        core:database ?database .
+    ?UniProt a core:Protein ;
+        core:organism ?taxonomy .
+    OPTIONAL {
+        ?UniProt rdfs:seeAlso ?db_resource .
+    }
+}
+LIMIT 100

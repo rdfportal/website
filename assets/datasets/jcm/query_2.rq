@@ -1,0 +1,19 @@
+# Retrieves JCM microbial strains sampled from oral cavity.
+#
+PREFIX mccv: <http://purl.jp/bio/10/mccv#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mpo: <http://purl.jp/bio/10/mpo#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+SELECT ?strain ?name ?sample_label
+FROM <http://metadb.riken.jp/db/xsearch_jcm_brso>
+where {
+?strain mccv:MCCV_000024/a mccv:MCCV_000001 ;
+      mccv:MCCV_000012 ?name ;
+      mccv:MCCV_000028 ?sample .
+    ?sample a sio:SIO_001050 .
+    ?sample rdfs:label ?sample_label .
+    FILTER(REGEX(?sample_label, "Oral cavity", "i"))
+} LIMIT 100

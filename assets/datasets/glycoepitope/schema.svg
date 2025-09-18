@@ -1,0 +1,832 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns='http://www.w3.org/2000/svg' style='background-color: rgb(255, 255, 255);' width='750px' height='1882px' viewBox='-0.5 -0.5 750 1882'>
+  <style type='text/css'>
+     .st0 {fill:#FFCE9F;} .st1 {fill:none;stroke:#000000;stroke-width:2;} .st2
+    {opacity:0.6;} .st3 {font-family:&apos;Helvetica&apos;;} .st4
+    {font-size:11px;} .st5 {fill:#FFFFFF;} .st6
+    {font-family:&apos;Helvetica-Bold&apos;;} .st7 {font-size:12px;} .st8
+    {opacity:0.7;fill:#FFFFFF;} .st9
+    {fill:#F8CECC;stroke:#000000;stroke-width:2;} .st9uri
+    {fill:#CCF8F8;stroke:#000000;stroke-width:2;} .st10 {fill:#FFF4C3;} .st11
+    {fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:4,4;} .st12 {fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;} .st13 {enable-background:new;} .st14 {fill:#F2F2E9;} .st15 {fill:none;stroke:#000000;stroke-width:2;stroke-dasharray:3.926,3.926;} 
+  </style>
+  <g>
+    <g>
+      <path d='M230,52 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M230,52 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M50,30 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='48' class='st3 st4'>
+        glycoepitope:EP0001
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='20' class='st5 st6 st7' dominant-baseline='middle'>
+        GlycanEpitope
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='222' y='20' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st11' points='230,35 250,35 250,35 465,35'/>
+  <polygon points='460.3,40.7 459.4,39.7 464.4,35.0 459.4,30.3 460.3,29.3 466.5,35.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 30)'>
+    rdf:type
+  </text>
+  <g>
+    <rect x='470' y='10' width='180' height='50' rx='7.5' ry='7.5' fill='#fff4c3' stroke='#000000' stroke-width='2' pointer-events='all'/>
+    <g transform='translate(-0.5 -0.5)'>
+      <switch>
+        <foreignObject style='overflow: visible; text-align: left' pointer-events='none' width='100%' height='100%' requiredFeatures='http://www.w3.org/TR/SVG11/feature#Extensibility'>
+          <div xmlns='http://www.w3.org/1999/xhtml' style='display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 35px; margin-left: 471px'>
+            <div style='box-sizing: border-box; font-size: 0; text-align: center;'>
+              <div style='display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal'>
+                <div>
+                  glycan:Glycan_epitope
+                  <br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x='560' y='29' fill='#000000' font-family='Helvetica' font-size='12px' text-anchor='middle'>
+          glycan:Glycan_epitope
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,105 465,105'/>
+  <polygon points='460.3,110.7 459.4,109.7 464.4,105.0 459.4,100.3 460.3,99.3 466.5,105.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 100)'>
+    dct:identifier
+  </text>
+  <g>
+    <rect x='470' y='80' width='180' height='50' class='st9'/>
+    <polyline points='470,100 470,80 650,80 650,100' class='st2'/>
+    <g>
+      <text x='478' y='115' class='st3 st4' dominant-baseline='middle'>
+        EP0001
+      </text>
+    </g>
+    <g>
+      <text x='478' y='90' class='st5 st6 st7' dominant-baseline='middle'>
+      </text>
+    </g>
+    <g>
+      <text x='642' y='90' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,175 465,175'/>
+  <polygon points='460.3,180.7 459.4,179.7 464.4,175.0 459.4,170.3 460.3,169.3 466.5,175.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 170)'>
+    rdfs:label
+  </text>
+  <g>
+    <rect x='470' y='150' width='180' height='50' class='st9'/>
+    <polyline points='470,170 470,150 650,150 650,170' class='st2'/>
+    <g>
+      <text x='478' y='185' class='st3 st4' dominant-baseline='middle'>
+        HNK-1
+      </text>
+    </g>
+    <g>
+      <text x='478' y='160' class='st5 st6 st7' dominant-baseline='middle'>
+        label
+      </text>
+    </g>
+    <g>
+      <text x='642' y='160' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,245 465,245'/>
+  <polygon points='460.3,250.7 459.4,249.7 464.4,245.0 459.4,240.3 460.3,239.3 466.5,245.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 240)'>
+    glycan:catalized_by
+  </text>
+  <g>
+    <g>
+      <path d='M650,262 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M650,262 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,240 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='258' class='st3 st4'>
+        Enzyme
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='230' class='st5 st6 st7' dominant-baseline='middle'>
+        enzyme
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='230' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,315 465,315'/>
+  <polygon points='460.3,320.7 459.4,319.7 464.4,315.0 459.4,310.3 460.3,309.3 466.5,315.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 310)'>
+    glycan:has_glycosequence
+  </text>
+  <g>
+    <g>
+      <path d='M650,332 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M650,332 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,310 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='328' class='st3 st4'>
+        Glyep
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='300' class='st5 st6 st7' dominant-baseline='middle'>
+        glycosequence
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='300' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,385 465,385'/>
+  <polygon points='460.3,390.7 459.4,389.7 464.4,385.0 459.4,380.3 460.3,379.3 466.5,385.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 380)'>
+    glycan:has_resource_entry
+  </text>
+  <g>
+    <g>
+      <path d='M650,402 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M650,402 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,380 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='398' class='st3 st4'>
+        Jcggdb
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='370' class='st5 st6 st7' dominant-baseline='middle'>
+        resource
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='370' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,455 465,455'/>
+  <polygon points='460.3,460.7 459.4,459.7 464.4,455.0 459.4,450.3 460.3,449.3 466.5,455.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 450)'>
+    glycoepitope:has_affinity_to
+  </text>
+  <g>
+    <g>
+      <path d='M650,472 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M650,472 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,450 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='468' class='st3 st4'>
+        Receptor
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='440' class='st5 st6 st7' dominant-baseline='middle'>
+        affinity_to
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='440' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,525 465,525'/>
+  <polygon points='460.3,530.7 459.4,529.7 464.4,525.0 459.4,520.3 460.3,519.3 466.5,525.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 520)'>
+    glycoepitope:has_antibody
+  </text>
+  <g>
+    <g>
+      <path d='M650,542 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M650,542 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,520 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='538' class='st3 st4'>
+        Antibody
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='510' class='st5 st6 st7' dominant-baseline='middle'>
+        antibody
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='510' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,595 465,595'/>
+  <polygon points='460.3,600.7 459.4,599.7 464.4,595.0 459.4,590.3 460.3,589.3 466.5,595.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 590)'>
+    glycoepitope:tissue
+  </text>
+  <g>
+    <g>
+      <path d='M650,612 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M650,612 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,590 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='608' class='st3 st4'>
+        Tissue
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='580' class='st5 st6 st7' dominant-baseline='middle'>
+        tussue
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='580' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <g>
+    <g>
+      <path d='M230,682 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M230,682 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M50,660 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='678' class='st3 st4'>
+        glycoepitope:EP0001\/enzyme\/1
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='650' class='st5 st6 st7' dominant-baseline='middle'>
+        Enzyme
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='222' y='650' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st11' points='230,665 250,665 250,665 465,665'/>
+  <polygon points='460.3,670.7 459.4,669.7 464.4,665.0 459.4,660.3 460.3,659.3 466.5,665.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 660)'>
+    rdf:type
+  </text>
+  <g>
+    <rect x='470' y='640' width='180' height='50' rx='7.5' ry='7.5' fill='#fff4c3' stroke='#000000' stroke-width='2' pointer-events='all'/>
+    <g transform='translate(-0.5 -0.5)'>
+      <switch>
+        <foreignObject style='overflow: visible; text-align: left' pointer-events='none' width='100%' height='100%' requiredFeatures='http://www.w3.org/TR/SVG11/feature#Extensibility'>
+          <div xmlns='http://www.w3.org/1999/xhtml' style='display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 665px; margin-left: 471px'>
+            <div style='box-sizing: border-box; font-size: 0; text-align: center;'>
+              <div style='display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal'>
+                <div>
+                  glycan:Enzyme
+                  <br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x='560' y='659' fill='#000000' font-family='Helvetica' font-size='12px' text-anchor='middle'>
+          glycan:Enzyme
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline class='st12' points='230,665 250,665 250,735 465,735'/>
+  <polygon points='460.3,740.7 459.4,739.7 464.4,735.0 459.4,730.3 460.3,729.3 466.5,735.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 730)'>
+    dct:description
+  </text>
+  <g>
+    <rect x='470' y='710' width='180' height='50' class='st9'/>
+    <polyline points='470,730 470,710 650,710 650,730' class='st2'/>
+    <g>
+      <text x='478' y='745' class='st3 st4' dominant-baseline='middle'>
+        glucuronyltransferase P
+      </text>
+    </g>
+    <g>
+      <text x='478' y='720' class='st5 st6 st7' dominant-baseline='middle'>
+      </text>
+    </g>
+    <g>
+      <text x='642' y='720' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <g>
+    <g>
+      <path d='M230,822 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M230,822 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M50,800 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='818' class='st3 st4'>
+        &lt;http://www.glycoepitope.jp/epitopes/EP0001/glyep&gt;
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='790' class='st5 st6 st7' dominant-baseline='middle'>
+        Glyep
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='222' y='790' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st11' points='230,805 250,805 250,805 465,805'/>
+  <polygon points='460.3,810.7 459.4,809.7 464.4,805.0 459.4,800.3 460.3,799.3 466.5,805.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 800)'>
+    rdf:type
+  </text>
+  <g>
+    <rect x='470' y='780' width='180' height='50' rx='7.5' ry='7.5' fill='#fff4c3' stroke='#000000' stroke-width='2' pointer-events='all'/>
+    <g transform='translate(-0.5 -0.5)'>
+      <switch>
+        <foreignObject style='overflow: visible; text-align: left' pointer-events='none' width='100%' height='100%' requiredFeatures='http://www.w3.org/TR/SVG11/feature#Extensibility'>
+          <div xmlns='http://www.w3.org/1999/xhtml' style='display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 805px; margin-left: 471px'>
+            <div style='box-sizing: border-box; font-size: 0; text-align: center;'>
+              <div style='display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal'>
+                <div>
+                  glycan:Glycosequence
+                  <br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x='560' y='799' fill='#000000' font-family='Helvetica' font-size='12px' text-anchor='middle'>
+          glycan:Glycosequence
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline class='st12' points='230,805 250,805 250,875 465,875'/>
+  <polygon points='460.3,880.7 459.4,879.7 464.4,875.0 459.4,870.3 460.3,869.3 466.5,875.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 870)'>
+    glycan:has_sequence
+  </text>
+  <g>
+    <rect x='470' y='850' width='180' height='50' class='st9'/>
+    <polyline points='470,870 470,850 650,850 650,870' class='st2'/>
+    <g>
+      <text x='478' y='885' class='st3 st4' dominant-baseline='middle'>
+        &quot;HSO3(-3)GlcA(b1-3)Gal(b1-4)GlcNAc-R&quot;^^xsd:string
+      </text>
+    </g>
+    <g>
+      <text x='478' y='860' class='st5 st6 st7' dominant-baseline='middle'>
+      </text>
+    </g>
+    <g>
+      <text x='642' y='860' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <g>
+    <g>
+      <path d='M230,962 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M230,962 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M50,940 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='958' class='st3 st4'>
+        &lt;http://jcggdb.jp/idb/jcggdb/JCGG-STR032038&gt;
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='930' class='st5 st6 st7' dominant-baseline='middle'>
+        Jcggdb
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='222' y='930' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st11' points='230,945 250,945 250,945 465,945'/>
+  <polygon points='460.3,950.7 459.4,949.7 464.4,945.0 459.4,940.3 460.3,939.3 466.5,945.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 940)'>
+    rdf:type
+  </text>
+  <g>
+    <rect x='470' y='920' width='180' height='50' rx='7.5' ry='7.5' fill='#fff4c3' stroke='#000000' stroke-width='2' pointer-events='all'/>
+    <g transform='translate(-0.5 -0.5)'>
+      <switch>
+        <foreignObject style='overflow: visible; text-align: left' pointer-events='none' width='100%' height='100%' requiredFeatures='http://www.w3.org/TR/SVG11/feature#Extensibility'>
+          <div xmlns='http://www.w3.org/1999/xhtml' style='display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 945px; margin-left: 471px'>
+            <div style='box-sizing: border-box; font-size: 0; text-align: center;'>
+              <div style='display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal'>
+                <div>
+                  glycan:Resource_entry
+                  <br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x='560' y='939' fill='#000000' font-family='Helvetica' font-size='12px' text-anchor='middle'>
+          glycan:Resource_entry
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline class='st12' points='230,945 250,945 250,1015 465,1015'/>
+  <polygon points='460.3,1020.7 459.4,1019.7 464.4,1015.0 459.4,1010.3 460.3,1009.3 466.5,1015.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1010)'>
+    dct:identifier
+  </text>
+  <g>
+    <rect x='470' y='990' width='180' height='50' class='st9'/>
+    <polyline points='470,1010 470,990 650,990 650,1010' class='st2'/>
+    <g>
+      <text x='478' y='1025' class='st3 st4' dominant-baseline='middle'>
+        JCGG-STR032038
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1000' class='st5 st6 st7' dominant-baseline='middle'>
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1000' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <g>
+    <g>
+      <path d='M230,1102 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M230,1102 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M50,1080 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='1098' class='st3 st4'>
+        &lt;http://www.glycoepitope.jp/epitopes/EP0001/receptor/L%2Dselecti&gt;
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='1070' class='st5 st6 st7' dominant-baseline='middle'>
+        Receptor
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='222' y='1070' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st11' points='230,1085 250,1085 250,1085 465,1085'/>
+  <polygon points='460.3,1090.7 459.4,1089.7 464.4,1085.0 459.4,1080.3 460.3,1079.3 466.5,1085.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1080)'>
+    rdf:type
+  </text>
+  <g>
+    <rect x='470' y='1060' width='180' height='50' rx='7.5' ry='7.5' fill='#fff4c3' stroke='#000000' stroke-width='2' pointer-events='all'/>
+    <g transform='translate(-0.5 -0.5)'>
+      <switch>
+        <foreignObject style='overflow: visible; text-align: left' pointer-events='none' width='100%' height='100%' requiredFeatures='http://www.w3.org/TR/SVG11/feature#Extensibility'>
+          <div xmlns='http://www.w3.org/1999/xhtml' style='display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 1085px; margin-left: 471px'>
+            <div style='box-sizing: border-box; font-size: 0; text-align: center;'>
+              <div style='display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal'>
+                <div>
+                  glycan:Receptor
+                  <br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x='560' y='1079' fill='#000000' font-family='Helvetica' font-size='12px' text-anchor='middle'>
+          glycan:Receptor
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline class='st12' points='230,1085 250,1085 250,1155 465,1155'/>
+  <polygon points='460.3,1160.7 459.4,1159.7 464.4,1155.0 459.4,1150.3 460.3,1149.3 466.5,1155.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1150)'>
+    rdfs:label
+  </text>
+  <g>
+    <rect x='470' y='1130' width='180' height='50' class='st9'/>
+    <polyline points='470,1150 470,1130 650,1130 650,1150' class='st2'/>
+    <g>
+      <text x='478' y='1165' class='st3 st4' dominant-baseline='middle'>
+        L-selectin
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1140' class='st5 st6 st7' dominant-baseline='middle'>
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1140' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <g>
+    <g>
+      <path d='M230,1242 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M230,1242 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M50,1220 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='1238' class='st3 st4'>
+        &lt;http://www.glycoepitope.jp/epitopes/AN0008&gt;
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='1210' class='st5 st6 st7' dominant-baseline='middle'>
+        Antibody
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='222' y='1210' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st11' points='230,1225 250,1225 250,1225 465,1225'/>
+  <polygon points='460.3,1230.7 459.4,1229.7 464.4,1225.0 459.4,1220.3 460.3,1219.3 466.5,1225.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1220)'>
+    rdf:type
+  </text>
+  <g>
+    <rect x='470' y='1200' width='180' height='50' rx='7.5' ry='7.5' fill='#fff4c3' stroke='#000000' stroke-width='2' pointer-events='all'/>
+    <g transform='translate(-0.5 -0.5)'>
+      <switch>
+        <foreignObject style='overflow: visible; text-align: left' pointer-events='none' width='100%' height='100%' requiredFeatures='http://www.w3.org/TR/SVG11/feature#Extensibility'>
+          <div xmlns='http://www.w3.org/1999/xhtml' style='display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 1225px; margin-left: 471px'>
+            <div style='box-sizing: border-box; font-size: 0; text-align: center;'>
+              <div style='display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal'>
+                <div>
+                  glycan:Antibody
+                  <br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x='560' y='1219' fill='#000000' font-family='Helvetica' font-size='12px' text-anchor='middle'>
+          glycan:Antibody
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline class='st12' points='230,1225 250,1225 250,1295 465,1295'/>
+  <polygon points='460.3,1300.7 459.4,1299.7 464.4,1295.0 459.4,1290.3 460.3,1289.3 466.5,1295.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1290)'>
+    dct:identifier
+  </text>
+  <g>
+    <rect x='470' y='1270' width='180' height='50' class='st9'/>
+    <polyline points='470,1290 470,1270 650,1270 650,1290' class='st2'/>
+    <g>
+      <text x='478' y='1305' class='st3 st4' dominant-baseline='middle'>
+        AN0008
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1280' class='st5 st6 st7' dominant-baseline='middle'>
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1280' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,1225 250,1225 250,1365 465,1365'/>
+  <polygon points='460.3,1370.7 459.4,1369.7 464.4,1365.0 459.4,1360.3 460.3,1359.3 466.5,1365.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1360)'>
+    glycoepitope:has_affinity_to
+  </text>
+  <g>
+    <rect x='470' y='1340' width='180' height='50' class='st9'/>
+    <polyline points='470,1360 470,1340 650,1340 650,1360' class='st2'/>
+    <g>
+      <text x='478' y='1375' class='st3 st4' dominant-baseline='middle'>
+        Glycan_epitope
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1350' class='st5 st6 st7' dominant-baseline='middle'>
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1350' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,1225 250,1225 250,1435 465,1435'/>
+  <polygon points='460.3,1440.7 459.4,1439.7 464.4,1435.0 459.4,1430.3 460.3,1429.3 466.5,1435.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1430)'>
+    glycoepitope:organism
+  </text>
+  <g>
+    <rect x='470' y='1410' width='180' height='50' class='st9'/>
+    <polyline points='470,1430 470,1410 650,1410 650,1430' class='st2'/>
+    <g>
+      <text x='478' y='1445' class='st3 st4' dominant-baseline='middle'>
+        Rat
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1420' class='st5 st6 st7' dominant-baseline='middle'>
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1420' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,1225 250,1225 250,1505 465,1505'/>
+  <polygon points='460.3,1510.7 459.4,1509.7 464.4,1505.0 459.4,1500.3 460.3,1499.3 466.5,1505.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1500)'>
+    rdfs:label
+  </text>
+  <g>
+    <rect x='470' y='1480' width='180' height='50' class='st9'/>
+    <polyline points='470,1500 470,1480 650,1480 650,1500' class='st2'/>
+    <g>
+      <text x='478' y='1515' class='st3 st4' dominant-baseline='middle'>
+        334
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1490' class='st5 st6 st7' dominant-baseline='middle'>
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1490' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <g>
+    <g>
+      <path d='M230,1592 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M230,1592 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M50,1570 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='1588' class='st3 st4'>
+        &lt;http://www.glycoepitope.jp/epitopes/rdfs/list.ttl#natural%2520killer%2520cell&gt;
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='1560' class='st5 st6 st7' dominant-baseline='middle'>
+        Tissue
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='222' y='1560' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st11' points='230,1575 250,1575 250,1575 465,1575'/>
+  <polygon points='460.3,1580.7 459.4,1579.7 464.4,1575.0 459.4,1570.3 460.3,1569.3 466.5,1575.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1570)'>
+    rdf:type
+  </text>
+  <g>
+    <rect x='470' y='1550' width='180' height='50' rx='7.5' ry='7.5' fill='#fff4c3' stroke='#000000' stroke-width='2' pointer-events='all'/>
+    <g transform='translate(-0.5 -0.5)'>
+      <switch>
+        <foreignObject style='overflow: visible; text-align: left' pointer-events='none' width='100%' height='100%' requiredFeatures='http://www.w3.org/TR/SVG11/feature#Extensibility'>
+          <div xmlns='http://www.w3.org/1999/xhtml' style='display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 1575px; margin-left: 471px'>
+            <div style='box-sizing: border-box; font-size: 0; text-align: center;'>
+              <div style='display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal'>
+                <div>
+                  uniprot:Tissue
+                  <br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x='560' y='1569' fill='#000000' font-family='Helvetica' font-size='12px' text-anchor='middle'>
+          uniprot:Tissue
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline class='st12' points='230,1575 250,1575 250,1645 465,1645'/>
+  <polygon points='460.3,1650.7 459.4,1649.7 464.4,1645.0 459.4,1640.3 460.3,1639.3 466.5,1645.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1640)'>
+    rdfs:label
+  </text>
+  <g>
+    <rect x='470' y='1620' width='180' height='50' class='st9'/>
+    <polyline points='470,1640 470,1620 650,1620 650,1640' class='st2'/>
+    <g>
+      <text x='478' y='1655' class='st3 st4' dominant-baseline='middle'>
+        natural killer cell
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1630' class='st5 st6 st7' dominant-baseline='middle'>
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1630' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <g>
+    <text x='60' y='1714' font-size='14px' class='st6'>
+      Namespaces
+    </text>
+    <text x='60' y='1730' font-size='12px' class='st3'>
+      rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+    </text>
+    <text x='60' y='1746' font-size='12px' class='st3'>
+      rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+    </text>
+    <text x='60' y='1762' font-size='12px' class='st3'>
+      skos: &lt;http://www.w3.org/2004/02/skos/core#&gt;
+    </text>
+    <text x='60' y='1778' font-size='12px' class='st3'>
+      dct: &lt;http://purl.org/dc/terms/&gt;
+    </text>
+    <text x='60' y='1794' font-size='12px' class='st3'>
+      xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+    </text>
+    <text x='60' y='1810' font-size='12px' class='st3'>
+      obo: &lt;http://purl.obolibrary.org/obo/&gt;
+    </text>
+    <text x='60' y='1826' font-size='12px' class='st3'>
+      glycan: &lt;http://purl.jp/bio/12/glyco/glycan#&gt;
+    </text>
+    <text x='60' y='1842' font-size='12px' class='st3'>
+      glycoepitope: &lt;http://www.glycoepitope.jp/epitopes/&gt;
+    </text>
+    <text x='60' y='1858' font-size='12px' class='st3'>
+      uniprot: &lt;http://www.uniprot.org/core/&gt;
+    </text>
+    <rect x='50' y='1690' width='332' height='182' fill='none' stroke='#000000' stroke-width='1'/>
+  </g>
+</svg>

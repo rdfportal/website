@@ -1,0 +1,15 @@
+# Endpoint: https://id.nlm.nih.gov/mesh/sparql
+# Description: 
+# Parameter: parent_tree_number: (example: mesh:C01)
+
+PREFIX meshv: <http://id.nlm.nih.gov/mesh/vocab#>
+PREFIX mesh: <http://id.nlm.nih.gov/mesh/>
+
+SELECT ?TreeNumber ?parent_tree_number
+WHERE {
+    VALUES ?parent_tree_number { mesh:C01 }
+    ?TreeNumber a meshv:TreeNumber ;
+        meshv:parentTreeNumber ?parent_tree_number .
+    ?parent_tree_number a meshv:TreeNumber .
+}
+LIMIT 100

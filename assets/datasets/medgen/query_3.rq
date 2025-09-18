@@ -1,0 +1,22 @@
+# Endpoint: https://rdfportal.org/ncbi/sparql
+# Description: Retrieve MGCONSO (link to external databases) of C0023467 (Acute myeloid leukemia)
+# Parameter: identifier: (example: C0023467)
+
+PREFIX mo: <http://med2rdf/ontology/medgen#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?identifier ?mgconso_aui ?mgconso_ispref ?mgconso_stt ?mgconso_ts ?mgconso_label ?mgconso_source
+FROM <http://rdfportal.org/dataset/medgen>
+WHERE {
+    VALUES ?identifier { "C0023467" }
+    ?MedGen a mo:ConceptID ;
+        dct:identifier ?identifier ;
+        mo:mgconso / mo:aui ?mgconso_aui ;
+        mo:mgconso / mo:ispref ?mgconso_ispref ;
+        mo:mgconso / mo:stt ?mgconso_stt ;
+        mo:mgconso / mo:ts ?mgconso_ts ;
+        mo:mgconso / rdfs:label ?mgconso_label ;
+        mo:mgconso / dct:source ?mgconso_source .
+}
+LIMIT 100

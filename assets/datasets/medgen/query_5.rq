@@ -1,0 +1,19 @@
+# Endpoint: https://rdfportal.org/ncbi/sparql
+# Description: Retrieve PMIDs linked from C0023467 (Acute myeloid leukemia)
+# Parameter: mengen_cid: (example: medgen:C0023467)
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mo: <http://med2rdf/ontology/medgen#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX medgen: <http://www.ncbi.nlm.nih.gov/medgen/>
+
+SELECT ?mengen_cid ?pubmed ?medgen_uid_label
+FROM <http://rdfportal.org/dataset/medgen>
+WHERE {
+    VALUES ?mengen_cid { medgen:C0023467 }
+    ?MedGenUid rdfs:seeAlso ?mengen_cid ;
+        dct:references ?pubmed ;
+        rdfs:label ?medgen_uid_label .
+    ?mengen_cid a mo:ConceptID .
+}
+LIMIT 100

@@ -1,0 +1,7 @@
+# がんをターゲットとする核酸医薬品の一覧の取得
+
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+SELECT ?entry ?disease
+WHERE {
+    ?entry obo:RO_0002606 ?disease FILTER ( ?disease = obo:MONDO_0005097 || ?disease = obo:MONDO_0005192 || ?disease = obo:MONDO_0005233 || ?disease = obo:MONDO_0005575 || ?disease = obo:MONDO_0007256 || ?disease = obo:MONDO_0008315 ) #Including cancer
+}

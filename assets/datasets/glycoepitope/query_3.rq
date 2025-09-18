@@ -1,0 +1,27 @@
+##########################
+#
+#List of epitope name and sequence
+#
+##########################
+
+DEFINE sql:select-option "order"
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX glycan: <http://purl.jp/bio/12/glyco/glycan#> 
+PREFIX glycodb: <http://purl.jp/bio/12/database/>
+PREFIX glytoucan: <http://www.glytoucan.org/glyco/owl/glytoucan#>
+PREFIX glycoepitope: <http://www.glycoepitope.jp/epitopes/glycoepitope.owl#>
+PREFIX glycoprot: <http://www.glycoprot.jp/>
+PREFIX uniprot: <http://www.uniprot.org/core/>
+
+# glycoepitope sequence
+SELECT DISTINCT ?epitope_name (str(?seq) AS ?sequence)
+FROM <http://rdf.glycoinfo.org/glycoepitope>
+WHERE{
+        # epitope name
+        ?epitope rdfs:label ?epitope_name .
+        # glycoepitope sequence
+        ?epitope glycan:has_glycosequence ?gseq .
+        ?gseq glycan:in_carbohydrate_format glycan:carbohydrate_format_glycoepitope .
+        ?gseq glycan:has_sequence ?seq .
+}

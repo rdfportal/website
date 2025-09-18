@@ -1,0 +1,27 @@
+# Endpoint: https://id.nlm.nih.gov/mesh/sparql
+# Description: 
+
+PREFIX meshv: <http://id.nlm.nih.gov/mesh/vocab#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?Concept ?concept_label ?concept_preferred_term ?term_label
+WHERE {
+    OPTIONAL {
+        ?Concept a meshv:Concept ;
+            meshv:seeAlso / meshv:broaderDescriptor ?Descriptor ;
+            rdfs:label ?concept_label ;
+            meshv:preferredTerm ?concept_preferred_term .
+        ?Descriptor a meshv:TopicalDescriptor ;
+            meshv:concept ?Concept .
+        ?concept_preferred_term a meshv:Term .
+    }
+    OPTIONAL {
+        ?concept_preferred_term a meshv:Term ;
+            meshv:prefLabel ?term_label .
+    }
+    OPTIONAL {
+        ?Concept a meshv:Concept ;
+            meshv:term / meshv:prefLabel ?term_label .
+    }
+}
+LIMIT 100

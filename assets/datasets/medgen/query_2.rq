@@ -1,0 +1,19 @@
+# Endpoint: https://rdfportal.org/ncbi/sparql
+# Description: Retrieve MGDEF and MGSAT of C0023467 (Acute myeloid leukemia)
+# Parameter: identifier: (example: C0023467)
+
+PREFIX mo: <http://med2rdf/ontology/medgen#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?identifier ?mgdef_source ?definition ?mgdef_definition
+FROM <http://rdfportal.org/dataset/medgen>
+WHERE {
+    VALUES ?identifier { "C0023467" }
+    ?MedGen a mo:ConceptID ;
+        dct:identifier ?identifier ;
+        mo:mgdef / dct:source ?mgdef_source ;
+        skos:definition ?definition ;
+        mo:mgdef / skos:definition ?mgdef_definition .
+}
+LIMIT 100

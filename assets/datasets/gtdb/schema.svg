@@ -1,0 +1,3878 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns='http://www.w3.org/2000/svg' style='background-color: rgb(255, 255, 255);' width='750px' height='10540px' viewBox='-0.5 -0.5 750 10540'>
+  <style type='text/css'>
+     .st0 {fill:#FFCE9F;} .st1 {fill:none;stroke:#000000;stroke-width:2;} .st2
+    {opacity:0.6;} .st3 {font-family:&apos;Helvetica&apos;;} .st4
+    {font-size:11px;} .st5 {fill:#FFFFFF;} .st6
+    {font-family:&apos;Helvetica-Bold&apos;;} .st7 {font-size:12px;} .st8
+    {opacity:0.7;fill:#FFFFFF;} .st9
+    {fill:#F8CECC;stroke:#000000;stroke-width:2;} .st9uri
+    {fill:#CCF8F8;stroke:#000000;stroke-width:2;} .st10 {fill:#FFF4C3;} .st11
+    {fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:4,4;} .st12 {fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;} .st13 {enable-background:new;} .st14 {fill:#F2F2E9;} .st15 {fill:none;stroke:#000000;stroke-width:2;stroke-dasharray:3.926,3.926;} 
+  </style>
+  <g>
+    <g>
+      <path d='M230,52 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M230,52 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M50,30 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='48' class='st3 st4'>
+        gtdb:GB_GCA_000003645.1
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='20' class='st5 st6 st7' dominant-baseline='middle'>
+        GtdbStrain
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='222' y='20' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st11' points='230,35 250,35 250,35 465,35'/>
+  <polygon points='460.3,40.7 459.4,39.7 464.4,35.0 459.4,30.3 460.3,29.3 466.5,35.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 30)'>
+    rdf:type
+  </text>
+  <g>
+    <rect x='470' y='10' width='180' height='50' rx='7.5' ry='7.5' fill='#fff4c3' stroke='#000000' stroke-width='2' pointer-events='all'/>
+    <g transform='translate(-0.5 -0.5)'>
+      <switch>
+        <foreignObject style='overflow: visible; text-align: left' pointer-events='none' width='100%' height='100%' requiredFeatures='http://www.w3.org/TR/SVG11/feature#Extensibility'>
+          <div xmlns='http://www.w3.org/1999/xhtml' style='display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 35px; margin-left: 471px'>
+            <div style='box-sizing: border-box; font-size: 0; text-align: center;'>
+              <div style='display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal'>
+                <div>
+                  gtdb:Taxon
+                  <br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x='560' y='29' fill='#000000' font-family='Helvetica' font-size='12px' text-anchor='middle'>
+          gtdb:Taxon
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,105 465,105'/>
+  <polygon points='460.3,110.7 459.4,109.7 464.4,105.0 459.4,100.3 460.3,99.3 466.5,105.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 100)'>
+    rdfs:subClassOf
+  </text>
+  <g>
+    <g>
+      <path d='M650,122 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M650,122 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,100 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='118' class='st3 st4'>
+        GtdbSpecies
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='90' class='st5 st6 st7' dominant-baseline='middle'>
+        gtdb_species
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='90' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,175 465,175'/>
+  <polygon points='460.3,180.7 459.4,179.7 464.4,175.0 459.4,170.3 460.3,169.3 466.5,175.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 170)'>
+    gtdb:rank
+  </text>
+  <g>
+    <g>
+      <path d='M650,192 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st9uri'/>
+      <path d='M650,192 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,170 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='188' class='st3 st4'>
+        gtdb:Strain
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='160' class='st5 st6 st7' dominant-baseline='middle'>
+        rank_strain
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='160' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,245 465,245'/>
+  <polygon points='460.3,250.7 459.4,249.7 464.4,245.0 459.4,240.3 460.3,239.3 466.5,245.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 240)'>
+    rdfs:seeAlso
+  </text>
+  <g>
+    <g>
+      <path d='M650,262 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st9uri'/>
+      <path d='M650,262 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,240 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='258' class='st3 st4'>
+        bioproject:PRJNA29699
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='230' class='st5 st6 st7' dominant-baseline='middle'>
+        bioproject
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='230' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,315 465,315'/>
+  <polygon points='460.3,320.7 459.4,319.7 464.4,315.0 459.4,310.3 460.3,309.3 466.5,315.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 310)'>
+    rdfs:seeAlso
+  </text>
+  <g>
+    <g>
+      <path d='M650,332 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st9uri'/>
+      <path d='M650,332 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,310 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='328' class='st3 st4'>
+        biosample:SAMN00727677
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='300' class='st5 st6 st7' dominant-baseline='middle'>
+        biosample
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='300' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,385 465,385'/>
+  <polygon points='460.3,390.7 459.4,389.7 464.4,385.0 459.4,380.3 460.3,379.3 466.5,385.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 380)'>
+    rdfs:seeAlso
+  </text>
+  <g>
+    <g>
+      <path d='M650,402 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st9uri'/>
+      <path d='M650,402 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,380 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='398' class='st3 st4'>
+        gca:GCA_000003955.1
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='370' class='st5 st6 st7' dominant-baseline='middle'>
+        insdc_gca
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='370' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,455 465,455'/>
+  <polygon points='460.3,460.7 459.4,459.7 464.4,455.0 459.4,450.3 460.3,449.3 466.5,455.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 450)'>
+    rdfs:seeAlso
+  </text>
+  <g>
+    <g>
+      <path d='M650,472 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st9uri'/>
+      <path d='M650,472 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,450 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='468' class='st3 st4'>
+        taxid:526994
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='440' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_taxonomy
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='440' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,525 465,525'/>
+  <polygon points='460.3,530.7 459.4,529.7 464.4,525.0 459.4,520.3 460.3,519.3 466.5,525.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 520)'>
+    rdfs:seeAlso
+  </text>
+  <g>
+    <g>
+      <path d='M650,542 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st9uri'/>
+      <path d='M650,542 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,520 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='538' class='st3 st4'>
+        ncbigenome:GCA_000003955.1
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='510' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_genome
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='510' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,595 465,595'/>
+  <polygon points='460.3,600.7 459.4,599.7 464.4,595.0 459.4,590.3 460.3,589.3 466.5,595.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 590)'>
+    gtdb:ambiguous_bases
+  </text>
+  <g>
+    <rect x='470' y='570' width='180' height='50' class='st9'/>
+    <polyline points='470,590 470,570 650,570 650,590' class='st2'/>
+    <g>
+      <text x='478' y='605' class='st3 st4' dominant-baseline='middle'>
+        20
+      </text>
+    </g>
+    <g>
+      <text x='478' y='580' class='st5 st6 st7' dominant-baseline='middle'>
+        ambiguous_bases
+      </text>
+    </g>
+    <g>
+      <text x='642' y='580' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,665 465,665'/>
+  <polygon points='460.3,670.7 459.4,669.7 464.4,665.0 459.4,660.3 460.3,659.3 466.5,665.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 660)'>
+    gtdb:checkm2_completeness
+  </text>
+  <g>
+    <rect x='470' y='640' width='180' height='50' class='st9'/>
+    <polyline points='470,660 470,640 650,640 650,660' class='st2'/>
+    <g>
+      <text x='478' y='675' class='st3 st4' dominant-baseline='middle'>
+        100
+      </text>
+    </g>
+    <g>
+      <text x='478' y='650' class='st5 st6 st7' dominant-baseline='middle'>
+        checkm2_completeness
+      </text>
+    </g>
+    <g>
+      <text x='642' y='650' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,735 465,735'/>
+  <polygon points='460.3,740.7 459.4,739.7 464.4,735.0 459.4,730.3 460.3,729.3 466.5,735.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 730)'>
+    gtdb:checkm2_contamination
+  </text>
+  <g>
+    <rect x='470' y='710' width='180' height='50' class='st9'/>
+    <polyline points='470,730 470,710 650,710 650,730' class='st2'/>
+    <g>
+      <text x='478' y='745' class='st3 st4' dominant-baseline='middle'>
+        0
+      </text>
+    </g>
+    <g>
+      <text x='478' y='720' class='st5 st6 st7' dominant-baseline='middle'>
+        checkm2_contamination
+      </text>
+    </g>
+    <g>
+      <text x='642' y='720' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,805 465,805'/>
+  <polygon points='460.3,810.7 459.4,809.7 464.4,805.0 459.4,800.3 460.3,799.3 466.5,805.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 800)'>
+    gtdb:checkm2_model
+  </text>
+  <g>
+    <rect x='470' y='780' width='180' height='50' class='st9'/>
+    <polyline points='470,800 470,780 650,780 650,800' class='st2'/>
+    <g>
+      <text x='478' y='815' class='st3 st4' dominant-baseline='middle'>
+        Specific
+      </text>
+    </g>
+    <g>
+      <text x='478' y='790' class='st5 st6 st7' dominant-baseline='middle'>
+        checkm2_model
+      </text>
+    </g>
+    <g>
+      <text x='642' y='790' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,875 465,875'/>
+  <polygon points='460.3,880.7 459.4,879.7 464.4,875.0 459.4,870.3 460.3,869.3 466.5,875.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 870)'>
+    gtdb:checkm_completeness
+  </text>
+  <g>
+    <rect x='470' y='850' width='180' height='50' class='st9'/>
+    <polyline points='470,870 470,850 650,850 650,870' class='st2'/>
+    <g>
+      <text x='478' y='885' class='st3 st4' dominant-baseline='middle'>
+        99.07
+      </text>
+    </g>
+    <g>
+      <text x='478' y='860' class='st5 st6 st7' dominant-baseline='middle'>
+        checkm_completeness
+      </text>
+    </g>
+    <g>
+      <text x='642' y='860' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Float
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,945 465,945'/>
+  <polygon points='460.3,950.7 459.4,949.7 464.4,945.0 459.4,940.3 460.3,939.3 466.5,945.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 940)'>
+    gtdb:checkm_contamination
+  </text>
+  <g>
+    <rect x='470' y='920' width='180' height='50' class='st9'/>
+    <polyline points='470,940 470,920 650,920 650,940' class='st2'/>
+    <g>
+      <text x='478' y='955' class='st3 st4' dominant-baseline='middle'>
+        0.02
+      </text>
+    </g>
+    <g>
+      <text x='478' y='930' class='st5 st6 st7' dominant-baseline='middle'>
+        checkm_contamination
+      </text>
+    </g>
+    <g>
+      <text x='642' y='930' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Float
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,1015 465,1015'/>
+  <polygon points='460.3,1020.7 459.4,1019.7 464.4,1015.0 459.4,1010.3 460.3,1009.3 466.5,1015.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1010)'>
+    gtdb:checkm_marker_count
+  </text>
+  <g>
+    <rect x='470' y='990' width='180' height='50' class='st9'/>
+    <polyline points='470,1010 470,990 650,990 650,1010' class='st2'/>
+    <g>
+      <text x='478' y='1025' class='st3 st4' dominant-baseline='middle'>
+        1171
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1000' class='st5 st6 st7' dominant-baseline='middle'>
+        checkm_marker_count
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1000' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,1085 465,1085'/>
+  <polygon points='460.3,1090.7 459.4,1089.7 464.4,1085.0 459.4,1080.3 460.3,1079.3 466.5,1085.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1080)'>
+    gtdb:checkm_marker_lineage
+  </text>
+  <g>
+    <rect x='470' y='1060' width='180' height='50' class='st9'/>
+    <polyline points='470,1080 470,1060 650,1060 650,1080' class='st2'/>
+    <g>
+      <text x='478' y='1095' class='st3 st4' dominant-baseline='middle'>
+        g__Bacillus (UID902)
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1070' class='st5 st6 st7' dominant-baseline='middle'>
+        checkm_marker_lineage
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1070' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,1155 465,1155'/>
+  <polygon points='460.3,1160.7 459.4,1159.7 464.4,1155.0 459.4,1150.3 460.3,1149.3 466.5,1155.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1150)'>
+    gtdb:checkm_marker_set_count
+  </text>
+  <g>
+    <rect x='470' y='1130' width='180' height='50' class='st9'/>
+    <polyline points='470,1150 470,1130 650,1130 650,1150' class='st2'/>
+    <g>
+      <text x='478' y='1165' class='st3 st4' dominant-baseline='middle'>
+        324
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1140' class='st5 st6 st7' dominant-baseline='middle'>
+        checkm_marker_set_count
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1140' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,1225 465,1225'/>
+  <polygon points='460.3,1230.7 459.4,1229.7 464.4,1225.0 459.4,1220.3 460.3,1219.3 466.5,1225.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1220)'>
+    gtdb:checkm_strain_heterogeneity
+  </text>
+  <g>
+    <rect x='470' y='1200' width='180' height='50' class='st9'/>
+    <polyline points='470,1220 470,1200 650,1200 650,1220' class='st2'/>
+    <g>
+      <text x='478' y='1235' class='st3 st4' dominant-baseline='middle'>
+        0
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1210' class='st5 st6 st7' dominant-baseline='middle'>
+        checkm_strain_heterogeneity
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1210' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,1295 465,1295'/>
+  <polygon points='460.3,1300.7 459.4,1299.7 464.4,1295.0 459.4,1290.3 460.3,1289.3 466.5,1295.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1290)'>
+    gtdb:coding_bases
+  </text>
+  <g>
+    <rect x='470' y='1270' width='180' height='50' class='st9'/>
+    <polyline points='470,1290 470,1270 650,1270 650,1290' class='st2'/>
+    <g>
+      <text x='478' y='1305' class='st3 st4' dominant-baseline='middle'>
+        4406087
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1280' class='st5 st6 st7' dominant-baseline='middle'>
+        coding_bases
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1280' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,1365 465,1365'/>
+  <polygon points='460.3,1370.7 459.4,1369.7 464.4,1365.0 459.4,1360.3 460.3,1359.3 466.5,1365.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1360)'>
+    gtdb:coding_density
+  </text>
+  <g>
+    <rect x='470' y='1340' width='180' height='50' class='st9'/>
+    <polyline points='470,1360 470,1340 650,1340 650,1360' class='st2'/>
+    <g>
+      <text x='478' y='1375' class='st3 st4' dominant-baseline='middle'>
+        83.6113269667772
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1350' class='st5 st6 st7' dominant-baseline='middle'>
+        coding_density
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1350' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Float
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,1435 465,1435'/>
+  <polygon points='460.3,1440.7 459.4,1439.7 464.4,1435.0 459.4,1430.3 460.3,1429.3 466.5,1435.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1430)'>
+    gtdb:contig_count
+  </text>
+  <g>
+    <rect x='470' y='1410' width='180' height='50' class='st9'/>
+    <polyline points='470,1430 470,1410 650,1410 650,1430' class='st2'/>
+    <g>
+      <text x='478' y='1445' class='st3 st4' dominant-baseline='middle'>
+        241
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1420' class='st5 st6 st7' dominant-baseline='middle'>
+        contig_count
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1420' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,1505 465,1505'/>
+  <polygon points='460.3,1510.7 459.4,1509.7 464.4,1505.0 459.4,1500.3 460.3,1499.3 466.5,1505.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1500)'>
+    gtdb:gc_count
+  </text>
+  <g>
+    <rect x='470' y='1480' width='180' height='50' class='st9'/>
+    <polyline points='470,1500 470,1480 650,1480 650,1500' class='st2'/>
+    <g>
+      <text x='478' y='1515' class='st3 st4' dominant-baseline='middle'>
+        1853735
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1490' class='st5 st6 st7' dominant-baseline='middle'>
+        gc_count
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1490' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,1575 465,1575'/>
+  <polygon points='460.3,1580.7 459.4,1579.7 464.4,1575.0 459.4,1570.3 460.3,1569.3 466.5,1575.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1570)'>
+    gtdb:gc_percentage
+  </text>
+  <g>
+    <rect x='470' y='1550' width='180' height='50' class='st9'/>
+    <polyline points='470,1570 470,1550 650,1550 650,1570' class='st2'/>
+    <g>
+      <text x='478' y='1585' class='st3 st4' dominant-baseline='middle'>
+        35.33882173743543
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1560' class='st5 st6 st7' dominant-baseline='middle'>
+        gc_percentage
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1560' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Float
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,1645 465,1645'/>
+  <polygon points='460.3,1650.7 459.4,1649.7 464.4,1645.0 459.4,1640.3 460.3,1639.3 466.5,1645.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1640)'>
+    gtdb:genome_size
+  </text>
+  <g>
+    <rect x='470' y='1620' width='180' height='50' class='st9'/>
+    <polyline points='470,1640 470,1620 650,1620 650,1640' class='st2'/>
+    <g>
+      <text x='478' y='1655' class='st3 st4' dominant-baseline='middle'>
+        5269725
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1630' class='st5 st6 st7' dominant-baseline='middle'>
+        genome_size
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1630' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,1715 465,1715'/>
+  <polygon points='460.3,1720.7 459.4,1719.7 464.4,1715.0 459.4,1710.3 460.3,1709.3 466.5,1715.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1710)'>
+    gtdb:gtdb_genome_representative
+  </text>
+  <g>
+    <rect x='470' y='1690' width='180' height='50' class='st9'/>
+    <polyline points='470,1710 470,1690 650,1690 650,1710' class='st2'/>
+    <g>
+      <text x='478' y='1725' class='st3 st4' dominant-baseline='middle'>
+        RS_GCF_001883995.1
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1700' class='st5 st6 st7' dominant-baseline='middle'>
+        gtdb_genome_representative
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1700' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,1785 465,1785'/>
+  <polygon points='460.3,1790.7 459.4,1789.7 464.4,1785.0 459.4,1780.3 460.3,1779.3 466.5,1785.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1780)'>
+    gtdb:gtdb_representative
+  </text>
+  <g>
+    <rect x='470' y='1760' width='180' height='50' class='st9'/>
+    <polyline points='470,1780 470,1760 650,1760 650,1780' class='st2'/>
+    <g>
+      <text x='478' y='1795' class='st3 st4' dominant-baseline='middle'>
+        f
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1770' class='st5 st6 st7' dominant-baseline='middle'>
+        gtdb_representative
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1770' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,1855 465,1855'/>
+  <polygon points='460.3,1860.7 459.4,1859.7 464.4,1855.0 459.4,1850.3 460.3,1849.3 466.5,1855.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1850)'>
+    gtdb:gtdb_taxonomy
+  </text>
+  <g>
+    <rect x='470' y='1830' width='180' height='50' class='st9'/>
+    <polyline points='470,1850 470,1830 650,1830 650,1850' class='st2'/>
+    <g>
+      <text x='478' y='1865' class='st3 st4' dominant-baseline='middle'>
+        d__Bacteria;p__Bacillota;c__Bacilli;o__Bacillales;f__Bacillaceae_G;g__Bacillus_A;s__Bacillus_Aparanthracis
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1840' class='st5 st6 st7' dominant-baseline='middle'>
+        gtdb_taxonomy
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1840' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,1925 465,1925'/>
+  <polygon points='460.3,1930.7 459.4,1929.7 464.4,1925.0 459.4,1920.3 460.3,1919.3 466.5,1925.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1920)'>
+    gtdb:gtdb_type_designation_ncbi_taxa
+  </text>
+  <g>
+    <rect x='470' y='1900' width='180' height='50' class='st9'/>
+    <polyline points='470,1920 470,1900 650,1900 650,1920' class='st2'/>
+    <g>
+      <text x='478' y='1935' class='st3 st4' dominant-baseline='middle'>
+        not type material
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1910' class='st5 st6 st7' dominant-baseline='middle'>
+        gtdb_type_designation_ncbi_taxa
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1910' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,1995 465,1995'/>
+  <polygon points='460.3,2000.7 459.4,1999.7 464.4,1995.0 459.4,1990.3 460.3,1989.3 466.5,1995.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1990)'>
+    gtdb:gtdb_type_designation_ncbi_taxa_sources
+  </text>
+  <g>
+    <rect x='470' y='1970' width='180' height='50' class='st9'/>
+    <polyline points='470,1990 470,1970 650,1970 650,1990' class='st2'/>
+    <g>
+      <text x='478' y='2005' class='st3 st4' dominant-baseline='middle'>
+        none
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1980' class='st5 st6 st7' dominant-baseline='middle'>
+        gtdb_type_designation_ncbi_taxa_sources
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1980' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,2065 465,2065'/>
+  <polygon points='460.3,2070.7 459.4,2069.7 464.4,2065.0 459.4,2060.3 460.3,2059.3 466.5,2065.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 2060)'>
+    gtdb:gtdb_type_species_of_genus
+  </text>
+  <g>
+    <rect x='470' y='2040' width='180' height='50' class='st9'/>
+    <polyline points='470,2060 470,2040 650,2040 650,2060' class='st2'/>
+    <g>
+      <text x='478' y='2075' class='st3 st4' dominant-baseline='middle'>
+        f
+      </text>
+    </g>
+    <g>
+      <text x='478' y='2050' class='st5 st6 st7' dominant-baseline='middle'>
+        gtdb_type_species_of_genus
+      </text>
+    </g>
+    <g>
+      <text x='642' y='2050' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,2135 465,2135'/>
+  <polygon points='460.3,2140.7 459.4,2139.7 464.4,2135.0 459.4,2130.3 460.3,2129.3 466.5,2135.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 2130)'>
+    gtdb:l50_contigs
+  </text>
+  <g>
+    <rect x='470' y='2110' width='180' height='50' class='st9'/>
+    <polyline points='470,2130 470,2110 650,2110 650,2130' class='st2'/>
+    <g>
+      <text x='478' y='2145' class='st3 st4' dominant-baseline='middle'>
+        28
+      </text>
+    </g>
+    <g>
+      <text x='478' y='2120' class='st5 st6 st7' dominant-baseline='middle'>
+        l50_contigs
+      </text>
+    </g>
+    <g>
+      <text x='642' y='2120' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,2205 465,2205'/>
+  <polygon points='460.3,2210.7 459.4,2209.7 464.4,2205.0 459.4,2200.3 460.3,2199.3 466.5,2205.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 2200)'>
+    gtdb:l50_scaffolds
+  </text>
+  <g>
+    <rect x='470' y='2180' width='180' height='50' class='st9'/>
+    <polyline points='470,2200 470,2180 650,2180 650,2200' class='st2'/>
+    <g>
+      <text x='478' y='2215' class='st3 st4' dominant-baseline='middle'>
+        1
+      </text>
+    </g>
+    <g>
+      <text x='478' y='2190' class='st5 st6 st7' dominant-baseline='middle'>
+        l50_scaffolds
+      </text>
+    </g>
+    <g>
+      <text x='642' y='2190' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,2275 465,2275'/>
+  <polygon points='460.3,2280.7 459.4,2279.7 464.4,2275.0 459.4,2270.3 460.3,2269.3 466.5,2275.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 2270)'>
+    gtdb:longest_contig
+  </text>
+  <g>
+    <rect x='470' y='2250' width='180' height='50' class='st9'/>
+    <polyline points='470,2270 470,2250 650,2250 650,2270' class='st2'/>
+    <g>
+      <text x='478' y='2285' class='st3 st4' dominant-baseline='middle'>
+        182414
+      </text>
+    </g>
+    <g>
+      <text x='478' y='2260' class='st5 st6 st7' dominant-baseline='middle'>
+        longest_contig
+      </text>
+    </g>
+    <g>
+      <text x='642' y='2260' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,2345 465,2345'/>
+  <polygon points='460.3,2350.7 459.4,2349.7 464.4,2345.0 459.4,2340.3 460.3,2339.3 466.5,2345.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 2340)'>
+    gtdb:longest_scaffold
+  </text>
+  <g>
+    <rect x='470' y='2320' width='180' height='50' class='st9'/>
+    <polyline points='470,2340 470,2320 650,2320 650,2340' class='st2'/>
+    <g>
+      <text x='478' y='2355' class='st3 st4' dominant-baseline='middle'>
+        5269725
+      </text>
+    </g>
+    <g>
+      <text x='478' y='2330' class='st5 st6 st7' dominant-baseline='middle'>
+        longest_scaffold
+      </text>
+    </g>
+    <g>
+      <text x='642' y='2330' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,2415 465,2415'/>
+  <polygon points='460.3,2420.7 459.4,2419.7 464.4,2415.0 459.4,2410.3 460.3,2409.3 466.5,2415.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 2410)'>
+    gtdb:lsu_23s_contig_len
+  </text>
+  <g>
+    <rect x='470' y='2390' width='180' height='50' class='st9'/>
+    <polyline points='470,2410 470,2390 650,2390 650,2410' class='st2'/>
+    <g>
+      <text x='478' y='2425' class='st3 st4' dominant-baseline='middle'>
+        5269725
+      </text>
+    </g>
+    <g>
+      <text x='478' y='2400' class='st5 st6 st7' dominant-baseline='middle'>
+        lsu_23s_contig_len
+      </text>
+    </g>
+    <g>
+      <text x='642' y='2400' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,2485 465,2485'/>
+  <polygon points='460.3,2490.7 459.4,2489.7 464.4,2485.0 459.4,2480.3 460.3,2479.3 466.5,2485.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 2480)'>
+    gtdb:lsu_23s_count
+  </text>
+  <g>
+    <rect x='470' y='2460' width='180' height='50' class='st9'/>
+    <polyline points='470,2480 470,2460 650,2460 650,2480' class='st2'/>
+    <g>
+      <text x='478' y='2495' class='st3 st4' dominant-baseline='middle'>
+        7
+      </text>
+    </g>
+    <g>
+      <text x='478' y='2470' class='st5 st6 st7' dominant-baseline='middle'>
+        lsu_23s_count
+      </text>
+    </g>
+    <g>
+      <text x='642' y='2470' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,2555 465,2555'/>
+  <polygon points='460.3,2560.7 459.4,2559.7 464.4,2555.0 459.4,2550.3 460.3,2549.3 466.5,2555.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 2550)'>
+    gtdb:lsu_23s_length
+  </text>
+  <g>
+    <rect x='470' y='2530' width='180' height='50' class='st9'/>
+    <polyline points='470,2550 470,2530 650,2530 650,2550' class='st2'/>
+    <g>
+      <text x='478' y='2565' class='st3 st4' dominant-baseline='middle'>
+        2245
+      </text>
+    </g>
+    <g>
+      <text x='478' y='2540' class='st5 st6 st7' dominant-baseline='middle'>
+        lsu_23s_length
+      </text>
+    </g>
+    <g>
+      <text x='642' y='2540' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,2625 465,2625'/>
+  <polygon points='460.3,2630.7 459.4,2629.7 464.4,2625.0 459.4,2620.3 460.3,2619.3 466.5,2625.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 2620)'>
+    gtdb:lsu_23s_query_id
+  </text>
+  <g>
+    <rect x='470' y='2600' width='180' height='50' class='st9'/>
+    <polyline points='470,2620 470,2600 650,2600 650,2620' class='st2'/>
+    <g>
+      <text x='478' y='2635' class='st3 st4' dominant-baseline='middle'>
+        CM000714.1
+      </text>
+    </g>
+    <g>
+      <text x='478' y='2610' class='st5 st6 st7' dominant-baseline='middle'>
+        lsu_23s_query_id
+      </text>
+    </g>
+    <g>
+      <text x='642' y='2610' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,2695 465,2695'/>
+  <polygon points='460.3,2700.7 459.4,2699.7 464.4,2695.0 459.4,2690.3 460.3,2689.3 466.5,2695.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 2690)'>
+    gtdb:lsu_5s_contig_len
+  </text>
+  <g>
+    <rect x='470' y='2670' width='180' height='50' class='st9'/>
+    <polyline points='470,2690 470,2670 650,2670 650,2690' class='st2'/>
+    <g>
+      <text x='478' y='2705' class='st3 st4' dominant-baseline='middle'>
+        5269725
+      </text>
+    </g>
+    <g>
+      <text x='478' y='2680' class='st5 st6 st7' dominant-baseline='middle'>
+        lsu_5s_contig_len
+      </text>
+    </g>
+    <g>
+      <text x='642' y='2680' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,2765 465,2765'/>
+  <polygon points='460.3,2770.7 459.4,2769.7 464.4,2765.0 459.4,2760.3 460.3,2759.3 466.5,2765.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 2760)'>
+    gtdb:lsu_5s_count
+  </text>
+  <g>
+    <rect x='470' y='2740' width='180' height='50' class='st9'/>
+    <polyline points='470,2760 470,2740 650,2740 650,2760' class='st2'/>
+    <g>
+      <text x='478' y='2775' class='st3 st4' dominant-baseline='middle'>
+        3
+      </text>
+    </g>
+    <g>
+      <text x='478' y='2750' class='st5 st6 st7' dominant-baseline='middle'>
+        lsu_5s_count
+      </text>
+    </g>
+    <g>
+      <text x='642' y='2750' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,2835 465,2835'/>
+  <polygon points='460.3,2840.7 459.4,2839.7 464.4,2835.0 459.4,2830.3 460.3,2829.3 466.5,2835.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 2830)'>
+    gtdb:lsu_5s_length
+  </text>
+  <g>
+    <rect x='470' y='2810' width='180' height='50' class='st9'/>
+    <polyline points='470,2830 470,2810 650,2810 650,2830' class='st2'/>
+    <g>
+      <text x='478' y='2845' class='st3 st4' dominant-baseline='middle'>
+        116
+      </text>
+    </g>
+    <g>
+      <text x='478' y='2820' class='st5 st6 st7' dominant-baseline='middle'>
+        lsu_5s_length
+      </text>
+    </g>
+    <g>
+      <text x='642' y='2820' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,2905 465,2905'/>
+  <polygon points='460.3,2910.7 459.4,2909.7 464.4,2905.0 459.4,2900.3 460.3,2899.3 466.5,2905.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 2900)'>
+    gtdb:lsu_5s_query_id
+  </text>
+  <g>
+    <rect x='470' y='2880' width='180' height='50' class='st9'/>
+    <polyline points='470,2900 470,2880 650,2880 650,2900' class='st2'/>
+    <g>
+      <text x='478' y='2915' class='st3 st4' dominant-baseline='middle'>
+        CM000714.1
+      </text>
+    </g>
+    <g>
+      <text x='478' y='2890' class='st5 st6 st7' dominant-baseline='middle'>
+        lsu_5s_query_id
+      </text>
+    </g>
+    <g>
+      <text x='642' y='2890' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,2975 465,2975'/>
+  <polygon points='460.3,2980.7 459.4,2979.7 464.4,2975.0 459.4,2970.3 460.3,2969.3 466.5,2975.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 2970)'>
+    gtdb:lsu_silva_23s_blast_align_len
+  </text>
+  <g>
+    <rect x='470' y='2950' width='180' height='50' class='st9'/>
+    <polyline points='470,2970 470,2950 650,2950 650,2970' class='st2'/>
+    <g>
+      <text x='478' y='2985' class='st3 st4' dominant-baseline='middle'>
+        2244
+      </text>
+    </g>
+    <g>
+      <text x='478' y='2960' class='st5 st6 st7' dominant-baseline='middle'>
+        lsu_silva_23s_blast_align_len
+      </text>
+    </g>
+    <g>
+      <text x='642' y='2960' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,3045 465,3045'/>
+  <polygon points='460.3,3050.7 459.4,3049.7 464.4,3045.0 459.4,3040.3 460.3,3039.3 466.5,3045.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 3040)'>
+    gtdb:lsu_silva_23s_blast_bitscore
+  </text>
+  <g>
+    <rect x='470' y='3020' width='180' height='50' class='st9'/>
+    <polyline points='470,3040 470,3020 650,3020 650,3040' class='st2'/>
+    <g>
+      <text x='478' y='3055' class='st3 st4' dominant-baseline='middle'>
+        4145
+      </text>
+    </g>
+    <g>
+      <text x='478' y='3030' class='st5 st6 st7' dominant-baseline='middle'>
+        lsu_silva_23s_blast_bitscore
+      </text>
+    </g>
+    <g>
+      <text x='642' y='3030' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,3115 465,3115'/>
+  <polygon points='460.3,3120.7 459.4,3119.7 464.4,3115.0 459.4,3110.3 460.3,3109.3 466.5,3115.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 3110)'>
+    gtdb:lsu_silva_23s_blast_evalue
+  </text>
+  <g>
+    <rect x='470' y='3090' width='180' height='50' class='st9'/>
+    <polyline points='470,3110 470,3090 650,3090 650,3110' class='st2'/>
+    <g>
+      <text x='478' y='3125' class='st3 st4' dominant-baseline='middle'>
+        0
+      </text>
+    </g>
+    <g>
+      <text x='478' y='3100' class='st5 st6 st7' dominant-baseline='middle'>
+        lsu_silva_23s_blast_evalue
+      </text>
+    </g>
+    <g>
+      <text x='642' y='3100' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,3185 465,3185'/>
+  <polygon points='460.3,3190.7 459.4,3189.7 464.4,3185.0 459.4,3180.3 460.3,3179.3 466.5,3185.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 3180)'>
+    gtdb:lsu_silva_23s_blast_perc_identity
+  </text>
+  <g>
+    <rect x='470' y='3160' width='180' height='50' class='st9'/>
+    <polyline points='470,3180 470,3160 650,3160 650,3180' class='st2'/>
+    <g>
+      <text x='478' y='3195' class='st3 st4' dominant-baseline='middle'>
+        100
+      </text>
+    </g>
+    <g>
+      <text x='478' y='3170' class='st5 st6 st7' dominant-baseline='middle'>
+        lsu_silva_23s_blast_perc_identity
+      </text>
+    </g>
+    <g>
+      <text x='642' y='3170' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,3255 465,3255'/>
+  <polygon points='460.3,3260.7 459.4,3259.7 464.4,3255.0 459.4,3250.3 460.3,3249.3 466.5,3255.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 3250)'>
+    gtdb:lsu_silva_23s_blast_subject_id
+  </text>
+  <g>
+    <rect x='470' y='3230' width='180' height='50' class='st9'/>
+    <polyline points='470,3250 470,3230 650,3230 650,3250' class='st2'/>
+    <g>
+      <text x='478' y='3265' class='st3 st4' dominant-baseline='middle'>
+        CP023179.4713149.4716078
+      </text>
+    </g>
+    <g>
+      <text x='478' y='3240' class='st5 st6 st7' dominant-baseline='middle'>
+        lsu_silva_23s_blast_subject_id
+      </text>
+    </g>
+    <g>
+      <text x='642' y='3240' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,3325 465,3325'/>
+  <polygon points='460.3,3330.7 459.4,3329.7 464.4,3325.0 459.4,3320.3 460.3,3319.3 466.5,3325.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 3320)'>
+    gtdb:lsu_silva_23s_taxonomy
+  </text>
+  <g>
+    <rect x='470' y='3300' width='180' height='50' class='st9'/>
+    <polyline points='470,3320 470,3300 650,3300 650,3320' class='st2'/>
+    <g>
+      <text x='478' y='3335' class='st3 st4' dominant-baseline='middle'>
+        Bacteria;Firmicutes;Bacilli;Bacillales;Bacillaceae;Bacillus;Bacillus
+        cereus
+      </text>
+    </g>
+    <g>
+      <text x='478' y='3310' class='st5 st6 st7' dominant-baseline='middle'>
+        lsu_silva_23s_taxonomy
+      </text>
+    </g>
+    <g>
+      <text x='642' y='3310' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,3395 465,3395'/>
+  <polygon points='460.3,3400.7 459.4,3399.7 464.4,3395.0 459.4,3390.3 460.3,3389.3 466.5,3395.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 3390)'>
+    gtdb:mean_contig_length
+  </text>
+  <g>
+    <rect x='470' y='3370' width='180' height='50' class='st9'/>
+    <polyline points='470,3390 470,3370 650,3370 650,3390' class='st2'/>
+    <g>
+      <text x='478' y='3405' class='st3 st4' dominant-baseline='middle'>
+        21766
+      </text>
+    </g>
+    <g>
+      <text x='478' y='3380' class='st5 st6 st7' dominant-baseline='middle'>
+        mean_contig_length
+      </text>
+    </g>
+    <g>
+      <text x='642' y='3380' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,3465 465,3465'/>
+  <polygon points='460.3,3470.7 459.4,3469.7 464.4,3465.0 459.4,3460.3 460.3,3459.3 466.5,3465.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 3460)'>
+    gtdb:mean_scaffold_length
+  </text>
+  <g>
+    <rect x='470' y='3440' width='180' height='50' class='st9'/>
+    <polyline points='470,3460 470,3440 650,3440 650,3460' class='st2'/>
+    <g>
+      <text x='478' y='3475' class='st3 st4' dominant-baseline='middle'>
+        5269725
+      </text>
+    </g>
+    <g>
+      <text x='478' y='3450' class='st5 st6 st7' dominant-baseline='middle'>
+        mean_scaffold_length
+      </text>
+    </g>
+    <g>
+      <text x='642' y='3450' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,3535 465,3535'/>
+  <polygon points='460.3,3540.7 459.4,3539.7 464.4,3535.0 459.4,3530.3 460.3,3529.3 466.5,3535.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 3530)'>
+    gtdb:mimag_high_quality
+  </text>
+  <g>
+    <rect x='470' y='3510' width='180' height='50' class='st9'/>
+    <polyline points='470,3530 470,3510 650,3510 650,3530' class='st2'/>
+    <g>
+      <text x='478' y='3545' class='st3 st4' dominant-baseline='middle'>
+        f
+      </text>
+    </g>
+    <g>
+      <text x='478' y='3520' class='st5 st6 st7' dominant-baseline='middle'>
+        mimag_high_quality
+      </text>
+    </g>
+    <g>
+      <text x='642' y='3520' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,3605 465,3605'/>
+  <polygon points='460.3,3610.7 459.4,3609.7 464.4,3605.0 459.4,3600.3 460.3,3599.3 466.5,3605.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 3600)'>
+    gtdb:mimag_low_quality
+  </text>
+  <g>
+    <rect x='470' y='3580' width='180' height='50' class='st9'/>
+    <polyline points='470,3600 470,3580 650,3580 650,3600' class='st2'/>
+    <g>
+      <text x='478' y='3615' class='st3 st4' dominant-baseline='middle'>
+        f
+      </text>
+    </g>
+    <g>
+      <text x='478' y='3590' class='st5 st6 st7' dominant-baseline='middle'>
+        mimag_low_quality
+      </text>
+    </g>
+    <g>
+      <text x='642' y='3590' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,3675 465,3675'/>
+  <polygon points='460.3,3680.7 459.4,3679.7 464.4,3675.0 459.4,3670.3 460.3,3669.3 466.5,3675.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 3670)'>
+    gtdb:mimag_medium_quality
+  </text>
+  <g>
+    <rect x='470' y='3650' width='180' height='50' class='st9'/>
+    <polyline points='470,3670 470,3650 650,3650 650,3670' class='st2'/>
+    <g>
+      <text x='478' y='3685' class='st3 st4' dominant-baseline='middle'>
+        t
+      </text>
+    </g>
+    <g>
+      <text x='478' y='3660' class='st5 st6 st7' dominant-baseline='middle'>
+        mimag_medium_quality
+      </text>
+    </g>
+    <g>
+      <text x='642' y='3660' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,3745 465,3745'/>
+  <polygon points='460.3,3750.7 459.4,3749.7 464.4,3745.0 459.4,3740.3 460.3,3739.3 466.5,3745.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 3740)'>
+    gtdb:n50_contigs
+  </text>
+  <g>
+    <rect x='470' y='3720' width='180' height='50' class='st9'/>
+    <polyline points='470,3740 470,3720 650,3720 650,3740' class='st2'/>
+    <g>
+      <text x='478' y='3755' class='st3 st4' dominant-baseline='middle'>
+        53899
+      </text>
+    </g>
+    <g>
+      <text x='478' y='3730' class='st5 st6 st7' dominant-baseline='middle'>
+        n50_contigs
+      </text>
+    </g>
+    <g>
+      <text x='642' y='3730' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,3815 465,3815'/>
+  <polygon points='460.3,3820.7 459.4,3819.7 464.4,3815.0 459.4,3810.3 460.3,3809.3 466.5,3815.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 3810)'>
+    gtdb:n50_scaffolds
+  </text>
+  <g>
+    <rect x='470' y='3790' width='180' height='50' class='st9'/>
+    <polyline points='470,3810 470,3790 650,3790 650,3810' class='st2'/>
+    <g>
+      <text x='478' y='3825' class='st3 st4' dominant-baseline='middle'>
+        5269725
+      </text>
+    </g>
+    <g>
+      <text x='478' y='3800' class='st5 st6 st7' dominant-baseline='middle'>
+        n50_scaffolds
+      </text>
+    </g>
+    <g>
+      <text x='642' y='3800' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,3885 465,3885'/>
+  <polygon points='460.3,3890.7 459.4,3889.7 464.4,3885.0 459.4,3880.3 460.3,3879.3 466.5,3885.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 3880)'>
+    gtdb:ncbi_assembly_level
+  </text>
+  <g>
+    <rect x='470' y='3860' width='180' height='50' class='st9'/>
+    <polyline points='470,3880 470,3860 650,3860 650,3880' class='st2'/>
+    <g>
+      <text x='478' y='3895' class='st3 st4' dominant-baseline='middle'>
+        Chromosome
+      </text>
+    </g>
+    <g>
+      <text x='478' y='3870' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_assembly_level
+      </text>
+    </g>
+    <g>
+      <text x='642' y='3870' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,3955 465,3955'/>
+  <polygon points='460.3,3960.7 459.4,3959.7 464.4,3955.0 459.4,3950.3 460.3,3949.3 466.5,3955.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 3950)'>
+    gtdb:ncbi_assembly_name
+  </text>
+  <g>
+    <rect x='470' y='3930' width='180' height='50' class='st9'/>
+    <polyline points='470,3950 470,3930 650,3930 650,3950' class='st2'/>
+    <g>
+      <text x='478' y='3965' class='st3 st4' dominant-baseline='middle'>
+        ASM364v1
+      </text>
+    </g>
+    <g>
+      <text x='478' y='3940' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_assembly_name
+      </text>
+    </g>
+    <g>
+      <text x='642' y='3940' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,4025 465,4025'/>
+  <polygon points='460.3,4030.7 459.4,4029.7 464.4,4025.0 459.4,4020.3 460.3,4019.3 466.5,4025.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 4020)'>
+    gtdb:ncbi_assembly_type
+  </text>
+  <g>
+    <rect x='470' y='4000' width='180' height='50' class='st9'/>
+    <polyline points='470,4020 470,4000 650,4000 650,4020' class='st2'/>
+    <g>
+      <text x='478' y='4035' class='st3 st4' dominant-baseline='middle'>
+        na
+      </text>
+    </g>
+    <g>
+      <text x='478' y='4010' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_assembly_type
+      </text>
+    </g>
+    <g>
+      <text x='642' y='4010' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,4095 465,4095'/>
+  <polygon points='460.3,4100.7 459.4,4099.7 464.4,4095.0 459.4,4090.3 460.3,4089.3 466.5,4095.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 4090)'>
+    gtdb:ncbi_bioproject
+  </text>
+  <g>
+    <rect x='470' y='4070' width='180' height='50' class='st9'/>
+    <polyline points='470,4090 470,4070 650,4070 650,4090' class='st2'/>
+    <g>
+      <text x='478' y='4105' class='st3 st4' dominant-baseline='middle'>
+        PRJNA29657
+      </text>
+    </g>
+    <g>
+      <text x='478' y='4080' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_bioproject
+      </text>
+    </g>
+    <g>
+      <text x='642' y='4080' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,4165 465,4165'/>
+  <polygon points='460.3,4170.7 459.4,4169.7 464.4,4165.0 459.4,4160.3 460.3,4159.3 466.5,4165.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 4160)'>
+    gtdb:ncbi_biosample
+  </text>
+  <g>
+    <rect x='470' y='4140' width='180' height='50' class='st9'/>
+    <polyline points='470,4160 470,4140 650,4140 650,4160' class='st2'/>
+    <g>
+      <text x='478' y='4175' class='st3 st4' dominant-baseline='middle'>
+        SAMN00717290
+      </text>
+    </g>
+    <g>
+      <text x='478' y='4150' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_biosample
+      </text>
+    </g>
+    <g>
+      <text x='642' y='4150' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,4235 465,4235'/>
+  <polygon points='460.3,4240.7 459.4,4239.7 464.4,4235.0 459.4,4230.3 460.3,4229.3 466.5,4235.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 4230)'>
+    gtdb:ncbi_contig_count
+  </text>
+  <g>
+    <rect x='470' y='4210' width='180' height='50' class='st9'/>
+    <polyline points='470,4230 470,4210 650,4210 650,4230' class='st2'/>
+    <g>
+      <text x='478' y='4245' class='st3 st4' dominant-baseline='middle'>
+        241
+      </text>
+    </g>
+    <g>
+      <text x='478' y='4220' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_contig_count
+      </text>
+    </g>
+    <g>
+      <text x='642' y='4220' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,4305 465,4305'/>
+  <polygon points='460.3,4310.7 459.4,4309.7 464.4,4305.0 459.4,4300.3 460.3,4299.3 466.5,4305.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 4300)'>
+    gtdb:ncbi_contig_n50
+  </text>
+  <g>
+    <rect x='470' y='4280' width='180' height='50' class='st9'/>
+    <polyline points='470,4300 470,4280 650,4280 650,4300' class='st2'/>
+    <g>
+      <text x='478' y='4315' class='st3 st4' dominant-baseline='middle'>
+        53899
+      </text>
+    </g>
+    <g>
+      <text x='478' y='4290' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_contig_n50
+      </text>
+    </g>
+    <g>
+      <text x='642' y='4290' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,4375 465,4375'/>
+  <polygon points='460.3,4380.7 459.4,4379.7 464.4,4375.0 459.4,4370.3 460.3,4369.3 466.5,4375.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 4370)'>
+    gtdb:ncbi_country
+  </text>
+  <g>
+    <rect x='470' y='4350' width='180' height='50' class='st9'/>
+    <polyline points='470,4370 470,4350 650,4350 650,4370' class='st2'/>
+    <g>
+      <text x='478' y='4385' class='st3 st4' dominant-baseline='middle'>
+        none
+      </text>
+    </g>
+    <g>
+      <text x='478' y='4360' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_country
+      </text>
+    </g>
+    <g>
+      <text x='642' y='4360' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,4445 465,4445'/>
+  <polygon points='460.3,4450.7 459.4,4449.7 464.4,4445.0 459.4,4440.3 460.3,4439.3 466.5,4445.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 4440)'>
+    gtdb:ncbi_date
+  </text>
+  <g>
+    <rect x='470' y='4420' width='180' height='50' class='st9'/>
+    <polyline points='470,4440 470,4420 650,4420 650,4440' class='st2'/>
+    <g>
+      <text x='478' y='4455' class='st3 st4' dominant-baseline='middle'>
+        &quot;2009-05-29&quot;^^xsd:date
+      </text>
+    </g>
+    <g>
+      <text x='478' y='4430' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_date
+      </text>
+    </g>
+    <g>
+      <text x='642' y='4430' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Date
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,4515 465,4515'/>
+  <polygon points='460.3,4520.7 459.4,4519.7 464.4,4515.0 459.4,4510.3 460.3,4509.3 466.5,4515.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 4510)'>
+    gtdb:ncbi_genbank_assembly_accession
+  </text>
+  <g>
+    <rect x='470' y='4490' width='180' height='50' class='st9'/>
+    <polyline points='470,4510 470,4490 650,4490 650,4510' class='st2'/>
+    <g>
+      <text x='478' y='4525' class='st3 st4' dominant-baseline='middle'>
+        GCA_000003645.1
+      </text>
+    </g>
+    <g>
+      <text x='478' y='4500' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_genbank_assembly_accession
+      </text>
+    </g>
+    <g>
+      <text x='642' y='4500' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,4585 465,4585'/>
+  <polygon points='460.3,4590.7 459.4,4589.7 464.4,4585.0 459.4,4580.3 460.3,4579.3 466.5,4585.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 4580)'>
+    gtdb:ncbi_genome_category
+  </text>
+  <g>
+    <rect x='470' y='4560' width='180' height='50' class='st9'/>
+    <polyline points='470,4580 470,4560 650,4560 650,4580' class='st2'/>
+    <g>
+      <text x='478' y='4595' class='st3 st4' dominant-baseline='middle'>
+        none
+      </text>
+    </g>
+    <g>
+      <text x='478' y='4570' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_genome_category
+      </text>
+    </g>
+    <g>
+      <text x='642' y='4570' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,4655 465,4655'/>
+  <polygon points='460.3,4660.7 459.4,4659.7 464.4,4655.0 459.4,4650.3 460.3,4649.3 466.5,4655.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 4650)'>
+    gtdb:ncbi_genome_representation
+  </text>
+  <g>
+    <rect x='470' y='4630' width='180' height='50' class='st9'/>
+    <polyline points='470,4650 470,4630 650,4630 650,4650' class='st2'/>
+    <g>
+      <text x='478' y='4665' class='st3 st4' dominant-baseline='middle'>
+        full
+      </text>
+    </g>
+    <g>
+      <text x='478' y='4640' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_genome_representation
+      </text>
+    </g>
+    <g>
+      <text x='642' y='4640' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,4725 465,4725'/>
+  <polygon points='460.3,4730.7 459.4,4729.7 464.4,4725.0 459.4,4720.3 460.3,4719.3 466.5,4725.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 4720)'>
+    gtdb:ncbi_isolate
+  </text>
+  <g>
+    <rect x='470' y='4700' width='180' height='50' class='st9'/>
+    <polyline points='470,4720 470,4700 650,4700 650,4720' class='st2'/>
+    <g>
+      <text x='478' y='4735' class='st3 st4' dominant-baseline='middle'>
+        na
+      </text>
+    </g>
+    <g>
+      <text x='478' y='4710' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_isolate
+      </text>
+    </g>
+    <g>
+      <text x='642' y='4710' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,4795 465,4795'/>
+  <polygon points='460.3,4800.7 459.4,4799.7 464.4,4795.0 459.4,4790.3 460.3,4789.3 466.5,4795.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 4790)'>
+    gtdb:ncbi_isolation_source
+  </text>
+  <g>
+    <rect x='470' y='4770' width='180' height='50' class='st9'/>
+    <polyline points='470,4790 470,4770 650,4770 650,4790' class='st2'/>
+    <g>
+      <text x='478' y='4805' class='st3 st4' dominant-baseline='middle'>
+        none
+      </text>
+    </g>
+    <g>
+      <text x='478' y='4780' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_isolation_source
+      </text>
+    </g>
+    <g>
+      <text x='642' y='4780' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,4865 465,4865'/>
+  <polygon points='460.3,4870.7 459.4,4869.7 464.4,4865.0 459.4,4860.3 460.3,4859.3 466.5,4865.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 4860)'>
+    gtdb:ncbi_lat_lon
+  </text>
+  <g>
+    <rect x='470' y='4840' width='180' height='50' class='st9'/>
+    <polyline points='470,4860 470,4840 650,4840 650,4860' class='st2'/>
+    <g>
+      <text x='478' y='4875' class='st3 st4' dominant-baseline='middle'>
+        none
+      </text>
+    </g>
+    <g>
+      <text x='478' y='4850' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_lat_lon
+      </text>
+    </g>
+    <g>
+      <text x='642' y='4850' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,4935 465,4935'/>
+  <polygon points='460.3,4940.7 459.4,4939.7 464.4,4935.0 459.4,4930.3 460.3,4929.3 466.5,4935.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 4930)'>
+    gtdb:ncbi_molecule_count
+  </text>
+  <g>
+    <rect x='470' y='4910' width='180' height='50' class='st9'/>
+    <polyline points='470,4930 470,4910 650,4910 650,4930' class='st2'/>
+    <g>
+      <text x='478' y='4945' class='st3 st4' dominant-baseline='middle'>
+        1
+      </text>
+    </g>
+    <g>
+      <text x='478' y='4920' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_molecule_count
+      </text>
+    </g>
+    <g>
+      <text x='642' y='4920' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,5005 465,5005'/>
+  <polygon points='460.3,5010.7 459.4,5009.7 464.4,5005.0 459.4,5000.3 460.3,4999.3 466.5,5005.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 5000)'>
+    gtdb:ncbi_ncrna_count
+  </text>
+  <g>
+    <rect x='470' y='4980' width='180' height='50' class='st9'/>
+    <polyline points='470,5000 470,4980 650,4980 650,5000' class='st2'/>
+    <g>
+      <text x='478' y='5015' class='st3 st4' dominant-baseline='middle'>
+        0
+      </text>
+    </g>
+    <g>
+      <text x='478' y='4990' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_ncrna_count
+      </text>
+    </g>
+    <g>
+      <text x='642' y='4990' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,5075 465,5075'/>
+  <polygon points='460.3,5080.7 459.4,5079.7 464.4,5075.0 459.4,5070.3 460.3,5069.3 466.5,5075.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 5070)'>
+    gtdb:ncbi_organism_name
+  </text>
+  <g>
+    <rect x='470' y='5050' width='180' height='50' class='st9'/>
+    <polyline points='470,5070 470,5050 650,5050 650,5070' class='st2'/>
+    <g>
+      <text x='478' y='5085' class='st3 st4' dominant-baseline='middle'>
+        Bacillus cereus m1293
+      </text>
+    </g>
+    <g>
+      <text x='478' y='5060' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_organism_name
+      </text>
+    </g>
+    <g>
+      <text x='642' y='5060' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,5145 465,5145'/>
+  <polygon points='460.3,5150.7 459.4,5149.7 464.4,5145.0 459.4,5140.3 460.3,5139.3 466.5,5145.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 5140)'>
+    gtdb:ncbi_protein_count
+  </text>
+  <g>
+    <rect x='470' y='5120' width='180' height='50' class='st9'/>
+    <polyline points='470,5140 470,5120 650,5120 650,5140' class='st2'/>
+    <g>
+      <text x='478' y='5155' class='st3 st4' dominant-baseline='middle'>
+        none
+      </text>
+    </g>
+    <g>
+      <text x='478' y='5130' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_protein_count
+      </text>
+    </g>
+    <g>
+      <text x='642' y='5130' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,5215 465,5215'/>
+  <polygon points='460.3,5220.7 459.4,5219.7 464.4,5215.0 459.4,5210.3 460.3,5209.3 466.5,5215.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 5210)'>
+    gtdb:ncbi_refseq_category
+  </text>
+  <g>
+    <rect x='470' y='5190' width='180' height='50' class='st9'/>
+    <polyline points='470,5210 470,5190 650,5190 650,5210' class='st2'/>
+    <g>
+      <text x='478' y='5225' class='st3 st4' dominant-baseline='middle'>
+        na
+      </text>
+    </g>
+    <g>
+      <text x='478' y='5200' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_refseq_category
+      </text>
+    </g>
+    <g>
+      <text x='642' y='5200' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,5285 465,5285'/>
+  <polygon points='460.3,5290.7 459.4,5289.7 464.4,5285.0 459.4,5280.3 460.3,5279.3 466.5,5285.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 5280)'>
+    gtdb:ncbi_rrna_count
+  </text>
+  <g>
+    <rect x='470' y='5260' width='180' height='50' class='st9'/>
+    <polyline points='470,5280 470,5260 650,5260 650,5280' class='st2'/>
+    <g>
+      <text x='478' y='5295' class='st3 st4' dominant-baseline='middle'>
+        2
+      </text>
+    </g>
+    <g>
+      <text x='478' y='5270' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_rrna_count
+      </text>
+    </g>
+    <g>
+      <text x='642' y='5270' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,5355 465,5355'/>
+  <polygon points='460.3,5360.7 459.4,5359.7 464.4,5355.0 459.4,5350.3 460.3,5349.3 466.5,5355.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 5350)'>
+    gtdb:ncbi_scaffold_count
+  </text>
+  <g>
+    <rect x='470' y='5330' width='180' height='50' class='st9'/>
+    <polyline points='470,5350 470,5330 650,5330 650,5350' class='st2'/>
+    <g>
+      <text x='478' y='5365' class='st3 st4' dominant-baseline='middle'>
+        1
+      </text>
+    </g>
+    <g>
+      <text x='478' y='5340' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_scaffold_count
+      </text>
+    </g>
+    <g>
+      <text x='642' y='5340' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,5425 465,5425'/>
+  <polygon points='460.3,5430.7 459.4,5429.7 464.4,5425.0 459.4,5420.3 460.3,5419.3 466.5,5425.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 5420)'>
+    gtdb:ncbi_scaffold_l50
+  </text>
+  <g>
+    <rect x='470' y='5400' width='180' height='50' class='st9'/>
+    <polyline points='470,5420 470,5400 650,5400 650,5420' class='st2'/>
+    <g>
+      <text x='478' y='5435' class='st3 st4' dominant-baseline='middle'>
+        1
+      </text>
+    </g>
+    <g>
+      <text x='478' y='5410' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_scaffold_l50
+      </text>
+    </g>
+    <g>
+      <text x='642' y='5410' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,5495 465,5495'/>
+  <polygon points='460.3,5500.7 459.4,5499.7 464.4,5495.0 459.4,5490.3 460.3,5489.3 466.5,5495.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 5490)'>
+    gtdb:ncbi_scaffold_n50
+  </text>
+  <g>
+    <rect x='470' y='5470' width='180' height='50' class='st9'/>
+    <polyline points='470,5490 470,5470 650,5470 650,5490' class='st2'/>
+    <g>
+      <text x='478' y='5505' class='st3 st4' dominant-baseline='middle'>
+        5269725
+      </text>
+    </g>
+    <g>
+      <text x='478' y='5480' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_scaffold_n50
+      </text>
+    </g>
+    <g>
+      <text x='642' y='5480' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,5565 465,5565'/>
+  <polygon points='460.3,5570.7 459.4,5569.7 464.4,5565.0 459.4,5560.3 460.3,5559.3 466.5,5565.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 5560)'>
+    gtdb:ncbi_scaffold_n75
+  </text>
+  <g>
+    <rect x='470' y='5540' width='180' height='50' class='st9'/>
+    <polyline points='470,5560 470,5540 650,5540 650,5560' class='st2'/>
+    <g>
+      <text x='478' y='5575' class='st3 st4' dominant-baseline='middle'>
+        5269725
+      </text>
+    </g>
+    <g>
+      <text x='478' y='5550' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_scaffold_n75
+      </text>
+    </g>
+    <g>
+      <text x='642' y='5550' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,5635 465,5635'/>
+  <polygon points='460.3,5640.7 459.4,5639.7 464.4,5635.0 459.4,5630.3 460.3,5629.3 466.5,5635.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 5630)'>
+    gtdb:ncbi_scaffold_n90
+  </text>
+  <g>
+    <rect x='470' y='5610' width='180' height='50' class='st9'/>
+    <polyline points='470,5630 470,5610 650,5610 650,5630' class='st2'/>
+    <g>
+      <text x='478' y='5645' class='st3 st4' dominant-baseline='middle'>
+        5269725
+      </text>
+    </g>
+    <g>
+      <text x='478' y='5620' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_scaffold_n90
+      </text>
+    </g>
+    <g>
+      <text x='642' y='5620' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,5705 465,5705'/>
+  <polygon points='460.3,5710.7 459.4,5709.7 464.4,5705.0 459.4,5700.3 460.3,5699.3 466.5,5705.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 5700)'>
+    gtdb:ncbi_seq_rel_date
+  </text>
+  <g>
+    <rect x='470' y='5680' width='180' height='50' class='st9'/>
+    <polyline points='470,5700 470,5680 650,5680 650,5700' class='st2'/>
+    <g>
+      <text x='478' y='5715' class='st3 st4' dominant-baseline='middle'>
+        &quot;2009-05-29&quot;^^xsd:date
+      </text>
+    </g>
+    <g>
+      <text x='478' y='5690' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_seq_rel_date
+      </text>
+    </g>
+    <g>
+      <text x='642' y='5690' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Date
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,5775 465,5775'/>
+  <polygon points='460.3,5780.7 459.4,5779.7 464.4,5775.0 459.4,5770.3 460.3,5769.3 466.5,5775.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 5770)'>
+    gtdb:ncbi_spanned_gaps
+  </text>
+  <g>
+    <rect x='470' y='5750' width='180' height='50' class='st9'/>
+    <polyline points='470,5770 470,5750 650,5750 650,5770' class='st2'/>
+    <g>
+      <text x='478' y='5785' class='st3 st4' dominant-baseline='middle'>
+        241
+      </text>
+    </g>
+    <g>
+      <text x='478' y='5760' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_spanned_gaps
+      </text>
+    </g>
+    <g>
+      <text x='642' y='5760' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,5845 465,5845'/>
+  <polygon points='460.3,5850.7 459.4,5849.7 464.4,5845.0 459.4,5840.3 460.3,5839.3 466.5,5845.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 5840)'>
+    gtdb:ncbi_species_taxid
+  </text>
+  <g>
+    <rect x='470' y='5820' width='180' height='50' class='st9'/>
+    <polyline points='470,5840 470,5820 650,5820 650,5840' class='st2'/>
+    <g>
+      <text x='478' y='5855' class='st3 st4' dominant-baseline='middle'>
+        1396
+      </text>
+    </g>
+    <g>
+      <text x='478' y='5830' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_species_taxid
+      </text>
+    </g>
+    <g>
+      <text x='642' y='5830' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,5915 465,5915'/>
+  <polygon points='460.3,5920.7 459.4,5919.7 464.4,5915.0 459.4,5910.3 460.3,5909.3 466.5,5915.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 5910)'>
+    gtdb:ncbi_ssu_count
+  </text>
+  <g>
+    <rect x='470' y='5890' width='180' height='50' class='st9'/>
+    <polyline points='470,5910 470,5890 650,5890 650,5910' class='st2'/>
+    <g>
+      <text x='478' y='5925' class='st3 st4' dominant-baseline='middle'>
+        0
+      </text>
+    </g>
+    <g>
+      <text x='478' y='5900' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_ssu_count
+      </text>
+    </g>
+    <g>
+      <text x='642' y='5900' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,5985 465,5985'/>
+  <polygon points='460.3,5990.7 459.4,5989.7 464.4,5985.0 459.4,5980.3 460.3,5979.3 466.5,5985.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 5980)'>
+    gtdb:ncbi_strain_identifiers
+  </text>
+  <g>
+    <rect x='470' y='5960' width='180' height='50' class='st9'/>
+    <polyline points='470,5980 470,5960 650,5960 650,5980' class='st2'/>
+    <g>
+      <text x='478' y='5995' class='st3 st4' dominant-baseline='middle'>
+        m1293
+      </text>
+    </g>
+    <g>
+      <text x='478' y='5970' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_strain_identifiers
+      </text>
+    </g>
+    <g>
+      <text x='642' y='5970' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,6055 465,6055'/>
+  <polygon points='460.3,6060.7 459.4,6059.7 464.4,6055.0 459.4,6050.3 460.3,6049.3 466.5,6055.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 6050)'>
+    gtdb:ncbi_submitter
+  </text>
+  <g>
+    <rect x='470' y='6030' width='180' height='50' class='st9'/>
+    <polyline points='470,6050 470,6030 650,6030 650,6050' class='st2'/>
+    <g>
+      <text x='478' y='6065' class='st3 st4' dominant-baseline='middle'>
+        Naval Medical Research Center
+      </text>
+    </g>
+    <g>
+      <text x='478' y='6040' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_submitter
+      </text>
+    </g>
+    <g>
+      <text x='642' y='6040' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,6125 465,6125'/>
+  <polygon points='460.3,6130.7 459.4,6129.7 464.4,6125.0 459.4,6120.3 460.3,6119.3 466.5,6125.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 6120)'>
+    gtdb:ncbi_taxid
+  </text>
+  <g>
+    <rect x='470' y='6100' width='180' height='50' class='st9'/>
+    <polyline points='470,6120 470,6100 650,6100 650,6120' class='st2'/>
+    <g>
+      <text x='478' y='6135' class='st3 st4' dominant-baseline='middle'>
+        526973
+      </text>
+    </g>
+    <g>
+      <text x='478' y='6110' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_taxid
+      </text>
+    </g>
+    <g>
+      <text x='642' y='6110' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,6195 465,6195'/>
+  <polygon points='460.3,6200.7 459.4,6199.7 464.4,6195.0 459.4,6190.3 460.3,6189.3 466.5,6195.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 6190)'>
+    gtdb:ncbi_taxonomy_string
+  </text>
+  <g>
+    <rect x='470' y='6170' width='180' height='50' class='st9'/>
+    <polyline points='470,6190 470,6170 650,6170 650,6190' class='st2'/>
+    <g>
+      <text x='478' y='6205' class='st3 st4' dominant-baseline='middle'>
+        d__Bacteria;p__Bacillota;c__Bacilli;o__Bacillales;f__Bacillaceae;g__Bacillus;s__Bacillus cereus
+      </text>
+    </g>
+    <g>
+      <text x='478' y='6180' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_taxonomy_string
+      </text>
+    </g>
+    <g>
+      <text x='642' y='6180' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,6265 465,6265'/>
+  <polygon points='460.3,6270.7 459.4,6269.7 464.4,6265.0 459.4,6260.3 460.3,6259.3 466.5,6265.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 6260)'>
+    gtdb:ncbi_taxonomy_unfiltered
+  </text>
+  <g>
+    <rect x='470' y='6240' width='180' height='50' class='st9'/>
+    <polyline points='470,6260 470,6240 650,6240 650,6260' class='st2'/>
+    <g>
+      <text x='478' y='6275' class='st3 st4' dominant-baseline='middle'>
+        d__Bacteria;x__Terrabacteria
+        group;p__Bacillota;c__Bacilli;o__Bacillales;f__Bacillaceae;g__Bacillus;x__Bacillus cereus group;s__Bacillus cereus;x__Bacillus cereus m1293
+      </text>
+    </g>
+    <g>
+      <text x='478' y='6250' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_taxonomy_unfiltered
+      </text>
+    </g>
+    <g>
+      <text x='642' y='6250' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,6335 465,6335'/>
+  <polygon points='460.3,6340.7 459.4,6339.7 464.4,6335.0 459.4,6330.3 460.3,6329.3 466.5,6335.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 6330)'>
+    gtdb:ncbi_total_gap_length
+  </text>
+  <g>
+    <rect x='470' y='6310' width='180' height='50' class='st9'/>
+    <polyline points='470,6330 470,6310 650,6310 650,6330' class='st2'/>
+    <g>
+      <text x='478' y='6345' class='st3 st4' dominant-baseline='middle'>
+        24100
+      </text>
+    </g>
+    <g>
+      <text x='478' y='6320' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_total_gap_length
+      </text>
+    </g>
+    <g>
+      <text x='642' y='6320' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,6405 465,6405'/>
+  <polygon points='460.3,6410.7 459.4,6409.7 464.4,6405.0 459.4,6400.3 460.3,6399.3 466.5,6405.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 6400)'>
+    gtdb:ncbi_total_length
+  </text>
+  <g>
+    <rect x='470' y='6380' width='180' height='50' class='st9'/>
+    <polyline points='470,6400 470,6380 650,6380 650,6400' class='st2'/>
+    <g>
+      <text x='478' y='6415' class='st3 st4' dominant-baseline='middle'>
+        5269725
+      </text>
+    </g>
+    <g>
+      <text x='478' y='6390' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_total_length
+      </text>
+    </g>
+    <g>
+      <text x='642' y='6390' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,6475 465,6475'/>
+  <polygon points='460.3,6480.7 459.4,6479.7 464.4,6475.0 459.4,6470.3 460.3,6469.3 466.5,6475.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 6470)'>
+    gtdb:ncbi_translation_table
+  </text>
+  <g>
+    <rect x='470' y='6450' width='180' height='50' class='st9'/>
+    <polyline points='470,6470 470,6450 650,6450 650,6470' class='st2'/>
+    <g>
+      <text x='478' y='6485' class='st3 st4' dominant-baseline='middle'>
+        11
+      </text>
+    </g>
+    <g>
+      <text x='478' y='6460' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_translation_table
+      </text>
+    </g>
+    <g>
+      <text x='642' y='6460' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,6545 465,6545'/>
+  <polygon points='460.3,6550.7 459.4,6549.7 464.4,6545.0 459.4,6540.3 460.3,6539.3 466.5,6545.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 6540)'>
+    gtdb:ncbi_trna_count
+  </text>
+  <g>
+    <rect x='470' y='6520' width='180' height='50' class='st9'/>
+    <polyline points='470,6540 470,6520 650,6520 650,6540' class='st2'/>
+    <g>
+      <text x='478' y='6555' class='st3 st4' dominant-baseline='middle'>
+        72
+      </text>
+    </g>
+    <g>
+      <text x='478' y='6530' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_trna_count
+      </text>
+    </g>
+    <g>
+      <text x='642' y='6530' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,6615 465,6615'/>
+  <polygon points='460.3,6620.7 459.4,6619.7 464.4,6615.0 459.4,6610.3 460.3,6609.3 466.5,6615.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 6610)'>
+    gtdb:ncbi_type_material_designation
+  </text>
+  <g>
+    <rect x='470' y='6590' width='180' height='50' class='st9'/>
+    <polyline points='470,6610 470,6590 650,6590 650,6610' class='st2'/>
+    <g>
+      <text x='478' y='6625' class='st3 st4' dominant-baseline='middle'>
+        na
+      </text>
+    </g>
+    <g>
+      <text x='478' y='6600' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_type_material_designation
+      </text>
+    </g>
+    <g>
+      <text x='642' y='6600' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,6685 465,6685'/>
+  <polygon points='460.3,6690.7 459.4,6689.7 464.4,6685.0 459.4,6680.3 460.3,6679.3 466.5,6685.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 6680)'>
+    gtdb:ncbi_ungapped_length
+  </text>
+  <g>
+    <rect x='470' y='6660' width='180' height='50' class='st9'/>
+    <polyline points='470,6680 470,6660 650,6660 650,6680' class='st2'/>
+    <g>
+      <text x='478' y='6695' class='st3 st4' dominant-baseline='middle'>
+        5245625
+      </text>
+    </g>
+    <g>
+      <text x='478' y='6670' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_ungapped_length
+      </text>
+    </g>
+    <g>
+      <text x='642' y='6670' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,6755 465,6755'/>
+  <polygon points='460.3,6760.7 459.4,6759.7 464.4,6755.0 459.4,6750.3 460.3,6749.3 466.5,6755.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 6750)'>
+    gtdb:ncbi_unspanned_gaps
+  </text>
+  <g>
+    <rect x='470' y='6730' width='180' height='50' class='st9'/>
+    <polyline points='470,6750 470,6730 650,6730 650,6750' class='st2'/>
+    <g>
+      <text x='478' y='6765' class='st3 st4' dominant-baseline='middle'>
+        0
+      </text>
+    </g>
+    <g>
+      <text x='478' y='6740' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_unspanned_gaps
+      </text>
+    </g>
+    <g>
+      <text x='642' y='6740' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,6825 465,6825'/>
+  <polygon points='460.3,6830.7 459.4,6829.7 464.4,6825.0 459.4,6820.3 460.3,6819.3 466.5,6825.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 6820)'>
+    gtdb:ncbi_wgs_master
+  </text>
+  <g>
+    <rect x='470' y='6800' width='180' height='50' class='st9'/>
+    <polyline points='470,6820 470,6800 650,6800 650,6820' class='st2'/>
+    <g>
+      <text x='478' y='6835' class='st3 st4' dominant-baseline='middle'>
+        ACLS00000000.1
+      </text>
+    </g>
+    <g>
+      <text x='478' y='6810' class='st5 st6 st7' dominant-baseline='middle'>
+        ncbi_wgs_master
+      </text>
+    </g>
+    <g>
+      <text x='642' y='6810' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,6895 465,6895'/>
+  <polygon points='460.3,6900.7 459.4,6899.7 464.4,6895.0 459.4,6890.3 460.3,6889.3 466.5,6895.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 6890)'>
+    gtdb:protein_count
+  </text>
+  <g>
+    <rect x='470' y='6870' width='180' height='50' class='st9'/>
+    <polyline points='470,6890 470,6870 650,6870 650,6890' class='st2'/>
+    <g>
+      <text x='478' y='6905' class='st3 st4' dominant-baseline='middle'>
+        5337
+      </text>
+    </g>
+    <g>
+      <text x='478' y='6880' class='st5 st6 st7' dominant-baseline='middle'>
+        protein_count
+      </text>
+    </g>
+    <g>
+      <text x='642' y='6880' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,6965 465,6965'/>
+  <polygon points='460.3,6970.7 459.4,6969.7 464.4,6965.0 459.4,6960.3 460.3,6959.3 466.5,6965.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 6960)'>
+    gtdb:scaffold_count
+  </text>
+  <g>
+    <rect x='470' y='6940' width='180' height='50' class='st9'/>
+    <polyline points='470,6960 470,6940 650,6940 650,6960' class='st2'/>
+    <g>
+      <text x='478' y='6975' class='st3 st4' dominant-baseline='middle'>
+        1
+      </text>
+    </g>
+    <g>
+      <text x='478' y='6950' class='st5 st6 st7' dominant-baseline='middle'>
+        scaffold_count
+      </text>
+    </g>
+    <g>
+      <text x='642' y='6950' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,7035 465,7035'/>
+  <polygon points='460.3,7040.7 459.4,7039.7 464.4,7035.0 459.4,7030.3 460.3,7029.3 466.5,7035.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 7030)'>
+    gtdb:ssu_contig_len
+  </text>
+  <g>
+    <rect x='470' y='7010' width='180' height='50' class='st9'/>
+    <polyline points='470,7030 470,7010 650,7010 650,7030' class='st2'/>
+    <g>
+      <text x='478' y='7045' class='st3 st4' dominant-baseline='middle'>
+        5269725
+      </text>
+    </g>
+    <g>
+      <text x='478' y='7020' class='st5 st6 st7' dominant-baseline='middle'>
+        ssu_contig_len
+      </text>
+    </g>
+    <g>
+      <text x='642' y='7020' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,7105 465,7105'/>
+  <polygon points='460.3,7110.7 459.4,7109.7 464.4,7105.0 459.4,7100.3 460.3,7099.3 466.5,7105.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 7100)'>
+    gtdb:ssu_count
+  </text>
+  <g>
+    <rect x='470' y='7080' width='180' height='50' class='st9'/>
+    <polyline points='470,7100 470,7080 650,7080 650,7100' class='st2'/>
+    <g>
+      <text x='478' y='7115' class='st3 st4' dominant-baseline='middle'>
+        5
+      </text>
+    </g>
+    <g>
+      <text x='478' y='7090' class='st5 st6 st7' dominant-baseline='middle'>
+        ssu_count
+      </text>
+    </g>
+    <g>
+      <text x='642' y='7090' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,7175 465,7175'/>
+  <polygon points='460.3,7180.7 459.4,7179.7 464.4,7175.0 459.4,7170.3 460.3,7169.3 466.5,7175.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 7170)'>
+    gtdb:ssu_gg_blast_align_len
+  </text>
+  <g>
+    <rect x='470' y='7150' width='180' height='50' class='st9'/>
+    <polyline points='470,7170 470,7150 650,7150 650,7170' class='st2'/>
+    <g>
+      <text x='478' y='7185' class='st3 st4' dominant-baseline='middle'>
+        none
+      </text>
+    </g>
+    <g>
+      <text x='478' y='7160' class='st5 st6 st7' dominant-baseline='middle'>
+        ssu_gg_blast_align_len
+      </text>
+    </g>
+    <g>
+      <text x='642' y='7160' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,7245 465,7245'/>
+  <polygon points='460.3,7250.7 459.4,7249.7 464.4,7245.0 459.4,7240.3 460.3,7239.3 466.5,7245.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 7240)'>
+    gtdb:ssu_gg_blast_bitscore
+  </text>
+  <g>
+    <rect x='470' y='7220' width='180' height='50' class='st9'/>
+    <polyline points='470,7240 470,7220 650,7220 650,7240' class='st2'/>
+    <g>
+      <text x='478' y='7255' class='st3 st4' dominant-baseline='middle'>
+        none
+      </text>
+    </g>
+    <g>
+      <text x='478' y='7230' class='st5 st6 st7' dominant-baseline='middle'>
+        ssu_gg_blast_bitscore
+      </text>
+    </g>
+    <g>
+      <text x='642' y='7230' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,7315 465,7315'/>
+  <polygon points='460.3,7320.7 459.4,7319.7 464.4,7315.0 459.4,7310.3 460.3,7309.3 466.5,7315.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 7310)'>
+    gtdb:ssu_gg_blast_evalue
+  </text>
+  <g>
+    <rect x='470' y='7290' width='180' height='50' class='st9'/>
+    <polyline points='470,7310 470,7290 650,7290 650,7310' class='st2'/>
+    <g>
+      <text x='478' y='7325' class='st3 st4' dominant-baseline='middle'>
+        none
+      </text>
+    </g>
+    <g>
+      <text x='478' y='7300' class='st5 st6 st7' dominant-baseline='middle'>
+        ssu_gg_blast_evalue
+      </text>
+    </g>
+    <g>
+      <text x='642' y='7300' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,7385 465,7385'/>
+  <polygon points='460.3,7390.7 459.4,7389.7 464.4,7385.0 459.4,7380.3 460.3,7379.3 466.5,7385.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 7380)'>
+    gtdb:ssu_gg_blast_perc_identity
+  </text>
+  <g>
+    <rect x='470' y='7360' width='180' height='50' class='st9'/>
+    <polyline points='470,7380 470,7360 650,7360 650,7380' class='st2'/>
+    <g>
+      <text x='478' y='7395' class='st3 st4' dominant-baseline='middle'>
+        none
+      </text>
+    </g>
+    <g>
+      <text x='478' y='7370' class='st5 st6 st7' dominant-baseline='middle'>
+        ssu_gg_blast_perc_identity
+      </text>
+    </g>
+    <g>
+      <text x='642' y='7370' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,7455 465,7455'/>
+  <polygon points='460.3,7460.7 459.4,7459.7 464.4,7455.0 459.4,7450.3 460.3,7449.3 466.5,7455.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 7450)'>
+    gtdb:ssu_gg_blast_subject_id
+  </text>
+  <g>
+    <rect x='470' y='7430' width='180' height='50' class='st9'/>
+    <polyline points='470,7450 470,7430 650,7430 650,7450' class='st2'/>
+    <g>
+      <text x='478' y='7465' class='st3 st4' dominant-baseline='middle'>
+        none
+      </text>
+    </g>
+    <g>
+      <text x='478' y='7440' class='st5 st6 st7' dominant-baseline='middle'>
+        ssu_gg_blast_subject_id
+      </text>
+    </g>
+    <g>
+      <text x='642' y='7440' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,7525 465,7525'/>
+  <polygon points='460.3,7530.7 459.4,7529.7 464.4,7525.0 459.4,7520.3 460.3,7519.3 466.5,7525.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 7520)'>
+    gtdb:ssu_gg_taxonomy
+  </text>
+  <g>
+    <rect x='470' y='7500' width='180' height='50' class='st9'/>
+    <polyline points='470,7520 470,7500 650,7500 650,7520' class='st2'/>
+    <g>
+      <text x='478' y='7535' class='st3 st4' dominant-baseline='middle'>
+        none
+      </text>
+    </g>
+    <g>
+      <text x='478' y='7510' class='st5 st6 st7' dominant-baseline='middle'>
+        ssu_gg_taxonomy
+      </text>
+    </g>
+    <g>
+      <text x='642' y='7510' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,7595 465,7595'/>
+  <polygon points='460.3,7600.7 459.4,7599.7 464.4,7595.0 459.4,7590.3 460.3,7589.3 466.5,7595.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 7590)'>
+    gtdb:ssu_length
+  </text>
+  <g>
+    <rect x='470' y='7570' width='180' height='50' class='st9'/>
+    <polyline points='470,7590 470,7570 650,7570 650,7590' class='st2'/>
+    <g>
+      <text x='478' y='7605' class='st3 st4' dominant-baseline='middle'>
+        849
+      </text>
+    </g>
+    <g>
+      <text x='478' y='7580' class='st5 st6 st7' dominant-baseline='middle'>
+        ssu_length
+      </text>
+    </g>
+    <g>
+      <text x='642' y='7580' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,7665 465,7665'/>
+  <polygon points='460.3,7670.7 459.4,7669.7 464.4,7665.0 459.4,7660.3 460.3,7659.3 466.5,7665.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 7660)'>
+    gtdb:ssu_query_id
+  </text>
+  <g>
+    <rect x='470' y='7640' width='180' height='50' class='st9'/>
+    <polyline points='470,7660 470,7640 650,7640 650,7660' class='st2'/>
+    <g>
+      <text x='478' y='7675' class='st3 st4' dominant-baseline='middle'>
+        CM000715.1
+      </text>
+    </g>
+    <g>
+      <text x='478' y='7650' class='st5 st6 st7' dominant-baseline='middle'>
+        ssu_query_id
+      </text>
+    </g>
+    <g>
+      <text x='642' y='7650' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,7735 465,7735'/>
+  <polygon points='460.3,7740.7 459.4,7739.7 464.4,7735.0 459.4,7730.3 460.3,7729.3 466.5,7735.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 7730)'>
+    gtdb:ssu_silva_blast_align_len
+  </text>
+  <g>
+    <rect x='470' y='7710' width='180' height='50' class='st9'/>
+    <polyline points='470,7730 470,7710 650,7710 650,7730' class='st2'/>
+    <g>
+      <text x='478' y='7745' class='st3 st4' dominant-baseline='middle'>
+        849
+      </text>
+    </g>
+    <g>
+      <text x='478' y='7720' class='st5 st6 st7' dominant-baseline='middle'>
+        ssu_silva_blast_align_len
+      </text>
+    </g>
+    <g>
+      <text x='642' y='7720' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,7805 465,7805'/>
+  <polygon points='460.3,7810.7 459.4,7809.7 464.4,7805.0 459.4,7800.3 460.3,7799.3 466.5,7805.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 7800)'>
+    gtdb:ssu_silva_blast_bitscore
+  </text>
+  <g>
+    <rect x='470' y='7780' width='180' height='50' class='st9'/>
+    <polyline points='470,7800 470,7780 650,7780 650,7800' class='st2'/>
+    <g>
+      <text x='478' y='7815' class='st3 st4' dominant-baseline='middle'>
+        1568
+      </text>
+    </g>
+    <g>
+      <text x='478' y='7790' class='st5 st6 st7' dominant-baseline='middle'>
+        ssu_silva_blast_bitscore
+      </text>
+    </g>
+    <g>
+      <text x='642' y='7790' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,7875 465,7875'/>
+  <polygon points='460.3,7880.7 459.4,7879.7 464.4,7875.0 459.4,7870.3 460.3,7869.3 466.5,7875.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 7870)'>
+    gtdb:ssu_silva_blast_evalue
+  </text>
+  <g>
+    <rect x='470' y='7850' width='180' height='50' class='st9'/>
+    <polyline points='470,7870 470,7850 650,7850 650,7870' class='st2'/>
+    <g>
+      <text x='478' y='7885' class='st3 st4' dominant-baseline='middle'>
+        0
+      </text>
+    </g>
+    <g>
+      <text x='478' y='7860' class='st5 st6 st7' dominant-baseline='middle'>
+        ssu_silva_blast_evalue
+      </text>
+    </g>
+    <g>
+      <text x='642' y='7860' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,7945 465,7945'/>
+  <polygon points='460.3,7950.7 459.4,7949.7 464.4,7945.0 459.4,7940.3 460.3,7939.3 466.5,7945.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 7940)'>
+    gtdb:ssu_silva_blast_perc_identity
+  </text>
+  <g>
+    <rect x='470' y='7920' width='180' height='50' class='st9'/>
+    <polyline points='470,7940 470,7920 650,7920 650,7940' class='st2'/>
+    <g>
+      <text x='478' y='7955' class='st3 st4' dominant-baseline='middle'>
+        100
+      </text>
+    </g>
+    <g>
+      <text x='478' y='7930' class='st5 st6 st7' dominant-baseline='middle'>
+        ssu_silva_blast_perc_identity
+      </text>
+    </g>
+    <g>
+      <text x='642' y='7930' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,8015 465,8015'/>
+  <polygon points='460.3,8020.7 459.4,8019.7 464.4,8015.0 459.4,8010.3 460.3,8009.3 466.5,8015.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 8010)'>
+    gtdb:ssu_silva_blast_subject_id
+  </text>
+  <g>
+    <rect x='470' y='7990' width='180' height='50' class='st9'/>
+    <polyline points='470,8010 470,7990 650,7990 650,8010' class='st2'/>
+    <g>
+      <text x='478' y='8025' class='st3 st4' dominant-baseline='middle'>
+        CP023179.299511.301065
+      </text>
+    </g>
+    <g>
+      <text x='478' y='8000' class='st5 st6 st7' dominant-baseline='middle'>
+        ssu_silva_blast_subject_id
+      </text>
+    </g>
+    <g>
+      <text x='642' y='8000' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,8085 465,8085'/>
+  <polygon points='460.3,8090.7 459.4,8089.7 464.4,8085.0 459.4,8080.3 460.3,8079.3 466.5,8085.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 8080)'>
+    gtdb:ssu_silva_taxonomy
+  </text>
+  <g>
+    <rect x='470' y='8060' width='180' height='50' class='st9'/>
+    <polyline points='470,8080 470,8060 650,8060 650,8080' class='st2'/>
+    <g>
+      <text x='478' y='8095' class='st3 st4' dominant-baseline='middle'>
+        Bacteria;Firmicutes;Bacilli;Bacillales;Bacillaceae;Bacillus;Bacillus
+        cereus
+      </text>
+    </g>
+    <g>
+      <text x='478' y='8070' class='st5 st6 st7' dominant-baseline='middle'>
+        ssu_silva_taxonomy
+      </text>
+    </g>
+    <g>
+      <text x='642' y='8070' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,8155 465,8155'/>
+  <polygon points='460.3,8160.7 459.4,8159.7 464.4,8155.0 459.4,8150.3 460.3,8149.3 466.5,8155.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 8150)'>
+    gtdb:total_gap_length
+  </text>
+  <g>
+    <rect x='470' y='8130' width='180' height='50' class='st9'/>
+    <polyline points='470,8150 470,8130 650,8130 650,8150' class='st2'/>
+    <g>
+      <text x='478' y='8165' class='st3 st4' dominant-baseline='middle'>
+        24100
+      </text>
+    </g>
+    <g>
+      <text x='478' y='8140' class='st5 st6 st7' dominant-baseline='middle'>
+        total_gap_length
+      </text>
+    </g>
+    <g>
+      <text x='642' y='8140' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,8225 465,8225'/>
+  <polygon points='460.3,8230.7 459.4,8229.7 464.4,8225.0 459.4,8220.3 460.3,8219.3 466.5,8225.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 8220)'>
+    gtdb:trna_aa_count
+  </text>
+  <g>
+    <rect x='470' y='8200' width='180' height='50' class='st9'/>
+    <polyline points='470,8220 470,8200 650,8200 650,8220' class='st2'/>
+    <g>
+      <text x='478' y='8235' class='st3 st4' dominant-baseline='middle'>
+        19
+      </text>
+    </g>
+    <g>
+      <text x='478' y='8210' class='st5 st6 st7' dominant-baseline='middle'>
+        trna_aa_count
+      </text>
+    </g>
+    <g>
+      <text x='642' y='8210' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,8295 465,8295'/>
+  <polygon points='460.3,8300.7 459.4,8299.7 464.4,8295.0 459.4,8290.3 460.3,8289.3 466.5,8295.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 8290)'>
+    gtdb:trna_count
+  </text>
+  <g>
+    <rect x='470' y='8270' width='180' height='50' class='st9'/>
+    <polyline points='470,8290 470,8270 650,8270 650,8290' class='st2'/>
+    <g>
+      <text x='478' y='8305' class='st3 st4' dominant-baseline='middle'>
+        72
+      </text>
+    </g>
+    <g>
+      <text x='478' y='8280' class='st5 st6 st7' dominant-baseline='middle'>
+        trna_count
+      </text>
+    </g>
+    <g>
+      <text x='642' y='8280' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,8365 465,8365'/>
+  <polygon points='460.3,8370.7 459.4,8369.7 464.4,8365.0 459.4,8360.3 460.3,8359.3 466.5,8365.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 8360)'>
+    gtdb:trna_selenocysteine_count
+  </text>
+  <g>
+    <rect x='470' y='8340' width='180' height='50' class='st9'/>
+    <polyline points='470,8360 470,8340 650,8340 650,8360' class='st2'/>
+    <g>
+      <text x='478' y='8375' class='st3 st4' dominant-baseline='middle'>
+        0
+      </text>
+    </g>
+    <g>
+      <text x='478' y='8350' class='st5 st6 st7' dominant-baseline='middle'>
+        trna_selenocysteine_count
+      </text>
+    </g>
+    <g>
+      <text x='642' y='8350' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <g>
+    <g>
+      <path d='M230,8452 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M230,8452 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M50,8430 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='8448' class='st3 st4'>
+        gtdb:s__Bacillus_Aparanthracis
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='8420' class='st5 st6 st7' dominant-baseline='middle'>
+        GtdbSpecies
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='222' y='8420' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st11' points='230,8435 250,8435 250,8435 465,8435'/>
+  <polygon points='460.3,8440.7 459.4,8439.7 464.4,8435.0 459.4,8430.3 460.3,8429.3 466.5,8435.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 8430)'>
+    rdf:type
+  </text>
+  <g>
+    <rect x='470' y='8410' width='180' height='50' rx='7.5' ry='7.5' fill='#fff4c3' stroke='#000000' stroke-width='2' pointer-events='all'/>
+    <g transform='translate(-0.5 -0.5)'>
+      <switch>
+        <foreignObject style='overflow: visible; text-align: left' pointer-events='none' width='100%' height='100%' requiredFeatures='http://www.w3.org/TR/SVG11/feature#Extensibility'>
+          <div xmlns='http://www.w3.org/1999/xhtml' style='display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 8435px; margin-left: 471px'>
+            <div style='box-sizing: border-box; font-size: 0; text-align: center;'>
+              <div style='display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal'>
+                <div>
+                  gtdb:Taxon
+                  <br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x='560' y='8429' fill='#000000' font-family='Helvetica' font-size='12px' text-anchor='middle'>
+          gtdb:Taxon
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline class='st12' points='230,8435 250,8435 250,8505 465,8505'/>
+  <polygon points='460.3,8510.7 459.4,8509.7 464.4,8505.0 459.4,8500.3 460.3,8499.3 466.5,8505.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 8500)'>
+    rdfs:subClassOf
+  </text>
+  <g>
+    <g>
+      <path d='M650,8522 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M650,8522 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,8500 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='8518' class='st3 st4'>
+        GtdbGenus
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='8490' class='st5 st6 st7' dominant-baseline='middle'>
+        gtdb_genus
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='8490' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,8435 250,8435 250,8575 465,8575'/>
+  <polygon points='460.3,8580.7 459.4,8579.7 464.4,8575.0 459.4,8570.3 460.3,8569.3 466.5,8575.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 8570)'>
+    gtdb:rank
+  </text>
+  <g>
+    <g>
+      <path d='M650,8592 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st9uri'/>
+      <path d='M650,8592 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,8570 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='8588' class='st3 st4'>
+        gtdb:Species
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='8560' class='st5 st6 st7' dominant-baseline='middle'>
+        rank_species
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='8560' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,8435 250,8435 250,8645 465,8645'/>
+  <polygon points='460.3,8650.7 459.4,8649.7 464.4,8645.0 459.4,8640.3 460.3,8639.3 466.5,8645.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 8640)'>
+    skos:altLabel
+  </text>
+  <g>
+    <rect x='470' y='8620' width='180' height='50' class='st9'/>
+    <polyline points='470,8640 470,8620 650,8620 650,8640' class='st2'/>
+    <g>
+      <text x='478' y='8655' class='st3 st4' dominant-baseline='middle'>
+        Bacillus_A%20paranthracis
+      </text>
+    </g>
+    <g>
+      <text x='478' y='8630' class='st5 st6 st7' dominant-baseline='middle'>
+        species_label
+      </text>
+    </g>
+    <g>
+      <text x='642' y='8630' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <g>
+    <g>
+      <path d='M230,8732 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M230,8732 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M50,8710 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='8728' class='st3 st4'>
+        gtdb:g__Bacillus_A
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='8700' class='st5 st6 st7' dominant-baseline='middle'>
+        GtdbGenus
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='222' y='8700' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st11' points='230,8715 250,8715 250,8715 465,8715'/>
+  <polygon points='460.3,8720.7 459.4,8719.7 464.4,8715.0 459.4,8710.3 460.3,8709.3 466.5,8715.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 8710)'>
+    rdf:type
+  </text>
+  <g>
+    <rect x='470' y='8690' width='180' height='50' rx='7.5' ry='7.5' fill='#fff4c3' stroke='#000000' stroke-width='2' pointer-events='all'/>
+    <g transform='translate(-0.5 -0.5)'>
+      <switch>
+        <foreignObject style='overflow: visible; text-align: left' pointer-events='none' width='100%' height='100%' requiredFeatures='http://www.w3.org/TR/SVG11/feature#Extensibility'>
+          <div xmlns='http://www.w3.org/1999/xhtml' style='display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 8715px; margin-left: 471px'>
+            <div style='box-sizing: border-box; font-size: 0; text-align: center;'>
+              <div style='display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal'>
+                <div>
+                  gtdb:Taxon
+                  <br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x='560' y='8709' fill='#000000' font-family='Helvetica' font-size='12px' text-anchor='middle'>
+          gtdb:Taxon
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline class='st12' points='230,8715 250,8715 250,8785 465,8785'/>
+  <polygon points='460.3,8790.7 459.4,8789.7 464.4,8785.0 459.4,8780.3 460.3,8779.3 466.5,8785.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 8780)'>
+    rdfs:subClassOf
+  </text>
+  <g>
+    <rect x='470' y='8760' width='180' height='50' class='st9'/>
+    <polyline points='470,8780 470,8760 650,8760 650,8780' class='st2'/>
+    <g>
+      <text x='478' y='8795' class='st3 st4' dominant-baseline='middle'>
+        GtdbFamily
+      </text>
+    </g>
+    <g>
+      <text x='478' y='8770' class='st5 st6 st7' dominant-baseline='middle'>
+        gtdb_family
+      </text>
+    </g>
+    <g>
+      <text x='642' y='8770' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,8715 250,8715 250,8855 465,8855'/>
+  <polygon points='460.3,8860.7 459.4,8859.7 464.4,8855.0 459.4,8850.3 460.3,8849.3 466.5,8855.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 8850)'>
+    gtdb:rank
+  </text>
+  <g>
+    <g>
+      <path d='M650,8872 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st9uri'/>
+      <path d='M650,8872 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,8850 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='8868' class='st3 st4'>
+        gtdb:Genus
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='8840' class='st5 st6 st7' dominant-baseline='middle'>
+        rank_genus
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='8840' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,8715 250,8715 250,8925 465,8925'/>
+  <polygon points='460.3,8930.7 459.4,8929.7 464.4,8925.0 459.4,8920.3 460.3,8919.3 466.5,8925.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 8920)'>
+    skos:altLabel
+  </text>
+  <g>
+    <rect x='470' y='8900' width='180' height='50' class='st9'/>
+    <polyline points='470,8920 470,8900 650,8900 650,8920' class='st2'/>
+    <g>
+      <text x='478' y='8935' class='st3 st4' dominant-baseline='middle'>
+        g__Bacillus_A
+      </text>
+    </g>
+    <g>
+      <text x='478' y='8910' class='st5 st6 st7' dominant-baseline='middle'>
+        genus_label
+      </text>
+    </g>
+    <g>
+      <text x='642' y='8910' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <g>
+    <g>
+      <path d='M230,9012 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M230,9012 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M50,8990 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='9008' class='st3 st4'>
+        gtdb:f__Bacillaceae_G
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='8980' class='st5 st6 st7' dominant-baseline='middle'>
+        GtdbsFamily
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='222' y='8980' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st11' points='230,8995 250,8995 250,8995 465,8995'/>
+  <polygon points='460.3,9000.7 459.4,8999.7 464.4,8995.0 459.4,8990.3 460.3,8989.3 466.5,8995.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 8990)'>
+    rdf:type
+  </text>
+  <g>
+    <rect x='470' y='8970' width='180' height='50' rx='7.5' ry='7.5' fill='#fff4c3' stroke='#000000' stroke-width='2' pointer-events='all'/>
+    <g transform='translate(-0.5 -0.5)'>
+      <switch>
+        <foreignObject style='overflow: visible; text-align: left' pointer-events='none' width='100%' height='100%' requiredFeatures='http://www.w3.org/TR/SVG11/feature#Extensibility'>
+          <div xmlns='http://www.w3.org/1999/xhtml' style='display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 8995px; margin-left: 471px'>
+            <div style='box-sizing: border-box; font-size: 0; text-align: center;'>
+              <div style='display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal'>
+                <div>
+                  gtdb:Taxon
+                  <br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x='560' y='8989' fill='#000000' font-family='Helvetica' font-size='12px' text-anchor='middle'>
+          gtdb:Taxon
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline class='st12' points='230,8995 250,8995 250,9065 465,9065'/>
+  <polygon points='460.3,9070.7 459.4,9069.7 464.4,9065.0 459.4,9060.3 460.3,9059.3 466.5,9065.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 9060)'>
+    rdfs:subClassOf
+  </text>
+  <g>
+    <rect x='470' y='9040' width='180' height='50' class='st9'/>
+    <polyline points='470,9060 470,9040 650,9040 650,9060' class='st2'/>
+    <g>
+      <text x='478' y='9075' class='st3 st4' dominant-baseline='middle'>
+        GtdbOrder
+      </text>
+    </g>
+    <g>
+      <text x='478' y='9050' class='st5 st6 st7' dominant-baseline='middle'>
+        gtdb_order
+      </text>
+    </g>
+    <g>
+      <text x='642' y='9050' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,8995 250,8995 250,9135 465,9135'/>
+  <polygon points='460.3,9140.7 459.4,9139.7 464.4,9135.0 459.4,9130.3 460.3,9129.3 466.5,9135.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 9130)'>
+    gtdb:rank
+  </text>
+  <g>
+    <g>
+      <path d='M650,9152 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st9uri'/>
+      <path d='M650,9152 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,9130 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='9148' class='st3 st4'>
+        gtdb:Family
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='9120' class='st5 st6 st7' dominant-baseline='middle'>
+        rank_family
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='9120' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,8995 250,8995 250,9205 465,9205'/>
+  <polygon points='460.3,9210.7 459.4,9209.7 464.4,9205.0 459.4,9200.3 460.3,9199.3 466.5,9205.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 9200)'>
+    skos:altLabel
+  </text>
+  <g>
+    <rect x='470' y='9180' width='180' height='50' class='st9'/>
+    <polyline points='470,9200 470,9180 650,9180 650,9200' class='st2'/>
+    <g>
+      <text x='478' y='9215' class='st3 st4' dominant-baseline='middle'>
+        f__Bacillaceae_G
+      </text>
+    </g>
+    <g>
+      <text x='478' y='9190' class='st5 st6 st7' dominant-baseline='middle'>
+        family_label
+      </text>
+    </g>
+    <g>
+      <text x='642' y='9190' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <g>
+    <g>
+      <path d='M230,9292 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M230,9292 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M50,9270 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='9288' class='st3 st4'>
+        gtdb:o__Bacillales
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='9260' class='st5 st6 st7' dominant-baseline='middle'>
+        GtdbsOrder
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='222' y='9260' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st11' points='230,9275 250,9275 250,9275 465,9275'/>
+  <polygon points='460.3,9280.7 459.4,9279.7 464.4,9275.0 459.4,9270.3 460.3,9269.3 466.5,9275.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 9270)'>
+    rdf:type
+  </text>
+  <g>
+    <rect x='470' y='9250' width='180' height='50' rx='7.5' ry='7.5' fill='#fff4c3' stroke='#000000' stroke-width='2' pointer-events='all'/>
+    <g transform='translate(-0.5 -0.5)'>
+      <switch>
+        <foreignObject style='overflow: visible; text-align: left' pointer-events='none' width='100%' height='100%' requiredFeatures='http://www.w3.org/TR/SVG11/feature#Extensibility'>
+          <div xmlns='http://www.w3.org/1999/xhtml' style='display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 9275px; margin-left: 471px'>
+            <div style='box-sizing: border-box; font-size: 0; text-align: center;'>
+              <div style='display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal'>
+                <div>
+                  gtdb:Taxon
+                  <br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x='560' y='9269' fill='#000000' font-family='Helvetica' font-size='12px' text-anchor='middle'>
+          gtdb:Taxon
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline class='st12' points='230,9275 250,9275 250,9345 465,9345'/>
+  <polygon points='460.3,9350.7 459.4,9349.7 464.4,9345.0 459.4,9340.3 460.3,9339.3 466.5,9345.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 9340)'>
+    rdfs:subClassOf
+  </text>
+  <g>
+    <rect x='470' y='9320' width='180' height='50' class='st9'/>
+    <polyline points='470,9340 470,9320 650,9320 650,9340' class='st2'/>
+    <g>
+      <text x='478' y='9355' class='st3 st4' dominant-baseline='middle'>
+        GtdbClass
+      </text>
+    </g>
+    <g>
+      <text x='478' y='9330' class='st5 st6 st7' dominant-baseline='middle'>
+        gtdb_class
+      </text>
+    </g>
+    <g>
+      <text x='642' y='9330' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,9275 250,9275 250,9415 465,9415'/>
+  <polygon points='460.3,9420.7 459.4,9419.7 464.4,9415.0 459.4,9410.3 460.3,9409.3 466.5,9415.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 9410)'>
+    gtdb:rank
+  </text>
+  <g>
+    <g>
+      <path d='M650,9432 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st9uri'/>
+      <path d='M650,9432 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,9410 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='9428' class='st3 st4'>
+        gtdb:Order
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='9400' class='st5 st6 st7' dominant-baseline='middle'>
+        rank_order
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='9400' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,9275 250,9275 250,9485 465,9485'/>
+  <polygon points='460.3,9490.7 459.4,9489.7 464.4,9485.0 459.4,9480.3 460.3,9479.3 466.5,9485.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 9480)'>
+    skos:altLabel
+  </text>
+  <g>
+    <rect x='470' y='9460' width='180' height='50' class='st9'/>
+    <polyline points='470,9480 470,9460 650,9460 650,9480' class='st2'/>
+    <g>
+      <text x='478' y='9495' class='st3 st4' dominant-baseline='middle'>
+        o__Bacillales
+      </text>
+    </g>
+    <g>
+      <text x='478' y='9470' class='st5 st6 st7' dominant-baseline='middle'>
+        order_label
+      </text>
+    </g>
+    <g>
+      <text x='642' y='9470' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <g>
+    <g>
+      <path d='M230,9572 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M230,9572 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M50,9550 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='9568' class='st3 st4'>
+        gtdb:c__Bacilli
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='9540' class='st5 st6 st7' dominant-baseline='middle'>
+        GtdbsClass
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='222' y='9540' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st11' points='230,9555 250,9555 250,9555 465,9555'/>
+  <polygon points='460.3,9560.7 459.4,9559.7 464.4,9555.0 459.4,9550.3 460.3,9549.3 466.5,9555.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 9550)'>
+    rdf:type
+  </text>
+  <g>
+    <rect x='470' y='9530' width='180' height='50' rx='7.5' ry='7.5' fill='#fff4c3' stroke='#000000' stroke-width='2' pointer-events='all'/>
+    <g transform='translate(-0.5 -0.5)'>
+      <switch>
+        <foreignObject style='overflow: visible; text-align: left' pointer-events='none' width='100%' height='100%' requiredFeatures='http://www.w3.org/TR/SVG11/feature#Extensibility'>
+          <div xmlns='http://www.w3.org/1999/xhtml' style='display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 9555px; margin-left: 471px'>
+            <div style='box-sizing: border-box; font-size: 0; text-align: center;'>
+              <div style='display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal'>
+                <div>
+                  gtdb:Taxon
+                  <br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x='560' y='9549' fill='#000000' font-family='Helvetica' font-size='12px' text-anchor='middle'>
+          gtdb:Taxon
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline class='st12' points='230,9555 250,9555 250,9625 465,9625'/>
+  <polygon points='460.3,9630.7 459.4,9629.7 464.4,9625.0 459.4,9620.3 460.3,9619.3 466.5,9625.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 9620)'>
+    rdfs:subClassOf
+  </text>
+  <g>
+    <rect x='470' y='9600' width='180' height='50' class='st9'/>
+    <polyline points='470,9620 470,9600 650,9600 650,9620' class='st2'/>
+    <g>
+      <text x='478' y='9635' class='st3 st4' dominant-baseline='middle'>
+        GtdbPhylum
+      </text>
+    </g>
+    <g>
+      <text x='478' y='9610' class='st5 st6 st7' dominant-baseline='middle'>
+        gtdb_phylum
+      </text>
+    </g>
+    <g>
+      <text x='642' y='9610' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,9555 250,9555 250,9695 465,9695'/>
+  <polygon points='460.3,9700.7 459.4,9699.7 464.4,9695.0 459.4,9690.3 460.3,9689.3 466.5,9695.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 9690)'>
+    gtdb:rank
+  </text>
+  <g>
+    <g>
+      <path d='M650,9712 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st9uri'/>
+      <path d='M650,9712 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,9690 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='9708' class='st3 st4'>
+        gtdb:Class
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='9680' class='st5 st6 st7' dominant-baseline='middle'>
+        rank_class
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='9680' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,9555 250,9555 250,9765 465,9765'/>
+  <polygon points='460.3,9770.7 459.4,9769.7 464.4,9765.0 459.4,9760.3 460.3,9759.3 466.5,9765.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 9760)'>
+    skos:altLabel
+  </text>
+  <g>
+    <rect x='470' y='9740' width='180' height='50' class='st9'/>
+    <polyline points='470,9760 470,9740 650,9740 650,9760' class='st2'/>
+    <g>
+      <text x='478' y='9775' class='st3 st4' dominant-baseline='middle'>
+        c__Bacilli
+      </text>
+    </g>
+    <g>
+      <text x='478' y='9750' class='st5 st6 st7' dominant-baseline='middle'>
+        class_label
+      </text>
+    </g>
+    <g>
+      <text x='642' y='9750' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <g>
+    <g>
+      <path d='M230,9852 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M230,9852 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M50,9830 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='9848' class='st3 st4'>
+        gtdb:p__Bacillota
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='9820' class='st5 st6 st7' dominant-baseline='middle'>
+        GtdbsPhylum
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='222' y='9820' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st11' points='230,9835 250,9835 250,9835 465,9835'/>
+  <polygon points='460.3,9840.7 459.4,9839.7 464.4,9835.0 459.4,9830.3 460.3,9829.3 466.5,9835.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 9830)'>
+    rdf:type
+  </text>
+  <g>
+    <rect x='470' y='9810' width='180' height='50' rx='7.5' ry='7.5' fill='#fff4c3' stroke='#000000' stroke-width='2' pointer-events='all'/>
+    <g transform='translate(-0.5 -0.5)'>
+      <switch>
+        <foreignObject style='overflow: visible; text-align: left' pointer-events='none' width='100%' height='100%' requiredFeatures='http://www.w3.org/TR/SVG11/feature#Extensibility'>
+          <div xmlns='http://www.w3.org/1999/xhtml' style='display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 9835px; margin-left: 471px'>
+            <div style='box-sizing: border-box; font-size: 0; text-align: center;'>
+              <div style='display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal'>
+                <div>
+                  gtdb:Taxon
+                  <br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x='560' y='9829' fill='#000000' font-family='Helvetica' font-size='12px' text-anchor='middle'>
+          gtdb:Taxon
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline class='st12' points='230,9835 250,9835 250,9905 465,9905'/>
+  <polygon points='460.3,9910.7 459.4,9909.7 464.4,9905.0 459.4,9900.3 460.3,9899.3 466.5,9905.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 9900)'>
+    rdfs:subClassOf
+  </text>
+  <g>
+    <rect x='470' y='9880' width='180' height='50' class='st9'/>
+    <polyline points='470,9900 470,9880 650,9880 650,9900' class='st2'/>
+    <g>
+      <text x='478' y='9915' class='st3 st4' dominant-baseline='middle'>
+        GtdbDomain
+      </text>
+    </g>
+    <g>
+      <text x='478' y='9890' class='st5 st6 st7' dominant-baseline='middle'>
+        gtdb_domain
+      </text>
+    </g>
+    <g>
+      <text x='642' y='9890' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,9835 250,9835 250,9975 465,9975'/>
+  <polygon points='460.3,9980.7 459.4,9979.7 464.4,9975.0 459.4,9970.3 460.3,9969.3 466.5,9975.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 9970)'>
+    gtdb:rank
+  </text>
+  <g>
+    <g>
+      <path d='M650,9992 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st9uri'/>
+      <path d='M650,9992 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,9970 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='9988' class='st3 st4'>
+        gtdb:Phylum
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='9960' class='st5 st6 st7' dominant-baseline='middle'>
+        rank_phylum
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='9960' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,9835 250,9835 250,10045 465,10045'/>
+  <polygon points='460.3,10050.7 459.4,10049.7 464.4,10045.0 459.4,10040.3 460.3,10039.3 466.5,10045.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 10040)'>
+    skos:altLabel
+  </text>
+  <g>
+    <rect x='470' y='10020' width='180' height='50' class='st9'/>
+    <polyline points='470,10040 470,10020 650,10020 650,10040' class='st2'/>
+    <g>
+      <text x='478' y='10055' class='st3 st4' dominant-baseline='middle'>
+        p__Bacillota
+      </text>
+    </g>
+    <g>
+      <text x='478' y='10030' class='st5 st6 st7' dominant-baseline='middle'>
+        phylum_label
+      </text>
+    </g>
+    <g>
+      <text x='642' y='10030' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <g>
+    <g>
+      <path d='M230,10132 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M230,10132 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M50,10110 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='10128' class='st3 st4'>
+        gtdb:d__Bacteria
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='10100' class='st5 st6 st7' dominant-baseline='middle'>
+        GtdbsDomain
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='222' y='10100' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st11' points='230,10115 250,10115 250,10115 465,10115'/>
+  <polygon points='460.3,10120.7 459.4,10119.7 464.4,10115.0 459.4,10110.3 460.3,10109.3 466.5,10115.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 10110)'>
+    rdf:type
+  </text>
+  <g>
+    <rect x='470' y='10090' width='180' height='50' rx='7.5' ry='7.5' fill='#fff4c3' stroke='#000000' stroke-width='2' pointer-events='all'/>
+    <g transform='translate(-0.5 -0.5)'>
+      <switch>
+        <foreignObject style='overflow: visible; text-align: left' pointer-events='none' width='100%' height='100%' requiredFeatures='http://www.w3.org/TR/SVG11/feature#Extensibility'>
+          <div xmlns='http://www.w3.org/1999/xhtml' style='display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 10115px; margin-left: 471px'>
+            <div style='box-sizing: border-box; font-size: 0; text-align: center;'>
+              <div style='display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal'>
+                <div>
+                  gtdb:Taxon
+                  <br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x='560' y='10109' fill='#000000' font-family='Helvetica' font-size='12px' text-anchor='middle'>
+          gtdb:Taxon
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline class='st12' points='230,10115 250,10115 250,10185 465,10185'/>
+  <polygon points='460.3,10190.7 459.4,10189.7 464.4,10185.0 459.4,10180.3 460.3,10179.3 466.5,10185.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 10180)'>
+    gtdb:rank
+  </text>
+  <g>
+    <g>
+      <path d='M650,10202 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st9uri'/>
+      <path d='M650,10202 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,10180 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='10198' class='st3 st4'>
+        gtdb:Domain
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='10170' class='st5 st6 st7' dominant-baseline='middle'>
+        rank_domain
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='10170' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,10115 250,10115 250,10255 465,10255'/>
+  <polygon points='460.3,10260.7 459.4,10259.7 464.4,10255.0 459.4,10250.3 460.3,10249.3 466.5,10255.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 10250)'>
+    skos:altLabel
+  </text>
+  <g>
+    <rect x='470' y='10230' width='180' height='50' class='st9'/>
+    <polyline points='470,10250 470,10230 650,10230 650,10250' class='st2'/>
+    <g>
+      <text x='478' y='10265' class='st3 st4' dominant-baseline='middle'>
+        d__Bacteria
+      </text>
+    </g>
+    <g>
+      <text x='478' y='10240' class='st5 st6 st7' dominant-baseline='middle'>
+        domain_label
+      </text>
+    </g>
+    <g>
+      <text x='642' y='10240' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <g>
+    <text x='60' y='10324' font-size='14px' class='st6'>
+      Namespaces
+    </text>
+    <text x='60' y='10340' font-size='12px' class='st3'>
+      rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+    </text>
+    <text x='60' y='10356' font-size='12px' class='st3'>
+      rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+    </text>
+    <text x='60' y='10372' font-size='12px' class='st3'>
+      skos: &lt;http://www.w3.org/2004/02/skos/core#&gt;
+    </text>
+    <text x='60' y='10388' font-size='12px' class='st3'>
+      dct: &lt;http://purl.org/dc/terms/&gt;
+    </text>
+    <text x='60' y='10404' font-size='12px' class='st3'>
+      xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+    </text>
+    <text x='60' y='10420' font-size='12px' class='st3'>
+      obo: &lt;http://purl.obolibrary.org/obo/&gt;
+    </text>
+    <text x='60' y='10436' font-size='12px' class='st3'>
+      gtdb: &lt;http://identifiers.org/gtdb/&gt;
+    </text>
+    <text x='60' y='10452' font-size='12px' class='st3'>
+      taxid: &lt;http://identifiers.org/taxonomy/&gt;
+    </text>
+    <text x='60' y='10468' font-size='12px' class='st3'>
+      biosample: &lt;http://identifiers.org/biosample/&gt;
+    </text>
+    <text x='60' y='10484' font-size='12px' class='st3'>
+      bioproject: &lt;http://identifiers.org/bioproject/&gt;
+    </text>
+    <text x='60' y='10500' font-size='12px' class='st3'>
+      gca: &lt;http://identifiers.org/insdc.gca/&gt;
+    </text>
+    <text x='60' y='10516' font-size='12px' class='st3'>
+      ncbigenome: &lt;http://www.ncbi.nlm.nih.gov/datasets/genome/&gt;
+    </text>
+    <rect x='50' y='10300' width='368' height='230' fill='none' stroke='#000000' stroke-width='1'/>
+  </g>
+</svg>
