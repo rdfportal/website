@@ -27,6 +27,16 @@ jobs:
           ruby-version: "3.3" # Not needed with a .ruby-version, .tool-versions or mise.toml
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: Install dependencies and run script
+        run: |
+          cd scripts
+          bun install
+          bun aggregate_metadata.js
+          cd ..
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
