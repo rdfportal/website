@@ -1,77 +1,34 @@
 [
   {
-    "id": "bacdive",
-    "title": "BacDive RDF",
+    "id": "oma",
+    "title": "Orthologous MAtrix (OMA) RDF",
     "description": {
-      "en": "BacDive is the worldwide largest knowledgebase for standardized bacterial information.",
-      "ja": "BacDive is the worldwide largest database for standardized bacterial information. Its mission is to mobilize and integrate research data on strain level from diverse sources and make it freely accessible."
+      "en": "The OMA (Orthologous MAtrix) project is a method and database for the inference of orthologs among complete genomes. The OMA RDF is a view of the OMA database in RDF."
     },
     "providers": [
       {
-        "en": "Leibniz Institute DSMZ-German Collection of Microorganisms and Cell Cultures",
-        "ja": "DSMZ"
+        "en": "SIB Swiss Institute of Bioinformatics"
       }
     ],
     "tags": [
-      "Organism",
-      "Cell",
-      "Bioresource"
-    ],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": ""
-  },
-  {
-    "id": "bgee",
-    "title": "Bgee",
-    "description": {
-      "en": "A database for retrieval and comparison of gene expression patterns across multiple animal species",
-      "ja": "複数の動物種にわたる遺伝子発現パターンの検索と比較のためのデータベース"
-    },
-    "providers": [
-      {
-        "en": "SIB Swiss Institute of Bioinformatics",
-        "ja": "SIB Swiss Institute of Bioinformatics"
-      }
-    ],
-    "tags": [
+      "Genome",
       "Gene",
-      "Gene expression"
+      "Phylogeny/Classification"
     ],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": "sib"
-  },
-  {
-    "id": "biosample",
-    "title": "BioSample RDF",
-    "description": {
-      "en": "BioSample RDF developed by DBCLS and distributed by DDBJ"
-    },
-    "providers": [
+    "licenses": [
       {
-        "en": "Bioinformation and DDBJ Center"
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": null,
+        "credit": null
       }
     ],
-    "tags": [],
+    "creators": [
+      {
+        "name": "Adrian M. Altenhoff",
+        "affiliation": null
+      }
+    ],
+    "website": "https://omabrowser.org",
     "statistics": {
       "number_of_triples": 0,
       "number_of_instances": 0,
@@ -83,111 +40,81 @@
       "number_of_datatypes": 0,
       "number_of_links": 0
     },
-    "endpoint": "ebi"
+    "endpoint": "sib",
+    "issued": "2017-01-01"
   },
   {
-    "id": "bmrb",
-    "title": "BMRB/RDF",
+    "id": "mesh",
+    "title": "Medical Subject Headings (MeSH) RDF Dataset Description",
     "description": {
-      "en": "BMRB/RDF is a translation of NMR-STAR data into RDF"
+      "en": "A linked data representation of the MeSH biomedical vocabulary produced by the National Library of Medicine."
     },
     "providers": [
       {
-        "en": "Institute for Protein Research, Osaka University"
+        "en": "National Library of Medicine"
       }
     ],
     "tags": [
-      "Protein",
-      "Other biomolecule",
-      "Others",
-      "Sequence",
-      "Structure"
+      "Ontology/ Terminology/Nomenclature"
     ],
+    "licenses": [
+      {
+        "name": "Creative commons 1.0 Universal (CC0 1.0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "National Library of Medicine",
+        "affiliation": null
+      }
+    ],
+    "website": "https://id.nlm.nih.gov/mesh/",
     "statistics": {
-      "number_of_triples": 643511337,
-      "number_of_instances": 35671672,
-      "number_of_subjects": 35925543,
-      "number_of_properties": 2761,
-      "number_of_objects": 38021747,
-      "number_of_literals": 2025054,
-      "number_of_classes": 411,
-      "number_of_datatypes": 5,
+      "number_of_triples": 0,
+      "number_of_instances": 0,
+      "number_of_subjects": 0,
+      "number_of_properties": 0,
+      "number_of_objects": 0,
+      "number_of_literals": 0,
+      "number_of_classes": 0,
+      "number_of_datatypes": 0,
       "number_of_links": 0
     },
-    "endpoint": "pdb"
+    "endpoint": "ncbi",
+    "issued": "2023-10-01"
   },
   {
-    "id": "brenda",
-    "title": "BRENDA RDF",
+    "id": "gtdb",
+    "title": "GTDB",
     "description": {
-      "en": "BRENDA is the comprehensive enzyme information system with data on enzyme function, structure, and kinetics."
+      "en": "The Genome Taxonomy Database"
     },
     "providers": [
       {
-        "en": "Leibniz Institute DSMZ-German Collection of Microorganisms and Cell Cultures"
+        "en": "The University of Queensland"
       }
     ],
     "tags": [
-      "Enzyme",
-      "Biocatalysis",
-      "Bioresource"
+      "taxonomy",
+      "bacteria",
+      "archaea"
     ],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": ""
-  },
-  {
-    "id": "chebi",
-    "title": "ChEBI RDF",
-    "description": {
-      "en": "ChEBI (Chemical Entities of Biological Interest) is a freely accessible, ontology-driven database of ‘small molecular entities’, including their chemical structures, names, definitions, roles, and biological relationships. It provides manually curated, non-proprietary data supported by links to external resources and is widely used in chemical biology and bioinformatics",
-      "ja": "ChEBI（Chemical Entities of Biological Interest） は、「小分子化合物」を対象とした、自由にアクセス可能なオントロジーベースのデータベースです。化学構造、名称、定義、機能的役割、生物学的な関係性などを含む手作業でキュレーションされた非専有データを提供し、外部リソースへのリンクも備えており、ケミカルバイオロジーやバイオインフォマティクス分野で広く利用されています"
-    },
-    "providers": [
+    "licenses": [
       {
-        "en": "European Bioinformatics Institute",
-        "ja": "European Bioinformatics Institute"
+        "name": "See licenses at https://gtdb.ecogenomic.org/licenses",
+        "url": null,
+        "credit": null
       }
     ],
-    "tags": [
-      "Drug/Chemical"
-    ],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": "ebi"
-  },
-  {
-    "id": "chembl",
-    "title": "ChEMBL RDF",
-    "description": {
-      "en": "ChEMBL is a manually curated database of bioactive molecules with drug-like properties."
-    },
-    "providers": [
+    "creators": [
       {
-        "en": "European Bioinformatics Institute"
+        "name": "Shuichi Kawashima",
+        "affiliation": null
       }
     ],
-    "tags": [
-      "Drug/Chemical"
-    ],
+    "website": "https://gtdb.ecogenomic.org/",
     "statistics": {
       "number_of_triples": 0,
       "number_of_instances": 0,
@@ -199,53 +126,47 @@
       "number_of_datatypes": 0,
       "number_of_links": 0
     },
-    "endpoint": "ebi"
+    "endpoint": "primary",
+    "issued": "2018-01-01"
   },
   {
-    "id": "chip-atlas",
-    "title": "ChIP-Atlas RDF",
+    "id": "famsbase",
+    "title": "FAMSBASE GPCR",
     "description": {
-      "en": "ChIP-Atlas RDF developed by DBCLS"
-    },
-    "providers": [
-      {
-        "en": "Database Center for Life Science"
-      }
-    ],
-    "tags": [],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": ""
-  },
-  {
-    "id": "civic",
-    "title": "RDF title",
-    "description": {
-      "en": "RDF description."
+      "en": "RDFized reference gene expresson dataset derived from CAGE and GeneChip experiments in the RefEx database."
     },
     "providers": [],
-    "tags": [],
+    "tags": [
+      "Protein",
+      "Structure"
+    ],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0) Database Center for Life Science",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Mitsuo Iwadate",
+        "affiliation": null
+      }
+    ],
+    "website": null,
     "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
+      "number_of_triples": 21297786,
+      "number_of_instances": 5858908,
+      "number_of_subjects": 5858909,
+      "number_of_properties": 30,
+      "number_of_objects": 6378250,
+      "number_of_literals": 488759,
+      "number_of_classes": 16,
+      "number_of_datatypes": 3,
       "number_of_links": 0
     },
-    "endpoint": ""
+    "endpoint": "primary",
+    "issued": "2019-01-01"
   },
   {
     "id": "clinvar",
@@ -265,6 +186,25 @@
       "Health/Disease",
       "Sequence"
     ],
+    "licenses": [
+      {
+        "name": "https://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/",
+        "url": null,
+        "credit": null
+      },
+      {
+        "name": "Source\\: U.S. National Library of Medicine.",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "National Center for Biotechnology Information",
+        "affiliation": null
+      }
+    ],
+    "website": "https://www.ncbi.nlm.nih.gov/clinvar/",
     "statistics": {
       "number_of_triples": 1247658822,
       "number_of_instances": 192529889,
@@ -276,59 +216,97 @@
       "number_of_datatypes": 3,
       "number_of_links": 0
     },
-    "endpoint": "ncbi"
+    "endpoint": "ncbi",
+    "issued": "2023-10-01"
   },
   {
-    "id": "dbcatalog",
-    "title": "Integbio Database Catalog/RDF",
+    "id": "homologene",
+    "title": "HomoloGene RDF",
     "description": {
-      "en": "Integbio Database Catalog/RDF is a translation of Integbio Database Catalog data into RDF",
-      "ja": "ntegbioデータベースカタログ/RDFはIntegbioデータベースカタログデータをRDFへ変換したものです"
-    },
-    "providers": [],
-    "tags": [
-      "Others"
-    ],
-    "statistics": {
-      "number_of_triples": 117526,
-      "number_of_instances": 10299,
-      "number_of_subjects": 14730,
-      "number_of_properties": 41,
-      "number_of_objects": 38065,
-      "number_of_literals": 19721,
-      "number_of_classes": 9,
-      "number_of_datatypes": 4,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
-  },
-  {
-    "id": "dbnsfp",
-    "title": "dbNSFP",
-    "description": {
-      "en": "dbNSFP is a database developed for functional prediction and annotation of all potential non-synonymous single-nucleotide variants (nsSNVs) in the human genome."
+      "en": "HomoloGene RDF is a translation of HomoloGene data into RDF."
     },
     "providers": [
       {
-        "en": "USF Genomics, College of Public Health, University of South Florida"
+        "en": "National Center for Biotechnology Information"
       }
     ],
     "tags": [
-      "nsSNVs",
-      "functional prediction"
+      "Genome",
+      "Gene",
+      "Phylogeny/Classification"
     ],
+    "licenses": [
+      {
+        "name": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Hirokazu Chiba",
+        "affiliation": null
+      }
+    ],
+    "website": "https://www.ncbi.nlm.nih.gov/homologene/",
     "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
+      "number_of_triples": 1553120,
+      "number_of_instances": 319471,
+      "number_of_subjects": 319471,
+      "number_of_properties": 8,
+      "number_of_objects": 773372,
+      "number_of_literals": 222872,
+      "number_of_classes": 3,
+      "number_of_datatypes": 1,
       "number_of_links": 0
     },
-    "endpoint": "med2rdf"
+    "endpoint": "primary",
+    "issued": "2018-01-01"
+  },
+  {
+    "id": "pubtator",
+    "title": "PubTator Central",
+    "description": {
+      "en": "Automatic annotations of biomedical concepts such as genes and mutations in PubMed abstracts and PMC full-text",
+      "ja": "PubMed抄録やPMC全文記事の遺伝子名や変異名などの生物医学的概念を自動アノテーションした情報です。"
+    },
+    "providers": [
+      {
+        "en": "National Center for Biotechnology Information",
+        "ja": "National Center for Biotechnology Information"
+      }
+    ],
+    "tags": [
+      "Others",
+      "Journal article/Report/Bibliography"
+    ],
+    "licenses": [
+      {
+        "name": "https://ftp.ncbi.nlm.nih.gov/pub/lu/PubTatorCentral/README.txt",
+        "url": null,
+        "credit": null
+      },
+      {
+        "name": "Source\\: U.S. National Library of Medicine.",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [],
+    "website": "https://www.ncbi.nlm.nih.gov/research/pubtator/",
+    "statistics": {
+      "number_of_triples": 1107708438,
+      "number_of_instances": 221933712,
+      "number_of_subjects": 221933712,
+      "number_of_properties": 6,
+      "number_of_objects": 25723106,
+      "number_of_literals": 14,
+      "number_of_classes": 1,
+      "number_of_datatypes": 2,
+      "number_of_links": 0
+    },
+    "endpoint": "ncbi",
+    "issued": "2017-01-01"
   },
   {
     "id": "dbscsnv",
@@ -345,6 +323,20 @@
       "SNV",
       "splicing consensus region"
     ],
+    "licenses": [
+      {
+        "name": "No information is available.",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Med2RDF project",
+        "affiliation": null
+      }
+    ],
+    "website": "http://www.liulab.science/dbscsnv.html",
     "statistics": {
       "number_of_triples": 0,
       "number_of_instances": 0,
@@ -356,22 +348,129 @@
       "number_of_datatypes": 0,
       "number_of_links": 0
     },
-    "endpoint": "med2rdf"
+    "endpoint": "med2rdf",
+    "issued": "2023-10-01"
   },
   {
-    "id": "dbvar",
-    "title": "dbVar",
+    "id": "nikkaji",
+    "title": "Nikkaji RDF",
     "description": {
-      "en": "dbVar is NCBI's database of human genomic Structural Variation — large variants >50 bp including insertions, deletions, duplications, inversions, mobile elements, translocations, and complex variants"
+      "en": "NBDC NikkajiRDF is RDF data of Japan Chemical Substance Dictionary (Nikkaji), which is one of the largest chemical substance databases in Japan."
     },
     "providers": [
       {
-        "en": "National Center for Biotechnology Information"
+        "en": "Japan Science and Technology Agency (JST)"
       }
     ],
     "tags": [
-      "structural variant"
+      "Drug/Chemical",
+      "Others",
+      "Structure",
+      "Image/Movie"
     ],
+    "licenses": [
+      {
+        "name": "Creative Commons Attribution 2.1 Japan (CC BY 2.1 JP)",
+        "url": null,
+        "credit": null
+      },
+      {
+        "name": "NBDC NikkajiRDF © Japan Science and Technology Agency licensed under CC Attribution 2.1 Japan",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Japan Science and Technology Agency (JST)",
+        "affiliation": null
+      }
+    ],
+    "website": "http://dbarchive.biosciencedbc.jp/en/nikkaji/desc.html",
+    "statistics": {
+      "number_of_triples": 344246952,
+      "number_of_instances": 25789378,
+      "number_of_subjects": 42867660,
+      "number_of_properties": 28,
+      "number_of_objects": 164414153,
+      "number_of_literals": 72955196,
+      "number_of_classes": 43957,
+      "number_of_datatypes": 4,
+      "number_of_links": 0
+    },
+    "endpoint": "primary",
+    "issued": "2018-01-01"
+  },
+  {
+    "id": "dbcatalog",
+    "title": "Integbio Database Catalog/RDF",
+    "description": {
+      "en": "Integbio Database Catalog/RDF is a translation of Integbio Database Catalog data into RDF",
+      "ja": "ntegbioデータベースカタログ/RDFはIntegbioデータベースカタログデータをRDFへ変換したものです"
+    },
+    "providers": [],
+    "tags": [
+      "Others"
+    ],
+    "licenses": [
+      {
+        "name": "http://creativecommons.org/publicdomain/zero/1.0/",
+        "url": null,
+        "credit": null
+      },
+      {
+        "name": "Integbio Database Catalog© National Bioscience Database Center licensed under CC Attribution 2.1 Japan",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Takahiro Ide",
+        "affiliation": null
+      }
+    ],
+    "website": "https://catalog.integbio.jp/dbcatalog/en/",
+    "statistics": {
+      "number_of_triples": 117526,
+      "number_of_instances": 10299,
+      "number_of_subjects": 14730,
+      "number_of_properties": 41,
+      "number_of_objects": 38065,
+      "number_of_literals": 19721,
+      "number_of_classes": 9,
+      "number_of_datatypes": 4,
+      "number_of_links": 0
+    },
+    "endpoint": "primary",
+    "issued": "2018-01-01"
+  },
+  {
+    "id": "bgee",
+    "title": "Bgee",
+    "description": {
+      "en": "A database for retrieval and comparison of gene expression patterns across multiple animal species",
+      "ja": "複数の動物種にわたる遺伝子発現パターンの検索と比較のためのデータベース"
+    },
+    "providers": [
+      {
+        "en": "SIB Swiss Institute of Bioinformatics",
+        "ja": "SIB Swiss Institute of Bioinformatics"
+      }
+    ],
+    "tags": [
+      "Gene",
+      "Gene expression"
+    ],
+    "licenses": [
+      {
+        "name": "Commons Zero license (CC0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [],
+    "website": "https://www.bgee.org/",
     "statistics": {
       "number_of_triples": 0,
       "number_of_instances": 0,
@@ -383,7 +482,1122 @@
       "number_of_datatypes": 0,
       "number_of_links": 0
     },
-    "endpoint": ""
+    "endpoint": "sib",
+    "issued": "2021-02-01"
+  },
+  {
+    "id": "medgen",
+    "title": "MedGen",
+    "description": {
+      "en": "MedGen organizes Information related to human medical genetics, such as attributes of conditions with a genetic contribution.",
+      "ja": "MedGenは遺伝が寄与している病態の属性など、ヒト医学遺伝学に関連する情報を整理したデータベースです"
+    },
+    "providers": [
+      {
+        "en": "National Center for Biotechnology Information",
+        "ja": "National Center for Biotechnology Information"
+      }
+    ],
+    "tags": [
+      "Health/Disease",
+      "Ontology/Terminology/Nomenclature"
+    ],
+    "licenses": [
+      {
+        "name": "url: https://www.ncbi.nlm.nih.gov/home/about/policies/",
+        "url": null,
+        "credit": null
+      },
+      {
+        "name": "Source: U.S. National Library of Medicine.",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Shuichi Kawashima",
+        "affiliation": null
+      }
+    ],
+    "website": "https://www.ncbi.nlm.nih.gov/medgen",
+    "statistics": {
+      "number_of_triples": 126664418,
+      "number_of_instances": 2717458,
+      "number_of_subjects": 3864020,
+      "number_of_properties": 65,
+      "number_of_objects": 30474902,
+      "number_of_literals": 4147574,
+      "number_of_classes": 4,
+      "number_of_datatypes": 1,
+      "number_of_links": 0
+    },
+    "endpoint": "ncbi",
+    "issued": "2018-01-01"
+  },
+  {
+    "id": "kero",
+    "title": "DBKERO RDF",
+    "description": {
+      "en": "DBKERO is a collection of multi-omics data sets including SNV, RNA-seq, ChIP-seq, BS-seq and TSS-seq. The ChIP-seq part is big, so its lite version chip_seq_lite is included. The original big ChIP-seq data can also be downloaded at https://integbio.jp/rdf/download/kero/2017-01-27/all/chip_seq_all.tar.gz ."
+    },
+    "providers": [],
+    "tags": [
+      "Genome",
+      "Polymorphism",
+      "Other DNA",
+      "Gene expression",
+      "Others"
+    ],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Shin Kawano",
+        "affiliation": null
+      }
+    ],
+    "website": "http://kero.hgc.jp/rdf/",
+    "statistics": {
+      "number_of_triples": 11198913244,
+      "number_of_instances": 965303305,
+      "number_of_subjects": 965396913,
+      "number_of_properties": 74,
+      "number_of_objects": 7487172343,
+      "number_of_literals": 1785025220,
+      "number_of_classes": 44,
+      "number_of_datatypes": 4,
+      "number_of_links": 0
+    },
+    "endpoint": "kero",
+    "issued": "2020-01-01"
+  },
+  {
+    "id": "jcm",
+    "title": "Metadata of JCM resources",
+    "description": {
+      "en": "A RDF-based meta-database of microbial strains used in various researches such as biology, environment and human health as bioresources. Microbial strains are available from Japan Collection of Microorganisms (JCM) in RIKEN BioResource Center. Please visit data browser at http://metadb.riken.jp/metadb/db/rikenbrc_jcm_microbe"
+    },
+    "providers": [
+      {
+        "en": "RIKEN"
+      }
+    ],
+    "tags": [
+      "Organism",
+      "Bioresource"
+    ],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Terue Takatsuki",
+        "affiliation": null
+      }
+    ],
+    "website": "http://jcm.brc.riken.jp/ja/",
+    "statistics": {
+      "number_of_triples": 1106776,
+      "number_of_instances": 257250,
+      "number_of_subjects": 257250,
+      "number_of_properties": 37,
+      "number_of_objects": 439741,
+      "number_of_literals": 181813,
+      "number_of_classes": 18,
+      "number_of_datatypes": 4,
+      "number_of_links": 0
+    },
+    "endpoint": "primary",
+    "issued": "2019-01-01"
+  },
+  {
+    "id": "nlm-catalog",
+    "title": "NLM Catalog",
+    "description": {
+      "en": "NLM bibliographic data on journals, books, audiovisual materials, computer software, electronic resources, and other materials",
+      "ja": "NLMの書誌データ：雑誌、書籍、視聴覚資料、コンピュータソフトウェア、電子リソース、その他の資料に関する情報"
+    },
+    "providers": [
+      {
+        "en": "National Library of Medicine",
+        "ja": "National Library of Medicine"
+      }
+    ],
+    "tags": [
+      "Ontology/Terminology/Nomenclature",
+      "Journal article/Report/Bibliography"
+    ],
+    "licenses": [
+      {
+        "name": null,
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [],
+    "website": "https://www.ncbi.nlm.nih.gov/nlmcatalog/",
+    "statistics": {
+      "number_of_triples": 203480,
+      "number_of_instances": 39010,
+      "number_of_subjects": 39010,
+      "number_of_properties": 6,
+      "number_of_objects": 162648,
+      "number_of_literals": 162647,
+      "number_of_classes": 1,
+      "number_of_datatypes": 1,
+      "number_of_links": 0
+    },
+    "endpoint": "ncbi",
+    "issued": "2018-01-01"
+  },
+  {
+    "id": "knapsack",
+    "title": "KNApSAcK RDF",
+    "description": {
+      "en": "RDFized dataset in the KNApSAcK family database.",
+      "ja": "KNApSAcKファミリーデータベースのRDFデータセット"
+    },
+    "providers": [
+      {
+        "en": "National Institute of Genetics",
+        "ja": "国立遺伝学研究所"
+      }
+    ],
+    "tags": [
+      "Compound",
+      "Taxonomy",
+      "Publication",
+      "Activity"
+    ],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Takatomo Fujisawa",
+        "affiliation": null
+      }
+    ],
+    "website": null,
+    "statistics": {
+      "number_of_triples": 3776538,
+      "number_of_instances": 711388,
+      "number_of_subjects": 712296,
+      "number_of_properties": 33,
+      "number_of_objects": 1781448,
+      "number_of_literals": 457162,
+      "number_of_classes": 20,
+      "number_of_datatypes": 4,
+      "number_of_links": 0
+    },
+    "endpoint": "primary",
+    "issued": "2018-01-01"
+  },
+  {
+    "id": "ssbd",
+    "title": ">",
+    "description": {
+      "en": "Meta-information of quantitative data and datasets of microscopy images provided from SSBD database"
+    },
+    "providers": [],
+    "tags": [
+      "Cell",
+      "Organism",
+      "Other biomolecule",
+      "Image/Movie",
+      "Gene expression",
+      "Others"
+    ],
+    "licenses": [
+      {
+        "name": "Creative Commons Attribution-ShareAlike 2.1 Japan (CC BY-SA 2.1 JP)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Yukako Tohsato",
+        "affiliation": null
+      }
+    ],
+    "website": "http://ssbd.qbic.riken.jp/",
+    "statistics": {
+      "number_of_triples": 40300,
+      "number_of_instances": 6644,
+      "number_of_subjects": 6644,
+      "number_of_properties": 33,
+      "number_of_objects": 9329,
+      "number_of_literals": 3807,
+      "number_of_classes": 18,
+      "number_of_datatypes": 4,
+      "number_of_links": 0
+    },
+    "endpoint": "primary",
+    "issued": "2017-01-01"
+  },
+  {
+    "id": "polyinfo",
+    "title": "PolyInfo BDG_S, ID definition",
+    "description": {
+      "en": "NIMS polymer database PoLyInfo-Bio Linkage Project, Definition of biodegradation IDs and linking schemas for synthetic polymers.",
+      "ja": "NIMS高分子データベースPoLyInfoーバイオ連携プロジェクト、合成高分子の生分解IDと連携スキーマの定義"
+    },
+    "providers": [
+      {
+        "en": "National Institute for Materials Science",
+        "ja": "国立研究開発法人物質・材料研究機構"
+      }
+    ],
+    "tags": [
+      "Drug/Chemical"
+    ],
+    "licenses": [
+      {
+        "name": "Creative Commons BY 4.0 International (CC BY 4.0)",
+        "url": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "CC BY 4.0 by National Institute for Materials Science (NIMS), Japan"
+      }
+    ],
+    "creators": [
+      {
+        "name": "Masashi Ishii",
+        "affiliation": null
+      }
+    ],
+    "website": "https://polymer.nims.go.jp/",
+    "statistics": {
+      "number_of_triples": 5446,
+      "number_of_instances": 1328,
+      "number_of_subjects": 1329,
+      "number_of_properties": 18,
+      "number_of_objects": 3293,
+      "number_of_literals": 2117,
+      "number_of_classes": 14,
+      "number_of_datatypes": 3,
+      "number_of_links": 0
+    },
+    "endpoint": "primary",
+    "issued": "2019-01-01"
+  },
+  {
+    "id": "disgenet",
+    "title": "DisGeNET RDF",
+    "description": {
+      "en": "DisGeNET is a collection of genes and variants associated to human diseases, which integrates data from expert curated repositories, GWAS catalogues, animal models and the scientific literature.",
+      "ja": "DisGeNET は、ヒトの疾患に関連する遺伝子およびバリアントのデータベースであり、専門家によるキュレーションリポジトリ、GWASカタログ、動物モデル、そして科学文献からのデータを統合しています。"
+    },
+    "providers": [
+      {
+        "en": "Research Programme on Biomedical Informatics (GRIB), Hospital del Mar Medical Research Institute (IMIM), Department of Experimental and Health Sciences, Pompeu Fabra University (UPF), Barcelona, Spain",
+        "ja": "Research Programme on Biomedical Informatics (GRIB), Hospital del Mar Medical Research Institute (IMIM), Department of Experimental and Health Sciences, Pompeu Fabra University (UPF), Barcelona, Spain"
+      }
+    ],
+    "tags": [
+      "Gene",
+      "Health/Disease"
+    ],
+    "licenses": [
+      {
+        "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
+        "url": null,
+        "credit": null
+      },
+      {
+        "name": "CC BY-NC-SA 4.0 by Research Programme on Biomedical Informatics (GRIB), Hospital del Mar Medical Research Institute (IMIM), Department of Experimental and Health Sciences, Pompeu Fabra University (UPF), Barcelona, Spain",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [],
+    "website": "https://www.disgenet.org/",
+    "statistics": {
+      "number_of_triples": 88379594,
+      "number_of_instances": 8752100,
+      "number_of_subjects": 8752519,
+      "number_of_properties": 99,
+      "number_of_objects": 39820060,
+      "number_of_literals": 30507457,
+      "number_of_classes": 71,
+      "number_of_datatypes": 9,
+      "number_of_links": 0
+    },
+    "endpoint": "primary",
+    "issued": "2019-01-01"
+  },
+  {
+    "id": "mbgd",
+    "title": "RDF title",
+    "description": {
+      "en": "RDF description."
+    },
+    "providers": [],
+    "tags": [],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Name 1",
+        "affiliation": null
+      }
+    ],
+    "website": "https://example.com/",
+    "statistics": {
+      "number_of_triples": 1609018143,
+      "number_of_instances": 273443876,
+      "number_of_subjects": 309702751,
+      "number_of_properties": 79,
+      "number_of_objects": 472067973,
+      "number_of_literals": 74289149,
+      "number_of_classes": 32,
+      "number_of_datatypes": 5,
+      "number_of_links": 0
+    },
+    "endpoint": "primary",
+    "issued": "2016-01-01"
+  },
+  {
+    "id": "naro_genebank",
+    "title": "Dataset of NARO Genebank Microorganism Bioresource",
+    "description": {
+      "en": "A dataset for microbes which are maintained, managed and provided from Genebank Project, NARO.",
+      "ja": "農研機構農業生物資源ジーンバンクが維持・管理・分譲している食料・農業に係る微生物遺伝資源のデータセット"
+    },
+    "providers": [
+      {
+        "en": "The Research Center of Genetic Resources, NARO (National Agriculture and Food Research Organization)",
+        "ja": "国立研究開発法人 農業・食品産業技術総合研究機構　遺伝資源研究センター"
+      }
+    ],
+    "tags": [
+      "Organism",
+      "Bioresource"
+    ],
+    "licenses": [
+      {
+        "name": "Creative commons Attribution 4.0 International (CC BY 4.0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Tsuyoshi Tanaka",
+        "affiliation": null
+      }
+    ],
+    "website": "https://www.gene.affrc.go.jp/",
+    "statistics": {
+      "number_of_triples": 132210,
+      "number_of_instances": 52884,
+      "number_of_subjects": 26442,
+      "number_of_properties": 4,
+      "number_of_objects": 79326,
+      "number_of_literals": 52884,
+      "number_of_classes": 2850,
+      "number_of_datatypes": 1,
+      "number_of_links": 0
+    },
+    "endpoint": "primary",
+    "issued": "2023-10-01"
+  },
+  {
+    "id": "paconto",
+    "title": "PAConto",
+    "description": {
+      "en": ">"
+    },
+    "providers": [
+      {
+        "en": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
+      }
+    ],
+    "tags": [
+      "Other biomolecule",
+      "Health/Disease",
+      "Interaction/Pathway",
+      "Structure"
+    ],
+    "licenses": [
+      {
+        "name": "Attribution NonCommercial ShareAlike 2.1 Japan (CC BY-NC-SA 2.1)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Hisashi Narimatsu",
+        "affiliation": null
+      }
+    ],
+    "website": "http://acgg.asia/db/diseases/",
+    "statistics": {
+      "number_of_triples": 81785,
+      "number_of_instances": 9296,
+      "number_of_subjects": 9329,
+      "number_of_properties": 117,
+      "number_of_objects": 16396,
+      "number_of_literals": 8586,
+      "number_of_classes": 63,
+      "number_of_datatypes": 3,
+      "number_of_links": 0
+    },
+    "endpoint": "primary",
+    "issued": "2020-01-01"
+  },
+  {
+    "id": "hgnc",
+    "title": "HGNC\\: The resource for approved human gene nomenclature",
+    "description": {
+      "en": "The HGNC is a resource for approved human gene nomenclature containing ~42000 gene",
+      "ja": "HGNCで承認された42000の遺伝子シンボルと遺伝子名称、1300以上の遺伝子ファミリーとセ"
+    },
+    "providers": [
+      {
+        "en": "HUGO Gene Nomenclature Committee at the European Bioinformatics Institute",
+        "ja": "HUGO Gene Nomenclature Committee at the European Bioinformatics Institute"
+      }
+    ],
+    "tags": [
+      "Gene",
+      "Ontology/ Terminology/Nomenclature"
+    ],
+    "licenses": [
+      {
+        "name": "https://www.genenames.org/about/",
+        "url": null,
+        "credit": null
+      },
+      {
+        "name": "HUGO Gene Nomenclature Committee at the European Bioinformatics Institute",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [],
+    "website": "https://www.genenames.org/",
+    "statistics": {
+      "number_of_triples": 1314653,
+      "number_of_instances": 355645,
+      "number_of_subjects": 355645,
+      "number_of_properties": 9,
+      "number_of_objects": 776470,
+      "number_of_literals": 464474,
+      "number_of_classes": 18,
+      "number_of_datatypes": 1,
+      "number_of_links": 0
+    },
+    "endpoint": "primary",
+    "issued": "2018-01-01"
+  },
+  {
+    "id": "chebi",
+    "title": "ChEBI RDF",
+    "description": {
+      "en": "ChEBI (Chemical Entities of Biological Interest) is a freely accessible, ontology-driven database of ‘small molecular entities’, including their chemical structures, names, definitions, roles, and biological relationships. It provides manually curated, non-proprietary data supported by links to external resources and is widely used in chemical biology and bioinformatics",
+      "ja": "ChEBI（Chemical Entities of Biological Interest） は、「小分子化合物」を対象とした、自由にアクセス可能なオントロジーベースのデータベースです。化学構造、名称、定義、機能的役割、生物学的な関係性などを含む手作業でキュレーションされた非専有データを提供し、外部リソースへのリンクも備えており、ケミカルバイオロジーやバイオインフォマティクス分野で広く利用されています"
+    },
+    "providers": [
+      {
+        "en": "European Bioinformatics Institute",
+        "ja": "European Bioinformatics Institute"
+      }
+    ],
+    "tags": [
+      "Drug/Chemical"
+    ],
+    "licenses": [
+      {
+        "name": "Creative Commons License (CC BY 4.0), and governed by EMBL-EBI’s terms of use and Long-term data preservation policy.",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "European Bioinformatics Institute",
+        "affiliation": null
+      }
+    ],
+    "website": "https://www.ebi.ac.uk/chebi/",
+    "statistics": {
+      "number_of_triples": 0,
+      "number_of_instances": 0,
+      "number_of_subjects": 0,
+      "number_of_properties": 0,
+      "number_of_objects": 0,
+      "number_of_literals": 0,
+      "number_of_classes": 0,
+      "number_of_datatypes": 0,
+      "number_of_links": 0
+    },
+    "endpoint": "ebi",
+    "issued": "2019-01-01"
+  },
+  {
+    "id": "bmrb",
+    "title": "BMRB/RDF",
+    "description": {
+      "en": "BMRB/RDF is a translation of NMR-STAR data into RDF"
+    },
+    "providers": [
+      {
+        "en": "Institute for Protein Research, Osaka University"
+      }
+    ],
+    "tags": [
+      "Protein",
+      "Other biomolecule",
+      "Others",
+      "Sequence",
+      "Structure"
+    ],
+    "licenses": [
+      {
+        "name": "Creative Commons Attribution 2.1 Japan (CC BY 2.1 JP)",
+        "url": "https://creativecommons.org/licenses/by/2.1/jp/deed.en",
+        "credit": "BMRB/RDF licensed under CC Attribution 2.1 Japan."
+      }
+    ],
+    "creators": [
+      {
+        "name": "Masashi Yokochi",
+        "affiliation": null
+      }
+    ],
+    "website": "https://bmrbpub.pdbj.org/",
+    "statistics": {
+      "number_of_triples": 643511337,
+      "number_of_instances": 35671672,
+      "number_of_subjects": 35925543,
+      "number_of_properties": 2761,
+      "number_of_objects": 38021747,
+      "number_of_literals": 2025054,
+      "number_of_classes": 411,
+      "number_of_datatypes": 5,
+      "number_of_links": 0
+    },
+    "endpoint": "pdb",
+    "issued": "2019-01-01"
+  },
+  {
+    "id": "nando",
+    "title": "NANDO",
+    "description": {
+      "en": "NANDO is a vocabulary that systematically and comprehensively organizes designated intractable diseases and pediatric chronic specific diseases, including their subtypes. Each disease in NANDO is linked to Mondo (Monarch Disease Ontology), a disease vocabulary adopted by many international databases and systems, enabling integration with major international disease databases such as OMIM and Orphanet.",
+      "ja": "NANDOは指定難病制度および小児慢性特定疾病制度を対象に、難病名を体系的かつ網羅的に整理した語彙集です。NANDOの各疾患は、国際的に多くのデータベースやシステムで採用されている疾患語彙集Mondo（Monarch Disease Ontology）と紐づけられており、OMIMやOrphanetといった国外の主要疾患データベースとの連携が可能です。"
+    },
+    "providers": [],
+    "tags": [
+      "Health/Disease",
+      "Tag sequence (nucleic acid)",
+      "Ontology/ Terminology/Nomenclature"
+    ],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0) Database Center for Life Science",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Kota Ninomiya",
+        "affiliation": null
+      }
+    ],
+    "website": "https://nanbyodata.jp/",
+    "statistics": {
+      "number_of_triples": 36933,
+      "number_of_instances": 2780,
+      "number_of_subjects": 2780,
+      "number_of_properties": 19,
+      "number_of_objects": 16434,
+      "number_of_literals": 20499,
+      "number_of_classes": 4,
+      "number_of_datatypes": 3,
+      "number_of_links": 0
+    },
+    "endpoint": "primary",
+    "issued": "2023-10-01"
+  },
+  {
+    "id": "ensembl",
+    "title": "Ensembl RDF",
+    "description": {
+      "en": "Ensembl is a collection of automatically annotated genome databases for vertebrates and a number of eukaryotes, integrated with all other relevant biological data available.",
+      "ja": "ゲノム解読された脊椎生物およびその他の主要な真核生物を対象として自動アノテーションを行い、その結果をゲノムビューワやデータベースとして公開しているプロジェクトです。"
+    },
+    "providers": [
+      {
+        "en": "EMBL-EBI",
+        "ja": "EMBL-EBI"
+      }
+    ],
+    "tags": [
+      "Gene",
+      "Protein"
+    ],
+    "licenses": [
+      {
+        "name": "http://ensembl.org/info/about/legal/disclaimer.html",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Shuya Ikeda",
+        "affiliation": null
+      }
+    ],
+    "website": "https://www.ensembl.org",
+    "statistics": {
+      "number_of_triples": 0,
+      "number_of_instances": 0,
+      "number_of_subjects": 0,
+      "number_of_properties": 0,
+      "number_of_objects": 0,
+      "number_of_literals": 0,
+      "number_of_classes": 0,
+      "number_of_datatypes": 0,
+      "number_of_links": 0
+    },
+    "endpoint": "ebi",
+    "issued": "2018-01-01"
+  },
+  {
+    "id": "togoid",
+    "title": "TogoID RDF",
+    "description": {
+      "en": "TogoID is a service to search and convert links between database identifiers.",
+      "ja": "TogoID は、データベースIDの関係をもとに、IDの検索や変換を行うサービスです。"
+    },
+    "providers": [
+      {
+        "en": "Database Center for Life Science, Joint Support-Center for Data Science Research, Research Organization of Information and Systems, Japan",
+        "ja": "情報・システム研究機構、データサイエンス共同利用基盤施設、ライフサイエンス統合データベースセンター"
+      }
+    ],
+    "tags": [
+      "Others"
+    ],
+    "licenses": [],
+    "creators": [
+      {
+        "name": "Database Center for Life Science, Joint Support-Center for Data Science Research, Research Organization of Information and Systems, Japan",
+        "affiliation": "--"
+      }
+    ],
+    "website": "https://togoid.dbcls.jp/",
+    "statistics": {
+      "number_of_triples": 7770732116,
+      "number_of_instances": 0,
+      "number_of_subjects": 7772603802,
+      "number_of_properties": 75,
+      "number_of_objects": 7772603802,
+      "number_of_literals": 0,
+      "number_of_classes": 0,
+      "number_of_datatypes": 0,
+      "number_of_links": 0
+    },
+    "endpoint": "primary",
+    "issued": "2020-01-01"
+  },
+  {
+    "id": "jpostdb",
+    "title": "jPOST databse RDF",
+    "description": {
+      "en": "jPOST database RDF is described the re-analyzed proteome dataset in the jPOST project."
+    },
+    "providers": [],
+    "tags": [],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Yuki Moriya",
+        "affiliation": null
+      }
+    ],
+    "website": "https://globe.jpostdb.org/",
+    "statistics": {
+      "number_of_triples": 239817763,
+      "number_of_instances": 68502884,
+      "number_of_subjects": 68502952,
+      "number_of_properties": 77,
+      "number_of_objects": 79998555,
+      "number_of_literals": 11392480,
+      "number_of_classes": 86,
+      "number_of_datatypes": 6,
+      "number_of_links": 0
+    },
+    "endpoint": "primary",
+    "issued": "2020-01-01"
+  },
+  {
+    "id": "wurcs",
+    "title": "RDF title",
+    "description": {
+      "en": "RDF description."
+    },
+    "providers": [],
+    "tags": [],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Name 1",
+        "affiliation": null
+      }
+    ],
+    "website": "https://example.com/",
+    "statistics": {
+      "number_of_triples": 6213789,
+      "number_of_instances": 817535,
+      "number_of_subjects": 1365653,
+      "number_of_properties": 56,
+      "number_of_objects": 1138140,
+      "number_of_literals": 40435,
+      "number_of_classes": 14,
+      "number_of_datatypes": 4,
+      "number_of_links": 0
+    },
+    "endpoint": "primary",
+    "issued": "2018-01-01"
+  },
+  {
+    "id": "refex",
+    "title": "RefEx RDF",
+    "description": {
+      "en": "RDFized reference gene expresson dataset derived from CAGE and GeneChip experiments in the RefEx database."
+    },
+    "providers": [],
+    "tags": [
+      "Gene",
+      "Tag sequence (nucleic acid)",
+      "Gene expression"
+    ],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0) Database Center for Life Science",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Shuichi Kawahsima",
+        "affiliation": null
+      }
+    ],
+    "website": "http://refex.dbcls.jp/index.php?lang=ja",
+    "statistics": {
+      "number_of_triples": 123447475,
+      "number_of_instances": 19828635,
+      "number_of_subjects": 24260736,
+      "number_of_properties": 47,
+      "number_of_objects": 27438991,
+      "number_of_literals": 22820176,
+      "number_of_classes": 10,
+      "number_of_datatypes": 9,
+      "number_of_links": 0
+    },
+    "endpoint": "primary",
+    "issued": "2016-01-01"
+  },
+  {
+    "id": "glycosmos",
+    "title": "GlyCosmos",
+    "description": {
+      "en": "RDF description."
+    },
+    "providers": [
+      {
+        "en": "GlyCosmos Portal"
+      }
+    ],
+    "tags": [
+      "Glycan"
+    ],
+    "licenses": [
+      {
+        "name": "Creative Commons Attribution 4.0 International License (CC BY 4.0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Kiyoko F. Aoki-Kinoshita",
+        "affiliation": null
+      }
+    ],
+    "website": "https://glycosmos.org/",
+    "statistics": {
+      "number_of_triples": 0,
+      "number_of_instances": 0,
+      "number_of_subjects": 0,
+      "number_of_properties": 0,
+      "number_of_objects": 0,
+      "number_of_literals": 0,
+      "number_of_classes": 0,
+      "number_of_datatypes": 0,
+      "number_of_links": 0
+    },
+    "endpoint": "primary",
+    "issued": "2020-01-01"
+  },
+  {
+    "id": "chembl",
+    "title": "ChEMBL RDF",
+    "description": {
+      "en": "ChEMBL is a manually curated database of bioactive molecules with drug-like properties."
+    },
+    "providers": [
+      {
+        "en": "European Bioinformatics Institute"
+      }
+    ],
+    "tags": [
+      "Drug/Chemical"
+    ],
+    "licenses": [
+      {
+        "name": "Creative Commons Attribution-Share Alike 3.0 Unported License",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "European Bioinformatics Institute",
+        "affiliation": null
+      }
+    ],
+    "website": "https://www.ebi.ac.uk/chembl/",
+    "statistics": {
+      "number_of_triples": 0,
+      "number_of_instances": 0,
+      "number_of_subjects": 0,
+      "number_of_properties": 0,
+      "number_of_objects": 0,
+      "number_of_literals": 0,
+      "number_of_classes": 0,
+      "number_of_datatypes": 0,
+      "number_of_links": 0
+    },
+    "endpoint": "ebi",
+    "issued": "2020-01-01"
+  },
+  {
+    "id": "uniprot",
+    "title": "UniProt RDF",
+    "description": {
+      "en": "The Universal Protein Resource (UniProt) is a comprehensive resource for protein sequence and annotation data."
+    },
+    "providers": [
+      {
+        "en": "The Swiss Institute of Bioinformatics"
+      }
+    ],
+    "tags": [
+      "Protein"
+    ],
+    "licenses": [
+      {
+        "name": "Creative Commons Attribution 4.0 International (CC BY 4.0) License",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "The Swiss Institute of Bioinformatics",
+        "affiliation": null
+      }
+    ],
+    "website": "https://uniprot.org/",
+    "statistics": {
+      "number_of_triples": 54381877065,
+      "number_of_instances": 9554097609,
+      "number_of_subjects": 11388277803,
+      "number_of_properties": 200,
+      "number_of_objects": 10609965660,
+      "number_of_literals": 1131363044,
+      "number_of_classes": 157,
+      "number_of_datatypes": 11,
+      "number_of_links": 0
+    },
+    "endpoint": "sib",
+    "issued": "2013-01-01"
+  },
+  {
+    "id": "pubmed",
+    "title": "PubMed",
+    "description": {
+      "en": "PubMed comprises more than 30 million citations for biomedical literature from MEDLINE, life science journals,",
+      "ja": "PubMedは、MEDLINE、ライフサイエンスジャーナル、オンラインブックからの生物医学文献の3000万件以上の引用を収録し"
+    },
+    "providers": [
+      {
+        "en": "National Institute of Technology and Evaluation",
+        "ja": "National Institute of Technology and Evaluation"
+      }
+    ],
+    "tags": [
+      "Others",
+      "Journal article/Report/Bibliography",
+      ""
+    ],
+    "licenses": [
+      {
+        "name": "https://www.nlm.nih.gov/databases/download.html",
+        "url": null,
+        "credit": null
+      },
+      {
+        "name": "Source\\: U.S. National Library of Medicine.",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [],
+    "website": "https://pubmed.ncbi.nlm.nih.gov/",
+    "statistics": {
+      "number_of_triples": 2531937601,
+      "number_of_instances": 194957460,
+      "number_of_subjects": 390607060,
+      "number_of_properties": 41,
+      "number_of_objects": 582849523,
+      "number_of_literals": 223825051,
+      "number_of_classes": 2,
+      "number_of_datatypes": 3,
+      "number_of_links": 0
+    },
+    "endpoint": "ncbi",
+    "issued": "2016-01-01"
+  },
+  {
+    "id": "dbnsfp",
+    "title": "dbNSFP",
+    "description": {
+      "en": "dbNSFP is a database developed for functional prediction and annotation of all potential non-synonymous single-nucleotide variants (nsSNVs) in the human genome."
+    },
+    "providers": [
+      {
+        "en": "USF Genomics, College of Public Health, University of South Florida"
+      }
+    ],
+    "tags": [
+      "nsSNVs",
+      "functional prediction"
+    ],
+    "licenses": [
+      {
+        "name": "See CITATION at https://sites.google.com/site/jpopgen/dbNSFP",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Med2RDF project",
+        "affiliation": null
+      }
+    ],
+    "website": "https://sites.google.com/site/jpopgen/dbNSFP",
+    "statistics": {
+      "number_of_triples": 0,
+      "number_of_instances": 0,
+      "number_of_subjects": 0,
+      "number_of_properties": 0,
+      "number_of_objects": 0,
+      "number_of_literals": 0,
+      "number_of_classes": 0,
+      "number_of_datatypes": 0,
+      "number_of_links": 0
+    },
+    "endpoint": "med2rdf",
+    "issued": "2023-10-01"
+  },
+  {
+    "id": "glytoucan",
+    "title": "GlyTouCan",
+    "description": {
+      "en": "GlyTouCan is the international glycan structure repository."
+    },
+    "providers": [
+      {
+        "en": "National Institute of Advanced Industrial Science and Technology (AIST)"
+      }
+    ],
+    "tags": [
+      "Other biomolecule",
+      "Structure"
+    ],
+    "licenses": [
+      {
+        "name": "Creative Commons Attribution 2.1 Japan (CC BY 2.1 JP)",
+        "url": null,
+        "credit": null
+      },
+      {
+        "name": "GlyTouCan licensed under CC Attribution 2.1 Japan",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Hisashi Narimatsu",
+        "affiliation": null
+      }
+    ],
+    "website": "https://glytoucan.org/",
+    "statistics": {
+      "number_of_triples": 1749648,
+      "number_of_instances": 375657,
+      "number_of_subjects": 375657,
+      "number_of_properties": 30,
+      "number_of_objects": 502463,
+      "number_of_literals": 126879,
+      "number_of_classes": 20,
+      "number_of_datatypes": 5,
+      "number_of_links": 0
+    },
+    "endpoint": "primary",
+    "issued": "2015-01-01"
   },
   {
     "id": "ddbj",
@@ -408,6 +1622,20 @@
       "Ontology/Terminology/Nomenclature",
       "Others"
     ],
+    "licenses": [
+      {
+        "name": "Referred to in International Nucleotide Sequence Database Collaboration Policy (http://www.insdc.org/policy.html)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Takatomo Fujisawa",
+        "affiliation": null
+      }
+    ],
+    "website": "http://www.ddbj.nig.ac.jp/index-e.html",
     "statistics": {
       "number_of_triples": 39574632446,
       "number_of_instances": 4316173038,
@@ -419,573 +1647,18 @@
       "number_of_datatypes": 4,
       "number_of_links": 0
     },
-    "endpoint": "ddbj"
+    "endpoint": "ddbj",
+    "issued": "2018-01-01"
   },
   {
-    "id": "disgenet",
-    "title": "DisGeNET RDF",
+    "id": "nbrc",
+    "title": "Dataset of NBRC bioresource",
     "description": {
-      "en": "DisGeNET is a collection of genes and variants associated to human diseases, which integrates data from expert curated repositories, GWAS catalogues, animal models and the scientific literature.",
-      "ja": "DisGeNET は、ヒトの疾患に関連する遺伝子およびバリアントのデータベースであり、専門家によるキュレーションリポジトリ、GWASカタログ、動物モデル、そして科学文献からのデータを統合しています。"
+      "en": "Dataset of NBRC bioresource is a dataset for microbes which are maintained, managed and provided from NBRC (NITE Biological Resource Center)."
     },
     "providers": [
       {
-        "en": "Research Programme on Biomedical Informatics (GRIB), Hospital del Mar Medical Research Institute (IMIM), Department of Experimental and Health Sciences, Pompeu Fabra University (UPF), Barcelona, Spain",
-        "ja": "Research Programme on Biomedical Informatics (GRIB), Hospital del Mar Medical Research Institute (IMIM), Department of Experimental and Health Sciences, Pompeu Fabra University (UPF), Barcelona, Spain"
-      }
-    ],
-    "tags": [
-      "Gene",
-      "Health/Disease"
-    ],
-    "statistics": {
-      "number_of_triples": 88379594,
-      "number_of_instances": 8752100,
-      "number_of_subjects": 8752519,
-      "number_of_properties": 99,
-      "number_of_objects": 39820060,
-      "number_of_literals": 30507457,
-      "number_of_classes": 71,
-      "number_of_datatypes": 9,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
-  },
-  {
-    "id": "ensembl",
-    "title": "Ensembl RDF",
-    "description": {
-      "en": "Ensembl is a collection of automatically annotated genome databases for vertebrates and a number of eukaryotes, integrated with all other relevant biological data available.",
-      "ja": "ゲノム解読された脊椎生物およびその他の主要な真核生物を対象として自動アノテーションを行い、その結果をゲノムビューワやデータベースとして公開しているプロジェクトです。"
-    },
-    "providers": [
-      {
-        "en": "EMBL-EBI",
-        "ja": "EMBL-EBI"
-      }
-    ],
-    "tags": [
-      "Gene",
-      "Protein"
-    ],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": "ebi"
-  },
-  {
-    "id": "famsbase",
-    "title": "FAMSBASE GPCR",
-    "description": {
-      "en": "RDFized reference gene expresson dataset derived from CAGE and GeneChip experiments in the RefEx database."
-    },
-    "providers": [],
-    "tags": [
-      "Protein",
-      "Structure"
-    ],
-    "statistics": {
-      "number_of_triples": 21297786,
-      "number_of_instances": 5858908,
-      "number_of_subjects": 5858909,
-      "number_of_properties": 30,
-      "number_of_objects": 6378250,
-      "number_of_literals": 488759,
-      "number_of_classes": 16,
-      "number_of_datatypes": 3,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
-  },
-  {
-    "id": "ggdonto",
-    "title": "GGDonto",
-    "description": {
-      "en": "GGDonto is the Ontology of the Genetic Diseases related to the Glycan Metabolism. GGDonto describes the knowledge about Congenital Disorders of Glycosylation (CDG) and Lysosomal Storage Diseases (LSD). GGDonto provides the information on 120 genetic diseases of the glycan synthesis and the degradation and their causative genes."
-    },
-    "providers": [
-      {
-        "en": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
-      }
-    ],
-    "tags": [
-      "Other biomolecule",
-      "Health/Disease",
-      "Gene",
-      "Ontology/Terminology/Nomenclature",
-      "Interaction/Pathway"
-    ],
-    "statistics": {
-      "number_of_triples": 39440,
-      "number_of_instances": 1705,
-      "number_of_subjects": 1782,
-      "number_of_properties": 943,
-      "number_of_objects": 8977,
-      "number_of_literals": 4963,
-      "number_of_classes": 23,
-      "number_of_datatypes": 2,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
-  },
-  {
-    "id": "glycoepitope",
-    "title": "GlycoEpitope",
-    "description": {
-      "en": "GlycoEpitope is a database of useful information on carbohydrate antigens and antibodies.",
-      "ja": "GlycoEpitopeは、糖鎖抗体とその抗原についてのデータベースです"
-    },
-    "providers": [
-      {
-        "en": "Ritsumeikan University",
-        "ja": "立命館大学"
-      }
-    ],
-    "tags": [
-      "Other biomolecule",
-      "Structure"
-    ],
-    "statistics": {
-      "number_of_triples": 30150,
-      "number_of_instances": 5726,
-      "number_of_subjects": 8678,
-      "number_of_properties": 35,
-      "number_of_objects": 10723,
-      "number_of_literals": 5453,
-      "number_of_classes": 24,
-      "number_of_datatypes": 2,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
-  },
-  {
-    "id": "glycosmos",
-    "title": "GlyCosmos",
-    "description": {
-      "en": "RDF description."
-    },
-    "providers": [
-      {
-        "en": "GlyCosmos Portal"
-      }
-    ],
-    "tags": [
-      "Glycan"
-    ],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
-  },
-  {
-    "id": "glytoucan",
-    "title": "GlyTouCan",
-    "description": {
-      "en": "GlyTouCan is the international glycan structure repository."
-    },
-    "providers": [
-      {
-        "en": "National Institute of Advanced Industrial Science and Technology (AIST)"
-      }
-    ],
-    "tags": [
-      "Other biomolecule",
-      "Structure"
-    ],
-    "statistics": {
-      "number_of_triples": 1749648,
-      "number_of_instances": 375657,
-      "number_of_subjects": 375657,
-      "number_of_properties": 30,
-      "number_of_objects": 502463,
-      "number_of_literals": 126879,
-      "number_of_classes": 20,
-      "number_of_datatypes": 5,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
-  },
-  {
-    "id": "go",
-    "title": "Gene Ontology",
-    "description": {
-      "en": "The Gene Ontology resource provides a computational representation of our current scientific knowledge about the functions of genes (or, more properly, the protein and non-coding RNA molecules produced by genes) from many different organisms, from humans to bacteria."
-    },
-    "providers": [],
-    "tags": [],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": ""
-  },
-  {
-    "id": "gtdb",
-    "title": "GTDB",
-    "description": {
-      "en": "The Genome Taxonomy Database"
-    },
-    "providers": [
-      {
-        "en": "The University of Queensland"
-      }
-    ],
-    "tags": [
-      "taxonomy",
-      "bacteria",
-      "archaea"
-    ],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
-  },
-  {
-    "id": "gwascatalog",
-    "title": "GWAS catalog",
-    "description": {},
-    "providers": [
-      {
-        "en": "European Bioinformatics Institute"
-      }
-    ],
-    "tags": [],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": ""
-  },
-  {
-    "id": "hgnc",
-    "title": "HGNC\\: The resource for approved human gene nomenclature",
-    "description": {
-      "en": "The HGNC is a resource for approved human gene nomenclature containing ~42000 gene",
-      "ja": "HGNCで承認された42000の遺伝子シンボルと遺伝子名称、1300以上の遺伝子ファミリーとセ"
-    },
-    "providers": [
-      {
-        "en": "HUGO Gene Nomenclature Committee at the European Bioinformatics Institute",
-        "ja": "HUGO Gene Nomenclature Committee at the European Bioinformatics Institute"
-      }
-    ],
-    "tags": [
-      "Gene",
-      "Ontology/ Terminology/Nomenclature"
-    ],
-    "statistics": {
-      "number_of_triples": 1314653,
-      "number_of_instances": 355645,
-      "number_of_subjects": 355645,
-      "number_of_properties": 9,
-      "number_of_objects": 776470,
-      "number_of_literals": 464474,
-      "number_of_classes": 18,
-      "number_of_datatypes": 1,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
-  },
-  {
-    "id": "homologene",
-    "title": "HomoloGene RDF",
-    "description": {
-      "en": "HomoloGene RDF is a translation of HomoloGene data into RDF."
-    },
-    "providers": [
-      {
-        "en": "National Center for Biotechnology Information"
-      }
-    ],
-    "tags": [
-      "Genome",
-      "Gene",
-      "Phylogeny/Classification"
-    ],
-    "statistics": {
-      "number_of_triples": 1553120,
-      "number_of_instances": 319471,
-      "number_of_subjects": 319471,
-      "number_of_properties": 8,
-      "number_of_objects": 773372,
-      "number_of_literals": 222872,
-      "number_of_classes": 3,
-      "number_of_datatypes": 1,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
-  },
-  {
-    "id": "hop",
-    "title": "RDF title",
-    "description": {
-      "en": "RDF description."
-    },
-    "providers": [],
-    "tags": [],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": ""
-  },
-  {
-    "id": "hpo",
-    "title": "RDF title",
-    "description": {
-      "en": "RDF description."
-    },
-    "providers": [],
-    "tags": [],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": ""
-  },
-  {
-    "id": "jcm",
-    "title": "Metadata of JCM resources",
-    "description": {
-      "en": "A RDF-based meta-database of microbial strains used in various researches such as biology, environment and human health as bioresources. Microbial strains are available from Japan Collection of Microorganisms (JCM) in RIKEN BioResource Center. Please visit data browser at http://metadb.riken.jp/metadb/db/rikenbrc_jcm_microbe"
-    },
-    "providers": [
-      {
-        "en": "RIKEN"
-      }
-    ],
-    "tags": [
-      "Organism",
-      "Bioresource"
-    ],
-    "statistics": {
-      "number_of_triples": 1106776,
-      "number_of_instances": 257250,
-      "number_of_subjects": 257250,
-      "number_of_properties": 37,
-      "number_of_objects": 439741,
-      "number_of_literals": 181813,
-      "number_of_classes": 18,
-      "number_of_datatypes": 4,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
-  },
-  {
-    "id": "jpostdb",
-    "title": "jPOST databse RDF",
-    "description": {
-      "en": "jPOST database RDF is described the re-analyzed proteome dataset in the jPOST project."
-    },
-    "providers": [],
-    "tags": [],
-    "statistics": {
-      "number_of_triples": 239817763,
-      "number_of_instances": 68502884,
-      "number_of_subjects": 68502952,
-      "number_of_properties": 77,
-      "number_of_objects": 79998555,
-      "number_of_literals": 11392480,
-      "number_of_classes": 86,
-      "number_of_datatypes": 6,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
-  },
-  {
-    "id": "kero",
-    "title": "DBKERO RDF",
-    "description": {
-      "en": "DBKERO is a collection of multi-omics data sets including SNV, RNA-seq, ChIP-seq, BS-seq and TSS-seq. The ChIP-seq part is big, so its lite version chip_seq_lite is included. The original big ChIP-seq data can also be downloaded at https://integbio.jp/rdf/download/kero/2017-01-27/all/chip_seq_all.tar.gz ."
-    },
-    "providers": [],
-    "tags": [
-      "Genome",
-      "Polymorphism",
-      "Other DNA",
-      "Gene expression",
-      "Others"
-    ],
-    "statistics": {
-      "number_of_triples": 11198913244,
-      "number_of_instances": 965303305,
-      "number_of_subjects": 965396913,
-      "number_of_properties": 74,
-      "number_of_objects": 7487172343,
-      "number_of_literals": 1785025220,
-      "number_of_classes": 44,
-      "number_of_datatypes": 4,
-      "number_of_links": 0
-    },
-    "endpoint": "kero"
-  },
-  {
-    "id": "knapsack",
-    "title": "KNApSAcK RDF",
-    "description": {
-      "en": "RDFized dataset in the KNApSAcK family database.",
-      "ja": "KNApSAcKファミリーデータベースのRDFデータセット"
-    },
-    "providers": [
-      {
-        "en": "National Institute of Genetics",
-        "ja": "国立遺伝学研究所"
-      }
-    ],
-    "tags": [
-      "Compound",
-      "Taxonomy",
-      "Publication",
-      "Activity"
-    ],
-    "statistics": {
-      "number_of_triples": 3776538,
-      "number_of_instances": 711388,
-      "number_of_subjects": 712296,
-      "number_of_properties": 33,
-      "number_of_objects": 1781448,
-      "number_of_literals": 457162,
-      "number_of_classes": 20,
-      "number_of_datatypes": 4,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
-  },
-  {
-    "id": "linked_icgc",
-    "title": "RDF title",
-    "description": {
-      "en": "RDF description."
-    },
-    "providers": [],
-    "tags": [],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": ""
-  },
-  {
-    "id": "mbgd",
-    "title": "RDF title",
-    "description": {
-      "en": "RDF description."
-    },
-    "providers": [],
-    "tags": [],
-    "statistics": {
-      "number_of_triples": 1609018143,
-      "number_of_instances": 273443876,
-      "number_of_subjects": 309702751,
-      "number_of_properties": 79,
-      "number_of_objects": 472067973,
-      "number_of_literals": 74289149,
-      "number_of_classes": 32,
-      "number_of_datatypes": 5,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
-  },
-  {
-    "id": "medgen",
-    "title": "MedGen",
-    "description": {
-      "en": "MedGen organizes Information related to human medical genetics, such as attributes of conditions with a genetic contribution.",
-      "ja": "MedGenは遺伝が寄与している病態の属性など、ヒト医学遺伝学に関連する情報を整理したデータベースです"
-    },
-    "providers": [
-      {
-        "en": "National Center for Biotechnology Information",
-        "ja": "National Center for Biotechnology Information"
-      }
-    ],
-    "tags": [
-      "Health/Disease",
-      "Ontology/Terminology/Nomenclature"
-    ],
-    "statistics": {
-      "number_of_triples": 126664418,
-      "number_of_instances": 2717458,
-      "number_of_subjects": 3864020,
-      "number_of_properties": 65,
-      "number_of_objects": 30474902,
-      "number_of_literals": 4147574,
-      "number_of_classes": 4,
-      "number_of_datatypes": 1,
-      "number_of_links": 0
-    },
-    "endpoint": "ncbi"
-  },
-  {
-    "id": "mediadive",
-    "title": "MediaDive RDF",
-    "description": {
-      "en": "MediaDive is the largest collection of cultivation media and growth conditions.",
-      "ja": "MediaDive is the world's largest collection of cultivation media."
-    },
-    "providers": [
-      {
-        "en": "Leibniz Institute DSMZ-German Collection of Microorganisms and Cell Cultures",
-        "ja": "DSMZ"
+        "en": "National Institute of Technology and Evaluation"
       }
     ],
     "tags": [
@@ -993,69 +1666,38 @@
       "Cell",
       "Bioresource"
     ],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": ""
-  },
-  {
-    "id": "mesh",
-    "title": "Medical Subject Headings (MeSH) RDF Dataset Description",
-    "description": {
-      "en": "A linked data representation of the MeSH biomedical vocabulary produced by the National Library of Medicine."
-    },
-    "providers": [
+    "licenses": [
       {
-        "en": "National Library of Medicine"
+        "name": "Creative Commons Attribution-ShareAlike 2.1 Japan (CC BY-SA 2.1 JP)",
+        "url": null,
+        "credit": null
+      },
+      {
+        "name": "Dataset of NBRC bioresource (C) NITE NBRC licensed under CC Attribution-ShareAlike 2.1 Japan",
+        "url": null,
+        "credit": null
       }
     ],
-    "tags": [
-      "Ontology/ Terminology/Nomenclature"
+    "creators": [
+      {
+        "name": "Masami Namihira",
+        "affiliation": null
+      }
     ],
+    "website": "https://www.nite.go.jp/en/index.html",
     "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
+      "number_of_triples": 868816,
+      "number_of_instances": 172348,
+      "number_of_subjects": 172348,
+      "number_of_properties": 33,
+      "number_of_objects": 342897,
+      "number_of_literals": 129439,
+      "number_of_classes": 11,
+      "number_of_datatypes": 3,
       "number_of_links": 0
     },
-    "endpoint": "ncbi"
-  },
-  {
-    "id": "mondo",
-    "title": "Mondo Disease Ontology",
-    "description": {
-      "en": "The Mondo Disease Ontology (MONDO) is a harmonized, logic-based disease classification that unifies and standardizes terminology across diverse medical sources by integrating mappings (with precise semantics) from databases such as OMIM, Orphanet, SNOMED CT, and ICD"
-    },
-    "providers": [],
-    "tags": [
-      "Health/Disease",
-      "Ontology/ Terminology/Nomenclature"
-    ],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": ""
+    "endpoint": "primary",
+    "issued": "2023-10-01"
   },
   {
     "id": "nadd",
@@ -1075,6 +1717,20 @@
       "Structure",
       "Journal article/Report/Bibliography"
     ],
+    "licenses": [
+      {
+        "name": "Attribution-ShareAlike 2.1 Japan (CC BY-SA 2.1)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Kazuhiko Fukui",
+        "affiliation": null
+      }
+    ],
+    "website": "https://medals.jp/edrugnainfo.html",
     "statistics": {
       "number_of_triples": 948,
       "number_of_instances": 112,
@@ -1086,99 +1742,59 @@
       "number_of_datatypes": 2,
       "number_of_links": 0
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "issued": "2023-10-01"
   },
   {
-    "id": "nando",
-    "title": "NANDO",
+    "id": "rhea",
+    "title": "Rhea",
     "description": {
-      "en": "NANDO is a vocabulary that systematically and comprehensively organizes designated intractable diseases and pediatric chronic specific diseases, including their subtypes. Each disease in NANDO is linked to Mondo (Monarch Disease Ontology), a disease vocabulary adopted by many international databases and systems, enabling integration with major international disease databases such as OMIM and Orphanet.",
-      "ja": "NANDOは指定難病制度および小児慢性特定疾病制度を対象に、難病名を体系的かつ網羅的に整理した語彙集です。NANDOの各疾患は、国際的に多くのデータベースやシステムで採用されている疾患語彙集Mondo（Monarch Disease Ontology）と紐づけられており、OMIMやOrphanetといった国外の主要疾患データベースとの連携が可能です。"
-    },
-    "providers": [],
-    "tags": [
-      "Health/Disease",
-      "Tag sequence (nucleic acid)",
-      "Ontology/ Terminology/Nomenclature"
-    ],
-    "statistics": {
-      "number_of_triples": 36933,
-      "number_of_instances": 2780,
-      "number_of_subjects": 2780,
-      "number_of_properties": 19,
-      "number_of_objects": 16434,
-      "number_of_literals": 20499,
-      "number_of_classes": 4,
-      "number_of_datatypes": 3,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
-  },
-  {
-    "id": "naro_genebank",
-    "title": "Dataset of NARO Genebank Microorganism Bioresource",
-    "description": {
-      "en": "A dataset for microbes which are maintained, managed and provided from Genebank Project, NARO.",
-      "ja": "農研機構農業生物資源ジーンバンクが維持・管理・分譲している食料・農業に係る微生物遺伝資源のデータセット"
+      "en": "An expert curated resource of biochemical reactions designed for the annotation of enzymes and genome-scale metabolic networks and models.",
+      "ja": "酵素とゲノムスケールの代謝ネットワークやモデルのアノテーションに使用することを目的とした、専門家によってキュレーションされた生化学反応のリソース。"
     },
     "providers": [
       {
-        "en": "The Research Center of Genetic Resources, NARO (National Agriculture and Food Research Organization)",
-        "ja": "国立研究開発法人 農業・食品産業技術総合研究機構　遺伝資源研究センター"
+        "en": "SIB and EMBL-EBI",
+        "ja": "SIB and EMBL-EBI"
       }
     ],
     "tags": [
-      "Organism",
-      "Bioresource"
+      "Protein Enzyme"
     ],
-    "statistics": {
-      "number_of_triples": 132210,
-      "number_of_instances": 52884,
-      "number_of_subjects": 26442,
-      "number_of_properties": 4,
-      "number_of_objects": 79326,
-      "number_of_literals": 52884,
-      "number_of_classes": 2850,
-      "number_of_datatypes": 1,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
-  },
-  {
-    "id": "nbrc",
-    "title": "Dataset of NBRC bioresource",
-    "description": {
-      "en": "Dataset of NBRC bioresource is a dataset for microbes which are maintained, managed and provided from NBRC (NITE Biological Resource Center)."
-    },
-    "providers": [
+    "licenses": [
       {
-        "en": "National Institute of Technology and Evaluation"
+        "name": "Attribution 4.0 International (CC BY 4.0)",
+        "url": null,
+        "credit": null
       }
     ],
-    "tags": [
-      "Organism",
-      "Cell",
-      "Bioresource"
+    "creators": [
+      {
+        "name": "Anne Morgat",
+        "affiliation": null
+      }
     ],
+    "website": "https://www.rhea-db.org/",
     "statistics": {
-      "number_of_triples": 868816,
-      "number_of_instances": 172348,
-      "number_of_subjects": 172348,
-      "number_of_properties": 33,
-      "number_of_objects": 342897,
-      "number_of_literals": 129439,
-      "number_of_classes": 11,
-      "number_of_datatypes": 3,
+      "number_of_triples": 0,
+      "number_of_instances": 0,
+      "number_of_subjects": 0,
+      "number_of_properties": 0,
+      "number_of_objects": 0,
+      "number_of_literals": 0,
+      "number_of_classes": 0,
+      "number_of_datatypes": 0,
       "number_of_links": 0
     },
-    "endpoint": "primary"
+    "endpoint": "ebi",
+    "issued": "2015-01-01"
   },
   {
-    "id": "ncbigene",
-    "title": "NCBI Gene RDF",
+    "id": "pubchem",
+    "title": "PubChem RDF",
     "description": {
-      "en": "NCBI Gene RDF is a translation of NCBI Gene data into RDF.",
-      "ja": "NCBI Gene RDFは、NCBI GeneのデータをRDFに変換したものです。"
+      "en": "PubChem is an open chemistry database at the National Institutes of Health (NIH). For the detailed information, please see the following URL\\: https\\://pubchemdocs.ncbi.nlm.nih.gov/about. \\Note\\: The endpoint does not include files provided at ftp\\://ftp.ncbi.nlm.nih.gov/pubchem/RDF/compound/nbr2d/ and ftp\\://ftp.ncbi.nlm.nih.gov/pubchem/RDF/compound/nbr3d/\\",
+      "ja": "PubChem は、NIHが提供する、網羅的な化合物のデータベースです。詳細な情報は次のURLを参照してください: https://pubchemdocs.ncbi.nlm.nih.gov/about 注意\\: エンドポイントには次のURLのファイルは含まれていません。 ftp\\://ftp.ncbi.nlm.nih.gov/pubchem/RDF/compound/nbr2d/ , ftp\\://ftp.ncbi.nlm.nih.gov/pubchem/RDF/compound/nbr3d/"
     },
     "providers": [
       {
@@ -1187,109 +1803,31 @@
       }
     ],
     "tags": [
-      "Gene"
-    ],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": "ncbi"
-  },
-  {
-    "id": "nikkaji",
-    "title": "Nikkaji RDF",
-    "description": {
-      "en": "NBDC NikkajiRDF is RDF data of Japan Chemical Substance Dictionary (Nikkaji), which is one of the largest chemical substance databases in Japan."
-    },
-    "providers": [
-      {
-        "en": "Japan Science and Technology Agency (JST)"
-      }
-    ],
-    "tags": [
       "Drug/Chemical",
-      "Others",
-      "Structure",
-      "Image/Movie"
+      "Other biomolecule"
     ],
-    "statistics": {
-      "number_of_triples": 344246952,
-      "number_of_instances": 25789378,
-      "number_of_subjects": 42867660,
-      "number_of_properties": 28,
-      "number_of_objects": 164414153,
-      "number_of_literals": 72955196,
-      "number_of_classes": 43957,
-      "number_of_datatypes": 4,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
-  },
-  {
-    "id": "nlm-catalog",
-    "title": "NLM Catalog",
-    "description": {
-      "en": "NLM bibliographic data on journals, books, audiovisual materials, computer software, electronic resources, and other materials",
-      "ja": "NLMの書誌データ：雑誌、書籍、視聴覚資料、コンピュータソフトウェア、電子リソース、その他の資料に関する情報"
-    },
-    "providers": [
+    "licenses": [
       {
-        "en": "National Library of Medicine",
-        "ja": "National Library of Medicine"
+        "name": null,
+        "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+        "credit": null
       }
     ],
-    "tags": [
-      "Ontology/Terminology/Nomenclature",
-      "Journal article/Report/Bibliography"
-    ],
+    "creators": [],
+    "website": "https://pubchem.ncbi.nlm.nih.gov/",
     "statistics": {
-      "number_of_triples": 203480,
-      "number_of_instances": 39010,
-      "number_of_subjects": 39010,
-      "number_of_properties": 6,
-      "number_of_objects": 162648,
-      "number_of_literals": 162647,
-      "number_of_classes": 1,
-      "number_of_datatypes": 1,
+      "number_of_triples": 15277890568,
+      "number_of_instances": 3242206543,
+      "number_of_subjects": 3961621679,
+      "number_of_properties": 127,
+      "number_of_objects": 4459433649,
+      "number_of_literals": 813082494,
+      "number_of_classes": 281938,
+      "number_of_datatypes": 7,
       "number_of_links": 0
     },
-    "endpoint": "ncbi"
-  },
-  {
-    "id": "oma",
-    "title": "Orthologous MAtrix (OMA) RDF",
-    "description": {
-      "en": "The OMA (Orthologous MAtrix) project is a method and database for the inference of orthologs among complete genomes. The OMA RDF is a view of the OMA database in RDF."
-    },
-    "providers": [
-      {
-        "en": "SIB Swiss Institute of Bioinformatics"
-      }
-    ],
-    "tags": [
-      "Genome",
-      "Gene",
-      "Phylogeny/Classification"
-    ],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": "sib"
+    "endpoint": "pubchem",
+    "issued": "2015-01-01"
   },
   {
     "id": "opentggates",
@@ -1308,6 +1846,20 @@
       "Health/Disease",
       "Gene expression"
     ],
+    "licenses": [
+      {
+        "name": "http://toxico.nibiohn.go.jp/english/agreement.html",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Yoshinobu Igarashi",
+        "affiliation": null
+      }
+    ],
+    "website": "http://toxico.nibiohn.go.jp/english/index.html",
     "statistics": {
       "number_of_triples": 6800384609,
       "number_of_instances": 1497955718,
@@ -1319,37 +1871,8 @@
       "number_of_datatypes": 5,
       "number_of_links": 0
     },
-    "endpoint": "primary"
-  },
-  {
-    "id": "paconto",
-    "title": "PAConto",
-    "description": {
-      "en": ">"
-    },
-    "providers": [
-      {
-        "en": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
-      }
-    ],
-    "tags": [
-      "Other biomolecule",
-      "Health/Disease",
-      "Interaction/Pathway",
-      "Structure"
-    ],
-    "statistics": {
-      "number_of_triples": 81785,
-      "number_of_instances": 9296,
-      "number_of_subjects": 9329,
-      "number_of_properties": 117,
-      "number_of_objects": 16396,
-      "number_of_literals": 8586,
-      "number_of_classes": 63,
-      "number_of_datatypes": 3,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "issued": "2015-01-01"
   },
   {
     "id": "pdb",
@@ -1363,6 +1886,20 @@
       "Tag sequence (nucleic acid)",
       "Gene expression"
     ],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0) Database Center for Life Science",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Shuichi Kawahsima",
+        "affiliation": null
+      }
+    ],
+    "website": "http://refex.dbcls.jp/index.php?lang=ja",
     "statistics": {
       "number_of_triples": 0,
       "number_of_instances": 0,
@@ -1374,36 +1911,88 @@
       "number_of_datatypes": 0,
       "number_of_links": 0
     },
-    "endpoint": "pdb"
+    "endpoint": "pdb",
+    "issued": "2017-01-01"
   },
   {
-    "id": "polyinfo",
-    "title": "PolyInfo BDG_S, ID definition",
+    "id": "quanto",
+    "title": "Quanto RDF",
     "description": {
-      "en": "NIMS polymer database PoLyInfo-Bio Linkage Project, Definition of biodegradation IDs and linking schemas for synthetic polymers.",
-      "ja": "NIMS高分子データベースPoLyInfoーバイオ連携プロジェクト、合成高分子の生分解IDと連携スキーマの定義"
+      "en": "Raw sequence data quality statistics calculated from the Sequence Read Archive data"
+    },
+    "providers": [],
+    "tags": [],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Tazro Inutano Ohta",
+        "affiliation": null
+      }
+    ],
+    "website": "https://sra.dbcls.jp/",
+    "statistics": {
+      "number_of_triples": 107782639,
+      "number_of_instances": 21955729,
+      "number_of_subjects": 21955729,
+      "number_of_properties": 37,
+      "number_of_objects": 31484031,
+      "number_of_literals": 10369656,
+      "number_of_classes": 9,
+      "number_of_datatypes": 4,
+      "number_of_links": 0
+    },
+    "endpoint": "primary",
+    "issued": "2019-01-01"
+  },
+  {
+    "id": "ncbigene",
+    "title": "NCBI Gene RDF",
+    "description": {
+      "en": "NCBI Gene RDF is a translation of NCBI Gene data into RDF.",
+      "ja": "NCBI Gene RDFは、NCBI GeneのデータをRDFに変換したものです。"
     },
     "providers": [
       {
-        "en": "National Institute for Materials Science",
-        "ja": "国立研究開発法人物質・材料研究機構"
+        "en": "National Center for Biotechnology Information",
+        "ja": "National Center for Biotechnology Information"
       }
     ],
     "tags": [
-      "Drug/Chemical"
+      "Gene"
     ],
+    "licenses": [
+      {
+        "name": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Hirokazu Chiba",
+        "affiliation": null
+      }
+    ],
+    "website": "https://www.ncbi.nlm.nih.gov/gene/",
     "statistics": {
-      "number_of_triples": 5446,
-      "number_of_instances": 1328,
-      "number_of_subjects": 1329,
-      "number_of_properties": 18,
-      "number_of_objects": 3293,
-      "number_of_literals": 2117,
-      "number_of_classes": 14,
-      "number_of_datatypes": 3,
+      "number_of_triples": 0,
+      "number_of_instances": 0,
+      "number_of_subjects": 0,
+      "number_of_properties": 0,
+      "number_of_objects": 0,
+      "number_of_literals": 0,
+      "number_of_classes": 0,
+      "number_of_datatypes": 0,
       "number_of_links": 0
     },
-    "endpoint": "primary"
+    "endpoint": "ncbi",
+    "issued": "2018-01-01"
   },
   {
     "id": "pubcasefinder",
@@ -1423,6 +2012,20 @@
       "Phenotype",
       "Disease Search"
     ],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0) Database Center for Life Science",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Jaemoon Shin",
+        "affiliation": null
+      }
+    ],
+    "website": "https://pubcasefinder.dbcls.jp/",
     "statistics": {
       "number_of_triples": 16367389,
       "number_of_instances": 1719564,
@@ -1434,119 +2037,48 @@
       "number_of_datatypes": 2,
       "number_of_links": 0
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "issued": "2018-01-01"
   },
   {
-    "id": "pubchem",
-    "title": "PubChem RDF",
+    "id": "biosample",
+    "title": "BioSample RDF",
     "description": {
-      "en": "PubChem is an open chemistry database at the National Institutes of Health (NIH). For the detailed information, please see the following URL\\: https\\://pubchemdocs.ncbi.nlm.nih.gov/about. \\Note\\: The endpoint does not include files provided at ftp\\://ftp.ncbi.nlm.nih.gov/pubchem/RDF/compound/nbr2d/ and ftp\\://ftp.ncbi.nlm.nih.gov/pubchem/RDF/compound/nbr3d/\\",
-      "ja": "PubChem は、NIHが提供する、網羅的な化合物のデータベースです。詳細な情報は次のURLを参照してください: https://pubchemdocs.ncbi.nlm.nih.gov/about 注意\\: エンドポイントには次のURLのファイルは含まれていません。 ftp\\://ftp.ncbi.nlm.nih.gov/pubchem/RDF/compound/nbr2d/ , ftp\\://ftp.ncbi.nlm.nih.gov/pubchem/RDF/compound/nbr3d/"
+      "en": "BioSample RDF developed by DBCLS and distributed by DDBJ"
     },
     "providers": [
       {
-        "en": "National Center for Biotechnology Information",
-        "ja": "National Center for Biotechnology Information"
+        "en": "Bioinformation and DDBJ Center"
       }
     ],
-    "tags": [
-      "Drug/Chemical",
-      "Other biomolecule"
-    ],
-    "statistics": {
-      "number_of_triples": 15277890568,
-      "number_of_instances": 3242206543,
-      "number_of_subjects": 3961621679,
-      "number_of_properties": 127,
-      "number_of_objects": 4459433649,
-      "number_of_literals": 813082494,
-      "number_of_classes": 281938,
-      "number_of_datatypes": 7,
-      "number_of_links": 0
-    },
-    "endpoint": "pubchem"
-  },
-  {
-    "id": "pubmed",
-    "title": "PubMed",
-    "description": {
-      "en": "PubMed comprises more than 30 million citations for biomedical literature from MEDLINE, life science journals,",
-      "ja": "PubMedは、MEDLINE、ライフサイエンスジャーナル、オンラインブックからの生物医学文献の3000万件以上の引用を収録し"
-    },
-    "providers": [
-      {
-        "en": "National Institute of Technology and Evaluation",
-        "ja": "National Institute of Technology and Evaluation"
-      }
-    ],
-    "tags": [
-      "Others",
-      "Journal article/Report/Bibliography",
-      ""
-    ],
-    "statistics": {
-      "number_of_triples": 2531937601,
-      "number_of_instances": 194957460,
-      "number_of_subjects": 390607060,
-      "number_of_properties": 41,
-      "number_of_objects": 582849523,
-      "number_of_literals": 223825051,
-      "number_of_classes": 2,
-      "number_of_datatypes": 3,
-      "number_of_links": 0
-    },
-    "endpoint": "ncbi"
-  },
-  {
-    "id": "pubtator",
-    "title": "PubTator Central",
-    "description": {
-      "en": "Automatic annotations of biomedical concepts such as genes and mutations in PubMed abstracts and PMC full-text",
-      "ja": "PubMed抄録やPMC全文記事の遺伝子名や変異名などの生物医学的概念を自動アノテーションした情報です。"
-    },
-    "providers": [
-      {
-        "en": "National Center for Biotechnology Information",
-        "ja": "National Center for Biotechnology Information"
-      }
-    ],
-    "tags": [
-      "Others",
-      "Journal article/Report/Bibliography"
-    ],
-    "statistics": {
-      "number_of_triples": 1107708438,
-      "number_of_instances": 221933712,
-      "number_of_subjects": 221933712,
-      "number_of_properties": 6,
-      "number_of_objects": 25723106,
-      "number_of_literals": 14,
-      "number_of_classes": 1,
-      "number_of_datatypes": 2,
-      "number_of_links": 0
-    },
-    "endpoint": "ncbi"
-  },
-  {
-    "id": "quanto",
-    "title": "Quanto RDF",
-    "description": {
-      "en": "Raw sequence data quality statistics calculated from the Sequence Read Archive data"
-    },
-    "providers": [],
     "tags": [],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Tazro Ohta",
+        "affiliation": null
+      }
+    ],
+    "website": "https://ddbj.nig.ac.jp/",
     "statistics": {
-      "number_of_triples": 107782639,
-      "number_of_instances": 21955729,
-      "number_of_subjects": 21955729,
-      "number_of_properties": 37,
-      "number_of_objects": 31484031,
-      "number_of_literals": 10369656,
-      "number_of_classes": 9,
-      "number_of_datatypes": 4,
+      "number_of_triples": 0,
+      "number_of_instances": 0,
+      "number_of_subjects": 0,
+      "number_of_properties": 0,
+      "number_of_objects": 0,
+      "number_of_literals": 0,
+      "number_of_classes": 0,
+      "number_of_datatypes": 0,
       "number_of_links": 0
     },
-    "endpoint": "primary"
+    "endpoint": "ebi",
+    "issued": "2020-03-01"
   },
   {
     "id": "reactome",
@@ -1564,6 +2096,20 @@
     "tags": [
       "Interaction/Pathway"
     ],
+    "licenses": [
+      {
+        "name": "Creative Commons Public Domain (CC0) License",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Reactome Team (https://reactome.org/)",
+        "affiliation": null
+      }
+    ],
+    "website": "https://reactome.org/",
     "statistics": {
       "number_of_triples": 0,
       "number_of_instances": 0,
@@ -1575,190 +2121,98 @@
       "number_of_datatypes": 0,
       "number_of_links": 0
     },
-    "endpoint": "ebi"
+    "endpoint": "ebi",
+    "issued": "2014-01-01"
   },
   {
-    "id": "refex",
-    "title": "RefEx RDF",
+    "id": "ggdonto",
+    "title": "GGDonto",
     "description": {
-      "en": "RDFized reference gene expresson dataset derived from CAGE and GeneChip experiments in the RefEx database."
-    },
-    "providers": [],
-    "tags": [
-      "Gene",
-      "Tag sequence (nucleic acid)",
-      "Gene expression"
-    ],
-    "statistics": {
-      "number_of_triples": 123447475,
-      "number_of_instances": 19828635,
-      "number_of_subjects": 24260736,
-      "number_of_properties": 47,
-      "number_of_objects": 27438991,
-      "number_of_literals": 22820176,
-      "number_of_classes": 10,
-      "number_of_datatypes": 9,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
-  },
-  {
-    "id": "rhea",
-    "title": "Rhea",
-    "description": {
-      "en": "An expert curated resource of biochemical reactions designed for the annotation of enzymes and genome-scale metabolic networks and models.",
-      "ja": "酵素とゲノムスケールの代謝ネットワークやモデルのアノテーションに使用することを目的とした、専門家によってキュレーションされた生化学反応のリソース。"
+      "en": "GGDonto is the Ontology of the Genetic Diseases related to the Glycan Metabolism. GGDonto describes the knowledge about Congenital Disorders of Glycosylation (CDG) and Lysosomal Storage Diseases (LSD). GGDonto provides the information on 120 genetic diseases of the glycan synthesis and the degradation and their causative genes."
     },
     "providers": [
       {
-        "en": "SIB and EMBL-EBI",
-        "ja": "SIB and EMBL-EBI"
+        "en": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
       }
     ],
     "tags": [
-      "Protein Enzyme"
-    ],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": "ebi"
-  },
-  {
-    "id": "sra_experiment",
-    "title": "SRA Experiment RDF",
-    "description": {
-      "en": "SRA Experiment RDF developed by DBCLS and distributed by DDBJ"
-    },
-    "providers": [
-      {
-        "en": "Bioinformation and DDBJ Center"
-      }
-    ],
-    "tags": [],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": ""
-  },
-  {
-    "id": "ssbd",
-    "title": ">",
-    "description": {
-      "en": "Meta-information of quantitative data and datasets of microscopy images provided from SSBD database"
-    },
-    "providers": [],
-    "tags": [
-      "Cell",
-      "Organism",
       "Other biomolecule",
-      "Image/Movie",
-      "Gene expression",
-      "Others"
+      "Health/Disease",
+      "Gene",
+      "Ontology/Terminology/Nomenclature",
+      "Interaction/Pathway"
     ],
+    "licenses": [
+      {
+        "name": "Attribution-NonCommercial-ShareAlike 2.1 Japan (CC BY-NC-SA 2.1)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Hisashi Narimatsu",
+        "affiliation": null
+      }
+    ],
+    "website": "http://acgg.asia/db/diseases/",
     "statistics": {
-      "number_of_triples": 40300,
-      "number_of_instances": 6644,
-      "number_of_subjects": 6644,
-      "number_of_properties": 33,
-      "number_of_objects": 9329,
-      "number_of_literals": 3807,
-      "number_of_classes": 18,
-      "number_of_datatypes": 4,
+      "number_of_triples": 39440,
+      "number_of_instances": 1705,
+      "number_of_subjects": 1782,
+      "number_of_properties": 943,
+      "number_of_objects": 8977,
+      "number_of_literals": 4963,
+      "number_of_classes": 23,
+      "number_of_datatypes": 2,
       "number_of_links": 0
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "issued": "2018-01-01"
   },
   {
-    "id": "togoid",
-    "title": "TogoID RDF",
+    "id": "glycoepitope",
+    "title": "GlycoEpitope",
     "description": {
-      "en": "TogoID is a service to search and convert links between database identifiers.",
-      "ja": "TogoID は、データベースIDの関係をもとに、IDの検索や変換を行うサービスです。"
+      "en": "GlycoEpitope is a database of useful information on carbohydrate antigens and antibodies.",
+      "ja": "GlycoEpitopeは、糖鎖抗体とその抗原についてのデータベースです"
     },
     "providers": [
       {
-        "en": "Database Center for Life Science, Joint Support-Center for Data Science Research, Research Organization of Information and Systems, Japan",
-        "ja": "情報・システム研究機構、データサイエンス共同利用基盤施設、ライフサイエンス統合データベースセンター"
+        "en": "Ritsumeikan University",
+        "ja": "立命館大学"
       }
     ],
     "tags": [
-      "Others"
+      "Other biomolecule",
+      "Structure"
     ],
-    "statistics": {
-      "number_of_triples": 7770732116,
-      "number_of_instances": 0,
-      "number_of_subjects": 7772603802,
-      "number_of_properties": 75,
-      "number_of_objects": 7772603802,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
-  },
-  {
-    "id": "uniprot",
-    "title": "UniProt RDF",
-    "description": {
-      "en": "The Universal Protein Resource (UniProt) is a comprehensive resource for protein sequence and annotation data."
-    },
-    "providers": [
+    "licenses": [
       {
-        "en": "The Swiss Institute of Bioinformatics"
+        "name": "Creative Commons Attribution-ShareAlike 2.1 Japan (CC BY-SA 2.1 JP)",
+        "url": "https://creativecommons.org/licenses/by-sa/2.1/jp/deed.en",
+        "credit": "GlycoEpitope licensed under CC Attribution-Share Alike 2.1 Japan"
       }
     ],
-    "tags": [
-      "Protein"
+    "creators": [
+      {
+        "name": "Tshisuke Kawasaki",
+        "affiliation": null
+      }
     ],
+    "website": "https://www.glycoepitope.jp/",
     "statistics": {
-      "number_of_triples": 54381877065,
-      "number_of_instances": 9554097609,
-      "number_of_subjects": 11388277803,
-      "number_of_properties": 200,
-      "number_of_objects": 10609965660,
-      "number_of_literals": 1131363044,
-      "number_of_classes": 157,
-      "number_of_datatypes": 11,
+      "number_of_triples": 30150,
+      "number_of_instances": 5726,
+      "number_of_subjects": 8678,
+      "number_of_properties": 35,
+      "number_of_objects": 10723,
+      "number_of_literals": 5453,
+      "number_of_classes": 24,
+      "number_of_datatypes": 2,
       "number_of_links": 0
     },
-    "endpoint": "sib"
-  },
-  {
-    "id": "wurcs",
-    "title": "RDF title",
-    "description": {
-      "en": "RDF description."
-    },
-    "providers": [],
-    "tags": [],
-    "statistics": {
-      "number_of_triples": 6213789,
-      "number_of_instances": 817535,
-      "number_of_subjects": 1365653,
-      "number_of_properties": 56,
-      "number_of_objects": 1138140,
-      "number_of_literals": 40435,
-      "number_of_classes": 14,
-      "number_of_datatypes": 4,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "issued": "2019-01-01"
   }
 ]

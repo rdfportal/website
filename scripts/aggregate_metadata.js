@@ -38,13 +38,26 @@ function parseYaml(yamlContent) {
     description: "",
     tags: [],
     provider: "",
+    licenses: [],
+    creators: [],
+    website: null,
   };
 
   let currentKey = null;
   let inTags = false;
+  let inLicense = false;
+  let inLicenses = false;
+  let currentLicense = {};
+  let inCreators = false;
+  let currentCreator = {};
 
   for (const line of lines) {
     const trimmed = line.trim();
+
+    // Skip empty lines and comments
+    if (!trimmed || trimmed.startsWith("#")) {
+      continue;
+    }
 
     if (trimmed.startsWith("title:")) {
       result.title = trimmed
@@ -52,12 +65,16 @@ function parseYaml(yamlContent) {
         .trim()
         .replace(/^["']|["']$/g, "");
       inTags = false;
+      inLicense = false;
+      inLicenses = false;
     } else if (trimmed.startsWith("description:")) {
       result.description = trimmed
         .replace("description:", "")
         .trim()
         .replace(/^["']|["']$/g, "");
       inTags = false;
+      inLicense = false;
+      inLicenses = false;
     } else if (trimmed.startsWith("provider:")) {
       // Added provider extraction
       result.provider = trimmed
@@ -65,6 +82,164 @@ function parseYaml(yamlContent) {
         .trim()
         .replace(/^["']|["']$/g, "");
       inTags = false;
+      inLicense = false;
+      inLicenses = false;
+    } else if (trimmed.startsWith("website:")) {
+      // Extract website URL
+      result.website = trimmed
+        .replace("website:", "")
+        .trim()
+        .replace(/^["']|["']$/g, "");
+      inTags = false;
+      inLicense = false;
+      inLicenses = false;
+    } else if (trimmed.startsWith("license:")) {
+      const licenseLine = trimmed.replace("license:", "").trim();
+
+      if (licenseLine === "") {
+        // Multiline license object
+        inLicense = true;
+        inLicenses = false;
+        inTags = false;
+        currentLicense = {};
+      } else {
+        // Inline license, treat as a single license name
+        result.licenses.push({
+          name: licenseLine.replace(/^["']|["']$/g, ""),
+          url: null,
+          credit: null,
+        });
+      }
+    } else if (trimmed.startsWith("licenses:")) {
+      const licensesLine = trimmed.replace("licenses:", "").trim();
+
+      if (licensesLine.startsWith("[") && licensesLine.endsWith("]")) {
+        // Inline array format: licenses: [item1, item2]
+        const licensesContent = licensesLine.slice(1, -1).trim();
+        if (licensesContent) {
+          const licenseNames = licensesContent
+            .split(",")
+            .map((license) => license.trim().replace(/^["']|["']$/g, ""));
+
+          result.licenses = licenseNames.map((name) => ({
+            name,
+            url: null,
+            credit: null,
+          }));
+        }
+        inLicenses = false;
+      } else {
+        // Multiline licenses array
+        inLicenses = true;
+        inLicense = false;
+        inTags = false;
+      }
+    } else if (inLicense && trimmed.startsWith("- name:")) {
+      currentLicense.name = trimmed
+        .replace("- name:", "")
+        .trim()
+        .replace(/^["']|["']$/g, "");
+    } else if (inLicense && trimmed.startsWith("- url:")) {
+      currentLicense.url = trimmed
+        .replace("- url:", "")
+        .trim()
+        .replace(/^["']|["']$/g, "");
+    } else if (inLicense && trimmed.startsWith("- credit:")) {
+      currentLicense.credit = trimmed
+        .replace("- credit:", "")
+        .trim()
+        .replace(/^["']|["']$/g, "");
+
+      // Complete license object after processing all fields
+      if (Object.keys(currentLicense).length > 0) {
+        result.licenses.push({
+          name: currentLicense.name || null,
+          url: currentLicense.url || null,
+          credit: currentLicense.credit || null,
+        });
+        currentLicense = {};
+      }
+    } else if (trimmed.startsWith("creators:")) {
+      const creatorsLine = trimmed.replace("creators:", "").trim();
+
+      if (creatorsLine === "") {
+        // Multiline creators array
+        inCreators = true;
+        inTags = false;
+        inLicense = false;
+        inLicenses = false;
+      } else if (creatorsLine.startsWith("[") && creatorsLine.endsWith("]")) {
+        // Inline array format: creators: [creator1, creator2]
+        const creatorsContent = creatorsLine.slice(1, -1).trim();
+        if (creatorsContent) {
+          const creatorNames = creatorsContent
+            .split(",")
+            .map((creator) => creator.trim().replace(/^["']|["']$/g, ""));
+
+          creatorNames.forEach((name) => {
+            result.creators.push({
+              name,
+              affiliation: null,
+            });
+          });
+        }
+      } else {
+        // Single creator as string
+        result.creators.push({
+          name: creatorsLine.replace(/^["']|["']$/g, ""),
+          affiliation: null,
+        });
+      }
+    } else if (inCreators && trimmed.startsWith("- name:")) {
+      currentCreator.name = trimmed
+        .replace("- name:", "")
+        .trim()
+        .replace(/^["']|["']$/g, "");
+    } else if (inCreators && trimmed.startsWith("- affiliation:")) {
+      currentCreator.affiliation = trimmed
+        .replace("- affiliation:", "")
+        .trim()
+        .replace(/^["']|["']$/g, "");
+
+      // After processing affiliation, add the complete creator object
+      if (currentCreator.name) {
+        result.creators.push({
+          name: currentCreator.name,
+          affiliation: currentCreator.affiliation || null,
+        });
+        currentCreator = {};
+      }
+    } else if (
+      inCreators &&
+      trimmed.startsWith("- ") &&
+      !trimmed.includes(":")
+    ) {
+      // Handle direct array item (just a name without affiliation)
+      const creatorName = trimmed
+        .replace("- ", "")
+        .trim()
+        .replace(/^["']|["']$/g, "");
+
+      if (creatorName) {
+        result.creators.push({
+          name: creatorName,
+          affiliation: null,
+        });
+      }
+    } else if (inLicenses && trimmed.startsWith("- ")) {
+      // Handle licenses array format with dashes
+      const licenseName = trimmed
+        .replace("- ", "")
+        .trim()
+        .replace(/^["']|["']$/g, "");
+
+      if (licenseName) {
+        result.licenses.push({
+          name: licenseName,
+          url: null,
+          credit: null,
+        });
+      }
     } else if (trimmed.startsWith("tags:")) {
       const tagsLine = trimmed.replace("tags:", "").trim();
 
@@ -80,6 +255,8 @@ function parseYaml(yamlContent) {
       } else if (tagsLine === "") {
         // Handle multiline array format
         inTags = true;
+        inLicense = false;
+        inLicenses = false;
         result.tags = [];
       } else {
         inTags = false;
@@ -98,6 +275,47 @@ function parseYaml(yamlContent) {
     ) {
       inTags = false;
     }
+
+    // Check if we're entering a new section while in creators mode and have a pending creator
+    if (
+      inCreators &&
+      !trimmed.startsWith("-") &&
+      !trimmed.startsWith(" ") &&
+      Object.keys(currentCreator).length > 0 &&
+      currentCreator.name
+    ) {
+      result.creators.push({
+        name: currentCreator.name,
+        affiliation: currentCreator.affiliation || null,
+      });
+      currentCreator = {};
+      inCreators = false;
+    }
+
+    // Check if we're entering a new section while in license mode
+    if (
+      inLicense &&
+      !trimmed.startsWith("-") &&
+      !trimmed.startsWith(" ") &&
+      Object.keys(currentLicense).length > 0
+    ) {
+      result.licenses.push({
+        name: currentLicense.name || null,
+        url: currentLicense.url || null,
+        credit: currentLicense.credit || null,
+      });
+      currentLicense = {};
+      inLicense = false;
+    }
+  }
+
+  // Handle any remaining license object at the end of file
+  if (inLicense && Object.keys(currentLicense).length > 0) {
+    result.licenses.push({
+      name: currentLicense.name || null,
+      url: currentLicense.url || null,
+      credit: currentLicense.credit || null,
+    });
   }
 
   return result;
@@ -113,6 +331,9 @@ function extractRequiredFields(metadata) {
       description: "",
       provider: "",
       tags: [],
+      licenses: [],
+      creators: [],
+      website: null,
     };
   }
 
@@ -121,6 +342,9 @@ function extractRequiredFields(metadata) {
     description: metadata.description || "",
     provider: metadata.provider || "",
     tags: metadata.tags || [],
+    licenses: metadata.licenses || [],
+    creators: metadata.creators || [],
+    website: metadata.website || null,
   };
 }
 
@@ -164,6 +388,9 @@ function mergeMultilanguageExtractedMetadata(...metadatas) {
     description: {},
     providers: [],
     tags: [],
+    licenses: [],
+    creators: [],
+    website: null,
   };
 
   const providersByLang = {};
@@ -191,6 +418,29 @@ function mergeMultilanguageExtractedMetadata(...metadatas) {
         ...new Set([...mergedMetadata.tags, ...metadata.tags]),
       ];
     }
+
+    // Add licenses only once (preferably from English metadata)
+    if (
+      metadata.licenses &&
+      metadata.licenses.length > 0 &&
+      mergedMetadata.licenses.length === 0
+    ) {
+      mergedMetadata.licenses = metadata.licenses;
+    }
+
+    // Add creators only once (preferably from English metadata)
+    if (
+      metadata.creators &&
+      metadata.creators.length > 0 &&
+      mergedMetadata.creators.length === 0
+    ) {
+      mergedMetadata.creators = metadata.creators;
+    }
+
+    // Add website from metadata (preferably from English)
+    if (metadata.website && !mergedMetadata.website) {
+      mergedMetadata.website = metadata.website;
+    }
   }
 
   // Create the providers array with multilingual entries
@@ -216,6 +466,7 @@ function getStatsForDatasetId(id) {
       number_of_links: 0,
     },
     endpoint: stat?.endpoint || "",
+    issued: stat?.issued || null,
   };
 }
 
@@ -272,6 +523,7 @@ async function main() {
         ...mergedMetadata,
         statistics: statsData.statistics,
         endpoint: statsData.endpoint,
+        issued: statsData.issued,
       };
 
       datasets.push(datasetInfo);
