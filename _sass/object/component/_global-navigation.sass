@@ -1,5 +1,6 @@
 .global-navigation
   background-color: var(--color-page-bg)
+
   position: fixed
   top: var(--margin-global-navigation)
   left: var(--margin-global-navigation)
@@ -12,7 +13,6 @@
     position: absolute
     display: block
     height: 100vh
-  &::after
     top: calc(var(--margin-global-navigation) * -1)
     left: var(--width-global-navigation)
     border-left: 1px solid #0005
@@ -23,24 +23,6 @@
     flex-direction: column
     height: 100%
     min-height: fit-content
-    position: relative
-    overflow: hidden
-    &::before
-      content: ''
-      position: absolute
-      display: block
-      height: calc(100vh + 12px)
-      width: calc(100% + 12px)
-      top: -12px
-      left: 0px
-      background-repeat: no-repeat
-      background-position: 20px -112px
-      background-size: 450px
-      z-index: 1
-      filter: blur(10px) brightness(1.5)
-      mix-blend-mode: hard-light
-      opacity: .8
-      pointer-events: none
     ul
       list-style: none
       margin: 0
