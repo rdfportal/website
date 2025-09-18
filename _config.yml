@@ -12,6 +12,13 @@ sass:
   sass_dir: _sass
   style: compressed
 
+exclude:
+  - scripts/
+  - "**/node_modules/"
+  - package.json
+  - package-lock.json
+  - bun.lock
+
 # Navigation menu
 header_pages:
   - index.md
