@@ -31,6 +31,46 @@ async function cloneRepo() {
  * 簡単なYAMLパーサー（必要なフィールドのみ）
  * 正しくないYAMLファイルあったりするので、このような手動のYAMLのパースが必要
  */
+/**
+ * Helper function to clean and normalize values from YAML
+ * @param {string} value - Raw value string from YAML
+ * @param {string} prefix - Prefix to remove (e.g. "title:")
+ * @returns {string} - Cleaned value
+ */
+function cleanValue(value, prefix = "") {
+  return value
+    .replace(prefix, "")
+    .trim()
+    .replace(/^["']|["']$/g, "");
+}
+
+/**
+ * Helper function to add a complete license object to the results
+ * @param {object} result - The result object to add the license to
+ * @param {object} license - The license object with name, url, and credit fields
+ */
+function addLicense(result, license) {
+  result.licenses.push({
+    name: license.name || null,
+    url: license.url || null,
+    credit: license.credit || null,
+  });
+}
+
+/**
+ * Helper function to check if a line indicates we're entering a new section
+ * @param {string} line - The current line
+ * @param {Array} excludedPrefixes - Prefixes that should not trigger section change
+ * @returns {boolean} - True if this line indicates a new section
+ */
+function isNewSection(line, excludedPrefixes = []) {
+  if (!line || line.startsWith(" ") || line.startsWith("-")) {
+    return false;
+  }
+
+  return !excludedPrefixes.some((prefix) => line.startsWith(prefix));
+}
+
 function parseYaml(yamlContent) {
   const lines = yamlContent.split("\n");
   const result = {
@@ -62,59 +102,41 @@ function parseYaml(yamlContent) {
     }
 
     if (trimmed.startsWith("title:")) {
-      result.title = trimmed
-        .replace("title:", "")
-        .trim()
-        .replace(/^["']|["']$/g, "");
+      result.title = cleanValue(trimmed, "title:");
       inTags = false;
       inLicense = false;
       inLicenses = false;
     } else if (trimmed.startsWith("description:")) {
-      result.description = trimmed
-        .replace("description:", "")
-        .trim()
-        .replace(/^["']|["']$/g, "");
+      result.description = cleanValue(trimmed, "description:");
       inTags = false;
       inLicense = false;
       inLicenses = false;
     } else if (trimmed.startsWith("provider:")) {
       // Added provider extraction
-      result.provider = trimmed
-        .replace("provider:", "")
-        .trim()
-        .replace(/^["']|["']$/g, "");
+      result.provider = cleanValue(trimmed, "provider:");
       inTags = false;
       inLicense = false;
       inLicenses = false;
     } else if (trimmed.startsWith("website:")) {
       // Extract website URL
-      result.website = trimmed
-        .replace("website:", "")
-        .trim()
-        .replace(/^["']|["']$/g, "");
+      result.website = cleanValue(trimmed, "website:");
       inTags = false;
       inLicense = false;
       inLicenses = false;
     } else if (trimmed.startsWith("issued:")) {
       // Extract issued date
-      result.issued = trimmed
-        .replace("issued:", "")
-        .trim()
-        .replace(/^["']|["']$/g, "");
+      result.issued = cleanValue(trimmed, "issued:");
       inTags = false;
       inLicense = false;
       inLicenses = false;
     } else if (trimmed.startsWith("version:")) {
       // Extract version
-      result.version = trimmed
-        .replace("version:", "")
-        .trim()
-        .replace(/^["']|["']$/g, "");
+      result.version = cleanValue(trimmed, "version:");
       inTags = false;
       inLicense = false;
       inLicenses = false;
     } else if (trimmed.startsWith("license:")) {
-      const licenseLine = trimmed.replace("license:", "").trim();
+      const licenseLine = cleanValue(trimmed, "license:");
 
       if (licenseLine === "") {
         // Multiline license object
@@ -135,20 +157,11 @@ function parseYaml(yamlContent) {
         currentLicense = {};
 
         if (licenseLine.startsWith("name:")) {
-          currentLicense.name = licenseLine
-            .replace("name:", "")
-            .trim()
-            .replace(/^["']|["']$/g, "");
+          currentLicense.name = cleanValue(licenseLine, "name:");
         } else if (licenseLine.startsWith("url:")) {
-          currentLicense.url = licenseLine
-            .replace("url:", "")
-            .trim()
-            .replace(/^["']|["']$/g, "");
+          currentLicense.url = cleanValue(licenseLine, "url:");
         } else if (licenseLine.startsWith("credit:")) {
-          currentLicense.credit = licenseLine
-            .replace("credit:", "")
-            .trim()
-            .replace(/^["']|["']$/g, "");
+          currentLicense.credit = cleanValue(licenseLine, "credit:");
         }
       } else {
         // Inline license, treat as a single license name
@@ -159,7 +172,7 @@ function parseYaml(yamlContent) {
         });
       }
     } else if (trimmed.startsWith("licenses:")) {
-      const licensesLine = trimmed.replace("licenses:", "").trim();
+      const licensesLine = cleanValue(trimmed, "licenses:");
 
       if (licensesLine.startsWith("[") && licensesLine.endsWith("]")) {
         // Inline array format: licenses: [item1, item2]
@@ -183,47 +196,25 @@ function parseYaml(yamlContent) {
         inTags = false;
       }
     } else if (inLicense && trimmed.startsWith("- name:")) {
-      currentLicense.name = trimmed
-        .replace("- name:", "")
-        .trim()
-        .replace(/^["']|["']$/g, "");
+      currentLicense.name = cleanValue(trimmed, "- name:");
     } else if (inLicense && trimmed.startsWith("name:")) {
-      currentLicense.name = trimmed
-        .replace("name:", "")
-        .trim()
-        .replace(/^["']|["']$/g, "");
+      currentLicense.name = cleanValue(trimmed, "name:");
     } else if (inLicense && trimmed.startsWith("- url:")) {
-      currentLicense.url = trimmed
-        .replace("- url:", "")
-        .trim()
-        .replace(/^["']|["']$/g, "");
+      currentLicense.url = cleanValue(trimmed, "- url:");
     } else if (inLicense && trimmed.startsWith("url:")) {
-      currentLicense.url = trimmed
-        .replace("url:", "")
-        .trim()
-        .replace(/^["']|["']$/g, "");
+      currentLicense.url = cleanValue(trimmed, "url:");
     } else if (inLicense && trimmed.startsWith("- credit:")) {
-      currentLicense.credit = trimmed
-        .replace("- credit:", "")
-        .trim()
-        .replace(/^["']|["']$/g, "");
+      currentLicense.credit = cleanValue(trimmed, "- credit:");
     } else if (inLicense && trimmed.startsWith("credit:")) {
-      currentLicense.credit = trimmed
-        .replace("credit:", "")
-        .trim()
-        .replace(/^["']|["']$/g, "");
+      currentLicense.credit = cleanValue(trimmed, "credit:");
 
       // Complete license object after processing all fields
       if (Object.keys(currentLicense).length > 0) {
-        result.licenses.push({
-          name: currentLicense.name || null,
-          url: currentLicense.url || null,
-          credit: currentLicense.credit || null,
-        });
+        addLicense(result, currentLicense);
         currentLicense = {};
       }
     } else if (trimmed.startsWith("creators:")) {
-      const creatorsLine = trimmed.replace("creators:", "").trim();
+      const creatorsLine = cleanValue(trimmed, "creators:");
 
       if (creatorsLine === "") {
         // Multiline creators array
@@ -254,15 +245,9 @@ function parseYaml(yamlContent) {
         });
       }
     } else if (inCreators && trimmed.startsWith("- name:")) {
-      currentCreator.name = trimmed
-        .replace("- name:", "")
-        .trim()
-        .replace(/^["']|["']$/g, "");
+      currentCreator.name = cleanValue(trimmed, "- name:");
     } else if (inCreators && trimmed.startsWith("- affiliation:")) {
-      currentCreator.affiliation = trimmed
-        .replace("- affiliation:", "")
-        .trim()
-        .replace(/^["']|["']$/g, "");
+      currentCreator.affiliation = cleanValue(trimmed, "- affiliation:");
 
       // After processing affiliation, add the complete creator object
       if (currentCreator.name) {
@@ -291,10 +276,7 @@ function parseYaml(yamlContent) {
       }
     } else if (inLicenses && trimmed.startsWith("- ")) {
       // Handle licenses array format with dashes
-      const licenseName = trimmed
-        .replace("- ", "")
-        .trim()
-        .replace(/^["']|["']$/g, "");
+      const licenseName = cleanValue(trimmed, "- ");
 
       if (licenseName) {
         result.licenses.push({
@@ -304,7 +286,7 @@ function parseYaml(yamlContent) {
         });
       }
     } else if (trimmed.startsWith("tags:")) {
-      const tagsLine = trimmed.replace("tags:", "").trim();
+      const tagsLine = cleanValue(trimmed, "tags:");
 
       // Handle inline array format: tags: [item1, item2]
       if (tagsLine.startsWith("[") && tagsLine.endsWith("]")) {
@@ -325,10 +307,7 @@ function parseYaml(yamlContent) {
         inTags = false;
       }
     } else if (inTags && trimmed.startsWith("- ")) {
-      const tag = trimmed
-        .replace("- ", "")
-        .trim()
-        .replace(/^["']|["']$/g, "");
+      const tag = cleanValue(trimmed, "- ");
       if (tag) result.tags.push(tag);
     } else if (
       inTags &&
@@ -342,8 +321,7 @@ function parseYaml(yamlContent) {
     // Check if we're entering a new section while in creators mode and have a pending creator
     if (
       inCreators &&
-      !trimmed.startsWith("-") &&
-      !trimmed.startsWith(" ") &&
+      isNewSection(trimmed) &&
       Object.keys(currentCreator).length > 0 &&
       currentCreator.name
     ) {
@@ -358,18 +336,10 @@ function parseYaml(yamlContent) {
     // Check if we're entering a new section while in license mode
     if (
       inLicense &&
-      !trimmed.startsWith("-") &&
-      !trimmed.startsWith(" ") &&
-      !trimmed.startsWith("name:") &&
-      !trimmed.startsWith("url:") &&
-      !trimmed.startsWith("credit:") &&
+      isNewSection(trimmed, ["name:", "url:", "credit:"]) &&
       Object.keys(currentLicense).length > 0
     ) {
-      result.licenses.push({
-        name: currentLicense.name || null,
-        url: currentLicense.url || null,
-        credit: currentLicense.credit || null,
-      });
+      addLicense(result, currentLicense);
       currentLicense = {};
       inLicense = false;
     }
@@ -377,11 +347,7 @@ function parseYaml(yamlContent) {
 
   // Handle any remaining license object at the end of file
   if (inLicense && Object.keys(currentLicense).length > 0) {
-    result.licenses.push({
-      name: currentLicense.name || null,
-      url: currentLicense.url || null,
-      credit: currentLicense.credit || null,
-    });
+    addLicense(result, currentLicense);
   }
 
   return result;
