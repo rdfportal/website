@@ -6,7 +6,7 @@
 const fs = require("node:fs");
 const path = require("node:path");
 const git = require("isomorphic-git");
-const http = require("node:http");
+const http = require("isomorphic-git/http/node");
 const statJson = require("../_data/datasets_stats.json");
 
 const RDF_CONFIG_REPO = "https://github.com/dbcls/rdf-config.git";
@@ -19,10 +19,11 @@ const CONFIG_PATH = "config";
 async function cloneRepo() {
   await git.clone({
     fs: fs,
-    http, // You'll need an HTTP client implementation for fetching remote data
+    http, // HTTP client implementation for fetching remote data
     dir: path.join(__dirname, REPO_NAME), // The directory within the virtual file system
     url: RDF_CONFIG_REPO,
-    // corsProxy: 'https://cors.isomorphic-git.org' // If cloning from a browser with CORS issues
+    depth: 1, // Shallow clone for better performance
+    singleBranch: true, // Only clone the default branch
   });
 }
 
@@ -233,6 +234,16 @@ async function main() {
 
       ids = await getDatasetIdsFromClonedRepo();
     }
+
+    // Get the list of dataset IDs from the stats file
+    const statsDatasetIds = statJson.map((item) => item.id);
+    console.log(`Found ${statsDatasetIds.length} datasets in stats file`);
+
+    // Filter dataset IDs to only include those present in the stats file
+    ids = ids.filter((id) => statsDatasetIds.includes(id));
+    console.log(
+      `Processing ${ids.length} datasets that exist in stats file...`,
+    );
 
     for (const id of ids) {
       console.log(`Processing ${id}...`);

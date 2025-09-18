@@ -26,11 +26,14 @@ jobs:
         with:
           ruby-version: "3.3" # Not needed with a .ruby-version, .tool-versions or mise.toml
           bundler-cache: false # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0
+          # cache-version: 3
       - name: Normalize lockfile platforms
         run: |
-          bundle lock --remove-platform aarch64-linux
+          bundle lock --remove-platform aarch64-linux || true
+          bundle lock --remove-platform x86_64-darwin || true
+          bundle lock --remove-platform arm64-darwin-23 || true
           bundle lock --add-platform x86_64-linux
+          bundle lock --add-platform ruby
           bundle update ffi
       - name: Install Bun
         uses: oven-sh/setup-bun@v2
