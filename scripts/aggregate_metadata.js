@@ -168,10 +168,8 @@ function mergeMultilanguageExtractedMetadata(...metadatas) {
   const providersByLang = {};
 
   for (const metadata of metadatas) {
-    const lang = metadata.lang || "en";
-
     if (!metadata) continue;
-
+    const lang = metadata.lang || "en";
     // Set title only once (preferably from English)
     if (!mergedMetadata.title && metadata.title) {
       mergedMetadata.title = metadata.title;
