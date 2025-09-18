@@ -71,7 +71,7 @@ class DatasetIcon {
     }
 
     if (rawCount === 0) {
-      return `<svg class="icon -svg" width="${size}" height="${size}" viewBox="-50 0 100 100" role="img" aria-label="No tags"><g transform="scale(${(P.SCALE * scaleVisual).toFixed(4)}) translate(0,${translateY.toFixed(4)})"><path d="${path}" fill="${P.ZERO_TAG_COLOR}"/></g></svg>`;
+      return (`<svg xmlns="http://www.w3.org/2000/svg" class="icon -svg" width="${size}" height="${size}" viewBox="-50 0 100 100" role="img" aria-label="No tags"><g transform="scale(${(P.SCALE * scaleVisual).toFixed(4)}) translate(0,${translateY.toFixed(4)})"><path d="${path}" fill="${P.ZERO_TAG_COLOR}"/></g></svg>`).trim();
     }
 
     // helper color functions: rely on DatasetsManager if present
@@ -103,7 +103,7 @@ class DatasetIcon {
       const idBase = `g_${Math.abs(DatasetIcon._hashString(String(tag0)))}_single`;
       const id = P.USE_RANDOM_ID ? `${idBase}_${Math.floor(Math.random() * 1e5)}` : idBase;
       const grad = `<linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="${topHex}" stop-opacity="${P.GRAD_OPACITY_START}"/><stop offset="100%" stop-color="${baseHex}" stop-opacity="${P.GRAD_OPACITY_END}"/></linearGradient>`;
-      return `<svg class="icon -svg" width="${size}" height="${size}" viewBox="-50 0 100 100" role="img" aria-label="Tag: ${DatasetIcon._escapeHtml(String(tag0))}"><defs>${grad}</defs><g transform="scale(${(P.SCALE * scaleVisual * P.SINGLE_PETAL_EMPHASIS).toFixed(4)}) translate(0,${translateY.toFixed(4)})"><path d="${path}" fill="url(#${id})" style="mix-blend-mode:multiply"/></g></svg>`;
+      return (`<svg xmlns="http://www.w3.org/2000/svg" class="icon -svg" width="${size}" height="${size}" viewBox="-50 0 100 100" role="img" aria-label="Tag: ${DatasetIcon._escapeHtml(String(tag0))}"><defs>${grad}</defs><g transform="scale(${(P.SCALE * scaleVisual * P.SINGLE_PETAL_EMPHASIS).toFixed(4)}) translate(0,${translateY.toFixed(4)})"><path d="${path}" fill="url(#${id})" style="mix-blend-mode:multiply"/></g></svg>`).trim();
     }
 
     // multiple petals
@@ -137,7 +137,7 @@ class DatasetIcon {
       gradients.push(`<linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="${topHex}" stop-opacity="${P.GRAD_OPACITY_START}"/><stop offset="100%" stop-color="${baseHex}" stop-opacity="${P.GRAD_OPACITY_END}"/></linearGradient>`);
       petals.push(`<path d="${path}" fill="url(#${id})" transform="rotate(${angle} 0 ${APEX_Y})" style="mix-blend-mode:multiply"/>`);
     });
-    return `<svg class="icon -svg" width="${size}" height="${size}" viewBox="-50 0 100 100" role="img" aria-label="Tags: ${DatasetIcon._escapeHtml(arr.join(', '))}"><defs>${gradients.join('')}</defs><g transform="scale(${(P.SCALE * scaleVisual).toFixed(4)}) translate(0,${translateY.toFixed(4)})">${petals.join('')}</g></svg>`;
+    return (`<svg xmlns="http://www.w3.org/2000/svg" class="icon -svg" width="${size}" height="${size}" viewBox="-50 0 100 100" role="img" aria-label="Tags: ${DatasetIcon._escapeHtml(arr.join(', '))}"><defs>${gradients.join('')}</defs><g transform="scale(${(P.SCALE * scaleVisual).toFixed(4)}) translate(0,${translateY.toFixed(4)})">${petals.join('')}</g></svg>`).trim();
   }
 
   // small helpers

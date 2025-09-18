@@ -181,3 +181,116 @@ backToListURL: /datasets/
         };
     })();
 </script>
+
+<script>
+    // Render dataset icon as a data:URI and apply it to .global-navigation::before
+    (function () {
+        var styleId = 'global-dataset-icon-style';
+        function svgToDataUri(svg) {
+            if (!svg) return '';
+            // normalize and trim to avoid accidental leading/trailing whitespace/newlines
+            var s = String(svg).replace(/\r\n?/g, '\n').trim();
+            // prefer base64 for safer embedding; fall back to URI-encoding
+            try {
+                return 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(s)));
+            } catch (e) {
+                try {
+                    return 'data:image/svg+xml;utf8,' + encodeURIComponent(s);
+                } catch (e2) {
+                    console.error('svgToDataUri: encoding failed', e2);
+                    return '';
+                }
+            }
+        }
+
+        function readTags() {
+            try {
+                var el = document.getElementById('dataset-tags-json');
+                if (!el) return [];
+                var txt = el.textContent || el.innerText || '';
+                if (!txt) return [];
+                return JSON.parse(txt || '[]');
+            } catch (e) { return []; }
+        }
+
+        function applyBackground(svg) {
+            console.log(svg)
+            try {
+                var css = '.global-navigation > .inner::before{background-image:url("' + svgToDataUri(svg) + '")}';
+                var existing = document.getElementById(styleId);
+                if (existing) existing.parentNode.removeChild(existing);
+                var s = document.createElement('style');
+                s.id = styleId;
+                s.textContent = css;
+                document.head.appendChild(s);
+            } catch (e) { console.error('applyBackground failed', e); }
+        }
+
+        function attempt() {
+            var tags = readTags();
+            if (!window.DatasetIcon || typeof window.DatasetIcon.createSvg !== 'function') return false;
+            try {
+                var svg = window.DatasetIcon.createSvg(tags, 120, {});
+                applyBackground(svg);
+                return true;
+            } catch (e) { console.warn('global icon generation failed', e); return false; }
+        }
+
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { if (!attempt()) { setTimeout(attempt, 80); } }); else { if (!attempt()) { setTimeout(attempt, 80); } }
+    })();
+</script>
+
+<script>
+    // Render dataset icon as a data:URI and apply it to .global-navigation::before
+    (function () {
+        var styleId = 'global-dataset-icon-style';
+        function svgToDataUri(svg) {
+            if (!svg) return '';
+            var s = String(svg).replace(/\r\n?/g, '\n').trim();
+            try {
+                return 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(s)));
+            } catch (e) {
+                try {
+                    return 'data:image/svg+xml;utf8,' + encodeURIComponent(s);
+                } catch (e2) {
+                    console.error('svgToDataUri: encoding failed', e2);
+                    return '';
+                }
+            }
+        }
+
+        function readTags() {
+            try {
+                var el = document.getElementById('dataset-tags-json');
+                if (!el) return [];
+                var txt = el.textContent || el.innerText || '';
+                if (!txt) return [];
+                return JSON.parse(txt || '[]');
+            } catch (e) { return []; }
+        }
+
+        function applyBackground(svg) {
+            try {
+                var css = '.global-navigation > .inner::before{background-image:url("' + svgToDataUri(svg) + '")}';
+                var existing = document.getElementById(styleId);
+                if (existing) existing.parentNode.removeChild(existing);
+                var s = document.createElement('style');
+                s.id = styleId;
+                s.textContent = css;
+                document.head.appendChild(s);
+            } catch (e) { console.error('applyBackground failed', e); }
+        }
+
+        function attempt() {
+            var tags = readTags();
+            if (!window.DatasetIcon || typeof window.DatasetIcon.createSvg !== 'function') return false;
+            try {
+                var svg = window.DatasetIcon.createSvg(tags, 120, {});
+                applyBackground(svg);
+                return true;
+            } catch (e) { console.warn('global icon generation failed', e); return false; }
+        }
+
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { if (!attempt()) { setTimeout(attempt, 80); } }); else { if (!attempt()) { setTimeout(attempt, 80); } }
+    })();
+</script>
