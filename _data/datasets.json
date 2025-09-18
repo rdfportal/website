@@ -1,36 +1,5 @@
 [
   {
-    "id": "bacdive",
-    "title": "BacDive RDF",
-    "description": {
-      "en": "BacDive is the worldwide largest knowledgebase for standardized bacterial information.",
-      "ja": "BacDive is the worldwide largest database for standardized bacterial information. Its mission is to mobilize and integrate research data on strain level from diverse sources and make it freely accessible."
-    },
-    "providers": [
-      {
-        "en": "Leibniz Institute DSMZ-German Collection of Microorganisms and Cell Cultures",
-        "ja": "DSMZ"
-      }
-    ],
-    "tags": [
-      "Organism",
-      "Cell",
-      "Bioresource"
-    ],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": ""
-  },
-  {
     "id": "bgee",
     "title": "Bgee",
     "description": {
@@ -47,18 +16,30 @@
       "Gene",
       "Gene expression"
     ],
+    "licenses": [
+      {
+        "name": "Commons Zero license (CC0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [],
+    "issued": "2024-00-00",
+    "website": "https://www.bgee.org/",
+    "version": "15.2.3",
     "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
+      "number_of_triples": 644630321,
+      "number_of_instances": 746099,
+      "number_of_subjects": 1161496,
+      "number_of_properties": 2761,
+      "number_of_objects": 2318814,
+      "number_of_literals": 66082,
+      "number_of_classes": 1886,
+      "number_of_datatypes": 6,
+      "number_of_links": 6526
     },
-    "endpoint": "sib"
+    "endpoint": "sib",
+    "updated_at": "2025-05-02"
   },
   {
     "id": "biosample",
@@ -72,18 +53,35 @@
       }
     ],
     "tags": [],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Tazro Ohta",
+        "affiliation": null
+      }
+    ],
+    "issued": "2020-09-03",
+    "website": "https://ddbj.nig.ac.jp/",
+    "version": "20200903-1443",
     "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
+      "number_of_triples": 85709355,
+      "number_of_instances": 103016,
+      "number_of_subjects": 114738,
+      "number_of_properties": 2761,
+      "number_of_objects": 123145,
+      "number_of_literals": 14934,
+      "number_of_classes": 385,
+      "number_of_datatypes": 14,
+      "number_of_links": 2929
     },
-    "endpoint": "ebi"
+    "endpoint": "ebi",
+    "updated_at": "2025-07-04"
   },
   {
     "id": "bmrb",
@@ -103,47 +101,35 @@
       "Sequence",
       "Structure"
     ],
-    "statistics": {
-      "number_of_triples": 643511337,
-      "number_of_instances": 35671672,
-      "number_of_subjects": 35925543,
-      "number_of_properties": 2761,
-      "number_of_objects": 38021747,
-      "number_of_literals": 2025054,
-      "number_of_classes": 411,
-      "number_of_datatypes": 5,
-      "number_of_links": 0
-    },
-    "endpoint": "pdb"
-  },
-  {
-    "id": "brenda",
-    "title": "BRENDA RDF",
-    "description": {
-      "en": "BRENDA is the comprehensive enzyme information system with data on enzyme function, structure, and kinetics."
-    },
-    "providers": [
+    "licenses": [
       {
-        "en": "Leibniz Institute DSMZ-German Collection of Microorganisms and Cell Cultures"
+        "name": "Creative Commons Attribution 2.1 Japan (CC BY 2.1 JP)",
+        "url": "https://creativecommons.org/licenses/by/2.1/jp/deed.en",
+        "credit": "BMRB/RDF licensed under CC Attribution 2.1 Japan."
       }
     ],
-    "tags": [
-      "Enzyme",
-      "Biocatalysis",
-      "Bioresource"
+    "creators": [
+      {
+        "name": "Masashi Yokochi",
+        "affiliation": null
+      }
     ],
+    "issued": "2023-04-29",
+    "website": "https://bmrbpub.pdbj.org/",
+    "version": "2023-04-29",
     "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
+      "number_of_triples": 109882242,
+      "number_of_instances": 124301,
+      "number_of_subjects": 115543,
+      "number_of_properties": 2761,
+      "number_of_objects": 149093,
+      "number_of_literals": 21685,
+      "number_of_classes": 174,
+      "number_of_datatypes": 14,
+      "number_of_links": 4589
     },
-    "endpoint": ""
+    "endpoint": "pdb",
+    "updated_at": "2025-06-20"
   },
   {
     "id": "chebi",
@@ -161,18 +147,35 @@
     "tags": [
       "Drug/Chemical"
     ],
+    "licenses": [
+      {
+        "name": "Creative Commons License (CC BY 4.0), and governed by EMBL-EBI’s terms of use and Long-term data preservation policy.",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "European Bioinformatics Institute",
+        "affiliation": null
+      }
+    ],
+    "issued": "2025-06-02",
+    "website": "https://www.ebi.ac.uk/chebi/",
+    "version": "Release 242",
     "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
+      "number_of_triples": 447630579,
+      "number_of_instances": 1880800,
+      "number_of_subjects": 1776311,
+      "number_of_properties": 2761,
+      "number_of_objects": 994734,
+      "number_of_literals": 82360,
+      "number_of_classes": 722,
+      "number_of_datatypes": 13,
+      "number_of_links": 6369
     },
-    "endpoint": "ebi"
+    "endpoint": "ebi",
+    "updated_at": "2025-04-15"
   },
   {
     "id": "chembl",
@@ -188,64 +191,35 @@
     "tags": [
       "Drug/Chemical"
     ],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": "ebi"
-  },
-  {
-    "id": "chip-atlas",
-    "title": "ChIP-Atlas RDF",
-    "description": {
-      "en": "ChIP-Atlas RDF developed by DBCLS"
-    },
-    "providers": [
+    "licenses": [
       {
-        "en": "Database Center for Life Science"
+        "name": "Creative Commons Attribution-Share Alike 3.0 Unported License",
+        "url": null,
+        "credit": null
       }
     ],
-    "tags": [],
+    "creators": [
+      {
+        "name": "European Bioinformatics Institute",
+        "affiliation": null
+      }
+    ],
+    "issued": "2023-03-01",
+    "website": "https://www.ebi.ac.uk/chembl/",
+    "version": "32.0",
     "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
+      "number_of_triples": 275058589,
+      "number_of_instances": 757737,
+      "number_of_subjects": 433846,
+      "number_of_properties": 2761,
+      "number_of_objects": 364316,
+      "number_of_literals": 37144,
+      "number_of_classes": 461,
+      "number_of_datatypes": 14,
+      "number_of_links": 6877
     },
-    "endpoint": ""
-  },
-  {
-    "id": "civic",
-    "title": "RDF title",
-    "description": {
-      "en": "RDF description."
-    },
-    "providers": [],
-    "tags": [],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": ""
+    "endpoint": "ebi",
+    "updated_at": "2025-06-22"
   },
   {
     "id": "clinvar",
@@ -265,18 +239,40 @@
       "Health/Disease",
       "Sequence"
     ],
+    "licenses": [
+      {
+        "name": "https://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/",
+        "url": null,
+        "credit": null
+      },
+      {
+        "name": "Source\\: U.S. National Library of Medicine.",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "National Center for Biotechnology Information",
+        "affiliation": null
+      }
+    ],
+    "issued": "2025-06-23",
+    "website": "https://www.ncbi.nlm.nih.gov/clinvar/",
+    "version": "release_20250623",
     "statistics": {
-      "number_of_triples": 1247658822,
-      "number_of_instances": 192529889,
-      "number_of_subjects": 218249949,
-      "number_of_properties": 179,
-      "number_of_objects": 303864454,
-      "number_of_literals": 78321575,
-      "number_of_classes": 73,
-      "number_of_datatypes": 3,
-      "number_of_links": 0
+      "number_of_triples": 402358943,
+      "number_of_instances": 1226704,
+      "number_of_subjects": 1726862,
+      "number_of_properties": 2761,
+      "number_of_objects": 1734305,
+      "number_of_literals": 105578,
+      "number_of_classes": 904,
+      "number_of_datatypes": 12,
+      "number_of_links": 12327
     },
-    "endpoint": "ncbi"
+    "endpoint": "ncbi",
+    "updated_at": "2025-03-29"
   },
   {
     "id": "dbcatalog",
@@ -289,18 +285,40 @@
     "tags": [
       "Others"
     ],
+    "licenses": [
+      {
+        "name": "http://creativecommons.org/publicdomain/zero/1.0/",
+        "url": null,
+        "credit": null
+      },
+      {
+        "name": "Integbio Database Catalog© National Bioscience Database Center licensed under CC Attribution 2.1 Japan",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Takahiro Ide",
+        "affiliation": null
+      }
+    ],
+    "issued": "2023-03-02",
+    "website": "https://catalog.integbio.jp/dbcatalog/en/",
+    "version": "release_20230302",
     "statistics": {
-      "number_of_triples": 117526,
-      "number_of_instances": 10299,
-      "number_of_subjects": 14730,
-      "number_of_properties": 41,
-      "number_of_objects": 38065,
-      "number_of_literals": 19721,
-      "number_of_classes": 9,
-      "number_of_datatypes": 4,
-      "number_of_links": 0
+      "number_of_triples": 283707214,
+      "number_of_instances": 300219,
+      "number_of_subjects": 558478,
+      "number_of_properties": 2761,
+      "number_of_objects": 507526,
+      "number_of_literals": 65310,
+      "number_of_classes": 927,
+      "number_of_datatypes": 16,
+      "number_of_links": 4379
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2024-09-19"
   },
   {
     "id": "dbnsfp",
@@ -317,18 +335,35 @@
       "nsSNVs",
       "functional prediction"
     ],
+    "licenses": [
+      {
+        "name": "See CITATION at https://sites.google.com/site/jpopgen/dbNSFP",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Med2RDF project",
+        "affiliation": null
+      }
+    ],
+    "issued": "2024-8-8",
+    "website": "https://sites.google.com/site/jpopgen/dbNSFP",
+    "version": "4.9",
     "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
+      "number_of_triples": 580699379,
+      "number_of_instances": 608062,
+      "number_of_subjects": 881182,
+      "number_of_properties": 2761,
+      "number_of_objects": 921745,
+      "number_of_literals": 204399,
+      "number_of_classes": 1462,
+      "number_of_datatypes": 20,
+      "number_of_links": 8573
     },
-    "endpoint": "med2rdf"
+    "endpoint": "med2rdf",
+    "updated_at": "2025-01-17"
   },
   {
     "id": "dbscsnv",
@@ -345,45 +380,35 @@
       "SNV",
       "splicing consensus region"
     ],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": "med2rdf"
-  },
-  {
-    "id": "dbvar",
-    "title": "dbVar",
-    "description": {
-      "en": "dbVar is NCBI's database of human genomic Structural Variation — large variants >50 bp including insertions, deletions, duplications, inversions, mobile elements, translocations, and complex variants"
-    },
-    "providers": [
+    "licenses": [
       {
-        "en": "National Center for Biotechnology Information"
+        "name": "No information is available.",
+        "url": null,
+        "credit": null
       }
     ],
-    "tags": [
-      "structural variant"
+    "creators": [
+      {
+        "name": "Med2RDF project",
+        "affiliation": null
+      }
     ],
+    "issued": "2015-04-12",
+    "website": "http://www.liulab.science/dbscsnv.html",
+    "version": "1.1",
     "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
+      "number_of_triples": 743704409,
+      "number_of_instances": 1297913,
+      "number_of_subjects": 1235389,
+      "number_of_properties": 2761,
+      "number_of_objects": 1021571,
+      "number_of_literals": 96735,
+      "number_of_classes": 1068,
+      "number_of_datatypes": 8,
+      "number_of_links": 14199
     },
-    "endpoint": ""
+    "endpoint": "med2rdf",
+    "updated_at": "2025-03-11"
   },
   {
     "id": "ddbj",
@@ -408,18 +433,35 @@
       "Ontology/Terminology/Nomenclature",
       "Others"
     ],
+    "licenses": [
+      {
+        "name": "Referred to in International Nucleotide Sequence Database Collaboration Policy (http://www.insdc.org/policy.html)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Takatomo Fujisawa",
+        "affiliation": null
+      }
+    ],
+    "issued": "2016-07-30",
+    "website": "http://www.ddbj.nig.ac.jp/index-e.html",
+    "version": "105.0",
     "statistics": {
-      "number_of_triples": 39574632446,
-      "number_of_instances": 4316173038,
-      "number_of_subjects": 6198487494,
-      "number_of_properties": 151,
-      "number_of_objects": 7674713042,
-      "number_of_literals": 1775755355,
-      "number_of_classes": 110,
-      "number_of_datatypes": 4,
-      "number_of_links": 0
+      "number_of_triples": 96716664,
+      "number_of_instances": 186711,
+      "number_of_subjects": 279527,
+      "number_of_properties": 2761,
+      "number_of_objects": 109161,
+      "number_of_literals": 28793,
+      "number_of_classes": 258,
+      "number_of_datatypes": 8,
+      "number_of_links": 5074
     },
-    "endpoint": "ddbj"
+    "endpoint": "ddbj",
+    "updated_at": "2025-01-09"
   },
   {
     "id": "disgenet",
@@ -438,18 +480,35 @@
       "Gene",
       "Health/Disease"
     ],
+    "licenses": [
+      {
+        "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
+        "url": null,
+        "credit": null
+      },
+      {
+        "name": "CC BY-NC-SA 4.0 by Research Programme on Biomedical Informatics (GRIB), Hospital del Mar Medical Research Institute (IMIM), Department of Experimental and Health Sciences, Pompeu Fabra University (UPF), Barcelona, Spain",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [],
+    "issued": "2020-06-05",
+    "website": "https://www.disgenet.org/",
+    "version": "v7.0.0",
     "statistics": {
-      "number_of_triples": 88379594,
-      "number_of_instances": 8752100,
-      "number_of_subjects": 8752519,
-      "number_of_properties": 99,
-      "number_of_objects": 39820060,
-      "number_of_literals": 30507457,
-      "number_of_classes": 71,
-      "number_of_datatypes": 9,
-      "number_of_links": 0
+      "number_of_triples": 727222478,
+      "number_of_instances": 1420356,
+      "number_of_subjects": 2587980,
+      "number_of_properties": 2761,
+      "number_of_objects": 2807808,
+      "number_of_literals": 81454,
+      "number_of_classes": 913,
+      "number_of_datatypes": 12,
+      "number_of_links": 9783
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2024-12-26"
   },
   {
     "id": "ensembl",
@@ -468,18 +527,35 @@
       "Gene",
       "Protein"
     ],
+    "licenses": [
+      {
+        "name": "http://ensembl.org/info/about/legal/disclaimer.html",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Shuya Ikeda",
+        "affiliation": null
+      }
+    ],
+    "issued": "2024-01",
+    "website": "https://www.ensembl.org",
+    "version": "111",
     "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
+      "number_of_triples": 965502249,
+      "number_of_instances": 2482010,
+      "number_of_subjects": 1874761,
+      "number_of_properties": 2761,
+      "number_of_objects": 4126077,
+      "number_of_literals": 155826,
+      "number_of_classes": 1725,
+      "number_of_datatypes": 13,
+      "number_of_links": 12188
     },
-    "endpoint": "ebi"
+    "endpoint": "ebi",
+    "updated_at": "2024-12-11"
   },
   {
     "id": "famsbase",
@@ -492,18 +568,35 @@
       "Protein",
       "Structure"
     ],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0) Database Center for Life Science",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Mitsuo Iwadate",
+        "affiliation": null
+      }
+    ],
+    "issued": "2016-03-24",
+    "website": null,
+    "version": "2016-03-24",
     "statistics": {
-      "number_of_triples": 21297786,
-      "number_of_instances": 5858908,
-      "number_of_subjects": 5858909,
-      "number_of_properties": 30,
-      "number_of_objects": 6378250,
-      "number_of_literals": 488759,
-      "number_of_classes": 16,
-      "number_of_datatypes": 3,
-      "number_of_links": 0
+      "number_of_triples": 340270304,
+      "number_of_instances": 381041,
+      "number_of_subjects": 564295,
+      "number_of_properties": 2761,
+      "number_of_objects": 355188,
+      "number_of_literals": 45735,
+      "number_of_classes": 1408,
+      "number_of_datatypes": 7,
+      "number_of_links": 9363
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2024-11-19"
   },
   {
     "id": "ggdonto",
@@ -523,18 +616,35 @@
       "Ontology/Terminology/Nomenclature",
       "Interaction/Pathway"
     ],
+    "licenses": [
+      {
+        "name": "Attribution-NonCommercial-ShareAlike 2.1 Japan (CC BY-NC-SA 2.1)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Hisashi Narimatsu",
+        "affiliation": null
+      }
+    ],
+    "issued": "2017-01-25",
+    "website": "http://acgg.asia/db/diseases/",
+    "version": "v.1.0",
     "statistics": {
-      "number_of_triples": 39440,
-      "number_of_instances": 1705,
-      "number_of_subjects": 1782,
-      "number_of_properties": 943,
-      "number_of_objects": 8977,
-      "number_of_literals": 4963,
-      "number_of_classes": 23,
-      "number_of_datatypes": 2,
-      "number_of_links": 0
+      "number_of_triples": 841817217,
+      "number_of_instances": 1180669,
+      "number_of_subjects": 1448910,
+      "number_of_properties": 2761,
+      "number_of_objects": 1083419,
+      "number_of_literals": 91372,
+      "number_of_classes": 2973,
+      "number_of_datatypes": 18,
+      "number_of_links": 9411
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2024-11-21"
   },
   {
     "id": "glycoepitope",
@@ -553,18 +663,35 @@
       "Other biomolecule",
       "Structure"
     ],
+    "licenses": [
+      {
+        "name": "Creative Commons Attribution-ShareAlike 2.1 Japan (CC BY-SA 2.1 JP)",
+        "url": "https://creativecommons.org/licenses/by-sa/2.1/jp/deed.en",
+        "credit": "GlycoEpitope licensed under CC Attribution-Share Alike 2.1 Japan"
+      }
+    ],
+    "creators": [
+      {
+        "name": "Tshisuke Kawasaki",
+        "affiliation": null
+      }
+    ],
+    "issued": "2015-11-18",
+    "website": "https://www.glycoepitope.jp/",
+    "version": "version 3",
     "statistics": {
-      "number_of_triples": 30150,
-      "number_of_instances": 5726,
-      "number_of_subjects": 8678,
-      "number_of_properties": 35,
-      "number_of_objects": 10723,
-      "number_of_literals": 5453,
-      "number_of_classes": 24,
-      "number_of_datatypes": 2,
-      "number_of_links": 0
+      "number_of_triples": 481153655,
+      "number_of_instances": 481153,
+      "number_of_subjects": 722452,
+      "number_of_properties": 2761,
+      "number_of_objects": 511321,
+      "number_of_literals": 55096,
+      "number_of_classes": 483,
+      "number_of_datatypes": 20,
+      "number_of_links": 8584
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2025-06-12"
   },
   {
     "id": "glycosmos",
@@ -580,18 +707,35 @@
     "tags": [
       "Glycan"
     ],
+    "licenses": [
+      {
+        "name": "Creative Commons Attribution 4.0 International License (CC BY 4.0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Kiyoko F. Aoki-Kinoshita",
+        "affiliation": null
+      }
+    ],
+    "issued": "2021-08-09",
+    "website": "https://glycosmos.org/",
+    "version": "2021-08-09",
     "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
+      "number_of_triples": 334715815,
+      "number_of_instances": 456016,
+      "number_of_subjects": 677562,
+      "number_of_properties": 2761,
+      "number_of_objects": 978701,
+      "number_of_literals": 56492,
+      "number_of_classes": 729,
+      "number_of_datatypes": 16,
+      "number_of_links": 4763
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2025-06-13"
   },
   {
     "id": "glytoucan",
@@ -608,39 +752,40 @@
       "Other biomolecule",
       "Structure"
     ],
+    "licenses": [
+      {
+        "name": "Creative Commons Attribution 2.1 Japan (CC BY 2.1 JP)",
+        "url": null,
+        "credit": null
+      },
+      {
+        "name": "GlyTouCan licensed under CC Attribution 2.1 Japan",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Hisashi Narimatsu",
+        "affiliation": null
+      }
+    ],
+    "issued": "2015-09-04",
+    "website": "https://glytoucan.org/",
+    "version": "Ver1.0",
     "statistics": {
-      "number_of_triples": 1749648,
-      "number_of_instances": 375657,
-      "number_of_subjects": 375657,
-      "number_of_properties": 30,
-      "number_of_objects": 502463,
-      "number_of_literals": 126879,
-      "number_of_classes": 20,
-      "number_of_datatypes": 5,
-      "number_of_links": 0
+      "number_of_triples": 244850464,
+      "number_of_instances": 331775,
+      "number_of_subjects": 370424,
+      "number_of_properties": 2761,
+      "number_of_objects": 658200,
+      "number_of_literals": 33725,
+      "number_of_classes": 273,
+      "number_of_datatypes": 20,
+      "number_of_links": 2451
     },
-    "endpoint": "primary"
-  },
-  {
-    "id": "go",
-    "title": "Gene Ontology",
-    "description": {
-      "en": "The Gene Ontology resource provides a computational representation of our current scientific knowledge about the functions of genes (or, more properly, the protein and non-coding RNA molecules produced by genes) from many different organisms, from humans to bacteria."
-    },
-    "providers": [],
-    "tags": [],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": ""
+    "endpoint": "primary",
+    "updated_at": "2024-11-01"
   },
   {
     "id": "gtdb",
@@ -658,41 +803,35 @@
       "bacteria",
       "archaea"
     ],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": "primary"
-  },
-  {
-    "id": "gwascatalog",
-    "title": "GWAS catalog",
-    "description": {},
-    "providers": [
+    "licenses": [
       {
-        "en": "European Bioinformatics Institute"
+        "name": "See licenses at https://gtdb.ecogenomic.org/licenses",
+        "url": null,
+        "credit": null
       }
     ],
-    "tags": [],
+    "creators": [
+      {
+        "name": "Shuichi Kawashima",
+        "affiliation": null
+      }
+    ],
+    "issued": "2024-06-27",
+    "website": "https://gtdb.ecogenomic.org/",
+    "version": "2024-06-27",
     "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
+      "number_of_triples": 758451165,
+      "number_of_instances": 1631077,
+      "number_of_subjects": 765339,
+      "number_of_properties": 2761,
+      "number_of_objects": 1009921,
+      "number_of_literals": 82646,
+      "number_of_classes": 2113,
+      "number_of_datatypes": 12,
+      "number_of_links": 21078
     },
-    "endpoint": ""
+    "endpoint": "primary",
+    "updated_at": "2025-01-23"
   },
   {
     "id": "hgnc",
@@ -711,18 +850,35 @@
       "Gene",
       "Ontology/ Terminology/Nomenclature"
     ],
+    "licenses": [
+      {
+        "name": "https://www.genenames.org/about/",
+        "url": null,
+        "credit": null
+      },
+      {
+        "name": "HUGO Gene Nomenclature Committee at the European Bioinformatics Institute",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [],
+    "issued": "2025-06-30",
+    "website": "https://www.genenames.org/",
+    "version": "release_20250630",
     "statistics": {
-      "number_of_triples": 1314653,
-      "number_of_instances": 355645,
-      "number_of_subjects": 355645,
-      "number_of_properties": 9,
-      "number_of_objects": 776470,
-      "number_of_literals": 464474,
-      "number_of_classes": 18,
-      "number_of_datatypes": 1,
-      "number_of_links": 0
+      "number_of_triples": 971201338,
+      "number_of_instances": 3063726,
+      "number_of_subjects": 1706856,
+      "number_of_properties": 2761,
+      "number_of_objects": 1069604,
+      "number_of_literals": 134236,
+      "number_of_classes": 1488,
+      "number_of_datatypes": 7,
+      "number_of_links": 19107
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2025-01-29"
   },
   {
     "id": "homologene",
@@ -740,60 +896,35 @@
       "Gene",
       "Phylogeny/Classification"
     ],
+    "licenses": [
+      {
+        "name": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Hirokazu Chiba",
+        "affiliation": null
+      }
+    ],
+    "issued": "2023-05-17",
+    "website": "https://www.ncbi.nlm.nih.gov/homologene/",
+    "version": "release_20230517",
     "statistics": {
-      "number_of_triples": 1553120,
-      "number_of_instances": 319471,
-      "number_of_subjects": 319471,
-      "number_of_properties": 8,
-      "number_of_objects": 773372,
-      "number_of_literals": 222872,
-      "number_of_classes": 3,
-      "number_of_datatypes": 1,
-      "number_of_links": 0
+      "number_of_triples": 230129693,
+      "number_of_instances": 503566,
+      "number_of_subjects": 306431,
+      "number_of_properties": 2761,
+      "number_of_objects": 264213,
+      "number_of_literals": 49811,
+      "number_of_classes": 446,
+      "number_of_datatypes": 19,
+      "number_of_links": 4837
     },
-    "endpoint": "primary"
-  },
-  {
-    "id": "hop",
-    "title": "RDF title",
-    "description": {
-      "en": "RDF description."
-    },
-    "providers": [],
-    "tags": [],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": ""
-  },
-  {
-    "id": "hpo",
-    "title": "RDF title",
-    "description": {
-      "en": "RDF description."
-    },
-    "providers": [],
-    "tags": [],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": ""
+    "endpoint": "primary",
+    "updated_at": "2024-08-13"
   },
   {
     "id": "jcm",
@@ -810,18 +941,35 @@
       "Organism",
       "Bioresource"
     ],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Terue Takatsuki",
+        "affiliation": null
+      }
+    ],
+    "issued": "2019-06-04",
+    "website": "http://jcm.brc.riken.jp/ja/",
+    "version": "2019-06-04",
     "statistics": {
-      "number_of_triples": 1106776,
-      "number_of_instances": 257250,
-      "number_of_subjects": 257250,
-      "number_of_properties": 37,
-      "number_of_objects": 439741,
-      "number_of_literals": 181813,
-      "number_of_classes": 18,
-      "number_of_datatypes": 4,
-      "number_of_links": 0
+      "number_of_triples": 196725080,
+      "number_of_instances": 616693,
+      "number_of_subjects": 447102,
+      "number_of_properties": 2761,
+      "number_of_objects": 382733,
+      "number_of_literals": 28917,
+      "number_of_classes": 651,
+      "number_of_datatypes": 17,
+      "number_of_links": 4247
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2025-01-31"
   },
   {
     "id": "jpostdb",
@@ -831,18 +979,35 @@
     },
     "providers": [],
     "tags": [],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Yuki Moriya",
+        "affiliation": null
+      }
+    ],
+    "issued": "2020-06-09",
+    "website": "https://globe.jpostdb.org/",
+    "version": "202006",
     "statistics": {
-      "number_of_triples": 239817763,
-      "number_of_instances": 68502884,
-      "number_of_subjects": 68502952,
-      "number_of_properties": 77,
-      "number_of_objects": 79998555,
-      "number_of_literals": 11392480,
-      "number_of_classes": 86,
-      "number_of_datatypes": 6,
-      "number_of_links": 0
+      "number_of_triples": 186661904,
+      "number_of_instances": 214307,
+      "number_of_subjects": 1651875,
+      "number_of_properties": 2761,
+      "number_of_objects": 223815,
+      "number_of_literals": 30873,
+      "number_of_classes": 242,
+      "number_of_datatypes": 9,
+      "number_of_links": 4113
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2025-06-26"
   },
   {
     "id": "kero",
@@ -858,18 +1023,35 @@
       "Gene expression",
       "Others"
     ],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Shin Kawano",
+        "affiliation": null
+      }
+    ],
+    "issued": "2017-01-27",
+    "website": "http://kero.hgc.jp/rdf/",
+    "version": "2017-01-27",
     "statistics": {
-      "number_of_triples": 11198913244,
-      "number_of_instances": 965303305,
-      "number_of_subjects": 965396913,
-      "number_of_properties": 74,
-      "number_of_objects": 7487172343,
-      "number_of_literals": 1785025220,
-      "number_of_classes": 44,
-      "number_of_datatypes": 4,
-      "number_of_links": 0
+      "number_of_triples": 558911075,
+      "number_of_instances": 710179,
+      "number_of_subjects": 2109098,
+      "number_of_properties": 2761,
+      "number_of_objects": 1343536,
+      "number_of_literals": 63146,
+      "number_of_classes": 589,
+      "number_of_datatypes": 20,
+      "number_of_links": 7762
     },
-    "endpoint": "kero"
+    "endpoint": "kero",
+    "updated_at": "2024-12-20"
   },
   {
     "id": "knapsack",
@@ -890,39 +1072,35 @@
       "Publication",
       "Activity"
     ],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Takatomo Fujisawa",
+        "affiliation": null
+      }
+    ],
+    "issued": "2022-05-30",
+    "website": null,
+    "version": "0.2.0",
     "statistics": {
-      "number_of_triples": 3776538,
-      "number_of_instances": 711388,
-      "number_of_subjects": 712296,
-      "number_of_properties": 33,
-      "number_of_objects": 1781448,
-      "number_of_literals": 457162,
-      "number_of_classes": 20,
-      "number_of_datatypes": 4,
-      "number_of_links": 0
+      "number_of_triples": 841388296,
+      "number_of_instances": 1920977,
+      "number_of_subjects": 1767622,
+      "number_of_properties": 2761,
+      "number_of_objects": 7719158,
+      "number_of_literals": 171187,
+      "number_of_classes": 1917,
+      "number_of_datatypes": 8,
+      "number_of_links": 30784
     },
-    "endpoint": "primary"
-  },
-  {
-    "id": "linked_icgc",
-    "title": "RDF title",
-    "description": {
-      "en": "RDF description."
-    },
-    "providers": [],
-    "tags": [],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": ""
+    "endpoint": "primary",
+    "updated_at": "2025-05-07"
   },
   {
     "id": "mbgd",
@@ -932,18 +1110,35 @@
     },
     "providers": [],
     "tags": [],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Name 1",
+        "affiliation": null
+      }
+    ],
+    "issued": "2020-01-01",
+    "website": "https://example.com/",
+    "version": "2020-01-01",
     "statistics": {
-      "number_of_triples": 1609018143,
-      "number_of_instances": 273443876,
-      "number_of_subjects": 309702751,
-      "number_of_properties": 79,
-      "number_of_objects": 472067973,
-      "number_of_literals": 74289149,
-      "number_of_classes": 32,
-      "number_of_datatypes": 5,
-      "number_of_links": 0
+      "number_of_triples": 991444510,
+      "number_of_instances": 1792847,
+      "number_of_subjects": 2769398,
+      "number_of_properties": 2761,
+      "number_of_objects": 4547910,
+      "number_of_literals": 141432,
+      "number_of_classes": 1301,
+      "number_of_datatypes": 16,
+      "number_of_links": 10512
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2024-08-25"
   },
   {
     "id": "medgen",
@@ -962,49 +1157,40 @@
       "Health/Disease",
       "Ontology/Terminology/Nomenclature"
     ],
-    "statistics": {
-      "number_of_triples": 126664418,
-      "number_of_instances": 2717458,
-      "number_of_subjects": 3864020,
-      "number_of_properties": 65,
-      "number_of_objects": 30474902,
-      "number_of_literals": 4147574,
-      "number_of_classes": 4,
-      "number_of_datatypes": 1,
-      "number_of_links": 0
-    },
-    "endpoint": "ncbi"
-  },
-  {
-    "id": "mediadive",
-    "title": "MediaDive RDF",
-    "description": {
-      "en": "MediaDive is the largest collection of cultivation media and growth conditions.",
-      "ja": "MediaDive is the world's largest collection of cultivation media."
-    },
-    "providers": [
+    "licenses": [
       {
-        "en": "Leibniz Institute DSMZ-German Collection of Microorganisms and Cell Cultures",
-        "ja": "DSMZ"
+        "name": "url: https://www.ncbi.nlm.nih.gov/home/about/policies/",
+        "url": null,
+        "credit": null
+      },
+      {
+        "name": "Source: U.S. National Library of Medicine.",
+        "url": null,
+        "credit": null
       }
     ],
-    "tags": [
-      "Organism",
-      "Cell",
-      "Bioresource"
+    "creators": [
+      {
+        "name": "Shuichi Kawashima",
+        "affiliation": null
+      }
     ],
+    "issued": "2023-06-05",
+    "website": "https://www.ncbi.nlm.nih.gov/medgen",
+    "version": "Med2RDF version based on release_20230605",
     "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
+      "number_of_triples": 483651715,
+      "number_of_instances": 977074,
+      "number_of_subjects": 783876,
+      "number_of_properties": 2761,
+      "number_of_objects": 2023647,
+      "number_of_literals": 189148,
+      "number_of_classes": 699,
+      "number_of_datatypes": 19,
+      "number_of_links": 5317
     },
-    "endpoint": ""
+    "endpoint": "ncbi",
+    "updated_at": "2025-03-08"
   },
   {
     "id": "mesh",
@@ -1020,42 +1206,35 @@
     "tags": [
       "Ontology/ Terminology/Nomenclature"
     ],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": "ncbi"
-  },
-  {
-    "id": "mondo",
-    "title": "Mondo Disease Ontology",
-    "description": {
-      "en": "The Mondo Disease Ontology (MONDO) is a harmonized, logic-based disease classification that unifies and standardizes terminology across diverse medical sources by integrating mappings (with precise semantics) from databases such as OMIM, Orphanet, SNOMED CT, and ICD"
-    },
-    "providers": [],
-    "tags": [
-      "Health/Disease",
-      "Ontology/ Terminology/Nomenclature"
+    "licenses": [
+      {
+        "name": "Creative commons 1.0 Universal (CC0 1.0)",
+        "url": "http://creativecommons.org/publicdomain/zero/1.0/",
+        "credit": "Genebank Project, NARO licensed under CC Atribution 4.0 International License."
+      }
     ],
+    "creators": [
+      {
+        "name": "National Library of Medicine",
+        "affiliation": null
+      }
+    ],
+    "issued": "2024-12-05",
+    "website": "https://id.nlm.nih.gov/mesh/",
+    "version": "2025",
     "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
+      "number_of_triples": 812614663,
+      "number_of_instances": 1510436,
+      "number_of_subjects": 2432978,
+      "number_of_properties": 2761,
+      "number_of_objects": 979053,
+      "number_of_literals": 98047,
+      "number_of_classes": 1025,
+      "number_of_datatypes": 13,
+      "number_of_links": 25719
     },
-    "endpoint": ""
+    "endpoint": "ncbi",
+    "updated_at": "2024-09-05"
   },
   {
     "id": "nadd",
@@ -1075,18 +1254,35 @@
       "Structure",
       "Journal article/Report/Bibliography"
     ],
+    "licenses": [
+      {
+        "name": "Attribution-ShareAlike 2.1 Japan (CC BY-SA 2.1)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Kazuhiko Fukui",
+        "affiliation": null
+      }
+    ],
+    "issued": "2019-05-14",
+    "website": "https://medals.jp/edrugnainfo.html",
+    "version": "2019-05-14",
     "statistics": {
-      "number_of_triples": 948,
-      "number_of_instances": 112,
-      "number_of_subjects": 112,
-      "number_of_properties": 16,
-      "number_of_objects": 568,
-      "number_of_literals": 162,
-      "number_of_classes": 5,
-      "number_of_datatypes": 2,
-      "number_of_links": 0
+      "number_of_triples": 265571169,
+      "number_of_instances": 495468,
+      "number_of_subjects": 809668,
+      "number_of_properties": 2761,
+      "number_of_objects": 305254,
+      "number_of_literals": 198483,
+      "number_of_classes": 284,
+      "number_of_datatypes": 5,
+      "number_of_links": 3314
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2024-11-21"
   },
   {
     "id": "nando",
@@ -1101,18 +1297,35 @@
       "Tag sequence (nucleic acid)",
       "Ontology/ Terminology/Nomenclature"
     ],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0) Database Center for Life Science",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Kota Ninomiya",
+        "affiliation": null
+      }
+    ],
+    "issued": "2023-11-21",
+    "website": "https://nanbyodata.jp/",
+    "version": "2024-11-21",
     "statistics": {
-      "number_of_triples": 36933,
-      "number_of_instances": 2780,
-      "number_of_subjects": 2780,
-      "number_of_properties": 19,
-      "number_of_objects": 16434,
-      "number_of_literals": 20499,
-      "number_of_classes": 4,
-      "number_of_datatypes": 3,
-      "number_of_links": 0
+      "number_of_triples": 270964328,
+      "number_of_instances": 724503,
+      "number_of_subjects": 385989,
+      "number_of_properties": 2761,
+      "number_of_objects": 785403,
+      "number_of_literals": 187908,
+      "number_of_classes": 2324,
+      "number_of_datatypes": 16,
+      "number_of_links": 25722
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2024-12-07"
   },
   {
     "id": "naro_genebank",
@@ -1131,18 +1344,35 @@
       "Organism",
       "Bioresource"
     ],
+    "licenses": [
+      {
+        "name": "Creative commons Attribution 4.0 International (CC BY 4.0)",
+        "url": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "Genebank Project, NARO licensed under CC Atribution 4.0 International License."
+      }
+    ],
+    "creators": [
+      {
+        "name": "Tsuyoshi Tanaka",
+        "affiliation": null
+      }
+    ],
+    "issued": "2023-08-23",
+    "website": "https://www.gene.affrc.go.jp/",
+    "version": null,
     "statistics": {
-      "number_of_triples": 132210,
-      "number_of_instances": 52884,
-      "number_of_subjects": 26442,
-      "number_of_properties": 4,
-      "number_of_objects": 79326,
-      "number_of_literals": 52884,
-      "number_of_classes": 2850,
-      "number_of_datatypes": 1,
-      "number_of_links": 0
+      "number_of_triples": 863622784,
+      "number_of_instances": 875885,
+      "number_of_subjects": 2260792,
+      "number_of_properties": 2761,
+      "number_of_objects": 1134852,
+      "number_of_literals": 106031,
+      "number_of_classes": 1546,
+      "number_of_datatypes": 15,
+      "number_of_links": 20887
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2024-10-16"
   },
   {
     "id": "nbrc",
@@ -1160,18 +1390,40 @@
       "Cell",
       "Bioresource"
     ],
+    "licenses": [
+      {
+        "name": "Creative Commons Attribution-ShareAlike 2.1 Japan (CC BY-SA 2.1 JP)",
+        "url": null,
+        "credit": null
+      },
+      {
+        "name": "Dataset of NBRC bioresource (C) NITE NBRC licensed under CC Attribution-ShareAlike 2.1 Japan",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Masami Namihira",
+        "affiliation": null
+      }
+    ],
+    "issued": "2019-08-23",
+    "website": "https://www.nite.go.jp/en/index.html",
+    "version": "release_20190823",
     "statistics": {
-      "number_of_triples": 868816,
-      "number_of_instances": 172348,
-      "number_of_subjects": 172348,
-      "number_of_properties": 33,
-      "number_of_objects": 342897,
-      "number_of_literals": 129439,
-      "number_of_classes": 11,
-      "number_of_datatypes": 3,
-      "number_of_links": 0
+      "number_of_triples": 761310061,
+      "number_of_instances": 1241941,
+      "number_of_subjects": 2409209,
+      "number_of_properties": 2761,
+      "number_of_objects": 3460500,
+      "number_of_literals": 236578,
+      "number_of_classes": 818,
+      "number_of_datatypes": 9,
+      "number_of_links": 15259
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2025-01-16"
   },
   {
     "id": "ncbigene",
@@ -1189,18 +1441,35 @@
     "tags": [
       "Gene"
     ],
+    "licenses": [
+      {
+        "name": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Hirokazu Chiba",
+        "affiliation": null
+      }
+    ],
+    "issued": "2022-05-25",
+    "website": "https://www.ncbi.nlm.nih.gov/gene/",
+    "version": "release_20230525",
     "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
+      "number_of_triples": 94099770,
+      "number_of_instances": 121106,
+      "number_of_subjects": 707517,
+      "number_of_properties": 2761,
+      "number_of_objects": 272752,
+      "number_of_literals": 10713,
+      "number_of_classes": 179,
+      "number_of_datatypes": 7,
+      "number_of_links": 1328
     },
-    "endpoint": "ncbi"
+    "endpoint": "ncbi",
+    "updated_at": "2025-07-03"
   },
   {
     "id": "nikkaji",
@@ -1219,18 +1488,40 @@
       "Structure",
       "Image/Movie"
     ],
+    "licenses": [
+      {
+        "name": "Creative Commons Attribution 2.1 Japan (CC BY 2.1 JP)",
+        "url": null,
+        "credit": null
+      },
+      {
+        "name": "NBDC NikkajiRDF © Japan Science and Technology Agency licensed under CC Attribution 2.1 Japan",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Japan Science and Technology Agency (JST)",
+        "affiliation": null
+      }
+    ],
+    "issued": "2017-01-12",
+    "website": "http://dbarchive.biosciencedbc.jp/en/nikkaji/desc.html",
+    "version": "2017-01-12",
     "statistics": {
-      "number_of_triples": 344246952,
-      "number_of_instances": 25789378,
-      "number_of_subjects": 42867660,
-      "number_of_properties": 28,
-      "number_of_objects": 164414153,
-      "number_of_literals": 72955196,
-      "number_of_classes": 43957,
-      "number_of_datatypes": 4,
-      "number_of_links": 0
+      "number_of_triples": 410275533,
+      "number_of_instances": 471039,
+      "number_of_subjects": 1716634,
+      "number_of_properties": 2761,
+      "number_of_objects": 3230516,
+      "number_of_literals": 45075,
+      "number_of_classes": 2010,
+      "number_of_datatypes": 19,
+      "number_of_links": 32155
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2024-09-10"
   },
   {
     "id": "nlm-catalog",
@@ -1249,18 +1540,30 @@
       "Ontology/Terminology/Nomenclature",
       "Journal article/Report/Bibliography"
     ],
+    "licenses": [
+      {
+        "name": null,
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [],
+    "issued": "2025-06-30",
+    "website": "https://www.ncbi.nlm.nih.gov/nlmcatalog/",
+    "version": null,
     "statistics": {
-      "number_of_triples": 203480,
-      "number_of_instances": 39010,
-      "number_of_subjects": 39010,
-      "number_of_properties": 6,
-      "number_of_objects": 162648,
-      "number_of_literals": 162647,
-      "number_of_classes": 1,
-      "number_of_datatypes": 1,
-      "number_of_links": 0
+      "number_of_triples": 261068391,
+      "number_of_instances": 350898,
+      "number_of_subjects": 1338812,
+      "number_of_properties": 2761,
+      "number_of_objects": 520056,
+      "number_of_literals": 58588,
+      "number_of_classes": 1251,
+      "number_of_datatypes": 11,
+      "number_of_links": 12526
     },
-    "endpoint": "ncbi"
+    "endpoint": "ncbi",
+    "updated_at": "2025-06-07"
   },
   {
     "id": "oma",
@@ -1278,18 +1581,35 @@
       "Gene",
       "Phylogeny/Classification"
     ],
+    "licenses": [
+      {
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Adrian M. Altenhoff",
+        "affiliation": null
+      }
+    ],
+    "issued": "2023-07-01",
+    "website": "https://omabrowser.org",
+    "version": "Jul2023",
     "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
+      "number_of_triples": 129163898,
+      "number_of_instances": 236131,
+      "number_of_subjects": 390223,
+      "number_of_properties": 2761,
+      "number_of_objects": 133296,
+      "number_of_literals": 41558,
+      "number_of_classes": 259,
+      "number_of_datatypes": 7,
+      "number_of_links": 1443
     },
-    "endpoint": "sib"
+    "endpoint": "sib",
+    "updated_at": "2025-02-06"
   },
   {
     "id": "opentggates",
@@ -1308,18 +1628,35 @@
       "Health/Disease",
       "Gene expression"
     ],
+    "licenses": [
+      {
+        "name": "http://toxico.nibiohn.go.jp/english/agreement.html",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Yoshinobu Igarashi",
+        "affiliation": null
+      }
+    ],
+    "issued": "2017-03-17",
+    "website": "http://toxico.nibiohn.go.jp/english/index.html",
+    "version": "2017-03-17",
     "statistics": {
-      "number_of_triples": 6800384609,
-      "number_of_instances": 1497955718,
-      "number_of_subjects": 1497955718,
-      "number_of_properties": 38,
-      "number_of_objects": 2765961664,
-      "number_of_literals": 1267395887,
-      "number_of_classes": 65,
-      "number_of_datatypes": 5,
-      "number_of_links": 0
+      "number_of_triples": 390493165,
+      "number_of_instances": 739570,
+      "number_of_subjects": 583696,
+      "number_of_properties": 2761,
+      "number_of_objects": 2366625,
+      "number_of_literals": 86853,
+      "number_of_classes": 1078,
+      "number_of_datatypes": 10,
+      "number_of_links": 4027
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2025-05-25"
   },
   {
     "id": "paconto",
@@ -1338,18 +1675,35 @@
       "Interaction/Pathway",
       "Structure"
     ],
+    "licenses": [
+      {
+        "name": "Attribution NonCommercial ShareAlike 2.1 Japan (CC BY-NC-SA 2.1)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Hisashi Narimatsu",
+        "affiliation": null
+      }
+    ],
+    "issued": "2016-06-01",
+    "website": "http://acgg.asia/db/diseases/",
+    "version": "v.1.0",
     "statistics": {
-      "number_of_triples": 81785,
-      "number_of_instances": 9296,
-      "number_of_subjects": 9329,
-      "number_of_properties": 117,
-      "number_of_objects": 16396,
-      "number_of_literals": 8586,
-      "number_of_classes": 63,
-      "number_of_datatypes": 3,
-      "number_of_links": 0
+      "number_of_triples": 123167910,
+      "number_of_instances": 140602,
+      "number_of_subjects": 201254,
+      "number_of_properties": 2761,
+      "number_of_objects": 173720,
+      "number_of_literals": 14026,
+      "number_of_classes": 210,
+      "number_of_datatypes": 16,
+      "number_of_links": 2318
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2024-12-24"
   },
   {
     "id": "pdb",
@@ -1363,18 +1717,35 @@
       "Tag sequence (nucleic acid)",
       "Gene expression"
     ],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0) Database Center for Life Science",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Shuichi Kawahsima",
+        "affiliation": null
+      }
+    ],
+    "issued": "2017-04-07",
+    "website": "http://refex.dbcls.jp/index.php?lang=ja",
+    "version": "2017-04-07",
     "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
+      "number_of_triples": 692271619,
+      "number_of_instances": 907302,
+      "number_of_subjects": 780464,
+      "number_of_properties": 2761,
+      "number_of_objects": 2971122,
+      "number_of_literals": 130543,
+      "number_of_classes": 2326,
+      "number_of_datatypes": 11,
+      "number_of_links": 58463
     },
-    "endpoint": "pdb"
+    "endpoint": "pdb",
+    "updated_at": "2025-03-18"
   },
   {
     "id": "polyinfo",
@@ -1392,18 +1763,35 @@
     "tags": [
       "Drug/Chemical"
     ],
+    "licenses": [
+      {
+        "name": "Creative Commons BY 4.0 International (CC BY 4.0)",
+        "url": "https://creativecommons.org/licenses/by/4.0/",
+        "credit": "CC BY 4.0 by National Institute for Materials Science (NIMS), Japan"
+      }
+    ],
+    "creators": [
+      {
+        "name": "Masashi Ishii",
+        "affiliation": null
+      }
+    ],
+    "issued": "2020-02-06",
+    "website": "https://polymer.nims.go.jp/",
+    "version": "0.2",
     "statistics": {
-      "number_of_triples": 5446,
-      "number_of_instances": 1328,
-      "number_of_subjects": 1329,
-      "number_of_properties": 18,
-      "number_of_objects": 3293,
-      "number_of_literals": 2117,
-      "number_of_classes": 14,
-      "number_of_datatypes": 3,
-      "number_of_links": 0
+      "number_of_triples": 788385432,
+      "number_of_instances": 1226104,
+      "number_of_subjects": 826399,
+      "number_of_properties": 2761,
+      "number_of_objects": 943044,
+      "number_of_literals": 106037,
+      "number_of_classes": 1209,
+      "number_of_datatypes": 12,
+      "number_of_links": 10812
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2024-08-07"
   },
   {
     "id": "pubcasefinder",
@@ -1423,18 +1811,35 @@
       "Phenotype",
       "Disease Search"
     ],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0) Database Center for Life Science",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Jaemoon Shin",
+        "affiliation": null
+      }
+    ],
+    "issued": "2021-05-18",
+    "website": "https://pubcasefinder.dbcls.jp/",
+    "version": "1.3.0",
     "statistics": {
-      "number_of_triples": 16367389,
-      "number_of_instances": 1719564,
-      "number_of_subjects": 2128002,
-      "number_of_properties": 15,
-      "number_of_objects": 2176841,
-      "number_of_literals": 116725,
-      "number_of_classes": 8,
-      "number_of_datatypes": 2,
-      "number_of_links": 0
+      "number_of_triples": 209906829,
+      "number_of_instances": 252899,
+      "number_of_subjects": 1295721,
+      "number_of_properties": 2761,
+      "number_of_objects": 349844,
+      "number_of_literals": 124647,
+      "number_of_classes": 297,
+      "number_of_datatypes": 17,
+      "number_of_links": 2237
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2024-09-20"
   },
   {
     "id": "pubchem",
@@ -1453,18 +1858,30 @@
       "Drug/Chemical",
       "Other biomolecule"
     ],
+    "licenses": [
+      {
+        "name": null,
+        "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+        "credit": null
+      }
+    ],
+    "creators": [],
+    "issued": "2025-05-28",
+    "website": "https://pubchem.ncbi.nlm.nih.gov/",
+    "version": null,
     "statistics": {
-      "number_of_triples": 15277890568,
-      "number_of_instances": 3242206543,
-      "number_of_subjects": 3961621679,
-      "number_of_properties": 127,
-      "number_of_objects": 4459433649,
-      "number_of_literals": 813082494,
-      "number_of_classes": 281938,
-      "number_of_datatypes": 7,
-      "number_of_links": 0
+      "number_of_triples": 377021741,
+      "number_of_instances": 455890,
+      "number_of_subjects": 2900167,
+      "number_of_properties": 2761,
+      "number_of_objects": 1313664,
+      "number_of_literals": 39499,
+      "number_of_classes": 1952,
+      "number_of_datatypes": 19,
+      "number_of_links": 4411
     },
-    "endpoint": "pubchem"
+    "endpoint": "pubchem",
+    "updated_at": "2024-07-27"
   },
   {
     "id": "pubmed",
@@ -1484,18 +1901,35 @@
       "Journal article/Report/Bibliography",
       ""
     ],
+    "licenses": [
+      {
+        "name": "https://www.nlm.nih.gov/databases/download.html",
+        "url": null,
+        "credit": null
+      },
+      {
+        "name": "Source\\: U.S. National Library of Medicine.",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [],
+    "issued": "2025-06-30",
+    "website": "https://pubmed.ncbi.nlm.nih.gov/",
+    "version": "release_20250630",
     "statistics": {
-      "number_of_triples": 2531937601,
-      "number_of_instances": 194957460,
-      "number_of_subjects": 390607060,
-      "number_of_properties": 41,
-      "number_of_objects": 582849523,
-      "number_of_literals": 223825051,
-      "number_of_classes": 2,
-      "number_of_datatypes": 3,
-      "number_of_links": 0
+      "number_of_triples": 265833508,
+      "number_of_instances": 939341,
+      "number_of_subjects": 291484,
+      "number_of_properties": 2761,
+      "number_of_objects": 604167,
+      "number_of_literals": 93307,
+      "number_of_classes": 504,
+      "number_of_datatypes": 9,
+      "number_of_links": 5953
     },
-    "endpoint": "ncbi"
+    "endpoint": "ncbi",
+    "updated_at": "2024-10-19"
   },
   {
     "id": "pubtator",
@@ -1514,18 +1948,35 @@
       "Others",
       "Journal article/Report/Bibliography"
     ],
+    "licenses": [
+      {
+        "name": "https://ftp.ncbi.nlm.nih.gov/pub/lu/PubTatorCentral/README.txt",
+        "url": null,
+        "credit": null
+      },
+      {
+        "name": "Source\\: U.S. National Library of Medicine.",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [],
+    "issued": "2025-06-30",
+    "website": "https://www.ncbi.nlm.nih.gov/research/pubtator/",
+    "version": "release_20250630",
     "statistics": {
-      "number_of_triples": 1107708438,
-      "number_of_instances": 221933712,
-      "number_of_subjects": 221933712,
-      "number_of_properties": 6,
-      "number_of_objects": 25723106,
-      "number_of_literals": 14,
-      "number_of_classes": 1,
-      "number_of_datatypes": 2,
-      "number_of_links": 0
+      "number_of_triples": 737947971,
+      "number_of_instances": 831959,
+      "number_of_subjects": 1632628,
+      "number_of_properties": 2761,
+      "number_of_objects": 3708281,
+      "number_of_literals": 285362,
+      "number_of_classes": 3760,
+      "number_of_datatypes": 12,
+      "number_of_links": 7641
     },
-    "endpoint": "ncbi"
+    "endpoint": "ncbi",
+    "updated_at": "2024-12-19"
   },
   {
     "id": "quanto",
@@ -1535,18 +1986,35 @@
     },
     "providers": [],
     "tags": [],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Tazro Inutano Ohta",
+        "affiliation": null
+      }
+    ],
+    "issued": "2016-07-12",
+    "website": "https://sra.dbcls.jp/",
+    "version": "0.1.2",
     "statistics": {
-      "number_of_triples": 107782639,
-      "number_of_instances": 21955729,
-      "number_of_subjects": 21955729,
-      "number_of_properties": 37,
-      "number_of_objects": 31484031,
-      "number_of_literals": 10369656,
-      "number_of_classes": 9,
-      "number_of_datatypes": 4,
-      "number_of_links": 0
+      "number_of_triples": 10325867,
+      "number_of_instances": 82606,
+      "number_of_subjects": 64536,
+      "number_of_properties": 2761,
+      "number_of_objects": 18275,
+      "number_of_literals": 4499,
+      "number_of_classes": 16,
+      "number_of_datatypes": 18,
+      "number_of_links": 446
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2024-12-30"
   },
   {
     "id": "reactome",
@@ -1564,18 +2032,35 @@
     "tags": [
       "Interaction/Pathway"
     ],
+    "licenses": [
+      {
+        "name": "Creative Commons Public Domain (CC0) License",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Reactome Team (https://reactome.org/)",
+        "affiliation": null
+      }
+    ],
+    "issued": "2023-04",
+    "website": "https://reactome.org/",
+    "version": "84",
     "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
+      "number_of_triples": 778606181,
+      "number_of_instances": 835414,
+      "number_of_subjects": 947209,
+      "number_of_properties": 2761,
+      "number_of_objects": 1120296,
+      "number_of_literals": 194166,
+      "number_of_classes": 4105,
+      "number_of_datatypes": 9,
+      "number_of_links": 47673
     },
-    "endpoint": "ebi"
+    "endpoint": "ebi",
+    "updated_at": "2024-11-03"
   },
   {
     "id": "refex",
@@ -1589,18 +2074,35 @@
       "Tag sequence (nucleic acid)",
       "Gene expression"
     ],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0) Database Center for Life Science",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Shuichi Kawahsima",
+        "affiliation": null
+      }
+    ],
+    "issued": "2017-04-07",
+    "website": "http://refex.dbcls.jp/index.php?lang=ja",
+    "version": "2017-04-07",
     "statistics": {
-      "number_of_triples": 123447475,
-      "number_of_instances": 19828635,
-      "number_of_subjects": 24260736,
-      "number_of_properties": 47,
-      "number_of_objects": 27438991,
-      "number_of_literals": 22820176,
-      "number_of_classes": 10,
-      "number_of_datatypes": 9,
-      "number_of_links": 0
+      "number_of_triples": 868382241,
+      "number_of_instances": 1333920,
+      "number_of_subjects": 2133617,
+      "number_of_properties": 2761,
+      "number_of_objects": 1327801,
+      "number_of_literals": 272476,
+      "number_of_classes": 994,
+      "number_of_datatypes": 18,
+      "number_of_links": 24369
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2025-04-04"
   },
   {
     "id": "rhea",
@@ -1618,43 +2120,35 @@
     "tags": [
       "Protein Enzyme"
     ],
-    "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
-    },
-    "endpoint": "ebi"
-  },
-  {
-    "id": "sra_experiment",
-    "title": "SRA Experiment RDF",
-    "description": {
-      "en": "SRA Experiment RDF developed by DBCLS and distributed by DDBJ"
-    },
-    "providers": [
+    "licenses": [
       {
-        "en": "Bioinformation and DDBJ Center"
+        "name": "Attribution 4.0 International (CC BY 4.0)",
+        "url": null,
+        "credit": null
       }
     ],
-    "tags": [],
+    "creators": [
+      {
+        "name": "Anne Morgat",
+        "affiliation": null
+      }
+    ],
+    "issued": "2020-08-13",
+    "website": "https://www.rhea-db.org/",
+    "version": "Rhea release 114",
     "statistics": {
-      "number_of_triples": 0,
-      "number_of_instances": 0,
-      "number_of_subjects": 0,
-      "number_of_properties": 0,
-      "number_of_objects": 0,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
+      "number_of_triples": 930942779,
+      "number_of_instances": 3255044,
+      "number_of_subjects": 1143664,
+      "number_of_properties": 2761,
+      "number_of_objects": 4749708,
+      "number_of_literals": 163869,
+      "number_of_classes": 5044,
+      "number_of_datatypes": 19,
+      "number_of_links": 12636
     },
-    "endpoint": ""
+    "endpoint": "sib",
+    "updated_at": "2025-02-07"
   },
   {
     "id": "ssbd",
@@ -1671,18 +2165,35 @@
       "Gene expression",
       "Others"
     ],
+    "licenses": [
+      {
+        "name": "Creative Commons Attribution-ShareAlike 2.1 Japan (CC BY-SA 2.1 JP)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Yukako Tohsato",
+        "affiliation": null
+      }
+    ],
+    "issued": "2018-03-24",
+    "website": "http://ssbd.qbic.riken.jp/",
+    "version": "SSBD31_20171218 release 20180324",
     "statistics": {
-      "number_of_triples": 40300,
-      "number_of_instances": 6644,
-      "number_of_subjects": 6644,
-      "number_of_properties": 33,
-      "number_of_objects": 9329,
-      "number_of_literals": 3807,
-      "number_of_classes": 18,
-      "number_of_datatypes": 4,
-      "number_of_links": 0
+      "number_of_triples": 914083022,
+      "number_of_instances": 1226957,
+      "number_of_subjects": 6437204,
+      "number_of_properties": 2761,
+      "number_of_objects": 2160952,
+      "number_of_literals": 200588,
+      "number_of_classes": 2202,
+      "number_of_datatypes": 15,
+      "number_of_links": 12315
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2025-04-05"
   },
   {
     "id": "togoid",
@@ -1700,18 +2211,35 @@
     "tags": [
       "Others"
     ],
+    "licenses": [
+      {
+        "name": "NA",
+        "url": "NA",
+        "credit": "NA"
+      }
+    ],
+    "creators": [
+      {
+        "name": "Database Center for Life Science, Joint Support-Center for Data Science Research, Research Organization of Information and Systems, Japan",
+        "affiliation": "--"
+      }
+    ],
+    "issued": "2022-04-01",
+    "website": "https://togoid.dbcls.jp/",
+    "version": "2022-04-01",
     "statistics": {
-      "number_of_triples": 7770732116,
-      "number_of_instances": 0,
-      "number_of_subjects": 7772603802,
-      "number_of_properties": 75,
-      "number_of_objects": 7772603802,
-      "number_of_literals": 0,
-      "number_of_classes": 0,
-      "number_of_datatypes": 0,
-      "number_of_links": 0
+      "number_of_triples": 416579006,
+      "number_of_instances": 536137,
+      "number_of_subjects": 620833,
+      "number_of_properties": 2761,
+      "number_of_objects": 3967419,
+      "number_of_literals": 212648,
+      "number_of_classes": 556,
+      "number_of_datatypes": 19,
+      "number_of_links": 6713
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2024-08-05"
   },
   {
     "id": "uniprot",
@@ -1727,18 +2255,35 @@
     "tags": [
       "Protein"
     ],
+    "licenses": [
+      {
+        "name": "Creative Commons Attribution 4.0 International (CC BY 4.0) License",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "The Swiss Institute of Bioinformatics",
+        "affiliation": null
+      }
+    ],
+    "issued": "2023-03-01",
+    "website": "https://uniprot.org/",
+    "version": "2023_01",
     "statistics": {
-      "number_of_triples": 54381877065,
-      "number_of_instances": 9554097609,
-      "number_of_subjects": 11388277803,
-      "number_of_properties": 200,
-      "number_of_objects": 10609965660,
-      "number_of_literals": 1131363044,
-      "number_of_classes": 157,
-      "number_of_datatypes": 11,
-      "number_of_links": 0
+      "number_of_triples": 449291180,
+      "number_of_instances": 513475,
+      "number_of_subjects": 527337,
+      "number_of_properties": 2761,
+      "number_of_objects": 683852,
+      "number_of_literals": 72291,
+      "number_of_classes": 1086,
+      "number_of_datatypes": 16,
+      "number_of_links": 5251
     },
-    "endpoint": "sib"
+    "endpoint": "sib",
+    "updated_at": "2024-07-27"
   },
   {
     "id": "wurcs",
@@ -1748,17 +2293,34 @@
     },
     "providers": [],
     "tags": [],
+    "licenses": [
+      {
+        "name": "Attribution 4.0 International (CC BY 4.0)",
+        "url": null,
+        "credit": null
+      }
+    ],
+    "creators": [
+      {
+        "name": "Name 1",
+        "affiliation": null
+      }
+    ],
+    "issued": "2020-01-01",
+    "website": "https://example.com/",
+    "version": "2020-01-01",
     "statistics": {
-      "number_of_triples": 6213789,
-      "number_of_instances": 817535,
-      "number_of_subjects": 1365653,
-      "number_of_properties": 56,
-      "number_of_objects": 1138140,
-      "number_of_literals": 40435,
-      "number_of_classes": 14,
-      "number_of_datatypes": 4,
-      "number_of_links": 0
+      "number_of_triples": 14154941,
+      "number_of_instances": 48979,
+      "number_of_subjects": 16232,
+      "number_of_properties": 2761,
+      "number_of_objects": 18054,
+      "number_of_literals": 1931,
+      "number_of_classes": 32,
+      "number_of_datatypes": 20,
+      "number_of_links": 629
     },
-    "endpoint": "primary"
+    "endpoint": "primary",
+    "updated_at": "2024-11-19"
   }
 ]
