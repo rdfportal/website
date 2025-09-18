@@ -42,6 +42,7 @@ function parseYaml(yamlContent) {
     creators: [],
     website: null,
     issued: null,
+    version: null,
   };
 
   let currentKey = null;
@@ -103,6 +104,15 @@ function parseYaml(yamlContent) {
       inTags = false;
       inLicense = false;
       inLicenses = false;
+    } else if (trimmed.startsWith("version:")) {
+      // Extract version
+      result.version = trimmed
+        .replace("version:", "")
+        .trim()
+        .replace(/^["']|["']$/g, "");
+      inTags = false;
+      inLicense = false;
+      inLicenses = false;
     } else if (trimmed.startsWith("license:")) {
       const licenseLine = trimmed.replace("license:", "").trim();
 
@@ -112,6 +122,34 @@ function parseYaml(yamlContent) {
         inLicenses = false;
         inTags = false;
         currentLicense = {};
+      } else if (
+        licenseLine.startsWith("{") ||
+        licenseLine.startsWith("name:") ||
+        licenseLine.startsWith("url:") ||
+        licenseLine.startsWith("credit:")
+      ) {
+        // Direct object format (not inside an array)
+        inLicense = true;
+        inLicenses = false;
+        inTags = false;
+        currentLicense = {};
+
+        if (licenseLine.startsWith("name:")) {
+          currentLicense.name = licenseLine
+            .replace("name:", "")
+            .trim()
+            .replace(/^["']|["']$/g, "");
+        } else if (licenseLine.startsWith("url:")) {
+          currentLicense.url = licenseLine
+            .replace("url:", "")
+            .trim()
+            .replace(/^["']|["']$/g, "");
+        } else if (licenseLine.startsWith("credit:")) {
+          currentLicense.credit = licenseLine
+            .replace("credit:", "")
+            .trim()
+            .replace(/^["']|["']$/g, "");
+        }
       } else {
         // Inline license, treat as a single license name
         result.licenses.push({
@@ -149,14 +187,29 @@ function parseYaml(yamlContent) {
         .replace("- name:", "")
         .trim()
         .replace(/^["']|["']$/g, "");
+    } else if (inLicense && trimmed.startsWith("name:")) {
+      currentLicense.name = trimmed
+        .replace("name:", "")
+        .trim()
+        .replace(/^["']|["']$/g, "");
     } else if (inLicense && trimmed.startsWith("- url:")) {
       currentLicense.url = trimmed
         .replace("- url:", "")
         .trim()
         .replace(/^["']|["']$/g, "");
+    } else if (inLicense && trimmed.startsWith("url:")) {
+      currentLicense.url = trimmed
+        .replace("url:", "")
+        .trim()
+        .replace(/^["']|["']$/g, "");
     } else if (inLicense && trimmed.startsWith("- credit:")) {
       currentLicense.credit = trimmed
         .replace("- credit:", "")
+        .trim()
+        .replace(/^["']|["']$/g, "");
+    } else if (inLicense && trimmed.startsWith("credit:")) {
+      currentLicense.credit = trimmed
+        .replace("credit:", "")
         .trim()
         .replace(/^["']|["']$/g, "");
 
@@ -307,6 +360,9 @@ function parseYaml(yamlContent) {
       inLicense &&
       !trimmed.startsWith("-") &&
       !trimmed.startsWith(" ") &&
+      !trimmed.startsWith("name:") &&
+      !trimmed.startsWith("url:") &&
+      !trimmed.startsWith("credit:") &&
       Object.keys(currentLicense).length > 0
     ) {
       result.licenses.push({
@@ -345,6 +401,7 @@ function extractRequiredFields(metadata) {
       creators: [],
       website: null,
       issued: null,
+      version: null,
     };
   }
 
@@ -357,6 +414,7 @@ function extractRequiredFields(metadata) {
     creators: metadata.creators || [],
     website: metadata.website || null,
     issued: metadata.issued || null,
+    version: metadata.version || null,
   };
 }
 
@@ -404,6 +462,7 @@ function mergeMultilanguageExtractedMetadata(...metadatas) {
     creators: [],
     issued: null,
     website: null,
+    version: null,
   };
 
   const providersByLang = {};
@@ -458,6 +517,11 @@ function mergeMultilanguageExtractedMetadata(...metadatas) {
     // Add issued date from metadata (preferably from English)
     if (metadata.issued && !mergedMetadata.issued) {
       mergedMetadata.issued = metadata.issued;
+    }
+
+    // Add version from metadata (preferably from English)
+    if (metadata.version && !mergedMetadata.version) {
+      mergedMetadata.version = metadata.version;
     }
   }
 
