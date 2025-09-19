@@ -109,7 +109,25 @@
             {% endif %}
           </li>
           <li data-page-id="statistics"><a href="{{ '/statistics/' | relative_url }}">Statistics</a></li>
-          <li data-page-id="documents"><a href="{{ '/documents/' | relative_url }}">Documents</a></li>
+          <li data-page-id="documents">
+            <a href="{{ '/documents/introduction' | relative_url }}">Documents</a>
+            {% if page.parentPageId == "documents" %}
+            <ul>
+              <li data-page-id="introduction">
+                <a href="{{ '/documents/introduction/' | relative_url }}">Introduction</a>
+              </li>
+              <li data-page-id="faq">
+                <a href="{{ '/documents/faq/' | relative_url }}">FAQ</a>
+              </li>
+              <li data-page-id="terms_of_use">
+                <a href="{{ '/documents/terms_of_use/' | relative_url }}">Terms of Use</a>
+              </li>
+              <li data-page-id="privacy_policy">
+                <a href="{{ '/documents/privacy_policy/' | relative_url }}">Privacy Policy</a>
+              </li>
+            </ul>
+            {% endif %}
+          </li>
           <li data-page-id="about"><a href="{{ '/about/' | relative_url }}">About</a></li>
         </ul>
       </nav>
