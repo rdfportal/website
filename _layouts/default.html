@@ -17,9 +17,49 @@
     <div class="inner">
       <h1><a href="{{ '/' | relative_url }}">RDF<br>Portal</a></h1>
       <ul class="stats">
-        <li><span>73</span><span>RDF dataset</span></li>
-        <li><span>858</span><span>million inter-datasets links</span></li>
-        <li><span>160</span><span>billion triples</span></li>
+        <li><span>{{ site.data.datasets | size }}</span><span>RDF dataset</span></li>
+        {% assign total_triples = 0 %}
+        {% for d in site.data.datasets | default: [] %}
+        {% assign t = d.statistics.number_of_triples | default: 0 %}
+        {% assign total_triples = total_triples | plus: t %}
+        {% endfor %}
+        {% comment %} Format into million/billion/trillion with one decimal when appropriate {% endcomment %}
+        {% if total_triples >= 1000000000000 %}
+        {% assign unit_div10 = 100000000000 %}
+        {% assign scaled10 = total_triples | divided_by: unit_div10 %}
+        {% assign intpart = scaled10 | divided_by: 10 %}
+        {% assign dec = scaled10 | modulo: 10 %}
+        {% if dec == 0 %}
+        {% assign display = intpart %}
+        {% else %}
+        {% assign display = intpart | append: '.' | append: dec %}
+        {% endif %}
+        <li><span>{{ display }}</span><span>trillion triples</span></li>
+        {% elsif total_triples >= 1000000000 %}
+        {% assign unit_div10 = 100000000 %}
+        {% assign scaled10 = total_triples | divided_by: unit_div10 %}
+        {% assign intpart = scaled10 | divided_by: 10 %}
+        {% assign dec = scaled10 | modulo: 10 %}
+        {% if dec == 0 %}
+        {% assign display = intpart %}
+        {% else %}
+        {% assign display = intpart | append: '.' | append: dec %}
+        {% endif %}
+        <li><span>{{ display }}</span><span>billion triples</span></li>
+        {% elsif total_triples >= 1000000 %}
+        {% assign unit_div10 = 100000 %}
+        {% assign scaled10 = total_triples | divided_by: unit_div10 %}
+        {% assign intpart = scaled10 | divided_by: 10 %}
+        {% assign dec = scaled10 | modulo: 10 %}
+        {% if dec == 0 %}
+        {% assign display = intpart %}
+        {% else %}
+        {% assign display = intpart | append: '.' | append: dec %}
+        {% endif %}
+        <li><span>{{ display }}</span><span>million triples</span></li>
+        {% else %}
+        <li><span>{{ total_triples | default: 0 }}</span><span>triples</span></li>
+        {% endif %}
       </ul>
       <nav>
         <ul>
