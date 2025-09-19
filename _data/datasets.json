@@ -3,11 +3,13 @@
     "id": "oma",
     "title": "Orthologous MAtrix (OMA) RDF",
     "description": {
-      "en": "The OMA (Orthologous MAtrix) project is a method and database for the inference of orthologs among complete genomes. The OMA RDF is a view of the OMA database in RDF."
+      "en": "The OMA (Orthologous MAtrix) project is a method and database for the inference of orthologs among complete genomes. The OMA RDF is a view of the OMA database in RDF.",
+      "ja": "The OMA (Orthologous MAtrix) project is a method and database for the inference of orthologs among complete genomes. The OMA RDF is a view of the OMA database in RDF."
     },
     "providers": [
       {
-        "en": "SIB Swiss Institute of Bioinformatics"
+        "en": "SIB Swiss Institute of Bioinformatics",
+        "ja": "SIB Swiss Institute of Bioinformatics"
       }
     ],
     "tags": [
@@ -49,11 +51,13 @@
     "id": "mesh",
     "title": "Medical Subject Headings (MeSH) RDF Dataset Description",
     "description": {
-      "en": "A linked data representation of the MeSH biomedical vocabulary produced by the National Library of Medicine."
+      "en": "A linked data representation of the MeSH biomedical vocabulary produced by the National Library of Medicine.",
+      "ja": "A linked data representation of the MeSH biomedical vocabulary produced by the National Library of Medicine."
     },
     "providers": [
       {
-        "en": "National Library of Medicine"
+        "en": "National Library of Medicine",
+        "ja": "National Library of Medicine"
       }
     ],
     "tags": [
@@ -93,11 +97,13 @@
     "id": "gtdb",
     "title": "GTDB",
     "description": {
-      "en": "The Genome Taxonomy Database"
+      "en": "The Genome Taxonomy Database",
+      "ja": "The Genome Taxonomy Database"
     },
     "providers": [
       {
-        "en": "The University of Queensland"
+        "en": "The University of Queensland",
+        "ja": "The University of Queensland"
       }
     ],
     "tags": [
@@ -234,11 +240,13 @@
     "id": "homologene",
     "title": "HomoloGene RDF",
     "description": {
-      "en": "HomoloGene RDF is a translation of HomoloGene data into RDF."
+      "en": "HomoloGene RDF is a translation of HomoloGene data into RDF.",
+      "ja": "HomoloGene RDF is a translation of HomoloGene data into RDF."
     },
     "providers": [
       {
-        "en": "National Center for Biotechnology Information"
+        "en": "National Center for Biotechnology Information",
+        "ja": "National Center for Biotechnology Information"
       }
     ],
     "tags": [
@@ -374,11 +382,13 @@
     "id": "nikkaji",
     "title": "Nikkaji RDF",
     "description": {
-      "en": "NBDC NikkajiRDF is RDF data of Japan Chemical Substance Dictionary (Nikkaji), which is one of the largest chemical substance databases in Japan."
+      "en": "NBDC NikkajiRDF is RDF data of Japan Chemical Substance Dictionary (Nikkaji), which is one of the largest chemical substance databases in Japan.",
+      "ja": "NBDC NikkajiRDF is RDF data of Japan Chemical Substance Dictionary (Nikkaji), which is one of the largest chemical substance databases in Japan."
     },
     "providers": [
       {
-        "en": "Japan Science and Technology Agency (JST)"
+        "en": "Japan Science and Technology Agency (JST)",
+        "ja": "Japan Science and Technology Agency (JST)"
       }
     ],
     "tags": [
@@ -610,11 +620,13 @@
     "id": "jcm",
     "title": "Metadata of JCM resources",
     "description": {
-      "en": "A RDF-based meta-database of microbial strains used in various researches such as biology, environment and human health as bioresources. Microbial strains are available from Japan Collection of Microorganisms (JCM) in RIKEN BioResource Center. Please visit data browser at http://metadb.riken.jp/metadb/db/rikenbrc_jcm_microbe"
+      "en": "A RDF-based meta-database of microbial strains used in various researches such as biology, environment and human health as bioresources. Microbial strains are available from Japan Collection of Microorganisms (JCM) in RIKEN BioResource Center. Please visit data browser at http://metadb.riken.jp/metadb/db/rikenbrc_jcm_microbe",
+      "ja": "A RDF-based meta-database of microbial strains used in various researches such as biology, environment and human health as bioresources. Microbial strains are available from Japan Collection of Microorganisms (JCM) in RIKEN BioResource Center. Please visit data browser at http://metadb.riken.jp/metadb/db/rikenbrc_jcm_microbe"
     },
     "providers": [
       {
-        "en": "RIKEN"
+        "en": "RIKEN",
+        "ja": "RIKEN"
       }
     ],
     "tags": [
@@ -746,7 +758,8 @@
     "id": "ssbd",
     "title": ">",
     "description": {
-      "en": "Meta-information of quantitative data and datasets of microscopy images provided from SSBD database"
+      "en": "Meta-information of quantitative data and datasets of microscopy images provided from SSBD database",
+      "ja": "Meta-information of quantitative data and datasets of microscopy images provided from SSBD database"
     },
     "providers": [],
     "tags": [
@@ -884,7 +897,8 @@
     "id": "mbgd",
     "title": "RDF title",
     "description": {
-      "en": "RDF description."
+      "en": "RDF description.",
+      "ja": "RDF description."
     },
     "providers": [],
     "tags": [],
@@ -969,11 +983,13 @@
     "id": "paconto",
     "title": "PAConto",
     "description": {
-      "en": ">"
+      "en": ">",
+      "ja": ">"
     },
     "providers": [
       {
-        "en": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
+        "en": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)",
+        "ja": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
       }
     ],
     "tags": [
@@ -1333,7 +1349,8 @@
     "id": "wurcs",
     "title": "RDF title",
     "description": {
-      "en": "RDF description."
+      "en": "RDF description.",
+      "ja": "RDF description."
     },
     "providers": [],
     "tags": [],
@@ -1503,11 +1520,13 @@
     "id": "uniprot",
     "title": "UniProt RDF",
     "description": {
-      "en": "The Universal Protein Resource (UniProt) is a comprehensive resource for protein sequence and annotation data."
+      "en": "The Universal Protein Resource (UniProt) is a comprehensive resource for protein sequence and annotation data.",
+      "ja": "The Universal Protein Resource (UniProt) is a comprehensive resource for protein sequence and annotation data."
     },
     "providers": [
       {
-        "en": "The Swiss Institute of Bioinformatics"
+        "en": "The Swiss Institute of Bioinformatics",
+        "ja": "The Swiss Institute of Bioinformatics"
       }
     ],
     "tags": [
@@ -1798,11 +1817,13 @@
     "id": "nadd",
     "title": "Nucleic Acid Drug Database",
     "description": {
-      "en": "DB is focused on nucleic acid drugs known as biopharmaceuticals and displayed approval drugs and information on three phases of clinical trial stage."
+      "en": "DB is focused on nucleic acid drugs known as biopharmaceuticals and displayed approval drugs and information on three phases of clinical trial stage.",
+      "ja": "DB is focused on nucleic acid drugs known as biopharmaceuticals and displayed approval drugs and information on three phases of clinical trial stage."
     },
     "providers": [
       {
-        "en": "Molecular Profiling Research Center for Drug Discovery (molprof), The National Institute of Advanced Industrial Science and Technology (AIST)"
+        "en": "Molecular Profiling Research Center for Drug Discovery (molprof), The National Institute of Advanced Industrial Science and Technology (AIST)",
+        "ja": "Molecular Profiling Research Center for Drug Discovery (molprof), The National Institute of Advanced Industrial Science and Technology (AIST)"
       }
     ],
     "tags": [
@@ -1981,7 +2002,8 @@
     "id": "pdb",
     "title": "RefEx RDF",
     "description": {
-      "en": "RDFized reference gene expresson dataset derived from CAGE and GeneChip experiments in the RefEx database."
+      "en": "RDFized reference gene expresson dataset derived from CAGE and GeneChip experiments in the RefEx database.",
+      "ja": "RDFized reference gene expresson dataset derived from CAGE and GeneChip experiments in the RefEx database."
     },
     "providers": [],
     "tags": [
@@ -2023,7 +2045,8 @@
     "id": "quanto",
     "title": "Quanto RDF",
     "description": {
-      "en": "Raw sequence data quality statistics calculated from the Sequence Read Archive data"
+      "en": "Raw sequence data quality statistics calculated from the Sequence Read Archive data",
+      "ja": "Raw sequence data quality statistics calculated from the Sequence Read Archive data"
     },
     "providers": [],
     "tags": [],
@@ -2107,11 +2130,13 @@
     "id": "pubcasefinder",
     "title": "PubCaseFinder RDF",
     "description": {
-      "en": "PubCaseFinder (PCF) is a Human Phenotype Ontology (HPO)-based clinical decision support system for rare and genetic diseases, always up-to-date."
+      "en": "PubCaseFinder (PCF) is a Human Phenotype Ontology (HPO)-based clinical decision support system for rare and genetic diseases, always up-to-date.",
+      "ja": "PubCaseFinder (PCF) is a Human Phenotype Ontology (HPO)-based clinical decision support system for rare and genetic diseases, always up-to-date."
     },
     "providers": [
       {
-        "en": "Database Center for Life Science"
+        "en": "Database Center for Life Science",
+        "ja": "Database Center for Life Science"
       }
     ],
     "tags": [
