@@ -106,13 +106,32 @@ class DatasetCard {
 
   // 言語変更イベントリスナー設定
   #setupLanguageListener() {
-    this.#languageChangeHandler = () => {
-      if (this.#element) {
-        this.#element.innerHTML = this.#generateContent();
-        this.#setupEventListeners(this.#element);
+    // Use a MutationObserver to watch for changes to <html lang="...">.
+    // This avoids relying on custom events and works when LanguageManager
+    // updates document.documentElement.lang.
+    try {
+      // disconnect existing observer if present
+      if (this.#languageChangeHandler && typeof this.#languageChangeHandler.disconnect === 'function') {
+        this.#languageChangeHandler.disconnect();
       }
-    };
-    window.addEventListener("languageChange", this.#languageChangeHandler);
+
+      const observer = new MutationObserver((mutations) => {
+        for (const m of mutations) {
+          if (m.type === 'attributes' && m.attributeName === 'lang') {
+            if (this.#element) {
+              this.#element.innerHTML = this.#generateContent();
+              this.#setupEventListeners(this.#element);
+            }
+            break;
+          }
+        }
+      });
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+      this.#languageChangeHandler = observer;
+    } catch (e) {
+      // Fallback: no observer available, leave handler null.
+      this.#languageChangeHandler = null;
+    }
   }
 
   static createCards(datasets, options = {}) {
@@ -136,7 +155,13 @@ class DatasetCard {
   remove() {
     // イベントリスナーをクリーンアップ
     if (this.#languageChangeHandler) {
-      window.removeEventListener("languageChange", this.#languageChangeHandler);
+      try {
+        if (typeof this.#languageChangeHandler.disconnect === 'function') {
+          this.#languageChangeHandler.disconnect();
+        } else {
+          // noop
+        }
+      } catch (e) { }
       this.#languageChangeHandler = null;
     }
 

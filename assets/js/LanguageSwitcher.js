@@ -8,9 +8,10 @@ class LanguageManager {
   }
 
   static setLanguage(lang) {
+    if (!lang) return;
     localStorage.setItem(this.STORAGE_KEY, lang);
+    try { document.documentElement.lang = lang; } catch (e) { }
     this.updateUI();
-    this.notifyLanguageChange(lang);
   }
 
   static updateUI() {
@@ -24,11 +25,10 @@ class LanguageManager {
     }
   }
 
-  static notifyLanguageChange(lang) {
-    window.dispatchEvent(new CustomEvent('languageChange', { detail: { language: lang } }));
-  }
-
   static init() {
+    // initialize document lang from storage/default before UI is rendered
+    const lang = this.getCurrentLanguage();
+    try { document.documentElement.lang = lang; } catch (e) { }
     this.updateUI();
     const toggle = document.getElementById('language-toggle');
     if (toggle) {

@@ -12,7 +12,8 @@
 
 <body{% if page.pageId %} data-page-id="{{ page.pageId }}" {% endif %}{% if page.isSmallHeading %}
   data-is-small-heading="true" {% endif %}>
-  <header class="global-navigation">
+  <aside class="global-navigation">
+    <div class="background"></div>
     <div class="inner">
       <h1><a href="{{ '/' | relative_url }}">RDF<br>Portal</a></h1>
       <ul class="stats">
@@ -88,7 +89,7 @@
         </div>
       </div>
     </div>
-  </header>
+  </aside>
 
   <main>
     {{ content }}

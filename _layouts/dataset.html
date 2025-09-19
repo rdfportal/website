@@ -214,9 +214,8 @@ backToListURL: /datasets/
         }
 
         function applyBackground(svg) {
-            console.log(svg)
             try {
-                var css = '.global-navigation > .inner::before{background-image:url("' + svgToDataUri(svg) + '")}';
+                var css = '.global-navigation > .background::before{background-image:url("' + svgToDataUri(svg) + '")}';
                 var existing = document.getElementById(styleId);
                 if (existing) existing.parentNode.removeChild(existing);
                 var s = document.createElement('style');
@@ -271,7 +270,7 @@ backToListURL: /datasets/
 
         function applyBackground(svg) {
             try {
-                var css = '.global-navigation > .inner::before{background-image:url("' + svgToDataUri(svg) + '")}';
+                var css = '.global-navigation > .background::before{background-image:url("' + svgToDataUri(svg) + '")}';
                 var existing = document.getElementById(styleId);
                 if (existing) existing.parentNode.removeChild(existing);
                 var s = document.createElement('style');
