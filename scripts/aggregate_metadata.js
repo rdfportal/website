@@ -149,7 +149,27 @@ function mergeMultilanguageExtractedMetadata(...metadatas) {
 
   // Create the providers array with multilingual entries
   if (Object.keys(providersByLang).length > 0) {
+    // Ensure both en and ja keys exist
+    if (providersByLang.en && !providersByLang.ja) {
+      providersByLang.ja = providersByLang.en;
+    } else if (providersByLang.ja && !providersByLang.en) {
+      providersByLang.en = providersByLang.ja;
+    }
     mergedMetadata.providers = [providersByLang];
+  }
+
+  // Ensure description has both en and ja keys
+  if (mergedMetadata.description.en && !mergedMetadata.description.ja) {
+    mergedMetadata.description.ja = mergedMetadata.description.en;
+  } else if (mergedMetadata.description.ja && !mergedMetadata.description.en) {
+    mergedMetadata.description.en = mergedMetadata.description.ja;
+  }
+
+  // Ensure creators has both en and ja keys
+  if (mergedMetadata.creators.en && !mergedMetadata.creators.ja) {
+    mergedMetadata.creators.ja = mergedMetadata.creators.en;
+  } else if (mergedMetadata.creators.ja && !mergedMetadata.creators.en) {
+    mergedMetadata.creators.en = mergedMetadata.creators.ja;
   }
 
   return mergedMetadata;
