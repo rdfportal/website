@@ -1,0 +1,54 @@
+# Endpoint: https://rdfportal.org/pubchem/sparql
+# Description: What are the top five diseases commonly mentioned with indomethacin (CID3715)?  (cf. https://pubchem.ncbi.nlm.nih.gov/docs/rdf-use-cases#section=Case-11-What-are-the-top-five-diseases-commonly-mentioned-with-indomethacin-CID3715)
+# Parameter: compound_disease_cooccurrence_subject: (example: compound:CID3715)
+
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX bao: <http://www.bioassayontology.org/bao#>
+PREFIX cito: <http://purl.org/spar/cito/>
+PREFIX epo_patent: <http://data.epo.org/linked-data/def/patent/>
+PREFIX vocab: <http://rdf.ncbi.nlm.nih.gov/pubchem/vocabulary#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX compound: <http://rdf.ncbi.nlm.nih.gov/pubchem/compound/>
+
+SELECT ?PubChemCompoundDiseaseCooccurrence ?compound_disease_cooccurrence_subject ?compound_disease_cooccurrence_object ?compound_disease_cooccurrence_score ?disease_pref_label
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/compound>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/substance>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/descriptor/compound>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/descriptor/substance>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/synonym>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/inchikey>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/measuregroup>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/endpoint>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/bioassay>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/protein>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/pathway>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/conserveddomain>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/gene>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/reference>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/source>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/concept>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/patent>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/taxonomy>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/cell>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/cooccurrence>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/disease>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/book>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/journal>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/author>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/organization>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/grant>
+FROM <http://rdf.ncbi.nlm.nih.gov/pubchem/void>
+WHERE {
+    VALUES ?compound_disease_cooccurrence_subject { compound:CID3715 }
+    ?PubChemCompoundDiseaseCooccurrence a sio:SIO_000993 ;
+        rdf:subject ?compound_disease_cooccurrence_subject ;
+        rdf:object ?compound_disease_cooccurrence_object ;
+        sio:SIO_000300 ?compound_disease_cooccurrence_score .
+    OPTIONAL {
+        ?PubChemCompound obo:IAO_0000136 / cito:isDiscussedBy / vocab:discussesAsDerivedByTextMining / skos:prefLabel ?disease_pref_label .
+    }
+}
+ORDER BY DESC(?compound_disease_cooccurrence_score)
+LIMIT 5

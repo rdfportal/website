@@ -1,0 +1,14 @@
+# Endpoint: https://sparql.omabrowser.org/sparql/
+# Description: Get ortholog cluster members
+
+PREFIX orth: <http://purl.org/net/orth#>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+SELECT ?cluster_id ?protein_id
+FROM <http://omabrowser.org/graph>
+WHERE {
+    ?ClusterOfOrthologs a orth:OrthologsCluster ;
+        dct:identifier ?cluster_id ;
+        orth:hasHomologousMember / dct:identifier ?protein_id .
+}
+LIMIT 100

@@ -1,0 +1,16 @@
+# 3. Retrieve a list of phenotypes which are associated with a gene with Entrez Gene ID 6710.
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+PREFIX ncbigene: <http://identifiers.org/ncbigene/>
+ 
+SELECT distinct ?hpo FROM <https://pubcasefinder.dbcls.jp/rdf> WHERE{
+  ?an oa:hasTarget ?disease ;
+      oa:hasBody ?hpo .
+  ?as rdf:type sio:SIO_000983 ;
+      sio:SIO_000628 ?disease ;
+      sio:SIO_000628 ncbigene:6710 .
+  ?gene rdf:type ncit:C16612.
+}

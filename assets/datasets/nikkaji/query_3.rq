@@ -1,0 +1,20 @@
+### 03 ###
+# Find each DB entry such as PubChem corresponding with KNApSAcK metabolite:C00048658 (Clavatadine A, http://kanaya.naist.jp/knapsack_jsp/information.jsp?word=C00048658)
+
+define input:same-as "yes"
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+select distinct ?compound ?nikkajiNum ?label ?database
+FROM <http://rdfportal.org/dataset/nikkaji/core>
+FROM <http://rdfportal.org/dataset/nikkaji/link2jglobal_basedon_unichem>
+FROM <http://rdfportal.org/dataset/nikkaji/link2jglobal_basedon_pubchem>
+
+where{
+	?compound skos:closeMatch <http://kanaya.naist.jp/knapsack_jsp/information.jsp?word=C00048658> ;
+		dct:identifier ?nikkajiNum ;
+		skos:exactMatch | skos:closeMatch ?database ;
+		rdfs:label ?label filter (lang(?label)="en") .
+}
+

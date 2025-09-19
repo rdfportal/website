@@ -1,0 +1,14 @@
+#List pathogen adherence molecules of infectious agents which have a name like 'Escherichia coli'
+
+PREFIX pacsch: <http://jcggdb.jp/rdf/diseases/paconto-schema#>
+PREFIX uniprot: <http://purl.uniprot.org/core/>
+PREFIX ggdsch: <http://jcggdb.jp/rdf/diseases/ggdonto-schema#>
+
+SELECT DISTINCT ?pathogen_name
+FROM <http://jcggdb.jp/rdf/diseases/paconto>
+WHERE {
+  ?pathogen_uri ggdsch:conceptType pacsch:PathogenAdherenceMolecules.
+  ?pathogen_uri uniprot:scientificName ?scientific_name.
+  FILTER regex(?scientific_name,"Escherichia coli","i")
+  ?pathogen_uri pacsch:pathogenAdherMolecName ?pathogen_name.
+}

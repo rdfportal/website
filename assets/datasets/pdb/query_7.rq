@@ -1,0 +1,34 @@
+# Endpoint: https://rdfportal.org/pdb/sparql
+# Description: Helix list in a polypeptide chain
+# Parameter: pdb_id: (example: 5KE7)
+#            chain_id: (example: A)
+#            conf_begin_chain_id: (example: A)
+#            conf_type: (example: HELX_P)
+
+PREFIX pdbo: <https://rdf.wwpdb.org/schema/pdbx-v50.owl#>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+SELECT ?entity ?entity_id ?uniprot ?conformation ?conf_id ?pdb_id ?chain_id ?conf_begin_chain_id ?conf_type
+FROM <http://rdfportal.org/dataset/pdbj>
+FROM <http://rdf.wwpdb.org/schema/pdbx-v50.owl>
+WHERE {
+    VALUES ?pdb_id { "5KE7" }
+    VALUES ?chain_id { "A" }
+    VALUES ?conf_begin_chain_id { "A" }
+    VALUES ?conf_type { "HELX_P" }
+    ?PDB a pdbo:datablock ;
+        pdbo:has_entityCategory / pdbo:has_entity ?entity ;
+        dct:identifier ?pdb_id .
+    ?entity a pdbo:entity ;
+        pdbo:entity.id ?entity_id ;
+        pdbo:referenced_by_struct_ref / pdbo:link_to_uniprot ?uniprot ;
+        pdbo:referenced_by_struct_asym / pdbo:struct_asym.id ?chain_id .
+    ?conformation a pdbo:struct_conf ;
+        pdbo:struct_conf.beg_label_asym_id ?conf_begin_chain_id ;
+        pdbo:struct_conf.conf_type_id ?conf_type .
+    OPTIONAL {
+        ?PDB pdbo:has_struct_confCategory / pdbo:has_struct_conf ?conformation .
+        ?conformation pdbo:struct_conf.id ?conf_id .
+    }
+}
+LIMIT 100

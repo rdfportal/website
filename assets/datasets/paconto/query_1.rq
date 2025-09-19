@@ -1,0 +1,16 @@
+#List species names and their strains names
+
+PREFIX pacsch: <http://jcggdb.jp/rdf/diseases/paconto-schema#>
+PREFIX glycan: <http://purl.jp/bio/12/glyco/glycan#>
+PREFIX uniprot: <http://purl.uniprot.org/core/>
+PREFIX ggdsch: <http://jcggdb.jp/rdf/diseases/ggdonto-schema#>
+
+SELECT DISTINCT ?species_name ?strain_name
+FROM <http://jcggdb.jp/rdf/diseases/paconto>
+WHERE {
+  ?species_uri ggdsch:conceptType pacsch:PathogenicMicroorganisms.
+  ?species_uri uniprot:scientificName ?species_name.
+  OPTIONAL {?species_uri glycan:has_strain ?strain_name.}
+}
+ORDER BY ?species_name ?strain_name
+

@@ -1,0 +1,24 @@
+
+### 01 ###
+# Find Nikkaji Number, InChIKey, and InChI of the chemical compound which is named "Temporin"
+
+define input:same-as "yes"
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX ssc: <http://semanticscience.org/resource/>
+
+SELECT DISTINCT ?NikkajiNum ?InChIKey ?InChI
+FROM <http://rdfportal.org/dataset/nikkaji/main>
+FROM <http://rdfportal.org/dataset/nikkaji/inchi>
+
+WHERE 
+{ 
+	?compound ?p "Temporin"@en ;
+		dct:identifier ?NikkajiNum ;
+		ssc:CHEMINF_000200 ?atr_inchikey, ?atr_inchi .
+	?atr_inchikey rdf:type ssc:CHEMINF_000399 ;
+		ssc:SIO_000300 ?InChIKey .
+	?atr_inchi rdf:type ssc:CHEMINF_000396 ;
+		ssc:SIO_000300 ?InChI .
+}
+
