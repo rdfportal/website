@@ -79,3 +79,18 @@ pre
   code
     background: none
     padding: 0
+
+// Language visibility helpers:
+// Show elements that match the document language and hide others.
+// Usage: mark language-specific blocks with a lang attribute (e.g. <article lang="ja">)
+html[lang="ja"]
+  [lang="en"]
+    display: none
+    &[aria-hidden]
+      aria-hidden: true
+
+html[lang="en"]
+  [lang="ja"]
+    display: none
+    &[aria-hidden]
+      aria-hidden: true
