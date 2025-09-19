@@ -1,5 +1,20 @@
 [
   {
+    "endpoint": "bacdive",
+    "dataset": "bacdive",
+    "statistics": {
+      "number_of_triples": 15721404,
+      "number_of_subjects": 1617191,
+      "number_of_properties": 314,
+      "number_of_objects": 175504,
+      "number_of_literals": 781287,
+      "number_of_classes": 51,
+      "number_of_datatypes": 5,
+      "number_of_links": 123465
+    },
+    "updated_at": "2025-09-16"
+  },
+  {
     "endpoint": "bioportal",
     "dataset": "bioportal",
     "statistics": {
