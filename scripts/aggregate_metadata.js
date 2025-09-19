@@ -40,7 +40,7 @@ function extractRequiredFields(metadata) {
         : metadata.creators || {},
     website: metadata.website || null,
     issued: metadata.issued?.toString() || null,
-    version: metadata.version || null,
+    version: metadata.version?.toString() || null,
   };
 }
 
