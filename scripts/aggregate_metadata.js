@@ -54,287 +54,287 @@ function isNewSection(line, excludedPrefixes = []) {
   return !excludedPrefixes.some((prefix) => line.startsWith(prefix));
 }
 
-function parseYaml(yamlContent) {
-  const lines = yamlContent.split("\n");
-  const result = {
-    title: "",
-    description: "",
-    tags: [],
-    provider: "",
-    licenses: [],
-    creators: [],
-    website: null,
-    issued: null,
-    version: null,
-  };
+// function parseYaml(yamlContent) {
+//   const lines = yamlContent.split("\n");
+//   const result = {
+//     title: "",
+//     description: "",
+//     tags: [],
+//     provider: "",
+//     licenses: [],
+//     creators: [],
+//     website: null,
+//     issued: null,
+//     version: null,
+//   };
 
-  let currentKey = null;
-  let inTags = false;
-  let inLicense = false;
-  let inLicenses = false;
-  let currentLicense = {};
-  let inCreators = false;
-  let currentCreator = {};
+//   let currentKey = null;
+//   let inTags = false;
+//   let inLicense = false;
+//   let inLicenses = false;
+//   let currentLicense = {};
+//   let inCreators = false;
+//   let currentCreator = {};
 
-  for (const line of lines) {
-    const trimmed = line.trim();
+//   for (const line of lines) {
+//     const trimmed = line.trim();
 
-    // Skip empty lines and comments
-    if (!trimmed || trimmed.startsWith("#")) {
-      continue;
-    }
+//     // Skip empty lines and comments
+//     if (!trimmed || trimmed.startsWith("#")) {
+//       continue;
+//     }
 
-    if (trimmed.startsWith("title:")) {
-      result.title = cleanValue(trimmed, "title:");
-      inTags = false;
-      inLicense = false;
-      inLicenses = false;
-    } else if (trimmed.startsWith("description:")) {
-      result.description = cleanValue(trimmed, "description:");
-      inTags = false;
-      inLicense = false;
-      inLicenses = false;
-    } else if (trimmed.startsWith("provider:")) {
-      // Added provider extraction
-      result.provider = cleanValue(trimmed, "provider:");
-      inTags = false;
-      inLicense = false;
-      inLicenses = false;
-    } else if (trimmed.startsWith("website:")) {
-      // Extract website URL
-      result.website = cleanValue(trimmed, "website:");
-      inTags = false;
-      inLicense = false;
-      inLicenses = false;
-    } else if (trimmed.startsWith("issued:")) {
-      // Extract issued date
-      result.issued = cleanValue(trimmed, "issued:");
-      inTags = false;
-      inLicense = false;
-      inLicenses = false;
-    } else if (trimmed.startsWith("version:")) {
-      // Extract version
-      result.version = cleanValue(trimmed, "version:");
-      inTags = false;
-      inLicense = false;
-      inLicenses = false;
-    } else if (trimmed.startsWith("license:")) {
-      const licenseLine = cleanValue(trimmed, "license:");
+//     if (trimmed.startsWith("title:")) {
+//       result.title = cleanValue(trimmed, "title:");
+//       inTags = false;
+//       inLicense = false;
+//       inLicenses = false;
+//     } else if (trimmed.startsWith("description:")) {
+//       result.description = cleanValue(trimmed, "description:");
+//       inTags = false;
+//       inLicense = false;
+//       inLicenses = false;
+//     } else if (trimmed.startsWith("provider:")) {
+//       // Added provider extraction
+//       result.provider = cleanValue(trimmed, "provider:");
+//       inTags = false;
+//       inLicense = false;
+//       inLicenses = false;
+//     } else if (trimmed.startsWith("website:")) {
+//       // Extract website URL
+//       result.website = cleanValue(trimmed, "website:");
+//       inTags = false;
+//       inLicense = false;
+//       inLicenses = false;
+//     } else if (trimmed.startsWith("issued:")) {
+//       // Extract issued date
+//       result.issued = cleanValue(trimmed, "issued:");
+//       inTags = false;
+//       inLicense = false;
+//       inLicenses = false;
+//     } else if (trimmed.startsWith("version:")) {
+//       // Extract version
+//       result.version = cleanValue(trimmed, "version:");
+//       inTags = false;
+//       inLicense = false;
+//       inLicenses = false;
+//     } else if (trimmed.startsWith("license:")) {
+//       const licenseLine = cleanValue(trimmed, "license:");
 
-      if (licenseLine === "") {
-        // Multiline license object
-        inLicense = true;
-        inLicenses = false;
-        inTags = false;
-        currentLicense = {};
-      } else if (
-        licenseLine.startsWith("{") ||
-        licenseLine.startsWith("name:") ||
-        licenseLine.startsWith("url:") ||
-        licenseLine.startsWith("credit:")
-      ) {
-        // Direct object format (not inside an array)
-        inLicense = true;
-        inLicenses = false;
-        inTags = false;
-        currentLicense = {};
+//       if (licenseLine === "") {
+//         // Multiline license object
+//         inLicense = true;
+//         inLicenses = false;
+//         inTags = false;
+//         currentLicense = {};
+//       } else if (
+//         licenseLine.startsWith("{") ||
+//         licenseLine.startsWith("name:") ||
+//         licenseLine.startsWith("url:") ||
+//         licenseLine.startsWith("credit:")
+//       ) {
+//         // Direct object format (not inside an array)
+//         inLicense = true;
+//         inLicenses = false;
+//         inTags = false;
+//         currentLicense = {};
 
-        if (licenseLine.startsWith("name:")) {
-          currentLicense.name = cleanValue(licenseLine, "name:");
-        } else if (licenseLine.startsWith("url:")) {
-          currentLicense.url = cleanValue(licenseLine, "url:");
-        } else if (licenseLine.startsWith("credit:")) {
-          currentLicense.credit = cleanValue(licenseLine, "credit:");
-        }
-      } else {
-        // Inline license, treat as a single license name
-        result.licenses.push({
-          name: licenseLine.replace(/^["']|["']$/g, ""),
-          url: null,
-          credit: null,
-        });
-      }
-    } else if (trimmed.startsWith("licenses:")) {
-      const licensesLine = cleanValue(trimmed, "licenses:");
+//         if (licenseLine.startsWith("name:")) {
+//           currentLicense.name = cleanValue(licenseLine, "name:");
+//         } else if (licenseLine.startsWith("url:")) {
+//           currentLicense.url = cleanValue(licenseLine, "url:");
+//         } else if (licenseLine.startsWith("credit:")) {
+//           currentLicense.credit = cleanValue(licenseLine, "credit:");
+//         }
+//       } else {
+//         // Inline license, treat as a single license name
+//         result.licenses.push({
+//           name: licenseLine.replace(/^["']|["']$/g, ""),
+//           url: null,
+//           credit: null,
+//         });
+//       }
+//     } else if (trimmed.startsWith("licenses:")) {
+//       const licensesLine = cleanValue(trimmed, "licenses:");
 
-      if (licensesLine.startsWith("[") && licensesLine.endsWith("]")) {
-        // Inline array format: licenses: [item1, item2]
-        const licensesContent = licensesLine.slice(1, -1).trim();
-        if (licensesContent) {
-          const licenseNames = licensesContent
-            .split(",")
-            .map((license) => license.trim().replace(/^["']|["']$/g, ""));
+//       if (licensesLine.startsWith("[") && licensesLine.endsWith("]")) {
+//         // Inline array format: licenses: [item1, item2]
+//         const licensesContent = licensesLine.slice(1, -1).trim();
+//         if (licensesContent) {
+//           const licenseNames = licensesContent
+//             .split(",")
+//             .map((license) => license.trim().replace(/^["']|["']$/g, ""));
 
-          result.licenses = licenseNames.map((name) => ({
-            name,
-            url: null,
-            credit: null,
-          }));
-        }
-        inLicenses = false;
-      } else {
-        // Multiline licenses array
-        inLicenses = true;
-        inLicense = false;
-        inTags = false;
-      }
-    } else if (inLicense && trimmed.startsWith("- name:")) {
-      currentLicense.name = cleanValue(trimmed, "- name:");
-    } else if (inLicense && trimmed.startsWith("name:")) {
-      currentLicense.name = cleanValue(trimmed, "name:");
-    } else if (inLicense && trimmed.startsWith("- url:")) {
-      currentLicense.url = cleanValue(trimmed, "- url:");
-    } else if (inLicense && trimmed.startsWith("url:")) {
-      currentLicense.url = cleanValue(trimmed, "url:");
-    } else if (inLicense && trimmed.startsWith("- credit:")) {
-      currentLicense.credit = cleanValue(trimmed, "- credit:");
-    } else if (inLicense && trimmed.startsWith("credit:")) {
-      currentLicense.credit = cleanValue(trimmed, "credit:");
+//           result.licenses = licenseNames.map((name) => ({
+//             name,
+//             url: null,
+//             credit: null,
+//           }));
+//         }
+//         inLicenses = false;
+//       } else {
+//         // Multiline licenses array
+//         inLicenses = true;
+//         inLicense = false;
+//         inTags = false;
+//       }
+//     } else if (inLicense && trimmed.startsWith("- name:")) {
+//       currentLicense.name = cleanValue(trimmed, "- name:");
+//     } else if (inLicense && trimmed.startsWith("name:")) {
+//       currentLicense.name = cleanValue(trimmed, "name:");
+//     } else if (inLicense && trimmed.startsWith("- url:")) {
+//       currentLicense.url = cleanValue(trimmed, "- url:");
+//     } else if (inLicense && trimmed.startsWith("url:")) {
+//       currentLicense.url = cleanValue(trimmed, "url:");
+//     } else if (inLicense && trimmed.startsWith("- credit:")) {
+//       currentLicense.credit = cleanValue(trimmed, "- credit:");
+//     } else if (inLicense && trimmed.startsWith("credit:")) {
+//       currentLicense.credit = cleanValue(trimmed, "credit:");
 
-      // Complete license object after processing all fields
-      if (Object.keys(currentLicense).length > 0) {
-        addLicense(result, currentLicense);
-        currentLicense = {};
-      }
-    } else if (trimmed.startsWith("creators:")) {
-      const creatorsLine = cleanValue(trimmed, "creators:");
+//       // Complete license object after processing all fields
+//       if (Object.keys(currentLicense).length > 0) {
+//         addLicense(result, currentLicense);
+//         currentLicense = {};
+//       }
+//     } else if (trimmed.startsWith("creators:")) {
+//       const creatorsLine = cleanValue(trimmed, "creators:");
 
-      if (creatorsLine === "") {
-        // Multiline creators array
-        inCreators = true;
-        inTags = false;
-        inLicense = false;
-        inLicenses = false;
-      } else if (creatorsLine.startsWith("[") && creatorsLine.endsWith("]")) {
-        // Inline array format: creators: [creator1, creator2]
-        const creatorsContent = creatorsLine.slice(1, -1).trim();
-        if (creatorsContent) {
-          const creatorNames = creatorsContent
-            .split(",")
-            .map((creator) => creator.trim().replace(/^["']|["']$/g, ""));
+//       if (creatorsLine === "") {
+//         // Multiline creators array
+//         inCreators = true;
+//         inTags = false;
+//         inLicense = false;
+//         inLicenses = false;
+//       } else if (creatorsLine.startsWith("[") && creatorsLine.endsWith("]")) {
+//         // Inline array format: creators: [creator1, creator2]
+//         const creatorsContent = creatorsLine.slice(1, -1).trim();
+//         if (creatorsContent) {
+//           const creatorNames = creatorsContent
+//             .split(",")
+//             .map((creator) => creator.trim().replace(/^["']|["']$/g, ""));
 
-          creatorNames.forEach((name) => {
-            result.creators.push({
-              name,
-              affiliation: null,
-            });
-          });
-        }
-      } else {
-        // Single creator as string
-        result.creators.push({
-          name: creatorsLine.replace(/^["']|["']$/g, ""),
-          affiliation: null,
-        });
-      }
-    } else if (inCreators && trimmed.startsWith("- name:")) {
-      currentCreator.name = cleanValue(trimmed, "- name:");
-    } else if (inCreators && trimmed.startsWith("- affiliation:")) {
-      currentCreator.affiliation = cleanValue(trimmed, "- affiliation:");
+//           creatorNames.forEach((name) => {
+//             result.creators.push({
+//               name,
+//               affiliation: null,
+//             });
+//           });
+//         }
+//       } else {
+//         // Single creator as string
+//         result.creators.push({
+//           name: creatorsLine.replace(/^["']|["']$/g, ""),
+//           affiliation: null,
+//         });
+//       }
+//     } else if (inCreators && trimmed.startsWith("- name:")) {
+//       currentCreator.name = cleanValue(trimmed, "- name:");
+//     } else if (inCreators && trimmed.startsWith("- affiliation:")) {
+//       currentCreator.affiliation = cleanValue(trimmed, "- affiliation:");
 
-      // After processing affiliation, add the complete creator object
-      if (currentCreator.name) {
-        result.creators.push({
-          name: currentCreator.name,
-          affiliation: currentCreator.affiliation || null,
-        });
-        currentCreator = {};
-      }
-    } else if (
-      inCreators &&
-      trimmed.startsWith("- ") &&
-      !trimmed.includes(":")
-    ) {
-      // Handle direct array item (just a name without affiliation)
-      const creatorName = trimmed
-        .replace("- ", "")
-        .trim()
-        .replace(/^["']|["']$/g, "");
+//       // After processing affiliation, add the complete creator object
+//       if (currentCreator.name) {
+//         result.creators.push({
+//           name: currentCreator.name,
+//           affiliation: currentCreator.affiliation || null,
+//         });
+//         currentCreator = {};
+//       }
+//     } else if (
+//       inCreators &&
+//       trimmed.startsWith("- ") &&
+//       !trimmed.includes(":")
+//     ) {
+//       // Handle direct array item (just a name without affiliation)
+//       const creatorName = trimmed
+//         .replace("- ", "")
+//         .trim()
+//         .replace(/^["']|["']$/g, "");
 
-      if (creatorName) {
-        result.creators.push({
-          name: creatorName,
-          affiliation: null,
-        });
-      }
-    } else if (inLicenses && trimmed.startsWith("- ")) {
-      // Handle licenses array format with dashes
-      const licenseName = cleanValue(trimmed, "- ");
+//       if (creatorName) {
+//         result.creators.push({
+//           name: creatorName,
+//           affiliation: null,
+//         });
+//       }
+//     } else if (inLicenses && trimmed.startsWith("- ")) {
+//       // Handle licenses array format with dashes
+//       const licenseName = cleanValue(trimmed, "- ");
 
-      if (licenseName) {
-        result.licenses.push({
-          name: licenseName,
-          url: null,
-          credit: null,
-        });
-      }
-    } else if (trimmed.startsWith("tags:")) {
-      const tagsLine = cleanValue(trimmed, "tags:");
+//       if (licenseName) {
+//         result.licenses.push({
+//           name: licenseName,
+//           url: null,
+//           credit: null,
+//         });
+//       }
+//     } else if (trimmed.startsWith("tags:")) {
+//       const tagsLine = cleanValue(trimmed, "tags:");
 
-      // Handle inline array format: tags: [item1, item2]
-      if (tagsLine.startsWith("[") && tagsLine.endsWith("]")) {
-        const tagsContent = tagsLine.slice(1, -1).trim();
-        if (tagsContent) {
-          result.tags = tagsContent
-            .split(",")
-            .map((tag) => tag.trim().replace(/^["']|["']$/g, ""));
-        }
-        inTags = false;
-      } else if (tagsLine === "") {
-        // Handle multiline array format
-        inTags = true;
-        inLicense = false;
-        inLicenses = false;
-        result.tags = [];
-      } else {
-        inTags = false;
-      }
-    } else if (inTags && trimmed.startsWith("- ")) {
-      const tag = cleanValue(trimmed, "- ");
-      if (tag) result.tags.push(tag);
-    } else if (
-      inTags &&
-      trimmed &&
-      !trimmed.startsWith(" ") &&
-      !trimmed.startsWith("-")
-    ) {
-      inTags = false;
-    }
+//       // Handle inline array format: tags: [item1, item2]
+//       if (tagsLine.startsWith("[") && tagsLine.endsWith("]")) {
+//         const tagsContent = tagsLine.slice(1, -1).trim();
+//         if (tagsContent) {
+//           result.tags = tagsContent
+//             .split(",")
+//             .map((tag) => tag.trim().replace(/^["']|["']$/g, ""));
+//         }
+//         inTags = false;
+//       } else if (tagsLine === "") {
+//         // Handle multiline array format
+//         inTags = true;
+//         inLicense = false;
+//         inLicenses = false;
+//         result.tags = [];
+//       } else {
+//         inTags = false;
+//       }
+//     } else if (inTags && trimmed.startsWith("- ")) {
+//       const tag = cleanValue(trimmed, "- ");
+//       if (tag) result.tags.push(tag);
+//     } else if (
+//       inTags &&
+//       trimmed &&
+//       !trimmed.startsWith(" ") &&
+//       !trimmed.startsWith("-")
+//     ) {
+//       inTags = false;
+//     }
 
-    // Check if we're entering a new section while in creators mode and have a pending creator
-    if (
-      inCreators &&
-      isNewSection(trimmed) &&
-      Object.keys(currentCreator).length > 0 &&
-      currentCreator.name
-    ) {
-      result.creators.push({
-        name: currentCreator.name,
-        affiliation: currentCreator.affiliation || null,
-      });
-      currentCreator = {};
-      inCreators = false;
-    }
+//     // Check if we're entering a new section while in creators mode and have a pending creator
+//     if (
+//       inCreators &&
+//       isNewSection(trimmed) &&
+//       Object.keys(currentCreator).length > 0 &&
+//       currentCreator.name
+//     ) {
+//       result.creators.push({
+//         name: currentCreator.name,
+//         affiliation: currentCreator.affiliation || null,
+//       });
+//       currentCreator = {};
+//       inCreators = false;
+//     }
 
-    // Check if we're entering a new section while in license mode
-    if (
-      inLicense &&
-      isNewSection(trimmed, ["name:", "url:", "credit:"]) &&
-      Object.keys(currentLicense).length > 0
-    ) {
-      addLicense(result, currentLicense);
-      currentLicense = {};
-      inLicense = false;
-    }
-  }
+//     // Check if we're entering a new section while in license mode
+//     if (
+//       inLicense &&
+//       isNewSection(trimmed, ["name:", "url:", "credit:"]) &&
+//       Object.keys(currentLicense).length > 0
+//     ) {
+//       addLicense(result, currentLicense);
+//       currentLicense = {};
+//       inLicense = false;
+//     }
+//   }
 
-  // Handle any remaining license object at the end of file
-  if (inLicense && Object.keys(currentLicense).length > 0) {
-    addLicense(result, currentLicense);
-  }
+//   // Handle any remaining license object at the end of file
+//   if (inLicense && Object.keys(currentLicense).length > 0) {
+//     addLicense(result, currentLicense);
+//   }
 
-  return result;
-}
+//   return result;
+// }
 
 /**
  * 必要なフィールドを抽出
@@ -347,7 +347,7 @@ function extractRequiredFields(metadata) {
       provider: "",
       tags: [],
       licenses: [],
-      creators: [],
+      creators: {},
       website: null,
       issued: null,
       version: null,
@@ -360,7 +360,7 @@ function extractRequiredFields(metadata) {
     provider: metadata.provider || "",
     tags: metadata.tags || [],
     licenses: metadata.licenses || [],
-    creators: metadata.creators || [],
+    creators: metadata.creators || {},
     website: metadata.website || null,
     issued: metadata.issued || null,
     version: metadata.version || null,
@@ -378,7 +378,7 @@ function getMetadataFromLocalFolder(id, lang) {
     const metadata = fs.readFileSync(metadataPath, "utf8");
     return {
       exists: true,
-      metadata: extractRequiredFields(parseYaml(metadata)),
+      metadata: extractRequiredFields(Bun.YAML.parse(metadata)),
     };
   } catch (error) {
     return {
@@ -405,7 +405,7 @@ function mergeMultilanguageExtractedMetadata(...metadatas) {
     providers: [],
     tags: [],
     licenses: [],
-    creators: [],
+    creators: {},
     issued: null,
     website: null,
     version: null,
@@ -446,13 +446,9 @@ function mergeMultilanguageExtractedMetadata(...metadatas) {
       mergedMetadata.licenses = metadata.licenses;
     }
 
-    // Add creators only once (preferably from English metadata)
-    if (
-      metadata.creators &&
-      metadata.creators.length > 0 &&
-      mergedMetadata.creators.length === 0
-    ) {
-      mergedMetadata.creators = metadata.creators;
+    // Add creators by language
+    if (metadata.creators && metadata.creators.length > 0) {
+      mergedMetadata.creators[lang] = metadata.creators;
     }
 
     // Add website from metadata (preferably from English)
@@ -519,6 +515,7 @@ async function main() {
     for (const id of ids) {
       console.log(`Processing ${id}...`);
       const extractedResult = getMetadataFromLocalFolder(id);
+      console.log("extractedResult", extractedResult);
       const hasMetadata = extractedResult.exists;
       const extracted = extractedResult.metadata;
       extracted.lang = "en";
@@ -541,6 +538,7 @@ async function main() {
       const datasetInfo = {
         id,
         ...mergedMetadata,
+
         statistics: statsData.statistics,
         endpoint: statsData.endpoint,
         updated_at: statsData.updated_at,

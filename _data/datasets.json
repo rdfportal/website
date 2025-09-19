@@ -3,11 +3,13 @@
     "id": "oma",
     "title": "Orthologous MAtrix (OMA) RDF",
     "description": {
-      "en": "The OMA (Orthologous MAtrix) project is a method and database for the inference of orthologs among complete genomes. The OMA RDF is a view of the OMA database in RDF."
+      "en": "The OMA (Orthologous MAtrix) project is a method and database for the inference of orthologs among complete genomes. The OMA RDF is a view of the OMA database in RDF.",
+      "ja": "The OMA (Orthologous MAtrix) project is a method and database for the inference of orthologs among complete genomes. The OMA RDF is a view of the OMA database in RDF."
     },
     "providers": [
       {
-        "en": "SIB Swiss Institute of Bioinformatics"
+        "en": "SIB Swiss Institute of Bioinformatics",
+        "ja": "SIB Swiss Institute of Bioinformatics"
       }
     ],
     "tags": [
@@ -16,18 +18,38 @@
       "Phylogeny/Classification"
     ],
     "licenses": [
-      {
-        "name": "Creative Commons Attribution 4.0 International",
-        "url": null,
-        "credit": null
-      }
+      "Creative Commons Attribution 4.0 International"
     ],
-    "creators": [
-      {
-        "name": "Adrian M. Altenhoff",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Adrian M. Altenhoff",
+          "affiliation": "SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Christophe Dessimoz",
+          "affiliation": "SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Tarcisio Mendes de Farias",
+          "affiliation": "SIB Swiss Institute of Bioinformatics"
+        }
+      ],
+      "ja": [
+        {
+          "name": "Adrian M. Altenhoff",
+          "affiliation": "SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Christophe Dessimoz",
+          "affiliation": "SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Tarcisio Mendes de Farias",
+          "affiliation": "SIB Swiss Institute of Bioinformatics"
+        }
+      ]
+    },
     "issued": "2023-07-01",
     "website": "https://omabrowser.org",
     "version": "Jul2023",
@@ -49,32 +71,36 @@
     "id": "mesh",
     "title": "Medical Subject Headings (MeSH) RDF Dataset Description",
     "description": {
-      "en": "A linked data representation of the MeSH biomedical vocabulary produced by the National Library of Medicine."
+      "en": "A linked data representation of the MeSH biomedical vocabulary produced by the National Library of Medicine.",
+      "ja": "A linked data representation of the MeSH biomedical vocabulary produced by the National Library of Medicine."
     },
     "providers": [
       {
-        "en": "National Library of Medicine"
+        "en": "National Library of Medicine",
+        "ja": "National Library of Medicine"
       }
     ],
     "tags": [
       "Ontology/ Terminology/Nomenclature"
     ],
-    "licenses": [
-      {
-        "name": "Creative commons 1.0 Universal (CC0 1.0)",
-        "url": "http://creativecommons.org/publicdomain/zero/1.0/",
-        "credit": "Genebank Project, NARO licensed under CC Atribution 4.0 International License."
-      }
-    ],
-    "creators": [
-      {
-        "name": "National Library of Medicine",
-        "affiliation": null
-      }
-    ],
+    "licenses": [],
+    "creators": {
+      "en": [
+        {
+          "name": "National Library of Medicine",
+          "affiliation": null
+        }
+      ],
+      "ja": [
+        {
+          "name": "National Library of Medicine",
+          "affiliation": null
+        }
+      ]
+    },
     "issued": "2024-12-05",
     "website": "https://id.nlm.nih.gov/mesh/",
-    "version": "2025",
+    "version": 2025,
     "statistics": {
       "number_of_triples": 812614663,
       "number_of_instances": 1510436,
@@ -93,11 +119,13 @@
     "id": "gtdb",
     "title": "GTDB",
     "description": {
-      "en": "The Genome Taxonomy Database"
+      "en": "The Genome Taxonomy Database",
+      "ja": "The Genome Taxonomy Database"
     },
     "providers": [
       {
-        "en": "The University of Queensland"
+        "en": "The University of Queensland",
+        "ja": "The University of Queensland"
       }
     ],
     "tags": [
@@ -106,18 +134,22 @@
       "archaea"
     ],
     "licenses": [
-      {
-        "name": "See licenses at https://gtdb.ecogenomic.org/licenses",
-        "url": null,
-        "credit": null
-      }
+      "See licenses at https://gtdb.ecogenomic.org/licenses"
     ],
-    "creators": [
-      {
-        "name": "Shuichi Kawashima",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Shuichi Kawashima",
+          "affiliation": "https://dbcls.rois.ac.jp/"
+        }
+      ],
+      "ja": [
+        {
+          "name": "Shuichi Kawashima",
+          "affiliation": "https://dbcls.rois.ac.jp/"
+        }
+      ]
+    },
     "issued": "2024-06-27",
     "website": "https://gtdb.ecogenomic.org/",
     "version": "2024-06-27",
@@ -148,18 +180,38 @@
       "Structure"
     ],
     "licenses": [
-      {
-        "name": "Attribution 4.0 International (CC BY 4.0) Database Center for Life Science",
-        "url": null,
-        "credit": null
-      }
+      "Attribution 4.0 International (CC BY 4.0) Database Center for Life Science"
     ],
-    "creators": [
-      {
-        "name": "Mitsuo Iwadate",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Mitsuo Iwadate",
+          "affiliation": "Chuo University"
+        },
+        {
+          "name": "Shuichi Kawahsima",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": null,
+          "affiliation": null
+        }
+      ],
+      "ja": [
+        {
+          "name": "Mitsuo Iwadate",
+          "affiliation": "Chuo University"
+        },
+        {
+          "name": "Shuichi Kawahsima",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": null,
+          "affiliation": null
+        }
+      ]
+    },
     "issued": "2016-03-24",
     "website": null,
     "version": "2016-03-24",
@@ -196,23 +248,15 @@
       "Sequence"
     ],
     "licenses": [
+      "https://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/",
       {
-        "name": "https://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/",
-        "url": null,
-        "credit": null
-      },
-      {
-        "name": "Source\\: U.S. National Library of Medicine.",
-        "url": null,
-        "credit": null
+        "Source\\": "U.S. National Library of Medicine."
       }
     ],
-    "creators": [
-      {
-        "name": "National Center for Biotechnology Information",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": "National Center for Biotechnology Information",
+      "ja": "National Center for Biotechnology Information"
+    },
     "issued": "2025-06-23",
     "website": "https://www.ncbi.nlm.nih.gov/clinvar/",
     "version": "release_20250623",
@@ -234,11 +278,13 @@
     "id": "homologene",
     "title": "HomoloGene RDF",
     "description": {
-      "en": "HomoloGene RDF is a translation of HomoloGene data into RDF."
+      "en": "HomoloGene RDF is a translation of HomoloGene data into RDF.",
+      "ja": "HomoloGene RDF is a translation of HomoloGene data into RDF."
     },
     "providers": [
       {
-        "en": "National Center for Biotechnology Information"
+        "en": "National Center for Biotechnology Information",
+        "ja": "National Center for Biotechnology Information"
       }
     ],
     "tags": [
@@ -247,18 +293,22 @@
       "Phylogeny/Classification"
     ],
     "licenses": [
-      {
-        "name": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
-        "url": null,
-        "credit": null
-      }
+      "https://www.ncbi.nlm.nih.gov/home/about/policies/"
     ],
-    "creators": [
-      {
-        "name": "Hirokazu Chiba",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Hirokazu Chiba",
+          "affiliation": "Database Center for Life Science"
+        }
+      ],
+      "ja": [
+        {
+          "name": "Hirokazu Chiba",
+          "affiliation": "Database Center for Life Science"
+        }
+      ]
+    },
     "issued": "2023-05-17",
     "website": "https://www.ncbi.nlm.nih.gov/homologene/",
     "version": "release_20230517",
@@ -294,18 +344,12 @@
       "Journal article/Report/Bibliography"
     ],
     "licenses": [
+      "https://ftp.ncbi.nlm.nih.gov/pub/lu/PubTatorCentral/README.txt",
       {
-        "name": "https://ftp.ncbi.nlm.nih.gov/pub/lu/PubTatorCentral/README.txt",
-        "url": null,
-        "credit": null
-      },
-      {
-        "name": "Source\\: U.S. National Library of Medicine.",
-        "url": null,
-        "credit": null
+        "Source\\": "U.S. National Library of Medicine."
       }
     ],
-    "creators": [],
+    "creators": {},
     "issued": "2025-06-30",
     "website": "https://www.ncbi.nlm.nih.gov/research/pubtator/",
     "version": "release_20250630",
@@ -341,21 +385,25 @@
       "splicing consensus region"
     ],
     "licenses": [
-      {
-        "name": "No information is available.",
-        "url": null,
-        "credit": null
-      }
+      "No information is available."
     ],
-    "creators": [
-      {
-        "name": "Med2RDF project",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Med2RDF project",
+          "affiliation": "http://med2rdf.org/"
+        }
+      ],
+      "ja": [
+        {
+          "name": "Med2RDF project",
+          "affiliation": "http://med2rdf.org/"
+        }
+      ]
+    },
     "issued": "2015-04-12",
     "website": "http://www.liulab.science/dbscsnv.html",
-    "version": "1.1",
+    "version": 1.1,
     "statistics": {
       "number_of_triples": 743704409,
       "number_of_instances": 1297913,
@@ -374,11 +422,13 @@
     "id": "nikkaji",
     "title": "Nikkaji RDF",
     "description": {
-      "en": "NBDC NikkajiRDF is RDF data of Japan Chemical Substance Dictionary (Nikkaji), which is one of the largest chemical substance databases in Japan."
+      "en": "NBDC NikkajiRDF is RDF data of Japan Chemical Substance Dictionary (Nikkaji), which is one of the largest chemical substance databases in Japan.",
+      "ja": "NBDC NikkajiRDF is RDF data of Japan Chemical Substance Dictionary (Nikkaji), which is one of the largest chemical substance databases in Japan."
     },
     "providers": [
       {
-        "en": "Japan Science and Technology Agency (JST)"
+        "en": "Japan Science and Technology Agency (JST)",
+        "ja": "Japan Science and Technology Agency (JST)"
       }
     ],
     "tags": [
@@ -388,23 +438,13 @@
       "Image/Movie"
     ],
     "licenses": [
-      {
-        "name": "Creative Commons Attribution 2.1 Japan (CC BY 2.1 JP)",
-        "url": null,
-        "credit": null
-      },
-      {
-        "name": "NBDC NikkajiRDF © Japan Science and Technology Agency licensed under CC Attribution 2.1 Japan",
-        "url": null,
-        "credit": null
-      }
+      "Creative Commons Attribution 2.1 Japan (CC BY 2.1 JP)",
+      "NBDC NikkajiRDF © Japan Science and Technology Agency licensed under CC Attribution 2.1 Japan"
     ],
-    "creators": [
-      {
-        "name": "Japan Science and Technology Agency (JST)",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": "Japan Science and Technology Agency (JST)",
+      "ja": "Japan Science and Technology Agency (JST)"
+    },
     "issued": "2017-01-12",
     "website": "http://dbarchive.biosciencedbc.jp/en/nikkaji/desc.html",
     "version": "2017-01-12",
@@ -434,23 +474,39 @@
       "Others"
     ],
     "licenses": [
-      {
-        "name": "http://creativecommons.org/publicdomain/zero/1.0/",
-        "url": null,
-        "credit": null
-      },
-      {
-        "name": "Integbio Database Catalog© National Bioscience Database Center licensed under CC Attribution 2.1 Japan",
-        "url": null,
-        "credit": null
-      }
+      "http://creativecommons.org/publicdomain/zero/1.0/",
+      "Integbio Database Catalog© National Bioscience Database Center licensed under CC Attribution 2.1 Japan"
     ],
-    "creators": [
-      {
-        "name": "Takahiro Ide",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Takahiro Ide",
+          "affiliation": "NBDC, JST"
+        },
+        {
+          "name": "Tomoe Nobusada",
+          "affiliation": "NBDC, JST"
+        },
+        {
+          "name": "Asuka Bando",
+          "affiliation": "NBDC, JST"
+        }
+      ],
+      "ja": [
+        {
+          "name": "井手隆広",
+          "affiliation": "NBDC, JST"
+        },
+        {
+          "name": "信定知江",
+          "affiliation": "NBDC, JST"
+        },
+        {
+          "name": "坂東明日佳",
+          "affiliation": "NBDC, JST"
+        }
+      ]
+    },
     "issued": "2023-03-02",
     "website": "https://catalog.integbio.jp/dbcatalog/en/",
     "version": "release_20230302",
@@ -486,13 +542,9 @@
       "Gene expression"
     ],
     "licenses": [
-      {
-        "name": "Commons Zero license (CC0)",
-        "url": null,
-        "credit": null
-      }
+      "Commons Zero license (CC0)"
     ],
-    "creators": [],
+    "creators": {},
     "issued": "2024-00-00",
     "website": "https://www.bgee.org/",
     "version": "15.2.3",
@@ -529,22 +581,32 @@
     ],
     "licenses": [
       {
-        "name": "url: https://www.ncbi.nlm.nih.gov/home/about/policies/",
-        "url": null,
-        "credit": null
+        "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/"
       },
       {
-        "name": "Source: U.S. National Library of Medicine.",
-        "url": null,
-        "credit": null
+        "Source": "U.S. National Library of Medicine."
       }
     ],
-    "creators": [
-      {
-        "name": "Shuichi Kawashima",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Shuichi Kawashima",
+          "affiliation": "Database Center for Life Science, Joint Support-Center for Data Science Research, Research Organization of Information and Systems"
+        },
+        {
+          "name": "Med2RDF project"
+        }
+      ],
+      "ja": [
+        {
+          "name": "川島 秀一",
+          "affiliation": "大学共同利用機関法人 情報・システム研究機構 データサイエンス共同利用基盤施設 ライフサイエンス統合データベースセンター"
+        },
+        {
+          "name": "Med2RDF project"
+        }
+      ]
+    },
     "issued": "2023-06-05",
     "website": "https://www.ncbi.nlm.nih.gov/medgen",
     "version": "Med2RDF version based on release_20230605",
@@ -577,18 +639,24 @@
       "Others"
     ],
     "licenses": [
-      {
-        "name": "Attribution 4.0 International (CC BY 4.0)",
-        "url": null,
-        "credit": null
-      }
+      "Attribution 4.0 International (CC BY 4.0)"
     ],
-    "creators": [
-      {
-        "name": "Shin Kawano",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Shin Kawano",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Hiroyuki Wakaguri",
+          "affiliation": "Graduate School of Frontier Sciences, The University of Tokyo"
+        },
+        {
+          "name": "Yutaka Suzuki",
+          "affiliation": "Graduate School of Frontier Sciences, The University of Tokyo"
+        }
+      ]
+    },
     "issued": "2017-01-27",
     "website": "http://kero.hgc.jp/rdf/",
     "version": "2017-01-27",
@@ -610,11 +678,13 @@
     "id": "jcm",
     "title": "Metadata of JCM resources",
     "description": {
-      "en": "A RDF-based meta-database of microbial strains used in various researches such as biology, environment and human health as bioresources. Microbial strains are available from Japan Collection of Microorganisms (JCM) in RIKEN BioResource Center. Please visit data browser at http://metadb.riken.jp/metadb/db/rikenbrc_jcm_microbe"
+      "en": "A RDF-based meta-database of microbial strains used in various researches such as biology, environment and human health as bioresources. Microbial strains are available from Japan Collection of Microorganisms (JCM) in RIKEN BioResource Center. Please visit data browser at http://metadb.riken.jp/metadb/db/rikenbrc_jcm_microbe",
+      "ja": "A RDF-based meta-database of microbial strains used in various researches such as biology, environment and human health as bioresources. Microbial strains are available from Japan Collection of Microorganisms (JCM) in RIKEN BioResource Center. Please visit data browser at http://metadb.riken.jp/metadb/db/rikenbrc_jcm_microbe"
     },
     "providers": [
       {
-        "en": "RIKEN"
+        "en": "RIKEN",
+        "ja": "RIKEN"
       }
     ],
     "tags": [
@@ -622,18 +692,38 @@
       "Bioresource"
     ],
     "licenses": [
-      {
-        "name": "Attribution 4.0 International (CC BY 4.0)",
-        "url": null,
-        "credit": null
-      }
+      "Attribution 4.0 International (CC BY 4.0)"
     ],
-    "creators": [
-      {
-        "name": "Terue Takatsuki",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Terue Takatsuki",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Hiroshi Masuya",
+          "affiliation": "RIKEN Bioresource research center"
+        },
+        {
+          "name": "Moriya Ohkuma",
+          "affiliation": "Microbe Division, RIKEN Bioresource research center"
+        }
+      ],
+      "ja": [
+        {
+          "name": "Terue Takatsuki",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Hiroshi Masuya",
+          "affiliation": "RIKEN Bioresource research center"
+        },
+        {
+          "name": "Moriya Ohkuma",
+          "affiliation": "Microbe Division, RIKEN Bioresource research center"
+        }
+      ]
+    },
     "issued": "2019-06-04",
     "website": "http://jcm.brc.riken.jp/ja/",
     "version": "2019-06-04",
@@ -668,14 +758,8 @@
       "Ontology/Terminology/Nomenclature",
       "Journal article/Report/Bibliography"
     ],
-    "licenses": [
-      {
-        "name": null,
-        "url": null,
-        "credit": null
-      }
-    ],
-    "creators": [],
+    "licenses": [],
+    "creators": {},
     "issued": "2025-06-30",
     "website": "https://www.ncbi.nlm.nih.gov/nlmcatalog/",
     "version": null,
@@ -713,20 +797,91 @@
       "Activity"
     ],
     "licenses": [
-      {
-        "name": "Attribution 4.0 International (CC BY 4.0)",
-        "url": null,
-        "credit": null
-      }
+      "Attribution 4.0 International (CC BY 4.0)"
     ],
-    "creators": [
-      {
-        "name": "Takatomo Fujisawa",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Takatomo Fujisawa",
+          "affiliation": "National Institute of Genetics (NIG)"
+        },
+        {
+          "nama": "Tatsuya Kushida",
+          "affiliation": "RIKEN BioResource Research Center"
+        },
+        {
+          "name": "Yasunori Yamamoto",
+          "affiliation": "Database Center for Life Science (DBCLS)"
+        },
+        {
+          "name": "Toshiaki Tokimatsu",
+          "affiliation": "National Institute of Genetics (NIG)"
+        },
+        {
+          "name": "Issaku Yamada",
+          "affiliation": "The Noguchi Institute"
+        },
+        {
+          "name": "Hideki Hatanaka",
+          "affiliation": "Database Center for Life Science (DBCLS)"
+        },
+        {
+          "name": "Aki Hirai-Morita",
+          "affiliation": "Nara Institute of Science and Technology (NAIST)"
+        },
+        {
+          "name": "Shigehiko Kanaya",
+          "affiliation": "Nara Institute of Science and Technology (NAIST)"
+        },
+        {
+          "name": "Masanori Arita",
+          "affiliation": "National Institute of Genetics (NIG)"
+        }
+      ],
+      "ja": [
+        {
+          "name": "藤澤　貴智",
+          "affiliation": "国立遺伝学研究所"
+        },
+        {
+          "nama": "櫛田　達矢",
+          "affiliation": "国立研究開発法人理化学研究所 バイオリソース研究センター"
+        },
+        {
+          "name": "山本　泰智",
+          "affiliation": "ライフサイエンス統合データベースセンター"
+        },
+        {
+          "name": "時松　敏明",
+          "affiliation": "国立遺伝学研究所"
+        },
+        {
+          "name": "山田　一作",
+          "affiliation": "野口研究所"
+        },
+        {
+          "name": "畠中　秀樹",
+          "affiliation": "ライフサイエンス統合データベースセンター"
+        },
+        {
+          "name": "森田（平井）晶",
+          "affiliation": "奈良先端科学技術大学院大学"
+        },
+        {
+          "name": "金谷　重彦",
+          "affiliation": "奈良先端科学技術大学院大学"
+        },
+        {
+          "name": "有田　正規",
+          "affiliation": "国立遺伝学研究所"
+        }
+      ]
+    },
     "issued": "2022-05-30",
-    "website": null,
+    "website": [
+      "https://ddbj.nig.ac.jp/public/rdf/metabobank/knapsack/",
+      "http://www.knapsackfamily.com"
+    ],
     "version": "0.2.0",
     "statistics": {
       "number_of_triples": 841388296,
@@ -744,9 +899,10 @@
   },
   {
     "id": "ssbd",
-    "title": ">",
+    "title": "SSBD: Meta-information of quantitative data and microscopy images\n",
     "description": {
-      "en": "Meta-information of quantitative data and datasets of microscopy images provided from SSBD database"
+      "en": "Meta-information of quantitative data and datasets of microscopy images provided from SSBD database",
+      "ja": "Meta-information of quantitative data and datasets of microscopy images provided from SSBD database"
     },
     "providers": [],
     "tags": [
@@ -758,18 +914,46 @@
       "Others"
     ],
     "licenses": [
-      {
-        "name": "Creative Commons Attribution-ShareAlike 2.1 Japan (CC BY-SA 2.1 JP)",
-        "url": null,
-        "credit": null
-      }
+      "Creative Commons Attribution-ShareAlike 2.1 Japan (CC BY-SA 2.1 JP)"
     ],
-    "creators": [
-      {
-        "name": "Yukako Tohsato",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Yukako Tohsato",
+          "affiliation": "Osaka Electro-Communication University, Department of Engineering Informatics"
+        },
+        {
+          "name": "Koji Kyoda",
+          "affiliation": "RIKEN Quantitative Biology Center, Laboratory for Developmental Dynamics"
+        },
+        {
+          "name": "Kenneth H. L. Ho",
+          "affiliation": "RIKEN Quantitative Biology Center, Laboratory for Developmental Dynamics"
+        },
+        {
+          "name": "Shuichi Onami",
+          "affiliation": "RIKEN Quantitative Biology Center, Laboratory for Developmental Dynamics"
+        }
+      ],
+      "ja": [
+        {
+          "name": "Yukako Tohsato",
+          "affiliation": "Osaka Electro-Communication University, Department of Engineering Informatics"
+        },
+        {
+          "name": "Koji Kyoda",
+          "affiliation": "RIKEN Quantitative Biology Center, Laboratory for Developmental Dynamics"
+        },
+        {
+          "name": "Kenneth H. L. Ho",
+          "affiliation": "RIKEN Quantitative Biology Center, Laboratory for Developmental Dynamics"
+        },
+        {
+          "name": "Shuichi Onami",
+          "affiliation": "RIKEN Quantitative Biology Center, Laboratory for Developmental Dynamics"
+        }
+      ]
+    },
     "issued": "2018-03-24",
     "website": "http://ssbd.qbic.riken.jp/",
     "version": "SSBD31_20171218 release 20180324",
@@ -803,22 +987,24 @@
     "tags": [
       "Drug/Chemical"
     ],
-    "licenses": [
-      {
-        "name": "Creative Commons BY 4.0 International (CC BY 4.0)",
-        "url": "https://creativecommons.org/licenses/by/4.0/",
-        "credit": "CC BY 4.0 by National Institute for Materials Science (NIMS), Japan"
-      }
-    ],
-    "creators": [
-      {
-        "name": "Masashi Ishii",
-        "affiliation": null
-      }
-    ],
+    "licenses": [],
+    "creators": {
+      "en": [
+        {
+          "name": "Masashi Ishii",
+          "affiliation": "National Institute for Materials Science"
+        }
+      ],
+      "ja": [
+        {
+          "name": "石井 真史",
+          "affiliation": "国立研究開発法人物質・材料研究機構"
+        }
+      ]
+    },
     "issued": "2020-02-06",
     "website": "https://polymer.nims.go.jp/",
-    "version": "0.2",
+    "version": 0.2,
     "statistics": {
       "number_of_triples": 788385432,
       "number_of_instances": 1226104,
@@ -851,18 +1037,10 @@
       "Health/Disease"
     ],
     "licenses": [
-      {
-        "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
-        "url": null,
-        "credit": null
-      },
-      {
-        "name": "CC BY-NC-SA 4.0 by Research Programme on Biomedical Informatics (GRIB), Hospital del Mar Medical Research Institute (IMIM), Department of Experimental and Health Sciences, Pompeu Fabra University (UPF), Barcelona, Spain",
-        "url": null,
-        "credit": null
-      }
+      "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
+      "CC BY-NC-SA 4.0 by Research Programme on Biomedical Informatics (GRIB), Hospital del Mar Medical Research Institute (IMIM), Department of Experimental and Health Sciences, Pompeu Fabra University (UPF), Barcelona, Spain"
     ],
-    "creators": [],
+    "creators": {},
     "issued": "2020-06-05",
     "website": "https://www.disgenet.org/",
     "version": "v7.0.0",
@@ -884,23 +1062,36 @@
     "id": "mbgd",
     "title": "RDF title",
     "description": {
-      "en": "RDF description."
+      "en": "RDF description.",
+      "ja": "RDF description."
     },
     "providers": [],
     "tags": [],
     "licenses": [
-      {
-        "name": "Attribution 4.0 International (CC BY 4.0)",
-        "url": null,
-        "credit": null
-      }
+      "Attribution 4.0 International (CC BY 4.0)"
     ],
-    "creators": [
-      {
-        "name": "Name 1",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Name 1",
+          "affiliation": "Affiliation 1"
+        },
+        {
+          "name": "Name 2",
+          "affiliation": "Affiliation 2"
+        }
+      ],
+      "ja": [
+        {
+          "name": "Name 1",
+          "affiliation": "Affiliation 1"
+        },
+        {
+          "name": "Name 2",
+          "affiliation": "Affiliation 2"
+        }
+      ]
+    },
     "issued": "2020-01-01",
     "website": "https://example.com/",
     "version": "2020-01-01",
@@ -935,19 +1126,29 @@
       "Organism",
       "Bioresource"
     ],
-    "licenses": [
-      {
-        "name": "Creative commons Attribution 4.0 International (CC BY 4.0)",
-        "url": "https://creativecommons.org/licenses/by/4.0/",
-        "credit": "Genebank Project, NARO licensed under CC Atribution 4.0 International License."
-      }
-    ],
-    "creators": [
-      {
-        "name": "Tsuyoshi Tanaka",
-        "affiliation": null
-      }
-    ],
+    "licenses": [],
+    "creators": {
+      "en": [
+        {
+          "name": "Tsuyoshi Tanaka",
+          "affiliation": "Research Center for Advanced Analysis, NARO"
+        },
+        {
+          "name": "Satoshi Tanaka",
+          "affiliation": "Trans-IT Co., Ltd."
+        }
+      ],
+      "ja": [
+        {
+          "name": "田中 剛",
+          "affiliation": "農研機構高度分析研究センター"
+        },
+        {
+          "name": "田中 聡",
+          "affiliation": "トランジット株式会社"
+        }
+      ]
+    },
     "issued": "2023-08-23",
     "website": "https://www.gene.affrc.go.jp/",
     "version": null,
@@ -969,11 +1170,13 @@
     "id": "paconto",
     "title": "PAConto",
     "description": {
-      "en": ">"
+      "en": "PAConto is the RDF representation of PACDB (Pathogen Adherence to Carbohydrate Database) data and Ontology of Infectious Diseases known to be related to Glycan Binding. PACDB was developed by the Research Center for Medical Glycoscience (RCMG, AIST) and released in March 2010. At the present time PACDB provides information on about 370 strains of 120 microorganisms, and about 1,700 lectin-glycan interactions of two types: binding and not binding. Also, the PACDB provides information on about 100 infectious diseases in which the interaction between adherence molecules of pathogens and glycan ligands of the host cells plays an important role in the disease pathogenesis. All of the information for the creation of this database was obtained from scientific articles.\n",
+      "ja": "PAConto is the RDF representation of PACDB (Pathogen Adherence to Carbohydrate Database) data and Ontology of Infectious Diseases known to be related to Glycan Binding. PACDB was developed by the Research Center for Medical Glycoscience (RCMG, AIST) and released in March 2010. At the present time PACDB provides information on about 370 strains of 120 microorganisms, and about 1,700 lectin-glycan interactions of two types: binding and not binding. Also, the PACDB provides information on about 100 infectious diseases in which the interaction between adherence molecules of pathogens and glycan ligands of the host cells plays an important role in the disease pathogenesis. All of the information for the creation of this database was obtained from scientific articles.\n"
     },
     "providers": [
       {
-        "en": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
+        "en": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)",
+        "ja": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
       }
     ],
     "tags": [
@@ -983,18 +1186,46 @@
       "Structure"
     ],
     "licenses": [
-      {
-        "name": "Attribution NonCommercial ShareAlike 2.1 Japan (CC BY-NC-SA 2.1)",
-        "url": null,
-        "credit": null
-      }
+      "Attribution NonCommercial ShareAlike 2.1 Japan (CC BY-NC-SA 2.1)"
     ],
-    "creators": [
-      {
-        "name": "Hisashi Narimatsu",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Hisashi Narimatsu",
+          "affiliation": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
+        },
+        {
+          "name": "Toshihide Shikanai",
+          "affiliation": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
+        },
+        {
+          "name": "Elena Solovieva",
+          "affiliation": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
+        },
+        {
+          "name": "Noriaki Fujita",
+          "affiliation": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
+        }
+      ],
+      "ja": [
+        {
+          "name": "Hisashi Narimatsu",
+          "affiliation": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
+        },
+        {
+          "name": "Toshihide Shikanai",
+          "affiliation": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
+        },
+        {
+          "name": "Elena Solovieva",
+          "affiliation": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
+        },
+        {
+          "name": "Noriaki Fujita",
+          "affiliation": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
+        }
+      ]
+    },
     "issued": "2016-06-01",
     "website": "http://acgg.asia/db/diseases/",
     "version": "v.1.0",
@@ -1013,53 +1244,6 @@
     "updated_at": "2024-12-24"
   },
   {
-    "id": "hgnc",
-    "title": "HGNC\\: The resource for approved human gene nomenclature",
-    "description": {
-      "en": "The HGNC is a resource for approved human gene nomenclature containing ~42000 gene",
-      "ja": "HGNCで承認された42000の遺伝子シンボルと遺伝子名称、1300以上の遺伝子ファミリーとセ"
-    },
-    "providers": [
-      {
-        "en": "HUGO Gene Nomenclature Committee at the European Bioinformatics Institute",
-        "ja": "HUGO Gene Nomenclature Committee at the European Bioinformatics Institute"
-      }
-    ],
-    "tags": [
-      "Gene",
-      "Ontology/ Terminology/Nomenclature"
-    ],
-    "licenses": [
-      {
-        "name": "https://www.genenames.org/about/",
-        "url": null,
-        "credit": null
-      },
-      {
-        "name": "HUGO Gene Nomenclature Committee at the European Bioinformatics Institute",
-        "url": null,
-        "credit": null
-      }
-    ],
-    "creators": [],
-    "issued": "2025-06-30",
-    "website": "https://www.genenames.org/",
-    "version": "release_20250630",
-    "statistics": {
-      "number_of_triples": 971201338,
-      "number_of_instances": 3063726,
-      "number_of_subjects": 1706856,
-      "number_of_properties": 2761,
-      "number_of_objects": 1069604,
-      "number_of_literals": 134236,
-      "number_of_classes": 1488,
-      "number_of_datatypes": 7,
-      "number_of_links": 19107
-    },
-    "endpoint": "primary",
-    "updated_at": "2025-01-29"
-  },
-  {
     "id": "chebi",
     "title": "ChEBI RDF",
     "description": {
@@ -1076,18 +1260,20 @@
       "Drug/Chemical"
     ],
     "licenses": [
-      {
-        "name": "Creative Commons License (CC BY 4.0), and governed by EMBL-EBI’s terms of use and Long-term data preservation policy.",
-        "url": null,
-        "credit": null
-      }
+      "Creative Commons License (CC BY 4.0), and governed by EMBL-EBI’s terms of use and Long-term data preservation policy."
     ],
-    "creators": [
-      {
-        "name": "European Bioinformatics Institute",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "European Bioinformatics Institute"
+        }
+      ],
+      "ja": [
+        {
+          "name": "European Bioinformatics Institute"
+        }
+      ]
+    },
     "issued": "2025-06-02",
     "website": "https://www.ebi.ac.uk/chebi/",
     "version": "Release 242",
@@ -1125,19 +1311,101 @@
       "Sequence",
       "Structure"
     ],
-    "licenses": [
-      {
-        "name": "Creative Commons Attribution 2.1 Japan (CC BY 2.1 JP)",
-        "url": "https://creativecommons.org/licenses/by/2.1/jp/deed.en",
-        "credit": "BMRB/RDF licensed under CC Attribution 2.1 Japan."
-      }
-    ],
-    "creators": [
-      {
-        "name": "Masashi Yokochi",
-        "affiliation": null
-      }
-    ],
+    "licenses": [],
+    "creators": {
+      "en": [
+        {
+          "name": "Masashi Yokochi",
+          "affiliation": "Institute for Protein Research, Osaka University"
+        },
+        {
+          "name": "Naohiro Kobayashi",
+          "affiliation": "Institute for Protein Research, Osaka University"
+        },
+        {
+          "name": "Akira Kinjo",
+          "affiliation": "Institute for Protein Research, Osaka University"
+        },
+        {
+          "name": "Takeshi Iwata",
+          "affiliation": "Institute for Protein Research, Osaka University"
+        },
+        {
+          "name": "Haruki Nakamura",
+          "affiliation": "Institute for Protein Research, Osaka University"
+        },
+        {
+          "name": "Chojiro Kojima",
+          "affiliation": "Institute for Protein Research, Osaka University"
+        },
+        {
+          "name": "Toshimichi Fujiwara",
+          "affiliation": "Institute for Protein Research, Osaka University"
+        },
+        {
+          "name": "Eldon L. Ulrich",
+          "affiliation": "Department of Biochemistry, University of Wisconsin-Madison"
+        },
+        {
+          "name": "John L. Markley",
+          "affiliation": "Department of Biochemistry, University of Wisconsin-Madison"
+        },
+        {
+          "name": "Yannis E. Ioannidis",
+          "affiliation": "Department of Informatics & Telecommunications, University of Athens"
+        },
+        {
+          "name": "Miron Livny",
+          "affiliation": "Department of Computer Sciences, University of Wisconsin-Madison"
+        }
+      ],
+      "ja": [
+        {
+          "name": "Masashi Yokochi",
+          "affiliation": "Institute for Protein Research, Osaka University"
+        },
+        {
+          "name": "Naohiro Kobayashi",
+          "affiliation": "Institute for Protein Research, Osaka University"
+        },
+        {
+          "name": "Akira Kinjo",
+          "affiliation": "Institute for Protein Research, Osaka University"
+        },
+        {
+          "name": "Takeshi Iwata",
+          "affiliation": "Institute for Protein Research, Osaka University"
+        },
+        {
+          "name": "Haruki Nakamura",
+          "affiliation": "Institute for Protein Research, Osaka University"
+        },
+        {
+          "name": "Chojiro Kojima",
+          "affiliation": "Institute for Protein Research, Osaka University"
+        },
+        {
+          "name": "Toshimichi Fujiwara",
+          "affiliation": "Institute for Protein Research, Osaka University"
+        },
+        {
+          "name": "Eldon L. Ulrich",
+          "affiliation": "Department of Biochemistry, University of Wisconsin-Madison"
+        },
+        {
+          "name": "John L. Markley",
+          "affiliation": "Department of Biochemistry, University of Wisconsin-Madison"
+        },
+        {
+          "name": "Yannis E. Ioannidis",
+          "affiliation": "Department of Informatics & Telecommunications, University of Athens"
+        },
+        {
+          "name": "Miron Livny",
+          "affiliation": "Department of Computer Sciences, University of Wisconsin-Madison"
+        }
+      ]
+    },
     "issued": "2023-04-29",
     "website": "https://bmrbpub.pdbj.org/",
     "version": "2023-04-29",
@@ -1169,18 +1437,94 @@
       "Ontology/ Terminology/Nomenclature"
     ],
     "licenses": [
-      {
-        "name": "Attribution 4.0 International (CC BY 4.0) Database Center for Life Science",
-        "url": null,
-        "credit": null
-      }
+      "Attribution 4.0 International (CC BY 4.0) Database Center for Life Science"
     ],
-    "creators": [
-      {
-        "name": "Kota Ninomiya",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Kota Ninomiya",
+          "affiliation": "Graduate School of Pharmaceutical Sciences, The University of Tokyo / National Institute of Public Health"
+        },
+        {
+          "name": "Terue Takatsuki",
+          "affiliation": "Database Center for Life Science, Joint Support-Center for Data Science Research, Research Organization of Information and Systems"
+        },
+        {
+          "name": "Jae-Moon Shin",
+          "affiliation": "Database Center for Life Science, Joint Support-Center for Data Science Research, Research Organization of Information and Systems"
+        },
+        {
+          "name": "Yasunori Yamamoto",
+          "affiliation": "Database Center for Life Science, Joint Support-Center for Data Science Research, Research Organization of Information and Systems"
+        },
+        {
+          "name": "Toshiaki Katayama",
+          "affiliation": "Database Center for Life Science, Joint Support-Center for Data Science Research, Research Organization of Information and Systems"
+        },
+        {
+          "name": "Hiroshi Masuya",
+          "affiliation": "Integrated Bioresource Information Division, BioResource Research Center, Riken"
+        },
+        {
+          "name": "Shuichi Kawashima",
+          "affiliation": "Database Center for Life Science, Joint Support-Center for Data Science Research, Research Organization of Information and Systems"
+        },
+        {
+          "name": "Soichi Ogishima",
+          "affiliation": "Advanced Research Center for Innovations in Next-Generation Medicine, Tohoku University"
+        },
+        {
+          "name": "Atsuo Kikuchi",
+          "affiliation": "Graduate School of Medicine, Tohoku University"
+        },
+        {
+          "name": "Toyofumi Fujiwara",
+          "affiliation": "Database Center for Life Science, Joint Support-Center for Data Science Research, Research Organization of Information and Systems"
+        }
+      ],
+      "ja": [
+        {
+          "name": "仁宮 洸太",
+          "affiliation": "東京大学薬学系研究科，国立保健医療科学院"
+        },
+        {
+          "name": "高月 照江",
+          "affiliation": "大学共同利用機関法人 情報・システム研究機構 データサイエンス共同利用基盤施設 ライフサイエンス統合データベースセンター"
+        },
+        {
+          "name": "申 在紋",
+          "affiliation": "大学共同利用機関法人 情報・システム研究機構 データサイエンス共同利用基盤施設 ライフサイエンス統合データベースセンター"
+        },
+        {
+          "name": "山本 泰智",
+          "affiliation": "大学共同利用機関法人 情報・システム研究機構 データサイエンス共同利用基盤施設 ライフサイエンス統合データベースセンター"
+        },
+        {
+          "name": "片山 俊明",
+          "affiliation": "大学共同利用機関法人 情報・システム研究機構 データサイエンス共同利用基盤施設 ライフサイエンス統合データベースセンター"
+        },
+        {
+          "name": "桝屋 啓志",
+          "affiliation": "理化学研究所 バイオリソース研究センター 統合情報開発室"
+        },
+        {
+          "name": "川島 秀一",
+          "affiliation": "大学共同利用機関法人 情報・システム研究機構 データサイエンス共同利用基盤施設 ライフサイエンス統合データベースセンター"
+        },
+        {
+          "name": "荻島 創一",
+          "affiliation": "東北大学 高等研究機構 未来型医療創成センター"
+        },
+        {
+          "name": "菊池 敦生",
+          "affiliation": "東北大学 大学院医学系研究科"
+        },
+        {
+          "name": "藤原 豊史",
+          "affiliation": "大学共同利用機関法人 情報・システム研究機構 データサイエンス共同利用基盤施設 ライフサイエンス統合データベースセンター"
+        }
+      ]
+    },
     "issued": "2023-11-21",
     "website": "https://nanbyodata.jp/",
     "version": "2024-11-21",
@@ -1216,21 +1560,25 @@
       "Protein"
     ],
     "licenses": [
-      {
-        "name": "http://ensembl.org/info/about/legal/disclaimer.html",
-        "url": null,
-        "credit": null
-      }
+      "http://ensembl.org/info/about/legal/disclaimer.html"
     ],
-    "creators": [
-      {
-        "name": "Shuya Ikeda",
-        "affiliation": null
-      }
-    ],
-    "issued": "2024-01",
+    "creators": {
+      "en": [
+        {
+          "name": "Shuya Ikeda",
+          "affiliation": "Database Center for Life Science"
+        }
+      ],
+      "ja": [
+        {
+          "name": "Shuya Ikeda",
+          "affiliation": "Database Center for Life Science"
+        }
+      ]
+    },
+    "issued": 2024,
     "website": "https://www.ensembl.org",
-    "version": "111",
+    "version": 111,
     "statistics": {
       "number_of_triples": 965502249,
       "number_of_instances": 2482010,
@@ -1261,19 +1609,25 @@
     "tags": [
       "Others"
     ],
-    "licenses": [
-      {
-        "name": "NA",
-        "url": "NA",
-        "credit": "NA"
-      }
-    ],
-    "creators": [
-      {
-        "name": "Database Center for Life Science, Joint Support-Center for Data Science Research, Research Organization of Information and Systems, Japan",
-        "affiliation": "--"
-      }
-    ],
+    "licenses": [],
+    "creators": {
+      "en": [
+        {
+          "name": "Database Center for Life Science, Joint Support-Center for Data Science Research, Research Organization of Information and Systems, Japan"
+        },
+        {
+          "affiliation": "--"
+        }
+      ],
+      "ja": [
+        {
+          "name": "情報・システム研究機構、データサイエンス共同利用基盤施設、ライフサイエンス統合データベースセンター"
+        },
+        {
+          "affiliation": "--"
+        }
+      ]
+    },
     "issued": "2022-04-01",
     "website": "https://togoid.dbcls.jp/",
     "version": "2022-04-01",
@@ -1300,21 +1654,19 @@
     "providers": [],
     "tags": [],
     "licenses": [
-      {
-        "name": "Attribution 4.0 International (CC BY 4.0)",
-        "url": null,
-        "credit": null
-      }
+      "Attribution 4.0 International (CC BY 4.0)"
     ],
-    "creators": [
-      {
-        "name": "Yuki Moriya",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Yuki Moriya",
+          "affiliation": "Database Center for Life Science"
+        }
+      ]
+    },
     "issued": "2020-06-09",
     "website": "https://globe.jpostdb.org/",
-    "version": "202006",
+    "version": 202006,
     "statistics": {
       "number_of_triples": 186661904,
       "number_of_instances": 214307,
@@ -1333,23 +1685,36 @@
     "id": "wurcs",
     "title": "RDF title",
     "description": {
-      "en": "RDF description."
+      "en": "RDF description.",
+      "ja": "RDF description."
     },
     "providers": [],
     "tags": [],
     "licenses": [
-      {
-        "name": "Attribution 4.0 International (CC BY 4.0)",
-        "url": null,
-        "credit": null
-      }
+      "Attribution 4.0 International (CC BY 4.0)"
     ],
-    "creators": [
-      {
-        "name": "Name 1",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Name 1",
+          "affiliation": "Affiliation 1"
+        },
+        {
+          "name": "Name 2",
+          "affiliation": "Affiliation 2"
+        }
+      ],
+      "ja": [
+        {
+          "name": "Name 1",
+          "affiliation": "Affiliation 1"
+        },
+        {
+          "name": "Name 2",
+          "affiliation": "Affiliation 2"
+        }
+      ]
+    },
     "issued": "2020-01-01",
     "website": "https://example.com/",
     "version": "2020-01-01",
@@ -1380,18 +1745,20 @@
       "Gene expression"
     ],
     "licenses": [
-      {
-        "name": "Attribution 4.0 International (CC BY 4.0) Database Center for Life Science",
-        "url": null,
-        "credit": null
-      }
+      "Attribution 4.0 International (CC BY 4.0) Database Center for Life Science"
     ],
-    "creators": [
-      {
-        "name": "Shuichi Kawahsima",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Shuichi Kawahsima",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Hiromasa Ono",
+          "affiliation": "Database Center for Life Science"
+        }
+      ]
+    },
     "issued": "2017-04-07",
     "website": "http://refex.dbcls.jp/index.php?lang=ja",
     "version": "2017-04-07",
@@ -1424,18 +1791,56 @@
       "Glycan"
     ],
     "licenses": [
-      {
-        "name": "Creative Commons Attribution 4.0 International License (CC BY 4.0)",
-        "url": null,
-        "credit": null
-      }
+      "Creative Commons Attribution 4.0 International License (CC BY 4.0)"
     ],
-    "creators": [
-      {
-        "name": "Kiyoko F. Aoki-Kinoshita",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Kiyoko F. Aoki-Kinoshita",
+          "affiliation": "Soka University"
+        },
+        {
+          "name": "Osamu Kanie",
+          "affiliation": "Tokai University"
+        },
+        {
+          "name": "Toshisuke Kawasaki",
+          "affiliation": "Ritsumeikan University"
+        },
+        {
+          "name": "Tadashi Suzuki",
+          "affiliation": "RIKEN"
+        },
+        {
+          "name": "Kiichiro Totani",
+          "affiliation": "Seikei University"
+        },
+        {
+          "name": "Hiroshi Nakada",
+          "affiliation": "Kyoto Sangyo University"
+        },
+        {
+          "name": "Shunji Natsuka",
+          "affiliation": "Niigata University"
+        },
+        {
+          "name": "Shoko Nishihara",
+          "affiliation": "Soka University"
+        },
+        {
+          "name": "Yoshiki Yamaguchi",
+          "affiliation": "Tohoku Medical and Pharmaceutical University"
+        },
+        {
+          "name": "Katsuko Yamashita",
+          "affiliation": "Yokohama City University"
+        },
+        {
+          "name": "Issaku Yamada",
+          "affiliation": "The Noguchi Institute"
+        }
+      ]
+    },
     "issued": "2021-08-09",
     "website": "https://glycosmos.org/",
     "version": "2021-08-09",
@@ -1470,21 +1875,23 @@
       "Drug/Chemical"
     ],
     "licenses": [
-      {
-        "name": "Creative Commons Attribution-Share Alike 3.0 Unported License",
-        "url": null,
-        "credit": null
-      }
+      "Creative Commons Attribution-Share Alike 3.0 Unported License"
     ],
-    "creators": [
-      {
-        "name": "European Bioinformatics Institute",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "European Bioinformatics Institute"
+        }
+      ],
+      "ja": [
+        {
+          "name": "European Bioinformatics Institute"
+        }
+      ]
+    },
     "issued": "2023-03-01",
     "website": "https://www.ebi.ac.uk/chembl/",
-    "version": "32.0",
+    "version": 32,
     "statistics": {
       "number_of_triples": 275058589,
       "number_of_instances": 757737,
@@ -1503,29 +1910,33 @@
     "id": "uniprot",
     "title": "UniProt RDF",
     "description": {
-      "en": "The Universal Protein Resource (UniProt) is a comprehensive resource for protein sequence and annotation data."
+      "en": "The Universal Protein Resource (UniProt) is a comprehensive resource for protein sequence and annotation data.",
+      "ja": "The Universal Protein Resource (UniProt) is a comprehensive resource for protein sequence and annotation data."
     },
     "providers": [
       {
-        "en": "The Swiss Institute of Bioinformatics"
+        "en": "The Swiss Institute of Bioinformatics",
+        "ja": "The Swiss Institute of Bioinformatics"
       }
     ],
     "tags": [
       "Protein"
     ],
     "licenses": [
-      {
-        "name": "Creative Commons Attribution 4.0 International (CC BY 4.0) License",
-        "url": null,
-        "credit": null
-      }
+      "Creative Commons Attribution 4.0 International (CC BY 4.0) License"
     ],
-    "creators": [
-      {
-        "name": "The Swiss Institute of Bioinformatics",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "The Swiss Institute of Bioinformatics"
+        }
+      ],
+      "ja": [
+        {
+          "name": "The Swiss Institute of Bioinformatics"
+        }
+      ]
+    },
     "issued": "2023-03-01",
     "website": "https://uniprot.org/",
     "version": "2023_01",
@@ -1558,25 +1969,18 @@
     ],
     "tags": [
       "Others",
-      "Journal article/Report/Bibliography",
-      ""
+      "Journal article/Report/Bibliography"
     ],
     "licenses": [
+      "https://www.nlm.nih.gov/databases/download.html",
       {
-        "name": "https://www.nlm.nih.gov/databases/download.html",
-        "url": null,
-        "credit": null
-      },
-      {
-        "name": "Source\\: U.S. National Library of Medicine.",
-        "url": null,
-        "credit": null
+        "Source\\": "U.S. National Library of Medicine."
       }
     ],
-    "creators": [],
+    "creators": {},
     "issued": "2025-06-30",
     "website": "https://pubmed.ncbi.nlm.nih.gov/",
-    "version": "release_20250630",
+    "version": null,
     "statistics": {
       "number_of_triples": 265833508,
       "number_of_instances": 939341,
@@ -1609,21 +2013,25 @@
       "functional prediction"
     ],
     "licenses": [
-      {
-        "name": "See CITATION at https://sites.google.com/site/jpopgen/dbNSFP",
-        "url": null,
-        "credit": null
-      }
+      "See CITATION at https://sites.google.com/site/jpopgen/dbNSFP"
     ],
-    "creators": [
-      {
-        "name": "Med2RDF project",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Med2RDF project",
+          "affiliation": "http://med2rdf.org/"
+        }
+      ],
+      "ja": [
+        {
+          "name": "Med2RDF project",
+          "affiliation": "http://med2rdf.org/"
+        }
+      ]
+    },
     "issued": "2024-8-8",
     "website": "https://sites.google.com/site/jpopgen/dbNSFP",
-    "version": "4.9",
+    "version": 4.9,
     "statistics": {
       "number_of_triples": 580699379,
       "number_of_instances": 608062,
@@ -1654,23 +2062,25 @@
       "Structure"
     ],
     "licenses": [
-      {
-        "name": "Creative Commons Attribution 2.1 Japan (CC BY 2.1 JP)",
-        "url": null,
-        "credit": null
-      },
-      {
-        "name": "GlyTouCan licensed under CC Attribution 2.1 Japan",
-        "url": null,
-        "credit": null
-      }
+      "Creative Commons Attribution 2.1 Japan (CC BY 2.1 JP)",
+      "GlyTouCan licensed under CC Attribution 2.1 Japan"
     ],
-    "creators": [
-      {
-        "name": "Hisashi Narimatsu",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Hisashi Narimatsu",
+          "affiliation": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
+        },
+        {
+          "name": "Kiyoko F. Aoki-Kinoshita",
+          "affiliation": "Soka University"
+        },
+        {
+          "name": "Daisuke Shinmachi",
+          "affiliation": "Soka University"
+        }
+      ]
+    },
     "issued": "2015-09-04",
     "website": "https://glytoucan.org/",
     "version": "Ver1.0",
@@ -1714,21 +2124,41 @@
       "Others"
     ],
     "licenses": [
-      {
-        "name": "Referred to in International Nucleotide Sequence Database Collaboration Policy (http://www.insdc.org/policy.html)",
-        "url": null,
-        "credit": null
-      }
+      "Referred to in International Nucleotide Sequence Database Collaboration Policy (http://www.insdc.org/policy.html)"
     ],
-    "creators": [
-      {
-        "name": "Takatomo Fujisawa",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Takatomo Fujisawa",
+          "affiliation": "National Institute of Genetics"
+        },
+        {
+          "name": "Toshiaki Katayama",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Yasukazu Nakamura",
+          "affiliation": "National Institute of Genetics"
+        }
+      ],
+      "ja": [
+        {
+          "name": "Takatomo Fujisawa",
+          "affiliation": "National Institute of Genetics"
+        },
+        {
+          "name": "Toshiaki Katayama",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Yasukazu Nakamura",
+          "affiliation": "National Institute of Genetics"
+        }
+      ]
+    },
     "issued": "2016-07-30",
     "website": "http://www.ddbj.nig.ac.jp/index-e.html",
-    "version": "105.0",
+    "version": 105,
     "statistics": {
       "number_of_triples": 96716664,
       "number_of_instances": 186711,
@@ -1760,23 +2190,25 @@
       "Bioresource"
     ],
     "licenses": [
-      {
-        "name": "Creative Commons Attribution-ShareAlike 2.1 Japan (CC BY-SA 2.1 JP)",
-        "url": null,
-        "credit": null
-      },
-      {
-        "name": "Dataset of NBRC bioresource (C) NITE NBRC licensed under CC Attribution-ShareAlike 2.1 Japan",
-        "url": null,
-        "credit": null
-      }
+      "Creative Commons Attribution-ShareAlike 2.1 Japan (CC BY-SA 2.1 JP)",
+      "Dataset of NBRC bioresource (C) NITE NBRC licensed under CC Attribution-ShareAlike 2.1 Japan"
     ],
-    "creators": [
-      {
-        "name": "Masami Namihira",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Masami Namihira",
+          "affiliation": "National Institute of Technology and Evaluation"
+        },
+        {
+          "name": "Yuko Kitahashi",
+          "affiliation": "National Institute of Technology and Evaluation"
+        },
+        {
+          "name": "Natsuko Ichikawa",
+          "affiliation": "National Institute of Technology and Evaluation"
+        }
+      ]
+    },
     "issued": "2019-08-23",
     "website": "https://www.nite.go.jp/en/index.html",
     "version": "release_20190823",
@@ -1798,11 +2230,13 @@
     "id": "nadd",
     "title": "Nucleic Acid Drug Database",
     "description": {
-      "en": "DB is focused on nucleic acid drugs known as biopharmaceuticals and displayed approval drugs and information on three phases of clinical trial stage."
+      "en": "DB is focused on nucleic acid drugs known as biopharmaceuticals and displayed approval drugs and information on three phases of clinical trial stage.",
+      "ja": "DB is focused on nucleic acid drugs known as biopharmaceuticals and displayed approval drugs and information on three phases of clinical trial stage."
     },
     "providers": [
       {
-        "en": "Molecular Profiling Research Center for Drug Discovery (molprof), The National Institute of Advanced Industrial Science and Technology (AIST)"
+        "en": "Molecular Profiling Research Center for Drug Discovery (molprof), The National Institute of Advanced Industrial Science and Technology (AIST)",
+        "ja": "Molecular Profiling Research Center for Drug Discovery (molprof), The National Institute of Advanced Industrial Science and Technology (AIST)"
       }
     ],
     "tags": [
@@ -1813,18 +2247,38 @@
       "Journal article/Report/Bibliography"
     ],
     "licenses": [
-      {
-        "name": "Attribution-ShareAlike 2.1 Japan (CC BY-SA 2.1)",
-        "url": null,
-        "credit": null
-      }
+      "Attribution-ShareAlike 2.1 Japan (CC BY-SA 2.1)"
     ],
-    "creators": [
-      {
-        "name": "Kazuhiko Fukui",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Kazuhiko Fukui",
+          "affiliation": "Molecular Profiling Research Center for Drug Discovery (molprof), The National Institute of Advanced Industrial Science and Technology (AIST)"
+        },
+        {
+          "name": "Takayuki Amemiya",
+          "affiliation": "Molecular Profiling Research Center for Drug Discovery (molprof), The National Institute of Advanced Industrial Science and Technology (AIST)"
+        },
+        {
+          "name": "Hiroshi Kouno",
+          "affiliation": "Molecular Profiling Research Center for Drug Discovery (molprof), The National Institute of Advanced Industrial Science and Technology (AIST)/Department of Applied Biological Science, Faculty of Science and Technology, Tokyo University of Science"
+        }
+      ],
+      "ja": [
+        {
+          "name": "Kazuhiko Fukui",
+          "affiliation": "Molecular Profiling Research Center for Drug Discovery (molprof), The National Institute of Advanced Industrial Science and Technology (AIST)"
+        },
+        {
+          "name": "Takayuki Amemiya",
+          "affiliation": "Molecular Profiling Research Center for Drug Discovery (molprof), The National Institute of Advanced Industrial Science and Technology (AIST)"
+        },
+        {
+          "name": "Hiroshi Kouno",
+          "affiliation": "Molecular Profiling Research Center for Drug Discovery (molprof), The National Institute of Advanced Industrial Science and Technology (AIST)/Department of Applied Biological Science, Faculty of Science and Technology, Tokyo University of Science"
+        }
+      ]
+    },
     "issued": "2019-05-14",
     "website": "https://medals.jp/edrugnainfo.html",
     "version": "2019-05-14",
@@ -1859,18 +2313,142 @@
       "Protein Enzyme"
     ],
     "licenses": [
-      {
-        "name": "Attribution 4.0 International (CC BY 4.0)",
-        "url": null,
-        "credit": null
-      }
+      "Attribution 4.0 International (CC BY 4.0)"
     ],
-    "creators": [
-      {
-        "name": "Anne Morgat",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Anne Morgat",
+          "affiliation": "INRIA Grenoble Rhˆone-Alpes"
+        },
+        {
+          "name": "Thierry Lombardot",
+          "affiliation": "Swiss-Prot Group, SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Kristian B. Axelsen",
+          "affiliation": "Swiss-Prot Group, SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Lucila Aimo",
+          "affiliation": "Swiss-Prot Group, SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Anne Niknejad",
+          "affiliation": "Vital-IT, SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Nevila Hyka-Nouspikel",
+          "affiliation": "Swiss-Prot Group, SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Elisabeth Coudert",
+          "affiliation": "Swiss-Prot Group, SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Monica Pozzato",
+          "affiliation": "Swiss-Prot Group, SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Marco Pagni",
+          "affiliation": "Vital-IT, SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Sébastien Moretti",
+          "affiliation": "Department of Ecology and Evolution, Biophore, Evolutionary Bioinformatics group,University of Lausanne"
+        },
+        {
+          "name": "Steven Rosanoff",
+          "affiliation": "European Molecular Biology Laboratory, EuropeanBioinformatics Institute (EMBL-EBI)"
+        },
+        {
+          "name": "Joseph Onwubiko",
+          "affiliation": "European Molecular Biology Laboratory, EuropeanBioinformatics Institute (EMBL-EBI)"
+        },
+        {
+          "name": "Lydie Bougueleret",
+          "affiliation": "Swiss-Prot Group, SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Ioannis Xenarios",
+          "affiliation": "University of Geneva, Department of Biochemistr"
+        },
+        {
+          "name": "Nicole Redaschi",
+          "affiliation": "Swiss-Prot Group, SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Alan Bridge",
+          "affiliation": "Swiss-Prot Group, SIB Swiss Institute of Bioinformatics"
+        }
+      ],
+      "ja": [
+        {
+          "name": "Anne Morgat",
+          "affiliation": "INRIA Grenoble Rhˆone-Alpes"
+        },
+        {
+          "name": "Thierry Lombardot",
+          "affiliation": "Swiss-Prot Group, SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Kristian B. Axelsen",
+          "affiliation": "Swiss-Prot Group, SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Lucila Aimo",
+          "affiliation": "Swiss-Prot Group, SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Anne Niknejad",
+          "affiliation": "Vital-IT, SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Nevila Hyka-Nouspikel",
+          "affiliation": "Swiss-Prot Group, SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Elisabeth Coudert",
+          "affiliation": "Swiss-Prot Group, SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Monica Pozzato",
+          "affiliation": "Swiss-Prot Group, SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Marco Pagni",
+          "affiliation": "Vital-IT, SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Sébastien Moretti",
+          "affiliation": "Department of Ecology and Evolution, Biophore, Evolutionary Bioinformatics group,University of Lausanne"
+        },
+        {
+          "name": "Steven Rosanoff",
+          "affiliation": "European Molecular Biology Laboratory, EuropeanBioinformatics Institute (EMBL-EBI)"
+        },
+        {
+          "name": "Joseph Onwubiko",
+          "affiliation": "European Molecular Biology Laboratory, EuropeanBioinformatics Institute (EMBL-EBI)"
+        },
+        {
+          "name": "Lydie Bougueleret",
+          "affiliation": "Swiss-Prot Group, SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Ioannis Xenarios",
+          "affiliation": "University of Geneva, Department of Biochemistr"
+        },
+        {
+          "name": "Nicole Redaschi",
+          "affiliation": "Swiss-Prot Group, SIB Swiss Institute of Bioinformatics"
+        },
+        {
+          "name": "Alan Bridge",
+          "affiliation": "Swiss-Prot Group, SIB Swiss Institute of Bioinformatics"
+        }
+      ]
+    },
     "issued": "2020-08-13",
     "website": "https://www.rhea-db.org/",
     "version": "Rhea release 114",
@@ -1892,8 +2470,8 @@
     "id": "pubchem",
     "title": "PubChem RDF",
     "description": {
-      "en": "PubChem is an open chemistry database at the National Institutes of Health (NIH). For the detailed information, please see the following URL\\: https\\://pubchemdocs.ncbi.nlm.nih.gov/about. \\Note\\: The endpoint does not include files provided at ftp\\://ftp.ncbi.nlm.nih.gov/pubchem/RDF/compound/nbr2d/ and ftp\\://ftp.ncbi.nlm.nih.gov/pubchem/RDF/compound/nbr3d/\\",
-      "ja": "PubChem は、NIHが提供する、網羅的な化合物のデータベースです。詳細な情報は次のURLを参照してください: https://pubchemdocs.ncbi.nlm.nih.gov/about 注意\\: エンドポイントには次のURLのファイルは含まれていません。 ftp\\://ftp.ncbi.nlm.nih.gov/pubchem/RDF/compound/nbr2d/ , ftp\\://ftp.ncbi.nlm.nih.gov/pubchem/RDF/compound/nbr3d/"
+      "en": "PubChem is an open chemistry database at the National Institutes of Health (NIH). For the detailed information, please see the following URL\\",
+      "ja": "PubChem は、NIHが提供する、網羅的な化合物のデータベースです。詳細な情報は次のURLを参照してください"
     },
     "providers": [
       {
@@ -1905,14 +2483,8 @@
       "Drug/Chemical",
       "Other biomolecule"
     ],
-    "licenses": [
-      {
-        "name": null,
-        "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
-        "credit": null
-      }
-    ],
-    "creators": [],
+    "licenses": [],
+    "creators": {},
     "issued": "2025-05-28",
     "website": "https://pubchem.ncbi.nlm.nih.gov/",
     "version": null,
@@ -1948,18 +2520,36 @@
       "Gene expression"
     ],
     "licenses": [
-      {
-        "name": "http://toxico.nibiohn.go.jp/english/agreement.html",
-        "url": null,
-        "credit": null
-      }
+      "http://toxico.nibiohn.go.jp/english/agreement.html"
     ],
-    "creators": [
-      {
-        "name": "Yoshinobu Igarashi",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Yoshinobu Igarashi",
+          "affiliation": "National Institutes of Biomedical Innovation, Health and Nutrition"
+        },
+        {
+          "name": "Shuichi Kawashima",
+          "affiliation": "Research Organization of Information and Systems Database Center for Life ScienceDatabase Center for Life Science"
+        },
+        {
+          "name": "Daisuke Satoh",
+          "affiliation": "Level Five Co., Ltd."
+        },
+        {
+          "name": "Maori Ito",
+          "affiliation": "Pharmaceuticals and Medical Devices Agency"
+        },
+        {
+          "name": "Chioko Nagao",
+          "affiliation": "National Institutes of Biomedical Innovation, Health and Nutrition"
+        },
+        {
+          "name": "Kenji Mizuguchi",
+          "affiliation": "National Institutes of Biomedical Innovation, Health and Nutrition"
+        }
+      ]
+    },
     "issued": "2017-03-17",
     "website": "http://toxico.nibiohn.go.jp/english/index.html",
     "version": "2017-03-17",
@@ -1981,7 +2571,8 @@
     "id": "pdb",
     "title": "RefEx RDF",
     "description": {
-      "en": "RDFized reference gene expresson dataset derived from CAGE and GeneChip experiments in the RefEx database."
+      "en": "RDFized reference gene expresson dataset derived from CAGE and GeneChip experiments in the RefEx database.",
+      "ja": "RDFized reference gene expresson dataset derived from CAGE and GeneChip experiments in the RefEx database."
     },
     "providers": [],
     "tags": [
@@ -1990,18 +2581,30 @@
       "Gene expression"
     ],
     "licenses": [
-      {
-        "name": "Attribution 4.0 International (CC BY 4.0) Database Center for Life Science",
-        "url": null,
-        "credit": null
-      }
+      "Attribution 4.0 International (CC BY 4.0) Database Center for Life Science"
     ],
-    "creators": [
-      {
-        "name": "Shuichi Kawahsima",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Shuichi Kawahsima",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Hiromasa Ono",
+          "affiliation": "Database Center for Life Science"
+        }
+      ],
+      "ja": [
+        {
+          "name": "Shuichi Kawahsima",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Hiromasa Ono",
+          "affiliation": "Database Center for Life Science"
+        }
+      ]
+    },
     "issued": "2017-04-07",
     "website": "http://refex.dbcls.jp/index.php?lang=ja",
     "version": "2017-04-07",
@@ -2023,23 +2626,36 @@
     "id": "quanto",
     "title": "Quanto RDF",
     "description": {
-      "en": "Raw sequence data quality statistics calculated from the Sequence Read Archive data"
+      "en": "Raw sequence data quality statistics calculated from the Sequence Read Archive data",
+      "ja": "Raw sequence data quality statistics calculated from the Sequence Read Archive data"
     },
     "providers": [],
     "tags": [],
     "licenses": [
-      {
-        "name": "Attribution 4.0 International (CC BY 4.0)",
-        "url": null,
-        "credit": null
-      }
+      "Attribution 4.0 International (CC BY 4.0)"
     ],
-    "creators": [
-      {
-        "name": "Tazro Inutano Ohta",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Tazro Inutano Ohta",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Name 2",
+          "affiliation": "Affiliation 2"
+        }
+      ],
+      "ja": [
+        {
+          "name": "Tazro Inutano Ohta",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Name 2",
+          "affiliation": "Affiliation 2"
+        }
+      ]
+    },
     "issued": "2016-07-12",
     "website": "https://sra.dbcls.jp/",
     "version": "0.1.2",
@@ -2074,18 +2690,22 @@
       "Gene"
     ],
     "licenses": [
-      {
-        "name": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
-        "url": null,
-        "credit": null
-      }
+      "https://www.ncbi.nlm.nih.gov/home/about/policies/"
     ],
-    "creators": [
-      {
-        "name": "Hirokazu Chiba",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Hirokazu Chiba",
+          "affiliation": "Database Center for Life Science"
+        }
+      ],
+      "ja": [
+        {
+          "name": "千葉 啓和",
+          "affiliation": "ライフサイエンス統合データベースセンター"
+        }
+      ]
+    },
     "issued": "2022-05-25",
     "website": "https://www.ncbi.nlm.nih.gov/gene/",
     "version": "release_20230525",
@@ -2107,11 +2727,13 @@
     "id": "pubcasefinder",
     "title": "PubCaseFinder RDF",
     "description": {
-      "en": "PubCaseFinder (PCF) is a Human Phenotype Ontology (HPO)-based clinical decision support system for rare and genetic diseases, always up-to-date."
+      "en": "PubCaseFinder (PCF) is a Human Phenotype Ontology (HPO)-based clinical decision support system for rare and genetic diseases, always up-to-date.",
+      "ja": "PubCaseFinder (PCF) is a Human Phenotype Ontology (HPO)-based clinical decision support system for rare and genetic diseases, always up-to-date."
     },
     "providers": [
       {
-        "en": "Database Center for Life Science"
+        "en": "Database Center for Life Science",
+        "ja": "Database Center for Life Science"
       }
     ],
     "tags": [
@@ -2122,18 +2744,46 @@
       "Disease Search"
     ],
     "licenses": [
-      {
-        "name": "Attribution 4.0 International (CC BY 4.0) Database Center for Life Science",
-        "url": null,
-        "credit": null
-      }
+      "Attribution 4.0 International (CC BY 4.0) Database Center for Life Science"
     ],
-    "creators": [
-      {
-        "name": "Jaemoon Shin",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Jaemoon Shin",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Atsuko Yamaguchi",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Shuichi Kawashima",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Toyofumi Fujiwara",
+          "affiliation": "Database Center for Life Science"
+        }
+      ],
+      "ja": [
+        {
+          "name": "Jaemoon Shin",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Atsuko Yamaguchi",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Shuichi Kawashima",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Toyofumi Fujiwara",
+          "affiliation": "Database Center for Life Science"
+        }
+      ]
+    },
     "issued": "2021-05-18",
     "website": "https://pubcasefinder.dbcls.jp/",
     "version": "1.3.0",
@@ -2166,21 +2816,49 @@
     ],
     "tags": [],
     "licenses": [
-      {
-        "name": "Attribution 4.0 International (CC BY 4.0)",
-        "url": null,
-        "credit": null
-      }
+      "Attribution 4.0 International (CC BY 4.0)"
     ],
-    "creators": [
-      {
-        "name": "Tazro Ohta",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Tazro Ohta",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Shuya Ikeda",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Shuichi Kawashima",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Takatomo Fujisawa",
+          "affiliation": "Bioinformation and DDBJ Center"
+        }
+      ],
+      "ja": [
+        {
+          "name": "Tazro Ohta",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Shuya Ikeda",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Shuichi Kawashima",
+          "affiliation": "Database Center for Life Science"
+        },
+        {
+          "name": "Takatomo Fujisawa",
+          "affiliation": "Bioinformation and DDBJ Center"
+        }
+      ]
+    },
     "issued": "2020-09-03",
     "website": "https://ddbj.nig.ac.jp/",
-    "version": "20200903-1443",
+    "version": 20200903,
     "statistics": {
       "number_of_triples": 85709355,
       "number_of_instances": 103016,
@@ -2212,21 +2890,15 @@
       "Interaction/Pathway"
     ],
     "licenses": [
-      {
-        "name": "Creative Commons Public Domain (CC0) License",
-        "url": null,
-        "credit": null
-      }
+      "Creative Commons Public Domain (CC0) License"
     ],
-    "creators": [
-      {
-        "name": "Reactome Team (https://reactome.org/)",
-        "affiliation": null
-      }
-    ],
-    "issued": "2023-04",
+    "creators": {
+      "en": "Reactome Team (https://reactome.org/)",
+      "ja": "Reactome Team (https://reactome.org/)"
+    },
+    "issued": 2023,
     "website": "https://reactome.org/",
-    "version": "84",
+    "version": 84,
     "statistics": {
       "number_of_triples": 778606181,
       "number_of_instances": 835414,
@@ -2262,18 +2934,46 @@
       "Interaction/Pathway"
     ],
     "licenses": [
-      {
-        "name": "Attribution-NonCommercial-ShareAlike 2.1 Japan (CC BY-NC-SA 2.1)",
-        "url": null,
-        "credit": null
-      }
+      "Attribution-NonCommercial-ShareAlike 2.1 Japan (CC BY-NC-SA 2.1)"
     ],
-    "creators": [
-      {
-        "name": "Hisashi Narimatsu",
-        "affiliation": null
-      }
-    ],
+    "creators": {
+      "en": [
+        {
+          "name": "Hisashi Narimatsu",
+          "affiliation": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
+        },
+        {
+          "name": "Toshihide Shikanai",
+          "affiliation": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
+        },
+        {
+          "name": "Elena Solovieva",
+          "affiliation": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
+        },
+        {
+          "name": "Noriaki Fujita",
+          "affiliation": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
+        }
+      ],
+      "ja": [
+        {
+          "name": "Hisashi Narimatsu",
+          "affiliation": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
+        },
+        {
+          "name": "Toshihide Shikanai",
+          "affiliation": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
+        },
+        {
+          "name": "Elena Solovieva",
+          "affiliation": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
+        },
+        {
+          "name": "Noriaki Fujita",
+          "affiliation": "Glycoscience and Glycotechnology Research Group, Biotechnology Research Institute for Drug Discovery, National Institute of Advanced Industrial Science and Technology (AIST)"
+        }
+      ]
+    },
     "issued": "2017-01-25",
     "website": "http://acgg.asia/db/diseases/",
     "version": "v.1.0",
@@ -2308,19 +3008,29 @@
       "Other biomolecule",
       "Structure"
     ],
-    "licenses": [
-      {
-        "name": "Creative Commons Attribution-ShareAlike 2.1 Japan (CC BY-SA 2.1 JP)",
-        "url": "https://creativecommons.org/licenses/by-sa/2.1/jp/deed.en",
-        "credit": "GlycoEpitope licensed under CC Attribution-Share Alike 2.1 Japan"
-      }
-    ],
-    "creators": [
-      {
-        "name": "Tshisuke Kawasaki",
-        "affiliation": null
-      }
-    ],
+    "licenses": [],
+    "creators": {
+      "en": [
+        {
+          "name": "Tshisuke Kawasaki",
+          "affiliation": "Ritsumeikan University"
+        },
+        {
+          "name": "Shujiro Okuda",
+          "affiliation": "Niigata University"
+        }
+      ],
+      "ja": [
+        {
+          "name": "川嵜敏祐",
+          "affiliation": "立命館大学"
+        },
+        {
+          "name": "奥田修二郎",
+          "affiliation": "新潟大学"
+        }
+      ]
+    },
     "issued": "2015-11-18",
     "website": "https://www.glycoepitope.jp/",
     "version": "version 3",
