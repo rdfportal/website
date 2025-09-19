@@ -36,7 +36,7 @@ backToListURL: /datasets/
                             </div>
                         </td>
                     </tr>
-                    <tr data-row-kind="providers" data-type="number">
+                    <tr data-row-kind="providers" data-type="string">
                         <th>Data provider</th>
                         <td>
                             {% assign _providers = page.dataset.providers | default: [] %}
@@ -47,11 +47,62 @@ backToListURL: /datasets/
                             </ul>
                         </td>
                     </tr>
+                    <tr data-row-kind="creators" data-type="string">
+                        <th>Creator</th>
+                        <td>
+                            {% assign _creators = page.dataset.creators | default: [] %}
+                            <ul>
+                                {% for creator in _creators %}
+                                <li>{{ creator.name }}{% if creator.affiliation %}<small>{{ creator.affiliation
+                                        }}</small>{% endif %}</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
                     <tr data-row-kind="issued" data-type="date">
                         <th>Issued</th>
                         <td>{{ page.dataset.issued }}</td>
                     </tr>
-                    <!-- statistics moved to dedicated section.statistics below -->
+                    {% if page.dataset.licenses %}
+                    <tr data-row-kind="licenses" data-type="string">
+                        <th>Licenses</th>
+                        <td>
+                            {% assign _licenses = page.dataset.licenses | default: [] %}
+                            <ul>
+                                {% for license in _licenses %}
+                                <li>
+                                    {{ license.name }}{% if license.url %} <a href="{{ license.url }}"
+                                        class="external-link">link</a>{% endif %}
+                                    {% if license.credit %}<br><small>{{ license.credit }}</small>{% endif %}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    </tr>
+                    {% endif %}
+
+                    {% if page.dataset.version %}
+                    <tr data-row-kind="version" data-type="string">
+                        <th>Version</th>
+                        <td>{{ page.dataset.version }}</td>
+                    </tr>
+                    {% endif %}
+
+                    <tr data-row-kind="downloads" data-type="string">
+                        <th>Download</th>
+                        <td>
+                            <a href="https://rdfportal.org/download/{{ page.dataset.id }}">https://rdfportal.org/download/{{
+                                page.dataset.id }}</a>
+                        </td>
+                    </tr>
+
+                    <tr data-row-kind="sparql_endpoint" data-type="string">
+                        <th>SPARQL Endpoint</th>
+                        <td>
+                            <a href="https://rdfportal.org/{{ page.dataset.endpoint }}/sparql">https://rdfportal.org/{{
+                                page.dataset.endpoint }}/sparql</a>
+                        </td>
+                    </tr>
+
                 </tbody>
             </table>
         </section>
