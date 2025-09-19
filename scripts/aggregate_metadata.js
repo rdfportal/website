@@ -175,6 +175,24 @@ function getStatsForDatasetId(id) {
 }
 
 /**
+ * Count the number of SPARQL example files (.rq) in a dataset directory
+ * @param {string} id - Dataset ID
+ * @returns {number} - Number of .rq files found
+ */
+function countSparqlExamples(id) {
+  const datasetDir = path.join(DATASETS_FOLDER, id);
+
+  try {
+    const files = fs.readdirSync(datasetDir);
+    const rqFiles = files.filter((file) => file.endsWith(".rq"));
+    return rqFiles.length;
+  } catch (error) {
+    // Directory doesn't exist or can't be read
+    return 0;
+  }
+}
+
+/**
  * メイン処理
  */
 async function main() {
@@ -223,10 +241,12 @@ async function main() {
       );
 
       const statsData = getStatsForDatasetId(id);
+      const sparqlCount = countSparqlExamples(id);
+
       const datasetInfo = {
         id,
         ...mergedMetadata,
-
+        sparql_examples_count: sparqlCount,
         statistics: statsData.statistics,
         endpoint: statsData.endpoint,
         updated_at: statsData.updated_at,
