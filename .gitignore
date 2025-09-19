@@ -11,3 +11,6 @@ LOG.md
 
 # cloned repo
 scripts/rdf-config
+
+# generated datasets.json
+_data/datasets.json
