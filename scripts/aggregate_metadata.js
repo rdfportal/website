@@ -39,8 +39,8 @@ function extractRequiredFields(metadata) {
         ? [{ name: metadata.creators, affiliation: null }]
         : metadata.creators || {},
     website: metadata.website || null,
-    issued: metadata.issued || null,
-    version: metadata.version || null,
+    issued: metadata.issued?.toString() || null,
+    version: metadata.version?.toString() || null,
   };
 }
 
