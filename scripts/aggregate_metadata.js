@@ -5,27 +5,10 @@
 
 const fs = require("node:fs");
 const path = require("node:path");
-const git = require("isomorphic-git");
-const http = require("isomorphic-git/http/node");
+
 const statJson = require("../_data/datasets_stats.json");
 
-const RDF_CONFIG_REPO = "https://github.com/dbcls/rdf-config.git";
-
-// GitHub API の設定
-
-const REPO_NAME = "rdf-config";
-const CONFIG_PATH = "config";
-
-async function cloneRepo() {
-  await git.clone({
-    fs: fs,
-    http, // HTTP client implementation for fetching remote data
-    dir: path.join(__dirname, REPO_NAME), // The directory within the virtual file system
-    url: RDF_CONFIG_REPO,
-    depth: 1, // Shallow clone for better performance
-    singleBranch: true, // Only clone the default branch
-  });
-}
+const DATASETS_FOLDER = path.join(__dirname, "..", "assets", "datasets");
 
 /**
  * 簡単なYAMLパーサー（必要なフィールドのみ）
@@ -384,11 +367,9 @@ function extractRequiredFields(metadata) {
   };
 }
 
-function getMetadataFromClonedRepo(id, lang) {
+function getMetadataFromLocalFolder(id, lang) {
   const metadataPath = path.join(
-    __dirname,
-    REPO_NAME,
-    CONFIG_PATH,
+    DATASETS_FOLDER,
     id,
     lang ? `metadata_${lang}.yaml` : "metadata.yaml",
   );
@@ -407,10 +388,9 @@ function getMetadataFromClonedRepo(id, lang) {
   }
 }
 
-async function getDatasetIdsFromClonedRepo() {
+async function getDatasetIdsFromLocalFolder() {
   try {
-    const clonedRepoPath = path.join(__dirname, REPO_NAME, CONFIG_PATH);
-    const datasetIds = await fs.promises.readdir(clonedRepoPath);
+    const datasetIds = await fs.promises.readdir(DATASETS_FOLDER);
 
     return datasetIds;
   } catch (error) {
@@ -524,15 +504,7 @@ function getStatsForDatasetId(id) {
 async function main() {
   const datasets = [];
   try {
-    let ids = await getDatasetIdsFromClonedRepo();
-
-    if (ids.length === 0) {
-      console.log("No datasets found, cloning repo...");
-      await cloneRepo();
-      console.log(`Done`);
-
-      ids = await getDatasetIdsFromClonedRepo();
-    }
+    let ids = await getDatasetIdsFromLocalFolder();
 
     // Get the list of dataset IDs from the stats file
     const statsDatasetIds = statJson.map((item) => item.dataset);
@@ -546,12 +518,12 @@ async function main() {
 
     for (const id of ids) {
       console.log(`Processing ${id}...`);
-      const extractedResult = getMetadataFromClonedRepo(id);
+      const extractedResult = getMetadataFromLocalFolder(id);
       const hasMetadata = extractedResult.exists;
       const extracted = extractedResult.metadata;
       extracted.lang = "en";
 
-      const extractedJaResult = getMetadataFromClonedRepo(id, "ja");
+      const extractedJaResult = getMetadataFromLocalFolder(id, "ja");
       const extractedJa = extractedJaResult.metadata;
       extractedJa.lang = "ja";
 
