@@ -34,7 +34,10 @@ function extractRequiredFields(metadata) {
     provider: metadata.provider || "",
     tags: metadata.tags || [],
     licenses: metadata.licenses || [],
-    creators: metadata.creators || {},
+    creators:
+      typeof metadata.creators === "string"
+        ? [{ name: metadata.creators, affiliation: null }]
+        : metadata.creators || {},
     website: metadata.website || null,
     issued: metadata.issued || null,
     version: metadata.version || null,
@@ -111,8 +114,21 @@ function mergeMultilanguageExtractedMetadata(...metadatas) {
     }
 
     // Add creators by language
-    if (metadata.creators && metadata.creators.length > 0) {
-      mergedMetadata.creators[lang] = metadata.creators;
+    if (metadata.creators) {
+      // Handle case where creators is a string instead of an array of objects
+      if (typeof metadata.creators === "string") {
+        mergedMetadata.creators[lang] = [
+          {
+            name: metadata.creators,
+            affiliation: null,
+          },
+        ];
+      } else if (
+        Array.isArray(metadata.creators) &&
+        metadata.creators.length > 0
+      ) {
+        mergedMetadata.creators[lang] = metadata.creators;
+      }
     }
 
     // Add website from metadata (preferably from English)
@@ -133,7 +149,27 @@ function mergeMultilanguageExtractedMetadata(...metadatas) {
 
   // Create the providers array with multilingual entries
   if (Object.keys(providersByLang).length > 0) {
+    // Ensure both en and ja keys exist
+    if (providersByLang.en && !providersByLang.ja) {
+      providersByLang.ja = providersByLang.en;
+    } else if (providersByLang.ja && !providersByLang.en) {
+      providersByLang.en = providersByLang.ja;
+    }
     mergedMetadata.providers = [providersByLang];
+  }
+
+  // Ensure description has both en and ja keys
+  if (mergedMetadata.description.en && !mergedMetadata.description.ja) {
+    mergedMetadata.description.ja = mergedMetadata.description.en;
+  } else if (mergedMetadata.description.ja && !mergedMetadata.description.en) {
+    mergedMetadata.description.en = mergedMetadata.description.ja;
+  }
+
+  // Ensure creators has both en and ja keys
+  if (mergedMetadata.creators.en && !mergedMetadata.creators.ja) {
+    mergedMetadata.creators.ja = mergedMetadata.creators.en;
+  } else if (mergedMetadata.creators.ja && !mergedMetadata.creators.en) {
+    mergedMetadata.creators.en = mergedMetadata.creators.ja;
   }
 
   return mergedMetadata;
@@ -159,6 +195,24 @@ function getStatsForDatasetId(id) {
 }
 
 /**
+ * Count the number of SPARQL example files (.rq) in a dataset directory
+ * @param {string} id - Dataset ID
+ * @returns {number} - Number of .rq files found
+ */
+function countSparqlExamples(id) {
+  const datasetDir = path.join(DATASETS_FOLDER, id);
+
+  try {
+    const files = fs.readdirSync(datasetDir);
+    const rqFiles = files.filter((file) => file.endsWith(".rq"));
+    return rqFiles.length;
+  } catch (error) {
+    // Directory doesn't exist or can't be read
+    return 0;
+  }
+}
+
+/**
  * メイン処理
  */
 async function main() {
@@ -176,6 +230,7 @@ async function main() {
       extracted.lang = "en";
 
       const extractedJaResult = getMetadataFromLocalFolder(id, "ja");
+      const hasJaMetadata = extractedJaResult.exists;
       const extractedJa = extractedJaResult.metadata;
       extractedJa.lang = "ja";
 
@@ -184,16 +239,34 @@ async function main() {
         continue;
       }
 
+      // If no Japanese metadata exists, copy all English values to Japanese
+      if (!hasJaMetadata) {
+        console.log(
+          `ℹ️ ${id}: No Japanese metadata found, using English values`,
+        );
+        if (extracted.creators) {
+          extractedJa.creators = extracted.creators;
+        }
+        if (extracted.description) {
+          extractedJa.description = extracted.description;
+        }
+        if (extracted.provider) {
+          extractedJa.provider = extracted.provider;
+        }
+      }
+
       const mergedMetadata = mergeMultilanguageExtractedMetadata(
         extracted,
         extractedJa,
       );
 
       const statsData = getStatsForDatasetId(id);
+      const sparqlCount = countSparqlExamples(id);
+
       const datasetInfo = {
         id,
         ...mergedMetadata,
-
+        sparql_examples_count: sparqlCount,
         statistics: statsData.statistics,
         endpoint: statsData.endpoint,
         updated_at: statsData.updated_at,
