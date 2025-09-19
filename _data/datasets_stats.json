@@ -400,6 +400,22 @@
     "updated_at": "2025-03-08"
   },
   {
+    "endpoint": "primary",
+    "dataset": "mediadive",
+    "statistics": {
+      "number_of_triples": 1677743,
+      "number_of_instances": 255056,
+      "number_of_subjects": 255056,
+      "number_of_properties": 71,
+      "number_of_objects": 67364,
+      "number_of_literals": 116754,
+      "number_of_classes": 13,
+      "number_of_datatypes": 5,
+      "number_of_links": 123465
+    },
+    "updated_at": "2025-09-16"
+  },
+  {
     "endpoint": "ncbi",
     "dataset": "nlm-catalog",
     "statistics": {
