@@ -1,0 +1,14 @@
+######
+# Find enzymes and their links to UniProt enzyme annotation (limited to 10 hits).
+#
+
+PREFIX pdbo: <http://rdf.wwpdb.org/schema/pdbx-v50.owl#> 
+
+SELECT ?pdb ?entity ?desc ?ec
+FROM <http://rdfportal.org/dataset/pdbj>
+WHERE {
+  ?entity pdbo:link_to_enzyme ?ec ;
+          pdbo:entity.pdbx_description ?desc ;
+          pdbo:of_datablock ?pdb .
+} limit 10
+

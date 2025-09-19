@@ -1,0 +1,25 @@
+# Endpoint: http://virtuoso:8890/sparql
+# Description: Get related SRA data objects
+
+PREFIX biosample_ont: <http://ddbj.nig.ac.jp/ontologies/biosample/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dra_ont: <http://ddbj.nig.ac.jp/ontologies/dra/>
+PREFIX bioproject_ont: <http://ddbj.nig.ac.jp/ontologies/bioproject/>
+
+SELECT ?BioSample ?sra_study ?sra_experiment ?sra_accession ?sra_sample ?sra_run ?bioproject
+WHERE {
+    ?BioSample a biosample_ont:BioSampleRecord ;
+        rdfs:seeAlso ?sra_study ;
+        rdfs:seeAlso ?sra_experiment ;
+        rdfs:seeAlso ?sra_accession ;
+        rdfs:seeAlso ?sra_sample ;
+        rdfs:seeAlso ?sra_run ;
+        rdfs:seeAlso ?bioproject .
+    ?sra_study a dra_ont:Study .
+    ?sra_experiment a dra_ont:Experiment .
+    ?sra_accession a dra_ont:Accession .
+    ?sra_sample a dra_ont:Sample .
+    ?sra_run a dra_ont:Run .
+    ?bioproject a bioproject_ont:BioProjectRecord .
+}
+LIMIT 100

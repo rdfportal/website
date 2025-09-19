@@ -1,0 +1,32 @@
+#### 02 ####
+# Find nikkaji compounds the names of which include "クロロメタン (Chloromethane)"
+
+prefix dct: <http://purl.org/dc/terms/>
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix jst: <http://vocab.jst.go.jp/terms/sti#>
+prefix jstd: <http://vocab.jst.go.jp/terms/vlist#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix xl: <http://www.w3.org/2008/05/skos-xl#>
+
+SELECT  distinct ?nikkaji ?nikkajiNum ?labelName ?diagram ?query
+FROM <http://rdfportal.org/dataset/nikkaji/main>
+
+WHERE 
+{ 
+	?nikkaji 
+		xl:altLabel ?o ; 
+		dct:identifier ?nikkajiNum . 
+		OPTIONAL{?nikkaji rdfs:label ?labelName filter ( lang(?labelName) = "en" ) .} 
+		OPTIONAL{?nikkaji foaf:depiction ?diagram . } 
+		OPTIONAL{?nikkaji jstd:systematic-name / rdf:first / rdfs:label ?systematicName .} 
+
+	?o 
+		rdf:rest* / rdf:first ?o2 . 
+
+	?o2  
+		xl:literalForm ?query filter (regex(?query,"クロロメタン")) . 
+
+}
+LIMIT 100
+

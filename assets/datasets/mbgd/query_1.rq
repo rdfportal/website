@@ -1,0 +1,17 @@
+######
+# Get orthologs of a given RefSeq ID
+#
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX orth: <http://purl.jp/bio/11/orth#>
+PREFIX protid: <http://identifiers.org/ncbiprotein/>
+
+SELECT DISTINCT ?protein_id
+FROM <http://mbgd.genome.ad.jp/rdf/resource/default>
+FROM <http://mbgd.genome.ad.jp/rdf/resource/gene>
+WHERE {
+    ?group a orth:OrthologGroup ;
+        orth:member+/orth:gene?/orth:protein?/rdfs:seeAlso protid:NP_563687.1 ;
+        orth:member+/orth:gene?/orth:protein?/rdfs:seeAlso ?protein_id .
+    FILTER regex(?protein_id, "identifiers.org/ncbiprotein")
+}

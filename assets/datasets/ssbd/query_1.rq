@@ -1,0 +1,10 @@
+PREFIX ssbd: <http://metadb.riken.jp/db/SSBD/>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT ?s ?desc
+FROM <http://metadb.riken.jp/db/SSBD>
+WHERE
+{
+  ?s obo:RO_0002162 obo:NCBITaxon_10090 . # mouse
+  ?s dcterms:description ?desc .
+}

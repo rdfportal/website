@@ -1,0 +1,31 @@
+# Endpoint: https://id.nlm.nih.gov/mesh/sparql
+# Description: 
+# Parameter: qualifier_active: (example: true)
+#            allowed_descriptor_qualifier_pair_active: (example: true)
+
+PREFIX meshv: <http://id.nlm.nih.gov/mesh/vocab#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?AllowedDescriptorQualifierPair ?Qualifier ?qualifier_label ?qualifier_active ?allowed_descriptor_qualifier_pair_active
+WHERE {
+    VALUES ?qualifier_active { true }
+    VALUES ?allowed_descriptor_qualifier_pair_active { true }
+    ?Qualifier a meshv:Qualifier ;
+        meshv:active ?qualifier_active .
+    ?AllowedDescriptorQualifierPair a meshv:AllowedDescriptorQualifierPair ;
+        meshv:active ?allowed_descriptor_qualifier_pair_active .
+    OPTIONAL {
+        ?Chemical a meshv:SCR_Chemical ;
+            meshv:preferredMappedTo ?AllowedDescriptorQualifierPair .
+    }
+    OPTIONAL {
+        ?Concept a meshv:Concept ;
+            meshv:seeAlso / meshv:broaderDescriptor ?Descriptor .
+        ?Descriptor a meshv:TopicalDescriptor ;
+            meshv:allowableQualifier ?Qualifier .
+    }
+    OPTIONAL {
+        ?Qualifier rdfs:label ?qualifier_label .
+    }
+}
+LIMIT 100

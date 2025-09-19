@@ -1,0 +1,38 @@
+# (1) "poly(prop-1-ene)"を生分解分解する菌種名、および"poly(prop-1-ene)"の化学式＋SMILES
+
+prefix biodg: <http://dice.nims.go.jp/ontology/polymer-bio-ont/Biodeg#>
+prefix cu: <http://dice.nims.go.jp/ontology/PoLyInfo-ont/polyinfo-rdf/ConstitutionalUnit#>
+prefix dc: <http://purl.org/dc/elements/1.1/>
+prefix taxddbj: <http://ddbj.nig.ac.jp/ontologies/taxonomy/>
+prefix homo: <http://dice.nims.go.jp/ontology/PoLyInfo-ont/polyinfo-rdf/Homopolymer#>
+prefix obo: <http://purl.obolibrary.org/obo/>
+prefix pli: <http://dice.nims.go.jp/ontology/PoLyInfo-ont/Schema#>
+prefix prism: <http://prismstandard.org/namespaces/basic/2.0/>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix ref: <http://dice.nims.go.jp/ontology/polymer-bio-ont/Reference/>
+prefix sio: <http://semanticscience.org/resource/>
+prefix taxonomy: <http://identifiers.org/taxonomy/>
+prefix wdt: <http://dice.nims.go.jp/ontology/polymer-bio-ont/Property#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT distinct ?mf_val ?smiles_val ?deg_label ?tax_name
+WHERE {
+  ?poly rdfs:label "poly(prop-1-ene)"@en ;
+    sio:SIO_000008 ?cu .
+  ?cu a pli:ConstitutionalUnit ;
+    obo:BFO_0000051 ?mf .
+  ?mf a pli:MolecularFormula ;
+    sio:SIO_000300 ?mf_val .
+  ?cu obo:BFO_0000051 ?smiles .
+  ?smiles a pli:Smiles ;
+    sio:SIO_000300 ?smiles_val .
+  ?deg obo:RO_0000057 ?poly;
+    rdfs:label ?deg_label ;
+    obo:RO_0000057 ?tax .
+  SERVICE <https://rdfportal.org/ddbj/sparql>{
+    ?tax a taxddbj:Taxon ;
+    taxddbj:scientificName ?tax_name .
+  }
+}
+

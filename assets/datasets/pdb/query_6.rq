@@ -1,0 +1,15 @@
+# Endpoint: https://rdfportal.org/pdb/sparql
+# Description: Experimental method
+
+PREFIX pdbo: <https://rdf.wwpdb.org/schema/pdbx-v50.owl#>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+SELECT ?pdb_id ?experimental_method
+FROM <http://rdfportal.org/dataset/pdbj>
+FROM <http://rdf.wwpdb.org/schema/pdbx-v50.owl>
+WHERE {
+    ?PDB a pdbo:datablock ;
+        dct:identifier ?pdb_id ;
+        pdbo:has_exptlCategory / pdbo:has_exptl / pdbo:exptl.method ?experimental_method .
+}
+LIMIT 100

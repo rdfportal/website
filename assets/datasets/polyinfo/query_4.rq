@@ -1,0 +1,33 @@
+# (4)ポリマーP00001（Polyehene）の生分解一覧とその参考文献
+
+prefix biodg: <http://dice.nims.go.jp/ontology/polymer-bio-ont/Biodeg#>
+prefix cu: <http://dice.nims.go.jp/ontology/PoLyInfo-ont/polyinfo-rdf/ConstitutionalUnit#>
+prefix dc: <http://purl.org/dc/elements/1.1/>
+prefix taxddbj: <http://ddbj.nig.ac.jp/ontologies/taxonomy/>
+prefix homo: <http://dice.nims.go.jp/ontology/PoLyInfo-ont/polyinfo-rdf/Homopolymer#>
+prefix obo: <http://purl.obolibrary.org/obo/>
+prefix pli: <http://dice.nims.go.jp/ontology/PoLyInfo-ont/Schema#>
+prefix prism: <http://prismstandard.org/namespaces/basic/2.0/>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix ref: <http://dice.nims.go.jp/ontology/polymer-bio-ont/Reference/>
+prefix sio: <http://semanticscience.org/resource/>
+prefix taxonomy: <http://identifiers.org/taxonomy/>
+prefix wdt: <http://dice.nims.go.jp/ontology/polymer-bio-ont/Property#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT distinct ?deg_label ?ref ?doi ?author ?year
+WHERE {
+  ?deg obo:RO_0000057 homo:P010001 ;
+    rdfs:label ?deg_label ;
+    dcterms:referecens ?ref .
+OPTIONAL {
+  ?ref prism:doi ?doi .
+}
+OPTIONAL {
+  ?ref  dcterms:creator ?author ;
+  prism:publicationDate ?year .
+}
+}
+order by ?ref
+

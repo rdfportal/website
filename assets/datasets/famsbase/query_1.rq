@@ -1,0 +1,28 @@
+#Get predicted protein structures by FAMS with GPCR ( pdb: 3OE8 chain A) as template and a threshold (1.0e-100) for
+#the e-value of pairwise sequence alignments between the template and targets.
+
+PREFIX edam: <http://edamontology.org/>
+PREFIX pdb: <http://identifiers.org/pdb/>
+PREFIX famsbaseo: <http://purl.jp/bio/01/famsbase/ontology/>
+PREFIX faldo: <http://biohackathon.org/resource/faldo#>
+
+SELECT  ?entry ?model ?evalue ?uniprot
+FROM <http://fams.bio.chuo-u.ac.jp/GPCR/rdf/>
+WHERE {
+  ?entry famsbaseo:hasModel ?model .
+  ?model edam:is_output_of ?bk .
+  ?bk edam:hasInput ?template .
+  ?template a edam:data_1460 .
+  ?template rdfs:seeAlso pdb:3OE8 .
+  ?template famsbaseo:chain "A" .
+  ?bk edam:hasInput ?in_aln .
+  ?in_aln a edam:data_0863 .
+  ?in_aln famsbaseo:evalue ?ev .
+  ?in_aln famsbaseo:identity ?identity .
+  BIND(xsd:double(?ev) AS ?evalue)
+  FILTER(?evalue < 1.0e-100)
+  ?in_aln edam:is_output_of ?bk2 .
+  ?bk2 edam:hasInput ?bk3 .
+  ?bk3 rdfs:seeAlso ?uniprot .
+  ?uniprot a <http://identifiers.org/uniprot/> .
+} LIMIT 100

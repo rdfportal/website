@@ -1,0 +1,16 @@
+# List tags for databases
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX tag: <http://integbio.jp/dbcatalog/dbcatalogtag.owl#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?tag_id ?tag_label_ja ?tag_label_en
+FROM <http://rdfportal.org/dataset/dbcatalog/tag>
+WHERE
+{
+  ?tag a skos:Concept ;
+       dcterms:identifier ?tag_id .
+  { ?tag rdfs:label ?tag_label_ja . FILTER (lang(?tag_label_ja) = "ja" ) }
+  { ?tag rdfs:label ?tag_label_en . FILTER (lang(?tag_label_en) = "en" ) }
+} ORDER BY ?tag_id

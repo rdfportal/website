@@ -1,0 +1,18 @@
+# Endpoint: https://rdfportal.org/sib/sparql
+# Description: At which developmental stage is the APOC1 gene expressed?
+# Parameter: gene_name: (example: APOC1)
+
+PREFIX genex: <http://purl.org/genex#>
+PREFIX efo: <http://www.ebi.ac.uk/efo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX orth: <http://purl.org/net/orth#>
+
+SELECT DISTINCT ?expression_condition_developmental_stage ?gene_name
+FROM <http://bgee.org>
+WHERE {
+    VALUES ?gene_name { "APOC1" }
+    ?Expression a genex:Expression ;
+        genex:hasExpressionCondition / genex:hasDevelopmentalStage / rdfs:label ?expression_condition_developmental_stage ;
+        genex:hasSequenceUnit / rdfs:label ?gene_name .
+}
+LIMIT 100

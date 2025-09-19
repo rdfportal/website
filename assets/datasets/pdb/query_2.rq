@@ -1,0 +1,15 @@
+######
+# Find proteins in PDB and get amino acid sequences (limited to 10 hits)
+#
+
+PREFIX pdbo: <http://rdf.wwpdb.org/schema/pdbx-v50.owl#>
+
+SELECT ?entity ?desc ?poly ?seq
+FROM <http://rdfportal.org/dataset/pdbj>
+WHERE {
+  ?entity pdbo:referenced_by_entity_poly ?poly ;
+          pdbo:entity.pdbx_description ?desc .
+  ?poly pdbo:entity_poly.pdbx_seq_one_letter_code_can ?seq ;
+        pdbo:entity_poly.type "polypeptide(L)"
+} limit 10
+

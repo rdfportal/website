@@ -1,0 +1,11 @@
+# 1. Retrieve a list of phenotypes which are associated with a disease with OMIM ID 100050.
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX mim: <http://identifiers.org/mim/>
+ 
+SELECT distinct ?hpo FROM <https://pubcasefinder.dbcls.jp/rdf> WHERE{
+  ?an rdf:type oa:Annotation ;
+      oa:hasTarget mim:100050 ;
+      oa:hasBody ?hpo.
+}

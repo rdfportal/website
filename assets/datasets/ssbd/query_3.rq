@@ -1,0 +1,9 @@
+PREFIX ssbd: <http://metadb.riken.jp/db/SSBD/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT ?s ?desc
+FROM <http://metadb.riken.jp/db/SSBD>
+WHERE
+{
+  ?s dcterms:references ?text FILTER regex(?text, "23172286", "i") .
+  ?s dcterms:description ?desc .
+}

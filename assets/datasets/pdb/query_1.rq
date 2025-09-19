@@ -1,0 +1,15 @@
+######
+# Find molecular entities in the PDB entry "1GOF" and their descriptions.
+#
+
+PREFIX pdbr: <http://rdf.wwpdb.org/pdb/>
+PREFIX pdbo: <http://rdf.wwpdb.org/schema/pdbx-v50.owl#>
+
+SELECT ?entity ?desc
+FROM <http://rdfportal.org/dataset/pdbj>
+WHERE {
+  pdbr:1GOF ?cat ?ecats .
+  ?ecats pdbo:has_entity ?entity .
+  ?entity pdbo:entity.pdbx_description ?desc
+}
+

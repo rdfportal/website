@@ -1,0 +1,20 @@
+# Endpoint: https://rdfportal.org/primary/sparql
+# Description: Get related resources for C00000001 in KNApSAcK Core
+# Parameter: knapsack_id: (example: C00000001)
+
+PREFIX knapsack: <http://purl.jp/knapsack/resource#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?knapsack_id ?skos_close_match
+FROM <http://purl.jp/knapsack/>
+WHERE {
+    VALUES ?knapsack_id { "C00000001" }
+    VALUES ?KNApSAcKCoreRecord__class { knapsack:KNApSAcKCoreRecord knapsack:KNApSAcKMetaboliteRecord }
+    ?KNApSAcKCoreRecord a ?KNApSAcKCoreRecord__class ;
+        dc:identifier ?knapsack_id .
+    OPTIONAL {
+        ?KNApSAcKCoreRecord skos:closeMatch ?skos_close_match .
+    }
+}
+LIMIT 100

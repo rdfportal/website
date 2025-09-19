@@ -1,0 +1,47 @@
+# Endpoint: https://rdfportal.org/sib/sparql
+# Description: PTM sites and descriptions of an UniProt
+# Parameter: UniProt: (example: up:Q9BYF8)
+
+PREFIX core: <http://purl.uniprot.org/core/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX faldo: <http://biohackathon.org/resource/faldo#>
+PREFIX up: <http://purl.uniprot.org/uniprot/>
+
+SELECT ?UniProt ?mod_desc ?mod_begin ?mod_end
+FROM <http://sparql.uniprot.org/uniprot>
+FROM <http://sparql.uniprot.org/obsolete>
+FROM <http://sparql.uniprot.org/citationmapping>
+FROM <http://sparql.uniprot.org/taxonomy>
+FROM <http://sparql.uniprot.org/citations>
+FROM <http://sparql.uniprot.org/proteomes>
+FROM <http://sparql.uniprot.org/go>
+FROM <http://sparql.uniprot.org/enzyme>
+FROM <http://sparql.uniprot.org/diseases>
+FROM <http://sparql.uniprot.org/journal>
+FROM <http://sparql.uniprot.org/pathways>
+FROM <http://sparql.uniprot.org/keywords>
+FROM <http://sparql.uniprot.org/locations>
+FROM <http://sparql.uniprot.org/tissues>
+FROM <http://sparql.uniprot.org/core>
+FROM <http://sparql.uniprot.org/databases>
+WHERE {
+    VALUES ?UniProt { up:Q9BYF8 }
+    ?UniProt a core:Protein ;
+        core:annotation ?ModifiedResidueAnnotation .
+    ?ModifiedResidueAnnotation a core:Modified_Residue_Annotation .
+    OPTIONAL {
+        ?ModifiedResidueAnnotation rdfs:comment ?mod_desc ;
+            core:range [
+                a faldo:Region ;
+                faldo:begin [
+                    a faldo:Position ;
+                    faldo:position ?mod_begin ;
+                ] ;
+                faldo:end [
+                    a faldo:Position ;
+                    faldo:position ?mod_end ;
+                ] ;
+            ] .
+    }
+}
+LIMIT 100

@@ -1,0 +1,9 @@
+# ターゲット分子の立体構造が解かれている核酸医薬品の一覧の取得
+
+PREFIX PDBr: <https://rdf.wwpdb.org/pdb/>
+PREFIX sio: <http://semanticscience.org/resource/>
+SELECT ?entry ?molecule
+WHERE {
+    ?entry sio:SIO_010423 ?molecule FILTER REGEX ( str(?molecule), "pdb")
+}
+

@@ -1,0 +1,20 @@
+######
+# Find source organisms and links to taxonomy (limited to 10 hits).
+#
+
+PREFIX pdbo: <http://rdf.wwpdb.org/schema/pdbx-v50.owl#>
+
+SELECT ?entity ?src ?name ?tax
+FROM <http://rdfportal.org/dataset/pdbj>
+WHERE {
+  { ?entity pdbo:referenced_by_entity_src_gen ?src .
+    ?src  pdbo:entity_src_gen.pdbx_gene_src_scientific_name ?name ;
+          pdbo:link_to_taxonomy_source ?tax .
+  }
+  UNION
+  { ?entity pdbo:referenced_by_entity_src_nat ?src .
+    ?src pdbo:entity_src_nat.pdbx_organism_scientific ?name ;
+         pdbo:link_to_taxonomy_source ?tax .
+  }
+} limit 10
+

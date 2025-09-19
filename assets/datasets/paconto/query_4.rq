@@ -1,0 +1,23 @@
+#List PMID (from PubMed) for references in which described that lectin-glycan interactions play a role in Respiratory Tract Diseases
+
+PREFIX pacsch: <http://jcggdb.jp/rdf/diseases/paconto-schema#>
+PREFIX uniprot: <http://purl.uniprot.org/core/>
+PREFIX ggdsch: <http://jcggdb.jp/rdf/diseases/ggdonto-schema#>
+PREFIX gmsch: <http://jcggdb.jp/rdf/diseases/gmncbi-schema#>
+PREFIX gdgsch: <http://jcggdb.jp/rdf/diseases/gdgdb-schema#>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+
+SELECT DISTINCT ?pmid
+FROM <http://jcggdb.jp/rdf/diseases/paconto>
+WHERE {
+  ?disease_uri ggdsch:conceptType pacsch:DiseasesNameAndClass.
+  ?disease_uri pacsch:diseaseClass ?disease_class .
+  ?disease_uri gdgsch:diseaseNames ?disease_name .
+  FILTER regex(?disease_class,"Respiratory Tract Disease","i")
+  ?disease_uri gmsch:causedBy ?species_uri .
+  ?species_reference_uri a pacsch:OccurInOrganismInReference.
+  ?species_reference_uri uniprot:organism ?species_uri .
+  ?species_reference_uri pacsch:describedInReference ?reference_uri.
+  ?reference_uri ggdsch:conceptType pacsch:ReferencesData.
+  ?reference_uri bibo:pmid ?pmid.
+}

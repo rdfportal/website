@@ -1,0 +1,13 @@
+PREFIX ssbd: <http://metadb.riken.jp/db/SSBD/>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ssbdo: <http://metadb.riken.jp/ontology/SSBD/>
+SELECT ?s ?desc
+FROM <http://metadb.riken.jp/db/SSBD>
+WHERE
+{
+  ?s obo:RO_0002162 obo:NCBITaxon_6239 . # C. elegans
+  ?s ssbdo:inBiologicalProcess obo:GO_0035046 . # pronuclear migration
+  ?s ssbdo:basedOn ?text FILTER regex(?text, "simulation", "i") .
+  ?s dcterms:description ?desc .
+}

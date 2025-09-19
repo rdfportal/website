@@ -1,0 +1,21 @@
+# 4. Retrieve a list of PMIDs whose papers include a disease with Orphanet ID 822 and a phenotype with HPO ID 0001744.
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX ordo: <http://www.orpha.net/ORDO/>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+
+SELECT distinct ?pubmed  FROM <https://pubcasefinder.dbcls.jp/rdf> WHERE{
+  ?an rdf:type oa:Annotation ;
+      oa:hasTarget ordo:Orphanet_822 ;
+      oa:hasBody obo:HP_0001744 ;
+      dcterms:source [      
+          dcterms:references ?paper
+      ] .
+  ?paper rdf:type bibo:Article ;
+         rdfs:seeAlso ?pubmed .  
+} 
+

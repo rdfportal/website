@@ -1,0 +1,33 @@
+# Select tradename, SMILES and IUPAC InChI for FDA approved drugs
+# with TPSA (topological polar surface area) value less than 120
+
+PREFIX cpd: <http://rdf.ncbi.nlm.nih.gov/pubchem/compound/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX descriptor: <http://rdf.ncbi.nlm.nih.gov/pubchem/descriptor/>
+PREFIX compound: <http://rdf.ncbi.nlm.nih.gov/pubchem/compound/>
+PREFIX substance: <http://rdf.ncbi.nlm.nih.gov/pubchem/substance/>
+PREFIX pubchemv: <http://rdf.ncbi.nlm.nih.gov/pubchem/vocabulary#>
+
+SELECT DISTINCT ?tradename ?cid ?canonical_smiles ?iupac_inchi ?tpsa_value
+WHERE {
+  ?cid obo:RO_0000087 pubchemv:FDAApprovedDrugs ;
+       sio:SIO_000008 ?desc_canonical_smiles ;
+       sio:SIO_000008 ?desc_iupac_inchi ;
+       sio:SIO_000008 ?desc_tpsa .
+  ?desc_canonical_smiles a sio:CHEMINF_000376 ;
+                         sio:SIO_000300 ?canonical_smiles .
+  ?desc_iupac_inchi a sio:CHEMINF_000396 ;
+                    sio:SIO_000300 ?iupac_inchi .
+  ?desc_tpsa a sio:CHEMINF_000392 ;
+               sio:SIO_000300 ?tpsa .
+  FILTER(?tpsa < 120.0)
+  ?sid sio:CHEMINF_000477 ?cid ;
+       sio:SIO_000008 ?desc_trade_name .
+  ?desc_trade_name a sio:CHEMINF_000561 ;
+                   sio:SIO_000300 ?tradename .
+  BIND(STR(?tpsa) AS ?tpsa_value)
+}
+LIMIT 100

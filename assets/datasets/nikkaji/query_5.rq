@@ -1,0 +1,27 @@
+### 05 ###
+# Discorver target proteins of Nikkaji compounds by using DrugBank 
+
+define input:same-as "yes"
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>  
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>  
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT distinct ?compound ?label_compound ?kegg ?target ?label_target
+
+where
+{
+	SERVICE <http://bio2rdf.org/sparql>{
+	?drug <http://bio2rdf.org/drugbank_vocabulary:target> ?target ; 
+		<http://bio2rdf.org/drugbank_vocabulary:x-kegg> ?kegg . 
+	?target rdfs:label ?label_target .
+	}
+
+	GRAPH <http://rdfportal.org/dataset/nikkaji/link2jglobal_basedon_unichem>{
+	?compound skos:closeMatch ?kegg .
+	}
+	
+	GRAPH <http://rdfportal.org/dataset/nikkaji/core>{
+	?compound rdfs:label ?label_compound filter (lang(?label_compound)="en") .  
+	}
+}
+

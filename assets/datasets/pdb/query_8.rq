@@ -1,0 +1,36 @@
+# Endpoint: https://rdfportal.org/pdb/sparql
+# Description: Sheet strand list in a polypeptide chain
+# Parameter: pdb_id: (example: 5KE7)
+#            chain_id: (example: A)
+#            sheet_strand_begin_chain_id: (example: A)
+
+PREFIX pdbo: <https://rdf.wwpdb.org/schema/pdbx-v50.owl#>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+SELECT ?entity ?entity_id ?uniprot ?sheet ?sheet_strand ?sheet_id ?sheet_strand_id ?pdb_id ?chain_id ?sheet_strand_begin_chain_id
+FROM <http://rdfportal.org/dataset/pdbj>
+FROM <http://rdf.wwpdb.org/schema/pdbx-v50.owl>
+WHERE {
+    VALUES ?pdb_id { "5KE7" }
+    VALUES ?chain_id { "A" }
+    VALUES ?sheet_strand_begin_chain_id { "A" }
+    ?PDB a pdbo:datablock ;
+        pdbo:has_entityCategory / pdbo:has_entity ?entity ;
+        dct:identifier ?pdb_id .
+    ?entity a pdbo:entity ;
+        pdbo:entity.id ?entity_id ;
+        pdbo:referenced_by_struct_ref / pdbo:link_to_uniprot ?uniprot ;
+        pdbo:referenced_by_struct_asym / pdbo:struct_asym.id ?chain_id .
+    ?sheet_strand a pdbo:struct_sheet_range ;
+        pdbo:struct_sheet_range.beg_label_asym_id ?sheet_strand_begin_chain_id .
+    OPTIONAL {
+        ?PDB pdbo:has_struct_sheetCategory / pdbo:has_struct_sheet ?sheet .
+        ?sheet a pdbo:struct_sheet ;
+            pdbo:referenced_by_struct_sheet_range ?sheet_strand ;
+            pdbo:struct_sheet.id ?sheet_id .
+    }
+    OPTIONAL {
+        ?sheet_strand pdbo:struct_sheet_range.id ?sheet_strand_id .
+    }
+}
+LIMIT 100

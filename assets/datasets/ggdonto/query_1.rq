@@ -1,0 +1,16 @@
+### List the preferred names and synonyms for diseases which are the Congenital Disorders of Glycosylation ###
+prefix ggdsch: <http://jcggdb.jp/rdf/diseases/ggdonto-schema#>
+
+select distinct ?preferred_name ?synonym
+from <http://jcggdb.jp/rdf/diseases/ggdonto>
+where {
+ ?disease_uri a ggdsch:DiseaseDescriptionGGDonto .
+ ?disease_uri ggdsch:diseaseType ggdsch:CDG .
+ ?disease_uri ggdsch:diseasePreferredTerm ?preferred_name.
+ OPTIONAL {
+  ?disease_uri ggdsch:diseasePreferredTerm ?preferred_name.
+  ?disease_uri ggdsch:diseaseSynonyms ?synonym.
+  FILTER ( lang(?preferred_name) = lang(?synonym) )
+ }
+}
+order by ?preferred_name ?synonym

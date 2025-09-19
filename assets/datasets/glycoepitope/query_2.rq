@@ -1,0 +1,32 @@
+##########################
+#
+#List of antibody id and name
+#
+##########################
+
+DEFINE sql:select-option "order"
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX glycan: <http://purl.jp/bio/12/glyco/glycan#> 
+PREFIX glycodb: <http://purl.jp/bio/12/database/>
+PREFIX glytoucan: <http://www.glytoucan.org/glyco/owl/glytoucan#>
+PREFIX glycoepitope: <http://www.glycoepitope.jp/epitopes/glycoepitope.owl#>
+PREFIX glycoprot: <http://www.glycoprot.jp/>
+PREFIX uniprot: <http://www.uniprot.org/core/>
+
+# antibody id & antibody name
+SELECT distinct ?antibody_id ?antibody_name
+FROM <http://rdf.glycoinfo.org/glycoepitope>
+WHERE{
+        OPTIONAL{
+        # antibody id
+        ?epitope glycoepitope:has_antibody ?antibody .
+        ?antibody dcterms:identifier ?antibody_id .
+        }
+
+        OPTIONAL{
+        # antibody name
+        ?epitope glycoepitope:has_antibody ?antibody .
+        ?antibody rdfs:label ?antibody_name .
+        }
+}

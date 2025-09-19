@@ -1,0 +1,27 @@
+#  Search for a DDBJ entry "CP002459.1" and the metadata.
+#  Note the SPARQL endpoint for DDBJ is https://rdfportal.org/ddbj/sparql .
+
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX insdc:<http://ddbj.nig.ac.jp/ontologies/nucleotide/>
+
+SELECT
+  ?predicate ?object
+WHERE
+{
+  VALUES ?entry { <http://identifiers.org/insdc/CP002459.1> }
+  VALUES ?predicate { 
+    insdc:comment
+    insdc:definition
+    insdc:division
+    insdc:organism
+    insdc:sequence_date
+    insdc:sequence_version
+    insdc:source
+    insdc:taxonomy
+    insdc:dblink
+  }                      
+  ?entry rdf:type insdc:Entry. 
+  ?entry ?predicate ?object.
+}
+

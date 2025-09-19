@@ -1,0 +1,24 @@
+#List glycan ligands of hosts with which lectins of 'Haemophilus influenzae' pathogen have binding interactions
+
+PREFIX pacsch: <http://jcggdb.jp/rdf/diseases/paconto-schema#>
+PREFIX glycan: <http://purl.jp/bio/12/glyco/glycan#>
+PREFIX uniprot: <http://purl.uniprot.org/core/>
+PREFIX ggdsch: <http://jcggdb.jp/rdf/diseases/ggdonto-schema#>
+
+SELECT DISTINCT ?glycan_name ?interaction_type
+FROM <http://jcggdb.jp/rdf/diseases/paconto>
+WHERE {
+  ?pathogen_uri ggdsch:conceptType pacsch:PathogenAdherenceMolecules.
+  ?pathogen_uri uniprot:scientificName ?scientific_name.
+  FILTER regex(?scientific_name,"Haemophilus influenzae","i")
+  ?pathogen_reference_uri a pacsch:AffinityInReference.
+  ?pathogen_reference_uri glycan:has_affinity_to ?pathogen_uri.
+  ?pathogen_reference_uri pacsch:describedInReference ?reference_uri.
+  ?glycan_reference_uri a pacsch:InteractionInReference .
+  ?glycan_reference_uri pacsch:describedInReference ?reference_uri.
+  ?pathogen_uri pacsch:interactionInReference ?glycan_reference_uri .
+  ?glycan_reference_uri pacsch:interactionType ?interaction_type .
+  ?glycan_reference_uri pacsch:hasInteractionWith ?glycan_uri .
+  ?glycan_uri a pacsch:GlycansPACDB .
+  ?glycan_uri pacsch:carbohydrateLigandName ?glycan_name .
+}

@@ -1,0 +1,13 @@
+### Get the symptoms of a disease for which the UMLS CUI (Concept Unique Identifier from Unified Medical Language System) is 'C2931008' ###
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix ggdsch: <http://jcggdb.jp/rdf/diseases/ggdonto-schema#>
+prefix gmsch: <http://jcggdb.jp/rdf/diseases/gmncbi-schema#>
+
+select distinct ?manifestation 
+from <http://jcggdb.jp/rdf/diseases/ggdonto>
+where {
+ ?disease_uri a ggdsch:DiseaseDescriptionGGDonto .
+ ?disease_uri ggdsch:umlsCUI "C2931008".
+?disease_uri gmsch:hasManifestation ?manifestation_uri .
+ ?manifestation_uri skos:prefLabel ?manifestation .
+}
