@@ -4,6 +4,7 @@
     "dataset": "bacdive",
     "statistics": {
       "number_of_triples": 15721404,
+      "number_of_instances": 5176517,
       "number_of_subjects": 1617191,
       "number_of_properties": 314,
       "number_of_objects": 175504,
