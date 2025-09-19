@@ -34,7 +34,10 @@ function extractRequiredFields(metadata) {
     provider: metadata.provider || "",
     tags: metadata.tags || [],
     licenses: metadata.licenses || [],
-    creators: metadata.creators || {},
+    creators:
+      typeof metadata.creators === "string"
+        ? [{ name: metadata.creators, affiliation: null }]
+        : metadata.creators || {},
     website: metadata.website || null,
     issued: metadata.issued || null,
     version: metadata.version || null,
@@ -111,8 +114,21 @@ function mergeMultilanguageExtractedMetadata(...metadatas) {
     }
 
     // Add creators by language
-    if (metadata.creators && metadata.creators.length > 0) {
-      mergedMetadata.creators[lang] = metadata.creators;
+    if (metadata.creators) {
+      // Handle case where creators is a string instead of an array of objects
+      if (typeof metadata.creators === "string") {
+        mergedMetadata.creators[lang] = [
+          {
+            name: metadata.creators,
+            affiliation: null,
+          },
+        ];
+      } else if (
+        Array.isArray(metadata.creators) &&
+        metadata.creators.length > 0
+      ) {
+        mergedMetadata.creators[lang] = metadata.creators;
+      }
     }
 
     // Add website from metadata (preferably from English)
@@ -176,12 +192,29 @@ async function main() {
       extracted.lang = "en";
 
       const extractedJaResult = getMetadataFromLocalFolder(id, "ja");
+      const hasJaMetadata = extractedJaResult.exists;
       const extractedJa = extractedJaResult.metadata;
       extractedJa.lang = "ja";
 
       if (!hasMetadata) {
         console.log(`⭕ ${id}: No metadata.yaml found - skipping`);
         continue;
+      }
+
+      // If no Japanese metadata exists, copy all English values to Japanese
+      if (!hasJaMetadata) {
+        console.log(
+          `ℹ️ ${id}: No Japanese metadata found, using English values`,
+        );
+        if (extracted.creators) {
+          extractedJa.creators = extracted.creators;
+        }
+        if (extracted.description) {
+          extractedJa.description = extracted.description;
+        }
+        if (extracted.provider) {
+          extractedJa.provider = extracted.provider;
+        }
       }
 
       const mergedMetadata = mergeMultilanguageExtractedMetadata(
