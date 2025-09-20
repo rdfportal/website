@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 
-<body{% if page.pageId %} data-page-id="{{ page.pageId }}" {% endif %}{% if page.isSmallHeading %}
-  data-is-small-heading="true" {% endif %}>
+<body{% if page.pageId %} data-page-id="{{ page.pageId }}" {% endif %}{% if.parentPageId %}
+  data-parent-page-id="{{ page.parentPageId }}" {% endif %}>
   <aside class="global-navigation">
     <div class="background"></div>
     <div class="inner">
@@ -61,73 +61,7 @@
         <li><span>{{ total_triples | default: 0 }}</span><span>triples</span></li>
         {% endif %}
       </ul>
-      <nav>
-        <ul>
-          <li data-page-id="access_methods">
-            <a href="{{ '/access_methods/' | relative_url }}">Access methods</a>
-            <ul>
-              <li data-page-id="sparql_endpoints">
-                <a href="{{ '/sparql_endpoints/' | relative_url }}">SPARQL Endpoints</a>
-              </li>
-              <li data-page-id="graphql">
-                <a href="{{ '/graphql/' | relative_url }}">GraphQL API</a>
-              </li>
-              <li data-page-id="mcp">
-                <a href="{{ '/mcp/' | relative_url }}">MCP interface</a>
-              </li>
-              <li data-page-id="llm_chat_interface">
-                <a href="{{ '/llm_chat_interface/' | relative_url }}">LLM chat interface</a>
-              </li>
-            </ul>
-          </li>
-          <li data-page-id="datasets">
-            <a href="{{ '/datasets/' | relative_url }}">Datasets</a>
-            {% if page.pageId == "datasets" %}
-            <div id="DatasetsSortFilterView">
-              <div class="sort">
-                <label for="sortSegment">Sort:</label>
-                <div id="sortSegment" class="segmented-button" role="tablist" aria-label="Sort datasets">
-                  <button type="button" data-sort="date" aria-pressed="true">Date</button>
-                  <button type="button" data-sort="name" aria-pressed="false">Name</button>
-                  <button type="button" data-sort="triples" aria-pressed="false">Triples</button>
-                </div>
-              </div>
-              <div class="order">
-                <label for="sortOrderSegment">Order:</label>
-                <div id="sortOrderSegment" class="segmented-button" role="tablist" aria-label="Sort order">
-                  <button type="button" data-order="desc" aria-pressed="true">Desc</button>
-                  <button type="button" data-order="asc" aria-pressed="false">Asc</button>
-                </div>
-              </div>
-              <div class="filter">
-                <label for="tagSelect">Filter:</label>
-                <select id="tagSelect" aria-label="Filter tags">
-                  <option value="">All tags</option>
-                </select>
-              </div>
-            </div>
-            {% endif %}
-          </li>
-          <li data-page-id="statistics"><a href="{{ '/statistics/' | relative_url }}">Statistics</a></li>
-          <li data-page-id="documents">
-            <a href="{{ '/documents/introduction' | relative_url }}">Documents</a>
-            {% if page.parentPageId == "documents" %}
-            <ul>
-              <li data-page-id="introduction">
-                <a href="{{ '/documents/introduction/' | relative_url }}">Introduction</a>
-              </li>
-              <li data-page-id="data_submission">
-                <a href="{{ '/documents/data_submission/' | relative_url }}">Data submission</a>
-              </li>
-              <li data-page-id="about_sparql_endpoints">
-                <a href="{{ '/documents/about_sparql_endpoints/' | relative_url }}">About SPARQL endpoints</a>
-              </li>
-            </ul>
-            {% endif %}
-          </li>
-          <li data-page-id="about"><a href="{{ '/about/' | relative_url }}">About</a></li>
-        </ul>
-      </nav>
+      {% include nav.html %}
       <div class="space"></div>
       <div class="bottom">
         <p>© {{ site.time | date: "%Y" }} RDF Portal</p>

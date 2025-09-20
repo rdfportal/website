@@ -1,0 +1,43 @@
+<nav>
+  <ul>
+    {% for item in site.data.navigation %}
+    <li data-page-id="{{ item.id }}">
+      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% if item.children %}
+      <ul>
+        {% for c in item.children %}
+        <li data-page-id="{{ c.id }}">
+          <a href="{{ c.url | relative_url }}">{{ c.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% if item.id == 'datasets' and page.pageId == 'datasets' %}
+      <div id="DatasetsSortFilterView">
+        <div class="sort">
+          <label for="sortSegment">Sort:</label>
+          <div id="sortSegment" class="segmented-button" role="tablist" aria-label="Sort datasets">
+            <button type="button" data-sort="date" aria-pressed="true">Date</button>
+            <button type="button" data-sort="name" aria-pressed="false">Name</button>
+            <button type="button" data-sort="triples" aria-pressed="false">Triples</button>
+          </div>
+        </div>
+        <div class="order">
+          <label for="sortOrderSegment">Order:</label>
+          <div id="sortOrderSegment" class="segmented-button" role="tablist" aria-label="Sort order">
+            <button type="button" data-order="desc" aria-pressed="true">Desc</button>
+            <button type="button" data-order="asc" aria-pressed="false">Asc</button>
+          </div>
+        </div>
+        <div class="filter">
+          <label for="tagSelect">Filter:</label>
+          <select id="tagSelect" aria-label="Filter tags">
+            <option value="">All tags</option>
+          </select>
+        </div>
+      </div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
