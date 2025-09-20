@@ -3,7 +3,6 @@ layout: page
 title: Datasets
 pageId: datasets
 description: 利用可能なRDFデータセットの一覧を表示します
-permalink: /datasets/
 ---
 
 

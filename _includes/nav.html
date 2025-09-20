@@ -7,7 +7,7 @@
       {% if item.children %}
       <ul>
         {% for c in item.children %}
-        <li data-page-id="{{ c.id }}">
+        <li data-page-id="{{ c.id }}" {% if c.id==page.pageId or c.id==page.pageId %} class="-active" {% endif %}>
           <a href="{{ c.url | relative_url }}">{{ c.title }}</a>
         </li>
         {% endfor %}
