@@ -1,7 +1,8 @@
 <nav>
   <ul>
     {% for item in site.data.navigation %}
-    <li data-page-id="{{ item.id }}">
+    <li data-page-id="{{ item.id }}" {% if item.id==page.pageId or item.id==page.parentPageId %} class="-active" {%
+      endif %}>
       <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
       {% if item.children %}
       <ul>

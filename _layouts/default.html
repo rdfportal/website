@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 
-<body{% if page.pageId %} data-page-id="{{ page.pageId }}" {% endif %}{% if.parentPageId %}
+<body{% if page.pageId %} data-page-id="{{ page.pageId }}" {% endif %}{% if page.parentPageId %}
   data-parent-page-id="{{ page.parentPageId }}" {% endif %}>
   <aside class="global-navigation">
     <div class="background"></div>
