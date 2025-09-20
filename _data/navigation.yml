@@ -26,7 +26,7 @@
 -
   id: documents
   title: "Documents"
-  url: "/documents/"
+  url: "/documents/introduction/"
   children:
     - id: introduction
       title: Introduction
