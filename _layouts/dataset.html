@@ -2,345 +2,402 @@
 layout: page
 title: Dataset Details
 pageId: dataset
-backToListURL: /datasets/
+backToListURL: /datasets
 ---
 
 <div id="DatasetDetailView">
-    <article class="inner">
-        <header>
-            <div id="dataset-icon-container" class="icon" aria-hidden="true"></div>
-            <h2>{{ page.dataset.title }}</h2>
-        </header>
-        <ul class="links">
-            <li><a href="{{ page.dataset.website }}" class="external-link">Website</a></li>
-        </ul>
+  <article class="inner">
+    <header>
+      <div id="dataset-icon-container" class="icon" aria-hidden="true"></div>
+      <h2>{{ page.dataset.title }}</h2>
+    </header>
+    <ul class="links">
+      <li>
+        <a href="{{ page.dataset.website }}" class="external-link">Website</a>
+      </li>
+    </ul>
 
-        <p class="description">{{ page.dataset.description.en }}</p>
+    <p class="description">{{ page.dataset.description.en }}</p>
 
-        <section class="spec">
-            <h3>Dataset specifications</h3>
-            <table>
-                <tbody>
-                    <tr data-row-kind="tags" data-type="tags">
-                        <th>Tags</th>
-                        <td>
-                            {% if page.dataset and page.dataset.tags %}
-                            {% assign _tags = page.dataset.tags %}
-                            {% elsif page.tags %}
-                            {% assign _tags = page.tags %}
-                            {% else %}
-                            {% assign _tags = [] %}
-                            {% endif %}
-                            <div class="tags-container">
-                                {% include tags.html tags=_tags %}
-                            </div>
-                        </td>
-                    </tr>
-                    <tr data-row-kind="providers" data-type="string">
-                        <th>Data provider</th>
-                        <td>
-                            {% assign _providers = page.dataset.providers | default: [] %}
-                            <ul>
-                                {% for provider in _providers %}
-                                <li>{{ provider.en }}</li>
-                                {% endfor %}
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr data-row-kind="creators" data-type="string">
-                        <th>Creator</th>
-                        <td>
-                            {% assign _creators = page.dataset.creators | default: [] %}
-                            <ul>
-                                {% for creator in _creators %}
-                                <li>{{ creator.name }}{% if creator.affiliation %}<small>{{ creator.affiliation
-                                        }}</small>{% endif %}</li>
-                                {% endfor %}
-                            </ul>
-                        </td>
-                    <tr data-row-kind="issued" data-type="date">
-                        <th>Issued</th>
-                        <td>{{ page.dataset.issued }}</td>
-                    </tr>
-                    {% if page.dataset.licenses %}
-                    <tr data-row-kind="licenses" data-type="string">
-                        <th>Licenses</th>
-                        <td>
-                            {% assign _licenses = page.dataset.licenses | default: [] %}
-                            <ul>
-                                {% for license in _licenses %}
-                                <li>
-                                    {{ license.name }}{% if license.url %} <a href="{{ license.url }}"
-                                        class="external-link">link</a>{% endif %}
-                                    {% if license.credit %}<br><small>{{ license.credit }}</small>{% endif %}
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        </td>
-                    </tr>
-                    {% endif %}
+    <section class="spec">
+      <h3>Dataset specifications</h3>
+      <table>
+        <tbody>
+          <tr data-row-kind="tags" data-type="tags">
+            <th>Tags</th>
+            <td>
+              {% if page.dataset and page.dataset.tags %} {% assign _tags =
+              page.dataset.tags %} {% elsif page.tags %} {% assign _tags =
+              page.tags %} {% else %} {% assign _tags = [] %} {% endif %}
+              <div class="tags-container">
+                {% include tags.html tags=_tags %}
+              </div>
+            </td>
+          </tr>
+          <tr data-row-kind="providers" data-type="string">
+            <th>Data provider</th>
+            <td>
+              {% assign _providers = page.dataset.providers | default: [] %}
+              <ul>
+                {% for provider in _providers %}
+                <li>{{ provider.en }}</li>
+                {% endfor %}
+              </ul>
+            </td>
+          </tr>
+          <tr data-row-kind="creators" data-type="string">
+            <th>Creator</th>
+            <td>
+              {% assign _creators = page.dataset.creators | default: [] %}
+              <ul>
+                {% for creator in _creators %}
+                <li>
+                  {{ creator.name }}{% if creator.affiliation %}<small
+                    >{{ creator.affiliation }}</small
+                  >{% endif %}
+                </li>
+                {% endfor %}
+              </ul>
+            </td>
+          </tr>
 
-                    {% if page.dataset.version %}
-                    <tr data-row-kind="version" data-type="string">
-                        <th>Version</th>
-                        <td>{{ page.dataset.version }}</td>
-                    </tr>
-                    {% endif %}
+          <tr data-row-kind="issued" data-type="date">
+            <th>Issued</th>
+            <td>{{ page.dataset.issued }}</td>
+          </tr>
+          {% if page.dataset.licenses %}
+          <tr data-row-kind="licenses" data-type="string">
+            <th>Licenses</th>
+            <td>
+              {% assign _licenses = page.dataset.licenses | default: [] %}
+              <ul>
+                {% for license in _licenses %}
+                <li>
+                  {{ license.name }}{% if license.url %}
+                  <a href="{{ license.url }}" class="external-link">link</a>{%
+                  endif %} {% if license.credit %}<br /><small
+                    >{{ license.credit }}</small
+                  >{% endif %}
+                </li>
+                {% endfor %}
+              </ul>
+            </td>
+          </tr>
+          {% endif %} {% if page.dataset.version %}
+          <tr data-row-kind="version" data-type="string">
+            <th>Version</th>
+            <td>{{ page.dataset.version }}</td>
+          </tr>
+          {% endif %}
 
-                    <tr data-row-kind="downloads" data-type="string">
-                        <th>Download</th>
-                        <td>
-                            <a href="https://rdfportal.org/download/{{ page.dataset.id }}">https://rdfportal.org/download/{{
-                                page.dataset.id }}</a>
-                        </td>
-                    </tr>
+          <tr data-row-kind="downloads" data-type="string">
+            <th>Download</th>
+            <td>
+              <a href="https://rdfportal.org/download/{{ page.dataset.id }}"
+                >https://rdfportal.org/download/{{ page.dataset.id }}</a
+              >
+            </td>
+          </tr>
 
-                    <tr data-row-kind="sparql_endpoint" data-type="string">
-                        <th>SPARQL Endpoint</th>
-                        <td>
-                            <a href="https://rdfportal.org/{{ page.dataset.endpoint }}/sparql">https://rdfportal.org/{{
-                                page.dataset.endpoint }}/sparql</a>
-                        </td>
-                    </tr>
+          <tr data-row-kind="sparql_endpoint" data-type="string">
+            <th>SPARQL Endpoint</th>
+            <td>
+              <a href="https://rdfportal.org/{{ page.dataset.endpoint }}/sparql"
+                >https://rdfportal.org/{{ page.dataset.endpoint }}/sparql</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-                </tbody>
-            </table>
-        </section>
+    <section class="statistics">
+      <h3>Dataset statistics</h3>
+      {% assign s = page.dataset.statistics | default: nil %} {% if s %}
+      <table class="stats-table" aria-describedby="stats-desc">
+        <tbody>
+          {% if s.number_of_triples %}
+          <tr>
+            <th>Triples</th>
+            <td class="stat-num">{{ s.number_of_triples }}</td>
+          </tr>
+          {% endif %} {% if s.number_of_instances %}
+          <tr>
+            <th>Instances</th>
+            <td class="stat-num">{{ s.number_of_instances }}</td>
+          </tr>
+          {% endif %} {% if s.number_of_subjects %}
+          <tr>
+            <th>Subjects</th>
+            <td class="stat-num">{{ s.number_of_subjects }}</td>
+          </tr>
+          {% endif %} {% if s.number_of_properties %}
+          <tr>
+            <th>Properties</th>
+            <td class="stat-num">{{ s.number_of_properties }}</td>
+          </tr>
+          {% endif %} {% if s.number_of_objects %}
+          <tr>
+            <th>Objects</th>
+            <td class="stat-num">{{ s.number_of_objects }}</td>
+          </tr>
+          {% endif %} {% if s.number_of_literals %}
+          <tr>
+            <th>Literals</th>
+            <td class="stat-num">{{ s.number_of_literals }}</td>
+          </tr>
+          {% endif %} {% if s.number_of_classes %}
+          <tr>
+            <th>Classes</th>
+            <td class="stat-num">{{ s.number_of_classes }}</td>
+          </tr>
+          {% endif %} {% if s.number_of_datatypes %}
+          <tr>
+            <th>Datatypes</th>
+            <td class="stat-num">{{ s.number_of_datatypes }}</td>
+          </tr>
+          {% endif %} {% if s.number_of_links %}
+          <tr>
+            <th>Links</th>
+            <td class="stat-num">{{ s.number_of_links }}</td>
+          </tr>
+          {% endif %}
+        </tbody>
+      </table>
+      {% else %}
+      <p class="no-data">No statistics available.</p>
+      {% endif %}
+    </section>
 
-        <section class="statistics">
-            <h3>Dataset statistics</h3>
-            {% assign s = page.dataset.statistics | default: nil %}
-            {% if s %}
-            <table class="stats-table" aria-describedby="stats-desc">
-                <tbody>
-                    {% if s.number_of_triples %}
-                    <tr>
-                        <th>Triples</th>
-                        <td class="stat-num">{{ s.number_of_triples }}</td>
-                    </tr>
-                    {% endif %}
-                    {% if s.number_of_instances %}
-                    <tr>
-                        <th>Instances</th>
-                        <td class="stat-num">{{ s.number_of_instances }}</td>
-                    </tr>
-                    {% endif %}
-                    {% if s.number_of_subjects %}
-                    <tr>
-                        <th>Subjects</th>
-                        <td class="stat-num">{{ s.number_of_subjects }}</td>
-                    </tr>
-                    {% endif %}
-                    {% if s.number_of_properties %}
-                    <tr>
-                        <th>Properties</th>
-                        <td class="stat-num">{{ s.number_of_properties }}</td>
-                    </tr>
-                    {% endif %}
-                    {% if s.number_of_objects %}
-                    <tr>
-                        <th>Objects</th>
-                        <td class="stat-num">{{ s.number_of_objects }}</td>
-                    </tr>
-                    {% endif %}
-                    {% if s.number_of_literals %}
-                    <tr>
-                        <th>Literals</th>
-                        <td class="stat-num">{{ s.number_of_literals }}</td>
-                    </tr>
-                    {% endif %}
-                    {% if s.number_of_classes %}
-                    <tr>
-                        <th>Classes</th>
-                        <td class="stat-num">{{ s.number_of_classes }}</td>
-                    </tr>
-                    {% endif %}
-                    {% if s.number_of_datatypes %}
-                    <tr>
-                        <th>Datatypes</th>
-                        <td class="stat-num">{{ s.number_of_datatypes }}</td>
-                    </tr>
-                    {% endif %}
-                    {% if s.number_of_links %}
-                    <tr>
-                        <th>Links</th>
-                        <td class="stat-num">{{ s.number_of_links }}</td>
-                    </tr>
-                    {% endif %}
-                </tbody>
-            </table>
-            {% else %}
-            <p class="no-data">No statistics available.</p>
-            {% endif %}
-        </section>
+    <script>
+      // Format numbers in .stat-num cells with thousands separators
+      (function () {
+        function formatNumber(n) {
+          if (n === null || n === undefined) return n;
+          var num = Number(String(n).replace(/[^0-9\-\.]/g, ""));
+          if (isNaN(num)) return n;
+          return num.toLocaleString();
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+          var cells = document.querySelectorAll(".statistics .stat-num");
+          cells.forEach(function (td) {
+            td.textContent = formatNumber(td.textContent);
+          });
+        });
+      })();
+    </script>
 
-        <script>
-            // Format numbers in .stat-num cells with thousands separators
-            (function () {
-                function formatNumber(n) {
-                    if (n === null || n === undefined) return n;
-                    var num = Number(String(n).replace(/[^0-9\-\.]/g, ''));
-                    if (isNaN(num)) return n;
-                    return num.toLocaleString();
-                }
-                document.addEventListener('DOMContentLoaded', function () {
-                    var cells = document.querySelectorAll('.statistics .stat-num');
-                    cells.forEach(function (td) { td.textContent = formatNumber(td.textContent); });
-                });
-            })();
-        </script>
-
-        <section class="schemadiagram">
-            <h3>Schema diagram</h3>
-            <div id="schema-container"
-                data-dataset-id="{{ page.dataset.id | default: page.dataset.dataset_id | default: page.dataset.identifier | default: '' }}"
-                data-dataset-slug="{{ page.path | split: '/' | last | remove: '.md' }}">
-                <p class="schema-loading">Loading schema diagram…</p>
-            </div>
-        </section>
-
-    </article>
+    <section class="schemadiagram">
+      <h3>Schema diagram</h3>
+      <div
+        id="schema-container"
+        data-dataset-id="{{ page.dataset.id | default: page.dataset.dataset_id | default: page.dataset.identifier | default: '' }}"
+        data-dataset-slug="{{ page.path | split: '/' | last | remove: '.md' }}"
+      >
+        <p class="schema-loading">Loading schema diagram…</p>
+      </div>
+    </section>
+  </article>
 </div>
 
-
-{% include dataset-tags-json.html tags=page.dataset.tags %}
-{% include dataset-init-script.html container_id='dataset-icon-container' json_id='dataset-tags-json' size=48 %}
+{% include dataset-tags-json.html tags=page.dataset.tags %} {% include
+dataset-init-script.html container_id='dataset-icon-container'
+json_id='dataset-tags-json' size=48 %}
 
 <script>
-    // Load schema.svg from rdf-config repo if present
-    (function () {
-        var container = document.getElementById('schema-container');
-        if (!container) return;
-        var datasetId = container.getAttribute('data-dataset-id') || container.getAttribute('data-dataset-slug');
-        if (!datasetId) {
-            container.innerHTML = '<p class="schema-missing">No schema available.</p>';
-            return;
-        }
-        var rawUrl = 'https://raw.githubusercontent.com/dbcls/rdf-config/refs/heads/master/config/' + encodeURIComponent(datasetId) + '/schema.svg';
+  // Load schema.svg from rdf-config repo if present
+  (function () {
+    var container = document.getElementById("schema-container");
+    if (!container) return;
+    var datasetId =
+      container.getAttribute("data-dataset-id") ||
+      container.getAttribute("data-dataset-slug");
+    if (!datasetId) {
+      container.innerHTML =
+        '<p class="schema-missing">No schema available.</p>';
+      return;
+    }
+    var rawUrl =
+      "https://raw.githubusercontent.com/dbcls/rdf-config/refs/heads/master/config/" +
+      encodeURIComponent(datasetId) +
+      "/schema.svg";
 
-        var img = document.createElement('img');
-        img.src = rawUrl;
-        img.alt = 'Schema diagram for ' + datasetId;
-        img.className = 'schema-svg';
-        img.onload = function () {
-            // replace loading indicator
-            container.innerHTML = '';
-            container.appendChild(img);
-        };
-        img.onerror = function () {
-            container.innerHTML = '<p class="schema-missing">Schema diagram not available.</p>';
-        };
-    })();
+    var img = document.createElement("img");
+    img.src = rawUrl;
+    img.alt = "Schema diagram for " + datasetId;
+    img.className = "schema-svg";
+    img.onload = function () {
+      // replace loading indicator
+      container.innerHTML = "";
+      container.appendChild(img);
+    };
+    img.onerror = function () {
+      container.innerHTML =
+        '<p class="schema-missing">Schema diagram not available.</p>';
+    };
+  })();
 </script>
 
 <script>
-    // Render dataset icon as a data:URI and apply it to .global-navigation::before
-    (function () {
-        var styleId = 'global-dataset-icon-style';
-        function svgToDataUri(svg) {
-            if (!svg) return '';
-            // normalize and trim to avoid accidental leading/trailing whitespace/newlines
-            var s = String(svg).replace(/\r\n?/g, '\n').trim();
-            // prefer base64 for safer embedding; fall back to URI-encoding
-            try {
-                return 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(s)));
-            } catch (e) {
-                try {
-                    return 'data:image/svg+xml;utf8,' + encodeURIComponent(s);
-                } catch (e2) {
-                    console.error('svgToDataUri: encoding failed', e2);
-                    return '';
-                }
-            }
+  // Render dataset icon as a data:URI and apply it to .global-navigation::before
+  (function () {
+    var styleId = "global-dataset-icon-style";
+    function svgToDataUri(svg) {
+      if (!svg) return "";
+      // normalize and trim to avoid accidental leading/trailing whitespace/newlines
+      var s = String(svg).replace(/\r\n?/g, "\n").trim();
+      // prefer base64 for safer embedding; fall back to URI-encoding
+      try {
+        return (
+          "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(s)))
+        );
+      } catch (e) {
+        try {
+          return "data:image/svg+xml;utf8," + encodeURIComponent(s);
+        } catch (e2) {
+          console.error("svgToDataUri: encoding failed", e2);
+          return "";
         }
+      }
+    }
 
-        function readTags() {
-            try {
-                var el = document.getElementById('dataset-tags-json');
-                if (!el) return [];
-                var txt = el.textContent || el.innerText || '';
-                if (!txt) return [];
-                return JSON.parse(txt || '[]');
-            } catch (e) { return []; }
+    function readTags() {
+      try {
+        var el = document.getElementById("dataset-tags-json");
+        if (!el) return [];
+        var txt = el.textContent || el.innerText || "";
+        if (!txt) return [];
+        return JSON.parse(txt || "[]");
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function applyBackground(svg) {
+      try {
+        var css =
+          '.global-navigation > .background::before{background-image:url("' +
+          svgToDataUri(svg) +
+          '")}';
+        var existing = document.getElementById(styleId);
+        if (existing) existing.parentNode.removeChild(existing);
+        var s = document.createElement("style");
+        s.id = styleId;
+        s.textContent = css;
+        document.head.appendChild(s);
+      } catch (e) {
+        console.error("applyBackground failed", e);
+      }
+    }
+
+    function attempt() {
+      var tags = readTags();
+      if (
+        !window.DatasetIcon ||
+        typeof window.DatasetIcon.createSvg !== "function"
+      )
+        return false;
+      try {
+        var svg = window.DatasetIcon.createSvg(tags, 120, {});
+        applyBackground(svg);
+        return true;
+      } catch (e) {
+        console.warn("global icon generation failed", e);
+        return false;
+      }
+    }
+
+    if (document.readyState === "loading")
+      document.addEventListener("DOMContentLoaded", function () {
+        if (!attempt()) {
+          setTimeout(attempt, 80);
         }
-
-        function applyBackground(svg) {
-            try {
-                var css = '.global-navigation > .background::before{background-image:url("' + svgToDataUri(svg) + '")}';
-                var existing = document.getElementById(styleId);
-                if (existing) existing.parentNode.removeChild(existing);
-                var s = document.createElement('style');
-                s.id = styleId;
-                s.textContent = css;
-                document.head.appendChild(s);
-            } catch (e) { console.error('applyBackground failed', e); }
-        }
-
-        function attempt() {
-            var tags = readTags();
-            if (!window.DatasetIcon || typeof window.DatasetIcon.createSvg !== 'function') return false;
-            try {
-                var svg = window.DatasetIcon.createSvg(tags, 120, {});
-                applyBackground(svg);
-                return true;
-            } catch (e) { console.warn('global icon generation failed', e); return false; }
-        }
-
-        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { if (!attempt()) { setTimeout(attempt, 80); } }); else { if (!attempt()) { setTimeout(attempt, 80); } }
-    })();
+      });
+    else {
+      if (!attempt()) {
+        setTimeout(attempt, 80);
+      }
+    }
+  })();
 </script>
 
 <script>
-    // Render dataset icon as a data:URI and apply it to .global-navigation::before
-    (function () {
-        var styleId = 'global-dataset-icon-style';
-        function svgToDataUri(svg) {
-            if (!svg) return '';
-            var s = String(svg).replace(/\r\n?/g, '\n').trim();
-            try {
-                return 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(s)));
-            } catch (e) {
-                try {
-                    return 'data:image/svg+xml;utf8,' + encodeURIComponent(s);
-                } catch (e2) {
-                    console.error('svgToDataUri: encoding failed', e2);
-                    return '';
-                }
-            }
+  // Render dataset icon as a data:URI and apply it to .global-navigation::before
+  (function () {
+    var styleId = "global-dataset-icon-style";
+    function svgToDataUri(svg) {
+      if (!svg) return "";
+      var s = String(svg).replace(/\r\n?/g, "\n").trim();
+      try {
+        return (
+          "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(s)))
+        );
+      } catch (e) {
+        try {
+          return "data:image/svg+xml;utf8," + encodeURIComponent(s);
+        } catch (e2) {
+          console.error("svgToDataUri: encoding failed", e2);
+          return "";
         }
+      }
+    }
 
-        function readTags() {
-            try {
-                var el = document.getElementById('dataset-tags-json');
-                if (!el) return [];
-                var txt = el.textContent || el.innerText || '';
-                if (!txt) return [];
-                return JSON.parse(txt || '[]');
-            } catch (e) { return []; }
+    function readTags() {
+      try {
+        var el = document.getElementById("dataset-tags-json");
+        if (!el) return [];
+        var txt = el.textContent || el.innerText || "";
+        if (!txt) return [];
+        return JSON.parse(txt || "[]");
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function applyBackground(svg) {
+      try {
+        var css =
+          '.global-navigation > .background::before{background-image:url("' +
+          svgToDataUri(svg) +
+          '")}';
+        var existing = document.getElementById(styleId);
+        if (existing) existing.parentNode.removeChild(existing);
+        var s = document.createElement("style");
+        s.id = styleId;
+        s.textContent = css;
+        document.head.appendChild(s);
+      } catch (e) {
+        console.error("applyBackground failed", e);
+      }
+    }
+
+    function attempt() {
+      var tags = readTags();
+      if (
+        !window.DatasetIcon ||
+        typeof window.DatasetIcon.createSvg !== "function"
+      )
+        return false;
+      try {
+        var svg = window.DatasetIcon.createSvg(tags, 120, {});
+        applyBackground(svg);
+        return true;
+      } catch (e) {
+        console.warn("global icon generation failed", e);
+        return false;
+      }
+    }
+
+    if (document.readyState === "loading")
+      document.addEventListener("DOMContentLoaded", function () {
+        if (!attempt()) {
+          setTimeout(attempt, 80);
         }
-
-        function applyBackground(svg) {
-            try {
-                var css = '.global-navigation > .background::before{background-image:url("' + svgToDataUri(svg) + '")}';
-                var existing = document.getElementById(styleId);
-                if (existing) existing.parentNode.removeChild(existing);
-                var s = document.createElement('style');
-                s.id = styleId;
-                s.textContent = css;
-                document.head.appendChild(s);
-            } catch (e) { console.error('applyBackground failed', e); }
-        }
-
-        function attempt() {
-            var tags = readTags();
-            if (!window.DatasetIcon || typeof window.DatasetIcon.createSvg !== 'function') return false;
-            try {
-                var svg = window.DatasetIcon.createSvg(tags, 120, {});
-                applyBackground(svg);
-                return true;
-            } catch (e) { console.warn('global icon generation failed', e); return false; }
-        }
-
-        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { if (!attempt()) { setTimeout(attempt, 80); } }); else { if (!attempt()) { setTimeout(attempt, 80); } }
-    })();
+      });
+    else {
+      if (!attempt()) {
+        setTimeout(attempt, 80);
+      }
+    }
+  })();
 </script>

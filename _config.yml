@@ -18,3 +18,6 @@ exclude:
   - package.json
   - package-lock.json
   - bun.lock
+
+# Permalink structure
+permalink: pretty

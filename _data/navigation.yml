@@ -1,5 +1,4 @@
--
-  id: access_methods
+- id: access_methods
   title: "Access methods"
   url: "/access_methods/"
   children:
@@ -15,16 +14,13 @@
     - id: llm_chat_interface
       title: "LLM chat interface"
       url: "/llm_chat_interface/"
--
-  id: datasets
+- id: datasets
   title: "Datasets"
-  url: "/datasets/"
--
-  id: statistics
+  url: "/datasets"
+- id: statistics
   title: "Statistics"
   url: "/statistics/"
--
-  id: documents
+- id: documents
   title: "Documents"
   url: "/documents/introduction/"
   children:
@@ -37,7 +33,6 @@
     - id: about_sparql_endpoints
       title: About SPARQL endpoints
       url: "/documents/about_sparql_endpoints/"
--
-  id: about
+- id: about
   title: "About"
   url: "/about/"
