@@ -8,8 +8,6 @@
   <meta name="description"
     content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-  <!-- Prism syntax highlighting for SPARQL examples -->
-  <link rel="stylesheet" href="https://unpkg.com/prismjs@1.29.0/themes/prism.css">
 </head>
 
 <body{% if page.pageId %} data-page-id="{{ page.pageId }}" {% endif %}{% if page.parentPageId %}
@@ -123,20 +121,6 @@
   {% if page.title == 'Top' %}
   <script defer src="{{ '/assets/js/top-page-tiles.js' | relative_url }}"></script>
   {% endif %}
-  <!-- Prism core and SPARQL language component (load synchronously then highlight) -->
-  <script src="https://unpkg.com/prismjs@1.29.0/prism.js"></script>
-  <!-- Load Turtle first because prism-sparql extends the Turtle grammar -->
-  <script src="https://unpkg.com/prismjs@1.29.0/components/prism-turtle.min.js"></script>
-  <script src="https://unpkg.com/prismjs@1.29.0/components/prism-sparql.min.js"></script>
-  <script>
-    try {
-      if (window.Prism && typeof window.Prism.highlightAll === 'function') {
-        window.Prism.highlightAll();
-      }
-    } catch (e) {
-      /* noop */
-    }
-  </script>
   </body>
 
 </html>

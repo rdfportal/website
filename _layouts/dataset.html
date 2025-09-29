@@ -337,6 +337,22 @@ json_id='dataset-tags-json' size=48 %}
     })();
 </script>
 
+<!-- Prism syntax highlighting for SPARQL examples (loaded only on dataset pages) -->
+<link rel="stylesheet" href="https://unpkg.com/prismjs@1.29.0/themes/prism.css">
+<script src="https://unpkg.com/prismjs@1.29.0/prism.js"></script>
+<!-- Load Turtle first because prism-sparql extends the Turtle grammar -->
+<script src="https://unpkg.com/prismjs@1.29.0/components/prism-turtle.min.js"></script>
+<script src="https://unpkg.com/prismjs@1.29.0/components/prism-sparql.min.js"></script>
+<script>
+    try {
+        if (window.Prism && typeof window.Prism.highlightAll === 'function') {
+            window.Prism.highlightAll();
+        }
+    } catch (e) {
+        /* noop */
+    }
+</script>
+
 <script>
     // Render dataset icon as a data:URI and apply it to .global-navigation::before
     (function () {
