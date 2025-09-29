@@ -1,8 +1,20 @@
 #CommonPageView
+  --padding: calc(var(--margin-global-navigation) + 8px)
   margin: var(--margin-global-navigation) var(--margin-global-navigation) var(--margin-global-navigation) calc(var(--margin-global-navigation) + var(--width-global-navigation))
-  padding: calc(var(--margin-global-navigation) + 8px)
+  padding: var(--padding)
   min-height: calc(100vh - var(--margin-global-navigation) * 2)
   background-color: var(--color-page-bg)
+  position: relative
+
+  &::before
+    content: ''
+    position: absolute
+    display: block
+    width: calc(100% - var(--padding) * 2)
+    bottom: var(--padding)
+    left: var(--padding)
+    border-top: 1px solid #000
+
   a
     text-decoration: underline
   > header
@@ -47,6 +59,7 @@
           rotate: -45deg
   
   > .content
+    padding-bottom: 20px
     > article
       > h2, > p
         margin-bottom: 1em
