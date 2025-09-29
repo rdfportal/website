@@ -213,6 +213,23 @@ function countSparqlExamples(id) {
 }
 
 /**
+ * Detect if a dataset has a schema.svg file
+ * @param {String} id - Dataset ID
+ * @returns {boolean} - True if schema.svg exists, false otherwise
+ */
+function detectSchemaSVG(id) {
+  const datasetDir = path.join(DATASETS_FOLDER, id);
+
+  try {
+    const files = fs.readdirSync(datasetDir);
+    return files.includes("schema.svg");
+  } catch (error) {
+    // Directory doesn't exist or can't be read
+    return false;
+  }
+}
+
+/**
  * メイン処理
  */
 async function main() {
@@ -262,10 +279,12 @@ async function main() {
 
       const statsData = getStatsForDatasetId(id);
       const sparqlCount = countSparqlExamples(id);
+      const isSchemaSVGPresent = detectSchemaSVG(id);
 
       const datasetInfo = {
         id,
         ...mergedMetadata,
+        schema_svg: isSchemaSVGPresent,
         sparql_examples_count: sparqlCount,
         statistics: statsData.statistics,
         endpoint: statsData.endpoint,
