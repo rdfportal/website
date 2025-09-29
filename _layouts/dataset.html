@@ -113,7 +113,10 @@ backToListURL: /datasets
                 {% for example in page.dataset.sparql_examples %}
                 <article class="example">
                     <h4>Example {{ forloop.index }}</h4>
-                    <pre><code class="language-sparql">{{ example | escape }}</code></pre>
+                    <div class="code-box">
+                        <button class="copy-code" type="button" aria-label="Copy SPARQL example">Copy</button>
+                        <pre><code class="language-sparql">{{ example | escape }}</code></pre>
+                    </div>
                 </article>
                 {% endfor %}
             </div>
@@ -351,6 +354,90 @@ json_id='dataset-tags-json' size=48 %}
     } catch (e) {
         /* noop */
     }
+</script>
+
+<!-- Copy-to-clipboard support for code blocks on dataset pages -->
+<style>
+    /* Minimal styling for the copy button */
+    .code-box {
+        position: relative;
+    }
+
+    .code-box .copy-code {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.85rem;
+        background: #2d2d2d;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        opacity: 0.9;
+    }
+
+    .code-box .copy-code:active {
+        transform: translateY(1px);
+    }
+
+    .code-box .copy-code.copied {
+        background: #28a745;
+    }
+</style>
+
+<script>
+    (function () {
+        function findCodeFromButton(button) {
+            var box = button.closest('.code-box');
+            if (!box) return null;
+            return box.querySelector('pre > code');
+        }
+
+        function copyText(text) {
+            if (!navigator.clipboard) {
+                // fallback for older browsers
+                var ta = document.createElement('textarea');
+                ta.value = text;
+                ta.style.position = 'fixed';
+                ta.style.left = '-9999px';
+                document.body.appendChild(ta);
+                ta.select();
+                try { document.execCommand('copy'); } catch (e) { /* noop */ }
+                document.body.removeChild(ta);
+                return;
+            }
+            return navigator.clipboard.writeText(text);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.copy-code').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var codeEl = findCodeFromButton(btn);
+                    if (!codeEl) return;
+                    // code text is escaped in HTML; use textContent to get raw query
+                    var txt = codeEl.textContent || '';
+                    var p = copyText(txt);
+                    if (p && p.then) {
+                        p.then(function () {
+                            btn.classList.add('copied');
+                            var old = btn.textContent;
+                            btn.textContent = 'Copied';
+                            setTimeout(function () { btn.classList.remove('copied'); btn.textContent = old; }, 1500);
+                        }).catch(function () {
+                            // ignore
+                        });
+                    } else {
+                        // fallback path (sync copy)
+                        btn.classList.add('copied');
+                        var old = btn.textContent;
+                        btn.textContent = 'Copied';
+                        setTimeout(function () { btn.classList.remove('copied'); btn.textContent = old; }, 1500);
+                    }
+                });
+            });
+        });
+    })();
 </script>
 
 <script>
