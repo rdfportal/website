@@ -195,24 +195,6 @@ function getStatsForDatasetId(id) {
 }
 
 /**
- * Count the number of SPARQL example files (.rq) in a dataset directory
- * @param {string} id - Dataset ID
- * @returns {number} - Number of .rq files found
- */
-function countSparqlExamples(id) {
-  const datasetDir = path.join(DATASETS_FOLDER, id);
-
-  try {
-    const files = fs.readdirSync(datasetDir);
-    const rqFiles = files.filter((file) => file.endsWith(".rq"));
-    return rqFiles.length;
-  } catch (error) {
-    // Directory doesn't exist or can't be read
-    return 0;
-  }
-}
-
-/**
  * Read SPARQL example files (query_<n>.rq) from a dataset directory
  * @param {string} id - Dataset ID
  * @returns {string[]} - Array of file contents ordered by n
@@ -310,14 +292,12 @@ async function main() {
       );
 
       const statsData = getStatsForDatasetId(id);
-      const sparqlCount = countSparqlExamples(id);
       const isSchemaSVGPresent = detectSchemaSVG(id);
 
       const datasetInfo = {
         id,
         ...mergedMetadata,
         schema_svg: isSchemaSVGPresent,
-        sparql_examples_count: sparqlCount,
         sparql_examples: readSparqlExamples(id),
         statistics: statsData.statistics,
         endpoint: statsData.endpoint,
