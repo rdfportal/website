@@ -6,16 +6,24 @@ description: RDFデータへのアクセス方法について説明します
 permalink: /access_methods/
 ---
 
-## SPARQL endpoint
+## [SPARQL endpoint]({{ '/sparql_endpoints/' | relative_url }})
 
 Explanation of SPARQL endpoint
 
-[SPARQL endpoint]({{ '/endpoints/' | relative_url }})
 
-## GraphQL API
+## [GraphQL API]({{ '/graphql/' | relative_url }})
 
-## MCP Interface
+Explanation of GraphQL API
 
-## LLM Chat Interface
+
+## [MCP Interface]({{ '/mcp/' | relative_url }})
+
+Explanation of MCP Interface
+
+
+## [LLM Chat Interface]({{ '/llm_chat_interface/' | relative_url }})
+
+Explanation of LLM Chat Interface
+
 
 ## Compare Access Methods
