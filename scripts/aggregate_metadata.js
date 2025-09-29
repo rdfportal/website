@@ -213,6 +213,38 @@ function countSparqlExamples(id) {
 }
 
 /**
+ * Read SPARQL example files (query_<n>.rq) from a dataset directory
+ * @param {string} id - Dataset ID
+ * @returns {string[]} - Array of file contents ordered by n
+ */
+function readSparqlExamples(id) {
+  const datasetDir = path.join(DATASETS_FOLDER, id);
+  try {
+    const files = fs.readdirSync(datasetDir);
+    const rqFiles = files
+      .map((file) => {
+        const m = file.match(/^query_(\d+)\.rq$/i);
+        if (!m) return null;
+        return { file, n: parseInt(m[1], 10) };
+      })
+      .filter(Boolean)
+      .sort((a, b) => a.n - b.n);
+
+    const contents = rqFiles.map((f) => {
+      try {
+        return fs.readFileSync(path.join(datasetDir, f.file), "utf8");
+      } catch (e) {
+        return null;
+      }
+    }).filter((c) => c !== null);
+
+    return contents;
+  } catch (error) {
+    return [];
+  }
+}
+
+/**
  * Detect if a dataset has a schema.svg file
  * @param {String} id - Dataset ID
  * @returns {boolean} - True if schema.svg exists, false otherwise
@@ -286,6 +318,7 @@ async function main() {
         ...mergedMetadata,
         schema_svg: isSchemaSVGPresent,
         sparql_examples_count: sparqlCount,
+        sparql_examples: readSparqlExamples(id),
         statistics: statsData.statistics,
         endpoint: statsData.endpoint,
         updated_at: statsData.updated_at,
