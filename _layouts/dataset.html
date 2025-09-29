@@ -64,6 +64,7 @@ backToListURL: /datasets
                         <th>Issued</th>
                         <td>{{ page.dataset.issued }}</td>
                     </tr>
+
                     {% if page.dataset.licenses %}
                     <tr data-row-kind="licenses" data-type="string">
                         <th>Licenses</th>
@@ -80,7 +81,9 @@ backToListURL: /datasets
                             </ul>
                         </td>
                     </tr>
-                    {% endif %} {% if page.dataset.version %}
+                    {% endif %}
+
+                    {% if page.dataset.version %}
                     <tr data-row-kind="version" data-type="string">
                         <th>Version</th>
                         <td>{{ page.dataset.version }}</td>
@@ -105,23 +108,6 @@ backToListURL: /datasets
                 </tbody>
             </table>
         </section>
-
-        {% if page.dataset.sparql_examples and page.dataset.sparql_examples.size > 0 %}
-        <section class="sparql-examples">
-            <h3>SPARQL example queries</h3>
-            <div class="examples-list">
-                {% for example in page.dataset.sparql_examples %}
-                <article class="example">
-                    <h4>Example {{ forloop.index }}</h4>
-                    <div class="code-box">
-                        <button class="copycodebutton" type="button" aria-label="Copy SPARQL example">Copy</button>
-                        <pre><code class="language-sparql">{{ example | escape }}</code></pre>
-                    </div>
-                </article>
-                {% endfor %}
-            </div>
-        </section>
-        {% endif %}
 
         <section class="statistics">
             <h3>Dataset statistics</h3>
@@ -189,6 +175,25 @@ backToListURL: /datasets
             <p class="no-data">No statistics available.</p>
             {% endif %}
         </section>
+
+        {% if page.dataset.sparql_examples and page.dataset.sparql_examples.size > 0 %}
+        <section class="sparqlexamples">
+            <h3>SPARQL example queries</h3>
+            <div class="examples">
+                {% for example in page.dataset.sparql_examples %}
+                <article class="example">
+                    <h4>Example {{ forloop.index }}</h4>
+                    <div class="code-box">
+                        <button class="copycodebutton" type="button" aria-label="Copy SPARQL example">Copy</button>
+                        <div class="inner">
+                            <pre><code class="language-sparql">{{ example | escape }}</code></pre>
+                        </div>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
 
         <script>
             // Format numbers in .stat-num cells with thousands separators
