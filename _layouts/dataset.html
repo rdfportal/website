@@ -210,10 +210,12 @@ backToListURL: /datasets
 
         <section class="schemadiagram">
             <h3>Schema diagram</h3>
-            <div id="schema-container"
-                data-dataset-id="{{ page.dataset.id | default: page.dataset.dataset_id | default: page.dataset.identifier | default: '' }}"
+            {% assign dataset_id = page.dataset.id %}
+            {% assign local_rel = '/assets/datasets/' | append: dataset_id | append: '/schema.svg' %}
+            <div id="schema-container" data-dataset-id="{{ dataset_id }}"
                 data-dataset-slug="{{ page.path | split: '/' | last | remove: '.md' }}">
-                <p class="schema-loading">Loading schema diagram…</p>
+                <img src="{{ local_rel | relative_url }}" alt="Schema diagram for {{ dataset_id }}"
+                    class="schema-svg" />
             </div>
         </section>
     </article>
@@ -222,40 +224,6 @@ backToListURL: /datasets
 {% include dataset-tags-json.html tags=page.dataset.tags %} {% include
 dataset-init-script.html container_id='dataset-icon-container'
 json_id='dataset-tags-json' size=48 %}
-
-<script>
-    // Load schema.svg from rdf-config repo if present
-    (function () {
-        var container = document.getElementById("schema-container");
-        if (!container) return;
-        var datasetId =
-            container.getAttribute("data-dataset-id") ||
-            container.getAttribute("data-dataset-slug");
-        if (!datasetId) {
-            container.innerHTML =
-                '<p class="schema-missing">No schema available.</p>';
-            return;
-        }
-        var rawUrl =
-            "https://raw.githubusercontent.com/dbcls/rdf-config/refs/heads/master/config/" +
-            encodeURIComponent(datasetId) +
-            "/schema.svg";
-
-        var img = document.createElement("img");
-        img.src = rawUrl;
-        img.alt = "Schema diagram for " + datasetId;
-        img.className = "schema-svg";
-        img.onload = function () {
-            // replace loading indicator
-            container.innerHTML = "";
-            container.appendChild(img);
-        };
-        img.onerror = function () {
-            container.innerHTML =
-                '<p class="schema-missing">Schema diagram not available.</p>';
-        };
-    })();
-</script>
 
 <script>
     // Render dataset icon as a data:URI and apply it to .global-navigation::before
