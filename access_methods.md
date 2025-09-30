@@ -8,7 +8,7 @@ permalink: /access_methods/
 
 ## [SPARQL endpoint]({{ '/sparql_endpoints/' | relative_url }})
 
-Explanation of SPARQL endpoint
+Explanation of SPARQL endpoints
 
 
 ## [GraphQL API]({{ '/graphql/' | relative_url }})
