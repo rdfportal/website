@@ -1,0 +1,17 @@
+# Get NBRC microbial strains sampled from soil.
+
+PREFIX mccv: <http://purl.jp/bio/10/mccv#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX meo: <http://purl.jp/bio/11/meo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+select ?strain ?name ?meo ?meo_label
+where {
+?strain mccv:MCCV_000012 ?name .
+?strain mccv:MCCV_000028 ?sample .
+    ?sample mccv:MCCV_000072 ?habitat .
+    ?habitat sio:SIO_000008 ?meo .
+    ?meo rdfs:subClassOf meo:MEO_0000007 .
+    ?meo rdfs:label ?meo_label
+} LIMIT 100
