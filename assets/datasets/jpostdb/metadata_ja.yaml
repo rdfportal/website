@@ -1,0 +1,16 @@
+title: "jPOST databse RDF"
+website: https://globe.jpostdb.org/
+description: "jPOST database RDFはjPOSTプロジェクトにおいて再解析されたプロテオームデータセットについて記述したものです"
+tags: []
+provider:
+creators:
+  - name: "守屋 勇樹"
+    affiliation: "ライフサイエンス統合データベースセンター"
+  - name: "河野 信"
+    affiliation: "北里大学"
+  - name: "五斗 進"
+    affiliation: "ライフサイエンス統合データベースセンター"
+version: 202006
+issued: 2020-06-09
+licenses:
+  - "Attribution 4.0 International (CC BY 4.0)"

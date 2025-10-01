@@ -1,10 +1,14 @@
 title: "jPOST databse RDF"
 website: https://globe.jpostdb.org/
 description: "jPOST database RDF is described the re-analyzed proteome dataset in the jPOST project."
-tags: []
+tags: [Protein, Sequence]
 provider:
 creators:
   - name: "Yuki Moriya"
+    affiliation: "Database Center for Life Science"
+  - name: "Shin Kawano"
+    affiliation: "Kitazato University"
+  - name: "Susumu Goto"
     affiliation: "Database Center for Life Science"
 version: 202006
 issued: 2020-06-09
