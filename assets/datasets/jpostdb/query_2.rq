@@ -1,0 +1,16 @@
+# Count peptide spectrum matches of a protein
+PREFIX jpost: <http://rdf.jpostdb.org/ontology/jpost.owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX up: <http://purl.uniprot.org/uniprot/>
+SELECT DISTINCT ?sequence (COUNT (?psm) AS ?psm_count)
+WHERE {
+  VALUES ?uniprot { up:P01112 }
+  ?protein jpost:hasDatabaseSequence ?uniprot ;
+           jpost:hasPeptideEvidence/jpost:hasPeptide ?peptide .
+  ?peptide jpost:hasSequence [ a obo:MS_1001344 ;
+                             rdf:value ?sequence ] ;
+           jpost:hasPsm ?psm .
+}
+ORDER BY DESC (?psm_count)
+

@@ -1,0 +1,12 @@
+# List of species in the jPOST database
+PREFIX jpost: <http://rdf.jpostdb.org/ontology/jpost.owl#>
+PREFIX dct: <http://purl.org/dc/terms/>
+SELECT DISTINCT ?dataset_id ?species
+WHERE {
+  ?dataset a jpost:Dataset ;
+           dct:identifier ?dataset_id ;
+           jpost:hasProfile/jpost:hasSample/jpost:species ?tax .
+  ?tax <http://ddbj.nig.ac.jp/ontologies/taxonomy/scientificName> ?species .
+}
+ORDER BY ?dataset_id
+LIMIT 20

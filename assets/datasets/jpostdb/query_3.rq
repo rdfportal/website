@@ -1,0 +1,17 @@
+# Post-translational Phospholylartion sites of a protein
+PREFIX jpost: <http://rdf.jpostdb.org/ontology/jpost.owl#>
+PREFIX up: <http://purl.uniprot.org/uniprot/>
+PREFIX unimod: <http://www.unimod.org/obo/unimod.obo#>
+PREFIX faldo: <http://biohackathon.org/resource/faldo#>
+SELECT ?pep_position ?mod_position ?site (COUNT (?site) AS ?detected_count)
+WHERE {
+  VALUES ?uniprot { up:Q9NYF8 }
+  ?protein jpost:hasDatabaseSequence ?uniprot ;
+           jpost:hasPeptideEvidence ?evidence .
+  ?evidence faldo:location/faldo:begin/faldo:position ?pep_position ;
+            jpost:hasPeptide/jpost:hasPsm ?psm .
+  ?psm jpost:hasModification [ a unimod:UNIMOD_21 ;  # UNIMOD_21 = "Phospho"
+                             jpost:modificationSite ?site ;
+                             faldo:location/faldo:position ?mod_position ] .
+}
+ORDER BY ?pep_position ?mod_position
