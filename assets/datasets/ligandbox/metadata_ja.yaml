@@ -1,0 +1,27 @@
+title: LigandBox
+website: http://www.mypresto5.com/ligandbox/cgi-bin/index.cgi?LANG=ja
+description: 低分子化合物の３次元分子構造と原子荷電を提供するデータベースです。分子シュミレーションシステムmyPrestoの一部として開発され、KEGGや企業から提供された2次元の化合物データを元に、計算により3次元構造を生成しています。バーチャルスクリーニングの際のドッキング計算に使用できるようになっています。
+tags: [Drug/Chemical, Structure]
+provider: 次世代天然物化学技術研究組合
+creators:
+  - name: 福西快文
+    affiliation: 産業技術総合研究所 創薬分子プロファイリング研究センター
+  - name: 川端猛
+    affiliation: 大阪大学　蛋白質研究所
+  - name: 杉原裕介
+    affiliation: 富士通九州システムズ
+  - name: 酒井広太
+    affiliation: 富士通九州システムズ
+  - name: 楠戸寛
+    affiliation: 日立ソリューションズ東日本
+  - name: 三上義明
+    affiliation: 日立ソリューションズ東日本
+  - name: 真下忠彰
+    affiliation: 情報数理バイオ
+  - name: 中村春木
+    affiliation: 大阪大学　蛋白質研究所
+version: 2021-05-25
+issued: 2021-05-25
+licenses:
+  - クリエイティブ・コモンズ 表示 - 継承 4.0 国際 (CC BY-SA 4.0)
+  - LigandBox © 次世代天然物化学技術研究組合 licensed under CC表示-継承4.0 国際
