@@ -1,3 +1,0 @@
-sparql:
-  description: Get gene info
-  variables: [ type_of_gene, label, gene_description ]
