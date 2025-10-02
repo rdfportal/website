@@ -111,13 +111,16 @@ class DatasetCard {
     // updates document.documentElement.lang.
     try {
       // disconnect existing observer if present
-      if (this.#languageChangeHandler && typeof this.#languageChangeHandler.disconnect === 'function') {
+      if (
+        this.#languageChangeHandler &&
+        typeof this.#languageChangeHandler.disconnect === "function"
+      ) {
         this.#languageChangeHandler.disconnect();
       }
 
       const observer = new MutationObserver((mutations) => {
         for (const m of mutations) {
-          if (m.type === 'attributes' && m.attributeName === 'lang') {
+          if (m.type === "attributes" && m.attributeName === "lang") {
             if (this.#element) {
               this.#element.innerHTML = this.#generateContent();
               this.#setupEventListeners(this.#element);
@@ -126,7 +129,10 @@ class DatasetCard {
           }
         }
       });
-      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ["lang"],
+      });
       this.#languageChangeHandler = observer;
     } catch (e) {
       // Fallback: no observer available, leave handler null.
@@ -156,12 +162,12 @@ class DatasetCard {
     // イベントリスナーをクリーンアップ
     if (this.#languageChangeHandler) {
       try {
-        if (typeof this.#languageChangeHandler.disconnect === 'function') {
+        if (typeof this.#languageChangeHandler.disconnect === "function") {
           this.#languageChangeHandler.disconnect();
         } else {
           // noop
         }
-      } catch (e) { }
+      } catch (e) {}
       this.#languageChangeHandler = null;
     }
 
@@ -189,7 +195,9 @@ class DatasetCard {
     const tripleCount = this.#dataset.statistics?.number_of_triples;
     let html = '<div class="meta">';
     if (issued) {
-      html += `<span class="issued">${this.#escapeHtml(issued)}</span>`;
+      html += `<span class="issued">Last update: ${this.#escapeHtml(
+        issued
+      )}</span>`;
     }
     if (tripleCount && typeof tripleCount === "number") {
       html += `<span class="triples">${tripleCount.toLocaleString()} triples</span>`;
@@ -210,9 +218,9 @@ class DatasetCard {
     ) {
       const href = this.#escapeHtml(
         this.#options.linkBaseUrl.replace(/\/$/, "") +
-        "/dataset/" +
-        encodeURIComponent(this.#dataset.id) +
-        "/",
+          "/dataset/" +
+          encodeURIComponent(this.#dataset.id) +
+          "/"
       );
       return `<a class="${DatasetCard.TITLE_CLASS} ${DatasetCard.LINK_CLASS}" href="${href}">${safe}</a>`;
     }
@@ -242,13 +250,14 @@ class DatasetCard {
 
     if (desc)
       return `<p class="${DatasetCard.DESCRIPTION_CLASS}">${this.#escapeHtml(
-        desc,
+        desc
       )}</p>`;
     if (this.#options.showFallbackDescription)
-      return `<p class="${DatasetCard.DESCRIPTION_CLASS
-        } isFallback">${this.#escapeHtml(
-          DatasetCard.DEFAULTS.FALLBACK_DESCRIPTION,
-        )}</p>`;
+      return `<p class="${
+        DatasetCard.DESCRIPTION_CLASS
+      } isFallback">${this.#escapeHtml(
+        DatasetCard.DEFAULTS.FALLBACK_DESCRIPTION
+      )}</p>`;
     return "";
   }
 
@@ -265,15 +274,17 @@ class DatasetCard {
   }
   #renderTag(tag) {
     if (typeof tag === "string")
-      return `<span class="${DatasetCard.TAG_CLASS
-        }" data-tag="${this.#escapeHtml(tag)}">${this.#escapeHtml(tag)}</span>`;
+      return `<span class="${
+        DatasetCard.TAG_CLASS
+      }" data-tag="${this.#escapeHtml(tag)}">${this.#escapeHtml(tag)}</span>`;
     if (tag && typeof tag === "object" && tag.id) {
       const lang = document.documentElement.lang || "ja";
       const txt = tag.label?.[lang] || tag.label?.ja || tag.label?.en || tag.id;
-      return `<span class="${DatasetCard.TAG_CLASS
-        }" data-tag="${this.#escapeHtml(tag.id)}">${this.#escapeHtml(
-          txt,
-        )}</span>`;
+      return `<span class="${
+        DatasetCard.TAG_CLASS
+      }" data-tag="${this.#escapeHtml(tag.id)}">${this.#escapeHtml(
+        txt
+      )}</span>`;
     }
     return "";
   }
@@ -287,18 +298,18 @@ class DatasetCard {
   #extractTagStrings(list) {
     return Array.isArray(list)
       ? list
-        .map((t) => (typeof t === "string" ? t : t?.id || ""))
-        .filter(Boolean)
+          .map((t) => (typeof t === "string" ? t : t?.id || ""))
+          .filter(Boolean)
       : [];
   }
   #escapeHtml(str) {
     return typeof str === "string"
       ? str
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#39;")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#39;")
       : "";
   }
   #hashString(str) {
@@ -315,7 +326,10 @@ class DatasetCard {
     const size = this.#options.iconSize || 48;
     const tags = this.#extractTagStrings(this.#getTags());
     try {
-      if (window.DatasetIcon && typeof window.DatasetIcon.createSvg === 'function') {
+      if (
+        window.DatasetIcon &&
+        typeof window.DatasetIcon.createSvg === "function"
+      ) {
         return window.DatasetIcon.createSvg(tags, size, {});
       }
     } catch (e) {
