@@ -19,6 +19,39 @@
           > th
             cursor: pointer
             border-bottom: solid 1px #000
+            padding-right: 16px
+            &[data-sort]
+              > .th-label
+                position: relative
+                padding-right: 3px
+                &::before, &::after
+                  content: ''
+                  position: absolute
+                  left: calc(100% + 2px)
+                  color: #bbb
+                  font-size: 0.45em
+                  line-height: 1
+                  pointer-events: none
+                  transform: scaleX(1.8)
+                  transform-origin: left center
+                &::before
+                  content: '▲'
+                  top: 2px
+                &::after
+                  content: '▼'
+                  bottom: 2px
+              &.asc
+                > .th-label
+                  &::before
+                    color: #000
+                  &::after
+                    color: #bbb
+              &.desc
+                > .th-label
+                  &::before
+                    color: #bbb
+                  &::after
+                    color: #000
       > tbody
         > tr
           > td
