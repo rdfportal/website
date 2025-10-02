@@ -13,15 +13,15 @@ permalink: /statistics/
     <table>
       <thead>
         <tr>
-          <th data-sort="title">Dataset</th>
-          <th data-sort="number_of_triples">Triples</th>
-          <th data-sort="number_of_links">Links</th>
-          <th data-sort="number_of_classes">Classes</th>
-          <th data-sort="number_of_instances">Instances</th>
-          <th data-sort="number_of_literals">Literals</th>
-          <th data-sort="number_of_subjects">Subjects</th>
-          <th data-sort="number_of_properties">Properties</th>
-          <th data-sort="number_of_objects">Objects</th>
+          <th data-sort="title"><span class="th-label">Dataset</span></th>
+          <th data-sort="number_of_triples"><span class="th-label">Triples</span></th>
+          <th data-sort="number_of_links"><span class="th-label">Links</span></th>
+          <th data-sort="number_of_classes"><span class="th-label">Classes</span></th>
+          <th data-sort="number_of_instances"><span class="th-label">Instances</span></th>
+          <th data-sort="number_of_literals"><span class="th-label">Literals</span></th>
+          <th data-sort="number_of_subjects"><span class="th-label">Subjects</span></th>
+          <th data-sort="number_of_properties"><span class="th-label">Properties</span></th>
+          <th data-sort="number_of_objects"><span class="th-label">Objects</span></th>
         </tr>
       </thead>
       <tbody>

@@ -5,15 +5,12 @@ pageId: datasets
 description: 利用可能なRDFデータセットの一覧を表示します
 ---
 
-
-
 <!-- JekyllでJSONデータを埋め込む -->
-{% include datasets-json.html %}
 
+{% include datasets-json.html %}
 
 <!-- #DatasetsSortFilterView（default.html側）を活用するため独自UIは廃止 -->
 <div id="DatasetsListView"></div>
-
 
 <script>
 
@@ -133,6 +130,14 @@ document.addEventListener('DOMContentLoaded', async function() {
     if (e.target.matches('button[data-sort]')) {
       sortSegment.querySelectorAll('button').forEach(btn => btn.setAttribute('aria-pressed', 'false'));
       e.target.setAttribute('aria-pressed', 'true');
+      if (sortOrderSegment) {
+        const sortKey = e.target.getAttribute('data-sort');
+        const desiredOrder = sortKey === 'name' ? 'asc' : 'desc';
+        sortOrderSegment.querySelectorAll('button').forEach(btn => {
+          const isTarget = btn.getAttribute('data-order') === desiredOrder;
+          btn.setAttribute('aria-pressed', isTarget ? 'true' : 'false');
+        });
+      }
       renderDatasets(getFilteredSortedDatasets());
     }
   });
