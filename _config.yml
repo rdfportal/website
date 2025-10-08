@@ -2,8 +2,13 @@ title: RDF Portal
 description: RDFポータルサイトのリニューアル
 baseurl: "/website" # GitHub Pagesのサブディレクトリ
 url: "https://rdfportal.github.io" # GitHub Pagesのベース URL
-# theme: minima
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
 safe: false
+
+# Plugin configuration
 plugins:
   - jekyll-feed
 
@@ -12,12 +17,38 @@ sass:
   sass_dir: _sass
   style: compressed
 
+# Exclude from build
 exclude:
   - scripts/
   - "**/node_modules/"
   - package.json
   - package-lock.json
   - bun.lock
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
 
 # Permalink structure
 permalink: pretty
+
+# Kramdown configuration
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: html
+    css_class: 'highlight'
+
+# Collections (if needed)
+collections:
+  datasets:
+    output: false
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"

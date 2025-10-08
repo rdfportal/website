@@ -54,7 +54,7 @@ description: RDFポータルサイトの利用方法とドキュメント
 
 </article>
 
-{% assign endpoints = site.data.endpoints | default: [] %}
+{% assign endpoints = site.data.endpoints | default: empty %}
 
 {% for ep in endpoints %}
 <p><a href="https://rdfportal.org/{{ ep.id }}/sparql" target="_blank">{{ ep.title }}</a></p>

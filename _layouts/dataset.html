@@ -26,9 +26,13 @@ backToListURL: /datasets
                     <tr data-row-kind="tags" data-type="tags">
                         <th>Tags</th>
                         <td>
-                            {% if page.dataset and page.dataset.tags %} {% assign _tags =
-                            page.dataset.tags %} {% elsif page.tags %} {% assign _tags =
-                            page.tags %} {% else %} {% assign _tags = [] %} {% endif %}
+                            {% if page.dataset and page.dataset.tags %}
+                                {% assign _tags = page.dataset.tags %}
+                            {% elsif page.tags %}
+                                {% assign _tags = page.tags %}
+                            {% else %}
+                                {% assign _tags = empty %}
+                            {% endif %}
                             <div class="tags-container">
                                 {% include tags.html tags=_tags %}
                             </div>
@@ -37,7 +41,7 @@ backToListURL: /datasets
                     <tr data-row-kind="providers" data-type="string">
                         <th>Data provider</th>
                         <td>
-                            {% assign _providers = page.dataset.providers | default: [] %}
+                            {% assign _providers = page.dataset.providers | default: empty %}
                             <ul>
                                 {% for provider in _providers %}
                                 <li>{{ provider.en }}</li>
@@ -48,7 +52,7 @@ backToListURL: /datasets
                     <tr data-row-kind="creators" data-type="string">
                         <th>Creator</th>
                         <td>
-                            {% assign _creators = page.dataset.creators | default: [] %}
+                            {% assign _creators = page.dataset.creators | default: empty %}
                             <ul>
                                 {% for creator in _creators %}
                                 <li>
@@ -69,7 +73,7 @@ backToListURL: /datasets
                     <tr data-row-kind="licenses" data-type="string">
                         <th>Licenses</th>
                         <td>
-                            {% assign _licenses = page.dataset.licenses | default: [] %}
+                            {% assign _licenses = page.dataset.licenses | default: empty %}
                             <ul>
                                 {% for license in _licenses %}
                                 <li>

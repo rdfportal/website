@@ -19,7 +19,7 @@ permalink: /sparql_endpoints/
     {% for endpoint in site.data.endpoints %}
       <tr>
         <th>
-          <a href="https://rdfportal.org/{{ endpoint.id }}/sparql" target="endpoint">{{ endpoint.title d}}</a>
+          <a href="https://rdfportal.org/{{ endpoint.id }}/sparql" target="endpoint">{{ endpoint.title }}</a>
         </th>
         <td>
           <ul class="datasets">
