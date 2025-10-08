@@ -1,0 +1,12 @@
+# 分子量が1500以上のエントリーの一覧の取得
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX cheminf: <http://www.semanticweb.org/ontologies/cheminf.owl#>
+SELECT DISTINCT ?entry ?molecular_weight
+WHERE {
+  ?entry sio:SIO_000008 _:b0 .
+  _:b0 rdf:type sio:CHEMINF_000216 ;
+     sio:SIO_000300 ?molecular_weight FILTER ( ?molecular_weight > 1500.0 ) .
+}
+LIMIT 25
+

@@ -1,0 +1,9 @@
+# エントリーとPDBのリンクの一覧の表示
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX PDBc: <https://rdf.wwpdb.org/cc/>
+SELECT DISTINCT ?entry ?pdb_link
+WHERE {
+  ?entry rdfs:seeAlso ?pdb_link FILTER regex(str(?pdb_link), "rdf.wwpdb.org/cc/", "i"). 
+}
+LIMIT 25
+
