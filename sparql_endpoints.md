@@ -26,7 +26,7 @@ permalink: /sparql_endpoints/
             {% for dataset in site.data.datasets %}
               {% if dataset.endpoint == endpoint.id %}
                 <li>
-                  <a href="{{ site.baseurl }}/dataset/?id={{ dataset.id | url_encode }}">
+                  <a href="{{ site.baseurl }}/dataset/{{ dataset.id | url_encode }}">
                     {{ dataset.title }}
                   </a>
                 </li>
