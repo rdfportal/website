@@ -1,0 +1,3252 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:xhtml="http://www.w3.org/1999/xhtml"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   style="background-color: rgb(255, 255, 255);"
+   width="1030px"
+   height="3018px"
+   viewBox="-0.5 -0.5 1030 3018"
+   version="1.1"
+   id="svg1084"
+   sodipodi:docname="ligandbox_scheme_ta0_20211214.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata1090">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs1088" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2560"
+     inkscape:window-height="1577"
+     id="namedview1086"
+     showgrid="false"
+     inkscape:zoom="8.2310927"
+     inkscape:cx="875.30347"
+     inkscape:cy="1022.5"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g736" />
+  <style
+     type="text/css"
+     id="style2">
+     .st0 {fill:#FFCE9F;} .st1 {fill:none;stroke:#000000;stroke-width:2;} .st2
+    {opacity:0.6;} .st3 {font-family:'Helvetica';} .st4
+    {font-size:11px;} .st5 {fill:#FFFFFF;} .st6
+    {font-family:'Helvetica-Bold';} .st7 {font-size:12px;} .st8
+    {opacity:0.7;fill:#FFFFFF;} .st9
+    {fill:#F8CECC;stroke:#000000;stroke-width:2;} .st9uri
+    {fill:#CCF8F8;stroke:#000000;stroke-width:2;} .st10 {fill:#FFF4C3;} .st11
+    {fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:4,4;} .st12 {fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;} .st13 {enable-background:new;} .st14 {fill:#F2F2E9;} .st15 {fill:none;stroke:#000000;stroke-width:2;stroke-dasharray:3.926,3.926;} 
+  </style>
+  <g
+     id="g26">
+    <g
+       id="g8">
+      <path
+         d="M230,52 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z"
+         class="st0"
+         id="path4" />
+      <path
+         d="M230,52 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z"
+         class="st1"
+         id="path6" />
+    </g>
+    <g
+       class="st2"
+       id="g12">
+      <path
+         d="M50,30 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12"
+         id="path10" />
+    </g>
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g16">
+      <text
+         x="58"
+         y="48"
+         class="st3 st4"
+         id="text14">
+        ligandbox:HTS1710-04959999
+      </text>
+    </g>
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g20">
+      <text
+         x="58"
+         y="20"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text18">
+        LigandBoxEntry
+      </text>
+    </g>
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g24">
+      <text
+         x="222"
+         y="20"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text22">
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st11"
+     points="230,35 250,35 250,35 465,35"
+     id="polyline28" />
+  <polygon
+     points="460.3,40.7 459.4,39.7 464.4,35.0 459.4,30.3 460.3,29.3 466.5,35.0"
+     id="polygon30" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 30)"
+     id="text32">
+    rdf:type
+  </text>
+  <g
+     id="g42">
+    <rect
+       x="470"
+       y="10"
+       width="180"
+       height="50"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff4c3"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="all"
+       id="rect34" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g40">
+      <switch
+         id="switch38">
+        <foreignObject
+           style="overflow: visible; text-align: left"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 35px; margin-left: 471px">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal">
+                <xhtml:div>
+                  jst:Chemical
+                  <xhtml:br />
+</xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="560"
+           y="29"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text36">
+          jst:Chemical
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,35 250,35 250,105 465,105"
+     id="polyline44" />
+  <polygon
+     points="460.3,110.7 459.4,109.7 464.4,105.0 459.4,100.3 460.3,99.3 466.5,105.0"
+     id="polygon46" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 100)"
+     id="text48">
+    dcterms:identifier
+  </text>
+  <g
+     id="g66">
+    <rect
+       x="470"
+       y="80"
+       width="180"
+       height="50"
+       class="st9"
+       id="rect50" />
+    <polyline
+       points="470,100 470,80 650,80 650,100"
+       class="st2"
+       id="polyline52" />
+    <g
+       id="g56">
+      <text
+         x="478"
+         y="115"
+         class="st3 st4"
+         dominant-baseline="middle"
+         id="text54">
+        HTS1710-04959999
+      </text>
+    </g>
+    <g
+       id="g60">
+      <text
+         x="478"
+         y="90"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text58">
+        ligandbox_id
+      </text>
+    </g>
+    <g
+       id="g64">
+      <text
+         x="642"
+         y="90"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text62">
+        String
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,35 250,35 250,175 465,175"
+     id="polyline68" />
+  <polygon
+     points="460.3,180.7 459.4,179.7 464.4,175.0 459.4,170.3 460.3,169.3 466.5,175.0"
+     id="polygon70" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 170)"
+     id="text72">
+    sio:SIO_000066
+  </text>
+  <g
+     id="g96">
+    <g
+       id="g78">
+      <path
+         d="M650,192 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z"
+         class="st0"
+         id="path74" />
+      <path
+         d="M650,192 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z"
+         class="st1"
+         id="path76" />
+    </g>
+    <g
+       class="st2"
+       id="g82">
+      <path
+         d="M470,170 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12"
+         id="path80" />
+    </g>
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g86">
+      <text
+         x="478"
+         y="188"
+         class="st3 st4"
+         id="text84">
+        LigandProvider
+      </text>
+    </g>
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g90">
+      <text
+         x="478"
+         y="160"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text88">
+        provider
+      </text>
+    </g>
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g94">
+      <text
+         x="642"
+         y="160"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text92">
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,35 250,35 250,245 465,245"
+     id="polyline98" />
+  <polygon
+     points="460.3,250.7 459.4,249.7 464.4,245.0 459.4,240.3 460.3,239.3 466.5,245.0"
+     id="polygon100" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 240)"
+     id="text102">
+    sio:SIO_000008 +
+  </text>
+  <g
+     id="g106">
+    <ellipse
+       cx="490"
+       cy="245"
+       rx="20"
+       ry="20"
+       fill="#f2f2e9"
+       stroke="#000000"
+       stroke-dasharray="3 3"
+       pointer-events="all"
+       id="ellipse104" />
+  </g>
+  <polyline
+     class="st11"
+     points="510,245 530,245 530,245 745,245"
+     id="polyline108" />
+  <polygon
+     points="740.3,250.7 739.4,249.7 744.4,245.0 739.4,240.3 740.3,239.3 746.5,245.0"
+     id="polygon110" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 240)"
+     id="text112">
+    rdf:type
+  </text>
+  <g
+     id="g122">
+    <rect
+       x="750"
+       y="220"
+       width="180"
+       height="50"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff4c3"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="all"
+       id="rect114" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g120">
+      <switch
+         id="switch118">
+        <foreignObject
+           style="overflow: visible; text-align: left"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 245px; margin-left: 751px">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal">
+                <xhtml:div>
+                  sio:CHEMINF_000042
+                  <xhtml:br />
+</xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="840"
+           y="239"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text116">
+          sio:CHEMINF_000042
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="510,245 530,245 530,315 745,315"
+     id="polyline124" />
+  <polygon
+     points="740.3,320.7 739.4,319.7 744.4,315.0 739.4,310.3 740.3,309.3 746.5,315.0"
+     id="polygon126" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 310)"
+     id="text128">
+    sio:SIO_000300
+  </text>
+  <g
+     id="g146">
+    <rect
+       x="750"
+       y="290"
+       width="180"
+       height="50"
+       class="st9"
+       id="rect130" />
+    <polyline
+       points="750,310 750,290 930,290 930,310"
+       class="st2"
+       id="polyline132" />
+    <g
+       id="g136">
+      <text
+         x="758"
+         y="325"
+         class="st3 st4"
+         dominant-baseline="middle"
+         id="text134">
+        C17H23N3O2F
+      </text>
+    </g>
+    <g
+       id="g140">
+      <text
+         x="758"
+         y="300"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text138">
+        molecular_formula
+      </text>
+    </g>
+    <g
+       id="g144">
+      <text
+         x="922"
+         y="300"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text142">
+        String
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,35 250,35 250,385 465,385"
+     id="polyline148" />
+  <polygon
+     points="460.3,390.7 459.4,389.7 464.4,385.0 459.4,380.3 460.3,379.3 466.5,385.0"
+     id="polygon150" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 380)"
+     id="text152">
+    sio:SIO_000008 +
+  </text>
+  <g
+     id="g156">
+    <ellipse
+       cx="490"
+       cy="385"
+       rx="20"
+       ry="20"
+       fill="#f2f2e9"
+       stroke="#000000"
+       stroke-dasharray="3 3"
+       pointer-events="all"
+       id="ellipse154" />
+  </g>
+  <polyline
+     class="st11"
+     points="510,385 530,385 530,385 745,385"
+     id="polyline158" />
+  <polygon
+     points="740.3,390.7 739.4,389.7 744.4,385.0 739.4,380.3 740.3,379.3 746.5,385.0"
+     id="polygon160" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 380)"
+     id="text162">
+    rdf:type
+  </text>
+  <g
+     id="g172">
+    <rect
+       x="750"
+       y="360"
+       width="180"
+       height="50"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff4c3"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="all"
+       id="rect164" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g170">
+      <switch
+         id="switch168">
+        <foreignObject
+           style="overflow: visible; text-align: left"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 385px; margin-left: 751px">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal">
+                <xhtml:div>
+                  sio:CHEMINF_000216
+                  <xhtml:br />
+</xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="840"
+           y="379"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text166">
+          sio:CHEMINF_000216
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="510,385 530,385 530,455 745,455"
+     id="polyline174" />
+  <polygon
+     points="740.3,460.7 739.4,459.7 744.4,455.0 739.4,450.3 740.3,449.3 746.5,455.0"
+     id="polygon176" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 450)"
+     id="text178">
+    sio:SIO_000300
+  </text>
+  <g
+     id="g196">
+    <rect
+       x="750"
+       y="430"
+       width="180"
+       height="50"
+       class="st9"
+       id="rect180" />
+    <polyline
+       points="750,450 750,430 930,430 930,450"
+       class="st2"
+       id="polyline182" />
+    <g
+       id="g186">
+      <text
+         x="758"
+         y="465"
+         class="st3 st4"
+         dominant-baseline="middle"
+         id="text184">
+        320.388
+      </text>
+    </g>
+    <g
+       id="g190">
+      <text
+         x="758"
+         y="440"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text188">
+        molecular_weight
+      </text>
+    </g>
+    <g
+       id="g194">
+      <text
+         x="922"
+         y="440"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text192">
+        Float
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,35 250,35 250,525 465,525"
+     id="polyline198" />
+  <polygon
+     points="460.3,530.7 459.4,529.7 464.4,525.0 459.4,520.3 460.3,519.3 466.5,525.0"
+     id="polygon200" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 520)"
+     id="text202">
+    sio:SIO_000008 +
+  </text>
+  <g
+     id="g206">
+    <ellipse
+       cx="490"
+       cy="525"
+       rx="20"
+       ry="20"
+       fill="#f2f2e9"
+       stroke="#000000"
+       stroke-dasharray="3 3"
+       pointer-events="all"
+       id="ellipse204" />
+  </g>
+  <polyline
+     class="st11"
+     points="510,525 530,525 530,525 745,525"
+     id="polyline208" />
+  <polygon
+     points="740.3,530.7 739.4,529.7 744.4,525.0 739.4,520.3 740.3,519.3 746.5,525.0"
+     id="polygon210" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 520)"
+     id="text212">
+    rdf:type
+  </text>
+  <g
+     id="g222">
+    <rect
+       x="750"
+       y="500"
+       width="180"
+       height="50"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff4c3"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="all"
+       id="rect214" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g220">
+      <switch
+         id="switch218">
+        <foreignObject
+           style="overflow: visible; text-align: left"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 525px; margin-left: 751px">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal">
+                <xhtml:div>
+                  sio:CHEMINF_000120
+                  <xhtml:br />
+</xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="840"
+           y="519"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text216">
+          sio:CHEMINF_000120
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="510,525 530,525 530,595 745,595"
+     id="polyline224" />
+  <polygon
+     points="740.3,600.7 739.4,599.7 744.4,595.0 739.4,590.3 740.3,589.3 746.5,595.0"
+     id="polygon226" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 590)"
+     id="text228">
+    sio:SIO_000300
+  </text>
+  <g
+     id="g246">
+    <rect
+       x="750"
+       y="570"
+       width="180"
+       height="50"
+       class="st9"
+       id="rect230" />
+    <polyline
+       points="750,590 750,570 930,570 930,590"
+       class="st2"
+       id="polyline232" />
+    <g
+       id="g236">
+      <text
+         x="758"
+         y="605"
+         class="st3 st4"
+         dominant-baseline="middle"
+         id="text234">
+        1
+      </text>
+    </g>
+    <g
+       id="g240">
+      <text
+         x="758"
+         y="580"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text238">
+        molecular_charge
+      </text>
+    </g>
+    <g
+       id="g244">
+      <text
+         x="922"
+         y="580"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text242">
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,35 250,35 250,665 465,665"
+     id="polyline248" />
+  <polygon
+     points="460.3,670.7 459.4,669.7 464.4,665.0 459.4,660.3 460.3,659.3 466.5,665.0"
+     id="polygon250" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 660)"
+     id="text252">
+    sio:SIO_000008 +
+  </text>
+  <g
+     id="g256">
+    <ellipse
+       cx="490"
+       cy="665"
+       rx="20"
+       ry="20"
+       fill="#f2f2e9"
+       stroke="#000000"
+       stroke-dasharray="3 3"
+       pointer-events="all"
+       id="ellipse254" />
+  </g>
+  <polyline
+     class="st11"
+     points="510,665 530,665 530,665 745,665"
+     id="polyline258" />
+  <polygon
+     points="740.3,670.7 739.4,669.7 744.4,665.0 739.4,660.3 740.3,659.3 746.5,665.0"
+     id="polygon260" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 660)"
+     id="text262">
+    rdf:type
+  </text>
+  <g
+     id="g272">
+    <rect
+       x="750"
+       y="640"
+       width="180"
+       height="50"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff4c3"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="all"
+       id="rect264" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g270">
+      <switch
+         id="switch268">
+        <foreignObject
+           style="overflow: visible; text-align: left"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 665px; margin-left: 751px">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal">
+                <xhtml:div>
+                  sio:CHEMINF_000244
+                  <xhtml:br />
+</xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="840"
+           y="659"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text266">
+          sio:CHEMINF_000244
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="510,665 530,665 530,735 745,735"
+     id="polyline274" />
+  <polygon
+     points="740.3,740.7 739.4,739.7 744.4,735.0 739.4,730.3 740.3,729.3 746.5,735.0"
+     id="polygon276" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 730)"
+     id="text278">
+    sio:SIO_000300
+  </text>
+  <g
+     id="g296">
+    <rect
+       x="750"
+       y="710"
+       width="180"
+       height="50"
+       class="st9"
+       id="rect280" />
+    <polyline
+       points="750,730 750,710 930,710 930,730"
+       class="st2"
+       id="polyline282" />
+    <g
+       id="g286">
+      <text
+         x="758"
+         y="745"
+         class="st3 st4"
+         dominant-baseline="middle"
+         id="text284">
+        2
+      </text>
+    </g>
+    <g
+       id="g290">
+      <text
+         x="758"
+         y="720"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text288">
+        num_of_donor
+      </text>
+    </g>
+    <g
+       id="g294">
+      <text
+         x="922"
+         y="720"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text292">
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,35 250,35 250,805 465,805"
+     id="polyline298" />
+  <polygon
+     points="460.3,810.7 459.4,809.7 464.4,805.0 459.4,800.3 460.3,799.3 466.5,805.0"
+     id="polygon300" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 800)"
+     id="text302">
+    sio:SIO_000008 +
+  </text>
+  <g
+     id="g306">
+    <ellipse
+       cx="490"
+       cy="805"
+       rx="20"
+       ry="20"
+       fill="#f2f2e9"
+       stroke="#000000"
+       stroke-dasharray="3 3"
+       pointer-events="all"
+       id="ellipse304" />
+  </g>
+  <polyline
+     class="st11"
+     points="510,805 530,805 530,805 745,805"
+     id="polyline308" />
+  <polygon
+     points="740.3,810.7 739.4,809.7 744.4,805.0 739.4,800.3 740.3,799.3 746.5,805.0"
+     id="polygon310" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 800)"
+     id="text312">
+    rdf:type
+  </text>
+  <g
+     id="g322">
+    <rect
+       x="750"
+       y="780"
+       width="180"
+       height="50"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff4c3"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="all"
+       id="rect314" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g320">
+      <switch
+         id="switch318">
+        <foreignObject
+           style="overflow: visible; text-align: left"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 805px; margin-left: 751px">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal">
+                <xhtml:div>
+                  sio:CHEMINF_000245
+                  <xhtml:br />
+</xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="840"
+           y="799"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text316">
+          sio:CHEMINF_000245
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="510,805 530,805 530,875 745,875"
+     id="polyline324" />
+  <polygon
+     points="740.3,880.7 739.4,879.7 744.4,875.0 739.4,870.3 740.3,869.3 746.5,875.0"
+     id="polygon326" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 870)"
+     id="text328">
+    sio:SIO_000300
+  </text>
+  <g
+     id="g346">
+    <rect
+       x="750"
+       y="850"
+       width="180"
+       height="50"
+       class="st9"
+       id="rect330" />
+    <polyline
+       points="750,870 750,850 930,850 930,870"
+       class="st2"
+       id="polyline332" />
+    <g
+       id="g336">
+      <text
+         x="758"
+         y="885"
+         class="st3 st4"
+         dominant-baseline="middle"
+         id="text334">
+        3
+      </text>
+    </g>
+    <g
+       id="g340">
+      <text
+         x="758"
+         y="860"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text338">
+        num_of_acceptor
+      </text>
+    </g>
+    <g
+       id="g344">
+      <text
+         x="922"
+         y="860"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text342">
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,35 250,35 250,945 465,945"
+     id="polyline348" />
+  <polygon
+     points="460.3,950.7 459.4,949.7 464.4,945.0 459.4,940.3 460.3,939.3 466.5,945.0"
+     id="polygon350" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 940)"
+     id="text352">
+    sio:SIO_000008 +
+  </text>
+  <g
+     id="g356">
+    <ellipse
+       cx="490"
+       cy="945"
+       rx="20"
+       ry="20"
+       fill="#f2f2e9"
+       stroke="#000000"
+       stroke-dasharray="3 3"
+       pointer-events="all"
+       id="ellipse354" />
+  </g>
+  <polyline
+     class="st11"
+     points="510,945 530,945 530,945 745,945"
+     id="polyline358" />
+  <polygon
+     points="740.3,950.7 739.4,949.7 744.4,945.0 739.4,940.3 740.3,939.3 746.5,945.0"
+     id="polygon360" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 940)"
+     id="text362">
+    rdf:type
+  </text>
+  <g
+     id="g372">
+    <rect
+       x="750"
+       y="920"
+       width="180"
+       height="50"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff4c3"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="all"
+       id="rect364" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g370">
+      <switch
+         id="switch368">
+        <foreignObject
+           style="overflow: visible; text-align: left"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 945px; margin-left: 751px">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal">
+                <xhtml:div>
+                  sio:CHEMINF_000205
+                  <xhtml:br />
+</xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="840"
+           y="939"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text366">
+          sio:CHEMINF_000205
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="510,945 530,945 530,1015 745,1015"
+     id="polyline374" />
+  <polygon
+     points="740.3,1020.7 739.4,1019.7 744.4,1015.0 739.4,1010.3 740.3,1009.3 746.5,1015.0"
+     id="polygon376" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 1010)"
+     id="text378">
+    sio:SIO_000300
+  </text>
+  <g
+     id="g396">
+    <rect
+       x="750"
+       y="990"
+       width="180"
+       height="50"
+       class="st9"
+       id="rect380" />
+    <polyline
+       points="750,1010 750,990 930,990 930,1010"
+       class="st2"
+       id="polyline382" />
+    <g
+       id="g386">
+      <text
+         x="758"
+         y="1025"
+         class="st3 st4"
+         dominant-baseline="middle"
+         id="text384">
+        3
+      </text>
+    </g>
+    <g
+       id="g390">
+      <text
+         x="758"
+         y="1000"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text388">
+        num_of_chiral_atoms
+      </text>
+    </g>
+    <g
+       id="g394">
+      <text
+         x="922"
+         y="1000"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text392">
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,35 250,35 250,1085 465,1085"
+     id="polyline398" />
+  <polygon
+     points="460.3,1090.7 459.4,1089.7 464.4,1085.0 459.4,1080.3 460.3,1079.3 466.5,1085.0"
+     id="polygon400" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 1080)"
+     id="text402">
+    sio:SIO_000008 +
+  </text>
+  <g
+     id="g406">
+    <ellipse
+       cx="490"
+       cy="1085"
+       rx="20"
+       ry="20"
+       fill="#f2f2e9"
+       stroke="#000000"
+       stroke-dasharray="3 3"
+       pointer-events="all"
+       id="ellipse404" />
+  </g>
+  <polyline
+     class="st11"
+     points="510,1085 530,1085 530,1085 745,1085"
+     id="polyline408" />
+  <polygon
+     points="740.3,1090.7 739.4,1089.7 744.4,1085.0 739.4,1080.3 740.3,1079.3 746.5,1085.0"
+     id="polygon410" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 1080)"
+     id="text412">
+    rdf:type
+  </text>
+  <g
+     id="g422">
+    <rect
+       x="750"
+       y="1060"
+       width="180"
+       height="50"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff4c3"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="all"
+       id="rect414" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g420">
+      <switch
+         id="switch418">
+        <foreignObject
+           style="overflow: visible; text-align: left"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 1085px; margin-left: 751px">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal">
+                <xhtml:div>
+                  sio:CHEMINF_000152
+                  <xhtml:br />
+</xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="840"
+           y="1079"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text416">
+          sio:CHEMINF_000152
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="510,1085 530,1085 530,1155 745,1155"
+     id="polyline424" />
+  <polygon
+     points="740.3,1160.7 739.4,1159.7 744.4,1155.0 739.4,1150.3 740.3,1149.3 746.5,1155.0"
+     id="polygon426" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 1150)"
+     id="text428">
+    sio:SIO_000300
+  </text>
+  <g
+     id="g446">
+    <rect
+       x="750"
+       y="1130"
+       width="180"
+       height="50"
+       class="st9"
+       id="rect430" />
+    <polyline
+       points="750,1150 750,1130 930,1130 930,1150"
+       class="st2"
+       id="polyline432" />
+    <g
+       id="g436">
+      <text
+         x="758"
+         y="1165"
+         class="st3 st4"
+         dominant-baseline="middle"
+         id="text434">
+        51.72
+      </text>
+    </g>
+    <g
+       id="g440">
+      <text
+         x="758"
+         y="1140"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text438">
+        tpsa
+      </text>
+    </g>
+    <g
+       id="g444">
+      <text
+         x="922"
+         y="1140"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text442">
+        Float
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,35 250,35 250,1225 465,1225"
+     id="polyline448" />
+  <polygon
+     points="460.3,1230.7 459.4,1229.7 464.4,1225.0 459.4,1220.3 460.3,1219.3 466.5,1225.0"
+     id="polygon450" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 1220)"
+     id="text452">
+    sio:SIO_000008 +
+  </text>
+  <g
+     id="g456">
+    <ellipse
+       cx="490"
+       cy="1225"
+       rx="20"
+       ry="20"
+       fill="#f2f2e9"
+       stroke="#000000"
+       stroke-dasharray="3 3"
+       pointer-events="all"
+       id="ellipse454" />
+  </g>
+  <polyline
+     class="st11"
+     points="510,1225 530,1225 530,1225 745,1225"
+     id="polyline458" />
+  <polygon
+     points="740.3,1230.7 739.4,1229.7 744.4,1225.0 739.4,1220.3 740.3,1219.3 746.5,1225.0"
+     id="polygon460" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 1220)"
+     id="text462">
+    rdf:type
+  </text>
+  <g
+     id="g472">
+    <rect
+       x="750"
+       y="1200"
+       width="180"
+       height="50"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff4c3"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="all"
+       id="rect464" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g470">
+      <switch
+         id="switch468">
+        <foreignObject
+           style="overflow: visible; text-align: left"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 1225px; margin-left: 751px">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal">
+                <xhtml:div>
+                  sio:CHEMINF_000291
+                  <xhtml:br />
+</xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="840"
+           y="1219"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text466">
+          sio:CHEMINF_000291
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="510,1225 530,1225 530,1295 745,1295"
+     id="polyline474" />
+  <polygon
+     points="740.3,1300.7 739.4,1299.7 744.4,1295.0 739.4,1290.3 740.3,1289.3 746.5,1295.0"
+     id="polygon476" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 1290)"
+     id="text478">
+    sio:SIO_000300
+  </text>
+  <g
+     id="g496">
+    <rect
+       x="750"
+       y="1270"
+       width="180"
+       height="50"
+       class="st9"
+       id="rect480" />
+    <polyline
+       points="750,1290 750,1270 930,1270 930,1290"
+       class="st2"
+       id="polyline482" />
+    <g
+       id="g486">
+      <text
+         x="758"
+         y="1305"
+         class="st3 st4"
+         dominant-baseline="middle"
+         id="text484">
+        -11.7982
+      </text>
+    </g>
+    <g
+       id="g490">
+      <text
+         x="758"
+         y="1280"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text488">
+        homo
+      </text>
+    </g>
+    <g
+       id="g494">
+      <text
+         x="922"
+         y="1280"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text492">
+        Float
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,35 250,35 250,1365 465,1365"
+     id="polyline498" />
+  <polygon
+     points="460.3,1370.7 459.4,1369.7 464.4,1365.0 459.4,1360.3 460.3,1359.3 466.5,1365.0"
+     id="polygon500" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 1360)"
+     id="text502">
+    sio:SIO_000008 +
+  </text>
+  <g
+     id="g506">
+    <ellipse
+       cx="490"
+       cy="1365"
+       rx="20"
+       ry="20"
+       fill="#f2f2e9"
+       stroke="#000000"
+       stroke-dasharray="3 3"
+       pointer-events="all"
+       id="ellipse504" />
+  </g>
+  <polyline
+     class="st11"
+     points="510,1365 530,1365 530,1365 745,1365"
+     id="polyline508" />
+  <polygon
+     points="740.3,1370.7 739.4,1369.7 744.4,1365.0 739.4,1360.3 740.3,1359.3 746.5,1365.0"
+     id="polygon510" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 1360)"
+     id="text512">
+    rdf:type
+  </text>
+  <g
+     id="g522">
+    <rect
+       x="750"
+       y="1340"
+       width="180"
+       height="50"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff4c3"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="all"
+       id="rect514" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g520">
+      <switch
+         id="switch518">
+        <foreignObject
+           style="overflow: visible; text-align: left"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 1365px; margin-left: 751px">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal">
+                <xhtml:div>
+                  sio:CHEMINF_000292
+                  <xhtml:br />
+</xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="840"
+           y="1359"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text516">
+          sio:CHEMINF_000292
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="510,1365 530,1365 530,1435 745,1435"
+     id="polyline524" />
+  <polygon
+     points="740.3,1440.7 739.4,1439.7 744.4,1435.0 739.4,1430.3 740.3,1429.3 746.5,1435.0"
+     id="polygon526" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 1430)"
+     id="text528">
+    sio:SIO_000300
+  </text>
+  <g
+     id="g546">
+    <rect
+       x="750"
+       y="1410"
+       width="180"
+       height="50"
+       class="st9"
+       id="rect530" />
+    <polyline
+       points="750,1430 750,1410 930,1410 930,1430"
+       class="st2"
+       id="polyline532" />
+    <g
+       id="g536">
+      <text
+         x="758"
+         y="1445"
+         class="st3 st4"
+         dominant-baseline="middle"
+         id="text534">
+        -3.8418
+      </text>
+    </g>
+    <g
+       id="g540">
+      <text
+         x="758"
+         y="1420"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text538">
+        lumo
+      </text>
+    </g>
+    <g
+       id="g544">
+      <text
+         x="922"
+         y="1420"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text542">
+        Float
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,35 250,35 250,1505 465,1505"
+     id="polyline548" />
+  <polygon
+     points="460.3,1510.7 459.4,1509.7 464.4,1505.0 459.4,1500.3 460.3,1499.3 466.5,1505.0"
+     id="polygon550" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 1500)"
+     id="text552">
+    sio:SIO_000008 +
+  </text>
+  <g
+     id="g556">
+    <ellipse
+       cx="490"
+       cy="1505"
+       rx="20"
+       ry="20"
+       fill="#f2f2e9"
+       stroke="#000000"
+       stroke-dasharray="3 3"
+       pointer-events="all"
+       id="ellipse554" />
+  </g>
+  <polyline
+     class="st11"
+     points="510,1505 530,1505 530,1505 745,1505"
+     id="polyline558" />
+  <polygon
+     points="740.3,1510.7 739.4,1509.7 744.4,1505.0 739.4,1500.3 740.3,1499.3 746.5,1505.0"
+     id="polygon560" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 1500)"
+     id="text562">
+    rdf:type
+  </text>
+  <g
+     id="g572">
+    <rect
+       x="750"
+       y="1480"
+       width="180"
+       height="50"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff4c3"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="all"
+       id="rect564" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g570">
+      <switch
+         id="switch568">
+        <foreignObject
+           style="overflow: visible; text-align: left"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 1505px; margin-left: 751px">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal">
+                <xhtml:div>
+                  sio:CHEMINF_000496
+                  <xhtml:br />
+</xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="840"
+           y="1499"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text566">
+          sio:CHEMINF_000496
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="510,1505 530,1505 530,1575 745,1575"
+     id="polyline574" />
+  <polygon
+     points="740.3,1580.7 739.4,1579.7 744.4,1575.0 739.4,1570.3 740.3,1569.3 746.5,1575.0"
+     id="polygon576" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 1570)"
+     id="text578">
+    sio:SIO_000300
+  </text>
+  <g
+     id="g596">
+    <rect
+       x="750"
+       y="1550"
+       width="180"
+       height="50"
+       class="st9"
+       id="rect580" />
+    <polyline
+       points="750,1570 750,1550 930,1550 930,1570"
+       class="st2"
+       id="polyline582" />
+    <g
+       id="g586">
+      <text
+         x="758"
+         y="1585"
+         class="st3 st4"
+         dominant-baseline="middle"
+         id="text584">
+        3.489
+      </text>
+    </g>
+    <g
+       id="g590">
+      <text
+         x="758"
+         y="1560"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text588">
+        logp
+      </text>
+    </g>
+    <g
+       id="g594">
+      <text
+         x="922"
+         y="1560"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text592">
+        Float
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,35 250,35 250,1645 465,1645"
+     id="polyline598" />
+  <polygon
+     points="460.3,1650.7 459.4,1649.7 464.4,1645.0 459.4,1640.3 460.3,1639.3 466.5,1645.0"
+     id="polygon600" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 1640)"
+     id="text602">
+    sio:SIO_000008 +
+  </text>
+  <g
+     id="g606">
+    <ellipse
+       cx="490"
+       cy="1645"
+       rx="20"
+       ry="20"
+       fill="#f2f2e9"
+       stroke="#000000"
+       stroke-dasharray="3 3"
+       pointer-events="all"
+       id="ellipse604" />
+  </g>
+  <polyline
+     class="st11"
+     points="510,1645 530,1645 530,1645 745,1645"
+     id="polyline608" />
+  <polygon
+     points="740.3,1650.7 739.4,1649.7 744.4,1645.0 739.4,1640.3 740.3,1639.3 746.5,1645.0"
+     id="polygon610" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 1640)"
+     id="text612">
+    rdf:type
+  </text>
+  <g
+     id="g622">
+    <rect
+       x="750"
+       y="1620"
+       width="180"
+       height="50"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff4c3"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="all"
+       id="rect614" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g620">
+      <switch
+         id="switch618">
+        <foreignObject
+           style="overflow: visible; text-align: left"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 1645px; margin-left: 751px">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal">
+                <xhtml:div>
+                  sio:CHEMINF_000258
+                  <xhtml:br />
+</xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="840"
+           y="1639"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text616">
+          sio:CHEMINF_000258
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="510,1645 530,1645 530,1715 745,1715"
+     id="polyline624" />
+  <polygon
+     points="740.3,1720.7 739.4,1719.7 744.4,1715.0 739.4,1710.3 740.3,1709.3 746.5,1715.0"
+     id="polygon626" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 1710)"
+     id="text628">
+    sio:SIO_000300
+  </text>
+  <g
+     id="g646">
+    <rect
+       x="750"
+       y="1690"
+       width="180"
+       height="50"
+       class="st9"
+       id="rect630" />
+    <polyline
+       points="750,1710 750,1690 930,1690 930,1710"
+       class="st2"
+       id="polyline632" />
+    <g
+       id="g636">
+      <text
+         x="758"
+         y="1725"
+         class="st3 st4"
+         dominant-baseline="middle"
+         id="text634">
+        -3.887
+      </text>
+    </g>
+    <g
+       id="g640">
+      <text
+         x="758"
+         y="1700"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text638">
+        logs
+      </text>
+    </g>
+    <g
+       id="g644">
+      <text
+         x="922"
+         y="1700"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text642">
+        Float
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,35 250,35 250,1785 465,1785"
+     id="polyline648" />
+  <polygon
+     points="460.3,1790.7 459.4,1789.7 464.4,1785.0 459.4,1780.3 460.3,1779.3 466.5,1785.0"
+     id="polygon650" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 1780)"
+     id="text652">
+    sio:SIO_000008 +
+  </text>
+  <g
+     id="g656">
+    <ellipse
+       cx="490"
+       cy="1785"
+       rx="20"
+       ry="20"
+       fill="#f2f2e9"
+       stroke="#000000"
+       stroke-dasharray="3 3"
+       pointer-events="all"
+       id="ellipse654" />
+  </g>
+  <polyline
+     class="st11"
+     points="510,1785 530,1785 530,1785 745,1785"
+     id="polyline658" />
+  <polygon
+     points="740.3,1790.7 739.4,1789.7 744.4,1785.0 739.4,1780.3 740.3,1779.3 746.5,1785.0"
+     id="polygon660" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 1780)"
+     id="text662">
+    rdf:type
+  </text>
+  <g
+     id="g672">
+    <rect
+       x="750"
+       y="1760"
+       width="180"
+       height="50"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff4c3"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="all"
+       id="rect664" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g670">
+      <switch
+         id="switch668">
+        <foreignObject
+           style="overflow: visible; text-align: left"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 1785px; margin-left: 751px">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal">
+                <xhtml:div>
+                  sio:CHEMINF_000113
+                  <xhtml:br />
+</xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="840"
+           y="1779"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text666">
+          sio:CHEMINF_000113
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="510,1785 530,1785 530,1855 745,1855"
+     id="polyline674" />
+  <polygon
+     points="740.3,1860.7 739.4,1859.7 744.4,1855.0 739.4,1850.3 740.3,1849.3 746.5,1855.0"
+     id="polygon676" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 1850)"
+     id="text678">
+    sio:SIO_000300
+  </text>
+  <g
+     id="g696">
+    <rect
+       x="750"
+       y="1830"
+       width="180"
+       height="50"
+       class="st9"
+       id="rect680" />
+    <polyline
+       points="750,1850 750,1830 930,1830 930,1850"
+       class="st2"
+       id="polyline682" />
+    <g
+       id="g686">
+      <text
+         x="758"
+         y="1865"
+         class="st3 st4"
+         dominant-baseline="middle"
+         id="text684">
+        InChI=1S/C17H22FN3O2/c1-17(22)12-21(11-16-19-7-9-20(16)2)8-6-15(17)23-14-5-3-4-13(18)10-14/h3-5,7,9-10,15,22H,6,8,11-12H2,1-2H3/p+1/t15-,17-/m0/s1
+      </text>
+    </g>
+    <g
+       id="g690">
+      <text
+         x="758"
+         y="1840"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text688">
+        inchi
+      </text>
+    </g>
+    <g
+       id="g694">
+      <text
+         x="922"
+         y="1840"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text692">
+        String
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,35 250,35 250,1925 465,1925"
+     id="polyline698" />
+  <polygon
+     points="460.3,1930.7 459.4,1929.7 464.4,1925.0 459.4,1920.3 460.3,1919.3 466.5,1925.0"
+     id="polygon700" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 1920)"
+     id="text702">
+    sio:SIO_000008 +
+  </text>
+  <g
+     id="g706">
+    <ellipse
+       cx="490"
+       cy="1925"
+       rx="20"
+       ry="20"
+       fill="#f2f2e9"
+       stroke="#000000"
+       stroke-dasharray="3 3"
+       pointer-events="all"
+       id="ellipse704" />
+  </g>
+  <polyline
+     class="st11"
+     points="510,1925 530,1925 530,1925 745,1925"
+     id="polyline708" />
+  <polygon
+     points="740.3,1930.7 739.4,1929.7 744.4,1925.0 739.4,1920.3 740.3,1919.3 746.5,1925.0"
+     id="polygon710" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 1920)"
+     id="text712">
+    rdf:type
+  </text>
+  <g
+     id="g722">
+    <rect
+       x="750"
+       y="1900"
+       width="180"
+       height="50"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff4c3"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="all"
+       id="rect714" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g720">
+      <switch
+         id="switch718">
+        <foreignObject
+           style="overflow: visible; text-align: left"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 1925px; margin-left: 751px">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal">
+                <xhtml:div>
+                  sio:CHEMINF_000059
+                  <xhtml:br />
+</xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="840"
+           y="1919"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text716">
+          sio:CHEMINF_000059
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="510,1925 530,1925 530,1995 745,1995"
+     id="polyline724" />
+  <polygon
+     points="740.3,2000.7 739.4,1999.7 744.4,1995.0 739.4,1990.3 740.3,1989.3 746.5,1995.0"
+     id="polygon726" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 1990)"
+     id="text728">
+    sio:SIO_000300
+  </text>
+  <g
+     id="g746">
+    <rect
+       x="750"
+       y="1970"
+       width="180"
+       height="50"
+       class="st9"
+       id="rect730" />
+    <polyline
+       points="750,1990 750,1970 930,1970 930,1990"
+       class="st2"
+       id="polyline732" />
+    <g
+       id="g736">
+      <text
+         x="758"
+         y="2005"
+         class="st3 st4"
+         dominant-baseline="middle"
+         id="text734"
+         style="font-size:11px;font-family:Helvetica;dominant-baseline:middle">IHXDGDXDBJNNGP-RDJZCZTQSA-O</text>
+    </g>
+    <g
+       id="g740">
+      <text
+         x="758"
+         y="1980"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text738">
+        inchi_key
+      </text>
+    </g>
+    <g
+       id="g744">
+      <text
+         x="922"
+         y="1980"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text742">
+        String
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,35 250,35 250,2065 465,2065"
+     id="polyline748" />
+  <polygon
+     points="460.3,2070.7 459.4,2069.7 464.4,2065.0 459.4,2060.3 460.3,2059.3 466.5,2065.0"
+     id="polygon750" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 2060)"
+     id="text752">
+    sio:SIO_000008 +
+  </text>
+  <g
+     id="g756">
+    <ellipse
+       cx="490"
+       cy="2065"
+       rx="20"
+       ry="20"
+       fill="#f2f2e9"
+       stroke="#000000"
+       stroke-dasharray="3 3"
+       pointer-events="all"
+       id="ellipse754" />
+  </g>
+  <polyline
+     class="st11"
+     points="510,2065 530,2065 530,2065 745,2065"
+     id="polyline758" />
+  <polygon
+     points="740.3,2070.7 739.4,2069.7 744.4,2065.0 739.4,2060.3 740.3,2059.3 746.5,2065.0"
+     id="polygon760" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 2060)"
+     id="text762">
+    rdf:type
+  </text>
+  <g
+     id="g772">
+    <rect
+       x="750"
+       y="2040"
+       width="180"
+       height="50"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff4c3"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="all"
+       id="rect764" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g770">
+      <switch
+         id="switch768">
+        <foreignObject
+           style="overflow: visible; text-align: left"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 2065px; margin-left: 751px">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal">
+                <xhtml:div>
+                  sio:CHEMINF_000263
+                  <xhtml:br />
+</xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="840"
+           y="2059"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text766">
+          sio:CHEMINF_000263
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="510,2065 530,2065 530,2135 745,2135"
+     id="polyline774" />
+  <polygon
+     points="740.3,2140.7 739.4,2139.7 744.4,2135.0 739.4,2130.3 740.3,2129.3 746.5,2135.0"
+     id="polygon776" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 2130)"
+     id="text778">
+    sio:SIO_000300
+  </text>
+  <g
+     id="g796">
+    <rect
+       x="750"
+       y="2110"
+       width="180"
+       height="50"
+       class="st9"
+       id="rect780" />
+    <polyline
+       points="750,2130 750,2110 930,2110 930,2130"
+       class="st2"
+       id="polyline782" />
+    <g
+       id="g786">
+      <text
+         x="758"
+         y="2145"
+         class="st3 st4"
+         dominant-baseline="middle"
+         id="text784">
+        46
+      </text>
+    </g>
+    <g
+       id="g790">
+      <text
+         x="758"
+         y="2120"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text788">
+        atom_count
+      </text>
+    </g>
+    <g
+       id="g794">
+      <text
+         x="922"
+         y="2120"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text792">
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,35 250,35 250,2205 465,2205"
+     id="polyline798" />
+  <polygon
+     points="460.3,2210.7 459.4,2209.7 464.4,2205.0 459.4,2200.3 460.3,2199.3 466.5,2205.0"
+     id="polygon800" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 2200)"
+     id="text802">
+    sio:SIO_000008 +
+  </text>
+  <g
+     id="g806">
+    <ellipse
+       cx="490"
+       cy="2205"
+       rx="20"
+       ry="20"
+       fill="#f2f2e9"
+       stroke="#000000"
+       stroke-dasharray="3 3"
+       pointer-events="all"
+       id="ellipse804" />
+  </g>
+  <polyline
+     class="st11"
+     points="510,2205 530,2205 530,2205 745,2205"
+     id="polyline808" />
+  <polygon
+     points="740.3,2210.7 739.4,2209.7 744.4,2205.0 739.4,2200.3 740.3,2199.3 746.5,2205.0"
+     id="polygon810" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 2200)"
+     id="text812">
+    rdf:type
+  </text>
+  <g
+     id="g822">
+    <rect
+       x="750"
+       y="2180"
+       width="180"
+       height="50"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff4c3"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="all"
+       id="rect814" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g820">
+      <switch
+         id="switch818">
+        <foreignObject
+           style="overflow: visible; text-align: left"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 2205px; margin-left: 751px">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal">
+                <xhtml:div>
+                  sio:CHEMINF_000233
+                  <xhtml:br />
+</xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="840"
+           y="2199"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text816">
+          sio:CHEMINF_000233
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="510,2205 530,2205 530,2275 745,2275"
+     id="polyline824" />
+  <polygon
+     points="740.3,2280.7 739.4,2279.7 744.4,2275.0 739.4,2270.3 740.3,2269.3 746.5,2275.0"
+     id="polygon826" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 2270)"
+     id="text828">
+    sio:SIO_000300
+  </text>
+  <g
+     id="g846">
+    <rect
+       x="750"
+       y="2250"
+       width="180"
+       height="50"
+       class="st9"
+       id="rect830" />
+    <polyline
+       points="750,2270 750,2250 930,2250 930,2270"
+       class="st2"
+       id="polyline832" />
+    <g
+       id="g836">
+      <text
+         x="758"
+         y="2285"
+         class="st3 st4"
+         dominant-baseline="middle"
+         id="text834">
+        48
+      </text>
+    </g>
+    <g
+       id="g840">
+      <text
+         x="758"
+         y="2260"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text838">
+        bond_count
+      </text>
+    </g>
+    <g
+       id="g844">
+      <text
+         x="922"
+         y="2260"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text842">
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,35 250,35 250,2345 465,2345"
+     id="polyline848" />
+  <polygon
+     points="460.3,2350.7 459.4,2349.7 464.4,2345.0 459.4,2340.3 460.3,2339.3 466.5,2345.0"
+     id="polygon850" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 2340)"
+     id="text852">
+    ligandboxo:link_to_mol2
+  </text>
+  <g
+     id="g856">
+    <ellipse
+       cx="490"
+       cy="2345"
+       rx="20"
+       ry="20"
+       fill="#f2f2e9"
+       stroke="#000000"
+       stroke-dasharray="3 3"
+       pointer-events="all"
+       id="ellipse854" />
+  </g>
+  <polyline
+     class="st12"
+     points="510,2345 530,2345 530,2345 745,2345"
+     id="polyline858" />
+  <polygon
+     points="740.3,2350.7 739.4,2349.7 744.4,2345.0 739.4,2340.3 740.3,2339.3 746.5,2345.0"
+     id="polygon860" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 540 2340)"
+     id="text862">
+    rdf:resource
+  </text>
+  <g
+     id="g886">
+    <g
+       id="g868">
+      <path
+         d="M930,2362 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z"
+         class="st9uri"
+         id="path864" />
+      <path
+         d="M930,2362 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z"
+         class="st1"
+         id="path866" />
+    </g>
+    <g
+       class="st2"
+       id="g872">
+      <path
+         d="M750,2340 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12"
+         id="path870" />
+    </g>
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g876">
+      <text
+         x="758"
+         y="2358"
+         class="st3 st4"
+         id="text874">
+        &lt;http://dbarchive.biosciencedbc.jp/data/ligandbox/LATEST/Namiki/HTS1710/0495/HTS1710-04959999-01.mol2&gt;
+      </text>
+    </g>
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g880">
+      <text
+         x="758"
+         y="2330"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text878">
+        mol2_file_link
+      </text>
+    </g>
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g884">
+      <text
+         x="922"
+         y="2330"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text882">
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,35 250,35 250,2415 465,2415"
+     id="polyline888" />
+  <polygon
+     points="460.3,2420.7 459.4,2419.7 464.4,2415.0 459.4,2410.3 460.3,2409.3 466.5,2415.0"
+     id="polygon890" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 2410)"
+     id="text892">
+    rdfs:seeAlso +
+  </text>
+  <g
+     id="g916">
+    <g
+       id="g898">
+      <path
+         d="M650,2432 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z"
+         class="st9uri"
+         id="path894" />
+      <path
+         d="M650,2432 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z"
+         class="st1"
+         id="path896" />
+    </g>
+    <g
+       class="st2"
+       id="g902">
+      <path
+         d="M470,2410 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12"
+         id="path900" />
+    </g>
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g906">
+      <text
+         x="478"
+         y="2428"
+         class="st3 st4"
+         id="text904">
+        &lt;https://identifiers.org/ligandbox:HTS1710-04959999&gt;
+      </text>
+    </g>
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g910">
+      <text
+         x="478"
+         y="2400"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text908">
+        identifiersorg_link
+      </text>
+    </g>
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g914">
+      <text
+         x="642"
+         y="2400"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text912">
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,35 250,35 250,2485 465,2485"
+     id="polyline918" />
+  <polygon
+     points="460.3,2490.7 459.4,2489.7 464.4,2485.0 459.4,2480.3 460.3,2479.3 466.5,2485.0"
+     id="polygon920" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 2480)"
+     id="text922">
+    rdfs:seeAlso +
+  </text>
+  <g
+     id="g946">
+    <g
+       id="g928">
+      <path
+         d="M650,2502 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z"
+         class="st9uri"
+         id="path924" />
+      <path
+         d="M650,2502 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z"
+         class="st1"
+         id="path926" />
+    </g>
+    <g
+       class="st2"
+       id="g932">
+      <path
+         d="M470,2480 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12"
+         id="path930" />
+    </g>
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g936">
+      <text
+         x="478"
+         y="2498"
+         class="st3 st4"
+         id="text934">
+        &lt;http://purl.jp/bio/5/ligandbox/HTS1710-04959999.sdf&gt;
+      </text>
+    </g>
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g940">
+      <text
+         x="478"
+         y="2470"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text938">
+        sdf_link
+      </text>
+    </g>
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g944">
+      <text
+         x="642"
+         y="2470"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text942">
+        URI
+      </text>
+    </g>
+  </g>
+  <g
+     id="g970">
+    <g
+       id="g952">
+      <path
+         d="M230,2572 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z"
+         class="st0"
+         id="path948" />
+      <path
+         d="M230,2572 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z"
+         class="st1"
+         id="path950" />
+    </g>
+    <g
+       class="st2"
+       id="g956">
+      <path
+         d="M50,2550 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12"
+         id="path954" />
+    </g>
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g960">
+      <text
+         x="58"
+         y="2568"
+         class="st3 st4"
+         id="text958">
+        wikidata:Q19785209
+      </text>
+    </g>
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g964">
+      <text
+         x="58"
+         y="2540"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text962">
+        LigandProvider
+      </text>
+    </g>
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g968">
+      <text
+         x="222"
+         y="2540"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text966">
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st11"
+     points="230,2555 250,2555 250,2555 465,2555"
+     id="polyline972" />
+  <polygon
+     points="460.3,2560.7 459.4,2559.7 464.4,2555.0 459.4,2550.3 460.3,2549.3 466.5,2555.0"
+     id="polygon974" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 2550)"
+     id="text976">
+    rdf:type
+  </text>
+  <g
+     id="g986">
+    <rect
+       x="470"
+       y="2530"
+       width="180"
+       height="50"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff4c3"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="all"
+       id="rect978" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g984">
+      <switch
+         id="switch982">
+        <foreignObject
+           style="overflow: visible; text-align: left"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 2555px; margin-left: 471px">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal">
+                <xhtml:div>
+                  inno:Innovator
+                  <xhtml:br />
+</xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="560"
+           y="2549"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text980">
+          inno:Innovator
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline
+     class="st11"
+     points="230,2555 250,2555 250,2625 465,2625"
+     id="polyline988" />
+  <polygon
+     points="460.3,2630.7 459.4,2629.7 464.4,2625.0 459.4,2620.3 460.3,2619.3 466.5,2625.0"
+     id="polygon990" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 2620)"
+     id="text992">
+    rdf:type
+  </text>
+  <g
+     id="g1002">
+    <rect
+       x="470"
+       y="2600"
+       width="180"
+       height="50"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff4c3"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="all"
+       id="rect994" />
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g1000">
+      <switch
+         id="switch998">
+        <foreignObject
+           style="overflow: visible; text-align: left"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 2625px; margin-left: 471px">
+            <xhtml:div
+               style="box-sizing: border-box; font-size: 0; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal">
+                <xhtml:div>
+                  foaf:Organization
+                  <xhtml:br />
+</xhtml:div>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="560"
+           y="2619"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text996">
+          foaf:Organization
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,2555 250,2555 250,2695 465,2695"
+     id="polyline1004" />
+  <polygon
+     points="460.3,2700.7 459.4,2699.7 464.4,2695.0 459.4,2690.3 460.3,2689.3 466.5,2695.0"
+     id="polygon1006" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 2690)"
+     id="text1008">
+    rdfs:label
+  </text>
+  <g
+     id="g1026">
+    <rect
+       x="470"
+       y="2670"
+       width="180"
+       height="50"
+       class="st9"
+       id="rect1010" />
+    <polyline
+       points="470,2690 470,2670 650,2670 650,2690"
+       class="st2"
+       id="polyline1012" />
+    <g
+       id="g1016">
+      <text
+         x="478"
+         y="2705"
+         class="st3 st4"
+         dominant-baseline="middle"
+         id="text1014">
+        &quot;Namki Shoji CO., Ltd.&quot;@en
+      </text>
+    </g>
+    <g
+       id="g1020">
+      <text
+         x="478"
+         y="2680"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text1018">
+        provider_label
+      </text>
+    </g>
+    <g
+       id="g1024">
+      <text
+         x="642"
+         y="2680"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text1022">
+        String
+      </text>
+    </g>
+  </g>
+  <polyline
+     class="st12"
+     points="230,2555 250,2555 250,2765 465,2765"
+     id="polyline1028" />
+  <polygon
+     points="460.3,2770.7 459.4,2769.7 464.4,2765.0 459.4,2760.3 460.3,2759.3 466.5,2765.0"
+     id="polygon1030" />
+  <text
+     class="st6 st4"
+     transform="matrix(1 0 0 1 260 2760)"
+     id="text1032">
+    foaf:homePage
+  </text>
+  <g
+     id="g1056">
+    <g
+       id="g1038">
+      <path
+         d="M650,2782 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z"
+         class="st9uri"
+         id="path1034" />
+      <path
+         d="M650,2782 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z"
+         class="st1"
+         id="path1036" />
+    </g>
+    <g
+       class="st2"
+       id="g1042">
+      <path
+         d="M470,2760 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12"
+         id="path1040" />
+    </g>
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g1046">
+      <text
+         x="478"
+         y="2778"
+         class="st3 st4"
+         id="text1044">
+        &lt;https://www.namiki-s.co.jp/&gt;
+      </text>
+    </g>
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g1050">
+      <text
+         x="478"
+         y="2750"
+         class="st5 st6 st7"
+         dominant-baseline="middle"
+         id="text1048">
+        provider_homepage
+      </text>
+    </g>
+    <g
+       transform="translate(-0.5 -0.5)"
+       id="g1054">
+      <text
+         x="642"
+         y="2750"
+         class="st8 st6 st7"
+         text-anchor="end"
+         dominant-baseline="middle"
+         id="text1052">
+        URI
+      </text>
+    </g>
+  </g>
+  <g
+     id="g1082">
+    <text
+       x="60"
+       y="2834"
+       font-size="14px"
+       class="st6"
+       id="text1058">
+      Namespaces
+    </text>
+    <text
+       x="60"
+       y="2850"
+       font-size="12px"
+       class="st3"
+       id="text1060">
+      ligandbox: &lt;http://purl.jp/bio/5/ligandbox/&gt;
+    </text>
+    <text
+       x="60"
+       y="2866"
+       font-size="12px"
+       class="st3"
+       id="text1062">
+      ligandboxo:
+      &lt;https://togodb.biosciencedbc.jp/togodb/sheme/ligandbox.owl#&gt;
+    </text>
+    <text
+       x="60"
+       y="2882"
+       font-size="12px"
+       class="st3"
+       id="text1064">
+      jst: &lt;http://vocab.jst.go.jp/terms/sti#&gt;
+    </text>
+    <text
+       x="60"
+       y="2898"
+       font-size="12px"
+       class="st3"
+       id="text1066">
+      dcterms: &lt;http://purl.org/dc/terms/&gt;
+    </text>
+    <text
+       x="60"
+       y="2914"
+       font-size="12px"
+       class="st3"
+       id="text1068">
+      sio: &lt;http://semanticscience.org/resource/&gt;
+    </text>
+    <text
+       x="60"
+       y="2930"
+       font-size="12px"
+       class="st3"
+       id="text1070">
+      wikidata: &lt;http://www.wikidata.org/entity/&gt;
+    </text>
+    <text
+       x="60"
+       y="2946"
+       font-size="12px"
+       class="st3"
+       id="text1072">
+      rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+    </text>
+    <text
+       x="60"
+       y="2962"
+       font-size="12px"
+       class="st3"
+       id="text1074">
+      rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+    </text>
+    <text
+       x="60"
+       y="2978"
+       font-size="12px"
+       class="st3"
+       id="text1076">
+      inno: &lt;http://purl.org/innovation/ns#&gt;
+    </text>
+    <text
+       x="60"
+       y="2994"
+       font-size="12px"
+       class="st3"
+       id="text1078">
+      foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+    </text>
+    <rect
+       x="50"
+       y="2810"
+       width="458"
+       height="198"
+       fill="none"
+       stroke="#000000"
+       stroke-width="1"
+       id="rect1080" />
+  </g>
+</svg>
