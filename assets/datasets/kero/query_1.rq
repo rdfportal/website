@@ -1,0 +1,49 @@
+# SNV positions within 1000 bp upstream region of MT1A gene in A427 cell line
+# Note the SPARQL endpoint for KERO is https://rdfportal.org/rdf/kero/sparql .
+
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX so: <http://purl.obolibrary.org/obo/>
+PREFIX dbpedia: <http://dbpedia.org/ontology/>
+PREFIX snomed: <http://purl.bioontology.org/ontology/SNOMEDCT/>
+PREFIX ensemblvariation: <http://rdf.ebi.ac.uk/terms/ensemblvariation/>
+PREFIX faldo: <http://biohackathon.org/resource/faldo#>
+PREFIX kero: <http://kero.hgc.jp/ontology/kero.owl#>
+
+SELECT ?snv_position
+WHERE
+{
+  ?rnadataset a kero:RNAseqDataset ;
+    kero:hasExpressionData ?rnaseq ;
+    kero:sample ?sample .
+  ?sample a kero:SampleType ;
+    rdfs:label "A427" .
+  ?rnaseq a so:SO_0000673 ;
+    skos:altLabel "MT1A" ;
+    faldo:location ?rna_region .
+  ?rna_region a faldo:Region ;
+    faldo:begin ?begin ;
+    faldo:reference ?chr .
+  ?begin a ?direction ;
+    faldo:position ?position .
+  FILTER(?direction = faldo:ForwardStrandPosition OR ?direction = faldo:ReverseStrandPosition)
+  BIND(IF(?direction = faldo:ForwardStrandPosition, ?position - 1000, ?position) AS ?5position)
+  BIND(IF(?direction = faldo:ReverseStrandPosition, ?position + 1000, ?position) AS ?3position)
+    ?snv a so:SO_0001483 ;
+    faldo:location ?snv_location .
+  ?snv_location a faldo:ExactPosition ;
+    faldo:reference ?chr ;
+    faldo:position ?snv_position .
+  ?snvdataset a kero:SNVDataset ;
+    kero:hasVariationSite ?snv ;
+    kero:sample ?sample .
+  FILTER(?snv_position > ?5position AND ?snv_position < ?3position)
+}
