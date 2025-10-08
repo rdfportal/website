@@ -1,0 +1,16 @@
+title: DBKERO RDF
+website: http://kero.hgc.jp/rdf/
+description: DBKEROは細胞のマルチオミクスデータ（SNV, RNA-seq, ChIP-seq, BS-seq, TSS-seq）を集めたデータセットです。 ChIP-seq部分は巨大なため、簡略化したchip_seq_liteを収録しています。元の巨大なChIP-seqデータも https://rdfportal.org/rdf/download/kero/2017-01-27/all/chip_seq_all.tar.gz としてダウンロードできます。
+tags: [Genome, Polymorphism, Other DNA, Gene expression, Others]
+provider:
+creators:
+  - name: 河野　信
+    affiliation: 北里大学
+  - name: 若栗　浩幸
+    affiliation: 東京大学大学院新領域創成科学研究科
+  - name: 鈴木　穣
+    affiliation: 東京大学大学院新領域創成科学研究科
+version: 2020-06-10
+issued: 2020-06-10
+licenses:
+  - Attribution 4.0 International (CC BY 4.0) 

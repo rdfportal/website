@@ -1,13 +1,13 @@
 title: FAMSBASE GPCR
-website: 
-description: RDFized reference gene expresson dataset derived from CAGE and GeneChip experiments in the RefEx database.
+website: http://fams.bio.chuo-u.ac.jp/GPCR/
+description: GPCRタンパクの予測構造データベース
 tags: [ Protein, Structure ]
-provider:
+provider: 中央大学
 creators:
-  - name: Mitsuo Iwadate
-    affiliation: Chuo University
-  - name: Shuichi Kawahsima
-    affiliation: Database Center for Life Science
+  - name: 岩館満男
+    affiliation: 中央大学
+  - name: 川島秀一
+    affiliation: ライフサイエンス統合データベースセンター
   - name: 
     affiliation: 
 version: 2016-03-24
