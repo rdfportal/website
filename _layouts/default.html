@@ -19,7 +19,8 @@
       <ul class="stats">
         <li><span>{{ site.data.datasets | size }}</span><span>RDF dataset</span></li>
         {% assign total_triples = 0 %}
-        {% for d in site.data.datasets | default: [] %}
+        {% assign datasets = site.data.datasets | default: empty %}
+        {% for d in datasets %}
         {% assign t = d.statistics.number_of_triples | default: 0 %}
         {% assign total_triples = total_triples | plus: t %}
         {% endfor %}
