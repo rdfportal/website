@@ -1,0 +1,27 @@
+# Retrieve and print the GTDB taxonomic classification for the strains corresponding to the given NCBI taxids .
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX gtdb: <http://identifiers.org/gtdb/onto/>
+
+SELECT ?taxid ?strain ?species_label ?genus_label ?family_label ?order_label ?class_label ?phyla_label ?domain_label
+WHERE {
+  VALUES ?taxid {"191218" "190304"}
+  ?strain gtdb:ncbi_taxid ?taxid ;
+          rdfs:subClassOf ?species .
+  ?species rdfs:label ?species_label ;
+           rdfs:subClassOf ?genus .
+  ?genus rdfs:label ?genus_label ;
+         rdfs:subClassOf ?family .
+  ?family rdfs:label ?family_label ;
+          rdfs:subClassOf ?order .
+  ?order rdfs:label ?order_label ;
+         rdfs:subClassOf ?class .
+  ?class rdfs:label ?class_label ;
+         rdfs:subClassOf ?phyla .
+  ?phyla rdfs:label ?phyla_label ;
+         rdfs:subClassOf ?domain .
+  ?domain rdfs:label ?domain_label .
+}
+LIMIT 10
