@@ -6,14 +6,36 @@
     th
       text-align: left
     > thead
+      font-size: 1.6rem
       > tr
         border-bottom: solid 1px #000
     > tbody
+      font-size: 1.4rem
       > tr
         border-bottom: solid 1px #0004
+        > th, > td
+          padding-top: 0.5em
+          padding-bottom: 0.5em
         > th
           padding-right: 1em
+          white-space: nowrap
+
         > td
           > ul
             padding-left: 1em
-            column-count: 2 // メディアクエリーを用い変動
+            gap: 2em
+            > li
+              margin-bottom: 0.5em
+              line-height: 1
+
+@media (max-width: 1200px)
+  #EndpointsListView > table > tbody > tr > td > ul
+    column-count: 2
+
+@media (max-width: 768px)
+  #EndpointsListView > table > tbody > tr > td > ul
+    column-count: 1
+    
+@media (min-width: 1201px)
+  #EndpointsListView > table > tbody > tr > td > ul
+    column-count: 3

@@ -241,14 +241,14 @@ class DatasetCard {
     }
 
     if (desc)
-      return `<div class="${DatasetCard.DESCRIPTION_CLASS}">${this.#escapeHtml(
+      return `<p class="${DatasetCard.DESCRIPTION_CLASS}">${this.#escapeHtml(
         desc,
-      )}</div>`;
+      )}</p>`;
     if (this.#options.showFallbackDescription)
-      return `<div class="${DatasetCard.DESCRIPTION_CLASS
+      return `<p class="${DatasetCard.DESCRIPTION_CLASS
         } isFallback">${this.#escapeHtml(
           DatasetCard.DEFAULTS.FALLBACK_DESCRIPTION,
-        )}</div>`;
+        )}</p>`;
     return "";
   }
 

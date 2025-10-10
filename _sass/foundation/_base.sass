@@ -12,8 +12,42 @@
 *::after
   box-sizing: border-box
 
-// Google Fonts import
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap')
+// Local font-face declarations (use fonts in assets/fonts/)
+@font-face
+  font-family: 'Roboto'
+  src: url("../fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf") format('truetype')
+  font-weight: 100 900
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: 'Roboto'
+  src: url("../fonts/Roboto/Roboto-Italic-VariableFont_wdth,wght.ttf") format('truetype')
+  font-weight: 100 900
+  font-style: italic
+  font-display: swap
+
+@font-face
+  font-family: 'Roboto Condensed'
+  src: url("../fonts/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf") format('truetype')
+  font-weight: 100 900
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: 'Roboto Condensed'
+  src: url("../fonts/Roboto_Condensed/RobotoCondensed-Italic-VariableFont_wght.ttf") format('truetype')
+  font-weight: 100 900
+  font-style: italic
+  font-display: swap
+
+@font-face
+  font-family: 'Cormorant Garamond'
+  src: url("../fonts/Cormorant_Garamond/CormorantGaramond-VariableFont_wght.ttf") format('truetype')
+  font-weight: 300 700
+  font-style: normal
+  font-display: swap
+
 
 
 // Base
@@ -61,6 +95,9 @@ a
   &:hover
     color: #000D
     text-decoration: underline
+
+p, blockquote
+  font-family: var(--font-family-body)
 
 // Images
 img
