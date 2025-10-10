@@ -75,10 +75,10 @@ body
     z-index: calc(var(--z-index-global-navigation) + 1)
   &::before
     width: 100vw
-    top: var(--gap)
+    top: calc(var(--gap) + var(--height-common-header))
     left: 0
     border-top: 1px solid #0005
-    box-shadow: 0 calc(100vh - var(--gap) * 2) 0 #0005
+    box-shadow: 0 calc(100vh - var(--gap) * 2 - var(--height-common-header)) 0 #0005
   &::after
     height: 100vh
     top: 0
@@ -131,3 +131,6 @@ html[lang="en"]
     display: none
     &[aria-hidden]
       aria-hidden: true
+
+#dbcls-common-footer
+  display: none

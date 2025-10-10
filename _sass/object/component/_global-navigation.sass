@@ -2,17 +2,17 @@
   background-color: var(--color-page-bg)
 
   position: fixed
-  top: var(--margin-global-navigation)
+  top: calc(var(--margin-global-navigation) + var(--height-common-header))
   left: var(--margin-global-navigation)
   width: var(--width-global-navigation)
-  height: calc(100% - var(--margin-global-navigation) * 2)
+  height: calc(100% - var(--margin-global-navigation) * 2 - var(--height-common-header))
   z-index: var(--z-index-global-navigation)
 
   &::after
     content: ''
     position: absolute
     display: block
-    height: 100vh
+    height: calc(100vh - var(--height-common-header))
     top: calc(var(--margin-global-navigation) * -1)
     left: var(--width-global-navigation)
     border-left: 1px solid #0005
