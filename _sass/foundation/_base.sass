@@ -73,6 +73,7 @@ body
     position: fixed
     display: block
     z-index: calc(var(--z-index-global-navigation) + 1)
+    pointer-events: none
   &::before
     width: 100vw
     top: calc(var(--gap) + var(--height-common-header))
@@ -80,11 +81,12 @@ body
     border-top: 1px solid #0005
     box-shadow: 0 calc(100vh - var(--gap) * 2 - var(--height-common-header)) 0 #0005
   &::after
-    height: 100vh
-    top: 0
+    top: calc(var(--gap) * -1)
     left: var(--gap)
+    right: var(--gap)
+    bottom: calc(var(--gap) * -1)
     border-left: 1px solid #0005
-    box-shadow: calc(100vw - var(--gap) * 2) 0 0 #0005
+    border-right: 1px solid #0005
 
 // Links
 a
