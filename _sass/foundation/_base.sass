@@ -75,12 +75,11 @@ body
     z-index: calc(var(--z-index-global-navigation) + 1)
     pointer-events: none
   &::before
-    top: var(--gap)
-    left: calc(var(--gap) * -1)
-    right: calc(var(--gap) * -1)
-    bottom: var(--gap)
+    width: 100vw
+    top: calc(var(--gap) + var(--height-common-header))
+    left: 0
     border-top: 1px solid #0005
-    border-bottom: 1px solid #0005
+    box-shadow: 0 calc(100vh - var(--gap) * 2 - var(--height-common-header)) 0 #0005
   &::after
     top: calc(var(--gap) * -1)
     left: var(--gap)
@@ -134,3 +133,6 @@ html[lang="en"]
     display: none
     &[aria-hidden]
       aria-hidden: true
+
+#dbcls-common-footer
+  display: none
