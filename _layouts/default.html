@@ -18,7 +18,10 @@
   <aside class="global-navigation">
     <div class="background"></div>
     <div class="inner">
-      <h1><a href="{{ '/' | relative_url }}">RDF<br>Portal</a></h1>
+      <h1>
+        <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="RDF Portal Logo">
+        <a href="{{ '/' | relative_url }}">RDF<br>Portal</a>
+      </h1>
       <ul class="stats">
         <li><span>{{ site.data.datasets | size }}</span><span>RDF dataset</span></li>
         {% assign total_triples = 0 %}
