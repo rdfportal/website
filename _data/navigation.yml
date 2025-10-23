@@ -4,16 +4,16 @@
   children:
     - id: sparql_endpoints
       title: "SPARQL Endpoints"
-      url: "/sparql_endpoints/"
+      url: "/access_methods/sparql_endpoints/"
     - id: graphql
       title: "GraphQL API"
-      url: "/graphql/"
+      url: "/access_methods/graphql/"
     - id: mcp
       title: "MCP interface"
-      url: "/mcp/"
+      url: "/access_methods/mcp/"
     - id: llm_chat_interface
       title: "LLM chat interface"
-      url: "/llm_chat_interface/"
+      url: "/access_methods/llm_chat_interface/"
 - id: datasets
   title: "Datasets"
   url: "/datasets"
