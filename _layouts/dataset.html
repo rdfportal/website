@@ -27,11 +27,11 @@ backToListURL: /datasets
                         <th>Tags</th>
                         <td>
                             {% if page.dataset and page.dataset.tags %}
-                                {% assign _tags = page.dataset.tags %}
+                            {% assign _tags = page.dataset.tags %}
                             {% elsif page.tags %}
-                                {% assign _tags = page.tags %}
+                            {% assign _tags = page.tags %}
                             {% else %}
-                                {% assign _tags = empty %}
+                            {% assign _tags = empty %}
                             {% endif %}
                             <div class="tags-container">
                                 {% include tags.html tags=_tags %}
@@ -315,6 +315,78 @@ json_id='dataset-tags-json' size=48 %}
             }
         }
     })();
+</script>
+
+<style>
+    #schema-container .schema-svg {
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: none;
+        overflow: auto;
+        z-index: 1000;
+        padding: 40px;
+        box-sizing: border-box;
+    }
+
+    .modal-overlay.active {
+        display: block;
+    }
+
+    .modal-content {
+        display: block;
+        margin: 0 auto;
+        max-width: none;
+        max-height: none;
+        transform: scale(0.8);
+        transition: transform 0.3s ease-out;
+    }
+
+    .modal-overlay.active .modal-content {
+        transform: scale(1);
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const schemaContainer = document.getElementById('schema-container');
+        const schemaImg = schemaContainer ? schemaContainer.querySelector('.schema-svg') : null;
+
+        if (schemaImg) {
+            schemaImg.addEventListener('click', function () {
+                const modalOverlay = document.createElement('div');
+                modalOverlay.className = 'modal-overlay';
+
+                const modalContent = document.createElement('img');
+                modalContent.className = 'modal-content';
+                modalContent.src = schemaImg.src;
+
+                modalOverlay.appendChild(modalContent);
+                document.body.appendChild(modalOverlay);
+
+                // Show modal with a slight delay for the transition
+                setTimeout(() => {
+                    modalOverlay.classList.add('active');
+                }, 10);
+
+                modalOverlay.addEventListener('click', function () {
+                    modalOverlay.classList.remove('active');
+                    // Wait for the transition to finish before removing
+                    setTimeout(() => {
+                        document.body.removeChild(modalOverlay);
+                    }, 300);
+                });
+            });
+        }
+    });
 </script>
 
 <!-- Prism syntax highlighting for SPARQL examples (loaded only on dataset pages) -->
