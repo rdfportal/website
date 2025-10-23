@@ -5,12 +5,12 @@
     - id: sparql_endpoints
       title: "SPARQL Endpoints"
       url: "/access_methods/sparql_endpoints/"
-    - id: graphql
+    - id: graphql_api
       title: "GraphQL API"
-      url: "/access_methods/graphql/"
-    - id: mcp
+      url: "/access_methods/graphql_api/"
+    - id: mcp_interface
       title: "MCP interface"
-      url: "/access_methods/mcp/"
+      url: "/access_methods/mcp_interface/"
     - id: llm_chat_interface
       title: "LLM chat interface"
       url: "/access_methods/llm_chat_interface/"
