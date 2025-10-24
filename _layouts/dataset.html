@@ -199,14 +199,22 @@ backToListURL: /datasets
         </section>
         {% endif %}
 
+        {% if page.dataset.schema_svg %}
         <section class="schemadiagram">
             <h3>Schema diagram</h3>
             {% assign dataset_id = page.dataset.id %}
             {% assign local_rel = '/assets/datasets/' | append: dataset_id | append: '/schema.svg' %}
-            <div>
+            <div class="container">
                 <img src="{{ local_rel | relative_url }}" alt="Schema diagram for {{ dataset_id }}" />
             </div>
+            <div class="modaloverlay">
+                <div class="modalcontent">
+                    <img src="{{ local_rel | relative_url }}" alt="Schema diagram for {{ dataset_id }}" />
+                </div>
+            </div>
         </section>
+        {% endif %}
+
     </article>
 </div>
 
@@ -313,72 +321,29 @@ json_id='dataset-tags-json' size=48 %}
             }
         }
     })();
-</script>
 
-<style>
-    .modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        display: none;
-        overflow: auto;
-        z-index: 1000;
-        padding: 40px;
-        box-sizing: border-box;
+    function setupSchemaDiagramModal() {
+        const schemadiagram = document.querySelector('.schemadiagram');
+        if (!schemadiagram) return;
+
+        const schemaImg = schemadiagram.querySelector(':scope > .container > img');
+        const modalOverlay = schemadiagram.querySelector('.modaloverlay');
+
+        schemaImg.addEventListener('click', function () {
+            // Show modal
+            modalOverlay.classList.add('-active');
+
+            // Add a one-time click listener to the overlay to close the modal
+            const closeHandler = () => {
+                modalOverlay.classList.remove('-active');
+                modalOverlay.removeEventListener('click', closeHandler);
+            };
+            modalOverlay.addEventListener('click', closeHandler);
+        });
     }
 
-    .modal-overlay.active {
-        display: block;
-    }
-
-    .modal-content {
-        display: block;
-        margin: 0 auto;
-        max-width: none;
-        max-height: none;
-        transform: scale(0.8);
-        transition: transform 0.3s ease-out;
-    }
-
-    .modal-overlay.active .modal-content {
-        transform: scale(1);
-    }
-</style>
-
-<script>
     document.addEventListener('DOMContentLoaded', function () {
-        const schemaContainer = document.querySelector('.schemadiagram > div');
-        const schemaImg = schemaContainer ? schemaContainer.querySelector(':scope > img') : null;
-
-        if (schemaImg) {
-            schemaImg.addEventListener('click', function () {
-                const modalOverlay = document.createElement('div');
-                modalOverlay.className = 'modal-overlay';
-
-                const modalContent = document.createElement('img');
-                modalContent.className = 'modal-content';
-                modalContent.src = schemaImg.src;
-
-                modalOverlay.appendChild(modalContent);
-                document.body.appendChild(modalOverlay);
-
-                // Show modal with a slight delay for the transition
-                setTimeout(() => {
-                    modalOverlay.classList.add('active');
-                }, 10);
-
-                modalOverlay.addEventListener('click', function () {
-                    modalOverlay.classList.remove('active');
-                    // Wait for the transition to finish before removing
-                    setTimeout(() => {
-                        document.body.removeChild(modalOverlay);
-                    }, 300);
-                });
-            });
-        }
+        setupSchemaDiagramModal();
     });
 </script>
 
