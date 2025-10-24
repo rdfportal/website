@@ -199,30 +199,11 @@ backToListURL: /datasets
         </section>
         {% endif %}
 
-        <script>
-            // Format numbers in .stat-num cells with thousands separators
-            (function () {
-                function formatNumber(n) {
-                    if (n === null || n === undefined) return n;
-                    var num = Number(String(n).replace(/[^0-9\-\.]/g, ""));
-                    if (isNaN(num)) return n;
-                    return num.toLocaleString();
-                }
-                document.addEventListener("DOMContentLoaded", function () {
-                    var cells = document.querySelectorAll(".statistics .stat-num");
-                    cells.forEach(function (td) {
-                        td.textContent = formatNumber(td.textContent);
-                    });
-                });
-            })();
-        </script>
-
         <section class="schemadiagram">
             <h3>Schema diagram</h3>
             {% assign dataset_id = page.dataset.id %}
             {% assign local_rel = '/assets/datasets/' | append: dataset_id | append: '/schema.svg' %}
-            <div data-dataset-id="{{ dataset_id }}"
-                data-dataset-slug="{{ page.path | split: '/' | last | remove: '.md' }}">
+            <div>
                 <img src="{{ local_rel | relative_url }}" alt="Schema diagram for {{ dataset_id }}" />
             </div>
         </section>
@@ -233,7 +214,25 @@ backToListURL: /datasets
 dataset-init-script.html container_id='dataset-icon-container'
 json_id='dataset-tags-json' size=48 %}
 
+
 <script>
+
+    // Format numbers in .stat-num cells with thousands separators
+    (function () {
+        function formatNumber(n) {
+            if (n === null || n === undefined) return n;
+            var num = Number(String(n).replace(/[^0-9\-\.]/g, ""));
+            if (isNaN(num)) return n;
+            return num.toLocaleString();
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            var cells = document.querySelectorAll(".statistics .stat-num");
+            cells.forEach(function (td) {
+                td.textContent = formatNumber(td.textContent);
+            });
+        });
+    })();
+
     // Render dataset icon as a data:URI and apply it to .global-navigation::before
     (function () {
         var styleId = "global-dataset-icon-style";
