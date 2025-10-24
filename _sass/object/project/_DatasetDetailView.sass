@@ -48,9 +48,14 @@
               > td
                 text-align: right
 
-      > div:has(> img)
-        padding-top: 8px
-        overflow-x: auto
-        text-align: center
-        > img
+      &.schemadiagram
+        > div
+          padding-top: 8px
+          overflow-x: auto
+          text-align: center
           max-height: 300px
+          overflow: hidden
+          > img
+            width: 300px
+            cursor: zoom-in
+            transition: transform 0.2s

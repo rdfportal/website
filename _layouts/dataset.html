@@ -221,10 +221,9 @@ backToListURL: /datasets
             <h3>Schema diagram</h3>
             {% assign dataset_id = page.dataset.id %}
             {% assign local_rel = '/assets/datasets/' | append: dataset_id | append: '/schema.svg' %}
-            <div id="schema-container" data-dataset-id="{{ dataset_id }}"
+            <div data-dataset-id="{{ dataset_id }}"
                 data-dataset-slug="{{ page.path | split: '/' | last | remove: '.md' }}">
-                <img src="{{ local_rel | relative_url }}" alt="Schema diagram for {{ dataset_id }}"
-                    class="schema-svg" />
+                <img src="{{ local_rel | relative_url }}" alt="Schema diagram for {{ dataset_id }}" />
             </div>
         </section>
     </article>
@@ -318,11 +317,6 @@ json_id='dataset-tags-json' size=48 %}
 </script>
 
 <style>
-    #schema-container .schema-svg {
-        cursor: pointer;
-        transition: transform 0.2s;
-    }
-
     .modal-overlay {
         position: fixed;
         top: 0;
@@ -357,8 +351,8 @@ json_id='dataset-tags-json' size=48 %}
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const schemaContainer = document.getElementById('schema-container');
-        const schemaImg = schemaContainer ? schemaContainer.querySelector('.schema-svg') : null;
+        const schemaContainer = document.querySelector('.schemadiagram > div');
+        const schemaImg = schemaContainer ? schemaContainer.querySelector(':scope > img') : null;
 
         if (schemaImg) {
             schemaImg.addEventListener('click', function () {
