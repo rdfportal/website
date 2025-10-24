@@ -11,11 +11,9 @@ backToListURL: /datasets
             <div id="dataset-icon-container" class="icon" aria-hidden="true"></div>
             <h2>{{ page.dataset.title }}</h2>
         </header>
-        <ul class="links">
-            <li>
-                <a href="{{ page.dataset.website }}" class="external-link">Website</a>
-            </li>
-        </ul>
+        <div class="link">
+            <a href="{{ page.dataset.website }}" class="button-view -externallink">Website</a>
+        </div>
 
         <p class="description">{{ page.dataset.description.en }}</p>
 
