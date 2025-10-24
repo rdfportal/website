@@ -10,8 +10,8 @@ description: SPARQLエンドポイントの一覧を表示します
   <table>
     <thead>
       <tr>
-        <th>Endpoints</th>
-        <th>Datasets</th>
+        <th>Endpoint</th>
+        <th>Available datasets</th>
       </tr>
     </thead>
     <tbody>

@@ -1,47 +1,25 @@
 .segmented-buttons-container
-  // Block: segmented-buttons-container (RSCSS)
   display: inline-flex
-  align-items: stretch
-  border-radius: 6px
-  overflow: hidden
-  border: 1px solid rgba(0,0,0,0.2)
-  background: #fff
+  width: fit-content
 
-  > button
-    // Element: button (direct child)
-    appearance: none
-    -webkit-appearance: none
-    background: transparent
-    border: 0
-    padding: 6px 12px
-    font-size: 1.3rem
-    color: #333
-    cursor: pointer
-    line-height: 1
-    display: inline-flex
-    align-items: center
-    justify-content: center
-
-    // visual separator between buttons
-    & + button
-      border-left: 1px solid rgba(0,0,0,0.06)
-
-    // keyboard focus
-    &:focus
-      outline: none
-      box-shadow: 0 0 0 3px rgba(0,122,255,0.12)
+  > .button-view
+    --radius: calc(1.2rem + 6px)
+    border-radius: 0
+    padding-inline: 8px
+    margin-left: -1px
+    position: relative
+    &:hover
+      z-index: 1
+    &:first-child
+      border-top-left-radius: var(--radius)
+      border-bottom-left-radius: var(--radius)
+      padding-left: 12px
+    &:last-child
+      border-top-right-radius: var(--radius)
+      border-bottom-right-radius: var(--radius)
+      padding-right: 12px
 
     // active / selected state
     &.-active, &[aria-pressed="true"]
-      // fallback background color for older browsers
-      background-color: var(--color-key)
-      // gradient for more polished look (top -> bottom)
-      background-image: linear-gradient(180deg, var(--color-key), blue)
-      background-repeat: no-repeat
-      background-size: cover
+      background-image: linear-gradient(180deg, #333355, black)
       color: #fff
-
-  // reduce visual noise on very small screens
-  @media (max-width: 480px)
-    > button
-      padding: 6px 8px
