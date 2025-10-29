@@ -5,6 +5,13 @@ pageId: dataset
 backToListURL: /datasets
 ---
 
+<!-- Prism syntax highlighting for SPARQL examples (loaded only on dataset pages) -->
+<link rel="stylesheet" href="{{ '/assets/vendor/prism/prism.css' | relative_url }}">
+<script src="{{ '/assets/vendor/prism/prism.js' | relative_url }}"></script>
+<!-- Load Turtle first because prism-sparql extends the Turtle grammar -->
+<script src="{{ '/assets/vendor/prism/prism-turtle.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/vendor/prism/prism-sparql.min.js' | relative_url }}"></script>
+
 <div id="DatasetDetailView">
     <article class="inner">
         <header>
@@ -179,8 +186,6 @@ json_id='dataset-tags-json' size=48 %}
 
 <script>
 
-
-
     function setupSchemaDiagramModal() {
         const schemadiagram = document.querySelector('.schemadiagram');
         if (!schemadiagram) return;
@@ -221,12 +226,6 @@ json_id='dataset-tags-json' size=48 %}
     });
 </script>
 
-<!-- Prism syntax highlighting for SPARQL examples (loaded only on dataset pages) -->
-<link rel="stylesheet" href="{{ '/assets/vendor/prism/prism.css' | relative_url }}">
-<script src="{{ '/assets/vendor/prism/prism.js' | relative_url }}"></script>
-<!-- Load Turtle first because prism-sparql extends the Turtle grammar -->
-<script src="{{ '/assets/vendor/prism/prism-turtle.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/vendor/prism/prism-sparql.min.js' | relative_url }}"></script>
 <script>
     try {
         if (window.Prism && typeof window.Prism.highlightAll === 'function') {
