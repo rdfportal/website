@@ -223,17 +223,17 @@ json_id='dataset-tags-json' size=48 %}
 
         // Setup schema diagram modal functionality
         setupSchemaDiagramModal();
-    });
-</script>
 
-<script>
-    try {
-        if (window.Prism && typeof window.Prism.highlightAll === 'function') {
-            window.Prism.highlightAll();
+        // Code syntax highlighting
+        try {
+            if (window.Prism && typeof window.Prism.highlightAll === 'function') {
+                window.Prism.highlightAll();
+            }
+        } catch (e) {
+            /* noop */
         }
-    } catch (e) {
-        /* noop */
-    }
+
+    });
 </script>
 
 <script>
