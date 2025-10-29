@@ -214,6 +214,14 @@ json_id='dataset-tags-json' size=48 %}
     }
 
     function setupCopyCodeButtons() {
+
+        const rewriteButtonText = function (btn) {
+            btn.classList.add('-copied');
+            const old = btn.textContent;
+            btn.textContent = 'Copied';
+            setTimeout(function () { btn.classList.remove('-copied'); btn.textContent = old; }, 1500);
+        };
+
         document.querySelectorAll('.copycodebutton').forEach(function (btn) {
             btn.addEventListener('click', function () {
                 const box = btn.closest('.code-box');
@@ -221,24 +229,16 @@ json_id='dataset-tags-json' size=48 %}
 
                 if (!codeEl) return;
                 // code text is escaped in HTML; use textContent to get raw query
-                var txt = codeEl.textContent || '';
-                // var p = copyText(txt);
-                var p = navigator.clipboard.writeText(txt);
+                const p = navigator.clipboard.writeText(codeEl.textContent || '');
                 if (p && p.then) {
                     p.then(function () {
-                        btn.classList.add('-copied');
-                        var old = btn.textContent;
-                        btn.textContent = 'Copied';
-                        setTimeout(function () { btn.classList.remove('-copied'); btn.textContent = old; }, 1500);
+                        rewriteButtonText(btn);
                     }).catch(function () {
                         // ignore
                     });
                 } else {
                     // fallback path (sync copy)
-                    btn.classList.add('-copied');
-                    var old = btn.textContent;
-                    btn.textContent = 'Copied';
-                    setTimeout(function () { btn.classList.remove('-copied'); btn.textContent = old; }, 1500);
+                    rewriteButtonText(btn);
                 }
             });
         });
