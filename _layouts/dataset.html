@@ -223,21 +223,6 @@ json_id='dataset-tags-json' size=48 %}
 
 <script>
 
-    // Format numbers in .stat-num cells with thousands separators
-    (function () {
-        function formatNumber(n) {
-            if (n === null || n === undefined) return n;
-            var num = Number(String(n).replace(/[^0-9\-\.]/g, ""));
-            if (isNaN(num)) return n;
-            return num.toLocaleString();
-        }
-        document.addEventListener("DOMContentLoaded", function () {
-            var cells = document.querySelectorAll(".statistics .stat-num");
-            cells.forEach(function (td) {
-                td.textContent = formatNumber(td.textContent);
-            });
-        });
-    })();
 
     // Render dataset icon as a data:URI and apply it to .global-navigation::before
     (function () {
@@ -340,7 +325,23 @@ json_id='dataset-tags-json' size=48 %}
         });
     }
 
+    function formatNumber(n) {
+        console.log(n)
+        if (n === null || n === undefined) return n;
+        const num = Number(String(n).replace(/[^0-9\-\.]/g, ""));
+        if (isNaN(num)) return n;
+        return num.toLocaleString();
+    }
+
+
     document.addEventListener('DOMContentLoaded', function () {
+
+        // Format numbers in .stat-num cells with thousands separators
+        document.querySelectorAll('.statistics > .container > dl > dd').forEach(function (td) {
+            td.textContent = formatNumber(td.textContent);
+        });
+
+        // Setup schema diagram modal functionality
         setupSchemaDiagramModal();
     });
 </script>
