@@ -213,6 +213,37 @@ json_id='dataset-tags-json' size=48 %}
         return num.toLocaleString();
     }
 
+    function setupCopyCodeButtons() {
+        document.querySelectorAll('.copycodebutton').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                const box = btn.closest('.code-box');
+                const codeEl = box.querySelector('pre > code');
+
+                if (!codeEl) return;
+                // code text is escaped in HTML; use textContent to get raw query
+                var txt = codeEl.textContent || '';
+                // var p = copyText(txt);
+                var p = navigator.clipboard.writeText(txt);
+                if (p && p.then) {
+                    p.then(function () {
+                        btn.classList.add('-copied');
+                        var old = btn.textContent;
+                        btn.textContent = 'Copied';
+                        setTimeout(function () { btn.classList.remove('-copied'); btn.textContent = old; }, 1500);
+                    }).catch(function () {
+                        // ignore
+                    });
+                } else {
+                    // fallback path (sync copy)
+                    btn.classList.add('-copied');
+                    var old = btn.textContent;
+                    btn.textContent = 'Copied';
+                    setTimeout(function () { btn.classList.remove('-copied'); btn.textContent = old; }, 1500);
+                }
+            });
+        });
+    }
+
 
     document.addEventListener('DOMContentLoaded', function () {
 
@@ -224,6 +255,9 @@ json_id='dataset-tags-json' size=48 %}
         // Setup schema diagram modal functionality
         setupSchemaDiagramModal();
 
+        // Setup "Copy" buttons in code boxes
+        setupCopyCodeButtons();
+
         // Code syntax highlighting
         try {
             if (window.Prism && typeof window.Prism.highlightAll === 'function') {
@@ -234,60 +268,6 @@ json_id='dataset-tags-json' size=48 %}
         }
 
     });
-</script>
-
-<script>
-    (function () {
-        function findCodeFromButton(button) {
-            var box = button.closest('.code-box');
-            if (!box) return null;
-            return box.querySelector('pre > code');
-        }
-
-        function copyText(text) {
-            if (!navigator.clipboard) {
-                // fallback for older browsers
-                var ta = document.createElement('textarea');
-                ta.value = text;
-                ta.style.position = 'fixed';
-                ta.style.left = '-9999px';
-                document.body.appendChild(ta);
-                ta.select();
-                try { document.execCommand('copy'); } catch (e) { /* noop */ }
-                document.body.removeChild(ta);
-                return;
-            }
-            return navigator.clipboard.writeText(text);
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('.copycodebutton').forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    var codeEl = findCodeFromButton(btn);
-                    if (!codeEl) return;
-                    // code text is escaped in HTML; use textContent to get raw query
-                    var txt = codeEl.textContent || '';
-                    var p = copyText(txt);
-                    if (p && p.then) {
-                        p.then(function () {
-                            btn.classList.add('-copied');
-                            var old = btn.textContent;
-                            btn.textContent = 'Copied';
-                            setTimeout(function () { btn.classList.remove('-copied'); btn.textContent = old; }, 1500);
-                        }).catch(function () {
-                            // ignore
-                        });
-                    } else {
-                        // fallback path (sync copy)
-                        btn.classList.add('-copied');
-                        var old = btn.textContent;
-                        btn.textContent = 'Copied';
-                        setTimeout(function () { btn.classList.remove('-copied'); btn.textContent = old; }, 1500);
-                    }
-                });
-            });
-        });
-    })();
 </script>
 
 <script>
