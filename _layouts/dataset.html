@@ -115,64 +115,64 @@ backToListURL: /datasets
             <h3>Dataset statistics</h3>
             {% assign s = page.dataset.statistics | default: nil %}
             {% if s %}
-            <table class="stats-table" aria-describedby="stats-desc">
-                <tbody>
-                    {% if s.number_of_triples %}
-                    <tr>
-                        <th>Triples</th>
-                        <td class="stat-num">{{ s.number_of_triples }}</td>
-                    </tr>
-                    {% endif %}
-                    {% if s.number_of_instances %}
-                    <tr>
-                        <th>Instances</th>
-                        <td class="stat-num">{{ s.number_of_instances }}</td>
-                    </tr>
-                    {% endif %}
-                    {% if s.number_of_subjects %}
-                    <tr>
-                        <th>Subjects</th>
-                        <td class="stat-num">{{ s.number_of_subjects }}</td>
-                    </tr>
-                    {% endif %}
-                    {% if s.number_of_properties %}
-                    <tr>
-                        <th>Properties</th>
-                        <td class="stat-num">{{ s.number_of_properties }}</td>
-                    </tr>
-                    {% endif %}
-                    {% if s.number_of_objects %}
-                    <tr>
-                        <th>Objects</th>
-                        <td class="stat-num">{{ s.number_of_objects }}</td>
-                    </tr>
-                    {% endif %}
-                    {% if s.number_of_literals %}
-                    <tr>
-                        <th>Literals</th>
-                        <td class="stat-num">{{ s.number_of_literals }}</td>
-                    </tr>
-                    {% endif %}
-                    {% if s.number_of_classes %}
-                    <tr>
-                        <th>Classes</th>
-                        <td class="stat-num">{{ s.number_of_classes }}</td>
-                    </tr>
-                    {% endif %}
-                    {% if s.number_of_datatypes %}
-                    <tr>
-                        <th>Datatypes</th>
-                        <td class="stat-num">{{ s.number_of_datatypes }}</td>
-                    </tr>
-                    {% endif %}
-                    {% if s.number_of_links %}
-                    <tr>
-                        <th>Links</th>
-                        <td class="stat-num">{{ s.number_of_links }}</td>
-                    </tr>
-                    {% endif %}
-                </tbody>
-            </table>
+
+            {% if s.number_of_triples %}
+            <div class="container">
+                <dl>
+                    <dt>Triples</dt>
+                    <dd>{{ s.number_of_triples }}</dd>
+                </dl>
+                {% endif %}
+                {% if s.number_of_instances %}
+                <dl>
+                    <dt>Instances</dt>
+                    <dd>{{ s.number_of_instances }}</dd>
+                </dl>
+                {% endif %}
+                {% if s.number_of_subjects %}
+                <dl>
+                    <dt>Subjects</dt>
+                    <dd>{{ s.number_of_subjects }}</dd>
+                </dl>
+                {% endif %}
+                {% if s.number_of_properties %}
+                <dl>
+                    <dt>Properties</dt>
+                    <dd>{{ s.number_of_properties }}</dd>
+                </dl>
+                {% endif %}
+                {% if s.number_of_objects %}
+                <dl>
+                    <dt>Objects</dt>
+                    <dd>{{ s.number_of_objects }}</dd>
+                </dl>
+                {% endif %}
+                {% if s.number_of_literals %}
+                <dl>
+                    <dt>Literals</dt>
+                    <dd>{{ s.number_of_literals }}</dd>
+                </dl>
+                {% endif %}
+                {% if s.number_of_classes %}
+                <dl>
+                    <dt>Classes</dt>
+                    <dd>{{ s.number_of_classes }}</dd>
+                </dl>
+                {% endif %}
+                {% if s.number_of_datatypes %}
+                <dl>
+                    <dt>Datatypes</dt>
+                    <dd>{{ s.number_of_datatypes }}</dd>
+                </dl>
+                {% endif %}
+                {% if s.number_of_links %}
+                <dl>
+                    <dt>Links</dt>
+                    <dd>{{ s.number_of_links }}</dd>
+                </dl>
+                {% endif %}
+            </div>
+
             {% else %}
             <p class="no-data">No statistics available.</p>
             {% endif %}
