@@ -20,6 +20,8 @@
             cursor: pointer
             border-bottom: solid 1px #000
             padding-right: 16px
+            &:not([data-sort="title"])
+              text-align: right
             &[data-sort]
               > .th-label
                 position: relative
@@ -56,5 +58,7 @@
         > tr
           > td
             border-bottom: solid 1px #999
+            &:not([data-key="title"])
+              text-align: right
           &:hover
             background-color: #f1f1f1
