@@ -47,6 +47,20 @@ permalink: /statistics/
 // タグ統計棒グラフ描画（DatasetsManagerで集計）
 
 document.addEventListener('DOMContentLoaded', async function() {
+  // Format numbers to use commas as separators
+  function formatNumberWithCommas(num) {
+    if (!num || num === '') return '';
+    return parseInt(num).toLocaleString();
+  }
+
+  const numericCells = document.querySelectorAll('#StatisticsTableView td[data-key]:not([data-key="title"])');
+  numericCells.forEach(cell => {
+    const rawValue = cell.textContent.trim();
+    if (rawValue && rawValue !== '' && rawValue !== '0') {
+      cell.textContent = formatNumberWithCommas(rawValue);
+    }
+  });
+
   // タグ統計バー描画
   const barsContainerEl = document.querySelector('#TagStatsBar');
   if (barsContainerEl && window.DatasetsManager) {
@@ -87,10 +101,18 @@ document.addEventListener('DOMContentLoaded', async function() {
         const isNumber = sortKey !== 'title';
         const asc = !th.classList.contains('asc');
         rows.sort((a, b) => {
-          const va = a.querySelector(`[data-key='${sortKey}']`)?.textContent || a.cells[th.cellIndex].textContent;
-          const vb = b.querySelector(`[data-key='${sortKey}']`)?.textContent || b.cells[th.cellIndex].textContent;
-          if (isNumber) return asc ? va - vb : vb - va;
-          return asc ? va.localeCompare(vb) : vb.localeCompare(va);
+          const cellA = a.querySelector(`[data-key='${sortKey}']`) || a.cells[th.cellIndex];
+          const cellB = b.querySelector(`[data-key='${sortKey}']`) || b.cells[th.cellIndex];
+          
+          if (isNumber) {
+            const va = parseInt(cellA?.textContent.replace(/,/g, '') || '0');
+            const vb = parseInt(cellB?.textContent.replace(/,/g, '') || '0');
+            return asc ? va - vb : vb - va;
+          } else {
+            const va = cellA?.textContent || '';
+            const vb = cellB?.textContent || '';
+            return asc ? va.localeCompare(vb) : vb.localeCompare(va);
+          }
         });
         rows.forEach(row => table.tBodies[0].appendChild(row));
         table.querySelectorAll('th').forEach(h => h.classList.remove('asc', 'desc'));
