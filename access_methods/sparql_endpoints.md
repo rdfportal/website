@@ -2,6 +2,7 @@
 layout: page
 title: SPARQL endpoints
 pageId: sparql_endpoints
+parentPageId: access_methods
 description: SPARQLエンドポイントの一覧を表示します
 ---
 

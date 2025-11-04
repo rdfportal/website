@@ -2,6 +2,7 @@
 layout: page
 title: LLM chat interface
 pageId: llm_chat_interface
+parentPageId: access_methods
 description: SPARQLエンドポイントの一覧を表示します
 ---
 

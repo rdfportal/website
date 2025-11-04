@@ -2,6 +2,7 @@
 layout: page
 title: Access methods
 pageId: access_methods
+parentPageId: access_methods
 description: RDFデータへのアクセス方法について説明します
 permalink: /access_methods/
 ---
