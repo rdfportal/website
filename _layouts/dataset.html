@@ -5,6 +5,13 @@ pageId: dataset
 backToListURL: /datasets
 ---
 
+<!-- Prism syntax highlighting for SPARQL examples (loaded only on dataset pages) -->
+<link rel="stylesheet" href="{{ '/assets/vendor/prism/prism.css' | relative_url }}">
+<script src="{{ '/assets/vendor/prism/prism.js' | relative_url }}"></script>
+<!-- Load Turtle first because prism-sparql extends the Turtle grammar -->
+<script src="{{ '/assets/vendor/prism/prism-turtle.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/vendor/prism/prism-sparql.min.js' | relative_url }}"></script>
+
 <div id="DatasetDetailView">
     <article class="inner">
         <header>
@@ -179,91 +186,6 @@ json_id='dataset-tags-json' size=48 %}
 
 <script>
 
-
-    // Render dataset icon as a data:URI and apply it to .global-navigation::before
-    (function () {
-        var styleId = "global-dataset-icon-style";
-        function svgToDataUri(svg) {
-            if (!svg) return "";
-            // normalize and trim to avoid accidental leading/trailing whitespace/newlines
-            var s = String(svg).replace(/\r\n?/g, "\n").trim();
-            // prefer base64 for safer embedding; fall back to URI-encoding
-            try {
-                return (
-                    "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(s)))
-                );
-            } catch (e) {
-                try {
-                    return "data:image/svg+xml;utf8," + encodeURIComponent(s);
-                } catch (e2) {
-                    console.error("svgToDataUri: encoding failed", e2);
-                    return "";
-                }
-            }
-        }
-
-        function readTags() {
-            try {
-                var el = document.getElementById("dataset-tags-json");
-                if (!el) return [];
-                var txt = el.textContent || el.innerText || "";
-                if (!txt) return [];
-                return JSON.parse(txt || "[]");
-            } catch (e) {
-                return [];
-            }
-        }
-
-        function applyBackground(svg) {
-            try {
-                var css =
-                    '.global-navigation > .background::before{background-image:url("' +
-                    svgToDataUri(svg) +
-                    '")}';
-                var existing = document.getElementById(styleId);
-                if (existing) existing.parentNode.removeChild(existing);
-                var s = document.createElement("style");
-                s.id = styleId;
-                s.textContent = css;
-                document.head.appendChild(s);
-            } catch (e) {
-                console.error("applyBackground failed", e);
-            }
-        }
-
-        function attempt() {
-            var tags = readTags();
-            if (
-                !window.DatasetIcon ||
-                typeof window.DatasetIcon.createSvg !== "function"
-            )
-                return false;
-            try {
-                var svg = window.DatasetIcon.createSvg(tags, 120, {});
-                applyBackground(svg);
-                return true;
-            } catch (e) {
-                console.warn("global icon generation failed", e);
-                return false;
-            }
-        }
-
-        if (document.readyState === "loading")
-            document.addEventListener("DOMContentLoaded", function () {
-                if (!attempt()) {
-                    setTimeout(attempt, 80);
-                }
-            });
-        else {
-            if (!attempt()) {
-                setTimeout(attempt, 80);
-            }
-        }
-    })();
-
-
-
-
     function setupSchemaDiagramModal() {
         const schemadiagram = document.querySelector('.schemadiagram');
         if (!schemadiagram) return;
@@ -285,103 +207,49 @@ json_id='dataset-tags-json' size=48 %}
     }
 
     function formatNumber(n) {
-        console.log(n)
         if (n === null || n === undefined) return n;
         const num = Number(String(n).replace(/[^0-9\-\.]/g, ""));
         if (isNaN(num)) return n;
         return num.toLocaleString();
     }
 
+    // Setup "Copy" buttons in code boxes
+    function setupCopyCodeButtons() {
 
-    document.addEventListener('DOMContentLoaded', function () {
+        const rewriteButtonText = function (btn) {
+            btn.classList.add('-copied');
+            const old = btn.textContent;
+            btn.textContent = 'Copied';
+            setTimeout(function () { btn.classList.remove('-copied'); btn.textContent = old; }, 1500);
+        };
 
-        // Format numbers in .stat-num cells with thousands separators
-        document.querySelectorAll('.statistics > .container > dl > dd').forEach(function (td) {
-            td.textContent = formatNumber(td.textContent);
-        });
+        document.querySelectorAll('.copycodebutton').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                const box = btn.closest('.code-box');
+                const codeEl = box.querySelector('pre > code');
 
-        // Setup schema diagram modal functionality
-        setupSchemaDiagramModal();
-    });
-</script>
-
-<!-- Prism syntax highlighting for SPARQL examples (loaded only on dataset pages) -->
-<link rel="stylesheet" href="{{ '/assets/vendor/prism/prism.css' | relative_url }}">
-<script src="{{ '/assets/vendor/prism/prism.js' | relative_url }}"></script>
-<!-- Load Turtle first because prism-sparql extends the Turtle grammar -->
-<script src="{{ '/assets/vendor/prism/prism-turtle.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/vendor/prism/prism-sparql.min.js' | relative_url }}"></script>
-<script>
-    try {
-        if (window.Prism && typeof window.Prism.highlightAll === 'function') {
-            window.Prism.highlightAll();
-        }
-    } catch (e) {
-        /* noop */
-    }
-</script>
-
-<script>
-    (function () {
-        function findCodeFromButton(button) {
-            var box = button.closest('.code-box');
-            if (!box) return null;
-            return box.querySelector('pre > code');
-        }
-
-        function copyText(text) {
-            if (!navigator.clipboard) {
-                // fallback for older browsers
-                var ta = document.createElement('textarea');
-                ta.value = text;
-                ta.style.position = 'fixed';
-                ta.style.left = '-9999px';
-                document.body.appendChild(ta);
-                ta.select();
-                try { document.execCommand('copy'); } catch (e) { /* noop */ }
-                document.body.removeChild(ta);
-                return;
-            }
-            return navigator.clipboard.writeText(text);
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('.copycodebutton').forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    var codeEl = findCodeFromButton(btn);
-                    if (!codeEl) return;
-                    // code text is escaped in HTML; use textContent to get raw query
-                    var txt = codeEl.textContent || '';
-                    var p = copyText(txt);
-                    if (p && p.then) {
-                        p.then(function () {
-                            btn.classList.add('-copied');
-                            var old = btn.textContent;
-                            btn.textContent = 'Copied';
-                            setTimeout(function () { btn.classList.remove('-copied'); btn.textContent = old; }, 1500);
-                        }).catch(function () {
-                            // ignore
-                        });
-                    } else {
-                        // fallback path (sync copy)
-                        btn.classList.add('-copied');
-                        var old = btn.textContent;
-                        btn.textContent = 'Copied';
-                        setTimeout(function () { btn.classList.remove('-copied'); btn.textContent = old; }, 1500);
-                    }
-                });
+                if (!codeEl) return;
+                // code text is escaped in HTML; use textContent to get raw query
+                const p = navigator.clipboard.writeText(codeEl.textContent || '');
+                if (p && p.then) {
+                    p.then(function () {
+                        rewriteButtonText(btn);
+                    }).catch(function () {
+                        // ignore
+                    });
+                } else {
+                    // fallback path (sync copy)
+                    rewriteButtonText(btn);
+                }
             });
         });
-    })();
-</script>
+    }
 
-<script>
-    // Render dataset icon as a data:URI and apply it to .global-navigation::before
-    (function () {
-        var styleId = "global-dataset-icon-style";
+
+    function drawBackground() {
         function svgToDataUri(svg) {
             if (!svg) return "";
-            var s = String(svg).replace(/\r\n?/g, "\n").trim();
+            const s = String(svg).replace(/\r\n?/g, "\n").trim();
             try {
                 return (
                     "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(s)))
@@ -398,9 +266,9 @@ json_id='dataset-tags-json' size=48 %}
 
         function readTags() {
             try {
-                var el = document.getElementById("dataset-tags-json");
+                const el = document.getElementById("dataset-tags-json");
                 if (!el) return [];
-                var txt = el.textContent || el.innerText || "";
+                const txt = el.textContent || el.innerText || "";
                 if (!txt) return [];
                 return JSON.parse(txt || "[]");
             } catch (e) {
@@ -410,13 +278,14 @@ json_id='dataset-tags-json' size=48 %}
 
         function applyBackground(svg) {
             try {
-                var css =
+                const styleId = "global-dataset-icon-style";
+                const css =
                     '.global-navigation > .background::before{background-image:url("' +
                     svgToDataUri(svg) +
                     '")}';
-                var existing = document.getElementById(styleId);
+                const existing = document.getElementById(styleId);
                 if (existing) existing.parentNode.removeChild(existing);
-                var s = document.createElement("style");
+                const s = document.createElement("style");
                 s.id = styleId;
                 s.textContent = css;
                 document.head.appendChild(s);
@@ -425,33 +294,48 @@ json_id='dataset-tags-json' size=48 %}
             }
         }
 
-        function attempt() {
-            var tags = readTags();
-            if (
-                !window.DatasetIcon ||
-                typeof window.DatasetIcon.createSvg !== "function"
-            )
-                return false;
-            try {
-                var svg = window.DatasetIcon.createSvg(tags, 120, {});
-                applyBackground(svg);
-                return true;
-            } catch (e) {
-                console.warn("global icon generation failed", e);
-                return false;
-            }
+        const tags = readTags();
+        if (
+            !window.DatasetIcon ||
+            typeof window.DatasetIcon.createSvg !== "function"
+        )
+            return false;
+        try {
+            const svg = window.DatasetIcon.createSvg(tags, 120, {});
+            applyBackground(svg);
+            return true;
+        } catch (e) {
+            console.warn("global icon generation failed", e);
+            return false;
         }
 
-        if (document.readyState === "loading")
-            document.addEventListener("DOMContentLoaded", function () {
-                if (!attempt()) {
-                    setTimeout(attempt, 80);
-                }
-            });
-        else {
-            if (!attempt()) {
-                setTimeout(attempt, 80);
+    }
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+        // Format numbers in .stat-num cells with thousands separators
+        document.querySelectorAll('.statistics > .container > dl > dd').forEach(function (td) {
+            td.textContent = formatNumber(td.textContent);
+        });
+
+        // Setup schema diagram modal functionality
+        setupSchemaDiagramModal();
+
+        // Setup "Copy" buttons in code boxes
+        setupCopyCodeButtons();
+
+        // Draw dataset icon background in global navigation
+        drawBackground();
+
+        // Code syntax highlighting
+        try {
+            if (window.Prism && typeof window.Prism.highlightAll === 'function') {
+                window.Prism.highlightAll();
             }
+        } catch (e) {
+            /* noop */
         }
-    })();
+
+    });
 </script>
