@@ -213,6 +213,7 @@ json_id='dataset-tags-json' size=48 %}
         return num.toLocaleString();
     }
 
+    // Setup "Copy" buttons in code boxes
     function setupCopyCodeButtons() {
 
         const rewriteButtonText = function (btn) {
@@ -245,38 +246,10 @@ json_id='dataset-tags-json' size=48 %}
     }
 
 
-    document.addEventListener('DOMContentLoaded', function () {
-
-        // Format numbers in .stat-num cells with thousands separators
-        document.querySelectorAll('.statistics > .container > dl > dd').forEach(function (td) {
-            td.textContent = formatNumber(td.textContent);
-        });
-
-        // Setup schema diagram modal functionality
-        setupSchemaDiagramModal();
-
-        // Setup "Copy" buttons in code boxes
-        setupCopyCodeButtons();
-
-        // Code syntax highlighting
-        try {
-            if (window.Prism && typeof window.Prism.highlightAll === 'function') {
-                window.Prism.highlightAll();
-            }
-        } catch (e) {
-            /* noop */
-        }
-
-    });
-</script>
-
-<script>
-    // Render dataset icon as a data:URI and apply it to .global-navigation::before
-    (function () {
-        var styleId = "global-dataset-icon-style";
+    function drawBackground() {
         function svgToDataUri(svg) {
             if (!svg) return "";
-            var s = String(svg).replace(/\r\n?/g, "\n").trim();
+            const s = String(svg).replace(/\r\n?/g, "\n").trim();
             try {
                 return (
                     "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(s)))
@@ -293,9 +266,9 @@ json_id='dataset-tags-json' size=48 %}
 
         function readTags() {
             try {
-                var el = document.getElementById("dataset-tags-json");
+                const el = document.getElementById("dataset-tags-json");
                 if (!el) return [];
-                var txt = el.textContent || el.innerText || "";
+                const txt = el.textContent || el.innerText || "";
                 if (!txt) return [];
                 return JSON.parse(txt || "[]");
             } catch (e) {
@@ -305,13 +278,14 @@ json_id='dataset-tags-json' size=48 %}
 
         function applyBackground(svg) {
             try {
-                var css =
+                const styleId = "global-dataset-icon-style";
+                const css =
                     '.global-navigation > .background::before{background-image:url("' +
                     svgToDataUri(svg) +
                     '")}';
-                var existing = document.getElementById(styleId);
+                const existing = document.getElementById(styleId);
                 if (existing) existing.parentNode.removeChild(existing);
-                var s = document.createElement("style");
+                const s = document.createElement("style");
                 s.id = styleId;
                 s.textContent = css;
                 document.head.appendChild(s);
@@ -320,33 +294,48 @@ json_id='dataset-tags-json' size=48 %}
             }
         }
 
-        function attempt() {
-            var tags = readTags();
-            if (
-                !window.DatasetIcon ||
-                typeof window.DatasetIcon.createSvg !== "function"
-            )
-                return false;
-            try {
-                var svg = window.DatasetIcon.createSvg(tags, 120, {});
-                applyBackground(svg);
-                return true;
-            } catch (e) {
-                console.warn("global icon generation failed", e);
-                return false;
-            }
+        const tags = readTags();
+        if (
+            !window.DatasetIcon ||
+            typeof window.DatasetIcon.createSvg !== "function"
+        )
+            return false;
+        try {
+            const svg = window.DatasetIcon.createSvg(tags, 120, {});
+            applyBackground(svg);
+            return true;
+        } catch (e) {
+            console.warn("global icon generation failed", e);
+            return false;
         }
 
-        if (document.readyState === "loading")
-            document.addEventListener("DOMContentLoaded", function () {
-                if (!attempt()) {
-                    setTimeout(attempt, 80);
-                }
-            });
-        else {
-            if (!attempt()) {
-                setTimeout(attempt, 80);
+    }
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+        // Format numbers in .stat-num cells with thousands separators
+        document.querySelectorAll('.statistics > .container > dl > dd').forEach(function (td) {
+            td.textContent = formatNumber(td.textContent);
+        });
+
+        // Setup schema diagram modal functionality
+        setupSchemaDiagramModal();
+
+        // Setup "Copy" buttons in code boxes
+        setupCopyCodeButtons();
+
+        // Draw dataset icon background in global navigation
+        drawBackground();
+
+        // Code syntax highlighting
+        try {
+            if (window.Prism && typeof window.Prism.highlightAll === 'function') {
+                window.Prism.highlightAll();
             }
+        } catch (e) {
+            /* noop */
         }
-    })();
+
+    });
 </script>
