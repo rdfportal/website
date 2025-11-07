@@ -1,6 +1,7 @@
 ---
 layout: page
 title: News
+pageId: news
 ---
 
 <div class="posts">
