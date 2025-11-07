@@ -36,3 +36,5 @@
 - id: about
   title: "About"
   url: "/about/"
+- title: News
+  url: /news/
