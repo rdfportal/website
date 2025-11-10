@@ -4,16 +4,15 @@ title: News
 pageId: news
 ---
 
-<div class="posts">
+<div class="news-list">
   {% for post in site.posts %}
-  <article class="post">
-    <h3 class="post-title">
+  <article>
+    <time>{{ post.date | date: "%b %-d, %Y" }}</time>
+    <h3 class="title">
       <a href="{{ post.url | relative_url }}">
         {{ post.title }}
       </a>
     </h3>
-
-    <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
   </article>
   {% endfor %}
 </div>
