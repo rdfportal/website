@@ -39,3 +39,6 @@
 - id: news
   title: News
   url: /news/
+- id: logs
+  title: Log
+  url: /logs/

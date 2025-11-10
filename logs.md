@@ -1,11 +1,11 @@
 ---
 layout: page
-title: News
-pageId: news
+title: Update Log
+pageId: logs
 ---
 
-<div class="news-list">
-  {% for post in site.news reversed %}
+<div class="log-list">
+  {% for post in site.logs reversed %}
   <article>
     <time>{{ post.date | date: "%b %-d, %Y" }}</time>
     <h3 class="title">

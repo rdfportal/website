@@ -44,6 +44,12 @@ kramdown:
 collections:
   datasets:
     output: false
+  news:
+    output: true
+    sort_by: date
+  logs:
+    output: true
+    sort_by: date
 
 # Defaults
 defaults:
