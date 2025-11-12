@@ -1,0 +1,7 @@
+#List instruemtn types
+PREFIX mbo: <http://www.massbank.jp/ontology/>
+
+SELECT DISTINCT ?instrument_type
+WHERE {
+  ?s mbo:instrument_type ?instrument_type .
+}
