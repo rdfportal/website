@@ -4,7 +4,7 @@ title: News
 pageId: news
 ---
 
-<div class="news-list">
+<div class="timeline-list">
   {% for post in site.news reversed %}
   <article>
     <time>{{ post.date | date: "%b %-d, %Y" }}</time>
