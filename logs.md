@@ -4,7 +4,7 @@ title: Update Log
 pageId: logs
 ---
 
-<div class="log-list">
+<div class="timeline-list">
   {% assign current_year = "" %}
   {% for post in site.logs reversed %}
     {% assign post_year = post.date | date: "%Y" %}
