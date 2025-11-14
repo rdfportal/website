@@ -9,16 +9,16 @@ pageId: news
   {% for post in site.news reversed %}
     {% assign post_year = post.date | date: "%Y" %}
     {% if post_year != current_year %}
-      <h2 class="year-heading">{{ post_year }}</h2>
+      <h3 class="year"><time datetime="{{ post_year }}">{{ post_year }}</time></h3>
       {% assign current_year = post_year %}
     {% endif %}
   <article>
-    <time>{{ post.date | date: "%-m.%-d" }}</time>
-    <h3 class="title">
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-m.%-d" }}</time>
+    <h4 class="title">
       <a href="{{ post.url | relative_url }}">
         {{ post.title }}
       </a>
-    </h3>
+    </h4>
   </article>
   {% endfor %}
 </div>
