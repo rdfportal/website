@@ -1,14 +1,17 @@
-title: RDF title
-website: https://example.com/
-description: RDF description.
-tags: []
+title: MBGD RDF
+website: https://mbgd.nibb.ac.jp/rdf/archive/
+description: 微生物比較ゲノムデータベースMBGDのRDFデータセット
+tags: [Genome, Gene, Phylogeny/Classification]
 provider:
 creators:
-  - name: Name 1
-    affiliation: Affiliation 1
-  - name: Name 2
-    affiliation: Affiliation 2
-version: 2020-01-01
-issued: 2020-01-01
+  - name: 千葉 啓和
+    affiliation: 基礎生物学研究所
+  - name: 西出 浩世
+    affiliation: 基礎生物学研究所
+  - name: 内山 郁夫
+    affiliation: National Institute for Basic Biology
+version: 2015-01
+issued: 2015-06-20
 licenses:
-  - Attribution 4.0 International (CC BY 4.0) 
+  - クリエイティブ・コモンズ 表示 - 継承 2.1 日本 (CC BY-SA 2.1 JP)
+  - MBGD RDF © MBGD development team, National Institute for Basic Biology licensed under CC 表示 - 継承 2.1 日本

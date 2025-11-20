@@ -1,14 +1,17 @@
-title: RDF title
-website: https://example.com/
-description: RDF description.
-tags: []
+title: MBGD RDF
+website: https://mbgd.nibb.ac.jp/rdf/archive/
+description: RDF dataset of Microbial Genome Database for Comparative Analysis (MBGD)
+tags: [Genome, Gene, Phylogeny/Classification]
 provider:
 creators:
-  - name: Name 1
-    affiliation: Affiliation 1
-  - name: Name 2
-    affiliation: Affiliation 2
-version: 2020-01-01
-issued: 2020-01-01
+  - name: Hirokazu Chiba
+    affiliation: National Institute for Basic Biology
+  - name: Hiroyo Nishide
+    affiliation: National Institute for Basic Biology
+  - name: Ikuo Uchiyama
+    affiliation: National Institute for Basic Biology
+version: 2015-01
+issued: 2015-06-20
 licenses:
-  - Attribution 4.0 International (CC BY 4.0) 
+  - Creative Commons Attribution-ShareAlike 2.1 Japan (CC BY-SA 2.1 JP)
+  - MBGD RDF © MBGD development team, National Institute for Basic Biology licensed under Creative Commons Attribution-ShareAlike 2.1 Japan
