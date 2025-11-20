@@ -9,11 +9,24 @@
     padding: 8px 0
     display: flex
     border-bottom: 1px solid var(--color-border-weak)
-    align-items: center
+    align-items: top
     > time
-      flex-basis: 120px
-      font-size: 1.2rem
-      color: var(--color-subtext)
+      flex-basis: 60px
+      min-width: 60px
+      font-size: 1.6rem
+      font-family: var(--font-family-base)
+      font-weight: bold
+      position: relative
+      &::after
+        content: ''
+        display: block
+        width: 1px
+        height: 1em
+        background-color: #000
+        position: absolute
+        top: 4px
+        right: 12px
+      // color: var(--color-subtext)
     > .title
       font-size: 1.6rem !important
       font-weight: bold
