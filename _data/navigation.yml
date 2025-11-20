@@ -30,9 +30,9 @@
     - id: data_submission
       title: Data submission
       url: "/documents/data_submission/"
-    - id: about_sparql_endpoints
-      title: About SPARQL endpoints
-      url: "/documents/about_sparql_endpoints/"
+    - id: sparql_endpoints
+      title: SPARQL endpoints
+      url: "/documents/sparql_endpoints/"
 - id: about
   title: "About"
   url: "/about/"
