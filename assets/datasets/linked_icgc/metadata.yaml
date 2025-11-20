@@ -1,14 +1,12 @@
-title: RDF title
-website: https://example.com/
-description: RDF description.
-tags: []
-provider:
+title: Linked ICGC Dataset
+website: https://rdfportal.org/dataset/icgc
+description: Linked ICGC Dataset is a linked data version of the public ICGC (International Cancer Genome Consortium) data. This includes the information of the donors and the somatic mutations.
+tags: [Genome, Health/Disease, Sequence]
+provider: Research Center for Advanced Science and Technology, The University of Tokyo
 creators:
-  - name: Name 1
-    affiliation: Affiliation 1
-  - name: Name 2
-    affiliation: Affiliation 2
-version: 2020-01-01
-issued: 2020-01-01
+  - name: Ryota Yamanaka
+    affiliation: Research Center for Advanced Science and Technology, The University of Tokyo
+version: release_20
+issued: 2016-01-04
 licenses:
-  - Attribution 4.0 International (CC BY 4.0) 
+  - Creative Commons CC0 1.0 Universal (CC0 1.0) Public Domain Dedication

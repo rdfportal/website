@@ -1,0 +1,12 @@
+title: Linked ICGC Dataset
+website: https://rdfportal.org/dataset/icgc
+description: Linked ICGC データセットは公開されている ICGC (国際がんゲノム・コンソーシアム) データのリンクト・データ版です。がん症例と検出された塩基配列変異の情報が含まれています。
+tags: [Genome, Health/Disease, Sequence]
+provider: 東京大学 先端科学技術研究センター
+creators:
+  - name: 山中 遼太
+    affiliation: 東京大学 先端科学技術研究センター
+version: release_20
+issued: 2016-01-04
+licenses:
+  - クリエイティブ・コモンズ CC0 1.0 全世界 (CC0 1.0) パブリック・ドメイン提供
