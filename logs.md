@@ -12,8 +12,8 @@ pageId: logs
       <h3 class="year"><time datetime="{{ post_year }}">{{ post_year }}</time></h3>
       {% assign current_year = post_year %}
     {% endif %}
-  <article>
-    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-m.%-d" }}</time>
+  <article class="timeline-article">
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m.%d" }}</time>
     <h4 class="title">
       <a href="{{ post.url | relative_url }}">
         {{ post.title }}

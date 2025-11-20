@@ -1,0 +1,27 @@
+.timeline-article
+  padding: 4px 0
+  display: flex
+  align-items: flex-start
+  > time
+    flex-basis: var(--time-width, 60px)
+    min-width: var(--time-width, 60px)
+    font-size: var(--font-size, 1.2rem)
+    font-family: var(--font-family-base)
+    font-weight: bold
+    position: relative
+    &::after
+      content: ''
+      display: block
+      width: 1px
+      height: 1em
+      background-color: #000
+      position: absolute
+      top: .25em
+      right: 12px
+  > .title
+    font-size: var(--font-size, 1.2rem)
+    font-weight: bold
+    > a
+      text-decoration: none !important
+      &:hover
+        text-decoration: underline !important
