@@ -1,14 +1,15 @@
-title: RDF title
-website: https://example.com/
-description: RDF description.
-tags: []
-provider:
+title: Dataset of WURCS-RDF
+website: https://rdfportal.org/dataset/wurcs
+description: WURCSによって記述された糖鎖構造のデータセット
+tags: [Other biomolecule, Structure]
+provider: 公益財団法人野口研究所
 creators:
-  - name: Name 1
-    affiliation: Affiliation 1
-  - name: Name 2
-    affiliation: Affiliation 2
-version: 2020-01-01
-issued: 2020-01-01
+  - name: 山田一作
+    affiliation: 公益財団法人野口研究所
+  - name: 松原正陽
+    affiliation: 公益財団法人野口研究所
+version: 0.2
+issued: 2015-09-30
 licenses:
-  - Attribution 4.0 International (CC BY 4.0) 
+  - Creative Commons Attribution 2.1 Japan (CC BY 2.1 JP)
+  - WURCS-RDF © GLIC licensed under CC Attribution 2.1 Japan

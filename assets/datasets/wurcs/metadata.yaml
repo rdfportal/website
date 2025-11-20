@@ -1,14 +1,15 @@
-title: RDF title
-website: https://example.com/
-description: RDF description.
-tags: []
-provider:
+title: Dataset of WURCS-RDF
+website: https://rdfportal.org/dataset/wurcs
+description: Dataset of glycan structures described by WURCS
+tags: [Other biomolecule, Structure]
+provider: The Noguchi Institute
 creators:
-  - name: Name 1
-    affiliation: Affiliation 1
-  - name: Name 2
-    affiliation: Affiliation 2
-version: 2020-01-01
-issued: 2020-01-01
+  - name: Issaku YAMADA
+    affiliation: The Noguchi Institute
+  - name: Masaaki MATSUBARA
+    affiliation: The Noguchi Institute
+version: 0.2
+issued: 2015-09-30
 licenses:
-  - Attribution 4.0 International (CC BY 4.0) 
+  - Creative Commons Attribution 2.1 Japan (CC BY 2.1 JP)
+  - WURCS-RDF © GLIC licensed under CC Attribution 2.1 Japan
