@@ -11,6 +11,18 @@ safe: false
 # Plugin configuration
 plugins:
   - jekyll-feed
+  - jekyll-polyglot
+
+# Multilingual configuration
+languages: ["ja", "en"]
+default_lang: "ja"
+
+polyglot:
+  default_lang: "ja"
+  languages: ["ja", "en"]
+  active_langs: ["ja", "en"]
+  translate_url: true
+  fallback_to_default_lang: true
 
 # SCSS Configuration
 sass:
@@ -47,14 +59,30 @@ collections:
   news:
     output: true
     sort_by: date
+    permalink: /news/:title/
   logs:
     output: true
     sort_by: date
+    permalink: /logs/:title/
 
 # Defaults
 defaults:
   - scope:
       path: ""
+    values:
+      lang: "ja"
+  - scope:
+      path: ""
       type: "pages"
     values:
       layout: "page"
+  - scope:
+      path: "news"
+      type: "news"
+    values:
+      lang: "ja"
+  - scope:
+      path: "logs"
+      type: "logs"
+    values:
+      lang: "ja"
