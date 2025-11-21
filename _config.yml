@@ -28,6 +28,8 @@ polyglot:
 sass:
   sass_dir: _sass
   style: compressed
+  source_map: never
+  sourcemap: never
 
 # Exclude from build
 exclude:

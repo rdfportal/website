@@ -2,7 +2,7 @@
 {% assign nav_items = site.data.navigation[current_lang] | default: site.data.navigation[site.default_lang] %}
 {% assign lang_prefix = "" %}
 {% unless current_lang == site.default_lang %}
-  {% assign lang_prefix = "/" | append: current_lang %}
+{% assign lang_prefix = "/" | append: current_lang %}
 {% endunless %}
 
 <nav>
