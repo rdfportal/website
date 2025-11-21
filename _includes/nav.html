@@ -1,14 +1,23 @@
+{% assign current_lang = page.lang | default: site.default_lang %}
+{% assign nav_items = site.data.navigation[current_lang] | default: site.data.navigation[site.default_lang] %}
+{% assign lang_prefix = "" %}
+{% unless current_lang == site.default_lang %}
+  {% assign lang_prefix = "/" | append: current_lang %}
+{% endunless %}
+
 <nav>
   <ul>
-    {% for item in site.data.navigation %}
+    {% for item in nav_items %}
     <li data-page-id="{{ item.id }}" {% if item.id==page.pageId or item.id==page.parentPageId %} class="-active" {%
       endif %}>
-      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% assign item_url = lang_prefix | append: item.url %}
+      <a href="{{ item_url | relative_url }}">{{ item.title }}</a>
       {% if item.children %}
       <ul>
         {% for c in item.children %}
         <li data-page-id="{{ c.id }}" {% if c.id==page.pageId or c.id==page.pageId %} class="-active" {% endif %}>
-          <a href="{{ c.url | relative_url }}">{{ c.title }}</a>
+          {% assign child_url = lang_prefix | append: c.url %}
+          <a href="{{ child_url | relative_url }}">{{ c.title }}</a>
         </li>
         {% endfor %}
       </ul>
