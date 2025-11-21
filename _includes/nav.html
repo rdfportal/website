@@ -4,6 +4,8 @@
 {% unless current_lang == site.default_lang %}
 {% assign lang_prefix = "/" | append: current_lang %}
 {% endunless %}
+{% assign datasets_filter_i18n = site.data.i18n.datasets_filter[current_lang] | default:
+site.data.i18n.datasets_filter[site.default_lang] %}
 
 <nav>
   <ul>
@@ -25,25 +27,32 @@
       {% if item.id == 'datasets' and page.pageId == 'datasets' %}
       <div id="DatasetsSortFilterView">
         <div class="sort">
-          <label for="sortSegment">Sort:</label>
+          <label for="sortSegment">{{ datasets_filter_i18n.sort_label }}:</label>
 
-          <div id="sortSegment" class="segmented-buttons-container" role="tablist" aria-label="Sort datasets">
-            <button class="button-view" type="button" data-sort="date" aria-pressed="true">Date</button>
-            <button class="button-view" type="button" data-sort="name" aria-pressed="false">Name</button>
-            <button class="button-view" type="button" data-sort="triples" aria-pressed="false">Triples</button>
+          <div id="sortSegment" class="segmented-buttons-container" role="tablist"
+            aria-label="{{ datasets_filter_i18n.sort_aria_label }}">
+            <button class="button-view" type="button" data-sort="date" aria-pressed="true">{{
+              datasets_filter_i18n.sort_options.date }}</button>
+            <button class="button-view" type="button" data-sort="name" aria-pressed="false">{{
+              datasets_filter_i18n.sort_options.name }}</button>
+            <button class="button-view" type="button" data-sort="triples" aria-pressed="false">{{
+              datasets_filter_i18n.sort_options.triples }}</button>
           </div>
         </div>
         <div class="order">
-          <label for="sortOrderSegment">Order:</label>
-          <div id="sortOrderSegment" class="segmented-buttons-container" role="tablist" aria-label="Sort order">
-            <button class="button-view" type="button" data-order="desc" aria-pressed="true">Desc</button>
-            <button class="button-view" type="button" data-order="asc" aria-pressed="false">Asc</button>
+          <label for="sortOrderSegment">{{ datasets_filter_i18n.order_label }}:</label>
+          <div id="sortOrderSegment" class="segmented-buttons-container" role="tablist"
+            aria-label="{{ datasets_filter_i18n.order_aria_label }}">
+            <button class="button-view" type="button" data-order="desc" aria-pressed="true">{{
+              datasets_filter_i18n.order_options.desc }}</button>
+            <button class="button-view" type="button" data-order="asc" aria-pressed="false">{{
+              datasets_filter_i18n.order_options.asc }}</button>
           </div>
         </div>
         <div class="filter">
-          <label for="tagSelect">Filter:</label>
-          <select id="tagSelect" aria-label="Filter tags">
-            <option value="">All tags</option>
+          <label for="tagSelect">{{ datasets_filter_i18n.filter_label }}:</label>
+          <select id="tagSelect" aria-label="{{ datasets_filter_i18n.filter_aria_label }}">
+            <option value="">{{ datasets_filter_i18n.filter_default_option }}</option>
           </select>
         </div>
       </div>
