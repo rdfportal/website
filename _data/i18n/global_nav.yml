@@ -1,0 +1,28 @@
+en:
+  stats:
+    datasets_label: "RDF dataset"
+    triples_plain: "triples"
+    triples_million: "million triples"
+    triples_billion: "billion triples"
+    triples_trillion: "trillion triples"
+  footer:
+    site_policy: "Site Policy"
+    copyright: "©"
+  language_switcher:
+    current: "EN"
+    option_en: "EN"
+    option_ja: "JA"
+ja:
+  stats:
+    datasets_label: "RDFデータセット"
+    triples_plain: "トリプル"
+    triples_million: "百万トリプル"
+    triples_billion: "十億トリプル"
+    triples_trillion: "兆トリプル"
+  footer:
+    site_policy: "サイトポリシー"
+    copyright: "©"
+  language_switcher:
+    current: "JA"
+    option_en: "EN"
+    option_ja: "JA"
