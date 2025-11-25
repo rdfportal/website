@@ -2,7 +2,7 @@
 layout: default
 title: Home
 lang: en
-permalink: /en/
+permalink: /
 description: Welcome to the RDF Portal. Explore datasets and SPARQL endpoints.
 ---
 

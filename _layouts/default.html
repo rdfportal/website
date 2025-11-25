@@ -16,7 +16,27 @@
 <body{% if page.pageId %} data-page-id="{{ page.pageId }}" {% endif %}{% if page.parentPageId %}
   data-parent-page-id="{{ page.parentPageId }}" {% endif %}>
   {% assign current_lang = page.lang | default: site.default_lang %}
-  {% assign global_nav_i18n = site.data.i18n.global_nav[current_lang] | default: site.data.i18n.global_nav[site.default_lang] %}
+  {% assign global_nav_i18n = site.data.i18n.global_nav[current_lang] | default:
+  site.data.i18n.global_nav[site.default_lang] %}
+  {% assign canonical_path = page.permalink | default: page.url | default: '/' %}
+  {% if canonical_path == '' %}
+  {% assign canonical_path = '/' %}
+  {% endif %}
+  {% assign first_char = canonical_path | slice: 0, 1 %}
+  {% unless first_char == '/' %}
+  {% assign canonical_path = '/' | append: canonical_path %}
+  {% endunless %}
+  {% if current_lang != site.default_lang %}
+  {% assign lang_prefix = '/' | append: current_lang %}
+  {% assign lang_prefix_with_slash = lang_prefix | append: '/' %}
+  {% assign lang_prefix_length = lang_prefix_with_slash | size %}
+  {% assign path_prefix = canonical_path | slice: 0, lang_prefix_length %}
+  {% if canonical_path == lang_prefix %}
+  {% assign canonical_path = '/' %}
+  {% elsif path_prefix == lang_prefix_with_slash %}
+  {% assign canonical_path = canonical_path | replace_first: lang_prefix_with_slash, '/' %}
+  {% endif %}
+  {% endif %}
   <aside class="global-navigation">
     <div class="background"></div>
     <div class="inner">
@@ -45,7 +65,7 @@
         {% else %}
         {% assign display = intpart | append: '.' | append: dec %}
         {% endif %}
-  <li><span>{{ display }}</span><span>{{ global_nav_i18n.stats.triples_trillion }}</span></li>
+        <li><span>{{ display }}</span><span>{{ global_nav_i18n.stats.triples_trillion }}</span></li>
         {% elsif total_triples >= 1000000000 %}
         {% assign unit_div10 = 100000000 %}
         {% assign scaled10 = total_triples | divided_by: unit_div10 %}
@@ -56,7 +76,7 @@
         {% else %}
         {% assign display = intpart | append: '.' | append: dec %}
         {% endif %}
-  <li><span>{{ display }}</span><span>{{ global_nav_i18n.stats.triples_billion }}</span></li>
+        <li><span>{{ display }}</span><span>{{ global_nav_i18n.stats.triples_billion }}</span></li>
         {% elsif total_triples >= 1000000 %}
         {% assign unit_div10 = 100000 %}
         {% assign scaled10 = total_triples | divided_by: unit_div10 %}
@@ -67,9 +87,9 @@
         {% else %}
         {% assign display = intpart | append: '.' | append: dec %}
         {% endif %}
-  <li><span>{{ display }}</span><span>{{ global_nav_i18n.stats.triples_million }}</span></li>
+        <li><span>{{ display }}</span><span>{{ global_nav_i18n.stats.triples_million }}</span></li>
         {% else %}
-  <li><span>{{ total_triples | default: 0 }}</span><span>{{ global_nav_i18n.stats.triples_plain }}</span></li>
+        <li><span>{{ total_triples | default: 0 }}</span><span>{{ global_nav_i18n.stats.triples_plain }}</span></li>
         {% endif %}
       </ul>
       {% include nav.html %}
@@ -78,14 +98,25 @@
         <p>© {{ site.time | date: "%Y" }} RDF Portal</p>
         <p><a href="{{ '/site-policy/' | relative_url }}">Site Policy</a></p>
         <span class="spacer"></span>
-        <div class="language-switcher">
-          <button id="language-toggle">
-            <span class="current">EN</span>
-            <span class="options">
-              <span data-lang="en">EN</span>
-              <span data-lang="ja">JA</span>
-            </span>
+        <div class="language-switcher" data-current-lang="{{ current_lang }}">
+          <button id="language-toggle" type="button" aria-haspopup="true" aria-expanded="false"
+            aria-label="{{ global_nav_i18n.language_switcher.aria_label }}">
+            {% assign current_option_key = 'option_' | append: current_lang %}
+            <span class="current">{{ global_nav_i18n.language_switcher[current_option_key] }}</span>
           </button>
+          <div class="options" role="menu">
+            {% for lang_code in site.languages %}
+            {% if lang_code == site.default_lang %}
+            {% assign lang_url = canonical_path %}
+            {% else %}
+            {% assign lang_url = '/' | append: lang_code | append: canonical_path %}
+            {% endif %}
+            {% assign option_key = 'option_' | append: lang_code %}
+            <a href="{{ lang_url | relative_url }}" role="menuitem" data-lang="{{ lang_code }}" {% if
+              lang_code==current_lang %}aria-current="true" {% endif %}>{{ global_nav_i18n.language_switcher[option_key]
+              }}</a>
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>

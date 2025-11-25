@@ -12,6 +12,7 @@ en:
     current: "EN"
     option_en: "EN"
     option_ja: "JA"
+    aria_label: "Change language"
 ja:
   stats:
     datasets_label: "RDFデータセット"
@@ -26,3 +27,4 @@ ja:
     current: "JA"
     option_en: "EN"
     option_ja: "JA"
+    aria_label: "言語を切り替える"

@@ -21,7 +21,7 @@ polyglot:
   default_lang: "ja"
   languages: ["ja", "en"]
   active_langs: ["ja", "en"]
-  translate_url: true
+  translate_url: false
   fallback_to_default_lang: true
 
 # SCSS Configuration
