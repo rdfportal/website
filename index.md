@@ -4,6 +4,7 @@ title: トップページ
 lang: ja
 permalink: /
 description: RDFポータルサイトへようこそ。データセットやエンドポイント情報を探索できます。
+page_id: home
 ---
 
 <div id="TopPageContentsView">
