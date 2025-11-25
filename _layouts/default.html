@@ -16,8 +16,6 @@
 <body{% if page.pageId %} data-page-id="{{ page.pageId }}" {% endif %}{% if page.parentPageId %}
   data-parent-page-id="{{ page.parentPageId }}" {% endif %}>
   {% assign current_lang = page.lang | default: site.default_lang %}
-  {% assign global_nav_i18n = site.data.i18n.global_nav[current_lang] | default:
-  site.data.i18n.global_nav[site.default_lang] %}
   {% assign canonical_path = page.permalink | default: page.url | default: '/' %}
   {% if canonical_path == '' %}
   {% assign canonical_path = '/' %}
@@ -65,7 +63,7 @@
         </a>
       </h1>
       <ul class="stats">
-        <li><span>{{ site.data.datasets | size }}</span><span>{{ global_nav_i18n.stats.datasets_label }}</span></li>
+        <li><span>{{ site.data.datasets | size }}</span><span>RDF dataset</span></li>
         {% assign total_triples = 0 %}
         {% assign datasets = site.data.datasets | default: empty %}
         {% for d in datasets %}
@@ -83,7 +81,7 @@
         {% else %}
         {% assign display = intpart | append: '.' | append: dec %}
         {% endif %}
-        <li><span>{{ display }}</span><span>{{ global_nav_i18n.stats.triples_trillion }}</span></li>
+        <li><span>{{ display }}</span><span>trillion triples</span></li>
         {% elsif total_triples >= 1000000000 %}
         {% assign unit_div10 = 100000000 %}
         {% assign scaled10 = total_triples | divided_by: unit_div10 %}
@@ -94,7 +92,7 @@
         {% else %}
         {% assign display = intpart | append: '.' | append: dec %}
         {% endif %}
-        <li><span>{{ display }}</span><span>{{ global_nav_i18n.stats.triples_billion }}</span></li>
+        <li><span>{{ display }}</span><span>billion triples</span></li>
         {% elsif total_triples >= 1000000 %}
         {% assign unit_div10 = 100000 %}
         {% assign scaled10 = total_triples | divided_by: unit_div10 %}
@@ -105,9 +103,9 @@
         {% else %}
         {% assign display = intpart | append: '.' | append: dec %}
         {% endif %}
-        <li><span>{{ display }}</span><span>{{ global_nav_i18n.stats.triples_million }}</span></li>
+        <li><span>{{ display }}</span><span>million triples</span></li>
         {% else %}
-        <li><span>{{ total_triples | default: 0 }}</span><span>{{ global_nav_i18n.stats.triples_plain }}</span></li>
+        <li><span>{{ total_triples | default: 0 }}</span><span>triples</span></li>
         {% endif %}
       </ul>
       {% include nav.html %}
@@ -126,8 +124,8 @@
         {% assign counterpart_label = counterpart_lang | upcase %}
         {% endcase %}
         <div data-current-lang="{{ current_lang }}">
-          <a href="{{ counterpart_href | relative_url }}"
-            aria-label="{{ global_nav_i18n.language_switcher.aria_label }}" data-lang="{{ counterpart_lang }}">
+          <a href="{{ counterpart_href | relative_url }}" aria-label="Change language"
+            data-lang="{{ counterpart_lang }}">
             {{ counterpart_label }}
           </a>
         </div>
