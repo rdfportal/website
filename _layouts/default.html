@@ -125,8 +125,8 @@
         {% else %}
         {% assign counterpart_label = counterpart_lang | upcase %}
         {% endcase %}
-        <div class="language-switcher" data-current-lang="{{ current_lang }}">
-          <a class="language-switcher__link" href="{{ counterpart_href | relative_url }}"
+        <div data-current-lang="{{ current_lang }}">
+          <a href="{{ counterpart_href | relative_url }}"
             aria-label="{{ global_nav_i18n.language_switcher.aria_label }}" data-lang="{{ counterpart_lang }}">
             {{ counterpart_label }}
           </a>
@@ -145,7 +145,6 @@
   <!-- ベースURLをJavaScriptで利用可能にする（全ページ共通） -->
   <script>
     window.SITE_BASE_URL = '{{ site.baseurl }}';
-    // LanguageSwitcher（言語切り替えUI）はLanguageSwitcher.jsで自動初期化されます
     // URLパラメータ font=roman などがあれば body に data-font="roman" を付与する
     (function () {
       try {
@@ -161,7 +160,6 @@
       }
     })();
   </script>
-  <script src="{{ '/assets/js/LanguageSwitcher.js' | relative_url }}"></script>
 
   <!-- DatasetsManagerシングルトンクラス（全ページ共通） -->
   <script defer src="{{ '/assets/js/DatasetsManager.js' | relative_url }}"></script>
