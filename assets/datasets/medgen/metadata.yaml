@@ -7,6 +7,8 @@ creators:
   - name: Shuichi Kawashima
     affiliation: Database Center for Life Science, Joint Support-Center for Data Science Research, Research Organization of Information and Systems
   - name: Med2RDF project
+rdf_provenance_type: third_party
+registration_type: submitted
 version: Med2RDF version based on release_20230605
 issued: 2023-06-05
 licenses:

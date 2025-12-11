@@ -7,6 +7,8 @@ creators:
   - name: 川島 秀一
     affiliation: 大学共同利用機関法人 情報・システム研究機構 データサイエンス共同利用基盤施設 ライフサイエンス統合データベースセンター
   - name: Med2RDF project
+rdf_provenance_type: third_party
+registration_type: submitted
 version: Med2RDF version based on release_20230605
 issued: 2023-06-05
 licenses:
