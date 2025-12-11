@@ -9,6 +9,8 @@ rdf_creators:
     affiliation: Database Center for Life Science
   - name: Yuka Tateisi
     affiliation: National Bioscience Database Center
+rdf_provenance_type: third_party
+registration_type: submitted
 version: release_20250630
 issued: 2025-06-30
 licenses:

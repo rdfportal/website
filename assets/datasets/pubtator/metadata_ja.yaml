@@ -9,6 +9,8 @@ rdf_creators:
     affiliation: ライフサイエンス統合データベースセンター
   - name: 建石 由佳
     affiliation: バイオサイエンスデータベースセンター
+rdf_provenance_type: third_party
+registration_type: submitted
 version: release_20250630
 issued: 2025-06-30
 licenses:
