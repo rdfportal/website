@@ -7,6 +7,8 @@ creators: National Center for Biotechnology Information
 rdf_creators:
   - name: Med2RDF project
     affiliation: http://med2rdf.org/
+rdf_provenance_type: third_party
+registration_type: submitted
 version: release_20250623
 issued: 2025-06-23
 licenses:
