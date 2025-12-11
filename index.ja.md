@@ -2,12 +2,17 @@
 layout: default
 title: トップページ
 lang: ja
-permalink: /ja/
+permalink: /
 description: RDFポータルサイトへようこそ。データセットやエンドポイント情報を探索できます。
 page_id: home
+permalink_lang:
+  en: /
+  ja: /ja/
 ---
 
 <div id="TopPageContentsView">
+
+<!-- TODO: replace with Japanese copy -->
 
   <section class="intro">
     <p>

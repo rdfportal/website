@@ -1,5 +1,6 @@
+{% assign current_lang = site.active_lang | default: page.lang | default: site.default_lang %}
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="{{ current_lang | escape }}">
 
 <head>
   <meta charset="UTF-8">
@@ -15,7 +16,6 @@
 
 <body{% if page.pageId %} data-page-id="{{ page.pageId }}" {% endif %}{% if page.parentPageId %}
   data-parent-page-id="{{ page.parentPageId }}" {% endif %}>
-  {% assign current_lang = page.lang | default: site.default_lang %}
   {% assign canonical_path = page.permalink | default: page.url | default: '/' %}
   {% if canonical_path == '' %}
   {% assign canonical_path = '/' %}
@@ -42,14 +42,18 @@
   {% if lang_code == current_lang %}
   {% continue %}
   {% endif %}
-  {% assign lang_permalink = page.permalink_lang[lang_code] %}
-  {% unless lang_permalink %}
-  {% continue %}
-  {% endunless %}
-  {% capture lang_href %}/{{ lang_code }}{% if lang_permalink == '/' %}/{% else %}{{ lang_permalink }}{% endif %}{%
-  endcapture %}
+  {% assign canonical_lang_path = page.permalink_lang[lang_code] | default: '/' %}
+  {% assign lang_href = canonical_lang_path %}
+  {% if lang_code != site.default_lang %}
+  {% if canonical_lang_path == '/' %}
+  {% assign lang_href = '/' | append: lang_code | append: '/' %}
+  {% else %}
+  {% assign lang_href = '/' | append: lang_code | append: canonical_lang_path %}
+  {% endif %}
+  {% endif %}
   {% assign counterpart_lang = lang_code %}
-  {% assign counterpart_href = lang_href | replace: '//', '/' %}
+  {% assign lang_href_clean = lang_href | strip %}
+  {% assign counterpart_href = lang_href_clean | replace: '//', '/' %}
   {% break %}
   {% endfor %}
   {% endif %}
@@ -124,8 +128,8 @@
         {% assign counterpart_label = counterpart_lang | upcase %}
         {% endcase %}
         <div data-current-lang="{{ current_lang }}">
-          <a href="{{ counterpart_href | relative_url }}" aria-label="Change language"
-            data-lang="{{ counterpart_lang }}">
+          <a href="#" aria-label="Change language" data-lang="{{ counterpart_lang }}"
+            data-switch-target="{{ counterpart_href }}">
             {{ counterpart_label }}
           </a>
         </div>
@@ -143,6 +147,8 @@
   <!-- ベースURLをJavaScriptで利用可能にする（全ページ共通） -->
   <script>
     window.SITE_BASE_URL = '{{ site.baseurl }}';
+    window.SITE_BASE_URL_ROOT = '{{ site.config.baseurl | default: site.baseurl }}';
+
     // URLパラメータ font=roman などがあれば body に data-font="roman" を付与する
     (function () {
       try {
@@ -157,21 +163,31 @@
         /* noop */
       }
     })();
+
+    (function () {
+      try {
+        var switcher = document.querySelector('.global-navigation .bottom [data-switch-target]');
+        if (!switcher) return;
+        var rawTarget = switcher.getAttribute('data-switch-target');
+        if (!rawTarget) return;
+        var normalized = String(rawTarget).trim();
+        if (!normalized) return;
+        if (normalized.charAt(0) !== '/') {
+          normalized = '/' + normalized;
+        }
+        var baseRoot = window.SITE_BASE_URL_ROOT || window.SITE_BASE_URL || '';
+        baseRoot = String(baseRoot || '').replace(/\/+$/, '');
+        if (baseRoot === '/') baseRoot = '';
+        var hrefPath = baseRoot + normalized;
+        if (!hrefPath) hrefPath = normalized;
+        var origin = (window.location && window.location.origin) ? window.location.origin.replace(/\/+$/, '') : '';
+        var finalHref = origin ? origin + hrefPath : hrefPath;
+        switcher.setAttribute('href', finalHref);
+      } catch (e) {
+        /* noop */
+      }
+    })();
   </script>
-
-  <!-- DatasetsManagerシングルトンクラス（全ページ共通） -->
-  <script defer src="{{ '/assets/js/DatasetsManager.js' | relative_url }}"></script>
-
-  <!-- DatasetIcon（アイコン生成ロジック） - DatasetsManager の後、DatasetCard の前に読み込む -->
-  <script defer src="{{ '/assets/js/DatasetIcon.js' | relative_url }}"></script>
-
-  <!-- DatasetCardコンポーネント（全ページ共通） -->
-  <script defer src="{{ '/assets/js/DatasetCard.js' | relative_url }}"></script>
-
-  <!-- トップページ専用のJavaScript -->
-  {% if page.title == 'Top' %}
-  <script defer src="{{ '/assets/js/top-page-tiles.js' | relative_url }}"></script>
-  {% endif %}
   </body>
 
 </html>

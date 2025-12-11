@@ -1,4 +1,4 @@
-{% assign current_lang = page.lang | default: site.default_lang %}
+{% assign current_lang = site.active_lang | default: page.lang | default: site.default_lang %}
 {% assign nav_items = site.data.navigation[current_lang] | default: site.data.navigation[site.default_lang] %}
 {% assign lang_prefix = "" %}
 {% unless current_lang == site.default_lang %}
