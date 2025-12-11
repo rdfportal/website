@@ -14,6 +14,8 @@ creators:
     affiliation: Leibniz Institute DSMZ-German Collection of Microorganisms and Cell Cultures
   - name: Julia Hauenstein
     affiliation: Leibniz Institute DSMZ-German Collection of Microorganisms and Cell Cultures
+rdf_provenance_type: original
+registration_type: submitted
 version: 2025-09
 issued: 2025-09-16
 licenses:
