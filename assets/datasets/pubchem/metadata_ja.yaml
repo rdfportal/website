@@ -4,6 +4,8 @@ description: PubChem は、NIHが提供する、網羅的な化合物のデー�
 tags: [Drug/Chemical, Other biomolecule]
 provider: National Center for Biotechnology Information
 rdf_provider: National Center for Biotechnology Information
+rdf_provenance_type: original
+registration_type: added_by_rdfportal
 version:
 issued: 2025-05-28
 license:
