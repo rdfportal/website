@@ -1,4 +1,0 @@
-endpoint:
-  - https://integbio.jp/togosite/sparql
-  - graph:
-    - http://rdf.integbio.jp/dataset/togosite/nextprot
