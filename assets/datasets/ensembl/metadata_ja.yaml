@@ -6,6 +6,8 @@ provider: EMBL-EBI
 creators:
   - name: Shuya Ikeda
     affiliation: Database Center for Life Science
+rdf_provenance_type: third_party
+registration_type: submitted
 version: 111
 issued: 2024-01
 licenses:
