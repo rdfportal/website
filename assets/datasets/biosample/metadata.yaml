@@ -12,6 +12,8 @@ creators:
     affiliation: Database Center for Life Science
   - name: Takatomo Fujisawa
     affiliation: Bioinformation and DDBJ Center
+rdf_provenance_type: third_party
+registration_type: submitted
 version: 20200903-1443
 issued: 2020-09-03
 licenses:
