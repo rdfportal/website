@@ -24,6 +24,8 @@ creators:
     affiliation: Graduate School of Medicine, Tohoku University
   - name: Toyofumi Fujiwara
     affiliation: Database Center for Life Science, Joint Support-Center for Data Science Research, Research Organization of Information and Systems
+rdf_provenance_type: original
+registration_type: submitted
 version: 2024-11-21
 issued: 2023-11-21
 licenses:

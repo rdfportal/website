@@ -24,6 +24,8 @@ creators:
     affiliation: 東北大学 大学院医学系研究科
   - name: 藤原 豊史
     affiliation: 大学共同利用機関法人 情報・システム研究機構 データサイエンス共同利用基盤施設 ライフサイエンス統合データベースセンター
+rdf_provenance_type: original
+registration_type: submitted
 version: 2024-11-21
 issued: 2024-11-21
 licenses:
