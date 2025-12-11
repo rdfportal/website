@@ -4,6 +4,8 @@ description: NBDC NikkajiRDF is RDF data of Japan Chemical Substance Dictionary 
 tags: [ Drug/Chemical, Others, Structure, Image/Movie]
 provider: Japan Science and Technology Agency (JST)
 creators: Japan Science and Technology Agency (JST)
+rdf_provenance_type: original
+registration_type: submitted
 version: 2017-01-12
 issued: 2017-01-12
 licenses:
