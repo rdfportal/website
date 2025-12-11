@@ -4,6 +4,8 @@ description: DisGeNET は、ヒトの疾患に関連する遺伝子およびバ�
 tags: [Gene, Health/Disease]
 provider: Research Programme on Biomedical Informatics (GRIB), Hospital del Mar Medical Research Institute (IMIM), Department of Experimental and Health Sciences, Pompeu Fabra University (UPF), Barcelona, Spain
 rdf_provider: Research Programme on Biomedical Informatics (GRIB), Hospital del Mar Medical Research Institute (IMIM), Department of Experimental and Health Sciences, Pompeu Fabra University (UPF), Barcelona, Spain
+rdf_provenance_type: original
+registration_type: added_by_rdfportal
 version: v7.0.0
 issued:	2020-06-05
 licenses:
