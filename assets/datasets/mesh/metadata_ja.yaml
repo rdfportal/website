@@ -6,6 +6,8 @@ provider: National Library of Medicine
 creators:
   - name: National Library of Medicine
     affiliation: 
+rdf_provenance_type: original
+registration_type: added_by_rdfportal
 version: 2025
 issued: 2024-12-05
 license:
