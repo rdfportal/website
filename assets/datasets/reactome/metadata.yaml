@@ -4,6 +4,8 @@ description: REACTOME is an open-source, open access, manually curated and peer-
 tags: [Interaction/Pathway]
 provider: Reactome Team (https://reactome.org/)
 creators: Reactome Team (https://reactome.org/)
+rdf_provenance_type: original
+registration_type: added_by_rdfportal
 version: 84
 issued: 2023-04
 licenses:
