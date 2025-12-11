@@ -1,0 +1,20 @@
+# SHOWS UNIPROT ID
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bmrbo: <http://bmrbpub.pdbj.org/schema/mmcif_nmr-star.owl#>
+
+SELECT DISTINCT ?entry_id ?entity_id ?entity_name ?uniprot_id
+FROM <http://bmrbpub.protein.osaka-u.ac.jp/rdf/bmr>
+WHERE {
+  VALUES ?entry_id { "10004" "10006" "10008" "10010" "10011" }
+
+  ?s_up bmrbo:entity_db_link.entry_id ?entry_id ;
+        bmrbo:entity_db_link.entity_id ?entity_id ;
+        bmrbo:entity_db_link.database_code "SP" ; # uniprot
+        bmrbo:entity_db_link.accession_code ?uniprot_id ;
+        rdfs:seeAlso ?s_uniprot .
+
+  ?s_en bmrbo:entity.entry_id ?entry_id ;
+        bmrbo:entity.id ?entity_id ;
+        bmrbo:entity.name ?entity_name .
+} ORDER BY ?entry_id

@@ -1,0 +1,12 @@
+# SHOWS SEQUENCES
+
+PREFIX bmrbo: <http://bmrbpub.pdbj.org/schema/mmcif_nmr-star.owl#>
+
+SELECT ?entry_id ?entity_id ?sequence
+FROM <http://bmrbpub.protein.osaka-u.ac.jp/rdf/bmr>
+WHERE {
+  VALUES ?entry_id { "1000" "1001" "1002" "1003" "1004" }
+  ?s_up bmrbo:entity.entry_id ?entry_id ;
+        bmrbo:entity.id ?entity_id ;
+        bmrbo:entity.polymer_seq_one_letter_code ?sequence .
+}

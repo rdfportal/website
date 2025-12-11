@@ -1,0 +1,16 @@
+# SHOWS ALPHA CARBON CHEMICAL SHIFTS
+
+PREFIX bmrbo: <http://bmrbpub.pdbj.org/schema/mmcif_nmr-star.owl#>
+
+SELECT ?entry_id ?seq_id ?comp_id ?ca_ppm
+FROM <http://bmrbpub.protein.osaka-u.ac.jp/rdf/bmr>
+WHERE {
+  ?s_ca bmrbo:atom_chem_shift.atom_id "CA" ;
+        bmrbo:atom_chem_shift.atom_type "C" ;
+        bmrbo:atom_chem_shift.entry_id ?entry_id ;
+        bmrbo:atom_chem_shift.seq_id ?seq_id ;
+        bmrbo:atom_chem_shift.comp_id ?comp_id ;
+        bmrbo:atom_chem_shift.val ?ca_ppm .
+} ORDER BY ?entry_id
+LIMIT 100
+

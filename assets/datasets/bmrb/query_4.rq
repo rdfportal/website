@@ -1,0 +1,32 @@
+# SHOWS ALPHA CARBON CHEMICAL SHIFTS IN ACIDIC CONDITIONS
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX bmrbo: <http://bmrbpub.pdbj.org/schema/mmcif_nmr-star.owl#>
+
+SELECT ?entry_id ?ph ?seq_id ?comp_id ?ca_ppm
+FROM <http://bmrbpub.protein.osaka-u.ac.jp/rdf/bmr>
+WHERE {
+  ?s_ph bmrbo:sample_condition_variable.type "pH" ;
+        bmrbo:sample_condition_variable.val ?ph ;
+        bmrbo:sample_condition_variable.entry_id ?entry_id ;
+        bmrbo:sample_condition_variable.sample_condition_list_id
+?sample_condition_list_id .
+
+  FILTER (xsd:float(?ph) > 0.0 && xsd:float(?ph) <= 5.5)
+
+  ?s_csl bmrbo:assigned_chem_shift_list.entry_id ?entry_id ;
+         bmrbo:assigned_chem_shift_list.sample_condition_list_id
+?sample_condition_list_id ;
+         bmrbo:assigned_chem_shift_list.id ?assigned_chem_shift_list_id .
+
+  ?s_ca bmrbo:atom_chem_shift.atom_id "CA" ;
+        bmrbo:atom_chem_shift.atom_type "C" ;
+        bmrbo:atom_chem_shift.entry_id ?entry_id ;
+        bmrbo:atom_chem_shift.seq_id ?seq_id ;
+        bmrbo:atom_chem_shift.comp_id ?comp_id ;
+        bmrbo:atom_chem_shift.assigned_chem_shift_list_id
+?assigned_chem_shift_list_id ;
+        bmrbo:atom_chem_shift.val ?ca_ppm .
+} ORDER BY ?entry_id ?seq_id
+LIMIT 100
+
