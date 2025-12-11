@@ -6,6 +6,8 @@ provider: HUGO Gene Nomenclature Committee at the European Bioinformatics Instit
 rdf_creators:
   - name: Med2RDF project
     affiliation: http://med2rdf.org/
+rdf_provenance_type: third_party
+registration_type: submitted
 version: release_20250630
 issued: 2025-06-30
 licenses:
