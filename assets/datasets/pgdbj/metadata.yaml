@@ -1,0 +1,20 @@
+title: PGDBj Ortholog database RDF
+website: http://pgdbj.jp/
+description: 
+tags: [ Genome, Gene, Sequence, Phylogeny/Classification ]
+provider: Kazusa DNA Research Institute
+creators:
+  - name: Hisako Ichihara
+    affiliation: Kazusa DNA Research Institute
+  - name: Akihiro Nakaya
+    affiliation: Osaka University
+  - name: Hirokazu Chiba
+    affiliation: National Institute for Basic Biology
+  - name: Satoshi Tabata
+    affiliation: Kazusa DNA Research Institute
+rdf_provenance_type: original
+registration_type: submitted
+version: 1.57.0
+issued: 2016-07-26
+licenses:
+  - Attribution 4.0 International (CC BY 4.0) Database Center for Life Science
