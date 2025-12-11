@@ -17,6 +17,8 @@ rdf_creators:
     affiliation: NBDC, JST
   - name: Asuka Bando
     affiliation: NBDC, JST
+rdf_provenance_type: original
+registration_type: submitted
 version: release_20230302
 issued: 2023-03-02
 licenses:
