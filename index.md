@@ -7,12 +7,13 @@ description: Welcome to the RDF Portal. Explore datasets and SPARQL endpoints.
 page_id: home
 permalink_lang:
   en: /
-  ja: /ja/
+  ja: /
 ---
 
 <div id="TopPageContentsView">
 
   <section class="intro">
+    {% lang 'en' %}
     <p>
       <span>The RDF Portal provides a collection of </span><br>
       <span>life science datasets in RDF (Resource Description Framework). </span><br>
@@ -22,11 +23,21 @@ permalink_lang:
       <span>In this portal, each dataset comes with a summary,</span><br>
       <span>downloadable files and a SPARQL endpoint.</span>
     </p>
+    {% endlang %}
+    {% lang 'ja' %}
+    <p>
+      <span>RDF Portal はライフサイエンス分野の RDF（Resource Description Framework）データセットを集約し、</span><br>
+      <span>研究機関やコミュニティが公開する多様な知識を横断的に活用できるようにするための玄関口です。</span><br>
+      <span>各データセットには概要、ダウンロードファイル、SPARQL エンドポイントを用意し、</span><br>
+      <span>異種データの統合的な利用や再解析を後押しします。</span>
+    </p>
+    {% endlang %}
   </section>
   
   <section class="logs" aria-labelledby="log-heading">
-    <h3 class="heading">Recent Updates</h3>
-    {% assign translated_logs = site.logs | where: "lang", page.lang %}
+    <h3 class="heading">{% lang 'en' %}Recent Updates{% endlang %}{% lang 'ja' %}最新のお知らせ{% endlang %}</h3>
+    {% assign current_lang = site.active_lang | default: page.lang | default: site.default_lang %}
+    {% assign translated_logs = site.logs | where: "lang", current_lang %}
     {% if translated_logs and translated_logs.size > 0 %}
       {% assign render_logs = translated_logs %}
     {% else %}
