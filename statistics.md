@@ -4,8 +4,11 @@ title: Statistics
 pageId: statistics
 description: RDFデータセットの統計情報一覧
 permalink: /statistics/
+permalink_lang:
+  en: /statistics/
+  ja: /statistics/
 ---
-
+{% lang 'en' %}
 <article lang="en">
 
   <h3>Dataset statistics overview</h3>
@@ -18,7 +21,9 @@ permalink: /statistics/
     separators for readability.</p>
 
 </article>
+{% endlang %}
 
+{% lang 'ja' %}
 <article lang="ja">
 
   <h3>データセット統計の概要</h3>
@@ -29,23 +34,24 @@ permalink: /statistics/
   <p>列見出しをクリックすると昇順・降順で並べ替えられます。数値は自動的に 3 桁区切りで表示され、視認性を高めています。</p>
 
 </article>
+{% endlang %}
 
 <script type="application/json" id="datasets-json">{{ site.data.datasets | jsonify }}</script>
-<div id="TagStatsBar" aria-label="Tag distribution / タグ分布"></div>
+<div id="TagStatsBar" aria-label="{% lang 'en' %}Tag distribution{% endlang %}{% lang 'ja' %}タグ分布{% endlang %}"></div>
 <div id="StatisticsTableView">
   <div class="inner">
     <table>
       <thead>
         <tr>
-          <th data-sort="title"><span class="th-label"><span lang="en">Dataset</span> / <span lang="ja">データセット</span></span></th>
-          <th data-sort="number_of_triples"><span class="th-label"><span lang="en">Triples</span> / <span lang="ja">トリプル数</span></span></th>
-          <th data-sort="number_of_links"><span class="th-label"><span lang="en">Links</span> / <span lang="ja">リンク数</span></span></th>
-          <th data-sort="number_of_classes"><span class="th-label"><span lang="en">Classes</span> / <span lang="ja">クラス数</span></span></th>
-          <th data-sort="number_of_instances"><span class="th-label"><span lang="en">Instances</span> / <span lang="ja">インスタンス数</span></span></th>
-          <th data-sort="number_of_literals"><span class="th-label"><span lang="en">Literals</span> / <span lang="ja">リテラル数</span></span></th>
-          <th data-sort="number_of_subjects"><span class="th-label"><span lang="en">Subjects</span> / <span lang="ja">主語数</span></span></th>
-          <th data-sort="number_of_properties"><span class="th-label"><span lang="en">Properties</span> / <span lang="ja">プロパティ数</span></span></th>
-          <th data-sort="number_of_objects"><span class="th-label"><span lang="en">Objects</span> / <span lang="ja">オブジェクト数</span></span></th>
+          <th data-sort="title"><span class="th-label">{% lang 'en' %}Dataset{% endlang %}{% lang 'ja' %}データセット{% endlang %}</span></th>
+          <th data-sort="number_of_triples"><span class="th-label">{% lang 'en' %}Triples{% endlang %}{% lang 'ja' %}トリプル数{% endlang %}</span></th>
+          <th data-sort="number_of_links"><span class="th-label">{% lang 'en' %}Links{% endlang %}{% lang 'ja' %}リンク数{% endlang %}</span></th>
+          <th data-sort="number_of_classes"><span class="th-label">{% lang 'en' %}Classes{% endlang %}{% lang 'ja' %}クラス数{% endlang %}</span></th>
+          <th data-sort="number_of_instances"><span class="th-label">{% lang 'en' %}Instances{% endlang %}{% lang 'ja' %}インスタンス数{% endlang %}</span></th>
+          <th data-sort="number_of_literals"><span class="th-label">{% lang 'en' %}Literals{% endlang %}{% lang 'ja' %}リテラル数{% endlang %}</span></th>
+          <th data-sort="number_of_subjects"><span class="th-label">{% lang 'en' %}Subjects{% endlang %}{% lang 'ja' %}主語数{% endlang %}</span></th>
+          <th data-sort="number_of_properties"><span class="th-label">{% lang 'en' %}Properties{% endlang %}{% lang 'ja' %}プロパティ数{% endlang %}</span></th>
+          <th data-sort="number_of_objects"><span class="th-label">{% lang 'en' %}Objects{% endlang %}{% lang 'ja' %}オブジェクト数{% endlang %}</span></th>
         </tr>
       </thead>
       <tbody>
