@@ -6,6 +6,8 @@ provider: Database Center for Life Science, Joint Support-Center for Data Scienc
 creators:
   - name: Database Center for Life Science, Joint Support-Center for Data Science Research, Research Organization of Information and Systems, Japan
   - affiliation: --
+rdf_provenance_type: original
+registration_type: submitted
 version: 2022-04-01
 issued: 2022-04-01
 license: 
