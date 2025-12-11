@@ -6,6 +6,8 @@ provider: National Institute for Materials Science
 creators:
   - name: Masashi Ishii
     affiliation: National Institute for Materials Science
+rdf_provenance_type: original
+registration_type: submitted
 version: 0.2
 issued: 2020-02-06
 license:
