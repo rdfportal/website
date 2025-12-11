@@ -3,6 +3,8 @@ website: https://www.bgee.org/
 description: A database for retrieval and comparison of gene expression patterns across multiple animal species 
 tags: [Gene, Gene expression]
 provider: SIB Swiss Institute of Bioinformatics
+rdf_provenance_type: original
+registration_type: added_by_rdfportal
 version: 15.2.3
 issued: 2024-00-00
 licenses:
