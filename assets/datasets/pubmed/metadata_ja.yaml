@@ -8,6 +8,8 @@ rdf_creators:
   - name: Med2RDF project
     affiliation: http://med2rdf.org/
     version: release_20250630
+rdf_provenance_type: third_party
+registration_type: submitted
 issued: 2025-06-30
 licenses:
   - https://www.nlm.nih.gov/databases/download.html
