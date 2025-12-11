@@ -4,7 +4,9 @@ description: NLM bibliographic data on journals, books, audiovisual materials, c
 tags: [ Ontology/Terminology/Nomenclature, Journal article/Report/Bibliography ]
 provider: National Library of Medicine 
 rdf_provider: Database Center for Life Science
-version: 
+rdf_provenance_type: third_party
+registration_type: submitted
+version: NA
 issued: 2025-06-30
 license:
   - name:                              
