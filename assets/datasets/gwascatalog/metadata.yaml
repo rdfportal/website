@@ -7,6 +7,8 @@ creators:
   - name: European Bioinformatics Institute
 rdf_creators:
   - name: European Bioinformatics Institute
+rdf_provenance_type: original
+registration_type: added_by_rdfportal
 version: 
 issued: 
 licenses:
