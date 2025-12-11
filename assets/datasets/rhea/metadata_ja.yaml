@@ -40,7 +40,9 @@ creators:
     affiliation: Swiss-Prot Group, SIB Swiss Institute of Bioinformatics
   - name: Alan Bridge
     affiliation: Swiss-Prot Group, SIB Swiss Institute of Bioinformatics
-version: Rhea release 114
-issued: 2020-08-13
+rdf_provenance_type: original
+registration_type: added_by_rdfportal
+version: Rhea release 139
+issued: 2025-06-18
 licenses:
   - Attribution 4.0 International (CC BY 4.0) 
