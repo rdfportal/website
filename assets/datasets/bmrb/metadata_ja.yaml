@@ -26,6 +26,8 @@ creators:
     affiliation: Department of Informatics & Telecommunications, University of Athens
   - name: Miron Livny
     affiliation: Department of Computer Sciences, University of Wisconsin-Madison
+rdf_provenance_type: original
+registration_type: submitted
 version: 2023-04-29
 issued: 2023-04-29
 license:
