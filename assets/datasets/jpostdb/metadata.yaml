@@ -10,6 +10,8 @@ creators:
     affiliation: "Kitazato University"
   - name: "Susumu Goto"
     affiliation: "Database Center for Life Science"
+rdf_provenance_type: original
+registration_type: submitted
 version: 202006
 issued: 2020-06-09
 licenses:

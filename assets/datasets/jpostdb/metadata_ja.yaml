@@ -10,6 +10,8 @@ creators:
     affiliation: "北里大学"
   - name: "五斗 進"
     affiliation: "ライフサイエンス統合データベースセンター"
+rdf_provenance_type: original
+registration_type: submitted
 version: 202006
 issued: 2020-06-09
 licenses:
