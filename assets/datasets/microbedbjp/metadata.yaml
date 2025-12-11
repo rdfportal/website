@@ -1,0 +1,16 @@
+title: MicrobeDB.jp
+website: https://mdatahub.org/
+description: MicrobeDB.jp
+tags: []
+provider: National Institute of Genetics
+creators:
+  - name: Hiroshi Mori
+    affiliation: National Institute of Genetics
+  - name: Ken Kurokawa
+    affiliation: National Institute of Genetics
+rdf_provenance_type: original
+registration_type: submitted
+version: 
+issued: 2025-00-00
+licenses:
+  - NA
