@@ -6,6 +6,8 @@ provider: USF Genomics, College of Public Health, University of South Florida
 creators:
   - name: Med2RDF project  
     affiliation: http://med2rdf.org/ 
+rdf_provenance_type: third_party
+registration_type: submitted
 version: 4.9
 issued: 2024-8-8
 licenses:
