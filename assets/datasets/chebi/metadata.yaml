@@ -5,6 +5,8 @@ tags: [ Drug/Chemical ]
 provider: European Bioinformatics Institute
 creators:
   - name: European Bioinformatics Institute
+rdf_provenance_type: original
+registration_type: added_by_rdfportal
 version: Release 242
 issued: 2025-06-02
 licenses:
