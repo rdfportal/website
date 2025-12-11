@@ -6,6 +6,8 @@ provider: DSMZ
 creators:
   - name: Julia Koblitz
     affiliation: DSMZ
+rdf_provenance_type: original
+registration_type: submitted
 version: release_20251016
 issued: 2025-10-16
 licenses:

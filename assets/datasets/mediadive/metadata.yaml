@@ -6,6 +6,8 @@ provider: Leibniz Institute DSMZ-German Collection of Microorganisms and Cell Cu
 creators:
   - name: Julia Koblitz
     affiliation: Leibniz Institute DSMZ-German Collection of Microorganisms and Cell Cultures
+rdf_provenance_type: original
+registration_type: submitted
 version: 2024-10
 issued: 2025-09-16
 licenses:
