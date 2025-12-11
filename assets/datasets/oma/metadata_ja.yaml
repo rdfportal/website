@@ -10,6 +10,8 @@ creators:
     affiliation: SIB Swiss Institute of Bioinformatics
   - name: Tarcisio Mendes de Farias
     affiliation: SIB Swiss Institute of Bioinformatics
+rdf_provenance_type: original
+registration_type: added_by_rdfportal
 version: Jul2023
 issued: 2023-07-01
 licenses:
