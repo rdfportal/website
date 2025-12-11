@@ -6,6 +6,8 @@ provider: National Center for Biotechnology Information
 creators:
   - name: Hirokazu Chiba
     affiliation: Database Center for Life Science
+rdf_provenance_type: third_party
+registration_type: submitted
 version: release_20230525
 issued: 2022-05-25
 licenses:
