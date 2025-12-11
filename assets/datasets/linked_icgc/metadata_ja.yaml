@@ -6,6 +6,8 @@ provider: 東京大学 先端科学技術研究センター
 creators:
   - name: 山中 遼太
     affiliation: 東京大学 先端科学技術研究センター
+rdf_provenance_type: third_party
+registration_type: submitted
 version: release_20
 issued: 2016-01-04
 licenses:
