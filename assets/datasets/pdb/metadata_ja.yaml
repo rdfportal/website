@@ -1,14 +1,14 @@
-title: RefEx RDF
-website: http://refex.dbcls.jp/index.php?lang=ja
-description: RDFized reference gene expresson dataset derived from CAGE and GeneChip experiments in the RefEx database.
-tags: [ Gene, Tag sequence (nucleic acid), Gene expression ]
-provider:
+title: wwwPDB/RDF
+website: https://rdf.wwpdb.org/
+description: wwPDB/RDFはPDBx/PDBMLデータをRDFへ変換したものです
+tags: [ Protein, Drug/Chemical, Other biomolecule, Sequence, Structure ]
+provider: 大阪大学蛋白質研究所
 creators:
-  - name: Shuichi Kawahsima
+  - name: 金城 玲
     affiliation: Database Center for Life Science
-  - name: Hiromasa Ono
-    affiliation: Database Center for Life Science
-version: 2017-04-07
-issued: 2017-04-07
+rdf_provenance_type: original
+registration_type: submitted
+version: release_20250919
+issued: 2025-09-19
 licenses:
   - Attribution 4.0 International (CC BY 4.0) Database Center for Life Science
