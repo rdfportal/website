@@ -10,6 +10,8 @@ creators:
     affiliation: ライフサイエンス統合データベースセンター
   - name: 
     affiliation: 
+rdf_provenance_type: original
+registration_type: submitted
 version: 2016-03-24
 issued: 2016-03-24
 licenses:
