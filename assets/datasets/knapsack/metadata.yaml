@@ -24,6 +24,8 @@ creators:
     affiliation: Nara Institute of Science and Technology (NAIST)     
   - name: Masanori Arita
     affiliation: National Institute of Genetics (NIG)
+rdf_provenance_type: original
+registration_type: submitted
 version: 0.2.0
 issued: 2022-05-30
 licenses:

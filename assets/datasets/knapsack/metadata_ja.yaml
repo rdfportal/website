@@ -24,6 +24,8 @@ creators:
     affiliation: 奈良先端科学技術大学院大学     
   - name: 有田　正規
     affiliation: 国立遺伝学研究所
+rdf_provenance_type: original
+registration_type: submitted
 version: 0.2.0
 issued: 2022-05-30
 licenses:
