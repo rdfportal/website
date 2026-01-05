@@ -118,24 +118,51 @@
         <p>© {{ site.time | date: "%Y" }} RDF Portal</p>
         <p><a href="{{ '/site-policy/' | relative_url }}">Site Policy</a></p>
         <span class="spacer"></span>
-        {% if counterpart_lang != '' and counterpart_href != '' %}
-        {% case counterpart_lang %}
-        {% when 'ja' %}
-        {% assign counterpart_label = '日本語' %}
-        {% when 'en' %}
-        {% assign counterpart_label = 'English' %}
+        {% comment %} Determine counterpart language and URL {% endcomment %}
+        {% assign active_lang = site.active_lang | default: site.default_lang %}
+        {% assign counterpart_lang = "en" %}
+        {% if active_lang == "en" %}
+        {% assign counterpart_lang = "ja" %}
+        {% endif %}
+
+        {% assign final_baseurl = site.baseurl %}
+        {% if active_lang != site.default_lang %}
+        {% assign lang_suffix = "/" | append: active_lang %}
+        {% if final_baseurl contains lang_suffix %}
+        {% assign final_baseurl = final_baseurl | remove: lang_suffix %}
+        {% endif %}
+        {% endif %}
+
+        {% assign target_path = page.url %}
+        {% if active_lang == "en" %}
+        {% assign target_path = "/" | append: counterpart_lang | append: page.url %}
+        {% assign target_path = target_path | replace: "//", "/" %}
         {% else %}
-        {% assign counterpart_label = counterpart_lang | upcase %}
-        {% endcase %}
-        <div data-current-lang="{{ current_lang }}">
-          <a href="#" aria-label="Change language" data-lang="{{ counterpart_lang }}"
-            data-switch-target="{{ counterpart_href }}">
+        {% assign lang_prefix_slash = "/" | append: active_lang | append: "/" %}
+        {% assign lang_prefix_exact = "/" | append: active_lang %}
+
+        {% if page.url contains lang_prefix_slash %}
+        {% assign target_path = page.url | replace_first: lang_prefix_slash, "/" %}
+        {% elsif page.url == lang_prefix_exact %}
+        {% assign target_path = "/" %}
+        {% endif %}
+        {% endif %}
+
+        {% assign site_host = site.url | remove: "http:" | remove: "https:" %}
+        {% assign final_url = site_host | append: final_baseurl | append: target_path %}
+
+        {% if counterpart_lang == "ja" %}
+        {% assign counterpart_label = "日本語" %}
+        {% else %}
+        {% assign counterpart_label = "English" %}
+        {% endif %}
+
+        <div data-current-lang="{{ active_lang }}">
+          <a href="{{ final_url }}" aria-label="Change language">
             {{ counterpart_label }}
           </a>
         </div>
-        {% endif %}
       </div>
-    </div>
   </aside>
 
   <main>

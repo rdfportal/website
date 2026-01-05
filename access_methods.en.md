@@ -3,8 +3,9 @@ layout: page
 title: Access methods
 pageId: access_methods
 parentPageId: access_methods
-description: RDFデータへのアクセス方法について説明します
+description: Learn how to access RDF data
 permalink: /access_methods/
+lang: en
 ---
 
 <div class="grid-boxes" style="margin-top: 50px;">

@@ -5,9 +5,6 @@ lang: en
 permalink: /
 description: Welcome to the RDF Portal. Explore datasets and SPARQL endpoints.
 page_id: home
-permalink_lang:
-  en: /
-  ja: /
 ---
 
 <div id="TopPageContentsView">
