@@ -79,13 +79,3 @@ defaults:
       type: "pages"
     values:
       layout: "page"
-  - scope:
-      path: "news"
-      type: "news"
-    values:
-      lang: "ja"
-  - scope:
-      path: "logs"
-      type: "logs"
-    values:
-      lang: "ja"
