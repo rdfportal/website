@@ -19,5 +19,5 @@
     - [ ] `datasets.md`
     - [x] `access_methods/*.md` (access_methods.en.md/ja.md 作成済み)
     - [x] `_news` および `_logs` の記事全量 (en/ja 分割対応済み)
-    - [ ] `datasets.md`
+    - [x] `datasets.md`
     - [ ] `documents/*.md`

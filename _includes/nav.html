@@ -23,27 +23,35 @@
       </ul>
       {% endif %}
       {% if item.id == 'datasets' and page.pageId == 'datasets' %}
+      {% assign i18n_filter = site.data.i18n.datasets_filter[current_lang] %}
       <div id="DatasetsSortFilterView">
         <div class="sort">
-          <label for="sortSegment">Sort:</label>
+          <label for="sortSegment">{{ i18n_filter.sort_label }}:</label>
 
-          <div id="sortSegment" class="segmented-buttons-container" role="tablist" aria-label="Sort datasets">
-            <button class="button-view" type="button" data-sort="date" aria-pressed="true">Date</button>
-            <button class="button-view" type="button" data-sort="name" aria-pressed="false">Name</button>
-            <button class="button-view" type="button" data-sort="triples" aria-pressed="false">Triples</button>
+          <div id="sortSegment" class="segmented-buttons-container" role="tablist"
+            aria-label="{{ i18n_filter.sort_aria_label }}">
+            <button class="button-view" type="button" data-sort="date" aria-pressed="true">{{
+              i18n_filter.sort_options.date }}</button>
+            <button class="button-view" type="button" data-sort="name" aria-pressed="false">{{
+              i18n_filter.sort_options.name }}</button>
+            <button class="button-view" type="button" data-sort="triples" aria-pressed="false">{{
+              i18n_filter.sort_options.triples }}</button>
           </div>
         </div>
         <div class="order">
-          <label for="sortOrderSegment">Order:</label>
-          <div id="sortOrderSegment" class="segmented-buttons-container" role="tablist" aria-label="Sort order">
-            <button class="button-view" type="button" data-order="desc" aria-pressed="true">Desc</button>
-            <button class="button-view" type="button" data-order="asc" aria-pressed="false">Asc</button>
+          <label for="sortOrderSegment">{{ i18n_filter.order_label }}:</label>
+          <div id="sortOrderSegment" class="segmented-buttons-container" role="tablist"
+            aria-label="{{ i18n_filter.order_aria_label }}">
+            <button class="button-view" type="button" data-order="desc" aria-pressed="true">{{
+              i18n_filter.order_options.desc }}</button>
+            <button class="button-view" type="button" data-order="asc" aria-pressed="false">{{
+              i18n_filter.order_options.asc }}</button>
           </div>
         </div>
         <div class="filter">
-          <label for="tagSelect">Filter:</label>
-          <select id="tagSelect" aria-label="Filter tags">
-            <option value="">All tags</option>
+          <label for="tagSelect">{{ i18n_filter.filter_label }}:</label>
+          <select id="tagSelect" aria-label="{{ i18n_filter.filter_aria_label }}">
+            <option value="">{{ i18n_filter.filter_default_option }}</option>
           </select>
         </div>
       </div>
