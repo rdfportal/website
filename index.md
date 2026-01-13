@@ -9,7 +9,6 @@ page_id: home
 <div id="TopPageContentsView">
 
   <section class="intro">
-    {% lang 'en' %}
     <p>
       <span>The RDF Portal provides a collection of </span><br>
       <span>life science datasets in RDF (Resource Description Framework). </span><br>
@@ -19,15 +18,6 @@ page_id: home
       <span>In this portal, each dataset comes with a summary,</span><br>
       <span>downloadable files and a SPARQL endpoint.</span>
     </p>
-    {% endlang %}
-    {% lang 'ja' %}
-    <p>
-      <span>RDF Portal はライフサイエンス分野の RDF（Resource Description Framework）データセットを集約し、</span><br>
-      <span>研究機関やコミュニティが公開する多様な知識を横断的に活用できるようにするための玄関口です。</span><br>
-      <span>各データセットには概要、ダウンロードファイル、SPARQL エンドポイントを用意し、</span><br>
-      <span>異種データの統合的な利用や再解析を後押しします。</span>
-    </p>
-    {% endlang %}
   </section>
   
   <section class="logs" aria-labelledby="log-heading">
