@@ -195,56 +195,8 @@
         /* noop */
       }
     })();
-
-    (function () {
-      try {
-        var switcherDiv = document.querySelector('.global-navigation .bottom div[data-current-lang]');
-        var switcher = switcherDiv ? switcherDiv.querySelector('a') : null;
-        if (!switcher || !switcherDiv) return;
-
-        // Perform existence check only for News/Logs (or generally if safety needed)
-        // For performance, we can skip check for known static pages if desired, but user asked for News case.
-        // Let's check for all auto-generated links to be safe.
-
-        var targetUrl = switcher.getAttribute('href');
-        if (!targetUrl) return;
-
-        // If it looks like an absolute URL on same domain or relative
-        // We can check it. (Cross-origin might fail CORS, but here it's same domain)
-
-        // Hide by default if we are unsure? 
-        // User want "No button".
-        // Let's set initial style to hidden or check async.
-        // To avoid layout shift, maybe we keep it but disable click?
-        // User said "English Button not shown" (1. English ボタンを出さない).
-
-        // We will hide it initially via CSS or logic if we want to be strict,
-        // but simple way: Check async, then remove if 404.
-
-        // However, for standard pages (About, Access), we know they exist.
-        // Checking everything might incur unnecessary network requests.
-        // Maybe check if path contains /news/ or /logs/?
-        var checkNeeded = /\/(news|logs)\//.test(targetUrl) || /\/(news|logs)\//.test(window.location.pathname);
-
-        if (checkNeeded) {
-          // Optimistic: Keep shown. If 404, hide.
-          fetch(targetUrl, { method: 'HEAD' })
-            .then(function (res) {
-              if (!res.ok) {
-                switcherDiv.style.display = 'none';
-              }
-            })
-            .catch(function (e) {
-              // Network error or other issue -> hide to be safe? Or ignore?
-              // Ignore (keep shown) or Hide?
-              // Safer to Hide if we can't verify 
-              switcherDiv.style.display = 'none';
-            });
-        }
-      } catch (e) {
-        console.error('Lang switcher check error', e);
-      }
-    })();
+  </script>
+  <script src="{{ '/assets/js/language-switcher.js' | relative_url }}"></script>
   </script>
   </body>
 

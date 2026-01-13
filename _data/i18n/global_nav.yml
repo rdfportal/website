@@ -1,10 +1,4 @@
 en:
-  stats:
-    datasets_label: "RDF dataset"
-    triples_plain: "triples"
-    triples_million: "million triples"
-    triples_billion: "billion triples"
-    triples_trillion: "trillion triples"
   footer:
     site_policy: "Site Policy"
     copyright: "©"
@@ -17,12 +11,6 @@ en:
     description: "Integrated access to life science RDF datasets - Search, connect, and utilize trusted data globally."
 
 ja:
-  stats:
-    datasets_label: "RDFデータセット"
-    triples_plain: "トリプル"
-    triples_million: "百万トリプル"
-    triples_billion: "十億トリプル"
-    triples_trillion: "兆トリプル"
   footer:
     site_policy: "サイトポリシー"
     copyright: "©"
