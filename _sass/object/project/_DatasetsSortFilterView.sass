@@ -1,18 +1,20 @@
 #DatasetsSortFilterView
+  padding: 2px 0 8px
   > div
     display: flex
     align-items: center
+    --width-label: 5em
     > label
-      padding-right: 2px
+      padding-right: 4px
       display: inline-block
       font-size: 1.2rem
-      flex-basis: 36px
+      flex-basis: var(--width-label)
       text-align: right
     > .segmented-buttons-container
       margin-bottom: 4px
     // make select align visually with segmented buttons
     > #tagSelect
-      width: calc(100% - 40px)
+      width: calc(100% - var(--width-label))
       // min-width: 12rem
       // max-width: 22rem
       padding: 5px 10px
