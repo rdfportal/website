@@ -1,0 +1,44 @@
+- id: access_methods
+  title: "アクセス方法"
+  url: "/access_methods/"
+  children:
+    - id: sparql_endpoints
+      title: "SPARQLエンドポイント"
+      url: "/access_methods/sparql_endpoints/"
+    - id: graphql_api
+      title: "GraphQL API"
+      url: "/access_methods/graphql_api/"
+    - id: mcp_interface
+      title: "MCPインターフェース"
+      url: "/access_methods/mcp_interface/"
+    - id: llm_chat_interface
+      title: "LLMチャットインターフェース"
+      url: "/access_methods/llm_chat_interface/"
+- id: datasets
+  title: "データセット"
+  url: "/datasets/"
+- id: statistics
+  title: "統計"
+  url: "/statistics/"
+- id: documents
+  title: "ドキュメント"
+  url: "/documents/introduction/"
+  children:
+    - id: introduction
+      title: "はじめに"
+      url: "/documents/introduction/"
+    - id: data_submission
+      title: "データ登録"
+      url: "/documents/data_submission/"
+    - id: about_sparql_endpoints
+      title: "SPARQLエンドポイントについて"
+      url: "/documents/about_sparql_endpoints/"
+- id: about
+  title: "このサイトについて"
+  url: "/about/"
+- id: news
+  title: "ニュース"
+  url: "/news/"
+- id: logs
+  title: "更新履歴"
+  url: "/logs/"

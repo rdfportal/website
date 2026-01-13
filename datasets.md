@@ -12,6 +12,10 @@ description: 利用可能なRDFデータセットの一覧を表示します
 <!-- #DatasetsSortFilterView（default.html側）を活用するため独自UIは廃止 -->
 <div id="DatasetsListView"></div>
 
+<script src="{{ '/assets/js/DatasetIcon.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/DatasetCard.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/DatasetsManager.js' | relative_url }}"></script>
+
 <script>
 
 
@@ -53,12 +57,29 @@ document.addEventListener('DOMContentLoaded', async function() {
 
   function getFilteredSortedDatasets() {
     let filtered = datasets;
+    const currentLang = document.documentElement.lang || 'en';
+
+    // Helper to get string from string or object
+    const getStringVal = (val, lang) => {
+       if (!val) return "";
+       if (typeof val === "string") return val;
+       if (typeof val === "object") return val[lang] || val.en || val.ja || "";
+       return "";
+    };
+    // Helper for search (check all langs)
+    const getSearchable = (val) => {
+       if (!val) return "";
+       if (typeof val === "string") return val.toLowerCase();
+       if (typeof val === "object") return Object.values(val).join(" ").toLowerCase();
+       return "";
+    };
+
     // 検索
     if (searchInput && searchInput.value.trim()) {
       const keyword = searchInput.value.trim().toLowerCase();
       filtered = filtered.filter(ds =>
-        (ds.title && ds.title.toLowerCase().includes(keyword)) ||
-        (ds.description && ds.description.toLowerCase().includes(keyword))
+        getSearchable(ds.title).includes(keyword) ||
+        getSearchable(ds.description).includes(keyword)
       );
     }
     // タグフィルタ
@@ -81,8 +102,8 @@ document.addEventListener('DOMContentLoaded', async function() {
     filtered = filtered.slice().sort((a, b) => {
       let va, vb;
       if (sortKey === 'name') {
-        va = (a.title || '').toLowerCase();
-        vb = (b.title || '').toLowerCase();
+        va = getStringVal(a.title, currentLang).toLowerCase();
+        vb = getStringVal(b.title, currentLang).toLowerCase();
         return sortOrder === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va);
       } else if (sortKey === 'triples') {
         va = a.statistics?.number_of_triples || 0;

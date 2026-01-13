@@ -2,6 +2,8 @@
 layout: post
 title: "年末年始のメンテナンスのお知らせ"
 date: 2024-12-20 10:00:00 +0900
+slug: maintenance-notice
+lang: ja
 ---
 
 年末年始のサービス停止期間についてお知らせします。

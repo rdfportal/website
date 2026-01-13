@@ -1,40 +1,57 @@
+{% assign current_lang = site.active_lang | default: page.lang | default: site.default_lang %}
+{% assign nav_items = site.data.navigation[current_lang] | default: site.data.navigation[site.default_lang] %}
+{% assign lang_prefix = "" %}
+{% unless current_lang == site.default_lang %}
+{% assign lang_prefix = "/" | append: current_lang %}
+{% endunless %}
+
 <nav>
   <ul>
-    {% for item in site.data.navigation %}
+    {% for item in nav_items %}
     <li data-page-id="{{ item.id }}" {% if item.id==page.pageId or item.id==page.parentPageId %} class="-active" {%
       endif %}>
-      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% assign item_url = lang_prefix | append: item.url %}
+      <a href="{{ item_url | relative_url }}">{{ item.title }}</a>
       {% if item.children %}
       <ul>
         {% for c in item.children %}
         <li data-page-id="{{ c.id }}" {% if c.id==page.pageId or c.id==page.pageId %} class="-active" {% endif %}>
-          <a href="{{ c.url | relative_url }}">{{ c.title }}</a>
+          {% assign child_url = lang_prefix | append: c.url %}
+          <a href="{{ child_url | relative_url }}">{{ c.title }}</a>
         </li>
         {% endfor %}
       </ul>
       {% endif %}
       {% if item.id == 'datasets' and page.pageId == 'datasets' %}
+      {% assign i18n_filter = site.data.i18n.datasets_filter[current_lang] %}
       <div id="DatasetsSortFilterView">
         <div class="sort">
-          <label for="sortSegment">Sort:</label>
+          <label for="sortSegment">{{ i18n_filter.sort_label }}:</label>
 
-          <div id="sortSegment" class="segmented-buttons-container" role="tablist" aria-label="Sort datasets">
-            <button class="button-view" type="button" data-sort="date" aria-pressed="true">Date</button>
-            <button class="button-view" type="button" data-sort="name" aria-pressed="false">Name</button>
-            <button class="button-view" type="button" data-sort="triples" aria-pressed="false">Triples</button>
+          <div id="sortSegment" class="segmented-buttons-container" role="tablist"
+            aria-label="{{ i18n_filter.sort_aria_label }}">
+            <button class="button-view" type="button" data-sort="date" aria-pressed="true">{{
+              i18n_filter.sort_options.date }}</button>
+            <button class="button-view" type="button" data-sort="name" aria-pressed="false">{{
+              i18n_filter.sort_options.name }}</button>
+            <button class="button-view" type="button" data-sort="triples" aria-pressed="false">{{
+              i18n_filter.sort_options.triples }}</button>
           </div>
         </div>
         <div class="order">
-          <label for="sortOrderSegment">Order:</label>
-          <div id="sortOrderSegment" class="segmented-buttons-container" role="tablist" aria-label="Sort order">
-            <button class="button-view" type="button" data-order="desc" aria-pressed="true">Desc</button>
-            <button class="button-view" type="button" data-order="asc" aria-pressed="false">Asc</button>
+          <label for="sortOrderSegment">{{ i18n_filter.order_label }}:</label>
+          <div id="sortOrderSegment" class="segmented-buttons-container" role="tablist"
+            aria-label="{{ i18n_filter.order_aria_label }}">
+            <button class="button-view" type="button" data-order="desc" aria-pressed="true">{{
+              i18n_filter.order_options.desc }}</button>
+            <button class="button-view" type="button" data-order="asc" aria-pressed="false">{{
+              i18n_filter.order_options.asc }}</button>
           </div>
         </div>
         <div class="filter">
-          <label for="tagSelect">Filter:</label>
-          <select id="tagSelect" aria-label="Filter tags">
-            <option value="">All tags</option>
+          <label for="tagSelect">{{ i18n_filter.filter_label }}:</label>
+          <select id="tagSelect" aria-label="{{ i18n_filter.filter_aria_label }}">
+            <option value="">{{ i18n_filter.filter_default_option }}</option>
           </select>
         </div>
       </div>

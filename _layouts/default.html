@@ -1,12 +1,14 @@
+{% assign current_lang = site.active_lang | default: page.lang | default: site.default_lang %}
+{% assign i18n_global = site.data.i18n.global_nav[current_lang] %}
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="{{ current_lang | escape }}">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description"
-    content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    content="{% if page.description %}{{ page.description }}{% else %}{{ i18n_global.meta.description }}{% endif %}">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <script type="text/javascript" data-width="auto" data-color="mono"
     src="https://dbcls.rois.ac.jp/DBCLS-common-header-footer/common-header-and-footer/script/common-header-and-footer.js"
@@ -15,6 +17,47 @@
 
 <body{% if page.pageId %} data-page-id="{{ page.pageId }}" {% endif %}{% if page.parentPageId %}
   data-parent-page-id="{{ page.parentPageId }}" {% endif %}>
+  {% assign canonical_path = page.permalink | default: page.url | default: '/' %}
+  {% if canonical_path == '' %}
+  {% assign canonical_path = '/' %}
+  {% endif %}
+  {% assign first_char = canonical_path | slice: 0, 1 %}
+  {% unless first_char == '/' %}
+  {% assign canonical_path = '/' | append: canonical_path %}
+  {% endunless %}
+  {% if current_lang != site.default_lang %}
+  {% assign lang_prefix = '/' | append: current_lang %}
+  {% assign lang_prefix_with_slash = lang_prefix | append: '/' %}
+  {% assign lang_prefix_length = lang_prefix_with_slash | size %}
+  {% assign path_prefix = canonical_path | slice: 0, lang_prefix_length %}
+  {% if canonical_path == lang_prefix %}
+  {% assign canonical_path = '/' %}
+  {% elsif path_prefix == lang_prefix_with_slash %}
+  {% assign canonical_path = canonical_path | replace_first: lang_prefix_with_slash, '/' %}
+  {% endif %}
+  {% endif %}
+  {% assign counterpart_lang = '' %}
+  {% assign counterpart_href = '' %}
+  {% if page.permalink_lang %}
+  {% for lang_code in site.languages %}
+  {% if lang_code == current_lang %}
+  {% continue %}
+  {% endif %}
+  {% assign canonical_lang_path = page.permalink_lang[lang_code] | default: '/' %}
+  {% assign lang_href = canonical_lang_path %}
+  {% if lang_code != site.default_lang %}
+  {% if canonical_lang_path == '/' %}
+  {% assign lang_href = '/' | append: lang_code | append: '/' %}
+  {% else %}
+  {% assign lang_href = '/' | append: lang_code | append: canonical_lang_path %}
+  {% endif %}
+  {% endif %}
+  {% assign counterpart_lang = lang_code %}
+  {% assign lang_href_clean = lang_href | strip %}
+  {% assign counterpart_href = lang_href_clean | replace: '//', '/' %}
+  {% break %}
+  {% endfor %}
+  {% endif %}
   <aside class="global-navigation">
     <div class="background"></div>
     <div class="inner">
@@ -74,19 +117,53 @@
       <div class="space"></div>
       <div class="bottom">
         <p>© {{ site.time | date: "%Y" }} RDF Portal</p>
-        <p><a href="{{ '/site-policy/' | relative_url }}">Site Policy</a></p>
+        <p><a href="{{ '/site-policy/' | relative_url }}">{{ i18n_global.footer.site_policy }}</a></p>
         <span class="spacer"></span>
-        <div class="language-switcher">
-          <button id="language-toggle">
-            <span class="current">EN</span>
-            <span class="options">
-              <span data-lang="en">EN</span>
-              <span data-lang="ja">JA</span>
-            </span>
-          </button>
+        {% comment %} Determine counterpart language and URL {% endcomment %}
+        {% assign active_lang = site.active_lang | default: site.default_lang %}
+        {% assign counterpart_lang = "en" %}
+        {% if active_lang == "en" %}
+        {% assign counterpart_lang = "ja" %}
+        {% endif %}
+
+        {% assign final_baseurl = site.baseurl %}
+        {% if active_lang != site.default_lang %}
+        {% assign lang_suffix = "/" | append: active_lang %}
+        {% if final_baseurl contains lang_suffix %}
+        {% assign final_baseurl = final_baseurl | remove: lang_suffix %}
+        {% endif %}
+        {% endif %}
+
+        {% assign target_path = page.url %}
+        {% if active_lang == "en" %}
+        {% assign target_path = "/" | append: counterpart_lang | append: page.url %}
+        {% assign target_path = target_path | replace: "//", "/" %}
+        {% else %}
+        {% assign lang_prefix_slash = "/" | append: active_lang | append: "/" %}
+        {% assign lang_prefix_exact = "/" | append: active_lang %}
+
+        {% if page.url contains lang_prefix_slash %}
+        {% assign target_path = page.url | replace_first: lang_prefix_slash, "/" %}
+        {% elsif page.url == lang_prefix_exact %}
+        {% assign target_path = "/" %}
+        {% endif %}
+        {% endif %}
+
+        {% assign site_host = site.url | remove: "http:" | remove: "https:" %}
+        {% assign final_url = site_host | append: final_baseurl | append: target_path %}
+
+        {% if counterpart_lang == "ja" %}
+        {% assign counterpart_label = "日本語" %}
+        {% else %}
+        {% assign counterpart_label = "English" %}
+        {% endif %}
+
+        <div data-current-lang="{{ active_lang }}">
+          <a href="{{ final_url }}" aria-label="{{ i18n_global.language_switcher.aria_label }}">
+            {{ counterpart_label }}
+          </a>
         </div>
       </div>
-    </div>
   </aside>
 
   <main>
@@ -97,8 +174,13 @@
 
   <!-- ベースURLをJavaScriptで利用可能にする（全ページ共通） -->
   <script>
-    window.SITE_BASE_URL = '{{ site.baseurl }}';
-    // LanguageSwitcher（言語切り替えUI）はLanguageSwitcher.jsで自動初期化されます
+    {% assign my_base = site.baseurl %}
+    {% if site.active_lang != site.default_lang %}
+    {% assign my_base = my_base | append: "/" | append: site.active_lang %}
+    {% endif %}
+    window.SITE_BASE_URL = '{{ my_base }}';
+    window.SITE_BASE_URL_ROOT = '{{ site.config.baseurl | default: site.baseurl }}';
+
     // URLパラメータ font=roman などがあれば body に data-font="roman" を付与する
     (function () {
       try {
@@ -114,21 +196,8 @@
       }
     })();
   </script>
-  <script src="{{ '/assets/js/LanguageSwitcher.js' | relative_url }}"></script>
-
-  <!-- DatasetsManagerシングルトンクラス（全ページ共通） -->
-  <script defer src="{{ '/assets/js/DatasetsManager.js' | relative_url }}"></script>
-
-  <!-- DatasetIcon（アイコン生成ロジック） - DatasetsManager の後、DatasetCard の前に読み込む -->
-  <script defer src="{{ '/assets/js/DatasetIcon.js' | relative_url }}"></script>
-
-  <!-- DatasetCardコンポーネント（全ページ共通） -->
-  <script defer src="{{ '/assets/js/DatasetCard.js' | relative_url }}"></script>
-
-  <!-- トップページ専用のJavaScript -->
-  {% if page.title == 'Top' %}
-  <script defer src="{{ '/assets/js/top-page-tiles.js' | relative_url }}"></script>
-  {% endif %}
+  <script src="{{ '/assets/js/language-switcher.js' | relative_url }}"></script>
+  </script>
   </body>
 
 </html>

@@ -1,5 +1,6 @@
 title: RDF Portal
 description: RDFポータルサイトのリニューアル
+primary_lang: "en"
 baseurl: "/website" # GitHub Pagesのサブディレクトリ
 url: "https://rdfportal.github.io" # GitHub Pagesのベース URL
 
@@ -11,11 +12,25 @@ safe: false
 # Plugin configuration
 plugins:
   - jekyll-feed
+  - jekyll-polyglot
+
+# Multilingual configuration
+languages: ["en", "ja"]
+default_lang: "en"
+
+polyglot:
+  default_lang: "en"
+  languages: ["en", "ja"]
+  active_langs: ["en", "ja"]
+  translate_url: false
+  fallback_to_default_lang: true
 
 # SCSS Configuration
 sass:
   sass_dir: _sass
   style: compressed
+  source_map: never
+  sourcemap: never
 
 # Exclude from build
 exclude:
@@ -47,12 +62,18 @@ collections:
   news:
     output: true
     sort_by: date
+    permalink: /news/:title/
   logs:
     output: true
     sort_by: date
+    permalink: /logs/:title/
 
 # Defaults
 defaults:
+  - scope:
+      path: ""
+    values:
+      lang: "en"
   - scope:
       path: ""
       type: "pages"

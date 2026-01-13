@@ -1,6 +1,14 @@
 {% assign _tags = include.tags | default: [] %}
 <div class="tags-container">
+  {% assign lang = site.active_lang | default: "en" %}
   {% for tag in _tags %}
-  <span class="tag" data-tag="{{ tag }}">{{ tag }}</span>{% if forloop.last == false %} {% endif %}
+  {% if tag.id %}
+  {% assign _lbl = tag.label[lang] | default: tag.label.en | default: tag.label.ja | default: tag.id %}
+  {% assign _val = tag.id %}
+  {% else %}
+  {% assign _lbl = tag %}
+  {% assign _val = tag %}
+  {% endif %}
+  <span class="tag" data-tag="{{ _val }}">{{ _lbl }}</span>{% if forloop.last == false %} {% endif %}
   {% endfor %}
 </div>
