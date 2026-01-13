@@ -13,6 +13,9 @@ en:
     option_en: "EN"
     option_ja: "JA"
     aria_label: "Change language"
+  meta:
+    description: "Integrated access to life science RDF datasets - Search, connect, and utilize trusted data globally."
+
 ja:
   stats:
     datasets_label: "RDFデータセット"
@@ -28,3 +31,5 @@ ja:
     option_en: "EN"
     option_ja: "JA"
     aria_label: "言語を切り替える"
+  meta:
+    description: "RDFポータルサイト - 生命科学分野のRDFデータセットの統合的なアクセスと活用を提供します。"

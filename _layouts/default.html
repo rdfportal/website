@@ -1,4 +1,5 @@
 {% assign current_lang = site.active_lang | default: page.lang | default: site.default_lang %}
+{% assign i18n_global = site.data.i18n.global_nav[current_lang] %}
 <!DOCTYPE html>
 <html lang="{{ current_lang | escape }}">
 
@@ -7,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description"
-    content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    content="{% if page.description %}{{ page.description }}{% else %}{{ i18n_global.meta.description }}{% endif %}">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <script type="text/javascript" data-width="auto" data-color="mono"
     src="https://dbcls.rois.ac.jp/DBCLS-common-header-footer/common-header-and-footer/script/common-header-and-footer.js"
@@ -116,7 +117,7 @@
       <div class="space"></div>
       <div class="bottom">
         <p>© {{ site.time | date: "%Y" }} RDF Portal</p>
-        <p><a href="{{ '/site-policy/' | relative_url }}">Site Policy</a></p>
+        <p><a href="{{ '/site-policy/' | relative_url }}">{{ i18n_global.footer.site_policy }}</a></p>
         <span class="spacer"></span>
         {% comment %} Determine counterpart language and URL {% endcomment %}
         {% assign active_lang = site.active_lang | default: site.default_lang %}
@@ -158,7 +159,7 @@
         {% endif %}
 
         <div data-current-lang="{{ active_lang }}">
-          <a href="{{ final_url }}" aria-label="Change language">
+          <a href="{{ final_url }}" aria-label="{{ i18n_global.language_switcher.aria_label }}">
             {{ counterpart_label }}
           </a>
         </div>
