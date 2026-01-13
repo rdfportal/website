@@ -173,7 +173,11 @@
 
   <!-- ベースURLをJavaScriptで利用可能にする（全ページ共通） -->
   <script>
-    window.SITE_BASE_URL = '{{ site.baseurl }}';
+    {% assign my_base = site.baseurl %}
+    {% if site.active_lang != site.default_lang %}
+    {% assign my_base = my_base | append: "/" | append: site.active_lang %}
+    {% endif %}
+    window.SITE_BASE_URL = '{{ my_base }}';
     window.SITE_BASE_URL_ROOT = '{{ site.config.baseurl | default: site.baseurl }}';
 
     // URLパラメータ font=roman などがあれば body に data-font="roman" を付与する
