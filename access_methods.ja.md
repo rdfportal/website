@@ -8,7 +8,7 @@ permalink: /access_methods/
 lang: ja
 ---
 
-<div class="grid-boxes" style="margin-top: 50px;">
+<div class="grid-boxes -fullwidth">
 
 <div class="box" markdown="1">
 ## [SPARQLエンドポイント]({{ '/access_methods/sparql_endpoints/' | relative_url }})

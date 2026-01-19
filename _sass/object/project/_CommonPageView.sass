@@ -63,6 +63,8 @@
     margin: 0 20px
     line-height: 1.8
     max-width: 60em
+    &:has(> .content > .-fullwidth)
+      max-width: none
     > .content
       padding-bottom: 20px
       h2, h3
@@ -75,3 +77,6 @@
         font-size: 1.6rem
         margin-bottom: 1em
         text-align: justify
+    
+      > .grid-boxes
+        margin-top: 40px

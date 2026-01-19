@@ -1,19 +1,28 @@
 .grid-boxes
-  padding: 0 40px
-  display: grid
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
-  gap: 40px
-  align-items: start
+  --gap: 20px
+  display: flex
+  gap: var(--gap)
+  flex-wrap: wrap
+  align-items: flex-start
 
   > .box
-    height: fit-content
-    padding-left: 1.6rem
-    position: relative
-    &::before
-      content: ''
-      position: absolute
-      top: 6px
-      left: 0
-      width: 2px
-      height: 100%
-      background-color: #222
+    padding: 0.5em 1.4em
+    background-color: var(--color-warm-gray)
+    > h2
+      margin-top: 0.4em !important
+
+// media queries
+@media (min-width: 960px)
+  .grid-boxes
+    > .box
+      width: calc(50% - var(--gap))
+
+@media (min-width: 1300px)
+  .grid-boxes
+    > .box
+      width: calc(33% - var(--gap))
+
+@media (min-width: 1700px)
+  .grid-boxes
+    > .box
+      width: calc(25% - var(--gap))
