@@ -3,23 +3,27 @@
   > table
     width: 100%
     border-collapse: collapse
+    border-bottom: solid 1px var(--color-border-strong)
     th
       text-align: left
-    > thead
-      font-size: 1.6rem
-      > tr
-        border-bottom: solid 1px #000
     > tbody
+      border-top: solid 1px var(--color-border-strong)
       font-size: 1.4rem
       > tr
-        border-bottom: solid 1px #0004
         > th, > td
-          padding-top: 0.5em
-          padding-bottom: 0.5em
+          padding: 0.8em 0.4em
         > th
-          padding-right: 1em
-          white-space: nowrap
-
+          background-color: var(--color-warm-gray)
+          font-size: 1.6rem
+          line-height: 1.1
+          > a
+            text-decoration: none
+            &::after
+              content: attr(href)
+              margin-left: 0.4em
+              font-size: 1.2rem
+              font-weight: 400
+              text-decoration: underline
         > td
           > ul
             padding-left: 1em
