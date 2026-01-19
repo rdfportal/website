@@ -8,7 +8,7 @@ permalink: /access_methods/
 lang: ja
 ---
 
-<div class="grid-boxes" style="margin-top: 50px;">
+<div class="grid-boxes -fullwidth">
 
 <div class="box" markdown="1">
 ## [SPARQLエンドポイント]({{ '/access_methods/sparql_endpoints/' | relative_url }})
@@ -28,6 +28,11 @@ AIエージェント向けのModel Context Protocol (MCP) インターフェー�
 <div class="box" markdown="1">
 ## [LLMチャットインターフェース]({{ '/access_methods/llm_chat_interface/' | relative_url }})
 自然言語でデータベースと対話できるチャットインターフェースです。SPARQLやGraphQLの知識がなくても、質問を入力するだけでAIがデータを検索・回答してくれます。
+</div>
+
+<div class="box" markdown="1">
+## [SPARQL composer]({{ 'https://rdfportal.org/composer/' }}){:target="_blank"}
+SPARQLクエリを生成するためのインターフェースです。
 </div>
 
 </div>

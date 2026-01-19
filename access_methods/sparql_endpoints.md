@@ -6,37 +6,34 @@ parentPageId: access_methods
 description: SPARQLエンドポイントの一覧を表示します
 ---
 
-<div id="EndpointsListView">
+<div id="EndpointsListView" class="-fullwidth -nomargin">
 
   <table>
-    <thead>
-      <tr>
-        <th>Endpoint</th>
-        <th>Available datasets</th>
-      </tr>
-    </thead>
-    <tbody>
     {% for endpoint in site.data.endpoints %}
+    <tbody>
       <tr>
         <th>
           <a href="https://rdfportal.org/{{ endpoint.id }}/sparql" target="endpoint">{{ endpoint.title }}</a>
         </th>
+      </tr>
+      {% assign related_datasets = site.data.datasets | where: "endpoint", endpoint.id %}
+      {% if related_datasets.size > 0 %}
+      <tr>
         <td>
           <ul class="datasets">
-            {% for dataset in site.data.datasets %}
-              {% if dataset.endpoint == endpoint.id %}
+            {% for dataset in related_datasets %}
                 <li>
                   <a href="{{ site.baseurl }}/dataset/{{ dataset.id | url_encode }}">
                     {{ dataset.title }}
                   </a>
                 </li>
-              {% endif %}
             {% endfor %}
           </ul>
         </td>
       </tr>
-    {% endfor %}
+      {% endif %}
     </tbody>
+    {% endfor %}
   </table>
 
 </div>
