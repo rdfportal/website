@@ -9,7 +9,15 @@
     padding: 0.5em 1.4em
     background-color: var(--color-warm-gray)
     > h2
-      margin-top: 0.4em !important
+      margin: 0.6em 0 0.4em !important
+      line-height: 1.1
+      > a
+        &::after
+          content: attr(href)
+          display: block
+          margin-top: 4px
+          font-size: 12px
+          font-weight: 400
 
 // media queries
 @media (min-width: 960px)
@@ -17,12 +25,12 @@
     > .box
       width: calc(50% - var(--gap))
 
-@media (min-width: 1300px)
+@media (min-width: 1560px)
   .grid-boxes
     > .box
       width: calc(33% - var(--gap))
 
-@media (min-width: 1700px)
+@media (min-width: 2480px)
   .grid-boxes
     > .box
       width: calc(25% - var(--gap))
