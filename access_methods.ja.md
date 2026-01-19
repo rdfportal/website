@@ -30,4 +30,9 @@ AIエージェント向けのModel Context Protocol (MCP) インターフェー�
 自然言語でデータベースと対話できるチャットインターフェースです。SPARQLやGraphQLの知識がなくても、質問を入力するだけでAIがデータを検索・回答してくれます。
 </div>
 
+<div class="box" markdown="1">
+## [SPARQL composer]({{ 'https://rdfportal.org/composer/' }}){:target="_blank"}
+SPARQLクエリを生成するためのインターフェースです。
+</div>
+
 </div>
