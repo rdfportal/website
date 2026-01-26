@@ -8,37 +8,11 @@ permalink_lang:
   en: /statistics/
   ja: /statistics/
 ---
-{% lang 'en' %}
-<article lang="en">
-
-  <h3>Dataset statistics overview</h3>
-
-  <p>This dashboard highlights the scale of every dataset registered in RDF Portal. Compare triples, links, and class
-    counts to spot large knowledge bases, and use the tag distribution bar to discover which research domains are most
-    represented.</p>
-
-  <p>Select each column header to sort in ascending or descending order. Numeric values automatically display thousand
-    separators for readability.</p>
-
-</article>
-{% endlang %}
-
-{% lang 'ja' %}
-<article lang="ja">
-
-  <h3>データセット統計の概要</h3>
-
-  <p>このダッシュボードでは、RDF Portal に登録された各データセットの規模を比較できます。トリプル数やリンク数、クラス数などを
-    確認して大規模な知識ベースを見つけたり、タグ分布バーから研究分野ごとの偏りを把握したりできます。</p>
-
-  <p>列見出しをクリックすると昇順・降順で並べ替えられます。数値は自動的に 3 桁区切りで表示され、視認性を高めています。</p>
-
-</article>
-{% endlang %}
 
 <script type="application/json" id="datasets-json">{{ site.data.datasets | jsonify }}</script>
-<div id="TagStatsBar" aria-label="{% lang 'en' %}Tag distribution{% endlang %}{% lang 'ja' %}タグ分布{% endlang %}"></div>
-<div id="StatisticsTableView">
+
+
+<div id="StatisticsTableView" class="-fullwidth -nomargin">
   <div class="inner">
     <table>
       <thead>
@@ -57,7 +31,7 @@ permalink_lang:
       <tbody>
         {% for dataset in site.data.datasets %}
           <tr>
-            <td data-key="title">{{ dataset.title }}</td>
+            <td data-key="title"><a href="{{ site.baseurl }}/dataset/{{ dataset.id }}/">{{ dataset.title }}</a></td>
             <td data-key="number_of_triples">{{ dataset.statistics.number_of_triples }}</td>
             <td data-key="number_of_links">{{ dataset.statistics.number_of_links }}</td>
             <td data-key="number_of_classes">{{ dataset.statistics.number_of_classes }}</td>
@@ -74,9 +48,66 @@ permalink_lang:
 </div>
 
 <script>
-// タグ統計棒グラフ描画（DatasetsManagerで集計）
+// Column Color Configuration (RGB values)
+const COLUMN_COLORS = {
+  number_of_triples:    [255, 99, 132],  // Red
+  number_of_links:      [54, 162, 235],  // Blue
+  number_of_classes:    [75, 192, 192],  // Green
+  number_of_instances:  [153, 102, 255], // Purple
+  number_of_literals:   [255, 159, 64],  // Orange
+  number_of_subjects:   [255, 205, 86],  // Yellow
+  number_of_properties: [201, 203, 207], // Grey
+  number_of_objects:    [231, 233, 237]  // Light Grey (or distinct) -> Let's use Teal [0, 128, 128]
+};
+// Override last one for better distinction
+COLUMN_COLORS.number_of_objects = [0, 168, 168]; 
 
 document.addEventListener('DOMContentLoaded', async function() {
+  
+  // Apply Heatmap Coloring
+  function applyHeatmap() {
+    const tableFn = document.querySelector('#StatisticsTableView > .inner > table');
+    if (!tableFn) return;
+
+    Object.keys(COLUMN_COLORS).forEach(key => {
+      const color = COLUMN_COLORS[key];
+      const cells = Array.from(tableFn.querySelectorAll(`td[data-key="${key}"]`));
+      
+      // Extract numeric values
+      const values = cells.map(cell => {
+        const text = cell.textContent.replace(/,/g, '').trim();
+        return text ? parseFloat(text) : 0;
+      });
+
+      const max = Math.max(...values);
+      const min = Math.min(...values); // Usually 0 or 1, but let's calculate
+      const range = max - min;
+
+      cells.forEach((cell, index) => {
+        const val = values[index];
+        if (range === 0 || val === 0) {
+          cell.style.backgroundColor = 'transparent';
+          return;
+        }
+
+        // Calculate intensity (0.1 to 0.6 to keep text readable)
+        // Logarithmic scale often looks better for power-law distributions like RDF stats
+        // But linear is requested? Let's stick to linear or simple relative for now.
+        // User said "atmosphere is different", implying precise comparison isn't the goal.
+        // Let's use a linear scale with a minimum floor for visibility if > 0.
+        
+        let ratio = (val - min) / range;
+        
+        // Enhance visibility for lower values? 
+        // Let's just stick to linear for transparency.
+        // Opacity 0.05 (min visible) to 0.5 (max, so text is clear)
+        const opacity = 0.05 + (ratio * 0.55); 
+        
+        cell.style.backgroundColor = `rgba(${color[0]}, ${color[1]}, ${color[2]}, ${opacity})`;
+      });
+    });
+  }
+
   // Format numbers to use commas as separators
   function formatNumberWithCommas(num) {
     if (!num || num === '') return '';
@@ -91,65 +122,68 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
   });
 
-  // タグ統計バー描画
-  const barsContainerEl = document.querySelector('#TagStatsBar');
-  if (barsContainerEl && window.DatasetsManager) {
-    const mgr = window.DatasetsManager.getInstance();
-    const tags = await mgr.getAvailableTags();
-    if (tags.length) {
-      // const totalTagCount = tags.reduce((acc, tag) => acc + tag.count, 0);
-      const maxCount = Math.max(...tags.map(t => t.count));
-      const barContainer = document.createElement('div');
-      barContainer.className = 'tag-stats-bar';
-      const inner = document.createElement('div');
-      inner.className = 'inner';
-      barContainer.append(inner);
-      tags.forEach(tagObj => {
-        const { id, count, color } = tagObj;
-        const bar = document.createElement('div');
-        bar.className = 'bar';
-        // bar.style.width = `${tagObj.count / totalTagCount * 100}%`;
-        bar.style.height = `${tagObj.count / maxCount * 100}%`;
-        bar.style.background = color;
-        bar.title = `${id}: ${count}`;
-        bar.innerHTML = `<span class=\"label\">${id}</span>`;
-        // bar.innerHTML = `<span class=\"tag-label\" style=\"writing-mode:vertical-lr; font-size:10px;\">${id}</span><span class=\"tag-value\" style=\"display:block; font-size:10px;\">${count}</span>`;
-        inner.appendChild(bar);
-      });
-      barsContainerEl.innerHTML = '';
-      barsContainerEl.appendChild(barContainer);
-    }
-  }
+  // Apply Heatmap initially
+  applyHeatmap();
 
-  // 簡易テーブルソート（数値・文字列対応）
+  // 簡易テーブルソート（数値・文字列対応）3-state: desc -> asc -> release
   const table = document.querySelector('#StatisticsTableView > .inner > table');
   if (table) {
+    // Store original row order
+    const originalRows = Array.from(table.tBodies[0].rows);
+    
     table.querySelectorAll('th[data-sort]').forEach(th => {
       th.addEventListener('click', function() {
         const sortKey = th.getAttribute('data-sort');
         const rows = Array.from(table.tBodies[0].rows);
         const isNumber = sortKey !== 'title';
-        const asc = !th.classList.contains('asc');
-        rows.sort((a, b) => {
-          const cellA = a.querySelector(`[data-key='${sortKey}']`) || a.cells[th.cellIndex];
-          const cellB = b.querySelector(`[data-key='${sortKey}']`) || b.cells[th.cellIndex];
-          
-          if (isNumber) {
-            const va = parseInt(cellA?.textContent.replace(/,/g, '') || '0');
-            const vb = parseInt(cellB?.textContent.replace(/,/g, '') || '0');
-            return asc ? va - vb : vb - va;
-          } else {
-            const va = cellA?.textContent || '';
-            const vb = cellB?.textContent || '';
-            return asc ? va.localeCompare(vb) : vb.localeCompare(va);
-          }
-        });
-        rows.forEach(row => table.tBodies[0].appendChild(row));
+        
+        // Determine next state
+        let nextState = 'desc'; // default first click
+        if (th.classList.contains('desc')) {
+          nextState = 'asc';
+        } else if (th.classList.contains('asc')) {
+          nextState = 'release';
+        }
+
+        // Reset all headers
         table.querySelectorAll('th').forEach(h => h.classList.remove('asc', 'desc'));
-        th.classList.add(asc ? 'asc' : 'desc');
+
+        if (nextState === 'release') {
+          // Restore original order
+          // Note: This restores the initial load order. 
+          // If the table content changes dynamically, this logic needs to be revisited.
+          // Assuming static table content for now.
+          const tbody = table.tBodies[0];
+          // Clear current rows
+          while (tbody.firstChild) {
+            tbody.removeChild(tbody.firstChild);
+          }
+          // Append original rows
+          originalRows.forEach(row => tbody.appendChild(row));
+          
+        } else {
+          // Add class for next state
+          th.classList.add(nextState);
+          
+          const asc = nextState === 'asc';
+          rows.sort((a, b) => {
+            const cellA = a.querySelector(`[data-key='${sortKey}']`) || a.cells[th.cellIndex];
+            const cellB = b.querySelector(`[data-key='${sortKey}']`) || b.cells[th.cellIndex];
+            
+            if (isNumber) {
+              const va = parseInt(cellA?.textContent.replace(/,/g, '') || '0');
+              const vb = parseInt(cellB?.textContent.replace(/,/g, '') || '0');
+              return asc ? va - vb : vb - va;
+            } else {
+              const va = cellA?.textContent || '';
+              const vb = cellB?.textContent || '';
+              return asc ? va.localeCompare(vb) : vb.localeCompare(va);
+            }
+          });
+          rows.forEach(row => table.tBodies[0].appendChild(row));
+        }
       });
     });
   }
 });
-
 </script>
