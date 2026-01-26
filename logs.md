@@ -10,7 +10,7 @@ permalink_lang:
   ja: /logs/ja/
 ---
 
-<div class="timeline-list">
+<div class="timeline-list -fullwidth -nomargin">
   {% assign current_lang = site.active_lang | default: page.lang | default: site.default_lang %}
   {% assign translated_posts = site.logs | where: "lang", current_lang %}
   {% if translated_posts.size == 0 %}
