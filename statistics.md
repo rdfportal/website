@@ -31,7 +31,7 @@ permalink_lang:
       <tbody>
         {% for dataset in site.data.datasets %}
           <tr>
-            <td data-key="title">{{ dataset.title }}</td>
+            <td data-key="title"><a href="{{ site.baseurl }}/dataset/{{ dataset.id }}/">{{ dataset.title }}</a></td>
             <td data-key="number_of_triples">{{ dataset.statistics.number_of_triples }}</td>
             <td data-key="number_of_links">{{ dataset.statistics.number_of_links }}</td>
             <td data-key="number_of_classes">{{ dataset.statistics.number_of_classes }}</td>
