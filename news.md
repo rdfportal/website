@@ -1,12 +1,24 @@
 ---
 layout: page
-title: News
+title:
+  en: News
+  ja: ニュース
 pageId: news
+permalink: /news/
+permalink_lang:
+  en: /news/
+  ja: /news/ja/
 ---
 
 <div class="timeline-list">
+  {% assign current_lang = site.active_lang | default: page.lang | default: site.default_lang %}
+  {% assign translated_posts = site.news | where: "lang", current_lang %}
+  {% if translated_posts.size == 0 %}
+    {% assign translated_posts = site.news | where: "lang", site.default_lang %}
+  {% endif %}
+  
   {% assign current_year = "" %}
-  {% for post in site.news reversed %}
+  {% for post in translated_posts reversed %}
     {% assign post_year = post.date | date: "%Y" %}
     {% if post_year != current_year %}
       <h3 class="year"><time datetime="{{ post_year }}">{{ post_year }}</time></h3>
