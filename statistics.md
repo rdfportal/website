@@ -48,9 +48,66 @@ permalink_lang:
 </div>
 
 <script>
-// タグ統計棒グラフ描画（DatasetsManagerで集計）
+// Column Color Configuration (RGB values)
+const COLUMN_COLORS = {
+  number_of_triples:    [255, 99, 132],  // Red
+  number_of_links:      [54, 162, 235],  // Blue
+  number_of_classes:    [75, 192, 192],  // Green
+  number_of_instances:  [153, 102, 255], // Purple
+  number_of_literals:   [255, 159, 64],  // Orange
+  number_of_subjects:   [255, 205, 86],  // Yellow
+  number_of_properties: [201, 203, 207], // Grey
+  number_of_objects:    [231, 233, 237]  // Light Grey (or distinct) -> Let's use Teal [0, 128, 128]
+};
+// Override last one for better distinction
+COLUMN_COLORS.number_of_objects = [0, 168, 168]; 
 
 document.addEventListener('DOMContentLoaded', async function() {
+  
+  // Apply Heatmap Coloring
+  function applyHeatmap() {
+    const tableFn = document.querySelector('#StatisticsTableView > .inner > table');
+    if (!tableFn) return;
+
+    Object.keys(COLUMN_COLORS).forEach(key => {
+      const color = COLUMN_COLORS[key];
+      const cells = Array.from(tableFn.querySelectorAll(`td[data-key="${key}"]`));
+      
+      // Extract numeric values
+      const values = cells.map(cell => {
+        const text = cell.textContent.replace(/,/g, '').trim();
+        return text ? parseFloat(text) : 0;
+      });
+
+      const max = Math.max(...values);
+      const min = Math.min(...values); // Usually 0 or 1, but let's calculate
+      const range = max - min;
+
+      cells.forEach((cell, index) => {
+        const val = values[index];
+        if (range === 0 || val === 0) {
+          cell.style.backgroundColor = 'transparent';
+          return;
+        }
+
+        // Calculate intensity (0.1 to 0.6 to keep text readable)
+        // Logarithmic scale often looks better for power-law distributions like RDF stats
+        // But linear is requested? Let's stick to linear or simple relative for now.
+        // User said "atmosphere is different", implying precise comparison isn't the goal.
+        // Let's use a linear scale with a minimum floor for visibility if > 0.
+        
+        let ratio = (val - min) / range;
+        
+        // Enhance visibility for lower values? 
+        // Let's just stick to linear for transparency.
+        // Opacity 0.05 (min visible) to 0.5 (max, so text is clear)
+        const opacity = 0.05 + (ratio * 0.55); 
+        
+        cell.style.backgroundColor = `rgba(${color[0]}, ${color[1]}, ${color[2]}, ${opacity})`;
+      });
+    });
+  }
+
   // Format numbers to use commas as separators
   function formatNumberWithCommas(num) {
     if (!num || num === '') return '';
@@ -65,7 +122,8 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
   });
 
-
+  // Apply Heatmap initially
+  applyHeatmap();
 
   // 簡易テーブルソート（数値・文字列対応）
   const table = document.querySelector('#StatisticsTableView > .inner > table');
@@ -93,9 +151,12 @@ document.addEventListener('DOMContentLoaded', async function() {
         rows.forEach(row => table.tBodies[0].appendChild(row));
         table.querySelectorAll('th').forEach(h => h.classList.remove('asc', 'desc'));
         th.classList.add(asc ? 'asc' : 'desc');
+        
+        // Re-apply heatmap isn't strictly necessary if styles are inline on td,
+        // but it doesn't hurt to ensure consistency if logic changes.
+        // Actually, sorting moves trs, so tds keep their styles. No need to re-call.
       });
     });
   }
 });
-
 </script>
