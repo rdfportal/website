@@ -125,36 +125,63 @@ document.addEventListener('DOMContentLoaded', async function() {
   // Apply Heatmap initially
   applyHeatmap();
 
-  // 簡易テーブルソート（数値・文字列対応）
+  // 簡易テーブルソート（数値・文字列対応）3-state: desc -> asc -> release
   const table = document.querySelector('#StatisticsTableView > .inner > table');
   if (table) {
+    // Store original row order
+    const originalRows = Array.from(table.tBodies[0].rows);
+    
     table.querySelectorAll('th[data-sort]').forEach(th => {
       th.addEventListener('click', function() {
         const sortKey = th.getAttribute('data-sort');
         const rows = Array.from(table.tBodies[0].rows);
         const isNumber = sortKey !== 'title';
-        const asc = !th.classList.contains('asc');
-        rows.sort((a, b) => {
-          const cellA = a.querySelector(`[data-key='${sortKey}']`) || a.cells[th.cellIndex];
-          const cellB = b.querySelector(`[data-key='${sortKey}']`) || b.cells[th.cellIndex];
-          
-          if (isNumber) {
-            const va = parseInt(cellA?.textContent.replace(/,/g, '') || '0');
-            const vb = parseInt(cellB?.textContent.replace(/,/g, '') || '0');
-            return asc ? va - vb : vb - va;
-          } else {
-            const va = cellA?.textContent || '';
-            const vb = cellB?.textContent || '';
-            return asc ? va.localeCompare(vb) : vb.localeCompare(va);
-          }
-        });
-        rows.forEach(row => table.tBodies[0].appendChild(row));
-        table.querySelectorAll('th').forEach(h => h.classList.remove('asc', 'desc'));
-        th.classList.add(asc ? 'asc' : 'desc');
         
-        // Re-apply heatmap isn't strictly necessary if styles are inline on td,
-        // but it doesn't hurt to ensure consistency if logic changes.
-        // Actually, sorting moves trs, so tds keep their styles. No need to re-call.
+        // Determine next state
+        let nextState = 'desc'; // default first click
+        if (th.classList.contains('desc')) {
+          nextState = 'asc';
+        } else if (th.classList.contains('asc')) {
+          nextState = 'release';
+        }
+
+        // Reset all headers
+        table.querySelectorAll('th').forEach(h => h.classList.remove('asc', 'desc'));
+
+        if (nextState === 'release') {
+          // Restore original order
+          // Note: This restores the initial load order. 
+          // If the table content changes dynamically, this logic needs to be revisited.
+          // Assuming static table content for now.
+          const tbody = table.tBodies[0];
+          // Clear current rows
+          while (tbody.firstChild) {
+            tbody.removeChild(tbody.firstChild);
+          }
+          // Append original rows
+          originalRows.forEach(row => tbody.appendChild(row));
+          
+        } else {
+          // Add class for next state
+          th.classList.add(nextState);
+          
+          const asc = nextState === 'asc';
+          rows.sort((a, b) => {
+            const cellA = a.querySelector(`[data-key='${sortKey}']`) || a.cells[th.cellIndex];
+            const cellB = b.querySelector(`[data-key='${sortKey}']`) || b.cells[th.cellIndex];
+            
+            if (isNumber) {
+              const va = parseInt(cellA?.textContent.replace(/,/g, '') || '0');
+              const vb = parseInt(cellB?.textContent.replace(/,/g, '') || '0');
+              return asc ? va - vb : vb - va;
+            } else {
+              const va = cellA?.textContent || '';
+              const vb = cellB?.textContent || '';
+              return asc ? va.localeCompare(vb) : vb.localeCompare(va);
+            }
+          });
+          rows.forEach(row => table.tBodies[0].appendChild(row));
+        }
       });
     });
   }
