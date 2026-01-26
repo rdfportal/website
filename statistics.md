@@ -12,7 +12,7 @@ permalink_lang:
 <script type="application/json" id="datasets-json">{{ site.data.datasets | jsonify }}</script>
 
 
-<div id="StatisticsTableView">
+<div id="StatisticsTableView" class="-fullwidth -nomargin">
   <div class="inner">
     <table>
       <thead>
