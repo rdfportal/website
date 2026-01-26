@@ -1,8 +1,12 @@
 ---
 layout: page
-title: Datasets
+title:
+  en: Datasets
+  ja: データセット
 pageId: datasets
-description: 利用可能なRDFデータセットの一覧を表示します
+description:
+  en: List of available RDF datasets
+  ja: 利用可能なRDFデータセットの一覧
 ---
 
 <!-- JekyllでJSONデータを埋め込む -->

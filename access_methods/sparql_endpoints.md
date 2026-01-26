@@ -1,9 +1,13 @@
 ---
 layout: page
-title: SPARQL endpoints
+title:
+  en: SPARQL endpoints
+  ja: SPARQLエンドポイント
 pageId: sparql_endpoints
 parentPageId: access_methods
-description: SPARQLエンドポイントの一覧を表示します
+description:
+  en: List of SPARQL endpoints
+  ja: SPARQLエンドポイントの一覧
 ---
 
 <div id="EndpointsListView" class="-fullwidth -nomargin">
@@ -22,9 +26,10 @@ description: SPARQLエンドポイントの一覧を表示します
         <td>
           <ul class="datasets">
             {% for dataset in related_datasets %}
+                {% assign ds_title = dataset.title[current_lang] | default: dataset.title.en | default: dataset.title %}
                 <li>
                   <a href="{{ site.baseurl }}/dataset/{{ dataset.id | url_encode }}">
-                    {{ dataset.title }}
+                    {{ ds_title }}
                   </a>
                 </li>
             {% endfor %}

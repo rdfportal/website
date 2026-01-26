@@ -1,8 +1,12 @@
 ---
 layout: default
-title: Home
-lang: en
+title:
+  en: Home
+  ja: ホーム
 permalink: /
+permalink_lang:
+  en: /
+  ja: /ja/
 page_id: home
 ---
 
