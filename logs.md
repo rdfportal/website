@@ -26,11 +26,7 @@ permalink_lang:
     {% endif %}
   <article class="timeline-article">
     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m.%d" }}</time>
-    <h4 class="title">
-      <a href="{{ post.url | relative_url }}">
-        {{ post.title }}
-      </a>
-    </h4>
+    <h4 class="title">{{ post.title }}</h4>
   </article>
   {% endfor %}
 </div>
