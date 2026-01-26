@@ -35,7 +35,7 @@
       url: "/documents/about_sparql_endpoints/"
 - id: about
   title: "About"
-  url: "/about/"
+  url: "/documents/introduction/"
 - id: news
   title: "News"
   url: "/news/"

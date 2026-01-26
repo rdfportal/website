@@ -6,9 +6,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description"
-    content="{% if page.description %}{{ page.description }}{% else %}{{ i18n_global.meta.description }}{% endif %}">
+  {% assign current_title = page.title[current_lang] | default: page.title.en | default: page.title %}
+  <title>{% if current_title %}{{ current_title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  {% assign current_description = page.description[current_lang] | default: page.description.en | default:
+  page.description | default: i18n_global.meta.description %}
+  <meta name="description" content="{{ current_description }}">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <script type="text/javascript" data-width="auto" data-color="mono"
     src="https://dbcls.rois.ac.jp/DBCLS-common-header-footer/common-header-and-footer/script/common-header-and-footer.js"

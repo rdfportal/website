@@ -35,7 +35,7 @@
       url: "/documents/about_sparql_endpoints/"
 - id: about
   title: "このサイトについて"
-  url: "/about/"
+  url: "/documents/introduction/"
 - id: news
   title: "ニュース"
   url: "/news/"
