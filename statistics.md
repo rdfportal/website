@@ -8,35 +8,9 @@ permalink_lang:
   en: /statistics/
   ja: /statistics/
 ---
-{% lang 'en' %}
-<article lang="en">
-
-  <h3>Dataset statistics overview</h3>
-
-  <p>This dashboard highlights the scale of every dataset registered in RDF Portal. Compare triples, links, and class
-    counts to spot large knowledge bases, and use the tag distribution bar to discover which research domains are most
-    represented.</p>
-
-  <p>Select each column header to sort in ascending or descending order. Numeric values automatically display thousand
-    separators for readability.</p>
-
-</article>
-{% endlang %}
-
-{% lang 'ja' %}
-<article lang="ja">
-
-  <h3>データセット統計の概要</h3>
-
-  <p>このダッシュボードでは、RDF Portal に登録された各データセットの規模を比較できます。トリプル数やリンク数、クラス数などを
-    確認して大規模な知識ベースを見つけたり、タグ分布バーから研究分野ごとの偏りを把握したりできます。</p>
-
-  <p>列見出しをクリックすると昇順・降順で並べ替えられます。数値は自動的に 3 桁区切りで表示され、視認性を高めています。</p>
-
-</article>
-{% endlang %}
 
 <script type="application/json" id="datasets-json">{{ site.data.datasets | jsonify }}</script>
+
 <div id="TagStatsBar" aria-label="{% lang 'en' %}Tag distribution{% endlang %}{% lang 'ja' %}タグ分布{% endlang %}"></div>
 <div id="StatisticsTableView">
   <div class="inner">
