@@ -1,20 +1,20 @@
 ---
 layout: page
 title:
-  en: News
-  ja: ニュース
-pageId: news
-permalink: /news/
+  en: Announcements
+  ja: お知らせ
+pageId: announcements
+permalink: /announcements/
 permalink_lang:
-  en: /news/
-  ja: /news/ja/
+  en: /announcements/
+  ja: /announcements/ja/
 ---
 
 <div class="timeline-list -fullwidth -nomargin">
   {% assign current_lang = site.active_lang | default: page.lang | default: site.default_lang %}
-  {% assign translated_posts = site.news | where: "lang", current_lang %}
+  {% assign translated_posts = site.announcements | where: "lang", current_lang %}
   {% if translated_posts.size == 0 %}
-    {% assign translated_posts = site.news | where: "lang", site.default_lang %}
+    {% assign translated_posts = site.announcements | where: "lang", site.default_lang %}
   {% endif %}
   
   {% assign current_year = "" %}

@@ -5,12 +5,12 @@ layout: default
 {% assign current_lang = site.active_lang | default: site.default_lang %}
 
 {% comment %} Set back button URL and title based on collection {% endcomment %}
-{% if page.collection == 'news' %}
-{% assign backToListURL = '/news' %}
-{% assign listPageTitle_en = 'News' %}
-{% assign listPageTitle_ja = 'ニュース' %}
+{% if page.collection == 'announcements' %}
+{% assign backToListURL = '/announcements' %}
+{% assign listPageTitle_en = 'Announcements' %}
+{% assign listPageTitle_ja = 'お知らせ' %}
 {% elsif page.collection == 'logs' %}
-{% assign backToListURL = '/logs' %}
+{% assign backToListURL = '/update-log' %}
 {% assign listPageTitle_en = 'Update Log' %}
 {% assign listPageTitle_ja = '更新履歴' %}
 {% endif %}

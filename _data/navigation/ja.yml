@@ -37,8 +37,8 @@
   title: "このサイトについて"
   url: "/documents/introduction/"
 - id: news
-  title: "ニュース"
-  url: "/news/"
+  title: "お知らせ"
+  url: "/announcements/"
 - id: logs
   title: "更新履歴"
-  url: "/logs/"
+  url: "/update-log/"
