@@ -23,12 +23,9 @@ permalink_lang:
         <tr>
           <th data-sort="title"><span class="th-label">{% lang 'en' %}Dataset{% endlang %}{% lang 'ja' %}データセット{% endlang %}</span></th>
           <th data-sort="number_of_triples"><span class="th-label">{% lang 'en' %}Triples{% endlang %}{% lang 'ja' %}トリプル数{% endlang %}</span></th>
-          <th data-sort="number_of_links"><span class="th-label">{% lang 'en' %}Links{% endlang %}{% lang 'ja' %}リンク数{% endlang %}</span></th>
           <th data-sort="number_of_classes"><span class="th-label">{% lang 'en' %}Classes{% endlang %}{% lang 'ja' %}クラス数{% endlang %}</span></th>
-          <th data-sort="number_of_instances"><span class="th-label">{% lang 'en' %}Instances{% endlang %}{% lang 'ja' %}インスタンス数{% endlang %}</span></th>
-          <th data-sort="number_of_literals"><span class="th-label">{% lang 'en' %}Literals{% endlang %}{% lang 'ja' %}リテラル数{% endlang %}</span></th>
-          <th data-sort="number_of_subjects"><span class="th-label">{% lang 'en' %}Subjects{% endlang %}{% lang 'ja' %}主語数{% endlang %}</span></th>
           <th data-sort="number_of_properties"><span class="th-label">{% lang 'en' %}Properties{% endlang %}{% lang 'ja' %}プロパティ数{% endlang %}</span></th>
+          <th data-sort="number_of_subjects"><span class="th-label">{% lang 'en' %}Subjects{% endlang %}{% lang 'ja' %}主語数{% endlang %}</span></th>
           <th data-sort="number_of_objects"><span class="th-label">{% lang 'en' %}Objects{% endlang %}{% lang 'ja' %}オブジェクト数{% endlang %}</span></th>
         </tr>
       </thead>
@@ -37,12 +34,9 @@ permalink_lang:
           <tr>
             <td data-key="title"><a href="{{ site.baseurl }}/dataset/{{ dataset.id }}/">{{ dataset.title }}</a></td>
             <td data-key="number_of_triples">{{ dataset.statistics.number_of_triples }}</td>
-            <td data-key="number_of_links">{{ dataset.statistics.number_of_links }}</td>
             <td data-key="number_of_classes">{{ dataset.statistics.number_of_classes }}</td>
-            <td data-key="number_of_instances">{{ dataset.statistics.number_of_instances }}</td>
-            <td data-key="number_of_literals">{{ dataset.statistics.number_of_literals }}</td>
-            <td data-key="number_of_subjects">{{ dataset.statistics.number_of_subjects }}</td>
             <td data-key="number_of_properties">{{ dataset.statistics.number_of_properties }}</td>
+            <td data-key="number_of_subjects">{{ dataset.statistics.number_of_subjects }}</td>
             <td data-key="number_of_objects">{{ dataset.statistics.number_of_objects }}</td>
           </tr>
         {% endfor %}
@@ -55,16 +49,11 @@ permalink_lang:
 // Column Color Configuration (RGB values)
 const COLUMN_COLORS = {
   number_of_triples:    [255, 99, 132],  // Red
-  number_of_links:      [54, 162, 235],  // Blue
   number_of_classes:    [75, 192, 192],  // Green
-  number_of_instances:  [153, 102, 255], // Purple
-  number_of_literals:   [255, 159, 64],  // Orange
-  number_of_subjects:   [255, 205, 86],  // Yellow
   number_of_properties: [201, 203, 207], // Grey
-  number_of_objects:    [231, 233, 237]  // Light Grey (or distinct) -> Let's use Teal [0, 128, 128]
-};
-// Override last one for better distinction
-COLUMN_COLORS.number_of_objects = [0, 168, 168]; 
+  number_of_subjects:   [255, 205, 86],  // Yellow
+  number_of_objects:    [0, 168, 168]    // Teal
+}; 
 
 document.addEventListener('DOMContentLoaded', async function() {
   
