@@ -4,10 +4,10 @@ title:
   en: Update Log
   ja: 更新履歴
 pageId: logs
-permalink: /logs/
+permalink: /update-log/
 permalink_lang:
-  en: /logs/
-  ja: /logs/ja/
+  en: /update-log/
+  ja: /update-log/ja/
 ---
 
 <div class="timeline-list -fullwidth -nomargin">

@@ -37,8 +37,8 @@
   title: "About"
   url: "/documents/introduction/"
 - id: news
-  title: "News"
-  url: "/news/"
+  title: "Announcements"
+  url: "/announcements/"
 - id: logs
-  title: "Log"
-  url: "/logs/"
+  title: "Update log"
+  url: "/update-log/"
