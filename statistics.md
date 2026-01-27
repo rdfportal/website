@@ -1,8 +1,12 @@
 ---
 layout: page
-title: Statistics
+title:
+  en: Statistics
+  ja: 統計情報
 pageId: statistics
-description: RDFデータセットの統計情報一覧
+description:
+  en: Statistical information of RDF datasets
+  ja: RDFデータセットの統計情報一覧
 permalink: /statistics/
 permalink_lang:
   en: /statistics/
