@@ -11,7 +11,14 @@ module Jekyll
       read_yaml(File.join(base, '_layouts'), 'dataset.html')
 
       data['layout']   = 'dataset'
-      data['title']    = 'Dataset Details'
+      data['title']    = {
+        'en' => 'Dataset Details',
+        'ja' => 'データセット詳細'
+      }
+      data['listPageTitle'] = {
+        'en' => 'Datasets',
+        'ja' => 'データセット一覧'
+      }
       data['pageId']   = 'dataset'
       data['isSmallHeading'] = true
       data['dataset']  = dataset
