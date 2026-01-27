@@ -46,25 +46,22 @@ permalink_lang:
 </div>
 
 <script>
-// Column Color Configuration (RGB values)
-const COLUMN_COLORS = {
-  number_of_triples:    [255, 99, 132],  // Red
-  number_of_classes:    [75, 192, 192],  // Green
-  number_of_properties: [201, 203, 207], // Grey
-  number_of_subjects:   [255, 205, 86],  // Yellow
-  number_of_objects:    [0, 168, 168]    // Teal
-}; 
+const HEATMAP_COLOR = [0, 122, 204]; // Brand Blue
 
 document.addEventListener('DOMContentLoaded', async function() {
   
   // Apply Heatmap Coloring
   function applyHeatmap() {
-    const tableFn = document.querySelector('#StatisticsTableView > .inner > table');
-    if (!tableFn) return;
+    const table = document.querySelector('#StatisticsTableView > .inner > table');
+    if (!table) return;
 
-    Object.keys(COLUMN_COLORS).forEach(key => {
-      const color = COLUMN_COLORS[key];
-      const cells = Array.from(tableFn.querySelectorAll(`td[data-key="${key}"]`));
+    // Get all numeric keys from headers (skip "title")
+    const headers = Array.from(table.querySelectorAll('th[data-sort]'))
+      .map(th => th.getAttribute('data-sort'))
+      .filter(key => key && key !== 'title');
+
+    headers.forEach(key => {
+      const cells = Array.from(table.querySelectorAll(`td[data-key="${key}"]`));
       
       // Extract numeric values
       const values = cells.map(cell => {
@@ -73,7 +70,7 @@ document.addEventListener('DOMContentLoaded', async function() {
       });
 
       const max = Math.max(...values);
-      const min = Math.min(...values); // Usually 0 or 1, but let's calculate
+      const min = Math.min(...values); 
       const range = max - min;
 
       cells.forEach((cell, index) => {
@@ -83,20 +80,10 @@ document.addEventListener('DOMContentLoaded', async function() {
           return;
         }
 
-        // Calculate intensity (0.1 to 0.6 to keep text readable)
-        // Logarithmic scale often looks better for power-law distributions like RDF stats
-        // But linear is requested? Let's stick to linear or simple relative for now.
-        // User said "atmosphere is different", implying precise comparison isn't the goal.
-        // Let's use a linear scale with a minimum floor for visibility if > 0.
-        
         let ratio = (val - min) / range;
-        
-        // Enhance visibility for lower values? 
-        // Let's just stick to linear for transparency.
-        // Opacity 0.05 (min visible) to 0.5 (max, so text is clear)
         const opacity = 0.05 + (ratio * 0.55); 
         
-        cell.style.backgroundColor = `rgba(${color[0]}, ${color[1]}, ${color[2]}, ${opacity})`;
+        cell.style.backgroundColor = `rgba(${HEATMAP_COLOR[0]}, ${HEATMAP_COLOR[1]}, ${HEATMAP_COLOR[2]}, ${opacity})`;
       });
     });
   }
