@@ -22,22 +22,22 @@ permalink_lang:
       <thead>
         <tr>
           <th data-sort="title"><span class="th-label">{% lang 'en' %}Dataset{% endlang %}{% lang 'ja' %}データセット{% endlang %}</span></th>
-          <th data-sort="number_of_triples"><span class="th-label">{% lang 'en' %}Triples{% endlang %}{% lang 'ja' %}トリプル数{% endlang %}</span></th>
-          <th data-sort="number_of_classes"><span class="th-label">{% lang 'en' %}Classes{% endlang %}{% lang 'ja' %}クラス数{% endlang %}</span></th>
-          <th data-sort="number_of_properties"><span class="th-label">{% lang 'en' %}Properties{% endlang %}{% lang 'ja' %}プロパティ数{% endlang %}</span></th>
-          <th data-sort="number_of_subjects"><span class="th-label">{% lang 'en' %}Subjects{% endlang %}{% lang 'ja' %}主語数{% endlang %}</span></th>
-          <th data-sort="number_of_objects"><span class="th-label">{% lang 'en' %}Objects{% endlang %}{% lang 'ja' %}オブジェクト数{% endlang %}</span></th>
+          {% assign first_dataset = site.data.datasets | first %}
+          {% for stat in first_dataset.statistics %}
+            {% assign key = stat[0] %}
+            {% assign label = key | replace: 'number_of_', '' | capitalize %}
+            <th data-sort="{{ key }}"><span class="th-label">{{ label }}</span></th>
+          {% endfor %}
         </tr>
       </thead>
       <tbody>
         {% for dataset in site.data.datasets %}
           <tr>
             <td data-key="title"><a href="{{ site.baseurl }}/dataset/{{ dataset.id }}/">{{ dataset.title }}</a></td>
-            <td data-key="number_of_triples">{{ dataset.statistics.number_of_triples }}</td>
-            <td data-key="number_of_classes">{{ dataset.statistics.number_of_classes }}</td>
-            <td data-key="number_of_properties">{{ dataset.statistics.number_of_properties }}</td>
-            <td data-key="number_of_subjects">{{ dataset.statistics.number_of_subjects }}</td>
-            <td data-key="number_of_objects">{{ dataset.statistics.number_of_objects }}</td>
+            {% for stat in first_dataset.statistics %}
+              {% assign key = stat[0] %}
+              <td data-key="{{ key }}">{{ dataset.statistics[key] }}</td>
+            {% endfor %}
           </tr>
         {% endfor %}
       </tbody>
