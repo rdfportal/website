@@ -39,11 +39,21 @@
       font-size: 1.8rem
       line-height: 1
     > .meta
+      white-space: nowrap
       flex-grow: 1
       text-align: right
       font-size: 1.2rem
-      > span + span
-        margin-left: 10px
+      display: flex
+      justify-content: end
+      gap: .5em
+      > .provenance, > .registration
+        background-color: var(--color-subtext)
+        color: white
+        font-weight: 600
+        padding: 0 .8em
+        border-radius: 1em
+        
+
 
   // body 内部要素
   > .body
