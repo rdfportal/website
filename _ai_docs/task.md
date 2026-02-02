@@ -1,0 +1,23 @@
+# タスク
+
+- [x] 現状のプロジェクト構成とドキュメントの分析 <!-- id: 0 -->
+- [x] `task.md` と `implementation_plan.md` の作成（プロジェクト内 `_ai_docs/` へ移動） <!-- id: 1 -->
+- [x] マニュフェストや開発方針に関する質問への回答 <!-- id: 3 -->
+- [x] AIドキュメントのGit管理化 <!-- id: 4 -->
+- [x] 多言語化対応（GitHub Actions 設定） <!-- id: 5 -->
+    - [x] GitHub Actions ワークフローの作成/確認（`build.yaml` が存在することを確認済み）
+- [x] プロジェクト固有のルール（Jekyll構成など）のドキュメント化 <!-- id: 2 -->
+- [x] 多言語化対応（UIコンポーネントの翻訳適用） <!-- id: 6 -->
+    - [x] `default.html` のフッターと統計情報の翻訳適用（**ユーザー方針により英語のまま維持**）
+    - [x] `nav.html` のソート/フィルタUIの翻訳適用（**ユーザー方針により英語のまま維持**）
+    - [x] `datasets.md` のJavaScript内テキストの翻訳対応（同上）
+- [x] 言語切り替え機能の実装 (`default.html`) <!-- id: 7 -->
+    - [x] `div[data-current-lang]` 内のリンク生成ロジックを汎用化する
+    - [x] `permalink_lang` が定義されていないページでもリンクが機能するように修正（プロトコル相対URL `//...` を使用して自動書き換えを回避）
+- [x] 各ページの多言語化対応 <!-- id: 8 -->
+    - [x] `about` (完了済み確認: about.en.md/about.ja.mdがあるか確認)
+    - [ ] `datasets.md`
+    - [x] `access_methods/*.md` (access_methods.en.md/ja.md 作成済み)
+    - [x] `_news` および `_logs` の記事全量 (en/ja 分割対応済み)
+    - [x] `datasets.md`
+    - [ ] `documents/*.md`

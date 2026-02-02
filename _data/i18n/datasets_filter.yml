@@ -1,0 +1,31 @@
+en:
+  sort_label: "Sort"
+  sort_aria_label: "Sort datasets"
+  sort_options:
+    date: "Date"
+    name: "Name"
+    triples: "Triples"
+  order_label: "Order"
+  order_aria_label: "Sort order"
+  order_options:
+    desc: "Desc"
+    asc: "Asc"
+  filter_label: "Filter"
+  filter_aria_label: "Filter tags"
+  filter_default_option: "All tags"
+
+ja:
+  sort_label: "並び替え"
+  sort_aria_label: "データセットの並び替え"
+  sort_options:
+    date: "日付"
+    name: "名称"
+    triples: "トリプル数"
+  order_label: "順序"
+  order_aria_label: "並び順"
+  order_options:
+    desc: "降順"
+    asc: "昇順"
+  filter_label: "絞り込み"
+  filter_aria_label: "タグで絞り込み"
+  filter_default_option: "すべてのタグ"

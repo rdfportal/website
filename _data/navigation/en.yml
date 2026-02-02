@@ -1,0 +1,44 @@
+- id: access_methods
+  title: "Access methods"
+  url: "/access_methods/"
+  children:
+    - id: sparql_endpoints
+      title: "SPARQL Endpoints"
+      url: "/access_methods/sparql_endpoints/"
+    - id: graphql_api
+      title: "GraphQL API"
+      url: "/access_methods/graphql_api/"
+    - id: mcp_interface
+      title: "MCP interface"
+      url: "/access_methods/mcp_interface/"
+    - id: llm_chat_interface
+      title: "LLM chat interface"
+      url: "/access_methods/llm_chat_interface/"
+- id: datasets
+  title: "Datasets"
+  url: "/datasets/"
+- id: statistics
+  title: "Statistics"
+  url: "/statistics/"
+- id: documents
+  title: "Documents"
+  url: "/documents/introduction/"
+  children:
+    - id: introduction
+      title: "Introduction"
+      url: "/documents/introduction/"
+    - id: data_submission
+      title: "Data submission"
+      url: "/documents/data_submission/"
+    - id: about_sparql_endpoints
+      title: "About SPARQL endpoints"
+      url: "/documents/about_sparql_endpoints/"
+- id: about
+  title: "About"
+  url: "/documents/introduction/"
+- id: news
+  title: "Announcements"
+  url: "/announcements/"
+- id: logs
+  title: "Update log"
+  url: "/update-log/"

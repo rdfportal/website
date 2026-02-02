@@ -1,41 +1,43 @@
 ---
 layout: page
-title: Statistics
+title:
+  en: Statistics
+  ja: 統計情報
 pageId: statistics
-description: RDFデータセットの統計情報一覧
+description:
+  en: Statistical information of RDF datasets
+  ja: RDFデータセットの統計情報一覧
 permalink: /statistics/
+permalink_lang:
+  en: /statistics/
+  ja: /statistics/
 ---
 
 <script type="application/json" id="datasets-json">{{ site.data.datasets | jsonify }}</script>
-<div id="TagStatsBar"></div>
-<div id="StatisticsTableView">
+
+
+<div id="StatisticsTableView" class="-fullwidth -nomargin">
   <div class="inner">
     <table>
       <thead>
         <tr>
-          <th data-sort="title"><span class="th-label">Dataset</span></th>
-          <th data-sort="number_of_triples"><span class="th-label">Triples</span></th>
-          <th data-sort="number_of_links"><span class="th-label">Links</span></th>
-          <th data-sort="number_of_classes"><span class="th-label">Classes</span></th>
-          <th data-sort="number_of_instances"><span class="th-label">Instances</span></th>
-          <th data-sort="number_of_literals"><span class="th-label">Literals</span></th>
-          <th data-sort="number_of_subjects"><span class="th-label">Subjects</span></th>
-          <th data-sort="number_of_properties"><span class="th-label">Properties</span></th>
-          <th data-sort="number_of_objects"><span class="th-label">Objects</span></th>
+          <th data-sort="title"><span class="th-label">{% lang 'en' %}Dataset{% endlang %}{% lang 'ja' %}データセット{% endlang %}</span></th>
+          {% assign first_dataset = site.data.datasets | first %}
+          {% for stat in first_dataset.statistics %}
+            {% assign key = stat[0] %}
+            {% assign label = key | replace: 'number_of_', '' | capitalize %}
+            <th data-sort="{{ key }}"><span class="th-label">{{ label }}</span></th>
+          {% endfor %}
         </tr>
       </thead>
       <tbody>
         {% for dataset in site.data.datasets %}
           <tr>
-            <td data-key="title">{{ dataset.title }}</td>
-            <td data-key="number_of_triples">{{ dataset.statistics.number_of_triples }}</td>
-            <td data-key="number_of_links">{{ dataset.statistics.number_of_links }}</td>
-            <td data-key="number_of_classes">{{ dataset.statistics.number_of_classes }}</td>
-            <td data-key="number_of_instances">{{ dataset.statistics.number_of_instances }}</td>
-            <td data-key="number_of_literals">{{ dataset.statistics.number_of_literals }}</td>
-            <td data-key="number_of_subjects">{{ dataset.statistics.number_of_subjects }}</td>
-            <td data-key="number_of_properties">{{ dataset.statistics.number_of_properties }}</td>
-            <td data-key="number_of_objects">{{ dataset.statistics.number_of_objects }}</td>
+            <td data-key="title"><a href="{{ site.baseurl }}/dataset/{{ dataset.id }}/">{{ dataset.title }}</a></td>
+            {% for stat in first_dataset.statistics %}
+              {% assign key = stat[0] %}
+              <td data-key="{{ key }}">{{ dataset.statistics[key] }}</td>
+            {% endfor %}
           </tr>
         {% endfor %}
       </tbody>
@@ -44,9 +46,48 @@ permalink: /statistics/
 </div>
 
 <script>
-// タグ統計棒グラフ描画（DatasetsManagerで集計）
+const HEATMAP_COLOR = [0, 122, 204]; // Brand Blue
 
 document.addEventListener('DOMContentLoaded', async function() {
+  
+  // Apply Heatmap Coloring
+  function applyHeatmap() {
+    const table = document.querySelector('#StatisticsTableView > .inner > table');
+    if (!table) return;
+
+    // Get all numeric keys from headers (skip "title")
+    const headers = Array.from(table.querySelectorAll('th[data-sort]'))
+      .map(th => th.getAttribute('data-sort'))
+      .filter(key => key && key !== 'title');
+
+    headers.forEach(key => {
+      const cells = Array.from(table.querySelectorAll(`td[data-key="${key}"]`));
+      
+      // Extract numeric values
+      const values = cells.map(cell => {
+        const text = cell.textContent.replace(/,/g, '').trim();
+        return text ? parseFloat(text) : 0;
+      });
+
+      const max = Math.max(...values);
+      const min = Math.min(...values); 
+      const range = max - min;
+
+      cells.forEach((cell, index) => {
+        const val = values[index];
+        if (range === 0 || val === 0) {
+          cell.style.backgroundColor = 'transparent';
+          return;
+        }
+
+        let ratio = (val - min) / range;
+        const opacity = 0.05 + (ratio * 0.55); 
+        
+        cell.style.backgroundColor = `rgba(${HEATMAP_COLOR[0]}, ${HEATMAP_COLOR[1]}, ${HEATMAP_COLOR[2]}, ${opacity})`;
+      });
+    });
+  }
+
   // Format numbers to use commas as separators
   function formatNumberWithCommas(num) {
     if (!num || num === '') return '';
@@ -61,65 +102,68 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
   });
 
-  // タグ統計バー描画
-  const barsContainerEl = document.querySelector('#TagStatsBar');
-  if (barsContainerEl && window.DatasetsManager) {
-    const mgr = window.DatasetsManager.getInstance();
-    const tags = await mgr.getAvailableTags();
-    if (tags.length) {
-      // const totalTagCount = tags.reduce((acc, tag) => acc + tag.count, 0);
-      const maxCount = Math.max(...tags.map(t => t.count));
-      const barContainer = document.createElement('div');
-      barContainer.className = 'tag-stats-bar';
-      const inner = document.createElement('div');
-      inner.className = 'inner';
-      barContainer.append(inner);
-      tags.forEach(tagObj => {
-        const { id, count, color } = tagObj;
-        const bar = document.createElement('div');
-        bar.className = 'bar';
-        // bar.style.width = `${tagObj.count / totalTagCount * 100}%`;
-        bar.style.height = `${tagObj.count / maxCount * 100}%`;
-        bar.style.background = color;
-        bar.title = `${id}: ${count}`;
-        bar.innerHTML = `<span class=\"label\">${id}</span>`;
-        // bar.innerHTML = `<span class=\"tag-label\" style=\"writing-mode:vertical-lr; font-size:10px;\">${id}</span><span class=\"tag-value\" style=\"display:block; font-size:10px;\">${count}</span>`;
-        inner.appendChild(bar);
-      });
-      barsContainerEl.innerHTML = '';
-      barsContainerEl.appendChild(barContainer);
-    }
-  }
+  // Apply Heatmap initially
+  applyHeatmap();
 
-  // 簡易テーブルソート（数値・文字列対応）
+  // 簡易テーブルソート（数値・文字列対応）3-state: desc -> asc -> release
   const table = document.querySelector('#StatisticsTableView > .inner > table');
   if (table) {
+    // Store original row order
+    const originalRows = Array.from(table.tBodies[0].rows);
+    
     table.querySelectorAll('th[data-sort]').forEach(th => {
       th.addEventListener('click', function() {
         const sortKey = th.getAttribute('data-sort');
         const rows = Array.from(table.tBodies[0].rows);
         const isNumber = sortKey !== 'title';
-        const asc = !th.classList.contains('asc');
-        rows.sort((a, b) => {
-          const cellA = a.querySelector(`[data-key='${sortKey}']`) || a.cells[th.cellIndex];
-          const cellB = b.querySelector(`[data-key='${sortKey}']`) || b.cells[th.cellIndex];
-          
-          if (isNumber) {
-            const va = parseInt(cellA?.textContent.replace(/,/g, '') || '0');
-            const vb = parseInt(cellB?.textContent.replace(/,/g, '') || '0');
-            return asc ? va - vb : vb - va;
-          } else {
-            const va = cellA?.textContent || '';
-            const vb = cellB?.textContent || '';
-            return asc ? va.localeCompare(vb) : vb.localeCompare(va);
-          }
-        });
-        rows.forEach(row => table.tBodies[0].appendChild(row));
+        
+        // Determine next state
+        let nextState = 'desc'; // default first click
+        if (th.classList.contains('desc')) {
+          nextState = 'asc';
+        } else if (th.classList.contains('asc')) {
+          nextState = 'release';
+        }
+
+        // Reset all headers
         table.querySelectorAll('th').forEach(h => h.classList.remove('asc', 'desc'));
-        th.classList.add(asc ? 'asc' : 'desc');
+
+        if (nextState === 'release') {
+          // Restore original order
+          // Note: This restores the initial load order. 
+          // If the table content changes dynamically, this logic needs to be revisited.
+          // Assuming static table content for now.
+          const tbody = table.tBodies[0];
+          // Clear current rows
+          while (tbody.firstChild) {
+            tbody.removeChild(tbody.firstChild);
+          }
+          // Append original rows
+          originalRows.forEach(row => tbody.appendChild(row));
+          
+        } else {
+          // Add class for next state
+          th.classList.add(nextState);
+          
+          const asc = nextState === 'asc';
+          rows.sort((a, b) => {
+            const cellA = a.querySelector(`[data-key='${sortKey}']`) || a.cells[th.cellIndex];
+            const cellB = b.querySelector(`[data-key='${sortKey}']`) || b.cells[th.cellIndex];
+            
+            if (isNumber) {
+              const va = parseInt(cellA?.textContent.replace(/,/g, '') || '0');
+              const vb = parseInt(cellB?.textContent.replace(/,/g, '') || '0');
+              return asc ? va - vb : vb - va;
+            } else {
+              const va = cellA?.textContent || '';
+              const vb = cellB?.textContent || '';
+              return asc ? va.localeCompare(vb) : vb.localeCompare(va);
+            }
+          });
+          rows.forEach(row => table.tBodies[0].appendChild(row));
+        }
       });
     });
   }
 });
-
 </script>

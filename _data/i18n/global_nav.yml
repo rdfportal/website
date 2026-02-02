@@ -1,0 +1,23 @@
+en:
+  footer:
+    site_policy: "Site Policy"
+    copyright: "©"
+  language_switcher:
+    current: "EN"
+    option_en: "EN"
+    option_ja: "JA"
+    aria_label: "Change language"
+  meta:
+    description: "Integrated access to life science RDF datasets - Search, connect, and utilize trusted data globally."
+
+ja:
+  footer:
+    site_policy: "サイトポリシー"
+    copyright: "©"
+  language_switcher:
+    current: "JA"
+    option_en: "EN"
+    option_ja: "JA"
+    aria_label: "言語を切り替える"
+  meta:
+    description: "RDFポータルサイト - 生命科学分野のRDFデータセットの統合的なアクセスと活用を提供します。"

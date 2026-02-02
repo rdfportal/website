@@ -26,20 +26,21 @@
     height: 100%
     overflow: hidden
     &::before
-      content: ''
+      content: ""
       position: absolute
       display: block
       height: 500px
       width: 500px
-      top: -12px
-      left: 0px
+      bottom: 218px
+      left: -115px
       background-repeat: no-repeat
-      background-position: -30px -122px
+      background-position: -30px 139px
       background-size: 450px
       z-index: 1
-      filter: blur(10px) brightness(3.5)
+      filter: blur(25px) brightness(2.5)
       translate: 50px 0
       rotate: -8deg
+      scale: 1 2
       mix-blend-mode: multiply
       opacity: .8
       pointer-events: none
@@ -91,8 +92,6 @@
         > li
           transition: opacity 0.3s ease
           opacity: 0.4
-          &.-active, &:hover
-            opacity: 1
           > a
             display: block
             font-size: 1.6rem
@@ -105,15 +104,25 @@
               position: absolute
               display: block
               border-top: 1px solid #000
+              transition: width 0.3s ease, right 0.3s ease
             &::before
               width: 100%
               bottom: 7px
               left: 0
             &::after
+              transform-origin: right bottom
               width: 7px
               rotate: 45deg
-              right: 0
-              bottom: 10px
+              right: 2px
+              bottom: 8px
+          &.-active, &:hover
+            opacity: 1
+            > a
+              &::before
+                width: calc(100% + 11px)
+              &::after
+                width: 0px
+                right: -11px
           > ul
             display: none
             padding-left: 10px

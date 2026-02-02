@@ -7,3 +7,5 @@ gem 'jekyll-feed'
 gem 'kramdown-parser-gfm'
 
 gem 'jekyll', group: :jekyll_plugins
+
+gem 'jekyll-polyglot'

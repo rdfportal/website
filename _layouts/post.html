@@ -1,13 +1,45 @@
 ---
-layout: page
+layout: default
 ---
 
-<article id="NewsPostView">
+{% assign current_lang = site.active_lang | default: site.default_lang %}
+
+{% comment %} Set back button URL and title based on collection {% endcomment %}
+{% if page.collection == 'announcements' %}
+{% assign backToListURL = '/announcements' %}
+{% assign listPageTitle_en = 'Announcements' %}
+{% assign listPageTitle_ja = 'お知らせ' %}
+{% elsif page.collection == 'logs' %}
+{% assign backToListURL = '/update-log' %}
+{% assign listPageTitle_en = 'Update Log' %}
+{% assign listPageTitle_ja = '更新履歴' %}
+{% endif %}
+
+{% if current_lang == 'ja' %}
+{% assign listPageTitle = listPageTitle_ja %}
+{% else %}
+{% assign listPageTitle = listPageTitle_en %}
+{% endif %}
+
+<div id="CommonPageView">
   <header>
-    <h1 class="title">{{ page.title }}</h1>
-    <time>{{ page.date | date: "%b %-d, %Y" }}</time>
+    {% if backToListURL %}
+    <h2 class="title"><a href="{{ backToListURL | relative_url }}">{{ listPageTitle }}</a></h2>
+    {% else %}
+    <h2 class="title">{{ page.title }}</h2>
+    {% endif %}
   </header>
-  <div class="content">
-    {{ content }}
+  <div class="inner">
+    <div class="content">
+      <article id="NewsPostView">
+        <header>
+          <h1 class="title">{{ page.title }}</h1>
+          <time>{{ page.date | date: "%b %-d, %Y" }}</time>
+        </header>
+        <div class="content">
+          {{ content }}
+        </div>
+      </article>
+    </div>
   </div>
-</article>
+</div>

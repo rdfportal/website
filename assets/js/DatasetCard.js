@@ -167,7 +167,7 @@ class DatasetCard {
         } else {
           // noop
         }
-      } catch (e) {}
+      } catch (e) { }
       this.#languageChangeHandler = null;
     }
 
@@ -206,10 +206,15 @@ class DatasetCard {
     return html;
   }
   #generateTitle() {
-    const ttl =
-      this.#dataset.title ||
-      this.#dataset.id ||
-      DatasetCard.DEFAULTS.FALLBACK_TITLE;
+    let ttl = this.#dataset.title;
+    if (typeof ttl === "object" && ttl) {
+      ttl =
+        ttl[this.#getCurrentLanguage()] ||
+        ttl.en ||
+        ttl.ja ||
+        "";
+    }
+    ttl = ttl || this.#dataset.id || DatasetCard.DEFAULTS.FALLBACK_TITLE;
     const safe = this.#escapeHtml(ttl);
     if (
       this.#options.showLink &&
@@ -218,9 +223,9 @@ class DatasetCard {
     ) {
       const href = this.#escapeHtml(
         this.#options.linkBaseUrl.replace(/\/$/, "") +
-          "/dataset/" +
-          encodeURIComponent(this.#dataset.id) +
-          "/"
+        "/dataset/" +
+        encodeURIComponent(this.#dataset.id) +
+        "/"
       );
       return `<a class="${DatasetCard.TITLE_CLASS} ${DatasetCard.LINK_CLASS}" href="${href}">${safe}</a>`;
     }
@@ -253,17 +258,16 @@ class DatasetCard {
         desc
       )}</p>`;
     if (this.#options.showFallbackDescription)
-      return `<p class="${
-        DatasetCard.DESCRIPTION_CLASS
-      } isFallback">${this.#escapeHtml(
-        DatasetCard.DEFAULTS.FALLBACK_DESCRIPTION
-      )}</p>`;
+      return `<p class="${DatasetCard.DESCRIPTION_CLASS
+        } isFallback">${this.#escapeHtml(
+          DatasetCard.DEFAULTS.FALLBACK_DESCRIPTION
+        )}</p>`;
     return "";
   }
 
   // 現在の言語設定を取得
   #getCurrentLanguage() {
-    return localStorage.getItem("site-language") || "en";
+    return document.documentElement.lang || "en";
   }
   #generateTags() {
     const tags = this.#extractTagStrings(this.#getTags());
@@ -274,17 +278,15 @@ class DatasetCard {
   }
   #renderTag(tag) {
     if (typeof tag === "string")
-      return `<span class="${
-        DatasetCard.TAG_CLASS
-      }" data-tag="${this.#escapeHtml(tag)}">${this.#escapeHtml(tag)}</span>`;
+      return `<span class="${DatasetCard.TAG_CLASS
+        }" data-tag="${this.#escapeHtml(tag)}">${this.#escapeHtml(tag)}</span>`;
     if (tag && typeof tag === "object" && tag.id) {
       const lang = document.documentElement.lang || "ja";
       const txt = tag.label?.[lang] || tag.label?.ja || tag.label?.en || tag.id;
-      return `<span class="${
-        DatasetCard.TAG_CLASS
-      }" data-tag="${this.#escapeHtml(tag.id)}">${this.#escapeHtml(
-        txt
-      )}</span>`;
+      return `<span class="${DatasetCard.TAG_CLASS
+        }" data-tag="${this.#escapeHtml(tag.id)}">${this.#escapeHtml(
+          txt
+        )}</span>`;
     }
     return "";
   }
@@ -298,18 +300,18 @@ class DatasetCard {
   #extractTagStrings(list) {
     return Array.isArray(list)
       ? list
-          .map((t) => (typeof t === "string" ? t : t?.id || ""))
-          .filter(Boolean)
+        .map((t) => (typeof t === "string" ? t : t?.id || ""))
+        .filter(Boolean)
       : [];
   }
   #escapeHtml(str) {
     return typeof str === "string"
       ? str
-          .replace(/&/g, "&amp;")
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;")
-          .replace(/"/g, "&quot;")
-          .replace(/'/g, "&#39;")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;")
       : "";
   }
   #hashString(str) {
