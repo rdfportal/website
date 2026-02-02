@@ -41,6 +41,8 @@ function extractRequiredFields(metadata) {
     website: metadata.website || null,
     issued: metadata.issued?.toString() || null,
     version: metadata.version?.toString() || null,
+    rdf_provenance_type: metadata.rdf_provenance_type || null,
+    registration_type: metadata.registration_type || null,
   };
 }
 
@@ -76,6 +78,8 @@ function mergeMultilanguageExtractedMetadata(...metadatas) {
     issued: null,
     website: null,
     version: null,
+    rdf_provenance_type: null,
+    registration_type: null,
   };
 
   const providersByLang = {};
@@ -144,6 +148,16 @@ function mergeMultilanguageExtractedMetadata(...metadatas) {
     // Add version from metadata (preferably from English)
     if (metadata.version && !mergedMetadata.version) {
       mergedMetadata.version = metadata.version;
+    }
+
+    // Add rdf_provenance_type from metadata (preferably from English)
+    if (metadata.rdf_provenance_type && !mergedMetadata.rdf_provenance_type) {
+      mergedMetadata.rdf_provenance_type = metadata.rdf_provenance_type;
+    }
+
+    // Add registration_type from metadata (preferably from English)
+    if (metadata.registration_type && !mergedMetadata.registration_type) {
+      mergedMetadata.registration_type = metadata.registration_type;
     }
   }
 
