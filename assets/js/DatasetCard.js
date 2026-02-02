@@ -202,8 +202,30 @@ class DatasetCard {
     if (tripleCount && typeof tripleCount === "number") {
       html += `<span class="triples">${tripleCount.toLocaleString()} triples</span>`;
     }
+    if (this.#dataset.rdf_provenance_type) {
+      html += `<span class="provenance">${this.#escapeHtml(
+        this.#formatMetaString(this.#dataset.rdf_provenance_type)
+      )}</span>`;
+    }
+    if (this.#dataset.registration_type) {
+      html += `<span class="registration">${this.#escapeHtml(
+        this.#formatMetaString(this.#dataset.registration_type)
+      )}</span>`;
+    }
     html += "</div>";
     return html;
+  }
+  #formatMetaString(str) {
+    if (!str) return "";
+    return str
+      .split("_")
+      .map((word, index) => {
+        const lower = word.toLowerCase();
+        if (lower === "rdfportal") return "RDF portal";
+        if (index === 0) return word.charAt(0).toUpperCase() + word.slice(1);
+        return word;
+      })
+      .join(" ");
   }
   #generateTitle() {
     let ttl = this.#dataset.title;
