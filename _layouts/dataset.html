@@ -52,6 +52,31 @@ pageId: datasets
                             </div>
                         </td>
                     </tr>
+                    {% if page.dataset.rdf_provenance_type %}
+                    <tr data-row-kind="provenance" data-type="string">
+                        <th>{{ i18n.provenance }}</th>
+                        <td>
+                            {% assign _prov = page.dataset.rdf_provenance_type | replace: '_', ' ' %}
+                            {% if _prov == 'rdfportal' %}{% assign _prov = 'RDF portal' %}{% endif %}
+                            {% if _prov == 'added by rdfportal' %}{% assign _prov = 'Added by RDF portal' %}{% endif %}
+                            {% unless _prov contains 'RDF portal' %}{% assign _prov = _prov | capitalize %}{% endunless
+                            %}
+                            {{ _prov }}
+                        </td>
+                    </tr>
+                    {% endif %}
+                    {% if page.dataset.registration_type %}
+                    <tr data-row-kind="registration" data-type="string">
+                        <th>{{ i18n.registration }}</th>
+                        <td>
+                            {% assign _reg = page.dataset.registration_type | replace: '_', ' ' %}
+                            {% if _reg == 'rdfportal' %}{% assign _reg = 'RDF portal' %}{% endif %}
+                            {% if _reg == 'added by rdfportal' %}{% assign _reg = 'Added by RDF portal' %}{% endif %}
+                            {% unless _reg contains 'RDF portal' %}{% assign _reg = _reg | capitalize %}{% endunless %}
+                            {{ _reg }}
+                        </td>
+                    </tr>
+                    {% endif %}
                     <tr data-row-kind="providers" data-type="string">
                         <th>{{ i18n.provider }}</th>
                         <td>
