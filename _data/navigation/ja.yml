@@ -1,3 +1,6 @@
+- id: about
+  title: "このサイトについて"
+  url: "/documents/introduction/"
 - id: access_methods
   title: "アクセス方法"
   url: "/access_methods/"
@@ -30,12 +33,9 @@
     - id: data_submission
       title: "データ登録"
       url: "/documents/data_submission/"
-    - id: about_sparql_endpoints
-      title: "SPARQLエンドポイントについて"
-      url: "/documents/about_sparql_endpoints/"
-- id: about
-  title: "このサイトについて"
-  url: "/documents/introduction/"
+    - id: rdf_config
+      title: "RDF config"
+      url: "https://github.com/dbcls/rdf-config?tab=readme-ov-file"
 - id: news
   title: "お知らせ"
   url: "/announcements/"
