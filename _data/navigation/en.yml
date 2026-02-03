@@ -25,14 +25,14 @@
   url: "/statistics/"
 - id: documents
   title: "Documents"
-  url: "/documents/introduction/"
+  url: "/documents/"
   children:
     - id: data_submission
       title: "Data submission"
       url: "/documents/data_submission/"
     - id: rdf_config
       title: "RDF config"
-      url: "https://github.com/dbcls/rdf-config?tab=readme-ov-file"
+      url: "/documents/rdf_config/"
 - id: news
   title: "Announcements"
   url: "/announcements/"

@@ -1,17 +1,17 @@
 ---
 layout: page
 title:
-  en: Documents
-  ja: ドキュメント
-pageId: about_sparql_endpoints
+  en: RDF config
+  ja: RDF config
+pageId: rdf_config
 parentPageId: documents
 description:
-  en: Learn about RDF Portal SPARQL endpoints
-  ja: RDFポータルサイトの利用方法とドキュメント
-permalink: /documents/about_sparql_endpoints/
+  en: RDF config
+  ja: RDF config
+permalink: /documents/rdf_config/
 permalink_lang:
-  en: /documents/about_sparql_endpoints/
-  ja: /documents/about_sparql_endpoints/ja/
+  en: /documents/rdf_config/
+  ja: /documents/rdf_config/ja/
 ---
 
 {% lang 'en' %}
