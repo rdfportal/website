@@ -23,6 +23,9 @@
 - id: statistics
   title: "統計"
   url: "/statistics/"
+- id: download
+  title: "ダウンロード"
+  url: "/download/"
 - id: documents
   title: "ドキュメント"
   url: "/documents/introduction/"

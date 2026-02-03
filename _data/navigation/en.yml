@@ -23,6 +23,9 @@
 - id: statistics
   title: "Statistics"
   url: "/statistics/"
+- id: download
+  title: "Download"
+  url: "/download/"
 - id: documents
   title: "Documents"
   url: "/documents/"
