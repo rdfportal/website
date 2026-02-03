@@ -1,39 +1,23 @@
 [
   {
-    "id": "bioportal",
-    "title": "BioPortal"
-  },
-  {
-    "id": "covid",
-    "title": "COVID-19"
+    "id": "primary",
+    "title": "Primary"
   },
   {
     "id": "ddbj",
     "title": "DDBJ"
   },
   {
-    "id": "ebi",
-    "title": "EBI"
+    "id": "bioportal",
+    "title": "BioPortal"
   },
   {
     "id": "kero",
     "title": "KERO"
   },
   {
-    "id": "med2rdf",
-    "title": "Med2RDF"
-  },
-  {
-    "id": "ncbi",
-    "title": "NCBI"
-  },
-  {
     "id": "pdb",
     "title": "PDB"
-  },
-  {
-    "id": "primary",
-    "title": "Primary"
   },
   {
     "id": "proteinatlas",
@@ -44,11 +28,23 @@
     "title": "PubChem"
   },
   {
+    "id": "wikidata",
+    "title": "Wikidata"
+  },
+  {
+    "id": "ebi",
+    "title": "EBI"
+  },
+  {
+    "id": "ncbi",
+    "title": "NCBI"
+  },
+  {
     "id": "sib",
     "title": "SIB"
   },
   {
-    "id": "wikidata",
-    "title": "Wikidata"
+    "id": "med2rdf",
+    "title": "Med2RDF"
   }
 ]
