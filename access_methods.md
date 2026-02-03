@@ -40,11 +40,11 @@ GraphQL API is available for application developers. It allows intuitive query c
 
 <div class="box" markdown="1">
 {% lang 'en' %}
-## [Togo MCP]({{ 'https://togomcp.rdfportal.org/' }}){:target="_blank"}
+## [TogoMCP]({{ 'https://togomcp.rdfportal.org/' }}){:target="_blank"}
 Model Context Protocol (MCP) interface for AI agents. This mechanism enables LLMs to understand the structure and content of RDF datasets and provide accurate data in response to natural language questions.
 {% endlang %}
 {% lang 'ja' %}
-## [Togo MCP]({{ 'https://togomcp.rdfportal.org/' }}){:target="_blank"}
+## [TogoMCP]({{ 'https://togomcp.rdfportal.org/' }}){:target="_blank"}
 AIエージェント向けのModel Context Protocol (MCP) インターフェースです。LLMがRDFデータセットの構造や内容を理解し、自然言語での質問に対して正確なデータを提供するための仕組みです。
 {% endlang %}
 </div>
