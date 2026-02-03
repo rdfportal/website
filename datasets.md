@@ -37,17 +37,72 @@ document.addEventListener('DOMContentLoaded', async function() {
   const sortSegment = document.getElementById('sortSegment');
   const sortOrderSegment = document.getElementById('sortOrderSegment');
   const tagSelect = document.getElementById('tagSelect');
+  const provenanceSegment = document.getElementById('provenanceFilterSegment');
+  const registrationSegment = document.getElementById('registrationFilterSegment');
   const searchInput = document.getElementById('DatasetSearchInput'); // 検索UIは必要に応じて
+
+  // Helper for formatting meta strings (duplicated from DatasetCard)
+  function formatMetaString(str) {
+    if (!str) return "";
+    return str
+      .split("_")
+      .map((word, index) => {
+        const lower = word.toLowerCase();
+        if (lower === "rdfportal") return "RDF portal";
+        if (index === 0) return word.charAt(0).toUpperCase() + word.slice(1);
+        return word;
+      })
+      .join(" ");
+  }
+
+  // フィルタUI生成関数
+  function createCheckboxFilter(segment, items, namePrefix) {
+    if (!segment) return;
+    segment.innerHTML = '';
+    items.forEach(item => {
+      const wrapper = document.createElement('label');
+      wrapper.className = 'checkboxwrapper';
+      
+      const input = document.createElement('input');
+      input.type = 'checkbox';
+      input.value = item.id;
+      input.name = namePrefix;
+      input.checked = true; // Default checked
+      
+      const text = document.createElement('span');
+      text.textContent = `${formatMetaString(item.id)} (${item.count})`;
+      
+      wrapper.appendChild(input);
+      wrapper.appendChild(text);
+      segment.appendChild(wrapper);
+      
+      // イベントリスナー
+      input.addEventListener('change', () => renderDatasets(getFilteredSortedDatasets()));
+    });
+  }
+
+  // 集計とフィルタ生成
+  const tagCounts = {};
+  const provenanceCounts = {};
+  const registrationCounts = {};
+
+  datasets.forEach(ds => {
+    // Tags
+    (ds.tags || []).forEach(tag => {
+      tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+    });
+    // Provenance
+    if (ds.rdf_provenance_type) {
+      provenanceCounts[ds.rdf_provenance_type] = (provenanceCounts[ds.rdf_provenance_type] || 0) + 1;
+    }
+    // Registration
+    if (ds.registration_type) {
+      registrationCounts[ds.registration_type] = (registrationCounts[ds.registration_type] || 0) + 1;
+    }
+  });
 
   // タグ選択肢生成
   if (tagSelect) {
-    // タグごとの件数集計
-    const tagCounts = {};
-    datasets.forEach(ds => {
-      (ds.tags || []).forEach(tag => {
-        tagCounts[tag] = (tagCounts[tag] || 0) + 1;
-      });
-    });
     const allTags = Object.keys(tagCounts).sort();
     allTags.forEach(tag => {
       if (!Array.from(tagSelect.options).some(opt => opt.value === tag)) {
@@ -57,6 +112,18 @@ document.addEventListener('DOMContentLoaded', async function() {
         tagSelect.appendChild(opt);
       }
     });
+  }
+
+  // Provenanceフィルタ生成
+  if (provenanceSegment) {
+    const items = Object.keys(provenanceCounts).sort().map(k => ({ id: k, count: provenanceCounts[k] }));
+    createCheckboxFilter(provenanceSegment, items, 'provenance');
+  }
+
+  // Registrationフィルタ生成
+  if (registrationSegment) {
+    const items = Object.keys(registrationCounts).sort().map(k => ({ id: k, count: registrationCounts[k] }));
+    createCheckboxFilter(registrationSegment, items, 'registration');
   }
 
   function getFilteredSortedDatasets() {
@@ -90,6 +157,22 @@ document.addEventListener('DOMContentLoaded', async function() {
     if (tagSelect && tagSelect.value) {
       filtered = filtered.filter(ds => Array.isArray(ds.tags) && ds.tags.includes(tagSelect.value));
     }
+
+    // Provenanceフィルタ
+    if (provenanceSegment) {
+      const checked = Array.from(provenanceSegment.querySelectorAll('input:checked')).map(cb => cb.value);
+      // Filter strictly based on checked items. If none checked, show none (for this category).
+      // Note: If a dataset doesn't have provenance type, it will be hidden if we filter strictly by checked values.
+      // Assuming all datasets have these types if the filter exists.
+      filtered = filtered.filter(ds => checked.includes(ds.rdf_provenance_type));
+    }
+
+    // Registrationフィルタ
+    if (registrationSegment) {
+      const checked = Array.from(registrationSegment.querySelectorAll('input:checked')).map(cb => cb.value);
+      filtered = filtered.filter(ds => checked.includes(ds.registration_type));
+    }
+
     // ソートキー
     let sortKey = 'date';
     if (sortSegment) {

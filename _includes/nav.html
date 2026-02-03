@@ -54,6 +54,20 @@
             <option value="">{{ i18n_filter.filter_default_option }}</option>
           </select>
         </div>
+        <div class="provenance-filter">
+          <label>{{ i18n_filter.provenance_label }}:</label>
+          <div id="provenanceFilterSegment" class="checkboxs" role="group"
+            aria-label="{{ i18n_filter.provenance_aria_label }}">
+            <!-- JS will populate -->
+          </div>
+        </div>
+        <div class="registration-filter">
+          <label>{{ i18n_filter.registration_label }}:</label>
+          <div id="registrationFilterSegment" class="checkboxs" role="group"
+            aria-label="{{ i18n_filter.registration_aria_label }}">
+            <!-- JS will populate -->
+          </div>
+        </div>
       </div>
       {% endif %}
     </li>

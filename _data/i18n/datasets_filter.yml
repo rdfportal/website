@@ -13,6 +13,10 @@ en:
   filter_label: "Filter"
   filter_aria_label: "Filter tags"
   filter_default_option: "All tags"
+  provenance_label: "Provenance"
+  provenance_aria_label: "Filter by provenance"
+  registration_label: "Registration"
+  registration_aria_label: "Filter by registration type"
 
 ja:
   sort_label: "並び替え"
@@ -29,3 +33,7 @@ ja:
   filter_label: "絞り込み"
   filter_aria_label: "タグで絞り込み"
   filter_default_option: "すべてのタグ"
+  provenance_label: "提供元"
+  provenance_aria_label: "提供元で絞り込み"
+  registration_label: "登録区分"
+  registration_aria_label: "登録区分で絞り込み"
