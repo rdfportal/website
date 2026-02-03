@@ -27,12 +27,15 @@
   title: "ドキュメント"
   url: "/documents/introduction/"
   children:
+    - id: manual
+      title: "マニュアル"
+      url: "/documents/manual/"
     - id: data_submission
       title: "データ登録"
       url: "/documents/data_submission/"
     - id: rdf_config
       title: "RDF config"
-      url: "https://github.com/dbcls/rdf-config?tab=readme-ov-file"
+      url: "/documents/rdf_config/"
 - id: news
   title: "お知らせ"
   url: "/announcements/"

@@ -14,5 +14,6 @@ permalink_lang:
   ja: /documents/ja/
 ---
 
+- [Manual]({{ '/documents/manual/' | relative_url }})
 - [Data submission]({{ '/documents/data_submission/' | relative_url }})
 - [RDF config]({{ '/documents/rdf_config/' | relative_url }})

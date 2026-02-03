@@ -27,6 +27,9 @@
   title: "Documents"
   url: "/documents/"
   children:
+    - id: manual
+      title: "Manual"
+      url: "/documents/manual/"
     - id: data_submission
       title: "Data submission"
       url: "/documents/data_submission/"
