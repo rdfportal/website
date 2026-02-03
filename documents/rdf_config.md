@@ -1,8 +1,8 @@
 ---
 layout: page
 title:
-  en: RDF config
-  ja: RDF config
+  en: About RDF config
+  ja: RDF config の概要
 pageId: rdf_config
 parentPageId: documents
 description:
@@ -15,39 +15,13 @@ permalink_lang:
 ---
 
 {% lang 'en' %}
-### About RDF Portal SPARQL Endpoints
+### Heading
 
-RDF Portal provides multiple SPARQL endpoints. Ideally, all RDF datasets would be accessible through a single unified endpoint, which would maximize usability. However, with the RDF store currently in use, such an approach is not practical due to performance constraints related to data loading, updates, and query execution.
-
-For this reason, RDF datasets are divided across several endpoints, primarily based on the size of the dataset and the institution providing it. Each endpoint is optimized for stable operation and efficient querying, while together they collectively cover the full range of datasets hosted in RDF Portal.
-
-Each endpoint is equipped with frontend support tools developed at DBCLS: <a href="https://github.com/moriya-dbcls/sparql-support" target="_blank">sparql-support</a> and <a href="https://github.com/dbcls/sparql-proxy" target="_blank">sparql-proxy</a>.
-
-sparql-support is an editor that assists users in writing SPARQL queries, providing features such as input completion and tab-based management of multiple queries.
-
-sparql-proxy functions as a proxy server for SPARQL endpoints, offering capabilities including job management of queries, detection of invalid queries, and faster responses through query result caching.
-
-Below is the list of SPARQL endpoints currently available.
+Body text
 {% endlang %}
 
 {% lang 'ja' %}
-### RDF PortalのSPARQLエンドポイントについて
+### 見出し
 
-RDF Portalでは、複数のSPARQLエンドポイントを提供しています。本来であれば、すべてのRDFデータセットを単一のエンドポイントから利用できる方が利便性は高いのですが、現状使用しているRDFストアの性能上の制約（データのロード、更新、問い合わせ処理などの観点）から、そのような運用は現実的ではありません。
-
-そのため現在は、主にデータセットの提供機関やデータサイズの観点からデータセットを分類し、複数のエンドポイントに分散してロードした上で、SPARQLによるアクセスサービスを提供しています。
-
-各エンドポイントには、DBCLSが開発した <a href="https://github.com/moriya-dbcls/sparql-support" target="_blank">sparql-support</a> および <a href="https://github.com/dbcls/sparql-proxy" target="_blank">sparql-proxy</a> がフロントエンドとして利用されています。
-
-sparql-support は、SPARQLクエリの記述を支援するエディタであり補完や複数クエリのタブ管理といった機能を提供します。
-
-sparql-proxy は、SPARQLエンドポイントのプロキシサーバーとして、クエリのジョブ管理、不正なクエリの検出、キャッシュを利用した応答高速化などの機能を備えています。
-
-以下に、現在利用可能なSPARQLエンドポイントの一覧を示します。
+本文
 {% endlang %}
-
-{% assign endpoints = site.data.endpoints | default: empty %}
-
-{% for ep in endpoints %}
-<p><a href="https://rdfportal.org/{{ ep.id }}/sparql" target="_blank">{{ ep.title }}</a></p>
-{% endfor %}
