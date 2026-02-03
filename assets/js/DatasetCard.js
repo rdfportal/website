@@ -176,17 +176,14 @@ class DatasetCard {
   }
 
   #generateContent() {
-    const iconPart = this.#options.showIcon
-      ? `<div class="iconwrapper">${this.#buildPetalSvg()}</div>`
-      : "";
     const titlePart = this.#generateTitle();
     const metaPart = this.#options.showHeaderMeta
       ? this.#generateHeaderMeta()
       : "";
     const descHtml = this.#generateDescription();
     const tagsHtml = this.#options.showTags ? this.#generateTags() : "";
-    // icon + title + meta を <header> にまとめる
-    const headHtml = `<header class="head">${iconPart}${titlePart}${metaPart}</header>`;
+    // title (containing icon) + meta を <header> にまとめる
+    const headHtml = `<header class="head">${titlePart}${metaPart}</header>`;
     return `${headHtml}<div class="body">${descHtml}${tagsHtml}</div>`;
   }
   // header用: 発行日とトリプル数を表示
@@ -195,7 +192,7 @@ class DatasetCard {
     const tripleCount = this.#dataset.statistics?.number_of_triples;
     let html = '<div class="meta">';
     if (issued) {
-      html += `<span class="issued">Last update: ${this.#escapeHtml(
+      html += `<span class="issued">${this.#escapeHtml(
         issued
       )}</span>`;
     }
@@ -228,6 +225,10 @@ class DatasetCard {
       .join(" ");
   }
   #generateTitle() {
+    const iconPart = this.#options.showIcon
+      ? `<div class="iconwrapper">${this.#buildPetalSvg()}</div>`
+      : "";
+
     let ttl = this.#dataset.title;
     if (typeof ttl === "object" && ttl) {
       ttl =
@@ -238,6 +239,8 @@ class DatasetCard {
     }
     ttl = ttl || this.#dataset.id || DatasetCard.DEFAULTS.FALLBACK_TITLE;
     const safe = this.#escapeHtml(ttl);
+
+    let contentHtml = "";
     if (
       this.#options.showLink &&
       this.#dataset.id &&
@@ -249,9 +252,12 @@ class DatasetCard {
         encodeURIComponent(this.#dataset.id) +
         "/"
       );
-      return `<a class="${DatasetCard.TITLE_CLASS} ${DatasetCard.LINK_CLASS}" href="${href}">${safe}</a>`;
+      contentHtml = `<a class="${DatasetCard.LINK_CLASS}" href="${href}">${safe}</a>`;
+    } else {
+      contentHtml = `<span class="${DatasetCard.LINK_CLASS}">${safe}</span>`;
     }
-    return `<div class="${DatasetCard.TITLE_CLASS}">${safe}</div>`;
+
+    return `<div class="${DatasetCard.TITLE_CLASS}">${iconPart}${contentHtml}</div>`;
   }
   #generateDescription() {
     if (!this.#options.showDescription) return "";
