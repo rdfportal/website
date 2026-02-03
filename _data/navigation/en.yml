@@ -1,6 +1,6 @@
 - id: about
   title: "About"
-  url: "/documents/introduction/"
+  url: "/about/"
 - id: access_methods
   title: "Access methods"
   url: "/access_methods/"
@@ -27,9 +27,6 @@
   title: "Documents"
   url: "/documents/introduction/"
   children:
-    - id: introduction
-      title: "Introduction"
-      url: "/documents/introduction/"
     - id: data_submission
       title: "Data submission"
       url: "/documents/data_submission/"

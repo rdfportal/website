@@ -1,26 +1,19 @@
 ---
 layout: page
 title:
-  en: Documents
-  ja: ドキュメント
-pageId: introduction
-parentPageId: documents
+  en: About RDF Portal
+  ja: RDF Portal とは
+pageId: about
 description:
   en: Learn about the RDF Portal and its purpose
   ja: RDFポータルサイトの利用方法とドキュメント
-permalink: /documents/introduction/
+permalink: /about/
 permalink_lang:
-  en: /documents/introduction/
-  ja: /documents/introduction/ja/
+  en: /about/
+  ja: /about/ja/
 ---
 
 {% lang 'en' %}
-### Overview
-
-RDF Portal is a platform that brings together diverse life science data in a standardized, globally recognized format. By linking information on genes, proteins, diseases, compounds, and more across multiple databases, it enables users to search, connect, and utilize trusted data more effectively. The portal provides an environment where reliable datasets can be accessed not only by specialists but also by a broad range of communities interested in life science data.
-
-### About RDF Portal
-
 RDF Portal is a dedicated gateway for accessing and integrating life science resources represented in the Resource Description Framework (RDF). In modern biomedical and life science research, essential knowledge is dispersed across heterogeneous databases—spanning genomic, proteomic, metabolic, disease, chemical, and scholarly resources—each differing in data format, schema, and terminology. These discrepancies pose significant obstacles to integrative data analysis and computational knowledge discovery.
 
 RDF provides a unifying, machine-readable model based on subject–predicate–object triples, enabling structural consistency across disparate datasets. By assigning globally resolvable URIs, RDF supports precise data identification and semantic interoperability among independent resources. This facilitates the construction of interoperable knowledge graphs, in which entities such as genes, proteins, pathways, diseases, and compounds are explicitly connected, allowing researchers to traverse and analyze complex biological networks.
@@ -41,12 +34,6 @@ Since 2022, the stewardship of RDF Portal has transitioned from NBDC to the Data
 {% endlang %}
 
 {% lang 'ja' %}
-### 概要
-
-RDF Portalは、生命科学分野のさまざまなデータを、世界的に標準化された方法でつなぎ合わせて活用できるようにするためのサイトです。遺伝子やタンパク質、疾患や化合物など、異なるデータベースに分散している情報を整理し、相互に関連付けて検索・活用できるようにしています。これにより、研究者だけでなく幅広い分野の人々が、信頼できるデータを効率的に利用できる環境を提供します。
-
-### RDF Portalについて
-
 RDF Portalは、Resource Description Framework (RDF) によって表現された生命科学リソースへのアクセスと統合を目的とした専用のゲートウェイです。現代のバイオメディカルおよびライフサイエンス研究において、重要な知識はゲノム、プロテオーム、代謝、疾患、化学物質、学術リソースといった多様なデータベースに分散しており、それぞれが異なるデータ形式、スキーマ、用語法を採用しています。これらの不一致は、統合的なデータ解析や計算による知識発見に大きな障害をもたらしています。
 
 RDFは、主語–述語–目的語のトリプルに基づく統一的かつ機械可読なモデルを提供し、異種データセット間の構造的一貫性を可能にします。グローバルに解決可能なURIを割り当てることで、RDFは精密なデータ識別を可能にし、独立したリソース間のセマンティック・インターオペラビリティを実現します。これにより、遺伝子、タンパク質、経路、疾患、化合物といったエンティティが明示的に結び付けられた相互運用可能なナレッジグラフを構築でき、研究者は複雑な生物学的ネットワークを横断的に探索・解析することが可能となります。

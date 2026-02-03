@@ -1,6 +1,6 @@
 - id: about
   title: "このサイトについて"
-  url: "/documents/introduction/"
+  url: "/about/"
 - id: access_methods
   title: "アクセス方法"
   url: "/access_methods/"
@@ -27,9 +27,6 @@
   title: "ドキュメント"
   url: "/documents/introduction/"
   children:
-    - id: introduction
-      title: "はじめに"
-      url: "/documents/introduction/"
     - id: data_submission
       title: "データ登録"
       url: "/documents/data_submission/"
