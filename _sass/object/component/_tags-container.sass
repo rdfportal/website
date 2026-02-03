@@ -11,8 +11,16 @@
     &::before
       content: ""
       display: inline-block
-      height: .4em
-      width: 1.5em
-      margin-right: .2em
-      position: relative
-      top: -.1em
+      height: 1.4em
+      width: 1.4em
+      margin-right: .1em
+      vertical-align: middle
+      // position: relative
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-50 0 100 100'%3E%3Cpath d='M0 78 C 32 55, 32 20, 0 10 C -32 20, -32 55, 0 78Z' fill='black'/%3E%3C/svg%3E")
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-50 0 100 100'%3E%3Cpath d='M0 78 C 32 55, 32 20, 0 10 C -32 20, -32 55, 0 78Z' fill='black'/%3E%3C/svg%3E")
+      mask-size: contain
+      -webkit-mask-size: contain
+      mask-repeat: no-repeat
+      -webkit-mask-repeat: no-repeat
+      mask-position: center bottom
+      -webkit-mask-position: center bottom
