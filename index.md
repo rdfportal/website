@@ -44,30 +44,11 @@ page_id: home
 </div>
 
 {% include datasets-json.html %}
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  try {
-    var dm = window.DatasetsManager && typeof window.DatasetsManager.getInstance === 'function'
-      ? window.DatasetsManager.getInstance()
-      : null;
-    if (!dm) {
-      setTimeout(function() {
-        try {
-          dm = window.DatasetsManager && typeof window.DatasetsManager.getInstance === 'function'
-            ? window.DatasetsManager.getInstance()
-            : null;
-          if (!dm) return;
-          var tags = dm.getAvailableTags();
-          if (Array.isArray(tags) && tags.length) dm.updateTagStyles(tags.map(function(t){ return t.id; }));
-        } catch (e) { console.error('datasets tag init retry error', e); }
-      }, 50);
-      return;
-    }
-    var tags = dm.getAvailableTags();
-    if (Array.isArray(tags) && tags.length) dm.updateTagStyles(tags.map(function(t){ return t.id; }));
-  } catch (e) { console.error('datasets tag init error', e); }
-});
-</script>
+<!-- TopPageTilingDatasetsViewController 実行 -->
+<script src="{{ '/assets/js/DatasetIcon.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/DatasetsManager.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/DatasetCard.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/top-page-tiles.js' | relative_url }}"></script>
 
 <div id="TopPageTilingDatasetsView">
   <div class="container"></div>
