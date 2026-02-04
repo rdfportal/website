@@ -31,6 +31,10 @@ RDF Portal was originally developed in parallel with the Integrated Database Pro
 Over time, the portal expanded its scope by actively incorporating diverse RDF datasets openly available worldwide. This evolution marked a shift from a submission-based repository to a comprehensive, globally oriented hub for RDF-based resources, reflecting the increasing importance of Linked Open Data and semantic integration in biomedical research.
 
 Since 2022, the stewardship of RDF Portal has transitioned from NBDC to the Database Center for Life Science (DBCLS). Under DBCLS, the portal continues to be developed as a sustainable, community-oriented infrastructure that promotes semantic data integration, supports FAIR-compliant data dissemination, and advances international Open Science by enabling federated access, reuse, and knowledge discovery across the life sciences.
+
+### Funding
+
+RDF Portal is supported by the Office of NBDC Program, Japan Science and Technology Agency (JST).
 {% endlang %}
 
 {% lang 'ja' %}
@@ -51,4 +55,8 @@ RDF Portalは、日本科学技術振興機構（JST）のバイオサイエン�
 その後、ポータルは世界で公開されている多様なRDFデータセットを積極的に取り込むことで、その範囲を拡張しました。この進化は、ポータルを単なる投稿型リポジトリから、包括的かつ国際的に指向されたRDFリソースのハブへと変化させ、バイオメディカル研究におけるLinked Open Dataやセマンティック統合の重要性を反映するものとなりました。
 
 2022年以降、RDF Portalの運営主体はNBDCからライフサイエンス統合データベースセンター（DBCLS）へ移管されました。DBCLSのもとで、ポータルは持続可能でコミュニティ指向のインフラストラクチャとして開発が継続され、FAIR原則に適合したデータの公開を推進し、セマンティックデータ統合を発展させ、生命科学分野における国際的オープンサイエンスを支援することで、分散型アクセス、データ再利用、知識発見を可能にしています。
+
+### 資金提供
+
+RDF portal は、国立研究開発法人科学技術振興機構（JST）NBDC事業推進室の支援を受けて運営されています。
 {% endlang %}
