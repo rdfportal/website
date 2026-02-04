@@ -50,14 +50,24 @@ class TopPageTilingDatasetsViewController {
   async #init() {
     try {
       const data = await this.#datasetLoader.getDatasets();
-      this.#datasets = data;
+      // 配列をシャッフル
+      this.#datasets = this.#shuffle([...data]);
 
-      if (data.length > 0) {
-        this.#displayDatasets(data);
+      if (this.#datasets.length > 0) {
+        this.#displayDatasets(this.#datasets);
       }
     } catch (error) {
       console.error("データ読み込み失敗:", error);
     }
+  }
+
+  // Fisher-Yates shuffle
+  #shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
   }
 
   #displayDatasets(datasets) {
