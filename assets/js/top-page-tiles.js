@@ -7,7 +7,7 @@ class TopPageTilingDatasetsViewController {
   static CONTAINER_SELECTOR = "#TopPageTilingDatasetsView > .container";
   static DATASET_COUNT_PER_LANE = 36;
   static SCROLL_BUFFER_TILES = 6;
-  static DRIFT_SPEED = 0.01; // 10px/s = 0.01px/ms
+  static DRIFT_SPEED = 0.005; // 10px/s = 0.01px/ms
 
   #container;
   #datasets = [];
