@@ -307,6 +307,8 @@ class TopPageTilingDatasetsViewController {
 
       laneData.forEach(ds => {
         const card = new DatasetCard(ds, {
+          showLink: true,
+          linkBaseUrl: ".",
           showDescription: true,
           showFallbackDescription: true,
           customClasses: [],
