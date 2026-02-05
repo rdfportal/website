@@ -37,7 +37,7 @@ class TopPageTilingDatasetsViewController {
     }
   }
 
-  #startLoop() {
+  async #startLoop() {
     if (this.#abortController) this.#abortController.abort();
     this.#abortController = new AbortController();
     const signal = this.#abortController.signal;
@@ -69,9 +69,14 @@ class TopPageTilingDatasetsViewController {
     const lanes = this.#renderLanes(nextDatasetsMatrix);
 
     // 4. Animate Lanes
+    if (!signal.aborted) {
+      await new Promise(resolve => setTimeout(resolve, 4000)); // Pause 4s
+    }
+    if (signal.aborted) return;
+
     this.#animateLanes(lanes, signal).then(() => {
       if (!signal.aborted) {
-        this.#startLoop(); // Next loop
+        this.#startLoop();
       }
     });
   }
@@ -183,12 +188,12 @@ class TopPageTilingDatasetsViewController {
     const viewportSize = isVertical ? window.innerHeight : window.innerWidth;
     const distance = contentSize - viewportSize;
 
-    const baseDuration = 30000;
+    const baseDuration = 5000;
 
     const animations = lanes.map((lane, index) => {
       // Random delay for Matrix effect
-      const delay = Math.random() * 4000;
-      const duration = baseDuration + (Math.random() * 5000);
+      const delay = Math.random() * 1000;
+      const duration = baseDuration + (Math.random() * 1000);
 
       // Snap distance to grid to ensure seamless handover
       const snappedDistance = Math.floor(distance / TopPageTilingDatasetsViewController.TILE_SIZE) * TopPageTilingDatasetsViewController.TILE_SIZE;
@@ -205,7 +210,7 @@ class TopPageTilingDatasetsViewController {
       return lane.animate(keyframes, {
         duration: duration,
         delay: delay,
-        easing: 'cubic-bezier(0.4, 0.0, 0.2, 1)',
+        easing: 'cubic-bezier(0.9, 0, 0.1, 1)',
         fill: 'forwards'
       }).finished;
     });
