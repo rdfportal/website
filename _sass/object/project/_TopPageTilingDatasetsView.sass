@@ -8,13 +8,42 @@
   overflow: hidden
 
   > .container
-    position: relative
+    position: absolute
+    top: 0
+    left: 0
     width: 100vw
     height: 100vh
+    // overflow: hidden // Removed to allow negative offset content to be visible
+    display: flex
+    // justify-content: center // Removed to prevent coordinate shift on axis toggle
 
-    > .dataset-card
-      padding: 16px 12px
-      position: absolute
-      width: 300px
-      height: 300px
-      overflow: hidden
+    // Vertical Mode (Columns)
+    &[data-direction="vertical"]
+      flex-direction: row
+      .lane
+        flex-direction: column
+        width: 320px
+        // height: 120% // Removed to allow full content flow
+
+    // Horizontal Mode (Rows)
+    &[data-direction="horizontal"]
+      flex-direction: column
+      .lane
+        flex-direction: row
+        // width: 120% // Removed to allow full content flow
+        height: 320px
+
+    .lane
+      display: flex
+      flex-shrink: 0
+      will-change: transform
+
+      .dataset-card
+        flex-shrink: 0
+        width: 320px
+        height: 320px
+        padding: 16px 12px
+        // margin: 10px
+        position: relative // Reset absolute
+        overflow: hidden
+
