@@ -20,6 +20,10 @@ class TopPageTilingDatasetsViewController {
   #startTime = null;
   #lastGridShift = { x: 0, y: 0 };
 
+  // Mouse Interaction State
+  #isMouseHovering = false;
+  #resumeTime = 0; // Timestamp when we can resume fast scroll
+
   constructor() {
     this.#container = document.querySelector(
       TopPageTilingDatasetsViewController.CONTAINER_SELECTOR
@@ -30,8 +34,22 @@ class TopPageTilingDatasetsViewController {
     this.#startTime = performance.now();
 
     if (this.#container) {
+      // Initialize loop state with default "Active" assumption for first run
       this.#init();
+      this.#setupMouseInteractions();
     }
+  }
+
+  #setupMouseInteractions() {
+    document.documentElement.addEventListener('mouseenter', () => {
+      this.#isMouseHovering = true;
+    });
+
+    document.documentElement.addEventListener('mouseleave', () => {
+      this.#isMouseHovering = false;
+      // Set resume time to 2 seconds from now
+      this.#resumeTime = Date.now() + 2000;
+    });
   }
 
   async #init() {
@@ -39,14 +57,17 @@ class TopPageTilingDatasetsViewController {
       const data = await this.#datasetLoader.getDatasets();
       this.#datasets = data;
       if (this.#datasets.length > 0) {
-        this.#startLoop();
+        // First run: Assume previous "animation" finished normal (random gen acts as such)
+        this.#startLoop(true);
       }
     } catch (error) {
       console.error("Data load failed:", error);
     }
   }
 
-  async #startLoop() {
+  // didAnimatePrevious: true if the previous loop performed the Fast Scroll.
+  // If false, it means we were just Drifting (Idle), so visual position matches Index 0.
+  async #startLoop(didAnimatePrevious = true) {
     if (this.#abortController) this.#abortController.abort();
     this.#abortController = new AbortController();
     const signal = this.#abortController.signal;
@@ -54,10 +75,9 @@ class TopPageTilingDatasetsViewController {
     const oldDirection = this.#direction;
     const oldLaneDatasets = this.#currentLaneDatasets;
 
-    // 1. Toggle Direction
+    // 1. Toggle Direction (State Only - View update delayed)
     this.#direction = this.#direction === 'vertical' ? 'horizontal' : 'vertical';
-    this.#container.setAttribute('data-direction', this.#direction);
-    this.#container.innerHTML = '';
+    // Logic continues... no innerHTML clearing here
 
     // 2. Prepare Data (Seamless Transition)
     // Global Drift Calculation
@@ -92,31 +112,34 @@ class TopPageTilingDatasetsViewController {
     // Save for next loop
     this.#lastGridShift = currentGridShift;
 
-    // Apply base visual offset to container (reset position)
-    // Visual = Mod + BaseOffset (-320..0).
-    const startPos = driftMod + baseOffset;
-    this.#container.style.transform = `translate(${startPos}px, ${startPos}px)`;
-
+    // 3. Render Lanes (To Fragment)
     const nextLaneCount = this.#calculateLaneCount();
     let nextDatasetsMatrix = [];
 
     if (oldLaneDatasets.length > 0) {
       // Transpose logic with Drift Adjustment
-      nextDatasetsMatrix = this.#generateTransposedData(oldLaneDatasets, oldDirection, nextLaneCount, deltaShift);
+      nextDatasetsMatrix = this.#generateTransposedData(oldLaneDatasets, oldDirection, nextLaneCount, deltaShift, didAnimatePrevious);
     } else {
       // First run: Random generation
       nextDatasetsMatrix = this.#generateRandomMatrix(nextLaneCount);
     }
 
-    // ... code continues ...
-
     // Store for next loop
     this.#currentLaneDatasets = nextDatasetsMatrix;
 
-    // 3. Render Lanes
-    const lanes = this.#renderLanes(nextDatasetsMatrix);
+    const fragment = document.createDocumentFragment();
+    const lanes = this.#renderLanes(nextDatasetsMatrix, fragment);
 
-    // 4. Animate Lanes
+    // 4. Batch DOM Update (Atomic Switch)
+    this.#container.setAttribute('data-direction', this.#direction);
+    this.#container.replaceChildren(fragment);
+
+    // Apply base visual offset to container (reset position)
+    // Visual = Mod + BaseOffset (-320..0).
+    const startPos = driftMod + baseOffset;
+    this.#container.style.transform = `translate(${startPos}px, ${startPos}px)`;
+
+    // 5. Animate Lanes (Conditional)
     if (!signal.aborted) {
       // Start Container Drift Animation
       // It should continue indefinitely until next loop resets it.
@@ -141,11 +164,26 @@ class TopPageTilingDatasetsViewController {
     }
     if (signal.aborted) return;
 
-    this.#animateLanes(lanes, signal).then(() => {
+    // Determine if we should Fast Scroll (Active) or just Drift (Idle)
+    // Check if mouse is hovering OR if we are waiting for resume delay
+    const shouldPauseFastScroll = this.#isMouseHovering || (Date.now() < this.#resumeTime);
+
+    if (shouldPauseFastScroll) {
+      // Idle Mode: Just Drift.
+      // Wait for roughly the duration an animation would have taken (e.g. 6s)
+      // to maintain the loop rhythm.
+      await new Promise(resolve => setTimeout(resolve, 6000));
       if (!signal.aborted) {
-        this.#startLoop();
+        this.#startLoop(false); // Recurse with didAnimate = false
       }
-    });
+    } else {
+      // Active Mode: Fast Scroll.
+      this.#animateLanes(lanes, signal).then(() => {
+        if (!signal.aborted) {
+          this.#startLoop(true); // Recurse with didAnimate = true
+        }
+      });
+    }
   }
 
   #calculateLaneCount() {
@@ -168,18 +206,27 @@ class TopPageTilingDatasetsViewController {
     return matrix;
   }
 
-  #generateTransposedData(oldMatrix, oldDirection, nextLaneCount, deltaShift) {
+  #generateTransposedData(oldMatrix, oldDirection, nextLaneCount, deltaShift, didAnimatePrevious) {
     // PREVIOUS state context
     const isOldVertical = oldDirection === 'vertical';
     const oldViewportSize = isOldVertical ? window.innerHeight : window.innerWidth;
 
-    // Original calculation was: distance = contentSize - oldViewportSize
-    const contentCount = TopPageTilingDatasetsViewController.DATASET_COUNT_PER_LANE - TopPageTilingDatasetsViewController.SCROLL_BUFFER_TILES;
-    const contentSize = contentCount * TopPageTilingDatasetsViewController.TILE_SIZE;
-    const distance = contentSize - oldViewportSize;
+    let snappedDistance = 0;
 
-    // We snapped the previous animation to this distance:
-    const snappedDistance = Math.floor(distance / TopPageTilingDatasetsViewController.TILE_SIZE) * TopPageTilingDatasetsViewController.TILE_SIZE;
+    if (didAnimatePrevious) {
+      // Original calculation was: distance = contentSize - oldViewportSize
+      const contentCount = TopPageTilingDatasetsViewController.DATASET_COUNT_PER_LANE - TopPageTilingDatasetsViewController.SCROLL_BUFFER_TILES;
+      const contentSize = contentCount * TopPageTilingDatasetsViewController.TILE_SIZE;
+      const distance = contentSize - oldViewportSize;
+
+      // We snapped the previous animation to this distance:
+      snappedDistance = Math.floor(distance / TopPageTilingDatasetsViewController.TILE_SIZE) * TopPageTilingDatasetsViewController.TILE_SIZE;
+    } else {
+      // If we didn't animate (Idle Mode), the visual position is effectively 0 relative to the lane start
+      // (because the tiles didn't move *within* the lane, only the container drifted).
+      // So snappedDistance is 0.
+      snappedDistance = 0;
+    }
 
     // Calculate visible start index based on the actua snapped distance
     // The previous animation moved 'snappedDistance' pixels.
@@ -254,7 +301,7 @@ class TopPageTilingDatasetsViewController {
     return newMatrix;
   }
 
-  #renderLanes(matrix) {
+  #renderLanes(matrix, parentNode) {
     const lanes = [];
 
     matrix.forEach(laneData => {
@@ -263,6 +310,8 @@ class TopPageTilingDatasetsViewController {
 
       laneData.forEach(ds => {
         const card = new DatasetCard(ds, {
+          showLink: true,
+          linkBaseUrl: ".",
           showDescription: true,
           showFallbackDescription: true,
           customClasses: [],
@@ -274,7 +323,7 @@ class TopPageTilingDatasetsViewController {
         lane.appendChild(el);
       });
 
-      this.#container.appendChild(lane);
+      parentNode.appendChild(lane);
       lanes.push(lane);
     });
     return lanes;
