@@ -12,6 +12,7 @@ class TopPageTilingDatasetsViewController {
   #datasetLoader;
   #direction = 'vertical'; // 'vertical' | 'horizontal'
   #abortController = null;
+  #currentLaneDatasets = []; // Store current grid data for state handover
 
   constructor() {
     this.#container = document.querySelector(
@@ -41,15 +42,33 @@ class TopPageTilingDatasetsViewController {
     this.#abortController = new AbortController();
     const signal = this.#abortController.signal;
 
+    const oldDirection = this.#direction;
+    const oldLaneDatasets = this.#currentLaneDatasets;
+
     // 1. Toggle Direction
     this.#direction = this.#direction === 'vertical' ? 'horizontal' : 'vertical';
     this.#container.setAttribute('data-direction', this.#direction);
     this.#container.innerHTML = '';
 
-    // 2. Render Lanes
-    const lanes = this.#renderLanes();
+    // 2. Prepare Data (Seamless Transition)
+    const nextLaneCount = this.#calculateLaneCount();
+    let nextDatasetsMatrix = [];
 
-    // 3. Animate Lanes
+    if (oldLaneDatasets.length > 0) {
+      // Transpose logic
+      nextDatasetsMatrix = this.#generateTransposedData(oldLaneDatasets, oldDirection, nextLaneCount);
+    } else {
+      // First run: Random generation
+      nextDatasetsMatrix = this.#generateRandomMatrix(nextLaneCount);
+    }
+
+    // Store for next loop
+    this.#currentLaneDatasets = nextDatasetsMatrix;
+
+    // 3. Render Lanes
+    const lanes = this.#renderLanes(nextDatasetsMatrix);
+
+    // 4. Animate Lanes
     this.#animateLanes(lanes, signal).then(() => {
       if (!signal.aborted) {
         this.#startLoop(); // Next loop
@@ -57,32 +76,90 @@ class TopPageTilingDatasetsViewController {
     });
   }
 
-  #renderLanes() {
+  #calculateLaneCount() {
     const isVertical = this.#direction === 'vertical';
     const screenSize = isVertical ? window.innerWidth : window.innerHeight;
-    const laneCount = Math.ceil(screenSize / TopPageTilingDatasetsViewController.TILE_SIZE) + 1;
-    const itemsPerLane = TopPageTilingDatasetsViewController.DATASET_COUNT_PER_LANE;
+    // Add extra lanes to ensure coverage
+    return Math.ceil(screenSize / TopPageTilingDatasetsViewController.TILE_SIZE) + 1;
+  }
 
+  #generateRandomMatrix(laneCount) {
+    const matrix = [];
+    for (let i = 0; i < laneCount; i++) {
+      const lane = [];
+      for (let j = 0; j < TopPageTilingDatasetsViewController.DATASET_COUNT_PER_LANE; j++) {
+        lane.push(this.#getRandomDataset());
+      }
+      matrix.push(lane);
+    }
+    return matrix;
+  }
+
+  #generateTransposedData(oldMatrix, oldDirection, nextLaneCount) {
+    // PREVIOUS state context
+    const isOldVertical = oldDirection === 'vertical';
+    const oldViewportSize = isOldVertical ? window.innerHeight : window.innerWidth;
+
+    // Original calculation was: distance = contentSize - oldViewportSize
+    const contentSize = TopPageTilingDatasetsViewController.DATASET_COUNT_PER_LANE * TopPageTilingDatasetsViewController.TILE_SIZE;
+    const distance = contentSize - oldViewportSize;
+
+    // We snapped the previous animation to this distance:
+    const snappedDistance = Math.floor(distance / TopPageTilingDatasetsViewController.TILE_SIZE) * TopPageTilingDatasetsViewController.TILE_SIZE;
+
+    // Calculate visible start index based on the actua snapped distance
+    // The previous animation moved 'snappedDistance' pixels.
+    // So item[k] is at Y = k*TILE - snappedDistance.
+    // We want the item at Y=0. => k*TILE = snappedDistance => k = snappedDistance / TILE.
+    const startIndex = snappedDistance / TopPageTilingDatasetsViewController.TILE_SIZE;
+
+    const itemsPerLane = TopPageTilingDatasetsViewController.DATASET_COUNT_PER_LANE;
+    const newMatrix = [];
+
+    // Initialize new matrix
+    for (let i = 0; i < nextLaneCount; i++) {
+      newMatrix[i] = [];
+    }
+
+    const oldLaneCount = oldMatrix.length;
+
+    for (let newLaneIdx = 0; newLaneIdx < nextLaneCount; newLaneIdx++) {
+      // corresponding old item index 
+      const oldItemOffset = newLaneIdx;
+      const oldItemIdx = startIndex + oldItemOffset;
+
+      // Try to construct valid transposed data
+      if (oldItemIdx < itemsPerLane) {
+        for (let newColIdx = 0; newColIdx < oldLaneCount; newColIdx++) {
+          if (oldMatrix[newColIdx] && oldMatrix[newColIdx][oldItemIdx]) {
+            newMatrix[newLaneIdx].push(oldMatrix[newColIdx][oldItemIdx]);
+          } else {
+            newMatrix[newLaneIdx].push(this.#getRandomDataset());
+          }
+        }
+      }
+
+      while (newMatrix[newLaneIdx].length < itemsPerLane) {
+        newMatrix[newLaneIdx].push(this.#getRandomDataset());
+      }
+    }
+
+    return newMatrix;
+  }
+
+  #renderLanes(matrix) {
     const lanes = [];
 
-    for (let i = 0; i < laneCount; i++) {
+    matrix.forEach(laneData => {
       const lane = document.createElement('div');
       lane.className = 'lane';
 
-      // Generate random datasets for this lane
-      const laneDatasets = [];
-      for (let j = 0; j < itemsPerLane; j++) {
-        laneDatasets.push(this.#getRandomDataset());
-      }
-
-      // Create tiles
-      laneDatasets.forEach(ds => {
+      laneData.forEach(ds => {
         const card = new DatasetCard(ds, {
           showDescription: true,
           showFallbackDescription: true,
           customClasses: [],
         });
-        // Override style for relative positioning in flow
         const el = card.getElement();
         el.style.position = '';
         el.style.left = '';
@@ -92,7 +169,7 @@ class TopPageTilingDatasetsViewController {
 
       this.#container.appendChild(lane);
       lanes.push(lane);
-    }
+    });
     return lanes;
   }
 
@@ -102,28 +179,23 @@ class TopPageTilingDatasetsViewController {
 
   async #animateLanes(lanes, signal) {
     const isVertical = this.#direction === 'vertical';
-    // Calculate scroll distance
-    // Since we don't wait for layout, we approximate or measure
-    // But better to measure first lane? Or just use approximate: 30 items * 320px
     const contentSize = TopPageTilingDatasetsViewController.DATASET_COUNT_PER_LANE * 320;
     const viewportSize = isVertical ? window.innerHeight : window.innerWidth;
     const distance = contentSize - viewportSize;
 
-    // Base duration for "Slow-Fast-Slow" requires roughly 20-30s total? 
-    // User requested: Slow start -> Fast -> Slow end.
-    // Let's use 20s base.
     const baseDuration = 30000;
 
     const animations = lanes.map((lane, index) => {
       // Random delay for Matrix effect
-      const delay = Math.random() * 4000; // 0-4s stagger
-      const duration = baseDuration + (Math.random() * 5000); // vary duration slightly
+      const delay = Math.random() * 4000;
+      const duration = baseDuration + (Math.random() * 5000);
+
+      // Snap distance to grid to ensure seamless handover
+      const snappedDistance = Math.floor(distance / TopPageTilingDatasetsViewController.TILE_SIZE) * TopPageTilingDatasetsViewController.TILE_SIZE;
 
       const axis = isVertical ? 'Y' : 'X';
       const start = `translate${axis}(0)`;
-      const end = `translate${axis}(${-distance}px)`; // Scroll to end
-      // Or move completely out? if flow: maybe translate(-contentSize)
-      // "Scroll through"
+      const end = `translate${axis}(${-snappedDistance}px)`;
 
       const keyframes = [
         { transform: start },
@@ -133,7 +205,7 @@ class TopPageTilingDatasetsViewController {
       return lane.animate(keyframes, {
         duration: duration,
         delay: delay,
-        easing: 'cubic-bezier(0.4, 0.0, 0.2, 1)', // Ease-in-out
+        easing: 'cubic-bezier(0.4, 0.0, 0.2, 1)',
         fill: 'forwards'
       }).finished;
     });
