@@ -39,7 +39,7 @@
     - id: rdf_config
       title: "RDF config"
       url: "/documents/rdf_config/"
-- id: news
+- id: announcements
   title: "Announcements"
   url: "/announcements/"
 - id: logs
