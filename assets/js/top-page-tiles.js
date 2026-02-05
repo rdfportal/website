@@ -63,18 +63,22 @@ class TopPageTilingDatasetsViewController {
     // Global Drift Calculation
     const now = performance.now();
     const elapsed = now - this.#startTime;
-    const totalDriftPx = elapsed * TopPageTilingDatasetsViewController.DRIFT_SPEED;
+    // Calculate Grid Shift (how many tiles we have moved)
+    // Drift is Up-Left (-X, -Y) [Visual: Bottom-Right Scroll]
+    // We invert the drift direction by multiplying by -1
+    const totalDriftPx = elapsed * TopPageTilingDatasetsViewController.DRIFT_SPEED * -1;
 
     // Calculate Grid Shift (how many tiles we have moved)
-    // Drift is Right-Down (+X, +Y)
     const gridShiftCount = Math.floor(totalDriftPx / TopPageTilingDatasetsViewController.TILE_SIZE);
 
     // Calculate Modulo Drift (remainder for visual transform)
+    // This will be in range (-320..0]
     const driftMod = totalDriftPx % TopPageTilingDatasetsViewController.TILE_SIZE;
 
-    // Base Visual Offset: Shift back by 2 tiles to cover the top-left gap created by drift
-    // This allows "Lane 0, 1" (which are newly generated) to be visible at the top-left approach.
-    const baseOffset = -TopPageTilingDatasetsViewController.TILE_SIZE * 2;
+    // Base Visual Offset: 0
+    // Since we are moving Up-Left, we don't need a buffer at the Top-Left.
+    // The buffer is needed at the Bottom-Right which is covered by extra lanes.
+    const baseOffset = 0;
 
     // Current Global Shift
     const currentGridShift = { x: gridShiftCount, y: gridShiftCount };
@@ -116,12 +120,13 @@ class TopPageTilingDatasetsViewController {
     if (!signal.aborted) {
       // Start Container Drift Animation
       // It should continue indefinitely until next loop resets it.
-      // We animate from current driftMod to driftMod + (MAX_DURATION * SPEED)
-      // Including the Base Offset (-TILE_SIZE).
+      // We animate from current driftMod to driftMod - (MAX_DURATION * SPEED) (Moving further negative)
+      // Including the Base Offset (0).
       const maxDuration = 20000; // Enough time for 4s wait + 6.5s animation
 
       const startPos = driftMod + baseOffset;
-      const targetDrift = startPos + (maxDuration * TopPageTilingDatasetsViewController.DRIFT_SPEED);
+      // Note: DRIFT_SPEED is positive magnitude (0.01), so we subtract it for Up-Left movement
+      const targetDrift = startPos - (maxDuration * TopPageTilingDatasetsViewController.DRIFT_SPEED);
 
       const driftKeyframes = [
         { transform: `translate(${startPos}px, ${startPos}px)` },
