@@ -66,7 +66,7 @@ class TopPageTilingDatasetsViewController {
     // Calculate Grid Shift (how many tiles we have moved)
     // Drift is Up-Left (-X, -Y) [Visual: Bottom-Right Scroll]
     // We invert the drift direction by multiplying by -1
-    const totalDriftPx = elapsed * TopPageTilingDatasetsViewController.DRIFT_SPEED * -1;
+    const totalDriftPx = elapsed * TopPageTilingDatasetsViewController.DRIFT_SPEED;
 
     // Calculate Grid Shift (how many tiles we have moved)
     const gridShiftCount = Math.floor(totalDriftPx / TopPageTilingDatasetsViewController.TILE_SIZE);
@@ -78,7 +78,7 @@ class TopPageTilingDatasetsViewController {
     // Base Visual Offset: 0
     // Since we are moving Up-Left, we don't need a buffer at the Top-Left.
     // The buffer is needed at the Bottom-Right which is covered by extra lanes.
-    const baseOffset = 0;
+    const baseOffset = -TopPageTilingDatasetsViewController.TILE_SIZE * 2;
 
     // Current Global Shift
     const currentGridShift = { x: gridShiftCount, y: gridShiftCount };
@@ -120,13 +120,12 @@ class TopPageTilingDatasetsViewController {
     if (!signal.aborted) {
       // Start Container Drift Animation
       // It should continue indefinitely until next loop resets it.
-      // We animate from current driftMod to driftMod - (MAX_DURATION * SPEED) (Moving further negative)
-      // Including the Base Offset (0).
+      // We animate from current driftMod to driftMod + (MAX_DURATION * SPEED)
+      // Including the Base Offset (-TILE_SIZE).
       const maxDuration = 20000; // Enough time for 4s wait + 6.5s animation
 
       const startPos = driftMod + baseOffset;
-      // Note: DRIFT_SPEED is positive magnitude (0.01), so we subtract it for Up-Left movement
-      const targetDrift = startPos - (maxDuration * TopPageTilingDatasetsViewController.DRIFT_SPEED);
+      const targetDrift = startPos + (maxDuration * TopPageTilingDatasetsViewController.DRIFT_SPEED);
 
       const driftKeyframes = [
         { transform: `translate(${startPos}px, ${startPos}px)` },
@@ -201,10 +200,14 @@ class TopPageTilingDatasetsViewController {
     for (let newLaneIdx = 0; newLaneIdx < nextLaneCount; newLaneIdx++) {
       // corresponding old item index 
       const oldItemOffset = newLaneIdx;
-      const oldItemIdx = startIndex + oldItemOffset;
+      // Invert Logic: We are scrolling "backwards" (Down/Right), so we look behind.
+      // OldItemIdx = NewLaneIdx - StartIndex
+      const oldItemIdx = oldItemOffset - startIndex;
 
       // Try to construct valid transposed data
-      if (oldItemIdx < itemsPerLane) {
+      // Note: Since we subtract, oldItemIdx can be negative (new top-left content).
+      // If negative, we fall through to random generation (fresh content).
+      if (oldItemIdx >= 0 && oldItemIdx < itemsPerLane) {
         for (let newColIdx = 0; newColIdx < oldLaneCount; newColIdx++) {
           // Adjust lookup based on Delta Shift
           // If Previous was Vertical: OldLane=Col(X), OldItem=Idx(Y).
@@ -299,8 +302,9 @@ class TopPageTilingDatasetsViewController {
       const snappedDistance = Math.floor(distance / TopPageTilingDatasetsViewController.TILE_SIZE) * TopPageTilingDatasetsViewController.TILE_SIZE;
 
       const axis = isVertical ? 'Y' : 'X';
-      const start = `translate${axis}(0)`;
-      const end = `translate${axis}(${-snappedDistance}px)`;
+      // Invert Animation: Start from -Dist (Visual Top/Left) -> Move to 0 (Visual Down/Right)
+      const start = `translate${axis}(${-snappedDistance}px)`;
+      const end = `translate${axis}(0)`;
 
       const keyframes = [
         { transform: start },
