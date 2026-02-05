@@ -13,7 +13,7 @@
     left: 0
     width: 100vw
     height: 100vh
-    overflow: hidden
+    // overflow: hidden // Removed to allow negative offset content to be visible
     display: flex
     // justify-content: center // Removed to prevent coordinate shift on axis toggle
 
@@ -23,14 +23,14 @@
       .lane
         flex-direction: column
         width: 320px
-        height: 120% // Slightly taller to allow offset start
+        // height: 120% // Removed to allow full content flow
 
     // Horizontal Mode (Rows)
     &[data-direction="horizontal"]
       flex-direction: column
       .lane
         flex-direction: row
-        width: 120% // Slightly wider to allow offset start
+        // width: 120% // Removed to allow full content flow
         height: 320px
 
     .lane

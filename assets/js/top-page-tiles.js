@@ -5,7 +5,9 @@
 class TopPageTilingDatasetsViewController {
   static TILE_SIZE = 320; // Expanded to include margin
   static CONTAINER_SELECTOR = "#TopPageTilingDatasetsView > .container";
-  static DATASET_COUNT_PER_LANE = 30;
+  static DATASET_COUNT_PER_LANE = 36;
+  static SCROLL_BUFFER_TILES = 6;
+  static DRIFT_SPEED = 0.01; // 10px/s = 0.01px/ms
 
   #container;
   #datasets = [];
@@ -14,11 +16,18 @@ class TopPageTilingDatasetsViewController {
   #abortController = null;
   #currentLaneDatasets = []; // Store current grid data for state handover
 
+  // Custom scrolling state
+  #startTime = null;
+  #lastGridShift = { x: 0, y: 0 };
+
   constructor() {
     this.#container = document.querySelector(
       TopPageTilingDatasetsViewController.CONTAINER_SELECTOR
     );
     this.#datasetLoader = DatasetsManager.getInstance();
+
+    // Initialize start time (will be reset on first init if needed, or now)
+    this.#startTime = performance.now();
 
     if (this.#container) {
       this.#init();
@@ -51,16 +60,51 @@ class TopPageTilingDatasetsViewController {
     this.#container.innerHTML = '';
 
     // 2. Prepare Data (Seamless Transition)
+    // Global Drift Calculation
+    const now = performance.now();
+    const elapsed = now - this.#startTime;
+    const totalDriftPx = elapsed * TopPageTilingDatasetsViewController.DRIFT_SPEED;
+
+    // Calculate Grid Shift (how many tiles we have moved)
+    // Drift is Right-Down (+X, +Y)
+    const gridShiftCount = Math.floor(totalDriftPx / TopPageTilingDatasetsViewController.TILE_SIZE);
+
+    // Calculate Modulo Drift (remainder for visual transform)
+    const driftMod = totalDriftPx % TopPageTilingDatasetsViewController.TILE_SIZE;
+
+    // Base Visual Offset: Shift back by 2 tiles to cover the top-left gap created by drift
+    // This allows "Lane 0, 1" (which are newly generated) to be visible at the top-left approach.
+    const baseOffset = -TopPageTilingDatasetsViewController.TILE_SIZE * 2;
+
+    // Current Global Shift
+    const currentGridShift = { x: gridShiftCount, y: gridShiftCount };
+
+    // Delta Shift since last loop (to adjust data lookup)
+    const deltaShift = {
+      x: currentGridShift.x - this.#lastGridShift.x,
+      y: currentGridShift.y - this.#lastGridShift.y
+    };
+
+    // Save for next loop
+    this.#lastGridShift = currentGridShift;
+
+    // Apply base visual offset to container (reset position)
+    // Visual = Mod + BaseOffset (-320..0).
+    const startPos = driftMod + baseOffset;
+    this.#container.style.transform = `translate(${startPos}px, ${startPos}px)`;
+
     const nextLaneCount = this.#calculateLaneCount();
     let nextDatasetsMatrix = [];
 
     if (oldLaneDatasets.length > 0) {
-      // Transpose logic
-      nextDatasetsMatrix = this.#generateTransposedData(oldLaneDatasets, oldDirection, nextLaneCount);
+      // Transpose logic with Drift Adjustment
+      nextDatasetsMatrix = this.#generateTransposedData(oldLaneDatasets, oldDirection, nextLaneCount, deltaShift);
     } else {
       // First run: Random generation
       nextDatasetsMatrix = this.#generateRandomMatrix(nextLaneCount);
     }
+
+    // ... code continues ...
 
     // Store for next loop
     this.#currentLaneDatasets = nextDatasetsMatrix;
@@ -70,6 +114,25 @@ class TopPageTilingDatasetsViewController {
 
     // 4. Animate Lanes
     if (!signal.aborted) {
+      // Start Container Drift Animation
+      // It should continue indefinitely until next loop resets it.
+      // We animate from current driftMod to driftMod + (MAX_DURATION * SPEED)
+      // Including the Base Offset (-TILE_SIZE).
+      const maxDuration = 20000; // Enough time for 4s wait + 6.5s animation
+
+      const startPos = driftMod + baseOffset;
+      const targetDrift = startPos + (maxDuration * TopPageTilingDatasetsViewController.DRIFT_SPEED);
+
+      const driftKeyframes = [
+        { transform: `translate(${startPos}px, ${startPos}px)` },
+        { transform: `translate(${targetDrift}px, ${targetDrift}px)` }
+      ];
+
+      this.#container.animate(driftKeyframes, {
+        duration: maxDuration,
+        fill: 'forwards'
+      });
+
       await new Promise(resolve => setTimeout(resolve, 4000)); // Pause 4s
     }
     if (signal.aborted) return;
@@ -84,8 +147,9 @@ class TopPageTilingDatasetsViewController {
   #calculateLaneCount() {
     const isVertical = this.#direction === 'vertical';
     const screenSize = isVertical ? window.innerWidth : window.innerHeight;
-    // Add extra lanes to ensure coverage
-    return Math.ceil(screenSize / TopPageTilingDatasetsViewController.TILE_SIZE) + 1;
+    // Add extra lanes to ensure coverage (Base covering + Drift Gap Filling)
+    // +4 ensures we have content for the offset (-640px) and the far edge.
+    return Math.ceil(screenSize / TopPageTilingDatasetsViewController.TILE_SIZE) + 4;
   }
 
   #generateRandomMatrix(laneCount) {
@@ -100,13 +164,14 @@ class TopPageTilingDatasetsViewController {
     return matrix;
   }
 
-  #generateTransposedData(oldMatrix, oldDirection, nextLaneCount) {
+  #generateTransposedData(oldMatrix, oldDirection, nextLaneCount, deltaShift) {
     // PREVIOUS state context
     const isOldVertical = oldDirection === 'vertical';
     const oldViewportSize = isOldVertical ? window.innerHeight : window.innerWidth;
 
     // Original calculation was: distance = contentSize - oldViewportSize
-    const contentSize = TopPageTilingDatasetsViewController.DATASET_COUNT_PER_LANE * TopPageTilingDatasetsViewController.TILE_SIZE;
+    const contentCount = TopPageTilingDatasetsViewController.DATASET_COUNT_PER_LANE - TopPageTilingDatasetsViewController.SCROLL_BUFFER_TILES;
+    const contentSize = contentCount * TopPageTilingDatasetsViewController.TILE_SIZE;
     const distance = contentSize - oldViewportSize;
 
     // We snapped the previous animation to this distance:
@@ -136,8 +201,37 @@ class TopPageTilingDatasetsViewController {
       // Try to construct valid transposed data
       if (oldItemIdx < itemsPerLane) {
         for (let newColIdx = 0; newColIdx < oldLaneCount; newColIdx++) {
-          if (oldMatrix[newColIdx] && oldMatrix[newColIdx][oldItemIdx]) {
-            newMatrix[newLaneIdx].push(oldMatrix[newColIdx][oldItemIdx]);
+          // Adjust lookup based on Delta Shift
+          // If Previous was Vertical: OldLane=Col(X), OldItem=Idx(Y).
+          // If Previous was Horizontal: OldLane=Col(Y), OldItem=Idx(X).
+
+          let targetOldLaneIdx = newColIdx;
+          let targetOldItemIdx = oldItemIdx;
+
+          if (isOldVertical) {
+            // Old: Lanes are X, Items are Y.
+            // Drift is (+X, +Y) mapping to (+Lane, +Item).
+            // Since the world shifted by Delta, the data we want (at visual position 0)
+            // is essentially "behind" the drift.
+            // VisualPosition = GridIndex * TILE + DriftOffset.
+            // We want the item that WAS at this visual position.
+            // NewGridIndex = 0.
+            // OldGridIndex = NewGridIndex - Delta.
+            targetOldLaneIdx = newColIdx - deltaShift.x;
+            targetOldItemIdx = oldItemIdx - deltaShift.y;
+          } else {
+            // Old: Lanes are Y, Items are X.
+            // Drift is (+X, +Y) mapping to (+Item, +Lane).
+            targetOldLaneIdx = newColIdx - deltaShift.y;
+            targetOldItemIdx = oldItemIdx - deltaShift.x;
+          }
+
+          if (
+            targetOldLaneIdx >= 0 && targetOldLaneIdx < oldLaneCount &&
+            oldMatrix[targetOldLaneIdx] &&
+            oldMatrix[targetOldLaneIdx][Math.floor(targetOldItemIdx)] // Snap item idx
+          ) {
+            newMatrix[newLaneIdx].push(oldMatrix[targetOldLaneIdx][Math.floor(targetOldItemIdx)]);
           } else {
             newMatrix[newLaneIdx].push(this.#getRandomDataset());
           }
@@ -184,7 +278,8 @@ class TopPageTilingDatasetsViewController {
 
   async #animateLanes(lanes, signal) {
     const isVertical = this.#direction === 'vertical';
-    const contentSize = TopPageTilingDatasetsViewController.DATASET_COUNT_PER_LANE * 320;
+    const contentCount = TopPageTilingDatasetsViewController.DATASET_COUNT_PER_LANE - TopPageTilingDatasetsViewController.SCROLL_BUFFER_TILES;
+    const contentSize = contentCount * TopPageTilingDatasetsViewController.TILE_SIZE;
     const viewportSize = isVertical ? window.innerHeight : window.innerWidth;
     const distance = contentSize - viewportSize;
 
