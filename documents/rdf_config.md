@@ -17,7 +17,7 @@ permalink_lang:
 {% lang 'en' %}
 ### Introduction: The Role of rdf-config in RDF Portal
 
-RDF Portal is a service operated by the Database Center for Life Science (DBCLS) that aggregates and provides RDF datasets developed by a wide range of research organizations, primarily in the life sciences. These datasets have been created with diverse objectives, modeling choices, and design philosophies, reflecting the assumptions and intentions of their original developers.
+RDF Portal is a service operated by the **[Database Center for Life Science](https://dbcls.rois.ac.jp/)** (DBCLS) that aggregates and provides RDF datasets developed by a wide range of research organizations, primarily in the life sciences. These datasets have been created with diverse objectives, modeling choices, and design philosophies, reflecting the assumptions and intentions of their original developers.
 
 While RDF provides a flexible and expressive framework for publishing data, this flexibility also makes it difficult to understand how individual datasets are structured and how they are intended to be used. Even when ontologies are available, they do not always convey which graph patterns represent meaningful units of data or how entities are typically connected. As a result, both human users and software tools are often required to infer dataset structure through trial and error.
 
@@ -72,11 +72,11 @@ By treating structure as a first-class resource, RDF-config underpins both curre
 {% lang 'ja' %}
 ### はじめに
 
-RDF Portalは、ライフサイエンス分野を中心に、幅広い研究機関によって開発された RDF データセットを集約・提供する、Database Center for Life Science（DBCLS）が運営するサービスである。これらのデータセットは、多様な目的、モデリング上の選択、設計思想に基づいて作成されており、それぞれの元の開発者が持っていた前提や意図を反映している。
+RDF Portalは、ライフサイエンス分野を中心に、幅広い研究機関によって開発された RDF データセットを集約・提供する、**[Database Center for Life Science](https://dbcls.rois.ac.jp/)**（DBCLS）が運営するサービスである。これらのデータセットは、多様な目的、モデリング上の選択、設計思想に基づいて作成されており、それぞれの元の開発者が持っていた前提や意図を反映している。
 
 RDF は、データ公開のための柔軟で表現力の高い枠組みを提供する一方で、その柔軟性ゆえに、個々のデータセットがどのような構造を持ち、どのように利用されることを意図しているのかを理解することを難しくしている。たとえオントロジーが提供されていたとしても、どのようなグラフパターンが意味のあるデータ単位を表しているのか、エンティティ同士が通常どのように結び付けられているのかが、必ずしも伝わるとは限らない。その結果、人間の利用者もソフトウェアツールも、試行錯誤を通じてデータセット構造を推測せざるを得ない場合が多い。
 
-RDF-config は、この課題に対処するために RDF Portal に導入されたものであり、RDF データセットの構造を明示的かつ機械可読な形で記述する手段を提供する。完全に形式化された仕様を目指すのではなく、RDF-config は、RDF データがどのように組織化されているかを、実用的かつ保守しやすい形で記述することに焦点を当てている。本ドキュメントでは、RDF-config が導入された背景、その RDF Portal における役割、そしてプラットフォーム全体にわたって RDF データの一貫した利用と再利用をどのように支えているのかを説明する。
+**[RDF-config](https://github.com/dbcls/rdf-config)** は、この課題に対処するために RDF Portal に導入されたものであり、RDF データセットの構造を明示的かつ機械可読な形で記述する手段を提供する。完全に形式化された仕様を目指すのではなく、RDF-config は、RDF データがどのように組織化されているかを、実用的かつ保守しやすい形で記述することに焦点を当てている。本ドキュメントでは、RDF-config が導入された背景、その RDF Portal における役割、そしてプラットフォーム全体にわたって RDF データの一貫した利用と再利用をどのように支えているのかを説明する。
 
 ### RDF-config とは
 
@@ -100,9 +100,9 @@ RDF Portal は、多くの独立した研究機関によって開発された RD
 
 実際の運用において、RDF-config のメタデータは、RDF Portal が提供するいくつかの中核的サービスを支えるために利用されている。たとえば、RDF-config モデルは、RDF データセットの構造を可視化するスキーマ図を自動生成するために用いられている。これらの図は、基盤となる RDF を直接確認しなくても、エンティティがどのように構成され、どのように関連付けられているのかを、利用者が迅速に把握する助けとなる。
 
-また、RDF-config は、SPARQL エンドポイントを GraphQL エンドポイントとして提供するためのブリッジソフトウェアである Grasp の設定ファイルを生成する用途にも利用されている。RDF-config モデルから [Grasp](https://github.com/dbcls/grasp) の設定を導出することで、RDF Portal は、データセットごとに手作業で設定を作成することなく、一貫性と保守性を保った形で RDF データセットを GraphQL インタフェースとして公開できる。
+また、RDF-config は、SPARQL エンドポイントを GraphQL エンドポイントとして提供するためのブリッジソフトウェアである Grasp の設定ファイルを生成する用途にも利用されている。RDF-config モデルから **[Grasp](https://github.com/dbcls/grasp)** の設定を導出することで、RDF Portal は、データセットごとに手作業で設定を作成することなく、一貫性と保守性を保った形で RDF データセットを GraphQL インタフェースとして公開できる。
 
-さらに、RDF-config のメタデータは、SPARQL クエリを対話的に生成するためのインタフェースである [SPARQL composer](https://rdfportal.org/composer/)によっても活用されている。明示的な構造記述に基づくことで、利用者がデータセットの内部構造に詳しくなくても、意味のある妥当なクエリを構築できるよう支援する。
+さらに、RDF-config のメタデータは、SPARQL クエリを対話的に生成するためのインタフェースである **[SPARQL composer](https://rdfportal.org/composer/)**によっても活用されている。明示的な構造記述に基づくことで、利用者がデータセットの内部構造に詳しくなくても、意味のある妥当なクエリを構築できるよう支援する。
 
 これらの利用を通じて、RDF-config は、異種混在のデータセットを単一の硬直したスキーマに押し込めることなく、RDF Portal がそれらを整合的に扱うことを可能にしている。その結果として得られるのは、多様性と一貫性のバランスである。各データセットは独自のモデリング上の選択を保持しつつ、ポータルは理解と再利用のための統一的な構造フレームワークを提供する。
 
@@ -116,7 +116,7 @@ RDF-config は、構造的知識を明示的かつ発見可能なものにする
 
 RDF Portal において、この能力は幅広い自動処理を支えている。具体的には、データセットの構造を考慮したユーザインタフェースの生成、データセット構造に基づいてガイドされる SPARQL クエリの構築、そしてデータセット間で一貫性のある形でのデータ変換やエクスポートなどが含まれる。RDF-config モデルは共通のパターンに従っているため、同一のツールを最小限の調整で多数のデータセットに適用できる。
 
-この構造的基盤は、RDF Portal が外部サービスや知的エージェントと接続される際に、さらに重要性を増す。その一例が、標準化されたインタフェースを通じて大規模言語モデルやその他の AI システムが RDF Portal と対話できるようにする [TogoMCP](https://togomcp.rdfportal.org/) である。この文脈において、RDF-config は、AI システムが推測のみに頼るのではなく、明示的なデータセットモデルに基づいて対話を行えるようにする、信頼性の高い構造ガイダンスを提供する。
+この構造的基盤は、RDF Portal が外部サービスや知的エージェントと接続される際に、さらに重要性を増す。その一例が、標準化されたインタフェースを通じて大規模言語モデルやその他の AI システムが RDF Portal と対話できるようにする **[TogoMCP](https://togomcp.rdfportal.org/)** である。この文脈において、RDF-config は、AI システムが推測のみに頼るのではなく、明示的なデータセットモデルに基づいて対話を行えるようにする、信頼性の高い構造ガイダンスを提供する。
 
 AI システムは強力である一方、曖昧さに対しては敏感である。明示的な構造情報がなければ、AI による RDF データとの対話は非効率になったり、誤りを生じやすくなったりする。RDF-config は、データセット構造を明確に記述することでこのリスクを軽減し、AI ベースのツールによる RDF データ利用を、より安定的で予測可能なものにする。
 
