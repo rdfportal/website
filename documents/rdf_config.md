@@ -21,7 +21,7 @@ RDF Portal is a service operated by the Database Center for Life Science (DBCLS)
 
 While RDF provides a flexible and expressive framework for publishing data, this flexibility also makes it difficult to understand how individual datasets are structured and how they are intended to be used. Even when ontologies are available, they do not always convey which graph patterns represent meaningful units of data or how entities are typically connected. As a result, both human users and software tools are often required to infer dataset structure through trial and error.
 
-[RDF-config](https://github.com/dbcls/rdf-config) was introduced in RDF Portal to address this challenge by providing explicit, machine-readable descriptions of RDF dataset structure. Rather than aiming for a complete formal specification, rdf-config focuses on offering a practical and maintainable way to describe how RDF data is organized. This document explains the motivation behind rdf-config, its role within RDF Portal, and how it supports consistent use and reuse of RDF data across the platform.
+**[RDF-config](https://github.com/dbcls/rdf-config)** was introduced in RDF Portal to address this challenge by providing explicit, machine-readable descriptions of RDF dataset structure. Rather than aiming for a complete formal specification, rdf-config focuses on offering a practical and maintainable way to describe how RDF data is organized. This document explains the motivation behind rdf-config, its role within RDF Portal, and how it supports consistent use and reuse of RDF data across the platform.
 
 ### What Is RDF-config?
 
@@ -45,9 +45,9 @@ By maintaining RDF-config models for each dataset, RDF Portal is able to associa
 
 In practice, RDF-config metadata is used to support several core services provided by RDF Portal. For example, rdf-config models are used to automatically generate schema diagrams that visualize the structure of RDF datasets. These diagrams help users quickly grasp how entities are organized and related, without requiring them to inspect the underlying RDF directly.
 
-RDF-config is also used to generate configuration files for [Grasp](https://github.com/dbcls/grasp), a bridge software that provides a GraphQL endpoint wrapping SPARQL endpoints. By deriving Grasp configuration from rdf-config models, RDF Portal can expose RDF datasets through a GraphQL interface in a consistent and maintainable way, without manually crafting dataset-specific settings.
+RDF-config is also used to generate configuration files for **[Grasp](https://github.com/dbcls/grasp)**, a bridge software that provides a GraphQL endpoint wrapping SPARQL endpoints. By deriving Grasp configuration from rdf-config models, RDF Portal can expose RDF datasets through a GraphQL interface in a consistent and maintainable way, without manually crafting dataset-specific settings.
 
-In addition, RDF-config metadata is utilized by the [SPARQL composer](https://rdfportal.org/composer/), an interface for interactively generating SPARQL queries. By relying on explicit structural descriptions, the composer can guide users in constructing valid and meaningful queries, even when they are unfamiliar with the internal structure of a dataset.
+In addition, RDF-config metadata is utilized by the **[SPARQL composer](https://rdfportal.org/composer/)**, an interface for interactively generating SPARQL queries. By relying on explicit structural descriptions, the composer can guide users in constructing valid and meaningful queries, even when they are unfamiliar with the internal structure of a dataset.
 
 Through these uses, rdf-config enables RDF Portal to treat heterogeneous datasets in a coherent way, without forcing them into a single rigid schema. The result is a balance between diversity and consistency: datasets retain their individual modeling choices, while the portal provides a unified structural framework for understanding and reuse.
 
@@ -61,7 +61,7 @@ RDF-config addresses this limitation by making structural knowledge explicit and
 
 Within RDF Portal, this capability supports a wide range of automated processes. These include the generation of dataset-aware user interfaces, the construction of SPARQL queries guided by dataset structure, and the transformation or export of data in a consistent manner across datasets. Because RDF-config models follow a common pattern, the same tools can be applied to many datasets with minimal adjustment.
 
-This structural foundation becomes even more important when RDF Portal is connected to external services and intelligent agents. One such service is [TogoMCP](https://togomcp.rdfportal.org/), which enables large language models and other AI systems to interact with RDF Portal through a standardized interface. In this context, RDF-config provides reliable structural guidance that allows AI systems to ground their interactions in explicit dataset models rather than relying solely on inference.
+This structural foundation becomes even more important when RDF Portal is connected to external services and intelligent agents. One such service is **[TogoMCP](https://togomcp.rdfportal.org/)**, which enables large language models and other AI systems to interact with RDF Portal through a standardized interface. In this context, RDF-config provides reliable structural guidance that allows AI systems to ground their interactions in explicit dataset models rather than relying solely on inference.
 
 AI systems are powerful but sensitive to ambiguity. Without explicit structural information, AI-driven interaction with RDF data can become inefficient or error-prone. By providing clear descriptions of dataset structure, RDF-config helps mitigate this risk and supports more stable and predictable use of RDF data by AI-based tools.
 
