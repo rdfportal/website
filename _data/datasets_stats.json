@@ -741,7 +741,7 @@
       "number_of_subjects": 715849799,
       "number_of_objects": 155732700
     },
-    "updated_at": "2025-01-07"
+    "updated_at": "2026-02-06"
   },
   {
     "endpoint": "sib",
@@ -753,31 +753,31 @@
       "number_of_subjects": 137419193,
       "number_of_objects": 334832200
     },
-    "updated_at": "2025-01-07"
+    "updated_at": "2026-02-06"
   },
   {
     "endpoint": "sib",
     "dataset": "rhea",
     "statistics": {
-      "number_of_triples": 1644438,
-      "number_of_classes": 1,
-      "number_of_properties": 3,
-      "number_of_subjects": 199147,
-      "number_of_objects": 564798
+      "number_of_triples": 1962186,
+      "number_of_classes": 2,
+      "number_of_properties": 59,
+      "number_of_subjects": 211004,
+      "number_of_objects": 596057
     },
-    "updated_at": "2025-01-07"
+    "updated_at": "2026-02-06"
   },
   {
     "endpoint": "sib",
     "dataset": "uniprot",
     "statistics": {
-      "number_of_triples": 55795538938,
+      "number_of_triples": 51354759693,
       "number_of_classes": 153,
       "number_of_properties": 180,
-      "number_of_subjects": 11672847371,
-      "number_of_objects": 10537609371
+      "number_of_subjects": 10797037882,
+      "number_of_objects": 9751373632
     },
-    "updated_at": "2025-01-07"
+    "updated_at": "2026-02-06"
   },
   {
     "endpoint": "wikidata",
