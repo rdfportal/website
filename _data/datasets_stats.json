@@ -243,25 +243,25 @@
     "endpoint": "pdb",
     "dataset": "bmrb",
     "statistics": {
-      "number_of_triples": 644042169,
-      "number_of_classes": 415,
-      "number_of_properties": 2650,
-      "number_of_subjects": 36007413,
-      "number_of_objects": 38211547
+      "number_of_triples": 658230916,
+      "number_of_classes": 419,
+      "number_of_properties": 2695,
+      "number_of_subjects": 36916894,
+      "number_of_objects": 39110387
     },
-    "updated_at": "2023-10-23"
+    "updated_at": "2026-02-19"
   },
   {
     "endpoint": "pdb",
     "dataset": "pdb",
     "statistics": {
-      "number_of_triples": 25797685749,
-      "number_of_classes": 990,
-      "number_of_properties": 5961,
-      "number_of_subjects": 1815446257,
-      "number_of_objects": 1844202728
+      "number_of_triples": 22629808213,
+      "number_of_classes": 647,
+      "number_of_properties": 3823,
+      "number_of_subjects": 1620257202,
+      "number_of_objects": 1661864455
     },
-    "updated_at": "2023-10-23"
+    "updated_at": "2026-02-19"
   },
   {
     "endpoint": "primary",
