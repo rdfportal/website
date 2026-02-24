@@ -33,7 +33,7 @@
       "number_of_subjects": 2903832,
       "number_of_objects": 2706032
     },
-    "updated_at": "2025-12-26"
+    "updated_at": "2026-02-24"
   },
   {
     "endpoint": "ebi",
@@ -45,7 +45,7 @@
       "number_of_subjects": 8021388,
       "number_of_objects": 8557647
     },
-    "updated_at": "2025-12-26"
+    "updated_at": "2026-02-24"
   },
   {
     "endpoint": "ebi",
@@ -57,7 +57,7 @@
       "number_of_subjects": 13204740,
       "number_of_objects": 96750327
     },
-    "updated_at": "2025-12-26"
+    "updated_at": "2026-02-24"
   },
   {
     "endpoint": "ebi",
@@ -69,31 +69,31 @@
       "number_of_subjects": 916983,
       "number_of_objects": 2179105
     },
-    "updated_at": "2025-12-26"
+    "updated_at": "2026-02-24"
   },
   {
     "endpoint": "ebi",
     "dataset": "chembl",
     "statistics": {
-      "number_of_triples": 698424083,
-      "number_of_classes": 108,
+      "number_of_triples": 740029339,
+      "number_of_classes": 105,
       "number_of_properties": 125,
-      "number_of_subjects": 85805643,
-      "number_of_objects": 186916894
+      "number_of_subjects": 83960714,
+      "number_of_objects": 185509730
     },
-    "updated_at": "2025-12-26"
+    "updated_at": "2026-02-24"
   },
   {
     "endpoint": "ebi",
     "dataset": "ensembl",
     "statistics": {
-      "number_of_triples": 3462503229,
-      "number_of_classes": 86,
+      "number_of_triples": 18523657272,
+      "number_of_classes": 95,
       "number_of_properties": 33,
-      "number_of_subjects": 706549421,
-      "number_of_objects": 961625792
+      "number_of_subjects": 3820001372,
+      "number_of_objects": 5000274848
     },
-    "updated_at": "2025-12-26"
+    "updated_at": "2026-02-24"
   },
   {
     "endpoint": "ebi",
@@ -105,7 +105,7 @@
       "number_of_subjects": 5437757,
       "number_of_objects": 7911977
     },
-    "updated_at": "2025-12-26"
+    "updated_at": "2026-02-24"
   },
   {
     "endpoint": "ebi",
@@ -117,7 +117,7 @@
       "number_of_subjects": 104370748,
       "number_of_objects": 169160906
     },
-    "updated_at": "2025-12-26"
+    "updated_at": "2026-02-24"
   },
   {
     "endpoint": "ebi",
@@ -129,19 +129,19 @@
       "number_of_subjects": 1045911,
       "number_of_objects": 3333043
     },
-    "updated_at": "2025-12-26"
+    "updated_at": "2026-02-24"
   },
   {
     "endpoint": "ebi",
     "dataset": "reactome",
     "statistics": {
-      "number_of_triples": 21074975,
+      "number_of_triples": 21317159,
       "number_of_classes": 33,
       "number_of_properties": 45,
-      "number_of_subjects": 3676443,
-      "number_of_objects": 6771186
+      "number_of_subjects": 3705512,
+      "number_of_objects": 6831167
     },
-    "updated_at": "2025-12-26"
+    "updated_at": "2026-02-24"
   },
   {
     "endpoint": "kero",
