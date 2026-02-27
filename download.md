@@ -40,11 +40,14 @@ downloads.json と datasets.json を id でマッチングするための lookup
 <ul class="download-dataset-list">
 {% for dataset in site.data.datasets %}
   {% assign dl = nil %}
+  {% assign dl_found = false %}
   {% for d in site.data.downloads %}
-    {% if d.id == dataset.id %}
-      {% assign dl = d %}
-      {% break %}
-    {% endif %}
+    {% unless dl_found %}
+      {% if d.id == dataset.id %}
+        {% assign dl = d %}
+        {% assign dl_found = true %}
+      {% endif %}
+    {% endunless %}
   {% endfor %}
 
   <li class="download-dataset-item" id="download-{{ dataset.id }}">

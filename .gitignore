@@ -17,3 +17,6 @@ _data/datasets.json
 
 # allow plugin Ruby files to be tracked even if *.rb is globally ignored
 !_plugins/*.rb
+
+# generated download index
+_data/downloads.json
