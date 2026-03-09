@@ -25,7 +25,7 @@ downloads.json と datasets.json を id でマッチングするための lookup
 
 
   <div class="inner">
-    <table class="download-table">
+    <table class="-stickyheader">
       <thead>
         <tr>
           <th>Dataset</th>

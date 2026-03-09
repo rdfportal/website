@@ -130,13 +130,23 @@ table
     vertical-align: middle
   > thead
     > tr
-      border-bottom: 1px solid var(--color-border-strong)
       > th
         white-space: nowrap
         font-weight: 600
+        box-shadow: 0 1px 0 var(--color-border-strong)
   > tbody
     > tr
-      border-bottom: 1px solid var(--color-border-weak)
+      > td
+        border-bottom: 1px solid var(--color-border-weak)
+  &.-stickyheader
+    > thead
+      > tr
+        > th
+          position: sticky
+          top: calc(var(--height-common-header) + 14px)
+          background-color: var(--color-page-bg)
+          z-index: 10
+          box-shadow: inset 0 -1px 0 var(--color-border-strong)
 
 // Language visibility helpers:
 // Show elements that match the document language and hide others.
