@@ -50,40 +50,40 @@ downloads.json と datasets.json を id でマッチングするための lookup
 
         <tr>
           <td>
-            <a href="/{{ dataset.id }}/">
+            <a href="{{ site.baseurl }}/dataset/{{ dataset.id }}/">
               {% if dataset.title %}{{ dataset.title }}{% else %}{{ dataset.id }}{% endif %}
             </a>
           </td>
-          <td class="format-col">
+          <td>
             {% if dl and dl.formats.ntriples %}
-              <a href="{{ dl.formats.ntriples }}" class="dl-badge ntriples" target="_blank" rel="noopener" title="N-Triples">
+              <a href="{{ dl.formats.ntriples }}" class="button-view -externallink -ntriples" target="_blank" rel="noopener" title="N-Triples">
                 {% lang 'en' %}Link{% endlang %}{% lang 'ja' %}リンク{% endlang %}
               </a>
             {% else %}
               <span class="dl-unavailable">-</span>
             {% endif %}
           </td>
-          <td class="format-col">
+          <td>
             {% if dl and dl.formats.turtle %}
-              <a href="{{ dl.formats.turtle }}" class="dl-badge turtle" target="_blank" rel="noopener" title="Turtle">
+              <a href="{{ dl.formats.turtle }}" class="button-view -externallink -turtle" target="_blank" rel="noopener" title="Turtle">
                 {% lang 'en' %}Link{% endlang %}{% lang 'ja' %}リンク{% endlang %}
               </a>
             {% else %}
               <span class="dl-unavailable">-</span>
             {% endif %}
           </td>
-          <td class="format-col">
+          <td>
             {% if dl and dl.formats.rdfxml %}
-              <a href="{{ dl.formats.rdfxml }}" class="dl-badge rdfxml" target="_blank" rel="noopener" title="RDF-XML">
+              <a href="{{ dl.formats.rdfxml }}" class="button-view -externallink -rdfxml" target="_blank" rel="noopener" title="RDF-XML">
                 {% lang 'en' %}Link{% endlang %}{% lang 'ja' %}リンク{% endlang %}
               </a>
             {% else %}
               <span class="dl-unavailable">-</span>
             {% endif %}
           </td>
-          <td class="format-col">
+          <td>
             {% if dl and dl.formats.jsonld %}
-              <a href="{{ dl.formats.jsonld }}" class="dl-badge jsonld" target="_blank" rel="noopener" title="JSON-LD">
+              <a href="{{ dl.formats.jsonld }}" class="button-view -externallink -jsonld" target="_blank" rel="noopener" title="JSON-LD">
                 {% lang 'en' %}Link{% endlang %}{% lang 'ja' %}リンク{% endlang %}
               </a>
             {% else %}
