@@ -44,6 +44,7 @@ jobs:
           cd scripts
           bun install
           bun aggregate_metadata.js
+          bun fetch-download-index.js
           cd ..
       - name: Setup Pages
         id: pages

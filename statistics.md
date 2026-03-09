@@ -18,7 +18,7 @@ permalink_lang:
 
 <div id="StatisticsTableView" class="-fullwidth -nomargin">
   <div class="inner">
-    <table>
+    <table class="-stickyheader">
       <thead>
         <tr>
           <th data-sort="title"><span class="th-label">{% lang 'en' %}Dataset{% endlang %}{% lang 'ja' %}データセット{% endlang %}</span></th>
