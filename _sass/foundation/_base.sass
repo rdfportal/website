@@ -61,7 +61,7 @@ html
 body
   font-family: var(--font-family-base)
   font-size: 1.2rem
-  color: #0f3300
+  color: var(--color-text)
   // use root line-height variable for easier tuning
   line-height: var(--line-height-base)
   background-color: var(--color-bg-body)
@@ -79,24 +79,24 @@ body
     width: 100vw
     top: calc(var(--gap) + var(--height-common-header))
     left: 0
-    border-top: 1px solid #0005
-    box-shadow: 0 calc(100vh - var(--gap) * 2 - var(--height-common-header)) 0 #0005
+    border-top: 1px solid var(--color-border-weak)
+    box-shadow: 0 calc(100vh - var(--gap) * 2 - var(--height-common-header)) 0 var(--color-border-weak)
   &::after
     top: calc(var(--gap) * -1)
     left: var(--gap)
     right: var(--gap)
     bottom: calc(var(--gap) * -1)
-    border-left: 1px solid #0005
-    border-right: 1px solid #0005
+    border-left: 1px solid var(--color-border-weak)
+    border-right: 1px solid var(--color-border-weak)
 
 // Links
 a
-  color: black
+  color: var(--color-hypertext)
   text-decoration: none
   transition: all 0.2s ease
 
   &:hover
-    color: #000D
+    color: oklch(from var(--color-hypertext) calc(l + 0.1) calc(c + 0.05) h)
     text-decoration: underline
 
 p, blockquote

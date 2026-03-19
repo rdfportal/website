@@ -8,14 +8,16 @@
   --margin-global-navigation: 12px
   --z-index-main: 0
   --z-index-global-navigation: 1000
+  --color-text: #0f3300
+  --color-hypertext: #134200
   --color-bg-body: #caccca
   --color-page-bg: #FFFE
   --color-off-white: #f8f7f6
-  --color-warm-gray: #f2f0ed
+  --color-warm-gray: #f2f4f1
   --color-key: #7a33fe
   --color-subtext: #444
-  --color-border-strong: #000
-  --color-border-weak: #0002
+  --color-border-strong: var(--color-text)
+  --color-border-weak: oklch(from var(--color-text) l c h / 0.2)
   --font-size-base: 10px
   --font-size-title: 2.4rem
   --font-family-roman: 'Cormorant Garamond', 'Georgia', 'Times New Roman', Times, serif
