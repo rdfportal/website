@@ -46,7 +46,7 @@ permalink_lang:
 </div>
 
 <script>
-const HEATMAP_COLOR = [0, 122, 204]; // Brand Blue
+const HEATMAP_COLOR = [161, 171, 56]; // Brand Blue
 
 document.addEventListener('DOMContentLoaded', async function() {
   
