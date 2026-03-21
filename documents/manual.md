@@ -15,17 +15,13 @@ permalink_lang:
 ---
 
 {% lang 'en' %}
-### Heading
-
-Body text
-
 ## 1. Getting started
 
 ### What is RDF Portal?
 
-RDF Portal is a platform for accessing and integrating life science datasets represented in the Resource Description Framework (RDF). It currently hosts 53 RDF datasets with approximately 198.4 billion triples, covering genomic, proteomic, chemical, disease, and other biomedical domains.
+RDF Portal is a platform for accessing and integrating life science datasets represented in the Resource Description Framework (RDF). It hosts a wide range of RDF datasets covering genomic, proteomic, chemical, disease, and other biomedical domains.
 
-The portal is maintained by the Database Center for Life Science (DBCLS) and provides multiple ways to access data — from browsing and downloading to querying via SPARQL endpoints and AI-assisted interfaces.
+The portal is maintained by the Database Center for Life Science (DBCLS) and provides multiple ways to access data — from browsing and downloading to querying via SPARQL endpoints and AI-assisted interfaces. For more details on the background, history, and mission of RDF Portal, see the [About](https://rdfportal.github.io/website/about/) page.
 
 ### Key concepts for beginners
 
@@ -36,6 +32,7 @@ If you are new to RDF and SPARQL, here is a brief introduction to the core conce
 - **Subject** — the entity being described (e.g., a gene, a protein)
 - **Predicate** — the relationship or property (e.g., "has function", "is located in")
 - **Object** — the value or related entity (e.g., a specific function, a chromosome)
+
 
 Each component is typically identified by a URI (Uniform Resource Identifier), which ensures global uniqueness and allows datasets from different sources to be linked together.
 
@@ -95,23 +92,44 @@ Each dataset is assigned one or more tags indicating its domain category. Tags a
 ![Screenshot: Tag filter dropdown showing petal icons](screenshots/tag_filter.png)
 <!-- TODO: Replace with actual screenshot of the tag filter dropdown -->
 
+<!-- TODO: Replace each "🌸" below with the actual petal icon image tag, e.g. <img src="icons/gene.svg" alt="Gene" width="20"> -->
+
 | Icon | Tag | Description |
 |------|-----|-------------|
-| ![icon](icons/gene.svg) | **Gene** | Datasets related to genes, gene annotations, and gene-level information |
-| ![icon](icons/gene_expression.svg) | **Gene expression** | Datasets containing gene expression profiles and transcriptomics data |
-| ![icon](icons/genome.svg) | **Genome** | Datasets related to genome sequences and genomic features |
-| ![icon](icons/protein.svg) | **Protein** | Datasets related to protein sequences, structures, and functions |
-| ![icon](icons/drug_chemical.svg) | **Drug/Chemical** | Datasets related to drugs, chemical compounds, and bioactive molecules |
-| ![icon](icons/health_disease.svg) | **Health/Disease** | Datasets related to diseases, clinical variants, and medical information |
-| ![icon](icons/glycan.svg) | **Glycan** | Datasets related to glycans and carbohydrate structures |
-| ![icon](icons/organism.svg) | **Organism** | Datasets related to organism-level information and taxonomy |
-| ![icon](icons/cell.svg) | **Cell** | Datasets related to cell-level information |
-| ![icon](icons/bioresource.svg) | **Bioresource** | Datasets related to biological resource collections (culture collections, biobanks) |
-| ![icon](icons/polymorphism.svg) | **Polymorphism** | Datasets related to genetic variants, SNPs, and polymorphisms |
-| ![icon](icons/sequence.svg) | **Sequence** | Datasets related to nucleotide or amino acid sequences |
+| 🌸 | **Gene** | Datasets related to genes, gene annotations, and gene-level information |
+| 🌸 | **Gene expression** | Datasets containing gene expression profiles and transcriptomics data |
+| 🌸 | **Genome** | Datasets related to genome sequences and genomic features |
+| 🌸 | **Protein** | Datasets related to protein sequences, structures, and functions |
+| 🌸 | **Drug/Chemical** | Datasets related to drugs, chemical compounds, and bioactive molecules |
+| 🌸 | **Health/Disease** | Datasets related to diseases, clinical variants, and medical information |
+| 🌸 | **Glycan** | Datasets related to glycans and carbohydrate structures |
+| 🌸 | **Organism** | Datasets related to organism-level information and taxonomy |
+| 🌸 | **Cell** | Datasets related to cell-level information |
+| 🌸 | **Bioresource** | Datasets related to biological resource collections (culture collections, biobanks) |
+| 🌸 | **Polymorphism** | Datasets related to genetic variants, SNPs, and polymorphisms |
+| 🌸 | **Sequence** | Datasets related to nucleotide or amino acid sequences |
+
 <!-- TODO: Verify the complete list of tags and replace icon paths with actual petal icon files -->
 
 A single dataset may have multiple tags. For example, Open TG-GATEs is tagged with Gene, Drug/Chemical, Health/Disease, and Gene expression, reflecting its coverage of toxicogenomics data across these domains.
+
+### Provenance
+
+Provenance indicates how the RDF data was created relative to the original data source.
+
+| Value | Description |
+|-------|-------------|
+| **Original** | RDF data developed by the original database developers themselves. The data provider created the RDF representation of their own data. |
+| **Third-party** | RDF data developed by a third party, not by the original database developers. Someone other than the original data provider independently converted the publicly available data into RDF. |
+
+### Registration
+
+Registration indicates how the dataset was added to RDF Portal.
+
+| Value | Description |
+|-------|-------------|
+| **Submitted** | The dataset was submitted to RDF Portal by the RDF data developers. |
+| **Added by RDF Portal** | The dataset was registered by the RDF Portal team. |
 
 ### Dataset detail page
 
@@ -142,7 +160,7 @@ Clicking on a dataset name opens its detail page. Each detail page contains the 
 ![Screenshot: SPARQL example query section with the "Run on Endpoint" button](screenshots/example_query.png)
 <!-- TODO: Replace with actual screenshot of the example query section -->
 
-**Schema diagram** — a visual representation of the dataset's RDF schema, showing the classes and properties used in the data.
+**Schema diagram** — a visual representation of the dataset's RDF schema, showing the classes and properties used in the data. These diagrams are automatically generated from [RDF-config](https://github.com/dbcls/rdf-config), a framework for describing RDF dataset structure in a machine-readable format. RDF-config models are maintained for each dataset hosted on RDF Portal, providing a consistent and practical way to document how the data is organized. In some exceptional cases, schema diagrams may be provided through other means. For more details on RDF-config and its role in RDF Portal, see the [RDF config](https://rdfportal.github.io/website/documents/rdf_config/) documentation.
 
 ![Screenshot: Schema diagram for a dataset](screenshots/schema_diagram.png)
 <!-- TODO: Replace with actual screenshot of a schema diagram -->
@@ -301,8 +319,7 @@ The TogoMCP server URL is: `https://togomcp.rdfportal.org/mcp`
 
 *This section will be available once the LLM chat interface documentation is published.*
 
-The LLM chat interface allows you to interact with RDF Portal data using natural language. You can ask questions without knowledge of SPARQL or GraphQL, and the AI system will search for data and provide answers.
-
+ *TBA*
 
 ### 3e. SPARQL composer
 
@@ -580,18 +597,13 @@ For questions, bug reports, or feedback, please contact the DBCLS team through t
 {% endlang %}
 
 {% lang 'ja' %}
-### 見出し
-
 ## 1. はじめに
 
 ### RDF Portal とは
 
-RDF Portal は、RDF（Resource Description Framework）で記述されたライフサイエンスデータセットにアクセスし、統合的に利用するためのプラットフォームです。現在、53のRDFデータセット
-、約1,984億トリプルを収録しており、ゲノム、プロテオーム、化学物質、疾患など幅広い生物医
-学分野をカバーしています。
+RDF Portal は、RDF（Resource Description Framework）で記述されたライフサイエンスデータセットにアクセスし、統合的に利用するためのプラットフォームです。ゲノム、プロテオーム、化学物質、疾患など幅広い生物医学分野のRDFデータセットを収録しています。
 
-本ポータルはライフサイエンス統合データベースセンター（DBCLS）が運営しており、ブラウジン
-グやダウンロードから、SPARQLエンドポイントによるクエリ、AI支援によるインターフェースまで、多様なデータアクセス方法を提供しています。
+本ポータルはライフサイエンス統合データベースセンター（DBCLS）が運営しており、ブラウジングやダウンロードから、SPARQLエンドポイントによるクエリ、AI支援によるインターフェースまで、多様なデータアクセス方法を提供しています。RDF Portal の背景、歴史、ミッションの詳細については [About](https://rdfportal.github.io/website/about/) ページをご覧ください。
 
 ### 基本概念（初めての方へ）
 
@@ -669,34 +681,50 @@ RDF Portal ウェブサイトは、左側のサイドバーからアクセスで
 ![スクリーンショット：タグフィルターのドロップダウン（花びらアイコン表示）](screenshots/tag_filter.png)
 <!-- TODO: タグフィルタードロップダウンの実際のスクリーンショットに置き換え -->
 
+<!-- TODO: 下記の各「🌸」を実際の花びらアイコンの画像タグに置き換え（例: <img src="icons/gene.svg" alt="Gene" width="20">） -->
+
 | アイコン | タグ | 説明 |
 |---------|------|------|
-| ![icon](icons/gene.svg) | **Gene** | 遺伝子、遺伝子アノテーション、遺伝子レベルの情報
-に関するデータセット |
-| ![icon](icons/gene_expression.svg) | **Gene expression** | 遺伝子発現プロファイル、ト
-ランスクリプトミクスデータを含むデータセット |
-| ![icon](icons/genome.svg) | **Genome** | ゲノム配列やゲノム上の特徴に関するデータセッ
-ト |
-| ![icon](icons/protein.svg) | **Protein** | タンパク質の配列、構造、機能に関するデータ
-セット |
-| ![icon](icons/drug_chemical.svg) | **Drug/Chemical** | 医薬品、化学物質、生理活性分子
-に関するデータセット |
-| ![icon](icons/health_disease.svg) | **Health/Disease** | 疾患、臨床バリアント、医療情
-報に関するデータセット |
-| ![icon](icons/glycan.svg) | **Glycan** | 糖鎖や糖質構造に関するデータセット |
-| ![icon](icons/organism.svg) | **Organism** | 生物種レベルの情報や分類学に関するデータ
-セット |
-| ![icon](icons/cell.svg) | **Cell** | 細胞レベルの情報に関するデータセット |
-| ![icon](icons/bioresource.svg) | **Bioresource** | 生物資源コレクション（培養株コレク
-ション、バイオバンク等）に関するデータセット |
-| ![icon](icons/polymorphism.svg) | **Polymorphism** | 遺伝的変異、SNP、多型に関するデータセット |
-| ![icon](icons/sequence.svg) | **Sequence** | 塩基配列やアミノ酸配列に関するデータセッ
-ト |
+| 🌸 | **Gene** | 遺伝子、遺伝子アノテーション、遺伝子レベルの情報に関するデータセット |
+| 🌸 | **Gene expression** | 遺伝子発現プロファイル、トランスクリプトミクスデータを含む
+データセット |
+| 🌸 | **Genome** | ゲノム配列やゲノム上の特徴に関するデータセット |
+| 🌸 | **Protein** | タンパク質の配列、構造、機能に関するデータセット |
+| 🌸 | **Drug/Chemical** | 医薬品、化学物質、生理活性分子に関するデータセット |
+| 🌸 | **Health/Disease** | 疾患、臨床バリアント、医療情報に関するデータセット |
+| 🌸 | **Glycan** | 糖鎖や糖質構造に関するデータセット |
+| 🌸 | **Organism** | 生物種レベルの情報や分類学に関するデータセット |
+| 🌸 | **Cell** | 細胞レベルの情報に関するデータセット |
+| 🌸 | **Bioresource** | 生物資源コレクション（培養株コレクション、バイオバンク等）に関
+するデータセット |
+| 🌸 | **Polymorphism** | 遺伝的変異、SNP、多型に関するデータセット |
+| 🌸 | **Sequence** | 塩基配列やアミノ酸配列に関するデータセット |
+
 <!-- TODO: タグの完全なリストを確認し、アイコンパスを実際の花びらアイコンファイルに置き
 換え -->
 
 1つのデータセットに複数のタグが付与される場合があります。例えば、Open TG-GATEs には Gene、Drug/Chemical、Health/Disease、Gene expression のタグが付与されており、トキシコゲノミ
 クスデータがこれらの分野にまたがることを反映しています。
+
+### Provenance（データの由来）
+
+Provenance は、元のデータソースに対してRDFデータがどのように作成されたかを示します。
+
+| 値 | 説明 |
+|----|------|
+| **Original** | 元のデータベースの開発者自身が作成したオリジナルのRDFデータ。データ提供者が自らのデータのRDF表現を作成したものです。 |
+| **Third-party** | 元のデータベースの開発者以外の第三者が作成したRDFデータ。公開されて
+いるデータを、データ提供元とは別の開発者が独自にRDFに変換したものです。 |
+
+### Registration（登録方法）
+
+Registration は、データセットがどのようにRDF Portalに登録されたかを示します。
+
+| 値 | 説明 |
+|----|------|
+| **Submitted** | RDFデータの開発者からRDF Portalにサブミット（提出）されたデータセット
+。 |
+| **Added by RDF Portal** | RDF Portalチームによって登録されたデータセット。 |
 
 ### データセット詳細ページ
 
@@ -730,7 +758,8 @@ RDF Portal ウェブサイトは、左側のサイドバーからアクセスで
 ![スクリーンショット：SPARQLサンプルクエリセクション（「Run on Endpoint」ボタン付き）](screenshots/example_query.png)
 <!-- TODO: サンプルクエリセクションの実際のスクリーンショットに置き換え -->
 
-**Schema diagram** — データセットのRDFスキーマを視覚的に表現した図。使用されているクラスとプロパティの関係を示しています。
+**Schema diagram** — データセットのRDFスキーマを視覚的に表現した図。使用されているクラスとプロパティの関係を示しています。これらの図は、RDFデータセットの構造を機械可読な形式で
+記述するフレームワークである [RDF-config](https://github.com/dbcls/rdf-config) から自動的に生成されています。RDF-config のモデルは RDF Portal に収録されている各データセットごとに整備されており、データの構造を一貫した実用的な方法でドキュメント化しています。一部の例外的なケースでは、別の方法でスキーマ図が提供される場合もあります。RDF-config の詳細と RDF Portal における役割については、[RDF config](https://rdfportal.github.io/website/documents/rdf_config/) ドキュメントをご参照ください。
 
 ![スクリーンショット：データセットのスキーマ図](screenshots/schema_diagram.png)
 <!-- TODO: スキーマ図の実際のスクリーンショットに置き換え -->
@@ -894,8 +923,7 @@ TogoMCP サーバーURL: `https://togomcp.rdfportal.org/mcp`
 
 *LLM チャットインターフェースのドキュメントが公開され次第、このセクションを更新します。*
 
-LLM チャットインターフェースでは、自然言語を使ってRDF Portalのデータとやり取りできます。SPARQLやGraphQLの知識がなくても、質問を入力するだけでAIシステムがデータを検索し、回答を
-提供します。
+*TBA*
 
 ### 3e. SPARQL composer
 
