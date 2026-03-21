@@ -29,9 +29,9 @@ If you are new to RDF and SPARQL, here is a brief introduction to the core conce
 
 **RDF (Resource Description Framework)** is a standard model for representing data as a graph. Data is expressed as a collection of statements called *triples*, each consisting of three parts:
 
-- **Subject** — the entity being described (e.g., a gene, a protein)
-- **Predicate** — the relationship or property (e.g., "has function", "is located in")
-- **Object** — the value or related entity (e.g., a specific function, a chromosome)
+  - **Subject** — the entity being described (e.g., a gene, a protein)
+  - **Predicate** — the relationship or property (e.g., "has function", "is located in")
+  - **Object** — the value or related entity (e.g., a specific function, a chromosome)
 
 
 Each component is typically identified by a URI (Uniform Resource Identifier), which ensures global uniqueness and allows datasets from different sources to be linked together.
@@ -44,7 +44,7 @@ Each component is typically identified by a URI (Uniform Resource Identifier), w
 
 The RDF Portal website is organized into the following main sections, accessible from the left sidebar:
 
-![Screenshot: RDF Portal top page showing the sidebar navigation and main content area](screenshots/top_page.png)
+![Screenshot: RDF Portal top page showing the sidebar navigation and main content area](assets/images/rdfportal_top_page.png)
 <!-- TODO: Replace with actual screenshot of the top page -->
 
 | Section | Description |
