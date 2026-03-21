@@ -44,7 +44,7 @@ Each component is typically identified by a URI (Uniform Resource Identifier), w
 
 The RDF Portal website is organized into the following main sections, accessible from the left sidebar:
 
-![Screenshot: RDF Portal top page showing the sidebar navigation and main content area](/assets/images/rdfportal_top_page.png)
+![Screenshot: RDF Portal top page showing the sidebar navigation and main content area](../assets/images/rdfportal_top_page.png)
 <!-- TODO: Replace with actual screenshot of the top page -->
 
 | Section | Description |
