@@ -134,8 +134,7 @@ Registration indicates how the dataset was added to RDF Portal.
 
 Clicking on a dataset name opens its detail page. Each detail page contains the following information:
 
-![Screenshot: Dataset detail page (e.g., ChEMBL) showing specifications, statistics, example queries, and schema diagram](screenshots/dataset_detail.png)
-<!-- TODO: Replace with actual screenshot of a dataset detail page -->
+![Screenshot: Dataset detail page (e.g., DDBJ) showing specifications, statistics](/website/assets/images/rdfportal_dataset_detail.png)
 
 **Dataset specifications** — a table showing metadata about the dataset:
 
@@ -727,8 +726,7 @@ Registration は、データセットがどのようにRDF Portalに登録され
 
 データセット名をクリックすると、詳細ページが開きます。各詳細ページには以下の情報が含まれています。
 
-![スクリーンショット：データセット詳細ページ（例：ChEMBL）のスペック、統計、サンプルクエリ、スキーマ図](screenshots/dataset_detail.png)
-<!-- TODO: データセット詳細ページの実際のスクリーンショットに置き換え -->
+![スクリーンショット：データセット詳細ページ（例：DDBJ）のスペック、統計](/website/assets/images/rdfportal_dataset_detail.png)
 
 **Dataset specifications** — データセットに関するメタデータ：
 
