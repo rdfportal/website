@@ -88,8 +88,7 @@ Each sort can be set to descending or ascending order.
 
 Each dataset is assigned one or more tags indicating its domain category. Tags are displayed with petal-shaped icons for easy visual identification.
 
-![Screenshot: Tag filter dropdown showing petal icons](screenshots/tag_filter.png)
-<!-- TODO: Replace with actual screenshot of the tag filter dropdown -->
+![Screenshot: Tag filter dropdown showing petal icons](/website/assets/images/rdfportal_tag_filter.png)
 
 <!-- TODO: Replace each "🌸" below with the actual petal icon image tag, e.g. <img src="icons/gene.svg" alt="Gene" width="20"> -->
 
@@ -675,8 +674,7 @@ RDF Portal ウェブサイトは、左側のサイドバーからアクセスで
 各データセットには、分野カテゴリを示す1つ以上のタグが付与されています。タグは花びら型の
 アイコンで表示され、視覚的に識別しやすくなっています。
 
-![スクリーンショット：タグフィルターのドロップダウン（花びらアイコン表示）](screenshots/tag_filter.png)
-<!-- TODO: タグフィルタードロップダウンの実際のスクリーンショットに置き換え -->
+![スクリーンショット：タグフィルターのドロップダウン（花びらアイコン表示）](/website/assets/images/rdfportal_tag_filter.png)
 
 <!-- TODO: 下記の各「🌸」を実際の花びらアイコンの画像タグに置き換え（例: <img src="icons/gene.svg" alt="Gene" width="20">） -->
 
