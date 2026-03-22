@@ -171,42 +171,32 @@ Clicking on a dataset name opens its detail page. Each detail page contains the 
 
 RDF Portal provides several methods for accessing data, ranging from direct SPARQL queries to AI-assisted natural language interfaces.
 
-![Screenshot: Access methods page showing the available methods](screenshots/access_methods.png)
-<!-- TODO: Replace with actual screenshot of the Access methods page -->
 
 ### 3a. SPARQL endpoints
 
 SPARQL endpoints allow you to execute SPARQL queries directly against the RDF data. RDF Portal organizes its datasets across multiple SPARQL endpoints, grouped by data source.
 
-**Available endpoints:**
+For a complete and up-to-date list of available SPARQL endpoints and the datasets they host, see the [SPARQL Endpoints](https://rdfportal.github.io/website/access_methods/sparql_endpoints/) page.
 
-| Endpoint | URL | Datasets |
-|----------|-----|----------|
-| Primary | `https://rdfportal.org/primary/sparql` | BacDive, BRENDA, GlyCosmos, MediaDive, and 30+ other datasets |
-| DDBJ | `https://rdfportal.org/ddbj/sparql` | DDBJ |
-| BioPortal | `https://rdfportal.org/bioportal/sparql` | — |
-| KERO | `https://rdfportal.org/kero/sparql` | DBKERO RDF |
-| PDB | `https://rdfportal.org/pdb/sparql` | BMRB/RDF, wwPDB/RDF |
-| Protein Atlas | `https://rdfportal.org/proteinatlas/sparql` | — |
-| PubChem | `https://rdfportal.org/pubchem/sparql` | — |
-| Wikidata | `https://rdfportal.org/wikidata/sparql` | — |
-| EBI | `https://rdfportal.org/ebi/sparql` | BioSample, ChEBI, ChEMBL, Ensembl, Reactome |
-| NCBI | `https://rdfportal.org/ncbi/sparql` | ClinVar, MedGen, MeSH, NCBI Gene, PubMed, and more |
-| SIB | `https://rdfportal.org/sib/sparql` | Bgee, OMA, Rhea, UniProt |
-| Med2RDF | `https://rdfportal.org/med2rdf/sparql` | — |
 
 #### Using the SPARQL endpoint in a web browser
 
 Each endpoint provides a web-based query interface. You can access it by visiting the endpoint URL directly (e.g., `https://rdfportal.org/ebi/sparql`). The interface allows you to:
 
-1. Enter a SPARQL query in the text area
-2. Click "Run" to execute the query
-3. View the results in tabular format
+ 1. Enter a SPARQL query in the text area
+ 2. Click "Run" to execute the query
+ 3. View the results in tabular format
 
 ![Screenshot: SPARQL endpoint web interface with a query entered and results displayed](screenshots/sparql_web_interface.png)
 <!-- TODO: Replace with actual screenshot of the SPARQL endpoint web interface -->
 
 You can also use the "Run on Endpoint" links provided on each dataset's detail page to execute the example queries directly.
+
+The web interface is powered by two open-source tools developed by DBCLS:
+
+- **[SPARQL proxy](https://github.com/dbcls/sparql-proxy)** — A proxy server that sits in front of SPARQL endpoints, providing query validation, job scheduling for concurrent queries, result caching, and logging. It ensures safe and stable access to the endpoints by filtering out potentially harmful queries and managing query workloads.
+- **[Endpoint browser](https://github.com/moriya-dbcls/endpoint_browser)** — A web-based interface for browsing and exploring the structure of RDF data stored in SPARQL endpoints. It allows users to visually navigate classes, properties, and their relationships within datasets.
+
 
 #### Querying from the command line
 
@@ -770,44 +760,34 @@ Registration は、データセットがどのようにRDF Portalに登録され
 RDF Portal では、直接的なSPARQLクエリからAI支援の自然言語インターフェースまで、複数のデ
 ータアクセス方法を提供しています。
 
-![スクリーンショット：Access methodsページ（利用可能なアクセス方法の一覧）](screenshots/access_methods.png)
-<!-- TODO: Access methodsページの実際のスクリーンショットに置き換え -->
 
 ### 3a. SPARQL エンドポイント
 
 SPARQLエンドポイントを使用すると、RDFデータに対してSPARQLクエリを直接実行できます。RDF Portal では、データソースごとにグループ化された複数のSPARQLエンドポイントを提供しています。
 
-**利用可能なエンドポイント：**
+利用可能なSPARQLエンドポイントと、各エンドポイントに収録されているデータセットの最新の一覧は、[SPARQL Endpoints](https://rdfportal.github.io/website/access_methods/sparql_endpoints/) ページをご参照ください。
 
-| エンドポイント | URL | 収録データセット |
-|--------------|-----|-----------------|
-| Primary | `https://rdfportal.org/primary/sparql` | BacDive, BRENDA, GlyCosmos, MediaDive 他30以上 |
-| DDBJ | `https://rdfportal.org/ddbj/sparql` | DDBJ |
-| BioPortal | `https://rdfportal.org/bioportal/sparql` | — |
-| KERO | `https://rdfportal.org/kero/sparql` | DBKERO RDF |
-| PDB | `https://rdfportal.org/pdb/sparql` | BMRB/RDF, wwPDB/RDF |
-| Protein Atlas | `https://rdfportal.org/proteinatlas/sparql` | — |
-| PubChem | `https://rdfportal.org/pubchem/sparql` | — |
-| Wikidata | `https://rdfportal.org/wikidata/sparql` | — |
-| EBI | `https://rdfportal.org/ebi/sparql` | BioSample, ChEBI, ChEMBL, Ensembl, Reactome |
-| NCBI | `https://rdfportal.org/ncbi/sparql` | ClinVar, MedGen, MeSH, NCBI Gene, PubMed 他 |
-| SIB | `https://rdfportal.org/sib/sparql` | Bgee, OMA, Rhea, UniProt |
-| Med2RDF | `https://rdfportal.org/med2rdf/sparql` | — |
 
 #### ウェブブラウザでの利用
 
 各エンドポイントはウェブベースのクエリインターフェースを提供しています。エンドポイントのURLに直接アクセスすると利用できます（例：`https://rdfportal.org/ebi/sparql`）。
 
-1. テキストエリアにSPARQLクエリを入力します
-2. 「Run」をクリックしてクエリを実行します
-3. 結果が表形式で表示されます
+ 1. テキストエリアにSPARQLクエリを入力します
+ 2. 「Run」をクリックしてクエリを実行します
+ 3. 結果が表形式で表示されます
+
 
 ![スクリーンショット：SPARQLエンドポイントのウェブインターフェース（クエリ入力と結果表示）](screenshots/sparql_web_interface.png)
 <!-- TODO: SPARQLエンドポイントウェブインターフェースの実際のスクリーンショットに置き換
 え -->
 
-各データセットの詳細ページにある「Run on Endpoint」リンクを使えば、サンプルクエリをエン
-ドポイントで直接実行することもできます。
+各データセットの詳細ページにある「Run on Endpoint」リンクを使えば、サンプルクエリをエンドポイントで直接実行することもできます。
+
+このウェブインターフェースは、DBCLSが開発した以下の2つのオープンソースツールによって構成されています。
+
+- **[SPARQL proxy](https://github.com/dbcls/sparql-proxy)** — SPARQLエンドポイントの前段に配置されるプロキシサーバーです。クエリの安全性検証、同時実行クエリのジョブスケジューリング、結果のキャッシュ、ログ記録などの機能を提供します。有害な可能性のあるクエリをフィルタリングし、クエリの負荷を管理することで、エンドポイントへの安全で安定したアクセスを確保します。
+- **[Endpoint browser](https://github.com/moriya-dbcls/endpoint_browser)** — SPARQLエンドポイントに格納されているRDFデータの構造を閲覧・探索するためのウェブベースインターフェースです。データセット内のクラス、プロパティ、およびそれらの関係を視覚的にナビゲートすることができます。
+
 
 #### コマンドラインからのクエリ
 
