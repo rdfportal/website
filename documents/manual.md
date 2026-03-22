@@ -67,7 +67,7 @@ The site is available in both English and Japanese. You can switch languages usi
 
 The [Datasets](https://rdfportal.github.io/website/datasets/) page displays all RDF datasets hosted on the portal. You can use the controls at the top to sort and filter the list.
 
-![Screenshot: Datasets page showing the sort, order, and filter controls](screenshots/datasets_list.png)
+![Screenshot: Datasets page showing the sort, order, and filter controls](/website/assets/images/rdfportal_datasets_list.png)
 <!-- TODO: Replace with actual screenshot of the Datasets page -->
 
 **Sorting options:**
@@ -654,8 +654,7 @@ RDF Portal ウェブサイトは、左側のサイドバーからアクセスで
 [Datasets](https://rdfportal.github.io/website/datasets/) ページでは、ポータルに収録されている全RDFデータセットを一覧表示します。ページ上部のコントロールを使って、ソートやフィ
 ルタリングが可能です。
 
-![スクリーンショット：Datasetsページ（ソート、順序、フィルターコントロールの表示）](screenshots/datasets_list.png)
-<!-- TODO: Datasetsページの実際のスクリーンショットに置き換え -->
+![スクリーンショット：Datasetsページ（ソート、順序、フィルターコントロールの表示）](/website/assets/images/rdfportal_datasets_list.png)
 
 **ソートオプション：**
 
