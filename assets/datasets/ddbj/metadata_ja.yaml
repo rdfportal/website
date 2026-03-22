@@ -1,6 +1,6 @@
 title: DDBJ
 website: http://www.ddbj.nig.ac.jp/index-e.html
-description: Semantic Representation of DDBJ Annotated Sequence Records.
+description: 日本DNAデータバンク（DDBJ）が提供するアノテーション付き配列レコードのセマンティック表現。DDBJは国際塩基配列データベース共同事業（INSDC）の一員であり、世界中の研究者から投稿された塩基配列データを収集・整理・提供している。本データセットはこれらのレコードをRDFで表現することにより、セマンティック統合および高度なクエリを可能にする。
 tags: [Genome, Gene, cDNA, Tag sequence (nucleic acid), Polymorphism, Other DNA, RNA, Sequence, Ontology/Terminology/Nomenclature, Others]
 provider: National Institute of Genetics
 creators:

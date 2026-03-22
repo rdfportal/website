@@ -1,6 +1,6 @@
 title: DDBJ
 website: http://www.ddbj.nig.ac.jp/index-e.html
-description: Semantic Representation of DDBJ Annotated Sequence Records.
+description: Semantic representation of annotated sequence records provided by the DNA Data Bank of Japan (DDBJ), a member of the International Nucleotide Sequence Database Collaboration (INSDC). DDBJ collects, curates, and distributes nucleotide sequence data submitted by researchers worldwide, and this dataset represents those records in RDF to enable semantic integration and advanced querying.
 tags: [Genome, Gene, cDNA, Tag sequence (nucleic acid), Polymorphism, Other DNA, RNA, Sequence, Ontology/Terminology/Nomenclature, Others]
 provider: National Institute of Genetics
 creators:
