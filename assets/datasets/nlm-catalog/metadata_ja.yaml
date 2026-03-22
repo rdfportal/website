@@ -5,9 +5,9 @@ tags: [ Ontology/Terminology/Nomenclature, Journal article/Report/Bibliography ]
 provider: National Library of Medicine 
 rdf_provider: Database Center for Life Science
 rdf_provenance_type: third_party
-registration_type: submitted
+registration_type: added_by_rdfportal
 version: NA
-issued: 2025-06-30
+issued: 2025-09-18
 license:
   - name:                              
   - url: 
