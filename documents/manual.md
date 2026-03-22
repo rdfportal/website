@@ -88,7 +88,7 @@ Each sort can be set to descending or ascending order.
 
 Each dataset is assigned one or more tags indicating its domain category. Tags are displayed with petal-shaped icons for easy visual identification.
 
-![Screenshot: Tag filter dropdown showing petal icons](/website/assets/images/rdfportal_tag_filter.png)
+<img src="/website/assets/images/rdfportal_tag_filter.png" alt="Screenshot: Tag filter dropdown showing petal icons" width="60%">
 
 <!-- TODO: Replace each "🌸" below with the actual petal icon image tag, e.g. <img src="icons/gene.svg" alt="Gene" width="20"> -->
 
