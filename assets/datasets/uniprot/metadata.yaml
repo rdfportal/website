@@ -1,13 +1,13 @@
 title: UniProt RDF
 website: https://uniprot.org/
-description: The Universal Protein Resource (UniProt) is a comprehensive resource for protein sequence and annotation data.
+description: The Universal Protein Resource (UniProt) is a comprehensive resource for protein sequence and annotation data. It is a central hub for protein information, providing curated and computationally annotated data from a wide range of organisms. This RDF dataset represents UniProt data in a semantic format to enable integration and advanced querying across life science resources.
 tags: [ Protein ]
 provider: The Swiss Institute of Bioinformatics
 creators:
   - name: The Swiss Institute of Bioinformatics
 rdf_provenance_type: original
 registration_type: added_by_rdfportal
-version: 2025_03
-issued: 2025-09-18
+version: 2026_01
+issued: 2026-01-28
 licenses:
   - Creative Commons Attribution 4.0 International (CC BY 4.0) License

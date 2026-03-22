@@ -1,13 +1,13 @@
 title: UniProt RDF
 website: https://uniprot.org/
-description: Universal Protein Resource（UniProt）は、タンパク質配列およびアノテーション情報を包括的に扱うリソースです
+description: Universal Protein Resource（UniProt）は、タンパク質配列およびアノテーションデータのための包括的なリソースです。さまざまな生物種に由来するキュレーション済みおよび計算機的に付与されたデータを提供する、タンパク質情報の中核的なハブとして機能しています。本RDFデータセットは、UniProtデータをセマンティックな形式で表現することで、ライフサイエンス分野におけるデータ統合および高度なクエリを可能にします。
 tags: [ Protein ]
 provider: The Swiss Institute of Bioinformatics
 creators:
   - name: The Swiss Institute of Bioinformatics
 rdf_provenance_type: original
 registration_type: added_by_rdfportal
-version: 2025_03
-issued: 2025-09-18
+version: 2026_01
+issued: 2026-01-28
 licenses:
   - Creative Commons Attribution 4.0 International (CC BY 4.0) License
