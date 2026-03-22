@@ -354,8 +354,6 @@ The ratio of classes to properties gives an indication of the dataset's schema c
 
 The [Download](https://rdfportal.github.io/website/download/) page provides links to download RDF data files for each dataset. Data is available in multiple RDF serialization formats.
 
-![Screenshot: Download page showing the format columns for each dataset](screenshots/download_page.png)
-<!-- TODO: Replace with actual screenshot of the Download page -->
 
 ### Available formats
 
@@ -404,10 +402,9 @@ This tutorial walks you through executing a simple SPARQL query to retrieve data
 
 **Step 1:** Open the EBI SPARQL endpoint at `https://rdfportal.org/ebi/sparql`
 
-![Screenshot: Opening the EBI SPARQL endpoint in a browser](screenshots/tutorial1_step1.png)
-<!-- TODO: Replace with actual screenshot -->
 
 **Step 2:** Enter the following query:
+
 
 ```sparql
 PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
@@ -425,8 +422,6 @@ LIMIT 10
 
 **Step 3:** Click "Run" to execute the query. You will see a table of results showing ChEMBL IDs and molecule names.
 
-![Screenshot: Query results displayed in the SPARQL endpoint interface](screenshots/tutorial1_step3.png)
-<!-- TODO: Replace with actual screenshot -->
 
 **Understanding the query:**
 
@@ -953,8 +948,6 @@ RDF Portal のデータセットはサイズが大きく異なります。例え
 
 [Download](https://rdfportal.github.io/website/download/) ページでは、各データセットのRDFデータファイルをダウンロードするためのリンクを提供しています。データは複数のRDFシリアライズ形式で利用可能です。
 
-![スクリーンショット：Downloadページ（各データセットのフォーマット列表示）](screenshots/download_page.png)
-<!-- TODO: Downloadページの実際のスクリーンショットに置き換え -->
 
 ### 利用可能な形式
 
@@ -1006,11 +999,8 @@ Downloadページで、フォーマット列にダッシュ（—）が表示さ
 
 **目標：** 低分子化合物10件のChEMBL IDと名称を取得する。
 
-**ステップ 1：** EBI SPARQLエンドポイント `https://rdfportal.org/ebi/sparql` を開きます
-。
+**ステップ 1：** EBI SPARQLエンドポイント `https://rdfportal.org/ebi/sparql` を開きます。
 
-![スクリーンショット：EBI SPARQLエンドポイントをブラウザで開いた状態](screenshots/tutorial1_step1.png)
-<!-- TODO: 実際のスクリーンショットに置き換え -->
 
 **ステップ 2：** 以下のクエリを入力します。
 
@@ -1031,8 +1021,6 @@ LIMIT 10
 **ステップ 3：** 「Run」をクリックしてクエリを実行します。ChEMBL IDと分子名が表示されま
 す。
 
-![スクリーンショット：SPARQLエンドポイントインターフェースに表示されたクエリ結果](screenshots/tutorial1_step3.png)
-<!-- TODO: 実際のスクリーンショットに置き換え -->
 
 **クエリの解説：**
 
