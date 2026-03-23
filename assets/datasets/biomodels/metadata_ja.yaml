@@ -1,0 +1,14 @@
+title: BioModels RDF
+website: https://www.biomodels.org/
+description: BioModelsは、生物学的プロセスの計算モデル（システム生物学、生化学ネットワーク、生理学的機構など）を収録したリポジトリです。研究コミュニティから投稿されたモデルをキュレーションおよびアノテーション付きで提供し、モデルの再利用性や再現性を支援しています。
+tags: [ Others ]
+provider: European Bioinformatics Institute
+creators:
+  - name: European Bioinformatics Institute
+rdf_provenance_type: original
+registration_type: added_by_rdfportal
+version: r31
+issued: 2018-06-19
+licenses:
+  - The BioModels Database dataset, which includes the encoded models (whatever the formats they are provided in) and their annotations, is provided under the terms of the Creative Commons CC0 Public Domain Dedication license.
+  - https://www.biomodels.org/termsofuse
