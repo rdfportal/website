@@ -273,7 +273,7 @@
       "number_of_subjects": 1616990,
       "number_of_objects": 1348505
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -285,7 +285,7 @@
       "number_of_subjects": 1036304,
       "number_of_objects": 2729305
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -297,19 +297,7 @@
       "number_of_subjects": 14731,
       "number_of_objects": 38067
     },
-    "updated_at": "2025-10-03"
-  },
-  {
-    "endpoint": "primary",
-    "dataset": "disgenet",
-    "statistics": {
-      "number_of_triples": 88379594,
-      "number_of_classes": 71,
-      "number_of_properties": 73,
-      "number_of_subjects": 8752519,
-      "number_of_objects": 39820060
-    },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -321,7 +309,7 @@
       "number_of_subjects": 5858909,
       "number_of_objects": 6378252
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -333,7 +321,7 @@
       "number_of_subjects": 1783,
       "number_of_objects": 9080
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -345,19 +333,19 @@
       "number_of_subjects": 8678,
       "number_of_objects": 10723
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
     "dataset": "glycosmos",
     "statistics": {
-      "number_of_triples": 189603754,
+      "number_of_triples": 190392085,
       "number_of_classes": 145,
       "number_of_properties": 309,
-      "number_of_subjects": 41974558,
-      "number_of_objects": 45164512
+      "number_of_subjects": 42079844,
+      "number_of_objects": 45262604
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -369,7 +357,7 @@
       "number_of_subjects": 375657,
       "number_of_objects": 502467
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -381,19 +369,19 @@
       "number_of_subjects": 516026,
       "number_of_objects": 7800464
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
     "dataset": "hgnc",
     "statistics": {
-      "number_of_triples": 1279117,
+      "number_of_triples": 1343818,
       "number_of_classes": 18,
       "number_of_properties": 8,
-      "number_of_subjects": 341947,
-      "number_of_objects": 750592
+      "number_of_subjects": 362755,
+      "number_of_objects": 793013
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -405,7 +393,7 @@
       "number_of_subjects": 319471,
       "number_of_objects": 773372
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -417,7 +405,7 @@
       "number_of_subjects": 51410016,
       "number_of_objects": 30906909
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -429,19 +417,19 @@
       "number_of_subjects": 259214,
       "number_of_objects": 442635
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
     "dataset": "jpostdb",
     "statistics": {
-      "number_of_triples": 577714120,
+      "number_of_triples": 577714138,
       "number_of_classes": 88,
       "number_of_properties": 51,
-      "number_of_subjects": 167382400,
-      "number_of_objects": 190910393
+      "number_of_subjects": 167382402,
+      "number_of_objects": 190910397
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -453,7 +441,7 @@
       "number_of_subjects": 715781,
       "number_of_objects": 1385729
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -465,19 +453,19 @@
       "number_of_subjects": 92822893,
       "number_of_objects": 120779192
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
     "dataset": "massbank",
     "statistics": {
-      "number_of_triples": 29889044,
+      "number_of_triples": 29889091,
       "number_of_classes": 5,
       "number_of_properties": 37,
-      "number_of_subjects": 6277385,
-      "number_of_objects": 8444769
+      "number_of_subjects": 6277391,
+      "number_of_objects": 8444777
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -489,7 +477,7 @@
       "number_of_subjects": 321276294,
       "number_of_objects": 476343849
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -501,7 +489,7 @@
       "number_of_subjects": 254810,
       "number_of_objects": 316735
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -513,7 +501,7 @@
       "number_of_subjects": 60455015,
       "number_of_objects": 88268089
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -525,7 +513,7 @@
       "number_of_subjects": 112,
       "number_of_objects": 568
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -537,7 +525,7 @@
       "number_of_subjects": 2780,
       "number_of_objects": 19742
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -549,7 +537,7 @@
       "number_of_subjects": 26442,
       "number_of_objects": 56341
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -561,43 +549,43 @@
       "number_of_subjects": 181068,
       "number_of_objects": 359330
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
     "dataset": "nikkaji",
     "statistics": {
-      "number_of_triples": 309575071,
-      "number_of_classes": 13,
-      "number_of_properties": 18,
-      "number_of_subjects": 56913906,
-      "number_of_objects": 180833623
+      "number_of_triples": 298762829,
+      "number_of_classes": 12,
+      "number_of_properties": 22,
+      "number_of_subjects": 59100523,
+      "number_of_objects": 167397541
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
     "dataset": "ontology",
     "statistics": {
-      "number_of_triples": 98511803,
-      "number_of_classes": 268,
-      "number_of_properties": 631,
-      "number_of_subjects": 12672045,
-      "number_of_objects": 40495405
+      "number_of_triples": 98949824,
+      "number_of_classes": 381,
+      "number_of_properties": 683,
+      "number_of_subjects": 12735195,
+      "number_of_objects": 40583890
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
     "dataset": "opentggates",
     "statistics": {
-      "number_of_triples": 6795165663,
+      "number_of_triples": 6800384609,
       "number_of_classes": 65,
       "number_of_properties": 32,
-      "number_of_subjects": 1496837261,
-      "number_of_objects": 2763849741
+      "number_of_subjects": 1497955718,
+      "number_of_objects": 2765961664
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -609,7 +597,7 @@
       "number_of_subjects": 9329,
       "number_of_objects": 16451
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -621,7 +609,7 @@
       "number_of_subjects": 1963741,
       "number_of_objects": 5728076
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -633,7 +621,7 @@
       "number_of_subjects": 1329,
       "number_of_objects": 3293
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -645,7 +633,7 @@
       "number_of_subjects": 2128002,
       "number_of_objects": 2176841
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -657,7 +645,7 @@
       "number_of_subjects": 21955729,
       "number_of_objects": 31484031
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -669,7 +657,7 @@
       "number_of_subjects": 24260736,
       "number_of_objects": 27439087
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -681,7 +669,7 @@
       "number_of_subjects": 6644,
       "number_of_objects": 9329
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -693,7 +681,7 @@
       "number_of_subjects": 289,
       "number_of_objects": 674
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "primary",
@@ -705,7 +693,7 @@
       "number_of_subjects": 1445583,
       "number_of_objects": 1224298
     },
-    "updated_at": "2025-10-03"
+    "updated_at": "2026-03-23"
   },
   {
     "endpoint": "proteinatlas",
