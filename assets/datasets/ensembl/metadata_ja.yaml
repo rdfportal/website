@@ -1,6 +1,6 @@
 title: Ensembl RDF
 website: https://www.ensembl.org
-description: ゲノム解読された脊椎生物およびその他の主要な真核生物を対象として自動アノテーションを行い、その結果をゲノムビューワやデータベースとして公開しているプロジェクトです。
+description: Ensemblは、脊椎動物および多様な真核生物を対象とした自動アノテーション付きゲノムデータベースの集合であり、関連するさまざまな生物学的データと統合されています。本RDFデータセットは、Ensemblから配布されているファイルを基にRDF Portalが独自に作成したものです。
 tags: [Gene, Protein]
 provider: EMBL-EBI
 creators:
@@ -8,7 +8,7 @@ creators:
     affiliation: Database Center for Life Science
 rdf_provenance_type: third_party
 registration_type: submitted
-version: 111
-issued: 2024-01
+version: 114
+issued: 2026-02-27
 licenses:
   - http://ensembl.org/info/about/legal/disclaimer.html
