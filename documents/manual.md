@@ -12,6 +12,7 @@ permalink: /documents/manual/
 permalink_lang:
   en: /documents/manual/
   ja: /documents/manual/ja/
+toc: true
 ---
 
 {% lang 'en' %}
