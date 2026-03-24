@@ -4,7 +4,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-SELECT STR(?id) AS ?ID STR(?nameJ) AS ?Label_Ja STR(?nameE) AS ?Label_En
+SELECT (STR(?id) AS ?ID) (STR(?nameJ) AS ?Label_Ja) (STR(?nameE) AS ?Label_En)
 FROM <http://nanbyodata.jp/ontology/nando>
 WHERE
 {
@@ -19,7 +19,6 @@ WHERE
     FILTER (lang(?nameE) = "en")
       }
  ?s dcterms:description ?description
- FILTER CONTAINS (?description, "糖尿")
+ FILTER(CONTAINS(?description, "糖尿"))
 }
 ORDER BY ?id
-

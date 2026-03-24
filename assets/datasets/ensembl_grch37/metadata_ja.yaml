@@ -1,0 +1,16 @@
+title: Ensembl RDF for human genome GRCh 37
+website: https://www.ensembl.org
+description: Ensemblは、脊椎動物および多様な真核生物を対象とした自動アノテーション付きゲノムデータベースの集合であり、関連するさまざまな生物学的データと統合されています。本RDFデータセットは、Ensemblから配布されているファイルを基にRDF Portalが独自に作成したものであり、ヒトゲノムアセンブリGRCh37のデータのみを含んでいます。ヒトゲノムアセンブリGRCh38のデータについては、通常のEnsembl RDFデータセットをご利用ください。
+tags: [Gene, Protein]
+provider: EMBL-EBI
+creators:
+  - name: Shuichi Kawashima
+    affiliation: Database Center for Life Science
+  - name: Shuya Ikeda
+    affiliation: Database Center for Life Science
+rdf_provenance_type: third_party
+registration_type: added_by_rdfportal
+version: 75
+issued: 2022-05-19
+licenses:
+  - http://ensembl.org/info/about/legal/disclaimer.html
