@@ -1,0 +1,14 @@
+title: AMR portal RDF
+website: https://www.ebi.ac.uk/amr
+description: Antimicrobial Resistance（AMR）Portal は、抗菌薬耐性の表現型および遺伝子型アノテーションを探索するためのデータリソースであり、抗菌薬耐性表現型、AMR遺伝子検出情報、さらに表現型と遺伝子型を統合したデータセットを提供しています。EMBL-EBI と Imperial College London の協力により構築されており、大規模なAMRデータを統一的に整理した形式で提供しています。本RDFデータセットは、AMR Portal から配布されているデータを基に、RDF Portal が独自にRDF化したものです。
+tags: [ Microbes, Phenotype ]
+provider: European Bioinformatics Institute
+creators:
+  - name: European Bioinformatics Institute
+rdf_provenance_type: third_party
+registration_type: added_by_rdfportal
+version: Release 2025-12
+issued: 2025-12-04
+licenses:
+  - Data through the AMR Portal is made available under a CC-BY 4.0 license.
+  - https://www.ebi.ac.uk/amr/licensing/
