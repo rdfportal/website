@@ -68,6 +68,24 @@
       max-width: none
     &:has(> .content > .-nomargin)
       margin: 0
+
+    &:has(.tocsidebar)
+      margin-left: 0
+      display: flex
+      align-items: flex-start
+      gap: 40px
+      max-width: 80em
+      > .tocsidebar
+        position: sticky
+        top: calc(var(--padding) + 34px)
+        flex-shrink: 0
+        height: min-content
+        max-height: calc(100vh - var(--padding) * 2 - 20px)
+        overflow-y: auto
+      > .content
+        flex-grow: 1
+        min-width: 0
+
     > .content
       padding-bottom: 20px
       h2, h3
