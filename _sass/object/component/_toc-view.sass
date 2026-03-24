@@ -3,16 +3,19 @@
   width: var(--width-toc)
   border-radius: 4px
   > ul
-    padding: 8px 16px !important
+    padding: 8px 8px !important
     margin-bottom: 0 !important
     list-style: none
     li
-      padding: 5px 0
       font-weight: bold
       line-height: 1.2
       a
+        padding: 5px 8px
+        border-radius: 4px
         text-decoration: none !important
-        &:hover
-          text-decoration: underline
+        display: block
+        transition: background-color 0.2s
+        &:hover, &.-active
+          background-color: var(--color-warm-gray-strong)
       > ul
         display: none
