@@ -1,11 +1,11 @@
 title: MassBank
 website: https://massbank.jp/
-description: massbank rdf
-tags: []
-provider: 
+description: MassBankは、メタボロミクス、エクスポソミクス、環境研究における低分子化合物の同定のためのオープンソース質量スペクトルライブラリです。本RDFデータセットは、MassBankのデータをRDF形式で提供するものです。
+tags: [Compound]
+provider: MassBank
 creators:
-  - name: 
-    affiliation: 
+  - name: 津川 裕司
+    affiliation: 東京農工大学工学部生命工学科
   - name:
     affiliation:
 rdf_provenance_type: original

@@ -1,16 +1,16 @@
 title: MassBank
 website: https://massbank.jp/
-description: massbank rdf
-tags: []
-provider: 
+description: MassBank is an open-source mass spectral library for the identification of small chemical molecules in metabolomics, exposomics, and environmental research. This RDF dataset provides MassBank data in RDF format.
+tags: [Compound]
+provider: MassBank
 creators:
-  - name: 
-    affiliation: 
+  - name: Hiroshi Tsugawa
+    affiliation: Department of Biotechnology and Life Science, Faculty of Engineering, Tokyo University of Agriculture and Technology
   - name:
     affiliation:
 rdf_provenance_type: original
 registration_type: submitted
 version: 
-issued: 2025-00-00
+issued: 2025-06-17
 licenses:
   - NA
