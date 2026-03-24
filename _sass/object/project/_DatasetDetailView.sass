@@ -39,7 +39,14 @@
               padding: 6px 0
             > td
               > ul
-                list-style: none
+                margin-bottom: 0 !important
+                > li
+                  > small
+                    margin-left: .6em
+                    &::before
+                      content: "("
+                    &::after
+                      content: ")"
 
       &.statistics
         > .container
