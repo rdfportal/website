@@ -15,6 +15,15 @@ layout: default
     {% endif %}
   </header>
   <div class="inner">
+    {% if page.toc and content contains '<!--TOC_END-->' %}
+    {% assign content_parts = content | split: '<!--TOC_END-->' %}
+    <aside class="tocsidebar">
+      {{ content_parts[0] }}
+    </aside>
+    <div class="content">{{ content_parts[1] }}</div>
+    {% else %}
     <div class="content">{{ content }}</div>
+    {% endif %}
   </div>
+  <script src="{{ '/assets/js/toc-highlight.js' | relative_url }}"></script>
 </div>

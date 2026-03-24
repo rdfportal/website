@@ -61,12 +61,31 @@
 
   > .inner
     margin: 0 20px
+    font-size: 1.6rem
     line-height: 1.8
     max-width: 60em
     &:has(> .content > .-fullwidth)
       max-width: none
     &:has(> .content > .-nomargin)
       margin: 0
+
+    &:has(.tocsidebar)
+      margin-left: 0
+      display: flex
+      align-items: flex-start
+      gap: 40px
+      max-width: 80em
+      > .tocsidebar
+        position: sticky
+        top: calc(var(--padding) + 34px)
+        flex-shrink: 0
+        height: min-content
+        max-height: calc(100vh - var(--padding) * 2 - 20px)
+        overflow-y: auto
+      > .content
+        flex-grow: 1
+        min-width: 0
+
     > .content
       padding-bottom: 20px
       h2, h3
@@ -75,10 +94,18 @@
         font-size: 2.4rem
       h3
         font-size: 1.8rem
-      p
-        font-size: 1.6rem
+      p, ul, ol, dl, blockquote, pre, table, img, figure
         margin-bottom: 1em
+      p, blockquote
         text-align: justify
+      ul, ol
+        padding-left: 1.5em
+      code, pre
+        background-color: var(--color-warm-gray)
+        padding: 2px 4px
+        // font-size: 0.9em
+        font-family: var(--font-family-mono)
     
       > .grid-boxes
         margin-top: 40px
+    
