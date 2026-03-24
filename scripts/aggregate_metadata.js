@@ -33,11 +33,33 @@ function extractRequiredFields(metadata) {
     description: metadata.description || "",
     provider: metadata.provider || "",
     tags: metadata.tags || [],
-    licenses: metadata.licenses || [],
-    creators:
-      typeof metadata.creators === "string"
-        ? [{ name: metadata.creators, affiliation: null }]
-        : metadata.creators || {},
+    licenses: (() => {
+      const rawLicenses = metadata.licenses || metadata.license || [];
+      const licensesArray = Array.isArray(rawLicenses) ? rawLicenses : [rawLicenses];
+      const normalized = [];
+      let currentLicense = null;
+      for (const lic of licensesArray) {
+        if (typeof lic === "string") {
+          currentLicense = { name: lic };
+          normalized.push(currentLicense);
+        } else if (lic && typeof lic === "object") {
+           if (Object.keys(lic).length === 1 && (lic.url || lic.credit) && currentLicense) {
+              Object.assign(currentLicense, lic);
+           } else {
+              currentLicense = { ...lic };
+              normalized.push(currentLicense);
+           }
+        }
+      }
+      return normalized;
+    })(),
+    creators: (() => {
+      const c = metadata.creators || metadata.creator || metadata.rdf_creators;
+      if (typeof c === "string") {
+        return [{ name: c, affiliation: null }];
+      }
+      return c || []; // Return array instead of object
+    })(),
     website: metadata.website || null,
     issued: metadata.issued?.toString() || null,
     version: metadata.version?.toString() || null,
@@ -185,6 +207,46 @@ function mergeMultilanguageExtractedMetadata(...metadatas) {
   } else if (mergedMetadata.creators.ja && !mergedMetadata.creators.en) {
     mergedMetadata.creators.en = mergedMetadata.creators.ja;
   }
+
+  // Transform creators to an array of objects with localized strings
+  // e.g., [{ name: { en: "Name", ja: "名前" }, affiliation: { en: "Affil", ja: "所属" } }]
+  const localizedCreators = [];
+  const maxCreators = Math.max(
+    mergedMetadata.creators.en ? mergedMetadata.creators.en.length : 0,
+    mergedMetadata.creators.ja ? mergedMetadata.creators.ja.length : 0
+  );
+
+  for (let i = 0; i < maxCreators; i++) {
+    const enCreator = mergedMetadata.creators.en ? mergedMetadata.creators.en[i] : null;
+    const jaCreator = mergedMetadata.creators.ja ? mergedMetadata.creators.ja[i] : null;
+
+    if (!enCreator && !jaCreator) continue;
+
+    const locCreator = { name: {}, affiliation: {} };
+    if (enCreator) {
+      if (enCreator.name) locCreator.name.en = enCreator.name;
+      if (enCreator.affiliation) locCreator.affiliation.en = enCreator.affiliation;
+    }
+    if (jaCreator) {
+      if (jaCreator.name) locCreator.name.ja = jaCreator.name;
+      if (jaCreator.affiliation) locCreator.affiliation.ja = jaCreator.affiliation;
+    }
+
+    // Assign fallback values directly if they only exist in one language
+    if (!locCreator.name.en && locCreator.name.ja) locCreator.name = locCreator.name.ja;
+    else if (locCreator.name.en && !locCreator.name.ja) locCreator.name = locCreator.name.en;
+
+    if (!locCreator.affiliation.en && locCreator.affiliation.ja) locCreator.affiliation = locCreator.affiliation.ja;
+    else if (locCreator.affiliation.en && !locCreator.affiliation.ja) locCreator.affiliation = locCreator.affiliation.en;
+    
+    // Clean up empty objects
+    if (Object.keys(locCreator.name).length === 0) delete locCreator.name;
+    if (Object.keys(locCreator.affiliation).length === 0) delete locCreator.affiliation;
+
+    localizedCreators.push(locCreator);
+  }
+
+  mergedMetadata.creators = localizedCreators;
 
   return mergedMetadata;
 }
