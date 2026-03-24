@@ -1,7 +1,7 @@
 title: MicrobeDB.jp
 website: https://mdatahub.org/
-description: MicrobeDB.jp
-tags: []
+description: MicrobeDB.jp was an integrated database for microbiology that centered on genome information and semantically integrated diverse data such as genes, taxonomy, and environments. This RDF dataset is an archive of MicrobeDB.jp. The original project has been succeeded by MicrobiomeDataHub.
+tags: [Metagenome, Microbe]
 provider: National Institute of Genetics
 creators:
   - name: Hiroshi Mori
