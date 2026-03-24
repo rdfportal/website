@@ -1,7 +1,7 @@
 title: Rhea
 website: https://www.rhea-db.org/
 description: An expert curated resource of biochemical reactions designed for the annotation of enzymes and genome-scale metabolic networks and models. 
-tags: [Protein Enzyme]
+tags: [Protein, Enzyme]
 provider: SIB and EMBL-EBI
 creators:
   - name: Anne Morgat
@@ -42,7 +42,7 @@ creators:
     affiliation: Swiss-Prot Group, SIB Swiss Institute of Bioinformatics
 rdf_provenance_type: original
 registration_type: added_by_rdfportal
-version: Rhea release 139
-issued: 2025-06-18
+version: Rhea release 140
+issued: 2026-01-28
 licenses:
   - Attribution 4.0 International (CC BY 4.0) 
