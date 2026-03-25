@@ -1,6 +1,6 @@
 title: GlyCosmos
 website: https://glycosmos.org/
-description: RDF description.
+description: GlyCosmos is a web portal that aims to integrate the glycosciences with the life sciences. It consists of standards, repositories, and data resources, providing information on glycans and glycan-related genes, proteins, lipids, pathways, and diseases.
 tags: [Glycan]
 provider: GlyCosmos Portal
 creators:
@@ -28,7 +28,7 @@ creators:
     affiliation: The Noguchi Institute
 rdf_provenance_type: original
 registration_type: submitted
-version: 2021-08-09
-issued: 2021-08-09
+version: 2026-03-17
+issued: 2026-03-17
 licenses:
   - Creative Commons Attribution 4.0 International License (CC BY 4.0)
