@@ -1,7 +1,7 @@
 title: "jPOST databse RDF"
 website: https://globe.jpostdb.org/
-description: "jPOST database RDFはjPOSTプロジェクトにおいて再解析されたプロテオームデータセットについて記述したものです"
-tags: []
+description: "jPOST database RDFは、jPOSTプロジェクトが運営するjPOSTdbのコンテンツをRDF形式で提供する公開データセットです。プロテオミクス公開データを統一された基準で再解析した結果に基づいて、データセット情報、同定ペプチド、推定タンパク質、翻訳後修飾などの情報を含んでいます。"
+tags: [Protein, Sequence]
 provider:
 creators:
   - name: "守屋 勇樹"
@@ -12,7 +12,7 @@ creators:
     affiliation: "ライフサイエンス統合データベースセンター"
 rdf_provenance_type: original
 registration_type: submitted
-version: 202006
-issued: 2020-06-09
+version: 202509
+issued: 2025-09-04
 licenses:
   - "Attribution 4.0 International (CC BY 4.0)"

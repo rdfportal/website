@@ -1,6 +1,6 @@
 title: "jPOST databse RDF"
 website: https://globe.jpostdb.org/
-description: "jPOST database RDF is described the re-analyzed proteome dataset in the jPOST project."
+description: "jPOST database RDF is a public dataset that provides the contents of jPOSTdb, operated by the jPOST project, in RDF format. It contains dataset metadata, identified peptides, inferred proteins, and post-translational modifications (PTMs) derived from proteomics public data reanalyzed under standardized criteria."
 tags: [Protein, Sequence]
 provider:
 creators:
@@ -12,7 +12,7 @@ creators:
     affiliation: "Database Center for Life Science"
 rdf_provenance_type: original
 registration_type: submitted
-version: 202006
-issued: 2020-06-09
+version: 202509
+issued: 2025-09-04
 licenses:
   - "Attribution 4.0 International (CC BY 4.0)"
