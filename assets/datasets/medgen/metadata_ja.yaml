@@ -1,6 +1,6 @@
 title: MedGen
 website: https://www.ncbi.nlm.nih.gov/medgen
-description: MedGenは遺伝が寄与している病態の属性など、ヒト医学遺伝学に関連する情報を整理したデータベースです
+description: MedGenは遺伝が寄与している病態の属性など、ヒト医学遺伝学に関連する情報を整理したデータベースです。本RDFデータセットは、NCBI MedGen から配布されているデータを基に、RDF Portal が独自にRDF化したものです。
 tags: [ Health/Disease, Ontology/Terminology/Nomenclature ]
 provider: National Center for Biotechnology Information
 creators:
