@@ -7,10 +7,10 @@ rdf_provider: Database Center for Life Science
 rdf_creators:
   - name: Med2RDF project
     affiliation: http://med2rdf.org/
-    version: release_20250630
+    version: release_20250930
 rdf_provenance_type: third_party
 registration_type: submitted
-issued: 2025-06-30
+issued: 2026-01-15
 licenses:
   - https://www.nlm.nih.gov/databases/download.html
   - Source\: U.S. National Library of Medicine.

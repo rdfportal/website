@@ -1,7 +1,7 @@
 title: PubMed 
 website: https://pubmed.ncbi.nlm.nih.gov/
-description: PubMed comprises more than 30 million citations for biomedical literature from MEDLINE, life science journals,
-tags: [ Others, Journal article/Report/Bibliography, ]
+description: PubMed comprises more than 30 million citations for biomedical literature from MEDLINE, life science journals, and online books.
+tags: [ Others, Journal article/Report/Bibliography ]
 provider: National Institute of Technology and Evaluation
 rdf_provider: Database Center for Life Science
 rdf_creators:
@@ -9,8 +9,8 @@ rdf_creators:
     affiliation: http://med2rdf.org/
 rdf_provenance_type: third_party
 registration_type: submitted
-version: release_20250630
-issued: 2025-06-30
+version: release_20250830
+issued: 2025-01-15
 licenses:
   - https://www.nlm.nih.gov/databases/download.html
   - Source\: U.S. National Library of Medicine.
