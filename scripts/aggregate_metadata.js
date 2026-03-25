@@ -82,8 +82,14 @@ function getMetadataFromLocalFolder(id, lang) {
       metadata: extractRequiredFields(Bun.YAML.parse(metadata)),
     };
   } catch (error) {
+    let reason = "Parse Error";
+    if (error.code === "ENOENT") {
+      reason = "File Not Found";
+    }
     return {
       exists: false,
+      reason: reason,
+      errorDetail: error.message,
       metadata: extractRequiredFields(null),
     };
   }
@@ -324,6 +330,7 @@ function detectSchemaSVG(id) {
  */
 async function main() {
   const datasets = [];
+  const skippedDatasets = [];
   try {
     const statsDatasetIds = statJson.map((item) => item.dataset);
     console.log(`Found ${statsDatasetIds.length} datasets in stats file`);
@@ -342,7 +349,12 @@ async function main() {
       extractedJa.lang = "ja";
 
       if (!hasMetadata) {
-        console.log(`⭕ ${id}: No metadata.yaml found - skipping`);
+        console.log(`⭕ ${id}: ${extractedResult.reason} - ${extractedResult.errorDetail}`);
+        skippedDatasets.push({
+          id,
+          reason: extractedResult.reason,
+          detail: extractedResult.errorDetail
+        });
         continue;
       }
 
@@ -408,6 +420,15 @@ async function main() {
 
     console.log(`📈 With metadata: ${withMetadata}`);
     console.log(`📉 Without metadata: ${withoutMetadata}`);
+
+    if (skippedDatasets.length > 0 && process.env.GITHUB_STEP_SUMMARY) {
+      let summary = "### ⚠️ Skipped Datasets\n\n| Dataset ID | Reason | Detail |\n|---|---|---|\n";
+      for (const skipped of skippedDatasets) {
+        const safeDetail = (skipped.detail || "").replace(/\n/g, " ");
+        summary += `| ${skipped.id} | ${skipped.reason} | ${safeDetail} |\n`;
+      }
+      fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, summary + "\n");
+    }
 
     return;
   } catch (error) {
