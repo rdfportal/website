@@ -1,0 +1,50 @@
+#AccessMethodsDiagramView
+  --color-bg: var(--color-warm-gray)
+
+  margin-top: 30px
+  margin-inline: -39px
+  padding-left: 100px
+  position: relative
+  background-color: var(--color-bg)
+
+  display: flex
+  flex-direction: column
+  overflow: hidden
+
+  &::before
+    content: url("../images/logo.svg")
+    position: absolute
+    width: 190%
+    height: 109%
+    bottom: -17%
+    mix-blend-mode: plus-lighter
+    filter: blur(25px)
+    left: -88%
+    rotate: 70deg
+    opacity: 0.5
+
+  > article
+    --i: calc(sibling-index() - 1)
+    --n: sibling-count()
+    --hue: calc(360deg / var(--n) * var(--i))
+    --color-article-bg: oklch(0.85 0.07 var(--hue))
+    
+    padding-inline: 70px 40px
+    padding-block: 8px
+    background-image: linear-gradient(to right, var(--color-bg), var(--color-article-bg) 50%)
+    > *
+      position: relative
+      z-index: 1
+    > h2
+      margin-top: 20px !important
+      mix-blend-mode: luminosity
+      > a
+        color: var(--color-bg-body)
+        text-decoration: none
+        font-size: 3.6rem
+        font-weight: 900
+        line-height: 0
+    > p
+      margin-top: -10px
+      line-height: 1.2
+        
