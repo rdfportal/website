@@ -14,7 +14,7 @@ permalink_lang:
   ja: /access_methods/ja/
 ---
 
-<div id="AccessMethodsDiagramView" class="grid-boxes -fullwidth">
+<div id="AccessMethodsDiagramView" class="-fullwidth">
 
 {% assign lang = page.lang | default: site.active_lang | default: site.default_lang | default: "en" %}
 {% for method in site.data.access_methods %}

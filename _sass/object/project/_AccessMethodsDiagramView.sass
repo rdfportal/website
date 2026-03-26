@@ -1,59 +1,47 @@
 #AccessMethodsDiagramView
+  --color-bg: var(--color-warm-gray)
+
+  margin-top: 30px
   margin-inline: -39px
-  padding-left: 300px
+  padding-left: 100px
   position: relative
-  background-color: var(--color-bg-body)
+  background-color: var(--color-bg)
+
+  display: flex
+  flex-direction: column
+  overflow: hidden
 
   &::before
-    content: ""
+    content: url("../images/logo.svg")
     position: absolute
-    background-image: url("../images/logo_white.svg")
-    background-size: contain
-    background-repeat: no-repeat
-    background-position: center
-    width: 100px
-    height: 100px
+    width: 190%
+    height: 109%
+    bottom: -17%
+    mix-blend-mode: difference
+    filter: blur(25px)
+    left: -88%
+    rotate: 70deg
 
   > article
     --i: calc(sibling-index() - 1)
     --n: sibling-count()
     --hue: calc(360deg / var(--n) * var(--i))
+    --color-article-bg: oklch(0.85 0.07 var(--hue))
     
-    background-color: oklch(0.72 0.14 var(--hue))
-    
-
-//   --gap: 20px
-//   display: flex
-//   gap: var(--gap)
-//   flex-wrap: wrap
-//   align-items: flex-start
-
-//   > .box
-//     padding: 0.5em 1.4em
-//     background-color: var(--color-warm-gray)
-//     > h2
-//       margin: 0.6em 0 0.4em !important
-//       line-height: 1.1
-//       > a
-//         &::after
-//           content: attr(href)
-//           display: block
-//           margin-top: 4px
-//           font-size: 12px
-//           font-weight: 400
-
-// // media queries
-// @media (min-width: 960px)
-//   .grid-boxes
-//     > .box
-//       width: calc(50% - var(--gap))
-
-// @media (min-width: 1560px)
-//   .grid-boxes
-//     > .box
-//       width: calc(33% - var(--gap))
-
-// @media (min-width: 2480px)
-//   .grid-boxes
-//     > .box
-//       width: calc(25% - var(--gap))
+    padding-inline: 70px 40px
+    background-image: linear-gradient(to right, var(--color-bg), var(--color-article-bg) 50%)
+    > *
+      position: relative
+      z-index: 1
+    > h2
+      margin-top: 0
+      > a
+        color: white
+        text-decoration: none
+        font-size: 5.6rem
+        font-weight: 900
+        line-height: 0
+    > p
+      margin-top: -10px
+      line-height: 1.2
+        
