@@ -16,17 +16,18 @@ permalink_lang:
 
 <div class="grid-boxes -fullwidth">
 
+{% assign lang = page.lang | default: site.active_lang | default: site.default_lang | default: "en" %}
 {% for method in site.data.access_methods %}
-<div class="box" markdown="1">
-{% lang 'en' %}
-## [{{ method.title.en }}]({% if method.is_external %}{{ method.url }}{% else %}{{ method.url | relative_url }}{% endif %}){% if method.is_external %}{:target="_blank"}{% endif %}
-{{ method.description.en }}
-{% endlang %}
-{% lang 'ja' %}
-## [{{ method.title.ja }}]({% if method.is_external %}{{ method.url }}{% else %}{{ method.url | relative_url }}{% endif %}){% if method.is_external %}{:target="_blank"}{% endif %}
-{{ method.description.ja }}
-{% endlang %}
-</div>
+{% assign title = method.title[lang] %}
+{% assign desc = method.description[lang] %}
+<article class="box">
+  <h2>
+    <a href="{% if method.is_external %}{{ method.url }}{% else %}{{ method.url | relative_url }}{% endif %}"{% if method.is_external %} target="_blank"{% endif %}>
+      {{ title }}
+    </a>
+  </h2>
+  <p>{{ desc }}</p>
+</article>
 {% endfor %}
 
 </div>
