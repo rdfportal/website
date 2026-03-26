@@ -129,7 +129,7 @@ table
   border-collapse: collapse
   border-top: 1px solid var(--color-border-strong)
   th, td
-    padding: 8px 4px 8px 4px
+    padding: 6px 4px 6px 4px
     vertical-align: middle
   > thead
     > tr
@@ -139,15 +139,20 @@ table
         box-shadow: 0 1px 0 var(--color-border-strong)
   > tbody
     > tr
-      > td
+      > td, > th
         border-bottom: 1px solid var(--color-border-weak)
+      &:last-child
+        > td, > th
+          border-bottom-color: var(--color-border-strong)
+      &:hover
+        background-color: color-mix(in srgb, var(--color-warm-gray-strong), transparent 80%)
   &.-stickyheader
     > thead
       > tr
         > th
           position: sticky
           top: calc(var(--height-common-header) + 14px)
-          background-color: var(--color-page-bg)
+          background-color: color-mix(in srgb, var(--color-off-white), transparent 20%)
           z-index: 10
           box-shadow: inset 0 -1px 0 var(--color-border-strong)
 

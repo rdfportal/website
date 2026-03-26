@@ -1,7 +1,27 @@
 ---
 layout: page
 pageId: datasets
+toc: true
 ---
+
+{% assign lang = site.active_lang | default: "en" %}
+{% assign i18n = site.data.i18n.dataset_details[lang] %}
+{% assign _title = page.dataset.title[lang] | default: page.dataset.title.en | default: page.dataset.title %}
+
+<!-- TOC for Layout -->
+<div class="toc-view" markdown="1">
+  <ul id="markdown-toc">
+    <li><a href="#spec" id="markdown-toc-spec">{{ i18n.spec_title }}</a></li>
+    <li><a href="#stats" id="markdown-toc-stats">{{ i18n.stats_title }}</a></li>
+    {% if page.dataset.sparql_examples and page.dataset.sparql_examples.size > 0 %}
+    <li><a href="#sparql_examples" id="markdown-toc-sparql_examples">{{ i18n.sparql_examples }}</a></li>
+    {% endif %}
+    {% if page.dataset.schema_svg %}
+    <li><a href="#schema_diagram" id="markdown-toc-schema_diagram">{{ i18n.schema_diagram }}</a></li>
+    {% endif %}
+  </ul>
+</div>
+<!--TOC_END-->
 
 <!-- Prism syntax highlighting for SPARQL examples (loaded only on dataset pages) -->
 <link rel="stylesheet" href="{{ '/assets/vendor/prism/prism.css' | relative_url }}">
@@ -14,15 +34,10 @@ pageId: datasets
 {% include datasets-json.html %}
 
 <div id="DatasetDetailView">
-    {% assign lang = site.active_lang | default: "en" %}
-    {% assign i18n = site.data.i18n.dataset_details[lang] %}
-
     <article class="inner">
         <header>
             <div id="dataset-icon-container" class="icon" aria-hidden="true"></div>
-            {% assign _title = page.dataset.title[lang] | default: page.dataset.title.en | default: page.dataset.title
-            %}
-            <h2>{{ _title }}</h2>
+            <h2 id="dataset-title">{{ _title }}</h2>
         </header>
         <div class="link">
             <a href="{{ page.dataset.website }}" class="button-view -externallink" target="_blank">{{ i18n.links_website
@@ -34,7 +49,7 @@ pageId: datasets
         <p class="description">{{ _desc }}</p>
 
         <section class="spec">
-            <h3>{{ i18n.spec_title }}</h3>
+            <h3 id="spec">{{ i18n.spec_title }}</h3>
             <table>
                 <tbody>
                     <tr data-row-kind="tags" data-type="tags">
@@ -158,7 +173,7 @@ pageId: datasets
         </section>
 
         <section class="statistics">
-            <h3>{{ i18n.stats_title }}</h3>
+            <h3 id="stats">{{ i18n.stats_title }}</h3>
             {% assign s = page.dataset.statistics | default: nil %}
             {% if s %}
 
@@ -182,7 +197,7 @@ pageId: datasets
 
         {% if page.dataset.sparql_examples and page.dataset.sparql_examples.size > 0 %}
         <section class="sparqlexamples">
-            <h3>{{ i18n.sparql_examples }}</h3>
+            <h3 id="sparql_examples">{{ i18n.sparql_examples }}</h3>
             <div class="examples">
                 {% for example in page.dataset.sparql_examples %}
                 <article class="example">
@@ -208,7 +223,7 @@ pageId: datasets
 
         {% if page.dataset.schema_svg %}
         <section class="schemadiagram">
-            <h3>{{ i18n.schema_diagram }}</h3>
+            <h3 id="schema_diagram">{{ i18n.schema_diagram }}</h3>
             {% assign dataset_id = page.dataset.id %}
             {% assign local_rel = '/assets/datasets/' | append: dataset_id | append: '/schema.svg' %}
             <div class="container">
