@@ -11,6 +11,7 @@ module Jekyll
       read_yaml(File.join(base, '_layouts'), 'dataset.html')
 
       data['layout']   = 'dataset'
+      data['toc']      = true
       data['title']    = {
         'en' => 'Dataset Details',
         'ja' => 'データセット詳細'

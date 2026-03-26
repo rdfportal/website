@@ -15,7 +15,7 @@ layout: default
     {% endif %}
   </header>
   <div class="inner">
-    {% if page.toc and content contains '<!--TOC_END-->' %}
+    {% if content contains '<!--TOC_END-->' %}
     {% assign content_parts = content | split: '<!--TOC_END-->' %}
     <aside class="tocsidebar">
       {{ content_parts[0] }}
