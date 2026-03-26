@@ -13,8 +13,13 @@
     background-position: center
     width: 100px
     height: 100px
-    top: 0
-    left: 0
+
+  > article
+    --i: calc(sibling-index() - 1)
+    --n: sibling-count()
+    --hue: calc(360deg / var(--n) * var(--i))
+    
+    background-color: oklch(0.72 0.14 var(--hue))
     
 
 //   --gap: 20px

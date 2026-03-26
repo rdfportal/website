@@ -20,7 +20,7 @@ permalink_lang:
 {% for method in site.data.access_methods %}
 {% assign title = method.title[lang] %}
 {% assign desc = method.description[lang] %}
-<article class="box">
+<article>
   <h2>
     <a href="{% if method.is_external %}{{ method.url }}{% else %}{{ method.url | relative_url }}{% endif %}"{% if method.is_external %} target="_blank"{% endif %}>
       {{ title }}
