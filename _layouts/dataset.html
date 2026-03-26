@@ -11,19 +11,14 @@ toc: true
 <!-- TOC for Layout -->
 <div class="toc-view" markdown="1">
   <ul id="markdown-toc">
-    <li>
-      <a href="#dataset-title" id="markdown-toc-dataset-title">{{ _title }}</a>
-      <ul>
-        <li><a href="#spec" id="markdown-toc-spec">{{ i18n.spec_title }}</a></li>
-        <li><a href="#stats" id="markdown-toc-stats">{{ i18n.stats_title }}</a></li>
-        {% if page.dataset.sparql_examples and page.dataset.sparql_examples.size > 0 %}
-        <li><a href="#sparql_examples" id="markdown-toc-sparql_examples">{{ i18n.sparql_examples }}</a></li>
-        {% endif %}
-        {% if page.dataset.schema_svg %}
-        <li><a href="#schema_diagram" id="markdown-toc-schema_diagram">{{ i18n.schema_diagram }}</a></li>
-        {% endif %}
-      </ul>
-    </li>
+    <li><a href="#spec" id="markdown-toc-spec">{{ i18n.spec_title }}</a></li>
+    <li><a href="#stats" id="markdown-toc-stats">{{ i18n.stats_title }}</a></li>
+    {% if page.dataset.sparql_examples and page.dataset.sparql_examples.size > 0 %}
+    <li><a href="#sparql_examples" id="markdown-toc-sparql_examples">{{ i18n.sparql_examples }}</a></li>
+    {% endif %}
+    {% if page.dataset.schema_svg %}
+    <li><a href="#schema_diagram" id="markdown-toc-schema_diagram">{{ i18n.schema_diagram }}</a></li>
+    {% endif %}
   </ul>
 </div>
 <!--TOC_END-->
