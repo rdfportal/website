@@ -129,7 +129,7 @@ table
   border-collapse: collapse
   border-top: 1px solid var(--color-border-strong)
   th, td
-    padding: 8px 4px 8px 4px
+    padding: 6px 4px 6px 4px
     vertical-align: middle
   > thead
     > tr
@@ -141,6 +141,9 @@ table
     > tr
       > td
         border-bottom: 1px solid var(--color-border-weak)
+      &:last-child
+        > td
+          border-bottom-color: var(--color-border-strong)
   &.-stickyheader
     > thead
       > tr
