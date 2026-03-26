@@ -1,0 +1,49 @@
+- id: sparql_endpoints
+  url: /access_methods/sparql_endpoints/
+  is_external: false
+  title:
+    en: SPARQL endpoints
+    ja: SPARQLエンドポイント
+  description:
+    en: We provide SPARQL endpoints that allow you to execute queries against RDF data. Using the standard SPARQL 1.1 query language, you can perform complex searches and data extraction across multiple datasets.
+    ja: RDFデータに対してクエリを実行できるSPARQLエンドポイントを提供しています。標準的なSPARQL 1.1クエリ言語を使用して、複数のデータセットにまたがる複雑な検索やデータ抽出が可能です。
+
+- id: graphql_api
+  url: /access_methods/graphql_api/
+  is_external: false
+  title:
+    en: GraphQL API
+    ja: GraphQL API
+  description:
+    en: GraphQL API is available for application developers. It allows intuitive query construction based on schemas and is suitable for use from frontend applications.
+    ja: よりアプリ開発者に親しみやすいGraphQL APIも利用可能です。スキーマに基づいた直感的なクエリ作成が可能で、フロントエンドアプリケーションからの利用に適しています。
+
+- id: togomcp
+  url: https://togomcp.rdfportal.org/
+  is_external: true
+  title:
+    en: TogoMCP
+    ja: TogoMCP
+  description:
+    en: Model Context Protocol (MCP) interface for AI agents. This mechanism enables LLMs to understand the structure and content of RDF datasets and provide accurate data in response to natural language questions.
+    ja: AIエージェント向けのModel Context Protocol (MCP) インターフェースです。LLMがRDFデータセットの構造や内容を理解し、自然言語での質問に対して正確なデータを提供するための仕組みです。
+
+- id: llm_chat_interface
+  url: /access_methods/llm_chat_interface/
+  is_external: false
+  title:
+    en: LLM Chat Interface
+    ja: LLMチャットインターフェース
+  description:
+    en: Chat interface allowing interaction with the database using natural language. Even without knowledge of SPARQL or GraphQL, simply entering a question allows AI to search for data and provide answers.
+    ja: 自然言語でデータベースと対話できるチャットインターフェースです。SPARQLやGraphQLの知識がなくても、質問を入力するだけでAIがデータを検索・回答してくれます。
+
+- id: sparql_composer
+  url: https://rdfportal.org/composer/
+  is_external: true
+  title:
+    en: SPARQL composer
+    ja: SPARQL composer
+  description:
+    en: Interface for generating SPARQL queries.
+    ja: SPARQLクエリを生成するためのインターフェースです。
