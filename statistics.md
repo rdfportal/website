@@ -33,7 +33,7 @@ permalink_lang:
       <tbody>
         {% for dataset in site.data.datasets %}
           <tr>
-            <td data-key="title"><a href="{{ site.baseurl }}/dataset/{{ dataset.id }}/">{{ dataset.title }}</a></td>
+            <td data-key="title"><a href="{{ site.baseurl }}/dataset/{{ dataset.id }}/"><img class="dataset-icon" src="{{ '/assets/images/dataset_symbols/' | append: dataset.id | append: '.svg' | relative_url }}" alt="" onerror="this.style.display='none'" style="width: 20px; height: 20px; vertical-align: -4px; margin-right: 6px; object-fit: contain;" />{{ dataset.title }}</a></td>
             {% for stat in first_dataset.statistics %}
               {% assign key = stat[0] %}
               <td data-key="{{ key }}">{{ dataset.statistics[key] }}</td>
