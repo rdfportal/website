@@ -16,7 +16,6 @@ description:
 <!-- #DatasetsSortFilterView（default.html側）を活用するため独自UIは廃止 -->
 <div id="DatasetsListView" class="-nomargin"></div>
 
-<script src="{{ '/assets/js/DatasetIcon.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/DatasetCard.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/DatasetsManager.js' | relative_url }}"></script>
 

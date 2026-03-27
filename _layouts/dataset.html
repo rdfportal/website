@@ -30,13 +30,19 @@ toc: true
 <script src="{{ '/assets/vendor/prism/prism-turtle.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/vendor/prism/prism-sparql.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/DatasetsManager.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/DatasetIcon.js' | relative_url }}"></script>
 {% include datasets-json.html %}
+<style>
+  .global-navigation > .background::before {
+    background-image: url("{{ '/assets/images/datasets_symbol/' | append: page.dataset.id | append: '.svg' | relative_url }}");
+  }
+</style>
 
 <div id="DatasetDetailView">
     <article class="inner">
         <header>
-            <div id="dataset-icon-container" class="icon" aria-hidden="true"></div>
+            <div class="icon" aria-hidden="true">
+                <img src="{{ '/assets/images/datasets_symbol/' | append: page.dataset.id | append: '.svg' | relative_url }}" alt="Dataset Icon" onerror="this.outerHTML='<svg class=&quot;icon -svg&quot; width=&quot;48&quot; height=&quot;48&quot; viewBox=&quot;0 0 48 48&quot;><rect width=&quot;48&quot; height=&quot;48&quot; fill=&quot;#ddd&quot;/></svg>'" style="width: 48px; height: 48px; object-fit: contain;" />
+            </div>
             <h2 id="dataset-title">{{ _title }}</h2>
         </header>
         <div class="link">
@@ -240,9 +246,8 @@ toc: true
     </article>
 </div>
 
-{% include dataset-tags-json.html tags=page.dataset.tags %} {% include
-dataset-init-script.html container_id='dataset-icon-container'
-json_id='dataset-tags-json' size=48 %}
+{% include dataset-tags-json.html tags=page.dataset.tags %}
+{% include dataset-init-script.html json_id='dataset-tags-json' %}
 
 
 <script>
@@ -307,71 +312,6 @@ json_id='dataset-tags-json' size=48 %}
     }
 
 
-    function drawBackground() {
-        function svgToDataUri(svg) {
-            if (!svg) return "";
-            const s = String(svg).replace(/\r\n?/g, "\n").trim();
-            try {
-                return (
-                    "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(s)))
-                );
-            } catch (e) {
-                try {
-                    return "data:image/svg+xml;utf8," + encodeURIComponent(s);
-                } catch (e2) {
-                    console.error("svgToDataUri: encoding failed", e2);
-                    return "";
-                }
-            }
-        }
-
-        function readTags() {
-            try {
-                const el = document.getElementById("dataset-tags-json");
-                if (!el) return [];
-                const txt = el.textContent || el.innerText || "";
-                if (!txt) return [];
-                return JSON.parse(txt || "[]");
-            } catch (e) {
-                return [];
-            }
-        }
-
-        function applyBackground(svg) {
-            try {
-                const styleId = "global-dataset-icon-style";
-                const css =
-                    '.global-navigation > .background::before{background-image:url("' +
-                    svgToDataUri(svg) +
-                    '")}';
-                const existing = document.getElementById(styleId);
-                if (existing) existing.parentNode.removeChild(existing);
-                const s = document.createElement("style");
-                s.id = styleId;
-                s.textContent = css;
-                document.head.appendChild(s);
-            } catch (e) {
-                console.error("applyBackground failed", e);
-            }
-        }
-
-        const tags = readTags();
-        if (
-            !window.DatasetIcon ||
-            typeof window.DatasetIcon.createSvg !== "function"
-        )
-            return false;
-        try {
-            const svg = window.DatasetIcon.createSvg(tags, 120, {});
-            applyBackground(svg);
-            return true;
-        } catch (e) {
-            console.warn("global icon generation failed", e);
-            return false;
-        }
-
-    }
-
 
     document.addEventListener('DOMContentLoaded', function () {
 
@@ -385,9 +325,6 @@ json_id='dataset-tags-json' size=48 %}
 
         // Setup "Copy" buttons in code boxes
         setupCopyCodeButtons();
-
-        // Draw dataset icon background in global navigation
-        drawBackground();
 
         // Code syntax highlighting
         try {

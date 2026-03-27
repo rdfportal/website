@@ -25,54 +25,7 @@ class DatasetCard {
       showHeaderMeta: false, // headerに発行日・トリプル数を表示するか
     },
   };
-  static SVG = {
-    // 幾何/制御パラメータ ==============================
-    MAX_PETALS: 10, // 同時に描画する最大花弁枚数 (タグ数が多くても打ち止め)
-    SCALE: 0.82, // 全体基礎スケール (viewBox 100x100 を card サイズへ収める調整)
-    APEX_Y: 78, // 花弁先端（下端）Y 座標 (lenFactor で圧縮)
-    PETAL_TOP_Y: 10, // 花弁上端（頂点寄り）Y 座標
-    PETAL_CTRL_TOP_Y: 20, // Bézier 上側制御点 Y
-    PETAL_CTRL_LOW_Y: 55, // Bézier 下側制御点 Y (lenFactor で圧縮)
 
-    // グラデーション関連 ===============================
-    GRAD_OPACITY_START: 1, // グラデ上部 stop の不透明度
-    GRAD_OPACITY_END: 0.2, // グラデ下部 stop の不透明度
-    USE_RANDOM_ID: true, // <defs> の gradient id にランダム要素を含め重複を防ぐ
-
-    // 花弁幅・長さスケーリング =========================
-    WIDTH_MAX: 32, // 最小枚数時の最大半幅
-    WIDTH_MIN: 12, // 最大枚数時の最小半幅
-    WIDTH_EXP: 1.25, // 幅補間用指数 (非線形に細くする)
-    LENGTH_COMPRESS: 0.12, // 枚数増加に伴う縦方向圧縮率 (t2 を掛ける)
-
-    // (垂直揃え関連は V_ALIGN に移動)
-
-    ZERO_TAG_COLOR: "#e2e8f0", // タグ 0 件時のプレースホルダ色
-
-    // 視覚サイズ補正 ===================================
-    VISUAL_MIN_SCALE: 1.1, // 多枚数時の全体縮小下限 (最小)
-    VISUAL_MAX_SCALE: 1.1, // 少枚数時の全体拡大上限 (最大)
-    VISUAL_EXP: 1.0, // 視覚スケール補間指数 (大きいほど多枚数側を強く縮小)
-    SINGLE_PETAL_EMPHASIS: 1.025, // 単一タグ表示時のわずかな追加拡大倍率
-    FULL_CIRCLE_THRESHOLD: 11, // この枚数以上で扇状 → 360° 均等配置に切替
-    // レイアウト角度制御 ==============================
-    TWO_PETAL_SPAN: 50, // 2枚時の扇状角度 (中心対称配置で ±25°)
-    FAN_SPAN_MIN: 70, // 3枚時の扇状角度 (開始値)
-    FAN_SPAN_MAX: 110, // FULL_CIRCLE_THRESHOLD-1 枚時の扇状角度 (その次で 360° へ)
-  };
-
-  // 垂直位置調整: アイコンとテキストの視覚中心を合わせるための調整定数
-  static V_ALIGN = {
-    MODE: "geometric", // 'geometric' | 'interpolate' 将来切替用
-    // geometric モード (既定)
-    CENTER_BASE: 10, // 基本オフセット（下方向に重心を調整）
-    CENTER_FACTOR: 1.0, // 中点差分係数
-    // interpolate モード (必要なら MODE を変更し下記を調整）
-    SHIFT_MIN: -0.8,
-    SHIFT_MAX: 0.9,
-    SHIFT_EXP: 0.9,
-    SINGLE_EXTRA: 0.6,
-  };
 
   #dataset;
   #options;
@@ -342,51 +295,17 @@ class DatasetCard {
         .replace(/'/g, "&#39;")
       : "";
   }
-  #hashString(str) {
-    let h = 0x811c9dc5;
-    for (let i = 0; i < str.length; i++) {
-      h ^= str.charCodeAt(i);
-      h = Math.imul(h, 0x01000193);
-      h >>> 0;
-    }
-    return h >>> 0;
-  }
-
   #buildPetalSvg() {
     const size = this.#options.iconSize || 48;
-    const tags = this.#extractTagStrings(this.#getTags());
-    try {
-      if (
-        window.DatasetIcon &&
-        typeof window.DatasetIcon.createSvg === "function"
-      ) {
-        return window.DatasetIcon.createSvg(tags, size, {});
-      }
-    } catch (e) {
-      // fall through to placeholder
+    
+    if (this.#dataset && this.#dataset.id) {
+      return `<img src="/assets/images/datasets_symbol/${this.#escapeHtml(this.#dataset.id)}.svg" class="icon -svg" width="${size}" height="${size}" style="width: ${size}px; height: ${size}px; object-fit: contain;" alt="Icon" onerror="this.outerHTML='<svg class=\\'icon -svg\\' width=\\'${size}\\' height=\\'${size}\\' viewBox=\\'0 0 ${size} ${size}\\'><rect width=\\'${size}\\' height=\\'${size}\\' fill=\\'#ddd\\'/></svg>'"/>`;
     }
 
     // fallback simple placeholder
     return `<svg class="icon -svg" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" role="img" aria-label="Icon"><rect width="${size}" height="${size}" fill="#ddd"/></svg>`;
   }
-  #hslToHex(h, s, l) {
-    s /= 100;
-    l /= 100;
-    const k = (n) => (n + h / 30) % 12;
-    const a = s * Math.min(l, 1 - l);
-    const f = (n) =>
-      l - a * Math.max(-1, Math.min(k(n) - 3, Math.min(9 - k(n), 1)));
-    const r = Math.round(f(0) * 255)
-      .toString(16)
-      .padStart(2, "0");
-    const g = Math.round(f(8) * 255)
-      .toString(16)
-      .padStart(2, "0");
-    const b = Math.round(f(4) * 255)
-      .toString(16)
-      .padStart(2, "0");
-    return `#${r}${g}${b}`;
-  }
+
   #setupEventListeners(el) {
     if (typeof this.#options.onClick === "function") {
       el.addEventListener("click", (e) => {

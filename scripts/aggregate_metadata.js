@@ -7,6 +7,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const statJson = require("../_data/datasets_stats.json");
+const { createSvg } = require("./lib/icon_generator.js");
 
 const DATASETS_FOLDER = path.join(__dirname, "..", "assets", "datasets");
 
@@ -335,6 +336,11 @@ async function main() {
     const statsDatasetIds = statJson.map((item) => item.dataset);
     console.log(`Found ${statsDatasetIds.length} datasets in stats file`);
 
+    const datasetsSymbolDir = path.join(__dirname, "..", "assets", "images", "datasets_symbol");
+    if (!fs.existsSync(datasetsSymbolDir)) {
+      fs.mkdirSync(datasetsSymbolDir, { recursive: true });
+    }
+
     for (const id of statsDatasetIds) {
       console.log(`Processing ${id}...`);
       const extractedResult = getMetadataFromLocalFolder(id);
@@ -381,6 +387,11 @@ async function main() {
 
       const statsData = getStatsForDatasetId(id);
       const isSchemaSVGPresent = detectSchemaSVG(id);
+
+      // Generate and save SVG icon
+      const svgContent = createSvg(mergedMetadata.tags || []);
+      const svgPath = path.join(datasetsSymbolDir, `${id}.svg`);
+      fs.writeFileSync(svgPath, svgContent, "utf-8");
 
       const datasetInfo = {
         id,

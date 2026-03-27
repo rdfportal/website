@@ -44,7 +44,6 @@ page_id: home
 </div>
 
 {% include datasets-json.html %}
-<script src="{{ '/assets/js/DatasetIcon.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/DatasetsManager.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/DatasetCard.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/top-page-tiles.js' | relative_url }}"></script>

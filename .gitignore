@@ -20,3 +20,6 @@ _data/datasets.json
 
 # generated download index
 _data/downloads.json
+
+# generated dataset icons
+assets/images/datasets_symbol/
