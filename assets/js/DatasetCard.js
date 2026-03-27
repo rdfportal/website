@@ -300,7 +300,7 @@ class DatasetCard {
     const baseUrl = (typeof window !== 'undefined' && window.SITE_BASE_URL_ROOT) ? window.SITE_BASE_URL_ROOT : "";
     
     if (this.#dataset && this.#dataset.id) {
-      return `<img src="${baseUrl}/assets/images/dataset_symbols/${this.#escapeHtml(this.#dataset.id)}.svg" class="dataset-icon" width="${size}" height="${size}" style="width: ${size}px; height: ${size}px; object-fit: contain;" alt="Icon" onerror="this.outerHTML='<svg class=\\'dataset-icon\\' width=\\'${size}\\' height=\\'${size}\\' viewBox=\\'0 0 ${size} ${size}\\'><rect width=\\'${size}\\' height=\\'${size}\\' fill=\\'#ddd\\'/></svg>'"/>`;
+      return `<img src="${baseUrl}/assets/images/dataset_symbols/${this.#escapeHtml(this.#dataset.id)}.svg" class="dataset-icon" width="${size}" height="${size}" alt="Icon" onerror="this.outerHTML='<svg class=\\'dataset-icon\\' width=\\'${size}\\' height=\\'${size}\\' viewBox=\\'0 0 ${size} ${size}\\'><rect width=\\'${size}\\' height=\\'${size}\\' fill=\\'#ddd\\'/></svg>'"/>`;
     }
 
     // fallback simple placeholder

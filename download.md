@@ -51,7 +51,7 @@ downloads.json と datasets.json を id でマッチングするための lookup
         <tr>
           <td>
             <a href="{{ site.baseurl }}/dataset/{{ dataset.id }}/">
-              <img class="dataset-icon" src="{{ '/assets/images/dataset_symbols/' | append: dataset.id | append: '.svg' | relative_url }}" alt="" onerror="this.style.display='none'" style="width: 20px; height: 20px; vertical-align: -4px; margin-right: 6px; object-fit: contain;" />
+              <img class="dataset-icon" src="{{ '/assets/images/dataset_symbols/' | append: dataset.id | append: '.svg' | relative_url }}" alt="" onerror="this.style.display='none'" />
               {% if dataset.title %}{{ dataset.title }}{% else %}{{ dataset.id }}{% endif %}
             </a>
           </td>
