@@ -28,7 +28,7 @@
   url: "/download/"
 - id: documents
   title: "Documents"
-  url: "/documents/"
+  url: "/documents/manual/"
   children:
     - id: manual
       title: "Manual"
