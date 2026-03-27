@@ -24,13 +24,12 @@
     opacity: 0.5
 
   > article
-    --i: calc(sibling-index() - 1)
-    --n: sibling-count()
-    --hue: calc(360deg / var(--n) * var(--i))
-    --color-article-bg: oklch(0.85 0.07 var(--hue))
-    
     padding-inline: 70px 40px
     padding-block: 8px
+    
+    // Utilize the --hue variable injected inline by Jekyll
+    --color-article-bg: oklch(0.85 0.07 var(--hue, 0deg))
+
     background-image: linear-gradient(to right, var(--color-bg), var(--color-article-bg) 50%)
     > *
       position: relative
