@@ -17,10 +17,12 @@ permalink_lang:
 <div id="AccessMethodsDiagramView" class="-fullwidth">
 
 {% assign lang = page.lang | default: site.active_lang | default: site.default_lang | default: "en" %}
+{% assign method_count = site.data.access_methods.size %}
 {% for method in site.data.access_methods %}
+{% assign hue = 360 | divided_by: method_count | times: forloop.index0 %}
 {% assign title = method.title[lang] %}
 {% assign desc = method.description[lang] %}
-<article>
+<article style="--hue: {{ hue }}deg;">
   <h2>
     <a href="{% if method.is_external %}{{ method.url }}{% else %}{{ method.url | relative_url }}{% endif %}"{% if method.is_external %} target="_blank"{% endif %}>
       {{ title }}
