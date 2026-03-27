@@ -336,7 +336,7 @@ async function main() {
     const statsDatasetIds = statJson.map((item) => item.dataset);
     console.log(`Found ${statsDatasetIds.length} datasets in stats file`);
 
-    const datasetsSymbolDir = path.join(__dirname, "..", "assets", "images", "datasets_symbol");
+    const datasetsSymbolDir = path.join(__dirname, "..", "assets", "images", "dataset_symbols");
     if (!fs.existsSync(datasetsSymbolDir)) {
       fs.mkdirSync(datasetsSymbolDir, { recursive: true });
     }

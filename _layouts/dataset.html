@@ -33,7 +33,7 @@ toc: true
 {% include datasets-json.html %}
 <style>
   .global-navigation > .background::before {
-    background-image: url("{{ '/assets/images/datasets_symbol/' | append: page.dataset.id | append: '.svg' | relative_url }}");
+    background-image: url("{{ '/assets/images/dataset_symbols/' | append: page.dataset.id | append: '.svg' | relative_url }}");
   }
 </style>
 
@@ -41,7 +41,7 @@ toc: true
     <article class="inner">
         <header>
             <div class="icon" aria-hidden="true">
-                <img src="{{ '/assets/images/datasets_symbol/' | append: page.dataset.id | append: '.svg' | relative_url }}" alt="Dataset Icon" onerror="this.outerHTML='<svg class=&quot;icon -svg&quot; width=&quot;48&quot; height=&quot;48&quot; viewBox=&quot;0 0 48 48&quot;><rect width=&quot;48&quot; height=&quot;48&quot; fill=&quot;#ddd&quot;/></svg>'" style="width: 48px; height: 48px; object-fit: contain;" />
+                <img src="{{ '/assets/images/dataset_symbols/' | append: page.dataset.id | append: '.svg' | relative_url }}" alt="Dataset Icon" onerror="this.outerHTML='<svg class=&quot;icon -svg&quot; width=&quot;48&quot; height=&quot;48&quot; viewBox=&quot;0 0 48 48&quot;><rect width=&quot;48&quot; height=&quot;48&quot; fill=&quot;#ddd&quot;/></svg>'" style="width: 48px; height: 48px; object-fit: contain;" />
             </div>
             <h2 id="dataset-title">{{ _title }}</h2>
         </header>

@@ -299,7 +299,7 @@ class DatasetCard {
     const size = this.#options.iconSize || 48;
     
     if (this.#dataset && this.#dataset.id) {
-      return `<img src="/assets/images/datasets_symbol/${this.#escapeHtml(this.#dataset.id)}.svg" class="icon -svg" width="${size}" height="${size}" style="width: ${size}px; height: ${size}px; object-fit: contain;" alt="Icon" onerror="this.outerHTML='<svg class=\\'icon -svg\\' width=\\'${size}\\' height=\\'${size}\\' viewBox=\\'0 0 ${size} ${size}\\'><rect width=\\'${size}\\' height=\\'${size}\\' fill=\\'#ddd\\'/></svg>'"/>`;
+      return `<img src="/assets/images/dataset_symbols/${this.#escapeHtml(this.#dataset.id)}.svg" class="icon -svg" width="${size}" height="${size}" style="width: ${size}px; height: ${size}px; object-fit: contain;" alt="Icon" onerror="this.outerHTML='<svg class=\\'icon -svg\\' width=\\'${size}\\' height=\\'${size}\\' viewBox=\\'0 0 ${size} ${size}\\'><rect width=\\'${size}\\' height=\\'${size}\\' fill=\\'#ddd\\'/></svg>'"/>`;
     }
 
     // fallback simple placeholder
