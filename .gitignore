@@ -23,3 +23,6 @@ _data/downloads.json
 
 # generated dataset icons
 assets/images/dataset_symbols/
+
+# generated styles
+assets/css/tagcolors.css

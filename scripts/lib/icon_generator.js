@@ -61,52 +61,6 @@ function hashString(str) {
   return h >>> 0;
 }
 
-function hexToHsl(hex) {
-  if (!hex || !/^#([0-9a-f]{6})$/i.test(hex)) return { h: 0, s: 0, l: 50 };
-  const r = parseInt(hex.slice(1, 3), 16) / 255;
-  const g = parseInt(hex.slice(3, 5), 16) / 255;
-  const b = parseInt(hex.slice(5, 7), 16) / 255;
-  const max = Math.max(r, g, b),
-    min = Math.min(r, g, b);
-  let h, s;
-  const l = (max + min) / 2;
-  if (max === min) {
-    h = s = 0;
-  } else {
-    const d = max - min;
-    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-    switch (max) {
-      case r:
-        h = (g - b) / d + (g < b ? 6 : 0);
-        break;
-      case g:
-        h = (b - r) / d + 2;
-        break;
-      default:
-        h = (r - g) / d + 4;
-    }
-    h /= 6;
-  }
-  return {
-    h: Math.round(h * 360),
-    s: Math.round(s * 100),
-    l: Math.round(l * 100),
-  };
-}
-
-function hslToHex(h, s, l) {
-  l /= 100;
-  const a = (s * Math.min(l, 1 - l)) / 100;
-  const f = (n) => {
-    const k = (n + h / 30) % 12;
-    const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
-    return Math.round(255 * color)
-      .toString(16)
-      .padStart(2, "0");
-  };
-  return `#${f(0)}${f(8)}${f(4)}`;
-}
-
 function oklchToHex(l, c, h) {
   let r, g, bl;
   let clampedC = c;
@@ -137,7 +91,7 @@ function oklchToHex(l, c, h) {
   return `#${toHex(r)}${toHex(g)}${toHex(bl)}`;
 }
 
-function generateHashBasedColor(tagId) {
+function getTagOklch(tagId) {
   let hash = 0;
   for (let i = 0; i < tagId.length; i++) {
     const ch = tagId.charCodeAt(i);
@@ -145,15 +99,21 @@ function generateHashBasedColor(tagId) {
     hash = hash & hash;
   }
   const hue = Math.abs(hash) % 360;
-  const lightness = 0.65;
-  const chroma = 0.15;
-  return oklchToHex(lightness, chroma, hue);
+  return { h: hue, c: 0.15, l: 0.65 };
+}
+
+function getGradientTopHex(tag, lightenPercent) {
+  const idStr = typeof tag === "object" && tag && tag.id ? tag.id : tag;
+  if (typeof idStr !== "string") return "#aaaaaa";
+  const { h, c, l } = getTagOklch(idStr);
+  return oklchToHex(Math.min(1.0, l + (lightenPercent / 100)), c, h);
 }
 
 function getTagColor(tag) {
   const id = typeof tag === "object" && tag && tag.id ? tag.id : tag;
   if (typeof id !== "string") return "#888888";
-  return generateHashBasedColor(id);
+  const { h, c, l } = getTagOklch(id);
+  return oklchToHex(l, c, h);
 }
 
 function createSvg(tags = [], size = 48) {
@@ -197,8 +157,7 @@ function createSvg(tags = [], size = 48) {
   if (rawCount === 1) {
     const tag0 = tags[0];
     const baseHex = getTagColor(tag0);
-    const hsl = hexToHsl(baseHex);
-    const topHex = hslToHex(hsl.h, hsl.s, Math.min(100, hsl.l + 14));
+    const topHex = getGradientTopHex(tag0, 14);
     const idBase = `g_${Math.abs(hashString(String(tag0)))}_single`;
     const id = P.USE_RANDOM_ID ? `${idBase}_${Math.floor(Math.random() * 1e5)}` : idBase;
     const grad = `<linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="${topHex}" stop-opacity="${P.GRAD_OPACITY_START}"/><stop offset="100%" stop-color="${baseHex}" stop-opacity="${P.GRAD_OPACITY_END}"/></linearGradient>`;
@@ -238,8 +197,7 @@ function createSvg(tags = [], size = 48) {
   arr.forEach((tag, i) => {
     const angle = start + step * i;
     const baseHex = getTagColor(tag);
-    const hsl = hexToHsl(baseHex);
-    const topHex = hslToHex(hsl.h, hsl.s, Math.min(100, hsl.l + lightenL));
+    const topHex = getGradientTopHex(tag, lightenL);
     const idBase = `g_${Math.abs(hashString(String(tag)))}_${i}`;
     const id = P.USE_RANDOM_ID ? `${idBase}_${Math.floor(Math.random() * 1e5)}` : idBase;
     gradients.push(
@@ -271,8 +229,6 @@ function generateTagStyles(tags) {
 module.exports = {
   createSvg,
   getTagColor,
-  hexToHsl,
-  hslToHex,
   oklchToHex,
   generateTagStyles
 };
