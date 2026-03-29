@@ -11,7 +11,7 @@ const SVG_CONFIG = {
   PETAL_CTRL_TOP_Y: 20,
   PETAL_CTRL_LOW_Y: 55,
   GRAD_OPACITY_START: 1,
-  GRAD_OPACITY_END: 0.2,
+  GRAD_OPACITY_END: 0.9,
   USE_RANDOM_ID: true,
   WIDTH_MAX: 32,
   WIDTH_MIN: 12,
@@ -176,7 +176,7 @@ function createSvg(tags = [], size = 48) {
       P.SINGLE_PETAL_EMPHASIS
     ).toFixed(4)}) translate(0,${translateY.toFixed(
       4
-    )})"><path d="${path}" fill="url(#${id})" style="mix-blend-mode:multiply"/></g></svg>`.trim();
+    )})"><path d="${path}" fill="url(#${id})" style="mix-blend-mode:color-burn"/></g></svg>`.trim();
   }
 
   const arr = tags.slice(0, P.MAX_PETALS);
@@ -212,7 +212,7 @@ function createSvg(tags = [], size = 48) {
       `<linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="${topHex}" stop-opacity="${P.GRAD_OPACITY_START}"/><stop offset="100%" stop-color="${baseHex}" stop-opacity="${P.GRAD_OPACITY_END}"/></linearGradient>`
     );
     petals.push(
-      `<path d="${path}" fill="url(#${id})" transform="rotate(${angle} 0 ${APEX_Y})" style="mix-blend-mode:multiply"/>`
+      `<path d="${path}" fill="url(#${id})" transform="rotate(${angle} 0 ${APEX_Y})" style="mix-blend-mode:color-burn"/>`
     );
   });
 
