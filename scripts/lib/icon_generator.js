@@ -119,16 +119,19 @@ function getTagColor(tag) {
 function createSvg(options = [], size = 48) {
   let tags = [];
   let provenance = "original";
+  let registrationType = "";
   
   if (Array.isArray(options)) {
     tags = options;
   } else if (typeof options === "object" && options !== null) {
     tags = options.tags || [];
     provenance = options.provenance || "original";
+    registrationType = options.registrationType || "";
   }
 
   const is3rdParty = typeof provenance === "string" && 
                      (provenance.toLowerCase().includes("third") || provenance.toLowerCase().includes("3rd"));
+  const isAddedByRdfPortal = typeof registrationType === "string" && registrationType === "added_by_rdfportal";
 
   const P = SVG_CONFIG;
   const rawCount = Array.isArray(tags) ? tags.length : 0;
@@ -143,13 +146,16 @@ function createSvg(options = [], size = 48) {
   const APEX_Y = P.APEX_Y * lenFactor;
   const CTRL_LOW_Y = P.PETAL_CTRL_LOW_Y * lenFactor;
   
+  // Create a gap at the center if added_by_rdfportal
+  const BASE_Y = isAddedByRdfPortal ? APEX_Y - 12 : APEX_Y;
+  
   let path;
   if (is3rdParty) {
     const notchX = ctrlX * 0.45;
     const notchY = P.PETAL_TOP_Y + 12;
-    path = `M0 ${APEX_Y} C ${ctrlX} ${CTRL_LOW_Y}, ${ctrlX} ${P.PETAL_CTRL_TOP_Y}, ${notchX} ${P.PETAL_TOP_Y} L 0 ${notchY} L -${notchX} ${P.PETAL_TOP_Y} C -${ctrlX} ${P.PETAL_CTRL_TOP_Y}, -${ctrlX} ${CTRL_LOW_Y}, 0 ${APEX_Y}Z`;
+    path = `M0 ${BASE_Y} C ${ctrlX} ${CTRL_LOW_Y}, ${ctrlX} ${P.PETAL_CTRL_TOP_Y}, ${notchX} ${P.PETAL_TOP_Y} L 0 ${notchY} L -${notchX} ${P.PETAL_TOP_Y} C -${ctrlX} ${P.PETAL_CTRL_TOP_Y}, -${ctrlX} ${CTRL_LOW_Y}, 0 ${BASE_Y}Z`;
   } else {
-    path = `M0 ${APEX_Y} C ${ctrlX} ${CTRL_LOW_Y}, ${ctrlX} ${P.PETAL_CTRL_TOP_Y}, 0 ${P.PETAL_TOP_Y} C -${ctrlX} ${P.PETAL_CTRL_TOP_Y}, -${ctrlX} ${CTRL_LOW_Y}, 0 ${APEX_Y}Z`;
+    path = `M0 ${BASE_Y} C ${ctrlX} ${CTRL_LOW_Y}, ${ctrlX} ${P.PETAL_CTRL_TOP_Y}, 0 ${P.PETAL_TOP_Y} C -${ctrlX} ${P.PETAL_CTRL_TOP_Y}, -${ctrlX} ${CTRL_LOW_Y}, 0 ${BASE_Y}Z`;
   }
 
   const V = V_ALIGN;

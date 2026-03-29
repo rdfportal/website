@@ -391,7 +391,8 @@ async function main() {
       // Generate and save SVG icon
       const svgContent = createSvg({
         tags: mergedMetadata.tags || [],
-        provenance: mergedMetadata.rdf_provenance_type
+        provenance: mergedMetadata.rdf_provenance_type,
+        registrationType: mergedMetadata.registration_type
       });
       const svgPath = path.join(datasetsSymbolDir, `${id}.svg`);
       fs.writeFileSync(svgPath, svgContent, "utf-8");
