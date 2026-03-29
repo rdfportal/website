@@ -116,7 +116,20 @@ function getTagColor(tag) {
   return oklchToHex(l, c, h);
 }
 
-function createSvg(tags = [], size = 48) {
+function createSvg(options = [], size = 48) {
+  let tags = [];
+  let provenance = "original";
+  
+  if (Array.isArray(options)) {
+    tags = options;
+  } else if (typeof options === "object" && options !== null) {
+    tags = options.tags || [];
+    provenance = options.provenance || "original";
+  }
+
+  const is3rdParty = typeof provenance === "string" && 
+                     (provenance.toLowerCase().includes("third") || provenance.toLowerCase().includes("3rd"));
+
   const P = SVG_CONFIG;
   const rawCount = Array.isArray(tags) ? tags.length : 0;
   const effectiveN = Math.min(Math.max(rawCount, 1), P.MAX_PETALS);
@@ -129,7 +142,15 @@ function createSvg(tags = [], size = 48) {
   const lenFactor = 1 - P.LENGTH_COMPRESS * t2;
   const APEX_Y = P.APEX_Y * lenFactor;
   const CTRL_LOW_Y = P.PETAL_CTRL_LOW_Y * lenFactor;
-  const path = `M0 ${APEX_Y} C ${ctrlX} ${CTRL_LOW_Y}, ${ctrlX} ${P.PETAL_CTRL_TOP_Y}, 0 ${P.PETAL_TOP_Y} C -${ctrlX} ${P.PETAL_CTRL_TOP_Y}, -${ctrlX} ${CTRL_LOW_Y}, 0 ${APEX_Y}Z`;
+  
+  let path;
+  if (is3rdParty) {
+    const notchX = ctrlX * 0.45;
+    const notchY = P.PETAL_TOP_Y + 12;
+    path = `M0 ${APEX_Y} C ${ctrlX} ${CTRL_LOW_Y}, ${ctrlX} ${P.PETAL_CTRL_TOP_Y}, ${notchX} ${P.PETAL_TOP_Y} L 0 ${notchY} L -${notchX} ${P.PETAL_TOP_Y} C -${ctrlX} ${P.PETAL_CTRL_TOP_Y}, -${ctrlX} ${CTRL_LOW_Y}, 0 ${APEX_Y}Z`;
+  } else {
+    path = `M0 ${APEX_Y} C ${ctrlX} ${CTRL_LOW_Y}, ${ctrlX} ${P.PETAL_CTRL_TOP_Y}, 0 ${P.PETAL_TOP_Y} C -${ctrlX} ${P.PETAL_CTRL_TOP_Y}, -${ctrlX} ${CTRL_LOW_Y}, 0 ${APEX_Y}Z`;
+  }
 
   const V = V_ALIGN;
   let translateY = 0;
