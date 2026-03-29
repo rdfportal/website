@@ -392,7 +392,8 @@ async function main() {
       const svgContent = createSvg({
         tags: mergedMetadata.tags || [],
         provenance: mergedMetadata.rdf_provenance_type,
-        registrationType: mergedMetadata.registration_type
+        registrationType: mergedMetadata.registration_type,
+        updatedAt: statsData.updated_at
       });
       const svgPath = path.join(datasetsSymbolDir, `${id}.svg`);
       fs.writeFileSync(svgPath, svgContent, "utf-8");

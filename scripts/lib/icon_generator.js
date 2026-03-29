@@ -120,6 +120,7 @@ function createSvg(options = [], size = 48) {
   let tags = [];
   let provenance = "original";
   let registrationType = "";
+  let updatedAt = "";
   
   if (Array.isArray(options)) {
     tags = options;
@@ -127,7 +128,35 @@ function createSvg(options = [], size = 48) {
     tags = options.tags || [];
     provenance = options.provenance || "original";
     registrationType = options.registrationType || "";
+    updatedAt = options.updatedAt || "";
   }
+
+  // Calculate freshness (1.0 = new, 0.0 = 5+ years old)
+  let freshness = 1.0;
+  if (updatedAt) {
+    const d = new Date(updatedAt);
+    if (!isNaN(d.getTime())) {
+      const daysPassed = (Date.now() - d.getTime()) / (1000 * 60 * 60 * 24);
+      const maxDays = 1825; // 5 years
+      freshness = Math.max(0, Math.min(1.0, 1 - (daysPassed / maxDays)));
+    }
+  }
+
+  // Define target c (chroma) and l (lightness) 
+  // Fresh: c=0.15, l=0.65. Old: c=0.05, l=0.50 (moderate desaturation)
+  const cTarget = 0.10 + 0.10 * freshness;
+  const lTarget = 0.60 + 0.05 * freshness;
+
+  // Helper inside createSvg for applying freshness
+  const getFreshColorHex = (tagObj, lightenL) => {
+    const idStr = typeof tagObj === "object" && tagObj && tagObj.id ? tagObj.id : tagObj;
+    if (typeof idStr !== "string") return { baseHex: "#888888", topHex: "#aaaaaa" };
+    const { h } = getTagOklch(idStr);
+    return {
+      baseHex: oklchToHex(lTarget, cTarget, h),
+      topHex: oklchToHex(Math.min(1.0, lTarget + (lightenL / 100)), cTarget, h)
+    };
+  };
 
   const is3rdParty = typeof provenance === "string" && 
                      (provenance.toLowerCase().includes("third") || provenance.toLowerCase().includes("3rd"));
@@ -183,8 +212,9 @@ function createSvg(options = [], size = 48) {
 
   if (rawCount === 1) {
     const tag0 = tags[0];
-    const baseHex = getTagColor(tag0);
-    const topHex = getGradientTopHex(tag0, 14);
+    // Scale gradient intensity by freshness
+    const lightenL = 14 * (0.2 + 0.8 * freshness);
+    const { baseHex, topHex } = getFreshColorHex(tag0, lightenL);
     const idBase = `g_${Math.abs(hashString(String(tag0)))}_single`;
     const id = P.USE_RANDOM_ID ? `${idBase}_${Math.floor(Math.random() * 1e5)}` : idBase;
     const grad = `<linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="${topHex}" stop-opacity="${P.GRAD_OPACITY_START}"/><stop offset="100%" stop-color="${baseHex}" stop-opacity="${P.GRAD_OPACITY_END}"/></linearGradient>`;
@@ -217,14 +247,14 @@ function createSvg(options = [], size = 48) {
   const start = fullCircle ? 0 : -dynamicSpan / 2;
   const lightenBase = 8,
     lightenExtra = 8;
-  const lightenL = Math.min(lightenBase + (1 - t2) * lightenExtra, 20);
+  const rawLightenL = Math.min(lightenBase + (1 - t2) * lightenExtra, 20);
+  const lightenL = rawLightenL * (0.2 + 0.8 * freshness);
   const gradients = [];
   const petals = [];
 
   arr.forEach((tag, i) => {
     const angle = start + step * i;
-    const baseHex = getTagColor(tag);
-    const topHex = getGradientTopHex(tag, lightenL);
+    const { baseHex, topHex } = getFreshColorHex(tag, lightenL);
     const idBase = `g_${Math.abs(hashString(String(tag)))}_${i}`;
     const id = P.USE_RANDOM_ID ? `${idBase}_${Math.floor(Math.random() * 1e5)}` : idBase;
     gradients.push(
