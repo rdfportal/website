@@ -89,7 +89,7 @@ class TopPageTilingDatasetsViewController {
     const totalDriftPx = elapsed * TopPageTilingDatasetsViewController.DRIFT_SPEED * -1;
 
     // Calculate Grid Shift (how many tiles we have moved)
-    const gridShiftCount = Math.floor(totalDriftPx / TopPageTilingDatasetsViewController.TILE_SIZE);
+    const gridShiftCount = Math.trunc(totalDriftPx / TopPageTilingDatasetsViewController.TILE_SIZE);
 
     // Calculate Modulo Drift (remainder for visual transform)
     // This will be in range (-320..0]
@@ -195,12 +195,22 @@ class TopPageTilingDatasetsViewController {
     return Math.ceil(screenSize / TopPageTilingDatasetsViewController.TILE_SIZE) + 4;
   }
 
+  #createCard(ds) {
+    return new DatasetCard(ds, {
+      showLink: true,
+      linkBaseUrl: ".",
+      showDescription: true,
+      showFallbackDescription: true,
+      customClasses: [],
+    });
+  }
+
   #generateRandomMatrix(laneCount) {
     const matrix = [];
     for (let i = 0; i < laneCount; i++) {
       const lane = [];
       for (let j = 0; j < TopPageTilingDatasetsViewController.DATASET_COUNT_PER_LANE; j++) {
-        lane.push(this.#getRandomDataset());
+        lane.push(this.#createCard(this.#getRandomDataset()));
       }
       matrix.push(lane);
     }
@@ -237,6 +247,7 @@ class TopPageTilingDatasetsViewController {
 
     const itemsPerLane = TopPageTilingDatasetsViewController.DATASET_COUNT_PER_LANE;
     const newMatrix = [];
+    const reusedCards = new Set();
 
     // Initialize new matrix
     for (let i = 0; i < nextLaneCount; i++) {
@@ -283,17 +294,28 @@ class TopPageTilingDatasetsViewController {
             oldMatrix[targetOldLaneIdx] &&
             oldMatrix[targetOldLaneIdx][Math.floor(targetOldItemIdx)] // Snap item idx
           ) {
-            newMatrix[newLaneIdx].push(oldMatrix[targetOldLaneIdx][Math.floor(targetOldItemIdx)]);
+            const card = oldMatrix[targetOldLaneIdx][Math.floor(targetOldItemIdx)];
+            newMatrix[newLaneIdx].push(card);
+            reusedCards.add(card);
           } else {
-            newMatrix[newLaneIdx].push(this.#getRandomDataset());
+            newMatrix[newLaneIdx].push(this.#createCard(this.#getRandomDataset()));
           }
         }
       }
 
       while (newMatrix[newLaneIdx].length < itemsPerLane) {
-        newMatrix[newLaneIdx].push(this.#getRandomDataset());
+        newMatrix[newLaneIdx].push(this.#createCard(this.#getRandomDataset()));
       }
     }
+
+    // Clean up unused old cards to prevent memory leaks (MutationObserver)
+    oldMatrix.forEach(lane => {
+      lane.forEach(card => {
+        if (!reusedCards.has(card)) {
+          card.remove();
+        }
+      });
+    });
 
     return newMatrix;
   }
@@ -305,14 +327,7 @@ class TopPageTilingDatasetsViewController {
       const lane = document.createElement('div');
       lane.className = 'lane';
 
-      laneData.forEach(ds => {
-        const card = new DatasetCard(ds, {
-          showLink: true,
-          linkBaseUrl: ".",
-          showDescription: true,
-          showFallbackDescription: true,
-          customClasses: [],
-        });
+      laneData.forEach(card => {
         const el = card.getElement();
         el.style.position = '';
         el.style.left = '';
