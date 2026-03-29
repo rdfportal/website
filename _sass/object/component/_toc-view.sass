@@ -14,8 +14,10 @@
         border-radius: 4px
         text-decoration: none !important
         display: block
-        transition: background-color 0.2s
+        transition: opacity 0.2s
+        opacity: var(--opacity-inactive)
         &:hover, &.-active
-          background-color: var(--color-warm-gray-strong)
+          opacity: 1
+          // background-color: var(--color-warm-gray-strong)
       > ul
         display: none
