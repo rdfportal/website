@@ -29,8 +29,6 @@ toc: true
 <!-- Load Turtle first because prism-sparql extends the Turtle grammar -->
 <script src="{{ '/assets/vendor/prism/prism-turtle.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/vendor/prism/prism-sparql.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/DatasetsManager.js' | relative_url }}"></script>
-{% include datasets-json.html %}
 <style>
   .global-navigation > .background::before {
     background-image: url("{{ '/assets/images/dataset_symbols/' | append: page.dataset.id | append: '.svg' | relative_url }}");
