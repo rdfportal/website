@@ -96,18 +96,18 @@ Each dataset is assigned one or more tags indicating its domain category. Tags a
 
 | Icon | Tag | Description |
 |------|-----|-------------|
-| 🌸 | **Gene** | Datasets related to genes, gene annotations, and gene-level information |
-| 🌸 | **Gene expression** | Datasets containing gene expression profiles and transcriptomics data |
-| 🌸 | **Genome** | Datasets related to genome sequences and genomic features |
-| 🌸 | **Protein** | Datasets related to protein sequences, structures, and functions |
-| 🌸 | **Drug/Chemical** | Datasets related to drugs, chemical compounds, and bioactive molecules |
-| 🌸 | **Health/Disease** | Datasets related to diseases, clinical variants, and medical information |
-| 🌸 | **Glycan** | Datasets related to glycans and carbohydrate structures |
-| 🌸 | **Organism** | Datasets related to organism-level information and taxonomy |
-| 🌸 | **Cell** | Datasets related to cell-level information |
-| 🌸 | **Bioresource** | Datasets related to biological resource collections (culture collections, biobanks) |
-| 🌸 | **Polymorphism** | Datasets related to genetic variants, SNPs, and polymorphisms |
-| 🌸 | **Sequence** | Datasets related to nucleotide or amino acid sequences |
+| <span class="tags-container"><span class="tag" data-tag="Gene"></span></span> | **Gene** | Datasets related to genes, gene annotations, and gene-level information |
+| <span class="tags-container"><span class="tag" data-tag="Gene expression"></span></span> | **Gene expression** | Datasets containing gene expression profiles and transcriptomics data |
+| <span class="tags-container"><span class="tag" data-tag="Genome"></span></span> | **Genome** | Datasets related to genome sequences and genomic features |
+| <span class="tags-container"><span class="tag" data-tag="Protein"></span></span> | **Protein** | Datasets related to protein sequences, structures, and functions |
+| <span class="tags-container"><span class="tag" data-tag="Drug/Chemical"></span></span> | **Drug/Chemical** | Datasets related to drugs, chemical compounds, and bioactive molecules |
+| <span class="tags-container"><span class="tag" data-tag="Health/Disease"></span></span> | **Health/Disease** | Datasets related to diseases, clinical variants, and medical information |
+| <span class="tags-container"><span class="tag" data-tag="Glycan"></span></span> | **Glycan** | Datasets related to glycans and carbohydrate structures |
+| <span class="tags-container"><span class="tag" data-tag="Organism"></span></span> | **Organism** | Datasets related to organism-level information and taxonomy |
+| <span class="tags-container"><span class="tag" data-tag="Cell"></span></span> | **Cell** | Datasets related to cell-level information |
+| <span class="tags-container"><span class="tag" data-tag="Bioresource"></span></span> | **Bioresource** | Datasets related to biological resource collections (culture collections, biobanks) |
+| <span class="tags-container"><span class="tag" data-tag="Polymorphism"></span></span> | **Polymorphism** | Datasets related to genetic variants, SNPs, and polymorphisms |
+| <span class="tags-container"><span class="tag" data-tag="Sequence"></span></span> | **Sequence** | Datasets related to nucleotide or amino acid sequences |
 
 <!-- TODO: Verify the complete list of tags and replace icon paths with actual petal icon files -->
 
