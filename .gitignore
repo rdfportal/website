@@ -26,3 +26,10 @@ assets/images/dataset_symbols/
 
 # generated styles
 assets/css/tagcolors.css
+
+# Editor settings
+.vscode/
+
+# Local logs and temp files
+jekyll_error.log
+test.html

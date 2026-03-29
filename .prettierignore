@@ -1,0 +1,12 @@
+# Prettier ignore file
+# Exclude SASS files to prevent indentation issues
+**/*.sass
+**/*.scss
+
+# Exclude build directories
+_site/
+node_modules/
+vendor/
+
+# Exclude config files that should maintain specific formatting
+_config.yml
