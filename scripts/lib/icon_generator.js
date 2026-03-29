@@ -47,6 +47,10 @@ function escapeHtml(str) {
     .replace(/'/g, "&#39;");
 }
 
+function cssEscape(str) {
+  return String(str).replace(/[!"#$%&'()*+,.\/:;<=>?@[\\\]^`{|}~]/g, '\\$&');
+}
+
 function hashString(str) {
   let h = 0x811c9dc5;
   for (let i = 0; i < str.length; i++) {
@@ -255,10 +259,20 @@ function createSvg(tags = [], size = 48) {
   )}</g></svg>`.trim();
 }
 
+function generateTagStyles(tags) {
+  if (!Array.isArray(tags)) return "";
+  return tags.map((tagId) => {
+    const color = getTagColor(tagId);
+    const esc = cssEscape(tagId);
+    return `[data-tag="${esc}"]::before { background-color: ${color}; }`;
+  }).join("\n");
+}
+
 module.exports = {
   createSvg,
   getTagColor,
   hexToHsl,
   hslToHex,
-  oklchToHex
+  oklchToHex,
+  generateTagStyles
 };

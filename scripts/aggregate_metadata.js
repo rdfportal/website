@@ -7,7 +7,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const statJson = require("../_data/datasets_stats.json");
-const { createSvg } = require("./lib/icon_generator.js");
+const { createSvg, generateTagStyles } = require("./lib/icon_generator.js");
 
 const DATASETS_FOLDER = path.join(__dirname, "..", "assets", "datasets");
 
@@ -422,7 +422,19 @@ async function main() {
 
     fs.writeFileSync(outputFile, JSON.stringify(datasets, null, 2), "utf-8");
 
+    // SASS(CSS)ファイルとしてタグ色を保存
+    const allTags = new Set();
+    for (const d of datasets) {
+      if (d.tags && Array.isArray(d.tags)) {
+        d.tags.forEach(t => t && allTags.add(t));
+      }
+    }
+    const tagsCss = generateTagStyles(Array.from(allTags));
+    const tagStylesFile = path.join(__dirname, "../assets/css/tagcolors.css");
+    fs.writeFileSync(tagStylesFile, tagsCss, "utf-8");
+
     console.log(`\n🎉 Generated ${outputFile}`);
+    console.log(`🎨 Generated ${tagStylesFile} for ${allTags.size} tags`);
     console.log(`📊 Total datasets: ${datasets.length}`);
 
     // 統計情報
