@@ -5,8 +5,8 @@ class DatasetCard {
   static CARD_CLASS = "dataset-card";
   static TITLE_CLASS = "title";
   static DESCRIPTION_CLASS = "description";
-  static TAGS_CLASS = "tags-container";
-  static TAG_CLASS = "tag";
+  static TAGS_CLASS = "tag-container";
+  static TAG_CLASS = "tag-icon";
   static LINK_CLASS = "link";
   static DEFAULTS = {
     FALLBACK_TITLE: "Unknown Dataset",

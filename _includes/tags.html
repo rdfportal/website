@@ -1,5 +1,5 @@
 {% assign _tags = include.tags | default: [] %}
-<div class="tags-container">
+<div class="tag-container">
   {% assign lang = site.active_lang | default: "en" %}
   {% for tag in _tags %}
   {% if tag.id %}
@@ -9,6 +9,6 @@
   {% assign _lbl = tag %}
   {% assign _val = tag %}
   {% endif %}
-  <span class="tag" data-tag="{{ _val }}">{{ _lbl }}</span>{% if forloop.last == false %} {% endif %}
+  <span class="tag-icon" data-tag="{{ _val }}">{{ _lbl }}</span>{% if forloop.last == false %} {% endif %}
   {% endfor %}
 </div>
