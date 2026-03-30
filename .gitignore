@@ -2,6 +2,7 @@ docs
 
 # build artefacts
 _site
+_site_prod
 
 # tasks to do
 LOG.md
