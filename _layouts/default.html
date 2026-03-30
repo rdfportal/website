@@ -152,8 +152,8 @@
         {% endif %}
         {% endif %}
 
-        {% assign site_host = site.url | remove: "http:" | remove: "https:" %}
-        {% assign final_url = site_host | append: final_baseurl | append: target_path %}
+        {% assign target_url = final_baseurl | append: target_path | replace: "//", "/" %}
+        {% assign final_url = site.url | append: target_url %}
 
         {% if counterpart_lang == "ja" %}
         {% assign counterpart_label = "日本語" %}

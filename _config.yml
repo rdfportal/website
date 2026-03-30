@@ -1,8 +1,8 @@
 title: RDF Portal
 description: RDFポータルサイトのリニューアル
 primary_lang: "en"
-baseurl: "/website" # GitHub Pagesのサブディレクトリ
-url: "https://rdfportal.github.io" # GitHub Pagesのベース URL
+baseurl: "" # 本番ドメイン直下用
+url: "https://rdfportal.org" # GitHub Pages および 本番のベース URL
 
 # Build settings
 markdown: kramdown

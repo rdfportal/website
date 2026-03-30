@@ -197,10 +197,11 @@ class DatasetCard {
     if (
       this.#options.showLink &&
       this.#dataset.id &&
-      this.#options.linkBaseUrl
+      typeof this.#options.linkBaseUrl === "string"
     ) {
+      const baseUrlClean = this.#options.linkBaseUrl.replace(/\/$/, "");
       const href = this.#escapeHtml(
-        this.#options.linkBaseUrl.replace(/\/$/, "") +
+        (baseUrlClean === "" ? "" : baseUrlClean) +
         "/dataset/" +
         encodeURIComponent(this.#dataset.id) +
         "/"
