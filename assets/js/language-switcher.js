@@ -12,8 +12,16 @@
     var switcher = switcherDiv ? switcherDiv.querySelector('a') : null;
     if (!switcher || !switcherDiv) return;
 
-    var targetUrl = switcher.getAttribute('href');
-    if (!targetUrl) return;
+    var rawUrl = switcher.getAttribute('data-switch-url');
+    if (!rawUrl || !rawUrl.startsWith("rel:")) return;
+    
+    var targetUrl = rawUrl.substring(4); // Remove "rel:"
+
+    // Override the default link behavior
+    switcher.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.location.href = targetUrl;
+    });
 
     // Optimization: Verify existence only for likely dynamic paths (News, Logs) 
     // or generally if we want to be safe. "About" and "Home" are static and safe.

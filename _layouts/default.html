@@ -153,7 +153,7 @@
         {% endif %}
 
         {% assign target_url = final_baseurl | append: target_path | replace: "//", "/" %}
-        {% assign final_url = site.url | append: target_url %}
+        {% assign final_url = target_url %}
 
         {% if counterpart_lang == "ja" %}
         {% assign counterpart_label = "日本語" %}
@@ -162,7 +162,8 @@
         {% endif %}
 
         <div data-current-lang="{{ active_lang }}">
-          <a href="{{ final_url }}" aria-label="{{ i18n_global.language_switcher.aria_label }}">
+          {% assign safe_target_url = "rel:" | append: target_url %}
+          <a href="#" data-switch-url="{{ safe_target_url }}" aria-label="{{ i18n_global.language_switcher.aria_label }}">
             {{ counterpart_label }}
           </a>
         </div>
