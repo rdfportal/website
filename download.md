@@ -57,7 +57,7 @@ downloads.json と datasets.json を id でマッチングするための lookup
           </td>
           <td>
             {% if dl and dl.formats.ntriples %}
-              <a href="{{ dl.formats.ntriples | remove: 'https:' | remove: 'http:' }}" class="button-view -download -ntriples" target="_blank" rel="noopener" aria-label="Download RDF files in N-Triples format" title="N-Triples">
+              <a href="#" data-download-url="rel:{{ dl.formats.ntriples }}" class="button-view -download -ntriples" target="_blank" rel="noopener" aria-label="Download RDF files in N-Triples format" title="N-Triples">
                 N-Triples
               </a>
             {% else %}
@@ -66,7 +66,7 @@ downloads.json と datasets.json を id でマッチングするための lookup
           </td>
           <td>
             {% if dl and dl.formats.turtle %}
-              <a href="{{ dl.formats.turtle | remove: 'https:' | remove: 'http:' }}" class="button-view -download -turtle" target="_blank" rel="noopener" aria-label="Download RDF files in Turtle format" title="Turtle">
+              <a href="#" data-download-url="rel:{{ dl.formats.turtle }}" class="button-view -download -turtle" target="_blank" rel="noopener" aria-label="Download RDF files in Turtle format" title="Turtle">
                 Turtle
               </a>
             {% else %}
@@ -75,7 +75,7 @@ downloads.json と datasets.json を id でマッチングするための lookup
           </td>
           <td>
             {% if dl and dl.formats.rdfxml %}
-              <a href="{{ dl.formats.rdfxml | remove: 'https:' | remove: 'http:' }}" class="button-view -download -rdfxml" target="_blank" rel="noopener" aria-label="Download RDF files in RDF-XML format" title="RDF-XML">
+              <a href="#" data-download-url="rel:{{ dl.formats.rdfxml }}" class="button-view -download -rdfxml" target="_blank" rel="noopener" aria-label="Download RDF files in RDF-XML format" title="RDF-XML">
                 RDF-XML
               </a>
             {% else %}
@@ -84,7 +84,7 @@ downloads.json と datasets.json を id でマッチングするための lookup
           </td>
           <td>
             {% if dl and dl.formats.jsonld %}
-              <a href="{{ dl.formats.jsonld | remove: 'https:' | remove: 'http:' }}" class="button-view -download -jsonld" target="_blank" rel="noopener" aria-label="Download RDF files in JSON-LD format" title="JSON-LD">
+              <a href="#" data-download-url="rel:{{ dl.formats.jsonld }}" class="button-view -download -jsonld" target="_blank" rel="noopener" aria-label="Download RDF files in JSON-LD format" title="JSON-LD">
                 JSON-LD
               </a>
             {% else %}
@@ -98,3 +98,17 @@ downloads.json と datasets.json を id でマッチングするための lookup
   </div>
 
 </div><!-- /#DownloadPageView -->
+
+<script>
+  // 多言語プラグインのURL破壊を回避するため、data-download-url に "rel:" カモフラージュ付きでURLを退避。
+  // 画面表示直後にJSで href 属性に本物のURLを注入することで、「右クリック保存」等のブラウザ標準機能を完全に維持する。
+  document.addEventListener("DOMContentLoaded", function() {
+    var downloadButtons = document.querySelectorAll('.button-view.-download[data-download-url]');
+    downloadButtons.forEach(function(btn) {
+      var rawUrl = btn.getAttribute('data-download-url');
+      if (rawUrl && rawUrl.startsWith('rel:')) {
+        btn.setAttribute('href', rawUrl.substring(4)); // "rel:" の4文字を取り除く
+      }
+    });
+  });
+</script>
