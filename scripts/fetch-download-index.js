@@ -15,7 +15,7 @@ const fs = require('fs');
 const https = require('https');
 const path = require('path');
 
-const DOWNLOAD_BASE = 'https://rdfportal.org/download';
+const DOWNLOAD_BASE = 'https://rdfportal.org';
 const DATASETS_FILE = path.resolve(__dirname, '../_data/datasets.json');
 const OUTPUT_FILE = path.resolve(__dirname, '../_data/downloads.json');
 
