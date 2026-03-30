@@ -13,6 +13,7 @@ cd scripts && bun install && cd ..
 
 # 各種メタデータ等を集約し、データセット生成処理を実行
 bun scripts/aggregate_metadata.js
+bun scripts/fetch-download-index.js
 
 # 開発用ローカルサーバーを立ち上げる
 bundle exec jekyll serve
@@ -90,8 +91,9 @@ GitHub Actions を経由せず、サーバー上で直接リポジトリを `git
 本番環境へ配置するHTMLを生成する際は、以下のように環境変数等を指定し、1回限りの `jekyll build`（クリーンビルド）を実行してください。
 
 ```bash
-# メタデータ等の最新化
+# メタデータ等の最新化とダウンロードリンク可否データの生成
 bun scripts/aggregate_metadata.js
+bun scripts/fetch-download-index.js
 
 # 古いキャッシュと出力フォルダを削除し、本番環境用としてクリーンビルドを実行
 rm -rf _site .jekyll-cache
