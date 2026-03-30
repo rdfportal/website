@@ -9,7 +9,7 @@
 ```bash
 # Ruby および JS スクリプト用の依存環境をインストール（初回のみ）
 bundle install
-cd scripts && bun install && cd ..
+(cd scripts && bun install)
 
 # 各種メタデータ等を集約し、データセット生成処理を実行
 bun scripts/aggregate_metadata.js
