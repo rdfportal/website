@@ -57,7 +57,7 @@ downloads.json と datasets.json を id でマッチングするための lookup
           </td>
           <td>
             {% if dl and dl.formats.ntriples %}
-              <a href="{{ dl.formats.ntriples }}" class="button-view -download -ntriples" target="_blank" rel="noopener" aria-label="Download RDF files in N-Triples format" title="N-Triples">
+              <a href="{{ dl.formats.ntriples | remove: 'https:' | remove: 'http:' }}" class="button-view -download -ntriples" target="_blank" rel="noopener" aria-label="Download RDF files in N-Triples format" title="N-Triples">
                 N-Triples
               </a>
             {% else %}
@@ -66,7 +66,7 @@ downloads.json と datasets.json を id でマッチングするための lookup
           </td>
           <td>
             {% if dl and dl.formats.turtle %}
-              <a href="{{ dl.formats.turtle }}" class="button-view -download -turtle" target="_blank" rel="noopener" aria-label="Download RDF files in Turtle format" title="Turtle">
+              <a href="{{ dl.formats.turtle | remove: 'https:' | remove: 'http:' }}" class="button-view -download -turtle" target="_blank" rel="noopener" aria-label="Download RDF files in Turtle format" title="Turtle">
                 Turtle
               </a>
             {% else %}
@@ -75,7 +75,7 @@ downloads.json と datasets.json を id でマッチングするための lookup
           </td>
           <td>
             {% if dl and dl.formats.rdfxml %}
-              <a href="{{ dl.formats.rdfxml }}" class="button-view -download -rdfxml" target="_blank" rel="noopener" aria-label="Download RDF files in RDF-XML format" title="RDF-XML">
+              <a href="{{ dl.formats.rdfxml | remove: 'https:' | remove: 'http:' }}" class="button-view -download -rdfxml" target="_blank" rel="noopener" aria-label="Download RDF files in RDF-XML format" title="RDF-XML">
                 RDF-XML
               </a>
             {% else %}
@@ -84,7 +84,7 @@ downloads.json と datasets.json を id でマッチングするための lookup
           </td>
           <td>
             {% if dl and dl.formats.jsonld %}
-              <a href="{{ dl.formats.jsonld }}" class="button-view -download -jsonld" target="_blank" rel="noopener" aria-label="Download RDF files in JSON-LD format" title="JSON-LD">
+              <a href="{{ dl.formats.jsonld | remove: 'https:' | remove: 'http:' }}" class="button-view -download -jsonld" target="_blank" rel="noopener" aria-label="Download RDF files in JSON-LD format" title="JSON-LD">
                 JSON-LD
               </a>
             {% else %}
