@@ -57,8 +57,8 @@ downloads.json と datasets.json を id でマッチングするための lookup
           </td>
           <td>
             {% if dl and dl.formats.ntriples %}
-              <a href="{{ dl.formats.ntriples }}" class="button-view -externallink -ntriples" target="_blank" rel="noopener" title="N-Triples">
-                {% lang 'en' %}Link{% endlang %}{% lang 'ja' %}リンク{% endlang %}
+              <a href="{{ dl.formats.ntriples }}" class="button-view -download -ntriples" target="_blank" rel="noopener" title="N-Triples">
+                N-Triples
               </a>
             {% else %}
               <span class="dl-unavailable">-</span>
@@ -66,8 +66,8 @@ downloads.json と datasets.json を id でマッチングするための lookup
           </td>
           <td>
             {% if dl and dl.formats.turtle %}
-              <a href="{{ dl.formats.turtle }}" class="button-view -externallink -turtle" target="_blank" rel="noopener" title="Turtle">
-                {% lang 'en' %}Link{% endlang %}{% lang 'ja' %}リンク{% endlang %}
+              <a href="{{ dl.formats.turtle }}" class="button-view -download -turtle" target="_blank" rel="noopener" title="Turtle">
+                Turtle
               </a>
             {% else %}
               <span class="dl-unavailable">-</span>
@@ -75,8 +75,8 @@ downloads.json と datasets.json を id でマッチングするための lookup
           </td>
           <td>
             {% if dl and dl.formats.rdfxml %}
-              <a href="{{ dl.formats.rdfxml }}" class="button-view -externallink -rdfxml" target="_blank" rel="noopener" title="RDF-XML">
-                {% lang 'en' %}Link{% endlang %}{% lang 'ja' %}リンク{% endlang %}
+              <a href="{{ dl.formats.rdfxml }}" class="button-view -download -rdfxml" target="_blank" rel="noopener" title="RDF-XML">
+                RDF-XML
               </a>
             {% else %}
               <span class="dl-unavailable">-</span>
@@ -84,8 +84,8 @@ downloads.json と datasets.json を id でマッチングするための lookup
           </td>
           <td>
             {% if dl and dl.formats.jsonld %}
-              <a href="{{ dl.formats.jsonld }}" class="button-view -externallink -jsonld" target="_blank" rel="noopener" title="JSON-LD">
-                {% lang 'en' %}Link{% endlang %}{% lang 'ja' %}リンク{% endlang %}
+              <a href="{{ dl.formats.jsonld }}" class="button-view -download -jsonld" target="_blank" rel="noopener" title="JSON-LD">
+                JSON-LD
               </a>
             {% else %}
               <span class="dl-unavailable">-</span>

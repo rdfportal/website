@@ -14,6 +14,7 @@
   align-items: center
   justify-content: center
   text-decoration: none !important
+  white-space: nowrap
   border: solid 1px #0003
   border-radius: calc(1.2rem + 6px)
   background-image: linear-gradient(180deg, #fff, #f0f0f0)
@@ -21,5 +22,18 @@
     color: #000
     border-color: #000
   &.-externallink::after
-    content: " ↗"
-    margin-left: 2px
+    font-family: 'Material Symbols Outlined'
+    content: "open_in_new"
+    margin-left: 4px
+    font-size: 1.2em
+    font-weight: normal
+    vertical-align: middle
+    line-height: 1
+  &.-download::after
+    font-family: 'Material Symbols Outlined'
+    content: "download"
+    margin-left: 4px
+    font-size: 1.2em
+    font-weight: normal
+    vertical-align: middle
+    line-height: 1
