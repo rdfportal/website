@@ -61,7 +61,7 @@ downloads.json と datasets.json を id でマッチングするための lookup
                 N-Triples
               </a>
             {% else %}
-              <span class="dl-unavailable">-</span>
+              <span class="-downloadunavailable"></span>
             {% endif %}
           </td>
           <td>
@@ -70,7 +70,7 @@ downloads.json と datasets.json を id でマッチングするための lookup
                 Turtle
               </a>
             {% else %}
-              <span class="dl-unavailable">-</span>
+              <span class="-downloadunavailable"></span>
             {% endif %}
           </td>
           <td>
@@ -79,7 +79,7 @@ downloads.json と datasets.json を id でマッチングするための lookup
                 RDF-XML
               </a>
             {% else %}
-              <span class="dl-unavailable">-</span>
+              <span class="-downloadunavailable"></span>
             {% endif %}
           </td>
           <td>
@@ -88,7 +88,7 @@ downloads.json と datasets.json を id でマッチングするための lookup
                 JSON-LD
               </a>
             {% else %}
-              <span class="dl-unavailable">-</span>
+              <span class="-downloadunavailable"></span>
             {% endif %}
           </td>
         </tr>
