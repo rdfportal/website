@@ -26,8 +26,31 @@ const FORMATS = ['ntriples', 'turtle', 'rdfxml', 'jsonld'];
 function checkUrlExists(url) {
   return new Promise((resolve) => {
     const req = https.request(url, { method: 'GET', headers: { 'User-Agent': 'RDF-Portal-Bot/2.0' }, timeout: 5000 }, (res) => {
-      resolve(res.statusCode === 200);
-      res.destroy(); // データ本体は不要なので即座に破棄
+      if (res.statusCode !== 200) {
+        resolve(false);
+        res.destroy();
+        return;
+      }
+      
+      let dataChunks = '';
+      res.on('data', (chunk) => {
+        dataChunks += chunk.toString();
+        // Nginxの自動生成Indexページには <title>Index of が含まれる。
+        if (dataChunks.includes('<title>Index of')) {
+          resolve(true);
+          res.destroy(); // データ本体は不要なので即座に破棄
+        // 存在しない場合はSPAのフォールバックHTMLが返るため <title>RDF Portal</title> が含まれる
+        } else if (dataChunks.includes('<title>RDF Portal</title>') || dataChunks.length > 3000) {
+          resolve(false);
+          res.destroy();
+        }
+      });
+      
+      res.on('end', () => {
+        if (!res.destroyed) {
+          resolve(dataChunks.includes('<title>Index of'));
+        }
+      });
     });
 
     req.on('timeout', () => {
