@@ -14,14 +14,16 @@ page_id: home
 
   <section class="intro">
     <p>
-      <span>The RDF Portal provides a collection of </span><br>
-      <span>life science datasets in RDF (Resource Description Framework). </span><br>
-      <span>The portal aims to accelerate</span><br>
-      <span>integrative utilization of the heterogeneous datasets deposited by</span><br>
-      <span>various research institutions and groups.</span><br>
-      <span>In this portal, each dataset comes with a summary,</span><br>
-      <span>downloadable files and a SPARQL endpoint.</span>
+      <span>RDF portal provides a comprehensive collection</span><br>
+      <span>of quality-reviewed life science datasets in RDF. </span><br>
+      <span>The portal offers multiple ways</span><br>
+      <span>to access and integrate heterogeneous datasets</span><br>
+      <span>— including SPARQL endpoints, </span><br>
+      <span>downloadable files, and AI-assisted interfaces —</span><br>
+      <span>enabling researchers to explore and combine data</span><br>
+      <span>across diverse biomedical domains.</span>
     </p>
+
   </section>
   
   <section class="logs" aria-labelledby="log-heading">
