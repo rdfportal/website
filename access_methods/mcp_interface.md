@@ -87,6 +87,3 @@ TogoMCP は、数ステップでAIアシスタントに接続できます。Clau
 ソースコードはGitHubで公開されています: [dbcls/togomcp](https://github.com/dbcls/togomcp)
 
 {% endlang %}
-<div class="under-construction">
-  <span>Under construction</span>
-</div>
