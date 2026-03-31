@@ -55,7 +55,7 @@ jobs:
           JEKYLL_ENV: production
 
       - name: Deploy to Production Server via SSH
-        if: ${{ secrets.SERVER_SSH_KEY != '' }}
+        if: env.SSH_PRIVATE_KEY != ''
         uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
