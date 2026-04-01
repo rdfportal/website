@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - staging
   workflow_dispatch:
 
 permissions:
@@ -54,8 +55,19 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      - name: Deploy to Staging Server via SSH
+        if: env.SSH_PRIVATE_KEY != '' && github.ref == 'refs/heads/staging'
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          ARGS: "-rltgoDzvO --delete"
+          SOURCE: "_site/"
+          REMOTE_HOST: ${{ secrets.SERVER_HOST }}
+          REMOTE_USER: ${{ secrets.SERVER_USERNAME }}
+          TARGET: "/data/rdfportal-staging/www"
+
       - name: Deploy to Production Server via SSH
-        if: env.SSH_PRIVATE_KEY != ''
+        if: env.SSH_PRIVATE_KEY != '' && github.ref == 'refs/heads/main'
         uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
@@ -70,6 +82,7 @@ jobs:
 
   # Deployment job
   deploy:
+    if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
