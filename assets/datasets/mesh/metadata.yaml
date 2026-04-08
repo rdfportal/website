@@ -1,7 +1,7 @@
 title: Medical Subject Headings (MeSH) RDF Dataset Description
 website: https://id.nlm.nih.gov/mesh/
 description: A linked data representation of the MeSH biomedical vocabulary produced by the National Library of Medicine.
-tags: [ Ontology/ Terminology/Nomenclature ]
+tags: [ Ontology/Terminology/Nomenclature ]
 provider: National Library of Medicine
 creators:
   - name: National Library of Medicine

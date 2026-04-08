@@ -1,7 +1,7 @@
 title: NANDO 
 website: https://nanbyodata.jp/
 description: NANDO is a vocabulary that systematically and comprehensively organizes designated intractable diseases and pediatric chronic specific diseases, including their subtypes. Each disease in NANDO is linked to Mondo (Monarch Disease Ontology), a disease vocabulary adopted by many international databases and systems, enabling integration with major international disease databases such as OMIM and Orphanet.
-tags: [ Health/Disease, Tag sequence (nucleic acid), Ontology/ Terminology/Nomenclature ]
+tags: [ Health/Disease, Tag sequence (nucleic acid), Ontology/Terminology/Nomenclature ]
 provider:
 creators:
   - name: Kota Ninomiya
