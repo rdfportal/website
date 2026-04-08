@@ -1,7 +1,7 @@
 title: Quanto RDF
 website: https://sra.dbcls.jp/
 description: Quanto は FastQC による計算を元にした、公開NGSデータのシーケンスクオリティのデータベースです。
-tags: [Other]
+tags: [Others]
 provider: Database Center for Life Science
 creators:
   - name: Tazro Inutano Ohta
