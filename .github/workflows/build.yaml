@@ -54,8 +54,19 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      - name: Check SSH Key
+        id: check_ssh_key
+        env:
+          SSH_KEY: ${{ secrets.SERVER_SSH_KEY }}
+        run: |
+          if [ -n "$SSH_KEY" ]; then
+            echo "has_key=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_key=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Deploy to Production Server via SSH
-        if: secrets.SERVER_SSH_KEY != ''
+        if: steps.check_ssh_key.outputs.has_key == 'true'
         uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
