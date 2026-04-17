@@ -92,7 +92,7 @@ Each dataset is assigned one or more tags indicating its domain category. Tags a
 <div style="text-align: center;">
   <img src="/assets/images/rdfportal_tag_filter.png" alt="Screenshot: Tag filter dropdown" width="50%">
 </div>
-<!-- TODO: Replace each "🌸" below with the actual petal icon image tag, e.g. <img src="icons/gene.svg" alt="Gene" width="20"> -->
+
 
 | Icon | Tag | Description |
 |------|-----|-------------|
@@ -157,13 +157,13 @@ Clicking on a dataset name opens its detail page. Each detail page contains the 
 **SPARQL example queries** — ready-to-use example queries that demonstrate how to retrieve data from the dataset. Each example includes a description and a "Run on Endpoint" link that opens the query directly in the SPARQL endpoint interface.
 
 <div style="text-align: center;">
-  <img src="/website/assets/images/rdfportal_example_query.png" alt="Screenshot: SPARQL example query section with the 'Run on Endpoint' button" width="60%">
+  <img src="/assets/images/rdfportal_example_query.png" alt="Screenshot: SPARQL example query section with the 'Run on Endpoint' button" width="60%">
 </div>
 
 **Schema diagram** — a visual representation of the dataset's RDF schema, showing the classes and properties used in the data. These diagrams are automatically generated from [RDF-config](https://github.com/dbcls/rdf-config), a framework for describing RDF dataset structure in a machine-readable format. RDF-config models are maintained for each dataset hosted on RDF Portal, providing a consistent and practical way to document how the data is organized. In some exceptional cases, schema diagrams may be provided through other means. For more details on RDF-config and its role in RDF Portal, see the [RDF config](https://rdfportal.github.io/website/documents/rdf_config/) documentation.
 
 <div style="text-align: center;">
-  <img src="/website/assets/images/ddbj_schema.svg" alt="Screenshot: Schema diagram for a dataset" width="60%">
+  <img src="/assets/images/ddbj_schema.svg" alt="Screenshot: Schema diagram for a dataset" width="60%">
 </div>
 
 ---
@@ -667,7 +667,6 @@ RDF Portal ウェブサイトは、左側のサイドバーからアクセスで
 <div style="text-align: center;">
   <img src="/assets/images/rdfportal_tag_filter.png" alt="スクリーンショット：タグフィルターのドロップダウン" width="50%">
 </div>
-<!-- TODO: 下記の各「🌸」を実際の花びらアイコンの画像タグに置き換え（例: <img src="icons/gene.svg" alt="Gene" width="20">） -->
 
 | アイコン | タグ | 説明 |
 |---------|------|------|
@@ -739,14 +738,14 @@ Registration は、データセットがどのようにRDF Portalに登録され
 含まれています。
 
 <div style="text-align: center;">
-  <img src="/website/assets/images/rdfportal_example_query.png" alt="Screenshot: SPARQL example query section with the 'Run on Endpoint' button" width="60%">
+  <img src="/assets/images/rdfportal_example_query.png" alt="Screenshot: SPARQL example query section with the 'Run on Endpoint' button" width="60%">
 </div>
 
 **Schema diagram** — データセットのRDFスキーマを視覚的に表現した図。使用されているクラスとプロパティの関係を示しています。これらの図は、RDFデータセットの構造を機械可読な形式で
 記述するフレームワークである [RDF-config](https://github.com/dbcls/rdf-config) から自動的に生成されています。RDF-config のモデルは RDF Portal に収録されている各データセットごとに整備されており、データの構造を一貫した実用的な方法でドキュメント化しています。一部の例外的なケースでは、別の方法でスキーマ図が提供される場合もあります。RDF-config の詳細と RDF Portal における役割については、[RDF config](https://rdfportal.github.io/website/documents/rdf_config/) ドキュメントをご参照ください。
 
 <div style="text-align: center;">
-  <img src="/website/assets/images/ddbj_schema.svg" alt="スクリーンショット：データセットのスキーマ" width="60%">
+  <img src="/assets/images/ddbj_schema.svg" alt="スクリーンショット：データセットのスキーマ" width="60%">
 </div>
 
 ---
