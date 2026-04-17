@@ -673,16 +673,16 @@ RDF Portal ウェブサイトは、左側のサイドバーからアクセスで
 |---------|------|------|
 | <span class="tag-icon" data-tag="Gene"></span> | **Gene** | 遺伝子、遺伝子アノテーション、遺伝子レベルの情報に関するデータセット |
 | <span class="tag-icon" data-tag="Gene expression"></span> | **Gene expression** | 遺伝子発現プロファイル、トランスクリプトミクスデータを含むデータセット |
-| <span class="tag-icon" data-tag="">Genome</span> | **Genome** | ゲノム配列やゲノム上の特徴に関するデータセット |
-| <span class="tag-icon" data-tag="">Protein</span> | **Protein** | タンパク質の配列、構造、機能に関するデータセット |
-| <span class="tag-icon" data-tag="">Drug/Chemical</span> | **Drug/Chemical** | 医薬品、化学物質、生理活性分子に関するデータセット |
-| <span class="tag-icon" data-tag="">Health/Disease</span> | **Health/Disease** | 疾患、臨床バリアント、医療情報に関するデータセット |
-| <span class="tag-icon" data-tag="">Glycan</span> | **Glycan** | 糖鎖や糖質構造に関するデータセット |
-| <span class="tag-icon" data-tag="">Organism</span> | **Organism** | 生物種レベルの情報や分類学に関するデータセット |
-| <span class="tag-icon" data-tag="">Cell</span> | **Cell** | 細胞レベルの情報に関するデータセット |
-| <span class="tag-icon" data-tag="">Bioresource</span> | **Bioresource** | 生物資源コレクション（培養株コレクション、バイオバンク等）に関するデータセット |
-| <span class="tag-icon" data-tag="">Polymorphism</span> | **Polymorphism** | 遺伝的変異、SNP、多型に関するデータセット |
-| <span class="tag-icon" data-tag="">Sequence</span> | **Sequence** | 塩基配列やアミノ酸配列に関するデータセット |
+| <span class="tag-icon" data-tag="Genome"></span> | **Genome** | ゲノム配列やゲノム上の特徴に関するデータセット |
+| <span class="tag-icon" data-tag="Protein"></span> | **Protein** | タンパク質の配列、構造、機能に関するデータセット |
+| <span class="tag-icon" data-tag="Drug/Chemical"></span> | **Drug/Chemical** | 医薬品、化学物質、生理活性分子に関するデータセット |
+| <span class="tag-icon" data-tag="Health/Disease"></span> | **Health/Disease** | 疾患、臨床バリアント、医療情報に関するデータセット |
+| <span class="tag-icon" data-tag="Glycan"></span> | **Glycan** | 糖鎖や糖質構造に関するデータセット |
+| <span class="tag-icon" data-tag="Organism"></span> | **Organism** | 生物種レベルの情報や分類学に関するデータセット |
+| <span class="tag-icon" data-tag="Cell"></span> | **Cell** | 細胞レベルの情報に関するデータセット |
+| <span class="tag-icon" data-tag="Bioresource"></span> | **Bioresource** | 生物資源コレクション（培養株コレクション、バイオバンク等）に関するデータセット |
+| <span class="tag-icon" data-tag="Polymorphism"></span> | **Polymorphism** | 遺伝的変異、SNP、多型に関するデータセット |
+| <span class="tag-icon" data-tag="Sequence"></span> | **Sequence** | 塩基配列やアミノ酸配列に関するデータセット |
 
 <!-- TODO: タグの完全なリストを確認し、アイコンパスを実際の花びらアイコンファイルに置き
 換え -->
