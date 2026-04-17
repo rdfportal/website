@@ -90,7 +90,7 @@ Each sort can be set to descending or ascending order.
 Each dataset is assigned one or more tags indicating its domain category. Tags are displayed with petal-shaped icons for easy visual identification.
 
 <div style="text-align: center;">
-  <img src="/website/assets/images/rdfportal_tag_filter.png" alt="Screenshot: Tag filter dropdown" width="50%">
+  <img src="/assets/images/rdfportal_tag_filter.png" alt="Screenshot: Tag filter dropdown" width="50%">
 </div>
 <!-- TODO: Replace each "🌸" below with the actual petal icon image tag, e.g. <img src="icons/gene.svg" alt="Gene" width="20"> -->
 
@@ -665,26 +665,25 @@ RDF Portal ウェブサイトは、左側のサイドバーからアクセスで
 アイコンで表示され、視覚的に識別しやすくなっています。
 
 <div style="text-align: center;">
-  <img src="/website/assets/images/rdfportal_tag_filter.png" alt="スクリーンショット：タグフィルターのドロップダウン" width="50%">
+  <img src="/assets/images/rdfportal_tag_filter.png" alt="スクリーンショット：タグフィルターのドロップダウン" width="50%">
 </div>
 <!-- TODO: 下記の各「🌸」を実際の花びらアイコンの画像タグに置き換え（例: <img src="icons/gene.svg" alt="Gene" width="20">） -->
 
 | アイコン | タグ | 説明 |
 |---------|------|------|
-| 🌸 | **Gene** | 遺伝子、遺伝子アノテーション、遺伝子レベルの情報に関するデータセット |
-| 🌸 | **Gene expression** | 遺伝子発現プロファイル、トランスクリプトミクスデータを含む
+| <span class="tag-icon" data-tag="Gene"></span> | **Gene** | 遺伝子、遺伝子アノテーション、遺伝子レベルの情報に関するデータセット |
+| <span class="tag-icon" data-tag="Gene expression"></span> | **Gene expression** | 遺伝子発現プロファイル、トランスクリプトミクスデータを含む
 データセット |
-| 🌸 | **Genome** | ゲノム配列やゲノム上の特徴に関するデータセット |
-| 🌸 | **Protein** | タンパク質の配列、構造、機能に関するデータセット |
-| 🌸 | **Drug/Chemical** | 医薬品、化学物質、生理活性分子に関するデータセット |
-| 🌸 | **Health/Disease** | 疾患、臨床バリアント、医療情報に関するデータセット |
-| 🌸 | **Glycan** | 糖鎖や糖質構造に関するデータセット |
-| 🌸 | **Organism** | 生物種レベルの情報や分類学に関するデータセット |
-| 🌸 | **Cell** | 細胞レベルの情報に関するデータセット |
-| 🌸 | **Bioresource** | 生物資源コレクション（培養株コレクション、バイオバンク等）に関
-するデータセット |
-| 🌸 | **Polymorphism** | 遺伝的変異、SNP、多型に関するデータセット |
-| 🌸 | **Sequence** | 塩基配列やアミノ酸配列に関するデータセット |
+| <span class="tag-icon" data-tag="">Genome</span> | **Genome** | ゲノム配列やゲノム上の特徴に関するデータセット |
+| <span class="tag-icon" data-tag="">Protein</span> | **Protein** | タンパク質の配列、構造、機能に関するデータセット |
+| <span class="tag-icon" data-tag="">Drug/Chemical</span> | **Drug/Chemical** | 医薬品、化学物質、生理活性分子に関するデータセット |
+| <span class="tag-icon" data-tag="">Health/Disease</span> | **Health/Disease** | 疾患、臨床バリアント、医療情報に関するデータセット |
+| <span class="tag-icon" data-tag="">Glycan</span> | **Glycan** | 糖鎖や糖質構造に関するデータセット |
+| <span class="tag-icon" data-tag="">Organism</span> | **Organism** | 生物種レベルの情報や分類学に関するデータセット |
+| <span class="tag-icon" data-tag="">Cell</span> | **Cell** | 細胞レベルの情報に関するデータセット |
+| <span class="tag-icon" data-tag="">Bioresource</span> | **Bioresource** | 生物資源コレクション（培養株コレクション、バイオバンク等）に関するデータセット |
+| <span class="tag-icon" data-tag="">Polymorphism</span> | **Polymorphism** | 遺伝的変異、SNP、多型に関するデータセット |
+| <span class="tag-icon" data-tag="">Sequence</span> | **Sequence** | 塩基配列やアミノ酸配列に関するデータセット |
 
 <!-- TODO: タグの完全なリストを確認し、アイコンパスを実際の花びらアイコンファイルに置き
 換え -->
