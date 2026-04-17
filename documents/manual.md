@@ -672,8 +672,7 @@ RDF Portal ウェブサイトは、左側のサイドバーからアクセスで
 | アイコン | タグ | 説明 |
 |---------|------|------|
 | <span class="tag-icon" data-tag="Gene"></span> | **Gene** | 遺伝子、遺伝子アノテーション、遺伝子レベルの情報に関するデータセット |
-| <span class="tag-icon" data-tag="Gene expression"></span> | **Gene expression** | 遺伝子発現プロファイル、トランスクリプトミクスデータを含む
-データセット |
+| <span class="tag-icon" data-tag="Gene expression"></span> | **Gene expression** | 遺伝子発現プロファイル、トランスクリプトミクスデータを含むデータセット |
 | <span class="tag-icon" data-tag="">Genome</span> | **Genome** | ゲノム配列やゲノム上の特徴に関するデータセット |
 | <span class="tag-icon" data-tag="">Protein</span> | **Protein** | タンパク質の配列、構造、機能に関するデータセット |
 | <span class="tag-icon" data-tag="">Drug/Chemical</span> | **Drug/Chemical** | 医薬品、化学物質、生理活性分子に関するデータセット |
