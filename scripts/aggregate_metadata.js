@@ -78,14 +78,20 @@ function getMetadataFromLocalFolder(id, lang) {
 
   try {
     const metadata = fs.readFileSync(metadataPath, "utf8");
+    const parsed = Bun.YAML.parse(metadata);
+    if (parsed && Object.prototype.hasOwnProperty.call(parsed, "null")) {
+      console.warn(`::warning file=${metadataPath},title=YAML Warning::Possible malformed YAML. A 'null' key was generated.`);
+    }
     return {
       exists: true,
-      metadata: extractRequiredFields(Bun.YAML.parse(metadata)),
+      metadata: extractRequiredFields(parsed),
     };
   } catch (error) {
     let reason = "Parse Error";
     if (error.code === "ENOENT") {
       reason = "File Not Found";
+    } else {
+      console.warn(`::warning file=${metadataPath},title=YAML Parse Error::Failed to parse YAML: ${error.message}`);
     }
     return {
       exists: false,
@@ -335,6 +341,12 @@ async function main() {
   try {
     const statsDatasetIds = statJson.map((item) => item.dataset);
     console.log(`Found ${statsDatasetIds.length} datasets in stats file`);
+
+    const localFolders = fs.readdirSync(DATASETS_FOLDER).filter(f => fs.statSync(path.join(DATASETS_FOLDER, f)).isDirectory());
+    const unusedFolders = localFolders.filter(f => !statsDatasetIds.includes(f));
+    if (unusedFolders.length > 0) {
+      console.warn(`::warning title=Unused Dataset Folders::Found directories in assets/datasets/ that are not in datasets_stats.json: ${unusedFolders.join(", ")}`);
+    }
 
     const datasetsSymbolDir = path.join(__dirname, "..", "assets", "images", "dataset_symbols");
     if (!fs.existsSync(datasetsSymbolDir)) {
