@@ -1,7 +1,7 @@
 title: GTDB
 website: https://gtdb.ecogenomic.org/  
 description: Genome Taxonomy Database（GTDB）は、ゲノム系統に基づいて細菌および古細菌のための標準化された分類体系を提供するリソースです。本RDFデータセットは、GTDBから配布されているデータを基にRDF Portalが独自にRDF化したものであり、分類情報および関連情報をセマンティックな形式で表現することで、ライフサイエンス分野におけるデータ統合および高度なクエリを可能にします。
-tags: ["taxonomy", "bacteria", "archaea"]
+tags: ["Taxonomy", "Bacteria", "Archaea"]
 provider: The University of Queensland
 creators:
   - name: Shuichi Kawashima  
