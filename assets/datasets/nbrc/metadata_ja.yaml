@@ -1,19 +1,23 @@
 title: Dataset of NBRC bioresource
 website: https://www.nite.go.jp/en/index.html
-description: Dataset of NBRC bioresource is a dataset for microbes which are maintained, managed and provided from NBRC (NITE Biological Resource Center).
+description: NBRCバイオリソースのデータセットは、NBRC（NITE Biological Resource Center）が維持・管理し、提供している微生物に関するデータセットです。
 tags: [ Organism, Cell, Bioresource ]
 provider: National Institute of Technology and Evaluation
 creators:
-  - name: Masami Namihira
+  - name: 大塚 梨沙
     affiliation: National Institute of Technology and Evaluation
-  - name: Yuko Kitahashi
+  - name: 横田 彩乃
     affiliation: National Institute of Technology and Evaluation
-  - name: Natsuko Ichikawa
+  - name: 外立 貴宏
+    affiliation: National Institute of Technology and Evaluation
+  - name: 八塚 茂
+    affiliation: National Institute of Technology and Evaluation
+  - name: 市川 夏子
     affiliation: National Institute of Technology and Evaluation
 rdf_provenance_type: original
 registration_type: submitted
-version: release_20241017
-issued: 2024-10-17
+version: release_20251225
+issued: 2025-12-25
 licenses:
   - Creative Commons Attribution-ShareAlike 2.1 Japan (CC BY-SA 2.1 JP)
   - Dataset of NBRC bioresource (C) NITE NBRC licensed under CC Attribution-ShareAlike 2.1 Japan
