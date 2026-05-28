@@ -1,6 +1,6 @@
 title: Orthologous MAtrix (OMA) RDF
 website: https://omabrowser.org
-description: The OMA (Orthologous MAtrix) project is a method and database for the inference of orthologs among complete genomes. The OMA RDF is a view of the OMA database in RDF.
+description: OMA（Orthologous MAtrix）プロジェクトは、完全ゲノム間のオーソログを推定するための手法およびデータベースです。OMA RDFは、OMAデータベースをRDF形式にしたものです。
 tags: [Genome, Gene, Phylogeny/Classification]
 provider: SIB Swiss Institute of Bioinformatics
 creators:
@@ -12,7 +12,7 @@ creators:
     affiliation: SIB Swiss Institute of Bioinformatics
 rdf_provenance_type: original
 registration_type: added_by_rdfportal
-version: Jul2023
-issued: 2023-07-01
+version: Jul2024
+issued: 2024-07-30
 licenses:
   - Creative Commons Attribution 4.0 International
