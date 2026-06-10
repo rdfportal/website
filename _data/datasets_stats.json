@@ -399,7 +399,7 @@
       "number_of_subjects": 516026,
       "number_of_objects": 7800464
     },
-    "updated_at": "2025-01-09",
+    "updated_at": "2026-05-29",
     "issued_at": "2026-05-22"
   },
   {
@@ -770,14 +770,14 @@
     "endpoint": "pubchem",
     "dataset": "pubchem",
     "statistics": {
-      "number_of_triples": 21959412691,
-      "number_of_classes": 257102,
-      "number_of_properties": 80,
-      "number_of_subjects": 4377438077,
-      "number_of_objects": 5858310337
+      "number_of_triples": 29084905457,
+      "number_of_classes": 300593,
+      "number_of_properties": 104,
+      "number_of_subjects": 4444215882,
+      "number_of_objects": 6710572977
     },
-    "updated_at": "2025-11-18",
-    "issued_at": "2025-05-29"
+    "updated_at": "2026-05-22",
+    "issued_at": "2026-05-31"
   },
   {
     "endpoint": "sib",
