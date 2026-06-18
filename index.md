@@ -35,7 +35,8 @@ page_id: home
     {% else %}
       {% assign render_logs = site.logs | where: "lang", site.default_lang %}
     {% endif %}
-    {% for post in render_logs reversed limit:5 %}
+    {% assign reversed_logs = render_logs | reverse %}
+    {% for post in reversed_logs limit:5 %}
     <article class="timeline-article">
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
       <h4 class="title">{{ post.title }}</h4>
