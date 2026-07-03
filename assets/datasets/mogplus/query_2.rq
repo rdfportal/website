@@ -1,0 +1,33 @@
+# Retrieve variants present in a specific strain (FLS_Shi)
+
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX faldo:   <http://biohackathon.org/resource/faldo#>
+PREFIX gvo:     <http://genome-variation.org/resource#>
+PREFIX vcf:     <http://genome-variation.org/resource/vcf#>
+PREFIX vep:     <http://genome-variation.org/resource/vep#>
+PREFIX snpeff:  <http://genome-variation.org/resource/snpeff#>
+PREFIX mogplus: <http://identifiers.org/mogplus/ontology#>
+PREFIX med2rdf: <http://med2rdf.org/ontology/med2rdf#>
+PREFIX brso:    <http://purl.jp/bio/10/brso/>
+PREFIX obo:     <http://purl.obolibrary.org/obo/>
+PREFIX ensg:    <http://rdf.ebi.ac.uk/resource/ensembl/>
+PREFIX mogbs:   <http://identifiers.org/mogplus/bioresource/>
+PREFIX mgi:     <http://identifiers.org/mgi/>
+
+SELECT ?variant ?pos ?ref ?alt ?genotype ?ad_ref ?ad_alt
+FROM <http://rdfportal.org/dataset/mogplus>
+WHERE {
+  ?variant vcf:has_genotype_call ?call ;
+           gvo:pos ?pos ;
+           gvo:ref ?ref ;
+           gvo:alt ?alt .
+
+  ?call med2rdf:sample mogbs:FLS_Shi ;
+        vcf:genotype ?genotype .
+
+  OPTIONAL { ?call vcf:ad_ref ?ad_ref }
+  OPTIONAL { ?call vcf:ad_alt ?ad_alt }
+}
+ORDER BY ?pos
+LIMIT 100

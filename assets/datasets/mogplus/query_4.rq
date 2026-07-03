@@ -1,0 +1,30 @@
+# Retrieve variants within a specific coordinate range
+
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX faldo:   <http://biohackathon.org/resource/faldo#>
+PREFIX gvo:     <http://genome-variation.org/resource#>
+PREFIX vcf:     <http://genome-variation.org/resource/vcf#>
+PREFIX vep:     <http://genome-variation.org/resource/vep#>
+PREFIX snpeff:  <http://genome-variation.org/resource/snpeff#>
+PREFIX mogplus: <http://identifiers.org/mogplus/ontology#>
+PREFIX med2rdf: <http://med2rdf.org/ontology/med2rdf#>
+PREFIX brso:    <http://purl.jp/bio/10/brso/>
+PREFIX obo:     <http://purl.obolibrary.org/obo/>
+PREFIX ensg:    <http://rdf.ebi.ac.uk/resource/ensembl/>
+PREFIX mogbs:   <http://identifiers.org/mogplus/bioresource/>
+PREFIX mgi:     <http://identifiers.org/mgi/>
+
+SELECT ?variant ?pos ?ref ?alt
+FROM <http://rdfportal.org/dataset/mogplus>
+WHERE {
+  ?variant gvo:pos ?pos ;
+           gvo:ref ?ref ;
+           gvo:alt ?alt ;
+           faldo:location ?loc .
+
+  ?loc faldo:reference <http://identifiers.org/mco/1/GRCm39> .
+
+  FILTER(?pos >= 3050000 && ?pos <= 3100000)
+}
+ORDER BY ?pos
