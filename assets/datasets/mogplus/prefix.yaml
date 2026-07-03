@@ -1,0 +1,16 @@
+rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+xsd: <http://www.w3.org/2001/XMLSchema#>
+dct: <http://purl.org/dc/terms/>
+faldo: <http://biohackathon.org/resource/faldo#>
+gvo: <http://genome-variation.org/resource#>
+vcf: <http://genome-variation.org/resource/vcf#>
+vep: <http://genome-variation.org/resource/vep#>
+snpeff: <http://genome-variation.org/resource/snpeff#>
+mogplus: <http://identifiers.org/mogplus/ontology#>
+obo: <http://purl.obolibrary.org/obo/>
+ensg: <http://rdf.ebi.ac.uk/resource/ensembl/>
+mgi: <http://identifiers.org/mgi/>
+mogbs: <http://identifiers.org/mogplus/bioresource/>
+brso: <http://purl.jp/bio/10/brso/>
+med2rdf: <http://med2rdf.org/ontology/med2rdf#>
