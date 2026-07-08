@@ -1,0 +1,139 @@
+# RDF-config model for Human Chromosome Ontology (HCO)
+# Source ontology: https://github.com/med2rdf/hco/blob/master/hco.ttl
+
+- Ontology <http://identifiers.org/hco/>:
+  - a: owl:Ontology
+  - dct:license?:
+    - license:
+  - rdfs:seeAlso*:
+    - ontology_see_also:
+  - owl:versionInfo?:
+    - ontology_version: '"2020-07-15"^^xsd:date'
+
+- CoreClass hco:HumanChromosome hco:GenomeBuild hco:Cytoband hco:CytobandType:
+  - a: owl:Class
+  - rdfs:label:
+    - core_class_label: "Human chromosome"
+  - skos:definition?:
+    - core_class_definition: "Collection of human chromosomes"
+  - skos:broader?:
+    - broader_sequence_ontology_term: obo:SO_0000340
+  - rdfs:seeAlso*:
+    - core_class_see_also:
+
+- ObjectProperty hco:build hco:insdc hco:refseq hco:ucsc hco:ensembl:
+  - a: owl:ObjectProperty
+  - rdfs:label:
+    - object_property_label: "build"
+  - rdfs:domain?:
+    - object_property_domain: CoreClass
+  - rdfs:range?:
+    - object_property_range: CoreClass
+
+- DatatypeProperty hco:length hco:bandtype:
+  - a: owl:DatatypeProperty
+  - rdfs:label:
+    - datatype_property_label: "length"
+  - rdfs:domain?:
+    - datatype_property_domain: CoreClass
+  - rdfs:range?:
+    - datatype_property_range: CoreClass
+
+- HumanChromosomeType hco:21:
+  - a: owl:Class
+  - rdfs:label:
+    - chromosome_type_label: "Human chromosome 21"
+  - rdfs:subClassOf:
+    - chromosome_type_parent: hco:HumanChromosome
+
+- GenomeBuildType hco:GRCh37 hco:GRCh38 hco:GenomeBuild:
+  - a: owl:Class
+  - rdfs:label?:
+    - genome_build_type_label: "GRCh38"
+  - skos:definition?:
+    - genome_build_type_definition: "Genome Reference Consortium Human Build 38"
+  - skos:altLabel*:
+    - genome_build_type_alt_label: "hg38"
+  - rdfs:subClassOf?:
+    - genome_build_type_parent: hco:GenomeBuild
+
+- GenomeBuildVersion hco:GRCh37.p13 hco:GRCh38.p12:
+  - a:
+    - genome_build_version_type: GenomeBuildType
+  - rdfs:label:
+    - genome_build_version_label: "GRCh38.p12"
+  - skos:definition?:
+    - genome_build_version_definition: "Genome Reference Consortium Human Build 38 patch release 12"
+  - skos:altLabel*:
+    - genome_build_version_alt_label: "hg38"
+  - hco:length?:
+    - genome_build_length: 3257319537
+  - dct:date?:
+    - genome_build_date: '"2017-12-21"^^xsd:date'
+  - rdfs:seeAlso*:
+    - genome_build_see_also:
+
+- CytobandType hco:Gneg:
+  - a: hco:CytobandType
+  - rdfs:label:
+    - cytoband_type_label: "gneg"
+  - skos:definition?:
+    - cytoband_type_definition: "Giemsa negative band"
+  - rdfs:definition?:
+    - cytoband_type_rdfs_definition: "Variable length heterochromatic region."
+
+- CytobandClass hco:21q11.2:
+  - a: owl:Class
+  - rdfs:label:
+    - cytoband_class_label: "21q11.2"
+  - rdfs:subClassOf:
+    - cytoband_class_parent: hco:Cytoband
+
+- HumanChromosome hco:21/GRCh38:
+  - a:
+    - chromosome_type: HumanChromosomeType
+  - hco:build?:
+    - chromosome_build: GenomeBuildType
+  - hco:length:
+    - chromosome_length: 46709983
+  - skos:altLabel?:
+    - chromosome_alt_label: "GPC_000001313"
+  - hco:insdc?:
+    - insdc_accession: <http://identifiers.org/insdc/CM000683.2>
+  - hco:refseq?:
+    - refseq_accession: <http://identifiers.org/refseq/NC_000021.9>
+  - hco:ucsc?:
+    - ucsc_browser: <http://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr21>
+  - hco:ensembl*:
+    - ensembl_resource: <http://rdf.ebi.ac.uk/resource/ensembl/homo_sapiens/GRCh38/21>
+
+- Cytoband hco:21q11.2/GRCh38:
+  - a:
+    - cytoband_class: CytobandClass
+  - hco:build:
+    - cytoband_build: GenomeBuildType
+  - hco:bandtype:
+    - cytoband_stain: CytobandType
+  - faldo:location:
+    - cytoband_location: FALDORegion
+
+- FALDORegion:
+  - a: faldo:Region
+  - faldo:begin:
+    - begin_position_node: BeginPosition
+  - faldo:end:
+    - end_position_node: EndPosition
+
+- BeginPosition:
+  - a: faldo:BothStrandsPosition
+  - faldo:position:
+    - begin_position: 13000000
+  - faldo:reference:
+    - begin_reference_chromosome: HumanChromosome
+
+- EndPosition:
+  - a: faldo:BothStrandsPosition
+  - faldo:position:
+    - end_position: 15000000
+  - faldo:reference:
+    - end_reference_chromosome: HumanChromosome
