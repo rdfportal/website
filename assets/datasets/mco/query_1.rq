@@ -1,0 +1,12 @@
+# Retrieve a list of mouse chromosome classes included in MCO.
+
+PREFIX mco:   <http://identifiers.org/mco/>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?chromosome_class ?label
+FROM <http://rdfportal.org/dataset/mco>
+WHERE {
+  ?chromosome_class rdfs:subClassOf mco:MouseChromosome ;
+                    rdfs:label ?label .
+}
+ORDER BY ?chromosome_class

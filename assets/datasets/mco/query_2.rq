@@ -1,0 +1,16 @@
+# Retrieve chromosome instances and their lengths in GRCm39.
+
+PREFIX mco:   <http://identifiers.org/mco/>
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?chromosome ?chromosome_class ?label ?length
+WHERE {
+  ?chromosome rdf:type ?chromosome_class ;
+              mco:build mco:GRCm39 ;
+              mco:length ?length .
+
+  ?chromosome_class rdfs:subClassOf mco:MouseChromosome ;
+                    rdfs:label ?label .
+}
+ORDER BY ?chromosome

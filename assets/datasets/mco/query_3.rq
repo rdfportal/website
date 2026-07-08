@@ -1,0 +1,23 @@
+# Compare chromosome lengths between GRCm38 and GRCm39.
+
+PREFIX mco:   <http://identifiers.org/mco/>
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?chromosome_class ?label
+       ?grcm38_chromosome ?grcm38_length
+       ?grcm39_chromosome ?grcm39_length
+       (?grcm39_length - ?grcm38_length AS ?length_difference)
+WHERE {
+  ?chromosome_class rdfs:subClassOf mco:MouseChromosome ;
+                    rdfs:label ?label .
+
+  ?grcm38_chromosome rdf:type ?chromosome_class ;
+                     mco:build mco:GRCm38 ;
+                     mco:length ?grcm38_length .
+
+  ?grcm39_chromosome rdf:type ?chromosome_class ;
+                     mco:build mco:GRCm39 ;
+                     mco:length ?grcm39_length .
+}
+ORDER BY ?chromosome_class
