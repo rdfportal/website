@@ -1,3 +1,9 @@
+@keyframes target-highlight
+  0%
+    background-color: rgba(255, 235, 59, 0.4)
+  100%
+    background-color: color-mix(in srgb, var(--color-warm-gray-strong), transparent 60%)
+
 #DownloadPageView
   font-size: 1.4rem
   line-height: 1
@@ -6,6 +12,13 @@
     > table
       > tbody
         > tr
+          &:target
+            background-color: color-mix(in srgb, var(--color-warm-gray-strong), transparent 60%)
+            animation: target-highlight 2.5s ease-out forwards
+
+            @media (prefers-reduced-motion: reduce)
+              animation: none
+
           > td
             > .button-view
               margin: -8px 0
