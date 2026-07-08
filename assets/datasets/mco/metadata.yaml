@@ -1,0 +1,14 @@
+title: Mouse Chromosome Ontology (MCO)
+website: https://biohackathon.org/resource/mco
+description: The Mouse Chromosome Ontology (MCO) provides simple, stable, and version-aware URIs for semantically identifying mouse chromosomes in different mouse reference genome assemblies. MCO enables RDF datasets to describe chromosome-level genomic locations consistently across reference genome versions.
+tags: [ Ontology/Terminology/Nomenclature ]
+provider: Database Division for Life Science (DBCLS), BioData Science Initiative (BSI), National Institute of Genetics, National Institute of Genetics
+creators:
+  - name: Toshiaki Katayama
+    affiliation: National Institute of Genetics
+rdf_provenance_type: original
+registration_type: submitted
+version: 2024-09-13
+issued: 2024-09-13
+licenses:
+  - Attribution 4.0 International (CC BY 4.0) Database Center for Life Science
