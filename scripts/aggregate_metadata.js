@@ -7,13 +7,16 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 let statJson = [];
+const statsFilePath = path.join(__dirname, "..", "_data", "datasets_stats.json");
 try {
-  const statsFilePath = path.join(__dirname, "..", "_data", "datasets_stats.json");
-  if (fs.existsSync(statsFilePath)) {
-    statJson = JSON.parse(fs.readFileSync(statsFilePath, "utf8"));
-  }
+  statJson = JSON.parse(fs.readFileSync(statsFilePath, "utf8"));
 } catch (error) {
-  console.warn(`::warning::Failed to load datasets_stats.json, fallback to empty stats: ${error.message}`);
+  if (error.code === "ENOENT") {
+    console.warn(`::warning::datasets_stats.json not found, falling back to empty stats.`);
+  } else {
+    console.error(`❌ Error reading or parsing datasets_stats.json: ${error.message}`);
+    throw error;
+  }
 }
 const { createSvg, generateTagStyles } = require("./lib/icon_generator.js");
 
@@ -350,7 +353,9 @@ async function main() {
     const statsDatasetIds = statJson.map((item) => item.dataset);
     console.log(`Found ${statsDatasetIds.length} datasets in stats file`);
 
-    const localFolders = fs.readdirSync(DATASETS_FOLDER).filter(f => fs.statSync(path.join(DATASETS_FOLDER, f)).isDirectory());
+    const localFolders = fs.readdirSync(DATASETS_FOLDER)
+      .filter(f => fs.statSync(path.join(DATASETS_FOLDER, f)).isDirectory())
+      .sort();
     
     const targetIds = [...statsDatasetIds];
     const targetIdSet = new Set(targetIds);
