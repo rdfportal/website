@@ -6,7 +6,15 @@
 const fs = require("node:fs");
 const path = require("node:path");
 
-const statJson = require("../_data/datasets_stats.json");
+let statJson = [];
+try {
+  const statsFilePath = path.join(__dirname, "..", "_data", "datasets_stats.json");
+  if (fs.existsSync(statsFilePath)) {
+    statJson = JSON.parse(fs.readFileSync(statsFilePath, "utf8"));
+  }
+} catch (error) {
+  console.warn(`::warning::Failed to load datasets_stats.json, fallback to empty stats: ${error.message}`);
+}
 const { createSvg, generateTagStyles } = require("./lib/icon_generator.js");
 
 const DATASETS_FOLDER = path.join(__dirname, "..", "assets", "datasets");
@@ -344,12 +352,12 @@ async function main() {
 
     const localFolders = fs.readdirSync(DATASETS_FOLDER).filter(f => fs.statSync(path.join(DATASETS_FOLDER, f)).isDirectory());
     
-    // Process all datasets that are either in stats or have a local folder (or both).
-    // Maintain the order of statsDatasetIds, and append new local folders at the end.
     const targetIds = [...statsDatasetIds];
+    const targetIdSet = new Set(targetIds);
     for (const folder of localFolders) {
-      if (!targetIds.includes(folder)) {
+      if (!targetIdSet.has(folder)) {
         targetIds.push(folder);
+        targetIdSet.add(folder);
       }
     }
 
