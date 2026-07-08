@@ -1,0 +1,14 @@
+title: Human Chromosome Ontology (HCO)
+website: https://biohackathon.org/resource/hco
+description: Human Chromosome Ontology（HCO）は、ヒト参照ゲノムの各バージョンにおける染色体を意味的に識別するための、シンプルで安定したURIを提供するオントロジーです。HCOを用いることで、RDFデータにおいて染色体レベルのゲノム位置を参照ゲノムのバージョンに応じて一貫して記述できます。
+tags: [ Ontology/Terminology/Nomenclature ]
+provider: 情報・システム研究機構 国立遺伝学研究所 バイオデータ研究拠点 (BSI) ライフサイエンス統合データベース部門 (DBCLS)
+creators:
+  - name:  片山俊明
+    affiliation: 国立遺伝学研究所
+rdf_provenance_type: original
+registration_type: submitted
+version: 2020-07-15
+issued: 2020-07-15
+licenses:
+  - Attribution 4.0 International (CC BY 4.0) Database Center for Life Science

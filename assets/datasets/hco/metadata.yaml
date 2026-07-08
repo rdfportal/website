@@ -1,0 +1,14 @@
+title: Human Chromosome Ontology (HCO)
+website: https://biohackathon.org/resource/hco
+description: The Human Chromosome Ontology (HCO) provides simple, stable, and version-aware URIs for semantically identifying human chromosomes in different human reference genome assemblies. HCO enables RDF datasets to describe chromosome-level genomic locations consistently across reference genome versions.
+tags: [ Ontology/Terminology/Nomenclature ]
+provider: Database Division for Life Science (DBCLS), BioData Science Initiative (BSI), National Institute of Genetics, National Institute of Genetics
+creators:
+  - name: Toshiaki Katayama
+    affiliation: National Institute of Genetics
+rdf_provenance_type: original
+registration_type: submitted
+version: 2020-07-15
+issued: 2020-07-15
+licenses:
+  - Attribution 4.0 International (CC BY 4.0) Database Center for Life Science
