@@ -1,0 +1,18 @@
+# Retrieve chromosome instances and their lengths in GRCh38.
+
+PREFIX hco:   <http://identifiers.org/hco/>
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?chromosome ?chromosome_class ?label ?length
+FROM <http://rdfportal.org/dataset/hco>
+WHERE {
+  ?chromosome rdf:type ?chromosome_class ;
+              hco:length ?length .
+
+  ?chromosome_class rdfs:subClassOf hco:HumanChromosome ;
+                    rdfs:label ?label .
+
+  FILTER(STRENDS(STR(?chromosome), "/GRCh38"))
+}
+ORDER BY ?chromosome

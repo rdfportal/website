@@ -1,0 +1,12 @@
+# Retrieve a list of human chromosome classes included in HCO.
+
+PREFIX hco:   <http://identifiers.org/hco/>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?chromosome_class ?label
+FROM <http://rdfportal.org/dataset/hco>
+WHERE {
+  ?chromosome_class rdfs:subClassOf hco:HumanChromosome ;
+                    rdfs:label ?label .
+}
+ORDER BY ?chromosome_class
