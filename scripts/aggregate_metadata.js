@@ -343,9 +343,14 @@ async function main() {
     console.log(`Found ${statsDatasetIds.length} datasets in stats file`);
 
     const localFolders = fs.readdirSync(DATASETS_FOLDER).filter(f => fs.statSync(path.join(DATASETS_FOLDER, f)).isDirectory());
-    const unusedFolders = localFolders.filter(f => !statsDatasetIds.includes(f));
-    if (unusedFolders.length > 0) {
-      console.warn(`::warning title=Unused Dataset Folders::Found directories in assets/datasets/ that are not in datasets_stats.json: ${unusedFolders.join(", ")}`);
+    
+    // Process all datasets that are either in stats or have a local folder (or both).
+    // Maintain the order of statsDatasetIds, and append new local folders at the end.
+    const targetIds = [...statsDatasetIds];
+    for (const folder of localFolders) {
+      if (!targetIds.includes(folder)) {
+        targetIds.push(folder);
+      }
     }
 
     const datasetsSymbolDir = path.join(__dirname, "..", "assets", "images", "dataset_symbols");
@@ -353,7 +358,7 @@ async function main() {
       fs.mkdirSync(datasetsSymbolDir, { recursive: true });
     }
 
-    for (const id of statsDatasetIds) {
+    for (const id of targetIds) {
       console.log(`Processing ${id}...`);
       const extractedResult = getMetadataFromLocalFolder(id);
 
