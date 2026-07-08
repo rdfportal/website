@@ -157,8 +157,13 @@ toc: true
                     <tr data-row-kind="downloads" data-type="string">
                         <th>{{ i18n.download }}</th>
                         <td>
-                            <a href="https://rdfportal.org/download/{{ page.dataset.id }}">https://rdfportal.org/download/{{
-                                page.dataset.id }}</a>
+                            {% assign _lang = site.active_lang | default: page.lang | default: site.default_lang %}
+                            {% assign _lang_prefix = "" %}
+                            {% unless _lang == site.default_lang %}
+                              {% assign _lang_prefix = "/" | append: _lang %}
+                            {% endunless %}
+                            {% assign _download_path = _lang_prefix | append: '/download/' %}
+                            <a href="{{ _download_path | relative_url }}#{{ page.dataset.id }}">{{ _download_path | relative_url }}#{{ page.dataset.id }}</a>
                         </td>
                     </tr>
 
