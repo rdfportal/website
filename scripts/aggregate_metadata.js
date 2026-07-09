@@ -6,18 +6,7 @@
 const fs = require("node:fs");
 const path = require("node:path");
 
-let statJson = [];
-const statsFilePath = path.join(__dirname, "..", "_data", "datasets_stats.json");
-try {
-  statJson = JSON.parse(fs.readFileSync(statsFilePath, "utf8"));
-} catch (error) {
-  if (error.code === "ENOENT") {
-    console.warn(`::warning::datasets_stats.json not found, falling back to empty stats.`);
-  } else {
-    console.error(`❌ Error reading or parsing datasets_stats.json: ${error.message}`);
-    throw error;
-  }
-}
+const statJson = require("../_data/datasets_stats.json");
 const { createSvg, generateTagStyles } = require("./lib/icon_generator.js");
 
 const DATASETS_FOLDER = path.join(__dirname, "..", "assets", "datasets");
@@ -353,17 +342,10 @@ async function main() {
     const statsDatasetIds = statJson.map((item) => item.dataset);
     console.log(`Found ${statsDatasetIds.length} datasets in stats file`);
 
-    const localFolders = fs.readdirSync(DATASETS_FOLDER)
-      .filter(f => fs.statSync(path.join(DATASETS_FOLDER, f)).isDirectory())
-      .sort();
-    
-    const targetIds = [...statsDatasetIds];
-    const targetIdSet = new Set(targetIds);
-    for (const folder of localFolders) {
-      if (!targetIdSet.has(folder)) {
-        targetIds.push(folder);
-        targetIdSet.add(folder);
-      }
+    const localFolders = fs.readdirSync(DATASETS_FOLDER).filter(f => fs.statSync(path.join(DATASETS_FOLDER, f)).isDirectory());
+    const unusedFolders = localFolders.filter(f => !statsDatasetIds.includes(f));
+    if (unusedFolders.length > 0) {
+      console.warn(`::warning title=Unused Dataset Folders::Found directories in assets/datasets/ that are not in datasets_stats.json: ${unusedFolders.join(", ")}`);
     }
 
     const datasetsSymbolDir = path.join(__dirname, "..", "assets", "images", "dataset_symbols");
@@ -371,7 +353,7 @@ async function main() {
       fs.mkdirSync(datasetsSymbolDir, { recursive: true });
     }
 
-    for (const id of targetIds) {
+    for (const id of statsDatasetIds) {
       console.log(`Processing ${id}...`);
       const extractedResult = getMetadataFromLocalFolder(id);
 
