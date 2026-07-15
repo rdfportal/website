@@ -1,0 +1,23 @@
+title: MoG+ RDF
+website: https://molossinus.brc.riken.jp/mogplus/
+description: MoG+ RDF は、理化学研究所バイオリソース研究センター（RIKEN BioResource Research Center）が提供するマウスゲノム変異データベース MoG+（Mouse Genome database with high added value）をRDF化したデータセットです。MoG+ は、野生由来系統や古典的近交系を含むマウス系統のゲノム変異情報を提供し、マウス系統間のゲノム多型の比較解析に利用できます。
+
+本RDFデータセットの利用にあたっては、MoG+ の Data Release Policy を参照してください：
+https://molossinus.brc.riken.jp/mogplus3/about/policy
+
+オリジナルのMoG+データファイルは以下から取得できます：
+https://molossinus.brc.riken.jp/pub/
+tags: [ Genome, Mouse, Variation ]
+provider: 理研バイオリソース研究センター
+creators:
+  - name: 高田豊行
+    affiliation: 理研バイオリソース研究センター
+  - name: 桝屋啓志
+    affiliation: 理研バイオリソース研究センター
+rdf_provenance_type: original
+registration_type: submitted
+version:  
+issued: 2026-07-03
+licenses:
+  - https://molossinus.brc.riken.jp/mogplus3/about/policy
+  - MoG+ is licensed under a Creative Commons Attribution (CC-BY) 4.0 License.
