@@ -1,13 +1,13 @@
 title: MoG+ RDF
 website: https://molossinus.brc.riken.jp/mogplus/
-description: MoG+ RDF is an RDF representation of MoG+ (Mouse Genome database with high added value), a mouse genomic variation database provided by the RIKEN BioResource Research Center. MoG+ provides genomic variation information for laboratory mouse strains, including wild-derived strains and classical inbred strains, and supports comparative analysis of genomic polymorphisms across mouse strains.
+description: |
+  MoG+ RDF is an RDF representation of MoG+ (Mouse Genome database with high added value), a mouse genomic variation database provided by the RIKEN BioResource Research Center. MoG+ provides genomic variation information for laboratory mouse strains, including wild-derived strains and classical inbred strains, and supports comparative analysis of genomic polymorphisms across mouse strains.
 
-Users of this RDF dataset should refer to the MoG+ Data Release Policy
-https://molossinus.brc.riken.jp/mogplus3/about/policy
+  Users of this RDF dataset should refer to the MoG+ Data Release Policy:
+  https://molossinus.brc.riken.jp/mogplus3/about/policy
 
-The original MoG+ data files are available from
-https://molossinus.brc.riken.jp/pub/
-
+  The original MoG+ data files are available from:
+  https://molossinus.brc.riken.jp/pub/
 tags: [ Genome, Mouse, Variation ]
 provider: RIKEN BioResource Research Center
 creators:
