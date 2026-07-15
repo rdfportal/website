@@ -71,7 +71,7 @@ async function checkDatasetFormats(id) {
   let hasAny = false;
 
   for (const fmt of FORMATS) {
-    const url = `${DOWNLOAD_BASE}/${fmt}/${id}/`;
+    const url = `${DOWNLOAD_BASE}/pub/${fmt}/${id}/`;
     const exists = await checkUrlExists(url);
     if (exists) {
       result.formats[fmt] = url;
