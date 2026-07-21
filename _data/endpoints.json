@@ -8,10 +8,6 @@
     "title": "DDBJ"
   },
   {
-    "id": "bioportal",
-    "title": "BioPortal"
-  },
-  {
     "id": "kero",
     "title": "KERO"
   },
@@ -20,16 +16,8 @@
     "title": "PDB"
   },
   {
-    "id": "proteinatlas",
-    "title": "Protein Atlas"
-  },
-  {
     "id": "pubchem",
     "title": "PubChem"
-  },
-  {
-    "id": "wikidata",
-    "title": "Wikidata"
   },
   {
     "id": "ebi",
@@ -43,8 +31,4 @@
     "id": "sib",
     "title": "SIB"
   },
-  {
-    "id": "med2rdf",
-    "title": "Med2RDF"
-  }
 ]
