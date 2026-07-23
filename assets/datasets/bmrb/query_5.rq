@@ -8,7 +8,7 @@ SELECT ?entry_id ?entity_id ?seq_id ?comp_id ?ca_ppm ?cb_ppm ?c_ppm
 FROM <http://bmrbpub.protein.osaka-u.ac.jp/rdf/bmr>
 {
   VALUES ?entry_id { "10002" }
-  VALUES ?seq_id { "2" "3" "4" "5" }
+  VALUES ?seq_id { 2 3 4 5 }
   ?s_ca  bmrbo:atom_chem_shift.atom_id "CA" ;
          bmrbo:atom_chem_shift.atom_type "C" ;
          bmrbo:atom_chem_shift.entry_id ?entry_id ;    # fill entry_id.
