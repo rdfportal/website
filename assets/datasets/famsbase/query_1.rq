@@ -5,6 +5,8 @@ PREFIX edam: <http://edamontology.org/>
 PREFIX pdb: <http://identifiers.org/pdb/>
 PREFIX famsbaseo: <http://purl.jp/bio/01/famsbase/ontology/>
 PREFIX faldo: <http://biohackathon.org/resource/faldo#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT  ?entry ?model ?evalue ?uniprot
 FROM <http://fams.bio.chuo-u.ac.jp/GPCR/rdf/>
