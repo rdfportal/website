@@ -8,7 +8,7 @@ PREFIX mpo: <http://purl.jp/bio/10/mpo/>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 
 SELECT ?strain ?qualified_species_name ?v
-FROM <https://metadb.riken.jp/metadb/db/rikenbrc_jcm_microbe>
+FROM <http://metadb.riken.jp/db/xsearch_jcm_brso>
 where {
 ?strain a mccv:MCCV_000001 ;
        mccv:MCCV_000012 ?qualified_species_name ;
