@@ -10,6 +10,8 @@ PREFIX tax: <http://ddbj.nig.ac.jp/ontologies/taxonomy/>
 
 SELECT
   ?organism ?sequence_version ?definition  ?sequence_date
+FROM <http://rdfportal.org/dataset/ddbj>
+FROM <http://rdfportal.org/ontology/taxonomy>
 WHERE
 {
   values ?tax_id {tax:1148} 

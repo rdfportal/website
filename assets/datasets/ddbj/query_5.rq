@@ -9,13 +9,12 @@ PREFIX faldo:  <http://biohackathon.org/resource/faldo#>
 
 select
  ?locus_tag ?feature_type ?product ?gene_symbol 
- IF(?fstart < ?fend , ?fstart, ?fend) as ?start 
- IF(?fstart < ?fend , ?fend, ?fstart) as ?end
- IF( ?faldo_type = faldo:ForwardStrandPosition,"+", IF( ?faldo_type = faldo:ReverseStrandPosition,"-",".")) as ?strand
+ (IF(?fstart < ?fend , ?fstart, ?fend) as ?start) 
+ (IF(?fstart < ?fend , ?fend, ?fstart) as ?end)
+ (IF( ?faldo_type = faldo:ForwardStrandPosition,"+", IF( ?faldo_type = faldo:ReverseStrandPosition,"-",".")) as ?strand)
 where
 { 
   values ?entry {<http://identifiers.org/insdc/AP011615.1>}.
-  values ?faldo_type { faldo:ForwardStrandPosition faldo:ReverseStrandPosition }
   ?entry   insdc:sequence ?sequence .
   ?feature obo:BFO_0000050 ?sequence .
   ?sequence rdfs:subClassOf obo:SO_0000001 .
@@ -26,6 +25,7 @@ where
   OPTIONAL { ?feature insdc:gene ?gene_symbol .}
   ?feature faldo:location ?faldo .
   ?faldo faldo:begin/rdf:type ?faldo_type .
+  FILTER (?faldo_type = faldo:ForwardStrandPosition || ?faldo_type = faldo:ReverseStrandPosition  )
   ?faldo faldo:begin/faldo:position ?fstart .
   ?faldo faldo:end/faldo:position ?fend .
   ?feature obo:BFO_0000051  ?parent .

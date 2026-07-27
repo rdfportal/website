@@ -6,7 +6,8 @@ PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 PREFIX insdc:<http://ddbj.nig.ac.jp/ontologies/nucleotide/>
 
 SELECT
-  ?sequence_version ?definition replace(str(?topology), "http://ddbj.nig.ac.jp/ontologies/nucleotide/","") as ?topology
+  ?sequence_version ?definition (replace(str(?topology_uri), "http://ddbj.nig.ac.jp/ontologies/nucleotide/","") as ?topology)
+FROM <http://rdfportal.org/dataset/ddbj>
 WHERE
 {
   VALUES ?project { <http://identifiers.org/bioproject/PRJNA244038> }
@@ -16,5 +17,5 @@ WHERE
   ?entry insdc:sequence_version ?sequence_version.
   ?entry insdc:definition ?definition.
   ?entry insdc:sequence ?sequence.
-  ?sequence insdc:topology ?topology.
+  ?sequence insdc:topology ?topology_uri.
 }

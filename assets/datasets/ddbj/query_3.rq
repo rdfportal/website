@@ -8,6 +8,7 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 
 SELECT
   ?sequence_version
+FROM <http://rdfportal.org/dataset/ddbj>
 WHERE
 {
   VALUES ?pubmed { <http://identifiers.org/pubmed/21441521> }
