@@ -13,5 +13,5 @@ WHERE {
     ?group a orth:OrthologGroup ;
         orth:member+/orth:gene?/orth:protein?/rdfs:seeAlso protid:NP_563687.1 ;
         orth:member+/orth:gene?/orth:protein?/rdfs:seeAlso ?protein_id .
-    FILTER regex(?protein_id, "identifiers.org/ncbiprotein")
+    FILTER regex(STR(?protein_id), "identifiers.org/ncbiprotein")
 }
