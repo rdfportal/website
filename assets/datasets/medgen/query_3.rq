@@ -12,11 +12,12 @@ WHERE {
     VALUES ?identifier { "C0023467" }
     ?MedGen a mo:ConceptID ;
         dct:identifier ?identifier ;
-        mo:mgconso / mo:aui ?mgconso_aui ;
-        mo:mgconso / mo:ispref ?mgconso_ispref ;
-        mo:mgconso / mo:stt ?mgconso_stt ;
-        mo:mgconso / mo:ts ?mgconso_ts ;
-        mo:mgconso / rdfs:label ?mgconso_label ;
-        mo:mgconso / dct:source ?mgconso_source .
+        mo:mgconso ?mgconso .
+    ?mgconso mo:aui ?mgconso_aui ;
+        mo:ispref ?mgconso_ispref ;
+        mo:stt ?mgconso_stt ;
+        mo:ts ?mgconso_ts ;
+        rdfs:label ?mgconso_label ;
+        dct:source ?mgconso_source .
 }
 LIMIT 100

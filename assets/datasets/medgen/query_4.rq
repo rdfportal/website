@@ -13,11 +13,12 @@ WHERE {
     VALUES ?identifier { "C0023467" }
     ?MedGen a mo:ConceptID ;
         dct:identifier ?identifier ;
-        mo:mgsat / mo:metaui ?metaui ;
-        mo:mgsat / mo:stype ?stype ;
-        mo:mgsat / dct:identifier ?mgsat_identifier ;
-        mo:mgsat / dct:source ?mgsat_source ;
-        mo:mgsat / rdf:value ?mgsat_value ;
-        mo:mgsat / rdfs:label ?metaui_label .
+        mo:mgsat ?mgsat .
+    ?mgsat mo:metaui ?metaui ;
+        mo:stype ?stype ;
+        dct:identifier ?mgsat_identifier ;
+        dct:source ?mgsat_source ;
+        rdf:value ?mgsat_value ;
+        rdfs:label ?metaui_label .
 }
 LIMIT 100
