@@ -1,10 +1,11 @@
 # Retrieve resources with taxid:228894
 
 PREFIX taxonomy: <http://identifiers.org/taxonomy/>
- PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dct: <http://purl.org/dc/terms/>
 
- SELECT ?s ?id
+SELECT ?s ?id
+FROM <http://rdfportal.org/dataset/naro_genebank>
 WHERE {
- ?s a taxonomy:228894 ;
- dct:identifier ?id
- } LIMIT 100
+  ?s a taxonomy:228894 ;
+    dct:identifier ?id
+} LIMIT 100
