@@ -4,6 +4,8 @@ PREFIX up: <http://purl.uniprot.org/uniprot/>
 PREFIX unimod: <http://www.unimod.org/obo/unimod.obo#>
 PREFIX faldo: <http://biohackathon.org/resource/faldo#>
 SELECT ?pep_position ?mod_position ?site (COUNT (?site) AS ?detected_count)
+FROM <http://jpost.org/graph/database>
+FROM <http://rdf.jpostdb.org/ontology/jpost.owl>
 WHERE {
   VALUES ?uniprot { up:Q9NYF8 }
   ?protein jpost:hasDatabaseSequence ?uniprot ;
@@ -13,5 +15,5 @@ WHERE {
   ?psm jpost:hasModification [ a unimod:UNIMOD_21 ;  # UNIMOD_21 = "Phospho"
                              jpost:modificationSite ?site ;
                              faldo:location/faldo:position ?mod_position ] .
-}
+} GROUP BY ?pep_position ?mod_position ?site
 ORDER BY ?pep_position ?mod_position
