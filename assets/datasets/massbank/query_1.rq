@@ -2,6 +2,7 @@
 PREFIX mbo: <http://www.massbank.jp/ontology/>
 
 SELECT DISTINCT ?instrument_type
+FROM <http://rdfportal.org/dataset/massbank>
 WHERE {
   ?s mbo:instrument_type ?instrument_type .
 }
