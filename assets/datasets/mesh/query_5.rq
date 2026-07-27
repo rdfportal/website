@@ -5,6 +5,7 @@ PREFIX meshv: <http://id.nlm.nih.gov/mesh/vocab#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?Concept ?concept_label ?concept_preferred_term ?descriptor_preferred_term ?qualifier_preferred_term ?term_label
+FROM <http://id.nlm.nih.gov/mesh>
 WHERE {
     ?Concept a meshv:Concept ;
         meshv:seeAlso / meshv:broaderDescriptor ?Descriptor .

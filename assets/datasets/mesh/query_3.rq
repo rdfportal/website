@@ -7,6 +7,7 @@ PREFIX meshv: <http://id.nlm.nih.gov/mesh/vocab#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?AllowedDescriptorQualifierPair ?Qualifier ?qualifier_label ?qualifier_active ?allowed_descriptor_qualifier_pair_active
+FROM <http://id.nlm.nih.gov/mesh>
 WHERE {
     VALUES ?qualifier_active { true }
     VALUES ?allowed_descriptor_qualifier_pair_active { true }
