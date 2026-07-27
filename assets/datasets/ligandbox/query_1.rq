@@ -2,6 +2,8 @@
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX PDBc: <https://rdf.wwpdb.org/cc/>
 SELECT DISTINCT ?entry ?pdb_link
+FROM <http://purl.jp/bio/5/ligandbox/>
+FROM <http://rdfportal.org/rdf/download/liganbox/2021-05-25/ontology-1/ligandbox.owl>
 WHERE {
   ?entry rdfs:seeAlso ?pdb_link FILTER regex(str(?pdb_link), "rdf.wwpdb.org/cc/", "i"). 
 }

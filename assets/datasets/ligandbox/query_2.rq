@@ -3,6 +3,8 @@ PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX cheminf: <http://www.semanticweb.org/ontologies/cheminf.owl#>
 SELECT DISTINCT ?entry ?molecular_weight
+FROM <http://purl.jp/bio/5/ligandbox/>
+FROM <http://rdfportal.org/rdf/download/liganbox/2021-05-25/ontology-1/ligandbox.owl>
 WHERE {
   ?entry sio:SIO_000008 _:b0 .
   _:b0 rdf:type sio:CHEMINF_000216 ;
