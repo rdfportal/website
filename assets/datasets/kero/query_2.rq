@@ -18,6 +18,8 @@ PREFIX faldo: <http://biohackathon.org/resource/faldo#>
 PREFIX kero: <http://kero.hgc.jp/ontology/kero.owl#>
 
 SELECT ?cell_line (COUNT(?snv_position) AS ?mutation_num)
+FROM <http://rdfportal.org/dataset/kero/Cancer_Cell_Line>
+FROM <http://kero.hgc.jp/ontology/kero.owl>
 WHERE
 {
   ?rnadataset a kero:RNAseqDataset ;
@@ -33,7 +35,7 @@ WHERE
     faldo:reference ?chr .
   ?begin a ?direction ;
     faldo:position ?position .
-  FILTER(?direction = faldo:ForwardStrandPosition OR ?direction = faldo:ReverseStrandPosition)
+  FILTER(?direction = faldo:ForwardStrandPosition || ?direction = faldo:ReverseStrandPosition)
   BIND(IF(?direction = faldo:ForwardStrandPosition, ?position - 1000, ?position) AS ?5position)
   BIND(IF(?direction = faldo:ReverseStrandPosition, ?position + 1000, ?position) AS ?3position)
     ?snv a so:SO_0001483 ;
@@ -44,7 +46,7 @@ WHERE
   ?snvdataset a kero:SNVDataset ;
     kero:hasVariationSite ?snv ;
     kero:sample ?sample .
-  FILTER(?snv_position > ?5position AND ?snv_position < ?3position)
+  FILTER(?snv_position > ?5position && ?snv_position < ?3position)
 }
 GROUP BY ?cell_line
 
