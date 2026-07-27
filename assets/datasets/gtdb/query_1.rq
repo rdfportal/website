@@ -6,6 +6,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
 PREFIX gtdb: <http://identifiers.org/gtdb/onto/>
 
 SELECT ?taxid ?strain ?species_label ?genus_label ?family_label ?order_label ?class_label ?phyla_label ?domain_label
+FROM <http://rdfportal.org/dataset/gtdb>
 WHERE {
   VALUES ?taxid {"191218" "190304"}
   ?strain gtdb:ncbi_taxid ?taxid ;
