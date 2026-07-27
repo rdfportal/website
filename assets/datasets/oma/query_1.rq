@@ -5,7 +5,7 @@ PREFIX orth: <http://purl.org/net/orth#>
 PREFIX dct: <http://purl.org/dc/terms/>
 
 SELECT ?cluster_id ?protein_id
-FROM <http://omabrowser.org/graph>
+FROM <http://rdfportal.org/dataset/oma>
 WHERE {
     ?ClusterOfOrthologs a orth:OrthologsCluster ;
         dct:identifier ?cluster_id ;
