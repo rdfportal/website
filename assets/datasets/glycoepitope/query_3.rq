@@ -4,7 +4,7 @@
 #
 ##########################
 
-DEFINE sql:select-option "order"
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX bibo: <http://purl.org/ontology/bibo/>
 PREFIX glycan: <http://purl.jp/bio/12/glyco/glycan#> 
