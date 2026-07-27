@@ -3,6 +3,7 @@
 PREFIX PDBr: <https://rdf.wwpdb.org/pdb/>
 PREFIX sio: <http://semanticscience.org/resource/>
 SELECT ?entry ?molecule
+FROM <http://purl.jp/bio/18/nadd/>
 WHERE {
     ?entry sio:SIO_010423 ?molecule FILTER REGEX ( str(?molecule), "pdb")
 }
