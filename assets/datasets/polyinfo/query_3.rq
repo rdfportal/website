@@ -3,6 +3,7 @@
 prefix biodg: <http://dice.nims.go.jp/ontology/polymer-bio-ont/Biodeg#>
 prefix cu: <http://dice.nims.go.jp/ontology/PoLyInfo-ont/polyinfo-rdf/ConstitutionalUnit#>
 prefix dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 prefix taxddbj: <http://ddbj.nig.ac.jp/ontologies/taxonomy/>
 prefix homo: <http://dice.nims.go.jp/ontology/PoLyInfo-ont/polyinfo-rdf/Homopolymer#>
 prefix obo: <http://purl.obolibrary.org/obo/>
@@ -17,17 +18,17 @@ prefix wdt: <http://dice.nims.go.jp/ontology/polymer-bio-ont/Property#>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT distinct ?deg_label ?ref ?doi ?author ?year
+FROM <http://rdfportal.org/dataset/polyinfo>
 WHERE {
   ?deg obo:RO_0000057 taxonomy:69781 ;
     obo:RO_0000057 homo:P370120 ;
     rdfs:label ?deg_label ;
     dcterms:referecens ?ref .
-OPTIONAL {
-  ?ref prism:doi ?doi .
+  OPTIONAL {
+    ?ref prism:doi ?doi .
+  }
+  OPTIONAL {
+    ?ref  dc:creator ?author ;
+    prism:publicationDate ?year .
+  }
 }
-OPTIONAL {
-  ?ref  dc:creator ?author ;
-  prism:publicationDate ?year .
-}
-}
-

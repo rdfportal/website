@@ -18,6 +18,7 @@ prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT distinct ?mf_val ?smiles_val ?deg_label ?tax_name
 WHERE {
+  GRAPH <http://rdfportal.org/dataset/polyinfo> {
   ?poly rdfs:label "poly(prop-1-ene)"@en ;
     sio:SIO_000008 ?cu .
   ?cu a pli:ConstitutionalUnit ;
@@ -30,9 +31,9 @@ WHERE {
   ?deg obo:RO_0000057 ?poly;
     rdfs:label ?deg_label ;
     obo:RO_0000057 ?tax .
-  SERVICE <https://rdfportal.org/ddbj/sparql>{
+  }
+  GRAPH <http://rdfportal.org/ontology/taxonomy> {
     ?tax a taxddbj:Taxon ;
     taxddbj:scientificName ?tax_name .
   }
 }
-

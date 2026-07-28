@@ -18,20 +18,22 @@ prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT distinct ?tax ?sname ?mw_val
 WHERE {
-  SERVICE <https://rdfportal.org/ddbj/sparql>{
+  GRAPH <http://rdfportal.org/ontology/taxonomy>{
   ?tax taxddbj:scientificName "Pseudomonas putida" ;
     a taxddbj:Taxon .
   }
-  ?deg obo:RO_0000057 ?tax;
-    obo:RO_0000057 ?poly .
-  ?poly a pli:Homopolymer ;
-    sio:SIO_000008 ?name .
-  ?name a pli:StructureBasedName ;
-    sio:SIO_000300 ?sname .
-  ?poly sio:SIO_000008 ?cu .
-  ?cu a pli:ConstitutionalUnit ;
-    obo:BFO_0000051 ?mw .
-  ?mw  a pli:MolecularWeight ;
-    sio:SIO_000300 ?mw_val .
+  GRAPH <http://rdfportal.org/dataset/polyinfo> {
+    ?deg obo:RO_0000057 ?tax;
+      obo:RO_0000057 ?poly .
+    ?poly a pli:Homopolymer ;
+      sio:SIO_000008 ?name .
+    ?name a pli:StructureBasedName ;
+      sio:SIO_000300 ?sname .
+    ?poly sio:SIO_000008 ?cu .
+    ?cu a pli:ConstitutionalUnit ;
+      obo:BFO_0000051 ?mw .
+    ?mw  a pli:MolecularWeight ;
+      sio:SIO_000300 ?mw_val .
+  }
 }
 
