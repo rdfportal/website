@@ -25,16 +25,16 @@ FROM <http://sparql.uniprot.org/locations>
 FROM <http://sparql.uniprot.org/tissues>
 FROM <http://sparql.uniprot.org/core>
 FROM <http://sparql.uniprot.org/databases>
-WHERE {
-    VALUES ?database { database:HGNC }
+WHERE {  
     VALUES ?taxonomy { taxonomy:9606 }
     VALUES ?db_resource__class { core:Resource core:Nucleotide_Resource core:Transcript_Resource core:Structure_Resource }
-    ?db_resource a ?db_resource__class ;
-        core:database ?database .
     ?UniProt a core:Protein ;
         core:organism ?taxonomy .
     OPTIONAL {
+        VALUES ?database { database:HGNC }
         ?UniProt rdfs:seeAlso ?db_resource .
+        ?db_resource a ?db_resource__class ;
+            core:database ?database .
     }
 }
 LIMIT 100
