@@ -30,16 +30,19 @@ WHERE {
         ?RefExSample refexo:refexRefinedDescription ?description .
     }
     OPTIONAL {
-        ?RefExSample refexo:sampleReference / refexo:belongsToCellType ?cell_type .
-    }
-    OPTIONAL {
-        ?RefExSample refexo:sampleReference / refexo:belongsToDisease ?disease .
-    }
-    OPTIONAL {
-        ?RefExSample refexo:sampleReference / refexo:belongsToDevelopmentSite ?dev_site .
-    }
-    OPTIONAL {
-        ?RefExSample refexo:sampleReference / refexo:sample ?refexo_sample .
+        ?RefExSample refexo:sampleReference ?sampleRef .
+        OPTIONAL {
+            ?sampleRef refexo:belongsToCellType ?cell_type .
+        }
+        OPTIONAL {
+            ?sampleRef refexo:belongsToDisease ?disease .
+        }
+        OPTIONAL {
+            ?sampleRef refexo:belongsToDevelopmentSite ?dev_site .
+        }
+        OPTIONAL {
+            ?sampleRef refexo:sample ?refexo_sample .
+        }
     }
 }
 LIMIT 100

@@ -1,4 +1,5 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX refexs: <http://refex.dbcls.jp/sample/>
@@ -8,7 +9,7 @@ PREFIX bs: <http://identifiers.org/biosample/>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?refexid ?refex ?gene ?ev AS ?expression_value ?sample ?age
+SELECT ?refexid ?refex ?gene (?ev AS ?expression_value) ?sample ?age
 FROM <http://refex.dbcls.jp/rdf/fantom5>
 WHERE {
     ?sample ?p ?bn .
