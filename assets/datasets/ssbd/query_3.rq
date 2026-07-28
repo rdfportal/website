@@ -4,6 +4,7 @@ SELECT ?s ?desc
 FROM <http://metadb.riken.jp/db/SSBD>
 WHERE
 {
-  ?s dcterms:references ?text FILTER regex(?text, "23172286", "i") .
+  ?s dcterms:references ?text
+  FILTER regex(STR(?text), "23172286", "i") .
   ?s dcterms:description ?desc .
 }
