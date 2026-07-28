@@ -7,6 +7,8 @@ PREFIX meo: <http://purl.jp/bio/11/meo/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 select ?strain ?name ?meo ?meo_label
+FROM <http://purl.jp/bio/103/nite/culture/>
+FROM <http://rdfportal.org/dataset/microbedbjp>
 where {
 ?strain mccv:MCCV_000012 ?name .
 ?strain mccv:MCCV_000028 ?sample .

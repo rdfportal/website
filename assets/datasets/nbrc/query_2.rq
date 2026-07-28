@@ -9,14 +9,14 @@ PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 select ?strain ?label ?temperature
+FROM <http://purl.jp/bio/103/nite/culture/>
 where {
 	?strain skos:prefLabel ?label.
     ?strain sio:SIO_000216 ?measurement_value.
     ?measurement_value sio:SIO_000221 obo:UO_0000027.
     ?measurement_value sio:SIO_000300 ?temperature.
-	 FILTER(?temperature > 55)
+	FILTER(?temperature > 55)
 	MINUS{
 	    ?measurement_value rdf:type mpo:MPO_00104.
 	}
 } LIMIT 100
-
