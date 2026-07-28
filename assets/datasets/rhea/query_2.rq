@@ -9,6 +9,7 @@ PREFIX rhea: <http://rdf.rhea-db.org/>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 
 SELECT ?Reaction ?status ?equation ?chebi
+FROM <http://rdfportal.org/dataset/rhea>
 WHERE {
     VALUES ?status { rhea:Approved }
     VALUES ?chebi { obo:CHEBI_29985 }
