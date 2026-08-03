@@ -829,7 +829,20 @@
       "number_of_objects": 155732700
     },
     "updated_at": "2026-07-21",
-    "issued_at": "2026-02-06"
+    "issued_at": "2026-07-27"
+  },
+  {
+    "endpoint": "sib",
+    "dataset": "cellosaurus",
+    "statistics": {
+      "number_of_triples": 19464252,
+      "number_of_classes": 134,
+      "number_of_properties": 167,
+      "number_of_subjects": 3269395,
+      "number_of_objects": 5909588
+    },
+    "updated_at": "2026-07-21",
+    "issued_at": "2026-07-27"
   },
   {
     "endpoint": "sib",
@@ -842,33 +855,33 @@
       "number_of_objects": 334832200
     },
     "updated_at": "2024-07-30",
-    "issued_at": "2026-02-06"
+    "issued_at": "2026-07-27"
   },
   {
     "endpoint": "sib",
     "dataset": "rhea",
     "statistics": {
-      "number_of_triples": 1962186,
+      "number_of_triples": 2046904,
       "number_of_classes": 2,
       "number_of_properties": 59,
-      "number_of_subjects": 211004,
-      "number_of_objects": 596057
+      "number_of_subjects": 219912,
+      "number_of_objects": 620145
     },
     "updated_at": "2026-07-21",
-    "issued_at": "2026-02-06"
+    "issued_at": "2026-07-27"
   },
   {
     "endpoint": "sib",
     "dataset": "uniprot",
     "statistics": {
-      "number_of_triples": 51354759693,
-      "number_of_classes": 153,
+      "number_of_triples": 38873604515,
+      "number_of_classes": 154,
       "number_of_properties": 180,
-      "number_of_subjects": 10797037882,
-      "number_of_objects": 9751373632
+      "number_of_subjects": 8092918607,
+      "number_of_objects": 7387257890
     },
     "updated_at": "2026-07-21",
-    "issued_at": "2026-02-06"
+    "issued_at": "2026-07-27"
   },
   {
     "endpoint": "wikidata",
