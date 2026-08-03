@@ -1,0 +1,28 @@
+# Retrieve cell lines derived from a specific anatomical site
+
+PREFIX cello: <https://purl.expasy.org/cellosaurus/rdf/ontology/>
+
+SELECT DISTINCT
+  ?cell_line
+  ?accession
+  ?cell_line_name
+  ?site_name
+  ?site_type
+FROM <http://rdfportal.org/dataset/cellosaurus>
+WHERE {
+  ?cell_line
+    cello:primaryAccession ?accession ;
+    cello:recommendedName ?cell_line_name ;
+    cello:derivedFromSite ?site .
+
+  ?site
+    cello:name ?site_name ;
+    cello:isIdentifiedByIRI
+      <http://purl.obolibrary.org/obo/UBERON_0001155> .
+
+  OPTIONAL {
+    ?site cello:siteType ?site_type .
+  }
+}
+ORDER BY ?cell_line_name
+LIMIT 100

@@ -1,0 +1,13 @@
+#Retrieve cell lines with their accessions and recommended names
+
+PREFIX cello: <https://purl.expasy.org/cellosaurus/rdf/ontology/>
+
+SELECT ?cell_line ?accession ?name
+FROM <http://rdfportal.org/dataset/cellosaurus>
+WHERE {
+  ?cell_line
+    cello:primaryAccession ?accession ;
+    cello:recommendedName ?name .
+}
+ORDER BY ?accession
+LIMIT 100

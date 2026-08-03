@@ -1,0 +1,24 @@
+# Retrieve parent and derived cell line relationships
+
+PREFIX cello: <https://purl.expasy.org/cellosaurus/rdf/ontology/>
+
+SELECT DISTINCT
+  ?parent
+  ?parent_accession
+  ?parent_name
+  ?child
+  ?child_accession
+  ?child_name
+FROM <http://rdfportal.org/dataset/cellosaurus>
+WHERE {
+  ?child
+    cello:hasParentCellLine ?parent ;
+    cello:primaryAccession ?child_accession ;
+    cello:recommendedName ?child_name .
+
+  ?parent
+    cello:primaryAccession ?parent_accession ;
+    cello:recommendedName ?parent_name .
+}
+ORDER BY ?parent_name ?child_name
+LIMIT 100

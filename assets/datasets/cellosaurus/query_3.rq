@@ -1,0 +1,22 @@
+# Retrieve human cancer cell lines
+
+PREFIX cello: <https://purl.expasy.org/cellosaurus/rdf/ontology/>
+
+SELECT DISTINCT
+  ?cell_line
+  ?accession
+  ?name
+FROM <http://rdfportal.org/dataset/cellosaurus>
+WHERE {
+  ?cell_line
+    a cello:CancerCellLine ;
+    cello:primaryAccession ?accession ;
+    cello:recommendedName ?name ;
+    cello:derivedFromIndividualBelongingToSpecies ?species .
+
+  ?species
+    cello:isIdentifiedByIRI
+      <http://purl.obolibrary.org/obo/NCBITaxon_9606> .
+}
+ORDER BY ?name
+LIMIT 100
