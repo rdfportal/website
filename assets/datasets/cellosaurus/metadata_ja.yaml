@@ -1,0 +1,15 @@
+title: Cellosaurus 
+website: https://www.cellosaurus.org/
+description: Cellosaurusは、生物医学研究で利用される細胞株を包括的に記述した知識リソースです。不死化細胞株、有限寿命細胞株、幹細胞株に加え、脊椎動物、無脊椎動物および植物に由来する細胞株を対象としています。各細胞株には一意なアクセッション番号が付与され、推奨名称と別名、由来生物種、組織・細胞型、疾患との関連、ドナー情報、遺伝的変化、STRプロファイル、関連文献、細胞バンクや外部データベースへの参照などの情報が整理されています。RDF版では、これらの情報と関係性がCellosaurusオントロジーを用いて構造化され、既存の生命科学データベースやオントロジーとも接続されているため、他の生命科学RDFデータセットと統合した検索や解析に利用できます。
+tags: [Cell]
+provider: Swiss Institute of Bioinformatics
+creators:
+  - name: the CALIPHO group, Swiss Institute of Bioinformatics
+    affiliation: Swiss Institute of Bioinformatics
+rdf_provenance_type: original
+registration_type: added_by_rdfportal
+version: Release 56
+issued: 2026-06-25
+licenses:
+  - the Creative Commons Attribution 4.0 International (CC BY 4.0)
+  - See https://ftp.expasy.org/databases/cellosaurus/README

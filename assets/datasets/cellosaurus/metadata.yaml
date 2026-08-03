@@ -1,0 +1,15 @@
+title: Cellosaurus 
+website: https://www.cellosaurus.org/
+description: Cellosaurus is a comprehensive knowledge resource describing cell lines used in biomedical research, including immortalized and finite cell lines, stem cell lines, and cell lines derived from vertebrates, invertebrates, and plants. Each cell line is assigned a unique accession and is annotated with curated information such as recommended names and synonyms, species of origin, tissue and cell type, disease associations, donor characteristics, genetic alterations, STR profiles, publications, and cross-references to cell banks and external databases. The RDF representation structures these data and their relationships using the Cellosaurus ontology and links them to established biological databases and ontologies, facilitating integrated search and analysis across life science RDF datasets. 
+tags: [Cell]
+provider: Swiss Institute of Bioinformatics
+creators:
+  - name: the CALIPHO group, Swiss Institute of Bioinformatics
+    affiliation: Swiss Institute of Bioinformatics
+rdf_provenance_type: original
+registration_type: added_by_rdfportal
+version: Release 56
+issued: 2026-06-25
+licenses:
+  - the Creative Commons Attribution 4.0 International (CC BY 4.0)
+  - See https://ftp.expasy.org/databases/cellosaurus/README
