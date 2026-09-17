@@ -270,20 +270,20 @@
       "number_of_objects": 39110387
     },
     "updated_at": "2025-09-17",
-    "issued_at": "2026-06-24"
+    "issued_at": "2026-09-16"
   },
   {
     "endpoint": "pdb",
     "dataset": "pdb",
     "statistics": {
-      "number_of_triples": 23662283539,
-      "number_of_classes": 647,
-      "number_of_properties": 3954,
-      "number_of_subjects": 1692898040,
-      "number_of_objects": 1738580391
+      "number_of_triples": 24378867482,
+      "number_of_classes": 657,
+      "number_of_properties": 4066,
+      "number_of_subjects": 1741670399,
+      "number_of_objects": 1789059100
     },
-    "updated_at": "2026-06-19",
-    "issued_at": "2026-06-24"
+    "updated_at": "2026-09-02",
+    "issued_at": "2026-09-16"
   },
   {
     "endpoint": "primary",
