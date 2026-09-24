@@ -1,0 +1,18 @@
+title: JoGo
+website: https://jogo.csml.org/
+description: JoGo RDF is an RDF representation of the human haplotype catalog developed by the Joint Open Genome and Omics Platform (JoGo), primarily using long-read sequencing data. JoGo catalogs haplotypes of protein-coding genes at the amino acid, coding sequence, transcript, and whole-gene levels, together with single-nucleotide variants, insertions, and deletions.
+tags: ["Genome", "Human", "Variation"]
+provider: JoGo Project
+creators:
+  - name: Masao Nagasaki 
+    affiliation: Medical Institute of Bioregulation, Kyushu University
+  - name: Yosuke Kawai
+    affiliation: National Institute of Genetics
+  - name: Yuki Moriya
+    affiliation: National Institute of Genetics
+rdf_provenance_type: original
+registration_type: submitted
+version: Ver. 1.0
+issued: 2026-09-03
+licenses:
+  - https://creativecommons.org/licenses/by-sa/4.0/deed.en 

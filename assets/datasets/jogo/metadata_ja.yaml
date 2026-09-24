@@ -1,0 +1,18 @@
+title: JoGo
+website: https://jogo.csml.org/
+description: JoGo RDFは、Joint Open Genome and Omics Platform（JoGo）が主にロングリードシーケンスデータを用いて構築した、ヒトのハプロタイプカタログのRDF版です。JoGoは、タンパク質コード遺伝子のハプロタイプをアミノ酸配列、コード配列、転写産物、遺伝子全体の各レベルでカタログ化し、一塩基バリアント、挿入、欠失の情報とともに提供しています。
+tags: ["Genome", "Human", "Variation"]
+provider: JoGo Project
+creators:
+  - name: 長﨑正朗
+    affiliation: 九州大学生体防御医学研究所
+  - name: 河合洋介
+    affiliation: 国立遺伝学研究所
+  - name: 守屋勇樹
+    affiliation: 国立遺伝学研究所
+rdf_provenance_type: original
+registration_type: submitted
+version: Ver. 1.0
+issued: 2026-09-03
+licenses:
+  - https://creativecommons.org/licenses/by-sa/4.0/deed.en 
