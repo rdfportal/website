@@ -1,0 +1,14 @@
+title: TiSMeD
+website: https://www.bio-add.org/TiSMeD/  
+description: TiSMeDは、組織特異的なDNAメチル化、遺伝子発現、タンパク質発現のデータを統合したデータベースです。組織特異的なメチル化部位、遺伝子、タンパク質の情報を提供し、がん診断のためのバイオマーカー探索や、血中循環セルフリーDNAの由来組織の同定を支援します。
+tags: ["Expression", "Methylation"]
+provider: Bioinformatics-Aided Drug Discovery Group, Xiamen University
+creators:
+  - name: Shuya Ikeda
+    affiliation: National Institute of Genetics
+rdf_provenance_type: third_party
+registration_type: submitted
+version: 2026-06-27
+issued: 2026-06-27
+licenses:
+  - NA
