@@ -1,6 +1,6 @@
 title: TiSMeD
 website: https://www.bio-add.org/TiSMeD/  
-description: TiSMeD is a database integrating tissue-specific DNA methylation, gene expression, and protein expression data. It provides tissue-specific methylation sites, genes, and proteins to support biomarker discovery for cancer diagnosis and identification of the tissue of origin of circulating cell-free DNA.
+description: TiSMeD RDF is an RDF version created by DBCLS from the original data distributed by TiSMeD. TiSMeD is a database integrating tissue-specific DNA methylation, gene expression, and protein expression data. It provides tissue-specific methylation sites, genes, and proteins to support biomarker discovery for cancer diagnosis and identification of the tissue of origin of circulating cell-free DNA.
 tags: ["Expression", "Methylation"]
 provider: Bioinformatics-Aided Drug Discovery Group, Xiamen University
 creators:
