@@ -6,7 +6,9 @@ provider: Laboratory for Large-Scale Biomedical Data Technology, RIKEN Center fo
 creators:
   - name: Takeya Kasukawa 
     affiliation: Riken Center for Integrative Medical Sciences, Riken
-  - name: Yuki Moriya
+  - name: Hideya Kawaji
+    affiliation: Research Center for Genome & Medical Sciences, Tokyo Metropolitan Institute of Medical Science
+  - name: Takeya Kasukawa 
     affiliation: National Institute of Genetics
 rdf_provenance_type: original
 registration_type: submitted

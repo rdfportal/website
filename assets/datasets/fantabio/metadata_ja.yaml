@@ -6,6 +6,8 @@ provider: 理研生命医科学研究センター生命医科学大容量デー�
 creators:
   - name: 粕川 雄也
     affiliation: 理研生命医科学研究センター生命医科学大容量データ技術研究チーム
+  - name: 川路英哉
+    affiliation: 東京都医学総合研究所 ゲノム医学研究センター
   - name: 守屋 勇樹
     affiliation: 国立遺伝学研究所
 rdf_provenance_type: original
