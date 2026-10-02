@@ -1,0 +1,21 @@
+# Find TiSMeD tissues by UBERON ID and retrieve genes specific to those tissues
+# This can serve as a starting point for integration with other UBERON-based datasets (e.g., Bgee and GTEx).
+# Example: UBERON:0002107 (liver)
+
+PREFIX tismedo: <http://med2rdf.org/tismed/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+SELECT ?uberon ?tissue ?tissue_label ?gene ?symbol ?t_score
+WHERE {
+  VALUES ?uberon { obo:UBERON_0002107 }
+  ?tissue skos:closeMatch ?uberon ;
+          rdfs:label ?tissue_label .
+  ?gene tismedo:hasGeneExpressionSpecificity ?spec ;
+        rdfs:label ?symbol .
+  ?spec tismedo:isPositivelySpecificTo ?tissue ;
+        tismedo:tScore ?t_score .
+}
+ORDER BY DESC(?t_score)
+

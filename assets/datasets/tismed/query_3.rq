@@ -1,0 +1,23 @@
+# Retrieve genes specific to a given tissue or any of its subtissues, ordered by confidence from highest to lowest
+# The tissue hierarchy is traversed using rdfs:subClassOf*, so specifying "brain", for example,
+# also includes genes specific to subtissues such as "brain_amygdala".
+
+PREFIX tismedo: <http://med2rdf.org/tismed/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?gene ?symbol ?tissue_label ?mean_spm ?t_score ?dataset_count
+WHERE {
+  VALUES ?top_label { "brain" }
+  ?top rdfs:label ?top_label .
+  ?tissue rdfs:subClassOf* ?top ;
+          rdfs:label ?tissue_label .
+  ?spec tismedo:isPositivelySpecificTo ?tissue ;
+        tismedo:meanSpmAdjustValue ?mean_spm ;
+        tismedo:tScore ?t_score ;
+        tismedo:supportDatasetCount ?dataset_count .
+  ?gene tismedo:hasGeneExpressionSpecificity ?spec ;
+        rdfs:label ?symbol .
+}
+ORDER BY DESC(?t_score) DESC(?dataset_count) DESC(?mean_spm)
+LIMIT 100
+

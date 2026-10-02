@@ -1,0 +1,25 @@
+# Counts of tissue-specific genes and proteins per tissue
+# Count genes and proteins identified as specific to each tissue (using TiSMeD's own tissue classes).
+# Excludes counts from subtissues.
+
+PREFIX tismedo: <http://med2rdf.org/tismed/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?tissue ?tissue_label
+       (COALESCE(?g, 0) AS ?gene_count)
+       (COALESCE(?p, 0) AS ?protein_count)
+WHERE {
+  ?tissue rdfs:label ?tissue_label .
+  OPTIONAL {
+    SELECT ?tissue (COUNT(DISTINCT ?gene) AS ?g) WHERE {
+      ?gene tismedo:hasGeneExpressionSpecificity/tismedo:isPositivelySpecificTo ?tissue .
+    } GROUP BY ?tissue
+  }
+  OPTIONAL {
+    SELECT ?tissue (COUNT(DISTINCT ?protein) AS ?p) WHERE {
+      ?protein tismedo:hasProteinExpressionSpecificity/tismedo:isPositivelySpecificTo ?tissue .
+    } GROUP BY ?tissue
+  }
+  FILTER (BOUND(?g) || BOUND(?p))
+}
+ORDER BY DESC(?gene_count)

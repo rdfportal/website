@@ -1,0 +1,22 @@
+# Retrieve tissues with specific expression of a given gene and their scores using the gene symbol
+# Example: INS (insulin). Gene symbols are stored in rdfs:label.
+
+PREFIX tismedo: <http://med2rdf.org/tismed/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?gene ?tissue ?tissue_label ?uberon
+       ?mean_spm ?t_score ?dataset_count ?ts_protein
+WHERE {
+  VALUES ?symbol { "INS" }
+  ?gene rdfs:label ?symbol ;
+        tismedo:hasGeneExpressionSpecificity ?spec .
+  ?spec tismedo:isPositivelySpecificTo ?tissue ;
+        tismedo:meanSpmAdjustValue ?mean_spm ;
+        tismedo:tScore ?t_score ;
+        tismedo:supportDatasetCount ?dataset_count ;
+        tismedo:hasTissueSpecificProtein ?ts_protein .
+  ?tissue rdfs:label ?tissue_label .
+  OPTIONAL { ?tissue skos:closeMatch ?uberon }
+}
+ORDER BY DESC(?t_score)

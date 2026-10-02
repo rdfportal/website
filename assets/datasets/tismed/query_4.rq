@@ -1,0 +1,21 @@
+# High-confidence genes with tissue specificity also confirmed at the protein level
+# The thresholds are set more stringently than TiSMeD's criteria
+# (meanSPM >= 0.8, T-score >= 0.6, number of datasets >= 2). Adjust them as needed for your use case.
+
+PREFIX tismedo: <http://med2rdf.org/tismed/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?gene ?symbol ?tissue_label ?mean_spm ?t_score ?dataset_count
+WHERE {
+  ?gene tismedo:hasGeneExpressionSpecificity ?spec ;
+        rdfs:label ?symbol .
+  ?spec tismedo:hasTissueSpecificProtein true ;
+        tismedo:isPositivelySpecificTo ?tissue ;
+        tismedo:meanSpmAdjustValue ?mean_spm ;
+        tismedo:tScore ?t_score ;
+        tismedo:supportDatasetCount ?dataset_count .
+  ?tissue rdfs:label ?tissue_label .
+  FILTER (?mean_spm >= 0.95 && ?t_score >= 0.9 && ?dataset_count >= 5)
+}
+ORDER BY ?tissue_label DESC(?dataset_count)
+
