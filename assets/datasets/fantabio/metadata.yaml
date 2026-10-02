@@ -1,0 +1,16 @@
+title: fanta.bio
+website: https://fanta.bio/
+description: fanta.bio (Functional genome ANnotations with Transcriptional Activities) is a database of functional genome annotations focused on cis-regulatory elements, such as promoters and enhancers. It integrates regulatory elements identified using CAGE data and their transcriptional activities across cell and tissue types with transcription factor binding sites and genomic variants to support studies of gene regulation.
+tags: ["Genome", "Human", "Expression"]
+provider: Laboratory for Large-Scale Biomedical Data Technology, RIKEN Center for Integrative Medical Sciences
+creators:
+  - name: Takeya Kasukawa 
+    affiliation: Riken Center for Integrative Medical Sciences, Riken
+  - name: Yuki Moriya
+    affiliation: National Institute of Genetics
+rdf_provenance_type: original
+registration_type: submitted
+version: Ver. 1.2.1
+issued: 2026-09-03
+licenses:
+  - https://creativecommons.org/licenses/by-sa/4.0/deed.en 

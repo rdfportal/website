@@ -1,0 +1,16 @@
+title: 
+website:
+description: fanta.bio（Functional genome ANnotations with Transcriptional Activities）は、プロモーターやエンハンサーなどのシス制御領域を中心としたゲノム機能アノテーションデータベースです。CAGEデータを用いて同定した制御領域と、細胞・組織ごとの転写活性に、転写因子結合部位やゲノム変異の情報を統合し、遺伝子発現制御の研究を支援します。
+tags: ["Genome", "Human", "Expression"]
+provider: 理研生命医科学研究センター生命医科学大容量データ技術研究チーム
+creators:
+  - name: 粕川 雄也
+    affiliation: 理研生命医科学研究センター生命医科学大容量データ技術研究チーム
+  - name: 守屋 勇樹
+    affiliation: 国立遺伝学研究所
+rdf_provenance_type: original
+registration_type: submitted
+version: Ver. 1.2.1
+issued: 2026-09-03
+licenses:
+  - https://creativecommons.org/licenses/by-sa/4.0/deed.en
