@@ -1,0 +1,23 @@
+# Count distinct haplotypes at each ATCG level for a given gene
+# A: amino acid sequence, T: transcript, C: coding sequence, G: whole gene
+
+PREFIX jogo: <http://jogo.csml.org/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?level (COUNT(DISTINCT ?haplotype) AS ?haplotype_count)
+WHERE {
+  VALUES ?symbol { "ALDH2" }
+  VALUES (?level ?predicate) {
+    ("A" jogo:aHaplotype)
+    ("T" jogo:tHaplotype)
+    ("C" jogo:cHaplotype)
+    ("G" jogo:gHaplotype)
+  }
+
+  ?gene a jogo:GeneRegion ;
+        rdfs:label ?symbol .
+
+  OPTIONAL { ?gene ?predicate ?haplotype . }
+}
+GROUP BY ?level
+ORDER BY ?level

@@ -1,0 +1,25 @@
+# Retrieve population-specific counts of amino acid-level haplotypes
+# alleleCount represents the number of observed copies, not a proportion
+
+PREFIX jogo: <http://jogo.csml.org/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+SELECT ?haplotype_id ?population_code ?population_label ?count
+WHERE {
+  VALUES ?symbol { "ALDH2" }
+
+  ?gene a jogo:GeneRegion ;
+        rdfs:label ?symbol ;
+        jogo:aHaplotype ?haplotype .
+
+  ?haplotype dcterms:identifier ?haplotype_id ;
+             jogo:frequency ?frequency .
+
+  ?frequency jogo:population ?population ;
+             jogo:alleleCount ?count .
+
+  ?population dcterms:identifier ?population_code ;
+              rdfs:label ?population_label .
+}
+ORDER BY ?population_code DESC(?count) ?haplotype_id

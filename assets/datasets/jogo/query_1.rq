@@ -1,0 +1,24 @@
+# Retrieve amino acid-level haplotypes for a given gene symbol
+# Order by the number of observed haplotype copies, from highest to lowest
+
+PREFIX jogo: <http://jogo.csml.org/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?haplotype ?haplotype_id ?length ?count ?page
+WHERE {
+  VALUES ?symbol { "ALDH2" }
+
+  ?gene a jogo:GeneRegion ;
+        rdfs:label ?symbol ;
+        jogo:aHaplotype ?haplotype .
+
+  ?haplotype dcterms:identifier ?haplotype_id ;
+             jogo:sequenceLength ?length ;
+             jogo:totalCount ?count .
+
+  OPTIONAL { ?haplotype foaf:page ?page . }
+}
+ORDER BY DESC(?count) ?haplotype_id
+

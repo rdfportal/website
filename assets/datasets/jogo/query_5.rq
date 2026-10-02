@@ -1,0 +1,35 @@
+# Retrieve the combined haplotype and its A, T, C, and G components for each sample haplotype (hp1/hp2), using a sample ID and gene symbol.
+
+PREFIX jogo: <http://jogo.csml.org/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+SELECT DISTINCT
+  ?sample_id ?sample_haplotype_id ?combined_id ?a_id ?t_id ?c_id ?g_id
+WHERE {
+  VALUES ?symbol { "ALDH2" }
+  VALUES ?sample_id { "HG02074" }
+
+  ?gene a jogo:GeneRegion ;
+        rdfs:label ?symbol ;
+        jogo:actgHaplotype ?combined .
+
+  ?combined dcterms:identifier ?combined_id ;
+            jogo:aHaplotype ?a ;
+            jogo:tHaplotype ?t ;
+            jogo:cHaplotype ?c ;
+            jogo:gHaplotype ?g ;
+            jogo:hasSampleHaplotype ?sample_haplotype .
+
+  ?a dcterms:identifier ?a_id .
+  ?t dcterms:identifier ?t_id .
+  ?c dcterms:identifier ?c_id .
+  ?g dcterms:identifier ?g_id .
+
+  ?sample_haplotype dcterms:identifier ?sample_haplotype_id ;
+                    jogo:sample ?sample .
+
+  ?sample dcterms:identifier ?sample_id .
+}
+ORDER BY ?sample_haplotype_id ?combined_id
+

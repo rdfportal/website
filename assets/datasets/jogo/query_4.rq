@@ -1,0 +1,31 @@
+# Retrieve missense variants found in coding sequence-level haplotypes of a gene
+# Variant annotations and allele frequencies are stored in gene-specific records
+
+PREFIX jogo: <http://jogo.csml.org/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX gvo: <http://genome-variation.org/resource/gvo#>
+
+SELECT DISTINCT
+  ?variant_id ?ref ?alt ?hgvs_c ?hgvs_p ?allele_frequency
+WHERE {
+  VALUES ?symbol { "ALDH2" }
+
+  ?gene a jogo:GeneRegion ;
+        rdfs:label ?symbol ;
+        jogo:cHaplotype ?haplotype .
+
+  ?haplotype jogo:hasVariant ?variant .
+
+  ?variant jogo:annotation "missense_variant" ;
+           jogo:genomicVariant ?genomic_variant .
+
+  ?genomic_variant dcterms:identifier ?variant_id ;
+                   gvo:ref ?ref ;
+                   gvo:alt ?alt .
+
+  OPTIONAL { ?variant jogo:hgvsC ?hgvs_c . }
+  OPTIONAL { ?variant jogo:hgvsP ?hgvs_p . }
+  OPTIONAL { ?variant jogo:alleleFrequency ?allele_frequency . }
+}
+ORDER BY DESC(?allele_frequency) ?variant_id
