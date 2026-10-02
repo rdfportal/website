@@ -1,0 +1,20 @@
+# Retrieve FANTOM5 CAGE peaks overlapping a given cis-regulatory element
+
+PREFIX fanta: <http://fanta.bio/cre/>
+PREFIX fantao: <http://fanta.bio/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?cre_id ?cre_name ?cage_peak_id ?cage_peak_name
+WHERE {
+  VALUES ?cre { fanta:FCHS_104205 }
+
+  ?cre dct:identifier ?cre_id ;
+       rdfs:label ?cre_name ;
+       fantao:hasOverlappedAnnotation ?annotation .
+
+  ?annotation a fantao:Fantom5CagePeak ;
+              dct:identifier ?cage_peak_id ;
+              rdfs:label ?cage_peak_name .
+}
+ORDER BY ?cage_peak_id

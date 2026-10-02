@@ -1,0 +1,30 @@
+# Retrieve ChIP-Atlas annotations and supporting experiments for a CRE
+# Return antigen names, external IDs, experiment IDs, and Q-scores
+
+PREFIX fanta: <http://fanta.bio/cre/>
+PREFIX fantao: <http://fanta.bio/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sio: <http://semanticscience.org/resource/>
+
+SELECT DISTINCT
+  ?antigen_symbol ?antigen ?experiment_id ?experiment_link ?q_score
+WHERE {
+  VALUES ?cre { fanta:FCHS_104205 }
+
+  ?cre fantao:hasOverlappedAnnotation ?annotation .
+
+  ?annotation a fantao:ChipAtlasAntigen ;
+              rdfs:label ?antigen_symbol ;
+              rdfs:seeAlso ?antigen ;
+              fantao:hasExperiment ?experiment .
+
+  ?experiment dct:identifier ?experiment_id ;
+              rdfs:seeAlso ?experiment_link ;
+              sio:SIO_000216 ?measurement .
+
+  ?measurement a fantao:Qscore ;
+               sio:SIO_000300 ?q_score .
+}
+ORDER BY ?antigen_symbol DESC(?q_score) ?experiment_id
+

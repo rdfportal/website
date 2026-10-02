@@ -1,0 +1,32 @@
+# Retrieve cis-regulatory elements overlapping a genomic interval
+# Example: chromosome 12, positions 111766000–111767000, GRCh38
+
+PREFIX fantao: <http://fanta.bio/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX faldo: <http://biohackathon.org/resource/faldo#>
+
+SELECT DISTINCT ?cre ?cre_id ?cre_name ?begin ?end
+WHERE {
+  VALUES (?reference ?query_start ?query_end) {
+    (<http://identifiers.org/hco/12/GRCh38> 111766000 111767000)
+  }
+
+  ?cre a fantao:CisRegulatoryElement ;
+       dct:identifier ?cre_id ;
+       rdfs:label ?cre_name ;
+       faldo:location ?location .
+
+  ?location faldo:begin ?begin_position ;
+            faldo:end ?end_position .
+
+  ?begin_position faldo:position ?begin ;
+                  faldo:reference ?reference .
+
+  ?end_position faldo:position ?end ;
+                faldo:reference ?reference .
+
+  FILTER(?begin <= ?query_end && ?end >= ?query_start)
+}
+ORDER BY ?begin ?end ?cre_id
+

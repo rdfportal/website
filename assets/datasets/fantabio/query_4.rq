@@ -1,0 +1,33 @@
+# Retrieve nearest-TSS annotations for CREs associated with a given gene
+# Distances are reported in base pairs as stored in the dataset
+
+PREFIX fantao: <http://fanta.bio/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX tax: <http://identifiers.org/taxonomy/>
+
+SELECT DISTINCT ?cre_id ?cre_name ?transcript ?distance
+WHERE {
+  VALUES ?symbol { "ALDH2" }
+
+  ?cre a fantao:CisRegulatoryElement ;
+       obo:RO_0002162 tax:9606 ;
+       dct:identifier ?cre_id ;
+       rdfs:label ?cre_name ;
+       sio:SIO_000395 ?regulated_entity ;
+       fantao:hasTSS ?tss .
+
+  ?regulated_entity rdfs:label ?symbol .
+
+  ?tss a fantao:NearestTSS ;
+       sio:SIO_000216 ?measurement .
+
+  ?measurement a fantao:TSSDistance ;
+               sio:SIO_000300 ?distance .
+
+  OPTIONAL { ?tss rdfs:seeAlso ?transcript . }
+}
+ORDER BY ?cre_id ?distance ?transcript
+

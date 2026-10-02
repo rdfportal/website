@@ -1,0 +1,28 @@
+# Retrieve cis-regulatory elements associated with a given gene symbol
+# Example: ALDH2 in humans
+
+PREFIX fantao: <http://fanta.bio/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX tax: <http://identifiers.org/taxonomy/>
+
+SELECT DISTINCT ?cre ?cre_id ?cre_name ?activity_class
+WHERE {
+  VALUES ?symbol { "ALDH2" }
+
+  ?cre a fantao:CisRegulatoryElement ;
+       obo:RO_0002162 tax:9606 ;
+       dct:identifier ?cre_id ;
+       rdfs:label ?cre_name ;
+       sio:SIO_000395 ?regulated_entity .
+
+  ?regulated_entity rdfs:label ?symbol .
+
+  OPTIONAL {
+    VALUES ?activity_class { fantao:PLA fantao:ELA }
+    ?cre a ?activity_class .
+  }
+}
+ORDER BY ?cre_id ?activity_class
