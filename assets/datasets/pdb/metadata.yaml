@@ -4,11 +4,13 @@ description: wwPDB/RDF is a translation of PDBx/PDBML data into RDF.
 tags: [ Protein, Drug/Chemical, Other biomolecule, Sequence, Structure ]
 provider: Institute for Protein Research, Osaka University
 creators:
-  - name: Akira Kinjo
+  - name: Masashi Yokochi
     affiliation: Institute for Protein Research, Osaka University
+  - name: Akira R. Kinjo
+    affiliation: Anima Machina G.K.
 rdf_provenance_type: original
 registration_type: submitted
-version: Release_20260619
-issued: 2026-06-19
+version: Release_20260902
+issued: 2026-09-16
 licenses:
   - Attribution 4.0 International (CC BY 4.0) Database Center for Life Science

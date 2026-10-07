@@ -4,11 +4,13 @@ description: wwPDB/RDFはPDBx/PDBMLデータをRDFへ変換したものです
 tags: [ Protein, Drug/Chemical, Other biomolecule, Sequence, Structure ]
 provider: 大阪大学蛋白質研究所
 creators:
+  - name: 横地 政志
+    affiliation: Institute for Protein Research, Osaka University.
   - name: 金城 玲
-    affiliation: Database Center for Life Science
+    affiliation: Anima Machina G.K.
 rdf_provenance_type: original
 registration_type: submitted
-version: Release_20260219
-issued: 2026-06-19
+version: Release_20260902
+issued: 2026-09-16
 licenses:
   - Attribution 4.0 International (CC BY 4.0) Database Center for Life Science
