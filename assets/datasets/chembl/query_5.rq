@@ -1,0 +1,24 @@
+# List approved drugs with a curated mechanism of action against a specified target.
+
+PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX target: <http://rdf.ebi.ac.uk/resource/chembl/target/>
+
+SELECT DISTINCT ?chemblId ?name ?actionType ?phase
+FROM <http://rdf.ebi.ac.uk/dataset/chembl>
+WHERE {
+  VALUES ?target { target:CHEMBL1862 }
+
+  ?mechanism a cco:Mechanism ;
+    cco:hasTarget ?target ;
+    cco:hasMolecule ?molecule ;
+    cco:mechanismActionType ?actionType .
+
+  ?molecule cco:chemblId ?chemblId ;
+    rdfs:label ?name ;
+    cco:highestDevelopmentPhase ?phase .
+
+  FILTER(?phase = 4)
+}
+ORDER BY ?name
+LIMIT 100

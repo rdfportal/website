@@ -1,0 +1,23 @@
+# List drugs with a maximum development phase of 3 or higher for a specified disease. (ex. Parkinson's disease D010300)
+
+PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mesh: <http://identifiers.org/mesh/>
+
+SELECT DISTINCT ?chemblId ?name ?phase
+FROM <http://rdf.ebi.ac.uk/dataset/chembl>
+WHERE {
+  VALUES ?disease { mesh:D010300 }
+
+  ?indication a cco:DrugIndication ;
+    cco:hasMesh ?disease ;
+    cco:hasMolecule ?molecule ;
+    cco:highestDevelopmentPhase ?phase .
+
+  ?molecule cco:chemblId ?chemblId ;
+    rdfs:label ?name .
+
+  FILTER(?phase >= 3)
+}
+ORDER BY DESC(?phase) ?name
+LIMIT 100

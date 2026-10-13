@@ -1,0 +1,31 @@
+# Retrieve activity measurements with IC50 values of 100 nM or less against a specified target (ex. ABL1 CHEMBL1862)
+
+PREFIX cco: <http://rdf.ebi.ac.uk/terms/chembl#>
+PREFIX target: <http://rdf.ebi.ac.uk/resource/chembl/target/>
+
+SELECT ?chemblId ?activity ?assay ?type ?relation ?value ?units
+FROM <http://rdf.ebi.ac.uk/dataset/chembl>
+WHERE {
+  VALUES ?target { target:CHEMBL1862 }
+
+  ?assay cco:hasTarget ?target .
+
+  ?activity a cco:Activity ;
+    cco:hasAssay ?assay ;
+    cco:hasMolecule ?molecule ;
+    cco:standardType ?type ;
+    cco:standardRelation ?relation ;
+    cco:standardValue ?value ;
+    cco:standardUnits ?units .
+
+  ?molecule cco:chemblId ?chemblId .
+
+  FILTER(
+    STR(?type) = "IC50" &&
+    STR(?relation) = "=" &&
+    STR(?units) = "nM"
+  )
+  FILTER(?value > 0 && ?value <= 100)
+}
+ORDER BY ?value ?chemblId
+LIMIT 100

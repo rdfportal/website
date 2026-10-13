@@ -1,0 +1,26 @@
+# Retrieve a compound's name, SMILES, InChIKey, and molecular formula by ChEMBL ID (ex.Caffeine CHEMBL113)
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX molecule: <http://rdf.ebi.ac.uk/resource/chembl/molecule/>
+
+SELECT ?molecule ?name ?smiles ?inchiKey ?formula
+FROM <http://rdf.ebi.ac.uk/dataset/chembl>
+WHERE {
+  VALUES ?molecule { molecule:CHEMBL113 }
+
+  ?molecule rdfs:label ?name ;
+    sio:SIO_000008 [
+      a sio:CHEMINF_000018 ;
+      sio:SIO_000300 ?smiles
+    ] ;
+    sio:SIO_000008 [
+      a sio:CHEMINF_000059 ;
+      sio:SIO_000300 ?inchiKey
+    ] ;
+    sio:SIO_000008 [
+      a sio:CHEMINF_000042 ;
+      sio:SIO_000300 ?formula
+    ] .
+}
+LIMIT 100
