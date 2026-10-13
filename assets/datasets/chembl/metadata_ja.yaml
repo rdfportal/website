@@ -1,13 +1,13 @@
 title: ChEMBL RDF
 website: https://www.ebi.ac.uk/chembl/
-description: ChEMBL is a manually curated database of bioactive molecules with drug-like properties.
+description: ChEMBL RDFは、EMBL-EBIが維持する、人手でキュレーションされた生物活性分子データベースChEMBLのRDF版です。化学構造や分子特性を、生物活性の測定値、アッセイ、標的分子、出典文献と関連付け、創薬や化合物と標的分子の相互作用に関する研究を支援します。
 tags: [ Drug/Chemical ]
 provider: European Bioinformatics Institute
 creators:
   - name: European Bioinformatics Institute
 rdf_provenance_type: original
 registration_type: added_by_rdfportal
-version: 32.0
-issued: 2023-03-01
+version: 36.0
+issued: 2026-03-26
 licenses:
   - Creative Commons Attribution-Share Alike 3.0 Unported License
