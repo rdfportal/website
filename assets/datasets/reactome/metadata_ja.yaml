@@ -1,12 +1,12 @@
 title: Reactome RDF
 website: https://reactome.org/
-description: REACTOMEは、オープンソース、オープンアクセスで、マニュアルキュレーションされ、ピアレビューされた、パスウェイデータベースです。
+description: Reactome RDFは、専門家によるキュレーションと査読を経た生物学的パスウェイデータベースReactomeを、BioPAX Level 3形式で表現したデータセットです。代謝、シグナル伝達、遺伝子発現制御、疾患に関わるパスウェイと反応を記述し、反応に参加するタンパク質、複合体、低分子化合物を、根拠文献や外部データベースと関連付けています。
 tags: [Interaction/Pathway]
 provider: Reactome Team (https://reactome.org/)
 creators: Reactome Team (https://reactome.org/)
 rdf_provenance_type: original
 registration_type: added_by_rdfportal
-version: 84
-issued: 2023-04
+version: 97
+issued: 2026-06-30
 licenses:
   - Creative Commons Public Domain (CC0) License
