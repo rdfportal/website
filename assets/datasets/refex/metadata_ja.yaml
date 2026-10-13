@@ -1,17 +1,18 @@
 title: RefEx RDF
 website: http://refex.dbcls.jp/index.php?lang=ja
 description: RefEx データベースのうちの、CAGE実験およびGeneChip実験由来のリファレンス遺伝子発現データセット
-
 tags: [ Gene, Tag sequence (nucleic acid), Gene expression ]
 provider:
 creators:
+  - name: 池田秀也
+    affiliation: 国立遺伝学研究所
   - name: 川島 秀一
-    affiliation: ライフサイエンス統合データベースセンター
+    affiliation: 国立遺伝学研究所
   - name: 小野 浩雅
-    affiliation: ライフサイエンス統合データベースセンター
+    affiliation: プラチナバイオ株式会社
 rdf_provenance_type: original
 registration_type: submitted
-version: 2017-04-07
-issued: 2017-04-07
+version: 2021-03-12
+issued: 2021-03-12
 licenses:
   - Attribution 4.0 International (CC BY 4.0) Database Center for Life Science

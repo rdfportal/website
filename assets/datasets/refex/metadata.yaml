@@ -4,13 +4,15 @@ description: RDFized reference gene expresson dataset derived from CAGE and Gene
 tags: [ Gene, Tag sequence (nucleic acid), Gene expression ]
 provider:
 creators:
+  - name: Shuya Ikeda
+    affiliation: National Institute of Genetics
   - name: Shuichi Kawahsima
-    affiliation: Database Center for Life Science
+    affiliation: National Institute of Genetics
   - name: Hiromasa Ono
-    affiliation: Database Center for Life Science
+    affiliation: PtBio Inc.
 rdf_provenance_type: original
 registration_type: submitted
-version: 2017-04-07
-issued: 2017-04-07
+version: 2017-03-12
+issued: 2017-03-12
 licenses:
   - Attribution 4.0 International (CC BY 4.0) Database Center for Life Science
