@@ -172,92 +172,92 @@
     "endpoint": "ncbi",
     "dataset": "clinvar",
     "statistics": {
-      "number_of_triples": 1991923652,
-      "number_of_classes": 80,
-      "number_of_properties": 183,
-      "number_of_subjects": 362095575,
-      "number_of_objects": 502025919
+      "number_of_triples": 2315805266,
+      "number_of_classes": 78,
+      "number_of_properties": 182,
+      "number_of_subjects": 420545060,
+      "number_of_objects": 586354992
     },
-    "updated_at": "2025-09-18",
-    "issued_at": "2026-01-15"
+    "updated_at": "2026-10-18",
+    "issued_at": "2026-10-20"
   },
   {
     "endpoint": "ncbi",
     "dataset": "medgen",
     "statistics": {
-      "number_of_triples": 125703664,
+      "number_of_triples": 63197016,
       "number_of_classes": 4,
-      "number_of_properties": 46,
-      "number_of_subjects": 3928741,
-      "number_of_objects": 32320296
+      "number_of_properties": 43,
+      "number_of_subjects": 3893215,
+      "number_of_objects": 21483124
     },
-    "updated_at": "2025-09-18",
-    "issued_at": "2026-01-15"
+    "updated_at": "2026-10-18",
+    "issued_at": "2026-10-20"
   },
   {
     "endpoint": "ncbi",
     "dataset": "mesh",
     "statistics": {
-      "number_of_triples": 154704756,
+      "number_of_triples": 170061864,
       "number_of_classes": 16,
-      "number_of_properties": 47,
-      "number_of_subjects": 23893096,
-      "number_of_objects": 55145885
+      "number_of_properties": 49,
+      "number_of_subjects": 26274384,
+      "number_of_objects": 60526515
     },
-    "updated_at": "2026-01-28",
-    "issued_at": "2026-01-15"
+    "updated_at": "2026-10-18",
+    "issued_at": "2026-10-20"
   },
   {
     "endpoint": "ncbi",
     "dataset": "ncbigene",
     "statistics": {
-      "number_of_triples": 550262723,
+      "number_of_triples": 702270729,
       "number_of_classes": 1,
       "number_of_properties": 16,
-      "number_of_subjects": 57768578,
-      "number_of_objects": 160736140
+      "number_of_subjects": 73444491,
+      "number_of_objects": 206620552
     },
-    "updated_at": "2024-11-23",
-    "issued_at": "2026-01-15"
+    "updated_at": "2026-10-18",
+    "issued_at": "2026-10-20"
   },
   {
     "endpoint": "ncbi",
     "dataset": "nlm-catalog",
     "statistics": {
-      "number_of_triples": 215436,
+      "number_of_triples": 220295,
       "number_of_classes": 1,
       "number_of_properties": 5,
-      "number_of_subjects": 41226,
-      "number_of_objects": 172266
+      "number_of_subjects": 42122,
+      "number_of_objects": 176251
     },
-    "updated_at": "2025-09-18",
-    "issued_at": "2026-01-15"
+    "updated_at": "2026-10-18",
+    "issued_at": "2026-10-20"
   },
   {
     "endpoint": "ncbi",
     "dataset": "pubmed",
     "statistics": {
-      "number_of_triples": 2825903159,
+      "number_of_triples": 3033800776,
       "number_of_classes": 2,
       "number_of_properties": 5,
-      "number_of_subjects": 442968598,
-      "number_of_objects": 659176517
+      "number_of_subjects": 480064819,
+      "number_of_objects": 712745483
     },
-    "updated_at": "2025-09-18",
-    "issued_at": "2026-01-15"
+    "updated_at": "2026-10-18",
+    "issued_at": "2026-10-20"
   },
   {
     "endpoint": "ncbi",
     "dataset": "pubtator",
     "statistics": {
-      "number_of_triples": 1187987744,
+      "number_of_triples": 1232299035,
       "number_of_classes": 1,
       "number_of_properties": 3,
-      "number_of_subjects": 238227596,
-      "number_of_objects": 34642584
+      "number_of_subjects": 247100269,
+      "number_of_objects": 36349758
     },
-    "updated_at": "2025-11-21",
-    "issued_at": "2026-01-15"
+    "updated_at": "2026-10-18",
+    "issued_at": "2026-10-20"
   },
   {
     "endpoint": "pdb",
