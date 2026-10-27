@@ -1,0 +1,16 @@
+title: ODB
+website: https://operondb.jp/
+description: ODB (Operon DataBase) collects known operons reported in the literature and conserved operons inferred across genomes. This RDF dataset represents known operons, linking each operon to its organism through an NCBI Taxonomy identifier, to the proteins encoded by its member genes through NCBI Protein identifiers, and to supporting publications through PubMed identifiers. These links support integrated searches of operon organization, taxonomic information, and literature evidence.
+tags: ["Expression", "Operon"]
+provider: Division of Bioinformatics, Niigata University Graduate School of Medical and Dental Sciences
+creators:
+  - name: Shujiro Okuda
+    affiliation: Niigata University Graduate School of Medical and Dental Sciences
+  - name: Akiyasu C Yoshizawa
+    affiliation: Niigata University Graduate School of Medical and Dental Sciences
+rdf_provenance_type: original
+registration_type: submitted
+version: version 4
+issued: 2026-10-18
+licenses:
+  - Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0)
