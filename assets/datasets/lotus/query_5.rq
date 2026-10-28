@@ -1,0 +1,25 @@
+# Retrieve manually validated compound–organism occurrences and their supporting references.
+
+PREFIX lotus: <http://purl.jp/bio/lotus/ontology/>
+PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?occurrence ?compound ?compound_name
+  ?organism ?scientific_name ?reference ?doi
+WHERE {
+  ?occurrence a lotus:Occurrence ;
+              lotus:manuallyValidated true ;
+              lotus:structure ?compound ;
+              lotus:organism ?organism ;
+              dct:references ?reference .
+
+  OPTIONAL { ?compound rdfs:label ?compound_name . }
+  OPTIONAL { ?organism dwc:scientificName ?scientific_name . }
+  OPTIONAL { ?reference bibo:doi ?doi . }
+}
+ORDER BY ?occurrence
+LIMIT 100
+

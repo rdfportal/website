@@ -1,0 +1,26 @@
+# Retrieve compounds classified as alkaloids by NPClassifier and reported in a given taxonomic family.
+
+PREFIX lotus: <http://purl.jp/bio/lotus/ontology/>
+PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?compound ?compound_name ?organism ?scientific_name
+WHERE {
+  VALUES ?family { "Rutaceae" }
+
+  ?organism a dwc:Taxon ;
+            dwc:family ?family .
+
+  ?occurrence a lotus:Occurrence ;
+              lotus:organism ?organism ;
+              lotus:structure ?compound .
+
+  ?compound lotus:npclassifierPathway "Alkaloids" .
+
+  OPTIONAL { ?compound rdfs:label ?compound_name . }
+  OPTIONAL { ?organism dwc:scientificName ?scientific_name . }
+}
+ORDER BY ?compound_name ?scientific_name
+LIMIT 100
+

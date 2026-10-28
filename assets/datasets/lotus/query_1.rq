@@ -1,0 +1,29 @@
+# Retrieve compounds reported in a given organism and their supporting references.
+
+PREFIX lotus: <http://purl.jp/bio/lotus/ontology/>
+PREFIX schema: <https://schema.org/>
+PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?organism ?compound ?compound_name ?inchikey ?reference ?doi
+WHERE {
+  VALUES ?scientific_name { "Annona muricata" }
+
+  ?organism a dwc:Taxon ;
+            dwc:scientificName ?scientific_name .
+
+  ?occurrence a lotus:Occurrence ;
+              lotus:organism ?organism ;
+              lotus:structure ?compound ;
+              dct:references ?reference .
+
+  OPTIONAL { ?compound rdfs:label ?compound_name . }
+  OPTIONAL { ?compound schema:inChIKey ?inchikey . }
+  OPTIONAL { ?reference bibo:doi ?doi . }
+}
+ORDER BY ?compound ?reference
+LIMIT 100
+

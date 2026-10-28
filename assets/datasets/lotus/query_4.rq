@@ -1,0 +1,23 @@
+# Count distinct compounds, organisms, and references for each taxonomic family.
+
+PREFIX lotus: <http://purl.jp/bio/lotus/ontology/>
+PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+SELECT
+  ?family
+  (COUNT(DISTINCT ?compound) AS ?compound_count)
+  (COUNT(DISTINCT ?organism) AS ?organism_count)
+  (COUNT(DISTINCT ?reference) AS ?reference_count)
+WHERE {
+  ?occurrence a lotus:Occurrence ;
+              lotus:structure ?compound ;
+              lotus:organism ?organism ;
+              dct:references ?reference .
+
+  ?organism dwc:family ?family .
+}
+GROUP BY ?family
+ORDER BY DESC(?compound_count) ?family
+LIMIT 100
+
