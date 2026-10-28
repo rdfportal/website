@@ -1,0 +1,16 @@
+# Count operons and distinct member proteins for each organism.
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX up: <http://purl.uniprot.org/core/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+SELECT ?organism
+       (COUNT(DISTINCT ?operon) AS ?operon_count)
+       (COUNT(DISTINCT ?protein) AS ?protein_count)
+WHERE {
+  ?operon a obo:SO_0000178 ;
+          up:organism ?organism ;
+          rdfs:member ?protein .
+}
+GROUP BY ?organism
+ORDER BY DESC(?operon_count) ?organism

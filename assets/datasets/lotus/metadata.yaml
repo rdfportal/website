@@ -1,0 +1,14 @@
+title: LOTUS
+website: https://lotus.naturalproducts.net/
+description: LOTUS is a database of natural product occurrences that links chemical compounds to the organisms in which they have been reported and the supporting literature. It integrates chemical structures, taxonomic information, and references to support research on natural products and their distribution across organisms.
+tags: [Drug/Chemical]
+provider: The LOTUS Initiative
+creators:
+  - name: Akira R. Kinjo
+    affiliation: Anima Machina G.K.
+rdf_provenance_type: third_party
+registration_type: submitted
+version: v11 (2026-04-13)
+issued: 2026-10-09
+licenses:
+  - https://creativecommons.org/licenses/by-sa/4.0/

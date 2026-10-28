@@ -1,0 +1,16 @@
+title: ODB
+website: https://operondb.jp/
+description: ODB（Operon DataBase）は、文献で報告された既知のオペロンと、ゲノム間の保存性に基づいて推定されたオペロンを収集するデータベースです。本RDFデータセットは既知のオペロンを対象とし、各オペロンを、生物のNCBI Taxonomy識別子、構成遺伝子がコードするタンパク質のNCBI Protein識別子、および根拠文献のPubMed識別子に関連付けています。これらのリンクにより、オペロンの構成、生物分類、文献情報を横断した検索が可能になります。
+tags: ["Expression", "Operon"]
+provider: 新潟大学大学院医歯学総合研究科バイオインフォマティクス分野
+creators:
+  - name: 奥田修二郎
+    affiliation: 新潟大学大学院医歯学総合研究科
+  - name: 吉沢明康
+    affiliation: 新潟大学大学院医歯学総合研究科
+rdf_provenance_type: original
+registration_type: submitted
+version: version 4
+issued: 2026-10-18
+licenses:
+  - Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0)

@@ -1,0 +1,20 @@
+# Retrieve operons, their member proteins, and supporting publications for a specified organism.
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX up: <http://purl.uniprot.org/core/>
+PREFIX tax: <http://identifiers.org/taxonomy/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+SELECT DISTINCT ?operon ?protein ?reference
+WHERE {
+  VALUES ?organism { tax:62977 }
+
+  ?operon a obo:SO_0000178 ;
+          up:organism ?organism ;
+          rdfs:member ?protein .
+
+  OPTIONAL { ?operon dct:references ?reference . }
+}
+ORDER BY ?operon ?protein ?reference
+LIMIT 100

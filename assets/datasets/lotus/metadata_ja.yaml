@@ -1,0 +1,14 @@
+title: LOTUS
+website: https://lotus.naturalproducts.net/
+description: LOTUSは、天然物化合物と、その存在が報告された生物、および根拠文献を結び付けたデータベースです。化学構造、生物の分類情報、文献情報を統合し、天然物やその生物間での分布に関する研究を支援します。
+tags: [Drug/Chemical]
+provider: The LOTUS Initiative
+creators:
+  - name: 金城玲
+    affiliation: Anima Machina G.K.
+rdf_provenance_type: third_party
+registration_type: submitted
+version: v11 (2026-04-13)
+issued: 2026-10-09
+licenses:
+  - https://creativecommons.org/licenses/by-sa/4.0/

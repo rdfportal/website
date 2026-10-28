@@ -1,0 +1,19 @@
+# Retrieve other proteins in the same operon as a specified protein.
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX up: <http://purl.uniprot.org/core/>
+PREFIX ncbiprotein: <http://ncbi.nlm.nih.gov/protein/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+SELECT DISTINCT ?operon ?organism ?other_protein
+WHERE {
+  VALUES ?protein { ncbiprotein:WP_004925515 }
+
+  ?operon a obo:SO_0000178 ;
+          up:organism ?organism ;
+          rdfs:member ?protein, ?other_protein .
+
+  FILTER (?other_protein != ?protein)
+}
+ORDER BY ?operon ?other_protein
+LIMIT 100
