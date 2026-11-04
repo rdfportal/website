@@ -11,7 +11,7 @@ rdf_creators:
     affiliation: バイオサイエンスデータベースセンター
 rdf_provenance_type: third_party
 registration_type: submitted
-version: based on data retrieved on Oct. 16, 2026
+version: based on data retrieved on Oct. 15, 2026
 issued: 2026-10-20
 licenses:
   - https://ftp.ncbi.nlm.nih.gov/pub/lu/PubTatorCentral/README.txt
