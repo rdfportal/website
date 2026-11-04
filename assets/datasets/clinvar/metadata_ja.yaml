@@ -9,8 +9,8 @@ rdf_creators:
     affiliation: http://med2rdf.org/
 rdf_provenance_type: third_party
 registration_type: submitted
-version: release_20250623
-issued: 2025-06-23
+version: release_20260305
+issued: 2026-10-20
 licenses:
   - https://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/
   - Source\: U.S. National Library of Medicine.
