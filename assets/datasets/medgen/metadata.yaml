@@ -9,8 +9,8 @@ creators:
   - name: Med2RDF project
 rdf_provenance_type: third_party
 registration_type: submitted
-version: Med2RDF version based on release_20250903
-issued: 2026-01-15
+version: Med2RDF version based on data retrieved on Oct. 18, 2026
+issued: 2026-10-20
 licenses:
   - url: https://www.ncbi.nlm.nih.gov/home/about/policies/
   - Source: U.S. National Library of Medicine.
