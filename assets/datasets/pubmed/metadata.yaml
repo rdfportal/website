@@ -9,8 +9,8 @@ rdf_creators:
     affiliation: http://med2rdf.org/
 rdf_provenance_type: third_party
 registration_type: submitted
-version: release_20250830
-issued: 2025-01-15
+version: release_20261020
+issued: 2026-10-20
 licenses:
   - https://www.nlm.nih.gov/databases/download.html
   - Source\: U.S. National Library of Medicine.
