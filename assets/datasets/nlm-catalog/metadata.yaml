@@ -6,8 +6,8 @@ provider: National Library of Medicine
 rdf_provider: Database Center for Life Science
 rdf_provenance_type: third_party
 registration_type: added_by_rdfportal
-version: NA
-issued: 2025-09-18
+version: based on data retrieved on Sep. 3, 2026
+issued: 2026-10-20
 license:
   - name:                              
   - url: 
