@@ -1,0 +1,22 @@
+# Retrieve the definition, molecular formula, charge, mass, and structure identifiers for a specified ChEBI entry.
+
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX chemrof: <https://w3id.org/chemrof/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?compound ?label ?definition
+                ?formula ?charge ?mass ?smiles ?inchi ?inchikey
+FROM <http://rdf.ebi.ac.uk/dataset/chebi>
+WHERE {
+  VALUES ?compound { obo:CHEBI_17234 }
+
+  ?compound rdfs:label ?label .
+
+  OPTIONAL { ?compound obo:IAO_0000115 ?definition . }
+  OPTIONAL { ?compound chemrof:generalized_empirical_formula ?formula . }
+  OPTIONAL { ?compound chemrof:charge ?charge . }
+  OPTIONAL { ?compound chemrof:mass ?mass . }
+  OPTIONAL { ?compound chemrof:smiles_string ?smiles . }
+  OPTIONAL { ?compound chemrof:inchi_string ?inchi . }
+  OPTIONAL { ?compound chemrof:inchi_key_string ?inchikey . }
+}

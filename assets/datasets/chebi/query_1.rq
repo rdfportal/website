@@ -1,0 +1,21 @@
+# Search for chemical entities by name or synonym.
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboinowl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT DISTINCT ?compound ?label ?matched_name
+FROM <http://rdf.ebi.ac.uk/dataset/chebi>
+WHERE {
+  VALUES ?keyword { "glucose" }
+
+  ?compound a owl:Class ;
+            rdfs:label ?label ;
+            (rdfs:label|oboinowl:hasExactSynonym|oboinowl:hasRelatedSynonym)
+              ?matched_name .
+
+  FILTER(CONTAINS(LCASE(STR(?matched_name)), LCASE(?keyword)))
+  FILTER NOT EXISTS { ?compound owl:deprecated true }
+}
+ORDER BY ?label ?compound
+LIMIT 100

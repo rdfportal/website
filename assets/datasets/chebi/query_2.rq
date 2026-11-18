@@ -1,0 +1,21 @@
+# Retrieve all descendant classes of a specified ChEBI class.
+
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?compound ?label
+FROM <http://rdf.ebi.ac.uk/dataset/chebi>
+WHERE {
+  VALUES ?parent { obo:CHEBI_33709 }
+
+  ?compound rdfs:subClassOf+ ?parent ;
+            rdfs:label ?label .
+
+  FILTER(isIRI(?compound))
+  FILTER(?compound != ?parent)
+  FILTER NOT EXISTS { ?compound owl:deprecated true }
+}
+ORDER BY ?label ?compound
+LIMIT 100
+

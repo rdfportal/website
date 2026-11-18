@@ -1,0 +1,15 @@
+# Retrieve external database cross-references for a specified ChEBI entry.
+
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX oboinowl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT DISTINCT ?compound ?label ?xref
+FROM <http://rdf.ebi.ac.uk/dataset/chebi>
+WHERE {
+  VALUES ?compound { obo:CHEBI_17234 }
+
+  ?compound rdfs:label ?label ;
+            oboinowl:hasDbXref ?xref .
+}
+ORDER BY ?xref

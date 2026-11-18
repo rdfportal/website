@@ -1,0 +1,21 @@
+# Retrieve roles explicitly assigned to a specified chemical entity.
+
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?compound ?label ?role ?role_label
+FROM <http://rdf.ebi.ac.uk/dataset/chebi>
+WHERE {
+  VALUES ?compound { obo:CHEBI_17234 }
+
+  ?compound rdfs:label ?label ;
+            rdfs:subClassOf ?restriction .
+
+  ?restriction a owl:Restriction ;
+               owl:onProperty obo:RO_0000087 ;
+               owl:someValuesFrom ?role .
+
+  ?role rdfs:label ?role_label .
+}
+ORDER BY ?role_label
