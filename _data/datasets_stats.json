@@ -692,11 +692,11 @@
     "endpoint": "primary",
     "dataset": "odb",
     "statistics": {
-      "number_of_triples": 0,
-      "number_of_classes": 0,
-      "number_of_properties": 0,
-      "number_of_subjects": 0,
-      "number_of_objects": 0
+      "number_of_triples": 49681,
+      "number_of_classes": 1,
+      "number_of_properties": 4,
+      "number_of_subjects": 9479,
+      "number_of_objects": 49681 
     },
     "updated_at": "2026-10-19",
     "issued_at": "2026-11-05"
