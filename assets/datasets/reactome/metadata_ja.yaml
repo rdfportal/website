@@ -6,7 +6,7 @@ provider: Reactome Team (https://reactome.org/)
 creators: Reactome Team (https://reactome.org/)
 rdf_provenance_type: original
 registration_type: added_by_rdfportal
-version: 97
-issued: 2026-06-30
+version: 98
+issued: 2026-11-11
 licenses:
   - Creative Commons Public Domain (CC0) License
